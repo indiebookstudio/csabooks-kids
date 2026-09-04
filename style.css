@@ -171,6 +171,42 @@ button {
   letter-spacing: 0.06em;
 }
 
+
+/* --- SITE NAVIGATION --- */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--c-text-secondary);
+  border: 1px solid transparent;
+  transition: var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--c-primary);
+  background: var(--c-primary-soft);
+}
+
+.nav-link.active {
+  color: var(--c-primary);
+  background: var(--c-primary-soft);
+  border-color: rgba(240, 90, 40, 0.25);
+  font-weight: 700;
+}
+
 /* Header Controls: Social, Email & Language Switcher */
 .header-actions {
   display: flex;
@@ -760,9 +796,27 @@ button {
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-between;
+  gap: 1.5rem;
   margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer-nav-link {
+  color: #9CA3AF;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.footer-nav-link:hover {
+  color: var(--c-primary);
 }
 
 .footer-brand-title {
@@ -976,6 +1030,215 @@ button {
 }
 
 /* ==========================================================================
+   ABOUT / CHI SIAMO PAGE STYLES
+   ========================================================================== */
+
+.about-main {
+  padding: 2.5rem 0 4.5rem 0;
+  min-height: calc(100vh - 72px - 150px);
+}
+
+.about-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.about-page-header {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.about-badge-wrapper {
+  margin-bottom: 0.75rem;
+}
+
+.about-badge {
+  display: inline-block;
+  background-color: var(--c-primary-soft);
+  color: var(--c-primary);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+}
+
+.about-page-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 4.5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--c-text-primary);
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* Hero Section: Portrait & Author Profile */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 2.75rem;
+  align-items: center;
+  margin-bottom: 2.75rem;
+}
+
+.about-portrait-card {
+  display: flex;
+  justify-content: center;
+}
+
+.about-portrait-frame {
+  width: 100%;
+  max-width: 310px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(21, 29, 42, 0.09);
+  border: 4px solid #FFFFFF;
+  background: #FFFFFF;
+}
+
+.about-portrait-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-author-name {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--c-text-primary);
+  line-height: 1.15;
+  margin-bottom: 0.35rem;
+}
+
+.about-author-role {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--c-primary);
+  margin-bottom: 1.35rem;
+}
+
+.about-bio-lead {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.about-bio-p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--c-text-secondary);
+  margin: 0 0 1.25rem 0;
+}
+
+.about-story-section {
+  margin-top: 1rem;
+}
+
+.about-section-heading {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--c-text-primary);
+  line-height: 1.3;
+  margin-bottom: 1.1rem;
+}
+
+/* Highlighted Inspiration Callout Card */
+.about-inspiration-card {
+  background: linear-gradient(135deg, rgba(240, 90, 40, 0.08) 0%, rgba(255, 179, 0, 0.12) 100%);
+  border-left: 5px solid var(--c-primary);
+  border-radius: 16px;
+  padding: 1.5rem 1.75rem;
+  margin: 2.25rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 6px 20px rgba(240, 90, 40, 0.06);
+}
+
+.about-inspiration-icon {
+  color: var(--c-primary);
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(240, 90, 40, 0.15);
+}
+
+.about-inspiration-text {
+  font-family: var(--font-heading);
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: var(--c-text-primary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Closing Statement Card */
+.about-closing-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(240, 90, 40, 0.22);
+  border-radius: 20px;
+  padding: 2.25rem 2.5rem;
+  margin: 2.75rem 0 2rem 0;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(21, 29, 42, 0.05);
+}
+
+.about-closing-icon {
+  color: var(--c-primary);
+  margin-bottom: 0.95rem;
+  display: inline-flex;
+}
+
+.about-closing-text {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--c-text-primary);
+  line-height: 1.65;
+  font-style: italic;
+  margin: 0 auto;
+  max-width: 680px;
+}
+
+/* CTA Section */
+.about-cta-section {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-cta-btn {
+  font-size: 1.08rem;
+  padding: 0.85rem 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 6px 18px rgba(240, 90, 40, 0.28);
+}
+
+.about-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(240, 90, 40, 0.35);
+}
+
+/* ==========================================================================
    RESPONSIVE BREAKPOINTS
    ========================================================================== */
 
@@ -989,13 +1252,18 @@ button {
 @media (max-width: 860px) {
   .header-inner {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 0.75rem;
     padding: 0.75rem 0;
   }
 
   .brand-identity {
     justify-content: center;
+  }
+
+  .site-nav {
+    justify-content: center;
+    width: 100%;
   }
 
   .header-actions {
@@ -1006,6 +1274,20 @@ button {
   .catalog-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
+  }
+
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .about-author-info {
+    align-items: center;
+  }
+
+  .about-portrait-frame {
+    max-width: 280px;
   }
 }
 
@@ -1060,6 +1342,71 @@ button {
   .sample-nav-btn {
     width: 32px;
     height: 32px;
+  }
+
+  .about-main {
+    padding: 1.5rem 0 3.5rem 0;
+  }
+
+  .about-page-header {
+    margin-bottom: 1.75rem;
+  }
+
+  .about-portrait-frame {
+    max-width: 240px;
+    border-radius: 20px;
+  }
+
+  .about-author-name {
+    font-size: 1.65rem;
+  }
+
+  .about-author-role {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-bio-p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  .about-inspiration-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    gap: 0.85rem;
+  }
+
+  .about-inspiration-text {
+    font-size: 1.05rem;
+  }
+
+  .about-closing-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .about-closing-text {
+    font-size: 1.08rem;
+  }
+
+  .about-cta-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
   }
 }
 

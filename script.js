@@ -46,6 +46,23 @@ const I18N = {
     filterEn: "English Edition",
     footerAbout: "Storie e libri illustrati pensati per accendere la fantasia e la curiosità dei più piccoli.",
     copyright: "© 2026 CSA Books 4 Kids. Tutti i diritti riservati."
+    ,
+    navBooks: "Libri",
+    navAbout: "Chi siamo",
+    aboutPageTitle: "Chi c'è dietro CSA Books 4 Kids",
+    aboutMetaTitle: "Chi siamo | CSA Books 4 Kids",
+    aboutMetaDesc: "Scopri Marco Salucci, autore e creatore di CSA Books 4 Kids: libri illustrati e storie per bambini nate dalla passione per camion, ruspe e cantieri.",
+    aboutBadge: "L'Autore",
+    aboutAuthorRole: "Autore e creatore di CSA Books 4 Kids",
+    aboutStoryTitle: "La storia dietro CSA Books 4 Kids",
+    aboutBioP1: "Marco Salucci è un autore e creatore italiano di libri per bambini. Vive in Trentino-Alto Adige, circondato dalle montagne e dalla natura, che spesso alimentano la sua immaginazione e il suo modo di raccontare.",
+    aboutBioP2: "Da sempre ama insegnare e trasmettere conoscenze, convinto che una storia possa essere molto più di un semplice passatempo: può diventare un piccolo ponte tra crescita, curiosità e divertimento.",
+    aboutBioP3: "La sua più grande ispirazione è suo figlio. È stata proprio la sua passione per camion, ruspe, gru e cantieri a dare vita a Le Avventure del Cantiere, una collana pensata per i bambini curiosi e per tutti quelli che rimangono affascinati dalle grandi macchine protagoniste di piccole grandi avventure.",
+    aboutInspirationText: "Una passione per camion, ruspe e cantieri ha fatto nascere un intero mondo di storie.",
+    aboutBioP4: "Nei suoi libri Marco cerca di creare qualcosa che vada oltre la semplice lettura: momenti da condividere tra genitori e figli, attraverso storie semplici, emozioni, gioco e scoperta.",
+    aboutBioP5: "Il suo obiettivo è riportare la lettura al centro del tempo trascorso insieme e offrire ai bambini storie capaci di farli sorridere, immaginare e imparare, lontano per qualche momento dai piccoli schermi.",
+    aboutClosingText: "Perché le storie più belle non sono solo quelle che i bambini leggono, ma quelle che genitori e figli vivono insieme.",
+    aboutCtaBtn: "Scopri i nostri libri"
   },
   en: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
@@ -64,6 +81,23 @@ const I18N = {
     filterEn: "English Edition",
     footerAbout: "Inspiring picture books designed to spark young imaginations and curious minds.",
     copyright: "© 2026 CSA Books 4 Kids. All rights reserved."
+    ,
+    navBooks: "Books",
+    navAbout: "About",
+    aboutPageTitle: "Meet the Creator Behind CSA Books 4 Kids",
+    aboutMetaTitle: "About | CSA Books 4 Kids",
+    aboutMetaDesc: "Meet Marco Salucci, author and creator of CSA Books 4 Kids: inspiring children's picture books born from a real love for trucks, excavators, and construction adventures.",
+    aboutBadge: "About the Creator",
+    aboutAuthorRole: "Author & Creator of CSA Books 4 Kids",
+    aboutStoryTitle: "The Story Behind CSA Books 4 Kids",
+    aboutBioP1: "Marco Salucci is an Italian author and creator of children's books. He lives in Trentino-Alto Adige, surrounded by mountains and nature, which often fuel his imagination and storytelling.",
+    aboutBioP2: "He has always loved teaching and sharing knowledge, believing that a story can be so much more than a pastime: it can become a gentle bridge connecting growth, curiosity, and fun.",
+    aboutBioP3: "His greatest inspiration is his son. It was his passion for trucks, diggers, cranes, and construction sites that sparked Le Avventure del Cantiere (Construction Site Adventures) — a book series created for curious little readers and anyone fascinated by big machines starring in big little adventures.",
+    aboutInspirationText: "A passion for trucks, excavators and construction sites gave birth to an entire world of stories.",
+    aboutBioP4: "Through his books, Marco strives to create something that goes beyond reading: meaningful moments to share between parents and children through simple storytelling, emotion, play, and discovery.",
+    aboutBioP5: "His goal is to bring shared reading back to the heart of family time, offering children stories that inspire them to smile, imagine, and learn — away from screens, even just for a while.",
+    aboutClosingText: "Because the best stories aren't just the ones children read, but the ones parents and children experience together.",
+    aboutCtaBtn: "Discover our books"
   },
   de: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
@@ -82,6 +116,23 @@ const I18N = {
     filterEn: "Englische Ausgabe",
     footerAbout: "Inspirierende Bilderbücher, die Fantasie und Neugier kleiner Leser wecken.",
     copyright: "© 2026 CSA Books 4 Kids. Alle Rechte vorbehalten."
+    ,
+    navBooks: "Bücher",
+    navAbout: "Über uns",
+    aboutPageTitle: "Wer hinter CSA Books 4 Kids steckt",
+    aboutMetaTitle: "Über uns | CSA Books 4 Kids",
+    aboutMetaDesc: "Lerne Marco Salucci kennen, Autor und Gründer von CSA Books 4 Kids: Bilderbücher und Geschichten voller Baustellen-Abenteuer für Kinder.",
+    aboutBadge: "Der Autor",
+    aboutAuthorRole: "Autor und Gründer von CSA Books 4 Kids",
+    aboutStoryTitle: "Die Geschichte hinter CSA Books 4 Kids",
+    aboutBioP1: "Marco Salucci ist ein italienischer Autor und Schöpfer von Kinderbüchern. Er lebt in Trentino-Südtirol, umgeben von Bergen und Natur, die seine Fantasie und sein Geschichtenerzählen inspirieren.",
+    aboutBioP2: "Er liebt es zu unterrichten und Wissen weiterzugeben. Er ist überzeugt, dass eine Geschichte viel mehr als ein Zeitvertreib sein kann: eine Brücke zwischen Wachstum, Neugier und Freude.",
+    aboutBioP3: "Seine größte Inspiration ist sein Sohn. Aus dessen Begeisterung für Lastwagen, Bagger, Kräne und Baustellen entstand die Reihe 'Le Avventure del Cantiere' (Baustellenabenteuer) für neugierige Kinder.",
+    aboutInspirationText: "Aus der Begeisterung für Lastwagen, Bagger und Baustellen entstand eine ganze Welt voller Geschichten.",
+    aboutBioP4: "In seinen Büchern möchte Marco Momente schaffen, die über das Vorlesen hinausgehen: gemeinsame Zeit für Eltern und Kinder voller Emotionen, Spiel und Entdeckungen.",
+    aboutBioP5: "Sein Ziel ist es, das gemeinsame Lesen wieder in den Mittelpunkt der Familie zu rücken und Geschichten anzubieten, die Kinder zum Lächeln, Träumen und Lernen anregen – fernab von Bildschirmen.",
+    aboutClosingText: "Denn die schönsten Geschichten sind nicht nur die, die Kinder lesen, sondern die, die Eltern und Kinder gemeinsam erleben.",
+    aboutCtaBtn: "Entdecke unsere Bücher"
   },
   fr: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
@@ -100,6 +151,23 @@ const I18N = {
     filterEn: "Édition Anglaise",
     footerAbout: "Des livres d'images inspirants conçus pour éveiller l'imagination et la curiosité des petits lecteurs.",
     copyright: "© 2026 CSA Books 4 Kids. Tous droits réservés."
+    ,
+    navBooks: "Livres",
+    navAbout: "À propos",
+    aboutPageTitle: "Qui est derrière CSA Books 4 Kids",
+    aboutMetaTitle: "À propos | CSA Books 4 Kids",
+    aboutMetaDesc: "Découvrez Marco Salucci, auteur et créateur de CSA Books 4 Kids : albums illustrés et histoires nées d'une vraie passion pour les camions et les chantiers.",
+    aboutBadge: "L'Auteur",
+    aboutAuthorRole: "Auteur et créateur de CSA Books 4 Kids",
+    aboutStoryTitle: "L'histoire de CSA Books 4 Kids",
+    aboutBioP1: "Marco Salucci est un auteur et créateur italien de livres pour enfants. Il vit dans le Trentin-Haut-Adige, entouré par la nature et les montagnes, sources de son inspiration.",
+    aboutBioP2: "Il a toujours aimé transmettre le savoir, convaincu qu'une histoire peut devenir un pont précieux entre éveil, curiosité et amusement.",
+    aboutBioP3: "Sa plus grande inspiration est son fils. C'est sa passion pour les camions, pelleteuses et chantiers qui a donné vie à la collection 'Le Avventure del Cantiere' pour les petits curieux.",
+    aboutInspirationText: "Une passion pour les camions, pelleteuses et chantiers a donné naissance à tout un univers d'histoires.",
+    aboutBioP4: "À travers ses livres, Marco cherche à offrir des moments de partage complice entre parents et enfants, faits d'émotion, de jeu et de découverte.",
+    aboutBioP5: "Son objectif est de replacer la lecture au cœur des moments en famille, avec des récits qui font sourire et grandir, loin des écrans.",
+    aboutClosingText: "Parce que les plus belles histoires ne sont pas seulement celles que les enfants lisent, mais celles que parents et enfants partagent ensemble.",
+    aboutCtaBtn: "Découvrir nos livres"
   },
   es: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
@@ -118,6 +186,23 @@ const I18N = {
     filterEn: "Edición Inglesa",
     footerAbout: "Libros ilustrados pensados para encender la imaginación y la curiosidad de los más pequeños.",
     copyright: "© 2026 CSA Books 4 Kids. Todos los derechos reservados."
+    ,
+    navBooks: "Libros",
+    navAbout: "Sobre nosotros",
+    aboutPageTitle: "Quién está detrás de CSA Books 4 Kids",
+    aboutMetaTitle: "Sobre nosotros | CSA Books 4 Kids",
+    aboutMetaDesc: "Conoce a Marco Salucci, autor y creador de CSA Books 4 Kids: libros ilustrados y cuentos infantiles nacidos de la pasión por camiones, excavadoras y obras.",
+    aboutBadge: "El Autor",
+    aboutAuthorRole: "Autor y creador de CSA Books 4 Kids",
+    aboutStoryTitle: "La historia detrás de CSA Books 4 Kids",
+    aboutBioP1: "Marco Salucci es un autor y creador italiano de libros infantiles. Vive en Trentino-Alto Adigio, rodeado de montañas y naturaleza que alimentan su imaginación.",
+    aboutBioP2: "Siempre le ha apasionado enseñar y transmitir conocimientos, convencido de que un cuento es un puente entre el crecimiento, la curiosidad y la diversión.",
+    aboutBioP3: "Su mayor inspiración es su hijo. Su fascinación por los camiones, excavadoras y grúas inspiró 'Le Avventure del Cantiere' para pequeños lectores curiosos.",
+    aboutInspirationText: "Una pasión por camiones, excavadoras y obras dio origen a todo un mundo de historias.",
+    aboutBioP4: "En sus libros, Marco busca crear momentos entrañables para compartir en familia a través de relatos sencillos, emoción, juego y descubrimiento.",
+    aboutBioP5: "Su objetivo es situar la lectura en el centro del tiempo en familia, ofreciendo historias que despierten sonrisas e imaginación, lejos de las pantallas.",
+    aboutClosingText: "Porque las mejores historias no son solo las que leen los niños, sino las que padres e hijos viven juntos.",
+    aboutCtaBtn: "Descubre nuestros libros"
   },
   nl: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
@@ -136,6 +221,23 @@ const I18N = {
     filterEn: "Engelse editie",
     footerAbout: "Inspirerende prentenboeken ontworpen om de fantasie en nieuwsgierigheid van kleine lezers te prikkelen.",
     copyright: "© 2026 CSA Books 4 Kids. Alle rechten voorbehouden."
+    ,
+    navBooks: "Boeken",
+    navAbout: "Over ons",
+    aboutPageTitle: "Wie zit er achter CSA Books 4 Kids",
+    aboutMetaTitle: "Over ons | CSA Books 4 Kids",
+    aboutMetaDesc: "Ontmoet Marco Salucci, auteur en bedenker van CSA Books 4 Kids: prentenboeken geboren uit passie voor vrachtwagens en bouwplaatsen.",
+    aboutBadge: "De Auteur",
+    aboutAuthorRole: "Auteur en bedenker van CSA Books 4 Kids",
+    aboutStoryTitle: "Het verhaal achter CSA Books 4 Kids",
+    aboutBioP1: "Marco Salucci is an Italian author and creator of children's books. He lives in Trentino-Alto Adige, surrounded by mountains and nature, which often fuel his imagination and storytelling.",
+    aboutBioP2: "He has always loved teaching and sharing knowledge, believing that a story can be so much more than a pastime: it can become a gentle bridge connecting growth, curiosity, and fun.",
+    aboutBioP3: "His greatest inspiration is his son. It was his passion for trucks, diggers, cranes, and construction sites that sparked Le Avventure del Cantiere (Construction Site Adventures).",
+    aboutInspirationText: "A passion for trucks, excavators and construction sites gave birth to an entire world of stories.",
+    aboutBioP4: "Through his books, Marco strives to create something that goes beyond reading: meaningful moments to share between parents and children through simple storytelling, emotion, play, and discovery.",
+    aboutBioP5: "His goal is to bring shared reading back to the heart of family time, offering children stories that inspire them to smile, imagine, and learn — away from screens, even just for a while.",
+    aboutClosingText: "Because the best stories aren't just the ones children read, but the ones parents and children experience together.",
+    aboutCtaBtn: "Ontdek onze boeken"
   },
   pl: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
@@ -154,6 +256,23 @@ const I18N = {
     filterEn: "Wydanie angielskie",
     footerAbout: "Inspirujące książki z obrazkami pobudzające wyobraźnię i ciekawość małych czytelników.",
     copyright: "© 2026 CSA Books 4 Kids. Wszelkie prawa zastrzeżone."
+    ,
+    navBooks: "Książki",
+    navAbout: "O nas",
+    aboutPageTitle: "Poznaj twórcę CSA Books 4 Kids",
+    aboutMetaTitle: "O nas | CSA Books 4 Kids",
+    aboutMetaDesc: "Poznaj Marco Salucciego, autora i twórcę CSA Books 4 Kids: książki z obrazkami dla dzieci zainspirowane maszynami budowlanymi.",
+    aboutBadge: "Autor",
+    aboutAuthorRole: "Autor i twórca CSA Books 4 Kids",
+    aboutStoryTitle: "Historia CSA Books 4 Kids",
+    aboutBioP1: "Marco Salucci is an Italian author and creator of children's books. He lives in Trentino-Alto Adige, surrounded by mountains and nature, which often fuel his imagination and storytelling.",
+    aboutBioP2: "He has always loved teaching and sharing knowledge, believing that a story can be so much more than a pastime: it can become a gentle bridge connecting growth, curiosity, and fun.",
+    aboutBioP3: "His greatest inspiration is his son. It was his passion for trucks, diggers, cranes, and construction sites that sparked Le Avventure del Cantiere (Construction Site Adventures).",
+    aboutInspirationText: "A passion for trucks, excavators and construction sites gave birth to an entire world of stories.",
+    aboutBioP4: "Through his books, Marco strives to create something that goes beyond reading: meaningful moments to share between parents and children through simple storytelling, emotion, play, and discovery.",
+    aboutBioP5: "His goal is to bring shared reading back to the heart of family time, offering children stories that inspire them to smile, imagine, and learn — away from screens, even just for a while.",
+    aboutClosingText: "Because the best stories aren't just the ones children read, but the ones parents and children experience together.",
+    aboutCtaBtn: "Odkryj nasze książki"
   },
   sv: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
@@ -172,6 +291,23 @@ const I18N = {
     filterEn: "Engelsk utgåva",
     footerAbout: "Inspirerande bilderböcker utformade för att väcka fantasi och nyfikenhet hos små läsare.",
     copyright: "© 2026 CSA Books 4 Kids. Alla rättigheter förbehållna."
+    ,
+    navBooks: "Böcker",
+    navAbout: "Om oss",
+    aboutPageTitle: "Möt skaparen bakom CSA Books 4 Kids",
+    aboutMetaTitle: "Om oss | CSA Books 4 Kids",
+    aboutMetaDesc: "Möt Marco Salucci, författare och skapare av CSA Books 4 Kids: bilderböcker för barn inspirerade av arbetsfordon och byggarbetsplatser.",
+    aboutBadge: "Författaren",
+    aboutAuthorRole: "Författare och skapare av CSA Books 4 Kids",
+    aboutStoryTitle: "Historien bakom CSA Books 4 Kids",
+    aboutBioP1: "Marco Salucci is an Italian author and creator of children's books. He lives in Trentino-Alto Adige, surrounded by mountains and nature, which often fuel his imagination and storytelling.",
+    aboutBioP2: "He has always loved teaching and sharing knowledge, believing that a story can be so much more than a pastime: it can become a gentle bridge connecting growth, curiosity, and fun.",
+    aboutBioP3: "His greatest inspiration is his son. It was his passion for trucks, diggers, cranes, and construction sites that sparked Le Avventure del Cantiere (Construction Site Adventures).",
+    aboutInspirationText: "A passion for trucks, excavators and construction sites gave birth to an entire world of stories.",
+    aboutBioP4: "Through his books, Marco strives to create something that goes beyond reading: meaningful moments to share between parents and children through simple storytelling, emotion, play, and discovery.",
+    aboutBioP5: "His goal is to bring shared reading back to the heart of family time, offering children stories that inspire them to smile, imagine, and learn — away from screens, even just for a while.",
+    aboutClosingText: "Because the best stories aren't just the ones children read, but the ones parents and children experience together.",
+    aboutCtaBtn: "Upptäck våra böcker"
   },
   ja: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
@@ -190,6 +326,23 @@ const I18N = {
     filterEn: "英語版",
     footerAbout: "小さな読者の想像力と好奇心を刺激する絵本。",
     copyright: "© 2026 CSA Books 4 Kids. 無断転載を禁じます。"
+    ,
+    navBooks: "本",
+    navAbout: "著者について",
+    aboutPageTitle: "CSA Books 4 Kids の作者紹介",
+    aboutMetaTitle: "著者について | CSA Books 4 Kids",
+    aboutMetaDesc: "CSA Books 4 Kids の著者マルコ・サルッチ（Marco Salucci）の紹介。乗り物や工事現場への情熱から生まれた子ども向け絵本シリーズ。",
+    aboutBadge: "著者紹介",
+    aboutAuthorRole: "CSA Books 4 Kids 著者・クリエイター",
+    aboutStoryTitle: "CSA Books 4 Kids が生まれた理由",
+    aboutBioP1: "Marco Salucci is an Italian author and creator of children's books. He lives in Trentino-Alto Adige, surrounded by mountains and nature, which often fuel his imagination and storytelling.",
+    aboutBioP2: "He has always loved teaching and sharing knowledge, believing that a story can be so much more than a pastime: it can become a gentle bridge connecting growth, curiosity, and fun.",
+    aboutBioP3: "His greatest inspiration is his son. It was his passion for trucks, diggers, cranes, and construction sites that sparked Le Avventure del Cantiere (Construction Site Adventures).",
+    aboutInspirationText: "A passion for trucks, excavators and construction sites gave birth to an entire world of stories.",
+    aboutBioP4: "Through his books, Marco strives to create something that goes beyond reading: meaningful moments to share between parents and children through simple storytelling, emotion, play, and discovery.",
+    aboutBioP5: "His goal is to bring shared reading back to the heart of family time, offering children stories that inspire them to smile, imagine, and learn — away from screens, even just for a while.",
+    aboutClosingText: "Because the best stories aren't just the ones children read, but the ones parents and children experience together.",
+    aboutCtaBtn: "本を見る"
   }
 };
 
@@ -422,6 +575,41 @@ function applyLanguage(lang) {
   // Footer
   setText('footer-about-text', strings.footerAbout);
   setText('footer-copyright-text', strings.copyright);
+
+  // Navigation Links
+  setText('nav-link-books', strings.navBooks || 'Libri');
+  setText('nav-link-about', strings.navAbout || 'Chi siamo');
+  setText('footer-nav-books', strings.navBooks || 'Libri');
+  setText('footer-nav-about', strings.navAbout || 'Chi siamo');
+
+  // About Page (se presente su about.html)
+  if (document.getElementById('about-page-title')) {
+    setText('about-page-title', strings.aboutPageTitle);
+    setText('about-badge', strings.aboutBadge);
+    setText('about-author-role', strings.aboutAuthorRole);
+    setText('about-bio-p1', strings.aboutBioP1);
+    setText('about-bio-p2', strings.aboutBioP2);
+    setText('about-story-title', strings.aboutStoryTitle);
+    setText('about-bio-p3', strings.aboutBioP3);
+    setText('about-inspiration-text', strings.aboutInspirationText);
+    setText('about-bio-p4', strings.aboutBioP4);
+    setText('about-bio-p5', strings.aboutBioP5);
+    setText('about-closing-text', strings.aboutClosingText);
+    setText('about-cta-btn-text', strings.aboutCtaBtn);
+
+    const portraitImg = document.getElementById('about-portrait-img');
+    if (portraitImg && strings.aboutAuthorRole) {
+      portraitImg.alt = `Marco Salucci - ${strings.aboutAuthorRole}`;
+    }
+
+    if (strings.aboutMetaTitle) {
+      document.title = strings.aboutMetaTitle;
+    }
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && strings.aboutMetaDesc) {
+      metaDesc.setAttribute('content', strings.aboutMetaDesc);
+    }
+  }
 
   renderBookCatalog(lang);
 }

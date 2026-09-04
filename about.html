@@ -14,25 +14,25 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSA Books 4 Kids | Libri illustrati per bambini | Children's Books</title>
+  <title>Chi siamo | CSA Books 4 Kids</title>
   
   <!-- SEO & Meta Tags -->
-  <meta name="description" content="CSA Books 4 Kids: libri illustrati e storie educative per bambini di 2-5 anni di Marco Salucci. Scopri la collana Le Avventure del Cantiere su Amazon." />
-  <meta name="keywords" content="CSA Books 4 Kids, libri per bambini, libri illustrati 2-5 anni, Le Avventure del Cantiere, Construction Site Adventures, Marco Salucci, Amazon libri bambini" />
+  <meta name="description" content="Scopri Marco Salucci, autore e creatore di CSA Books 4 Kids: libri illustrati e storie per bambini nate dalla passione per camion, ruspe e cantieri." />
+  <meta name="keywords" content="Marco Salucci, CSA Books 4 Kids, chi siamo, autore libri bambini, Le Avventure del Cantiere, libri illustrati bambini, children books author" />
   <meta name="author" content="Marco Salucci - CSA Books 4 Kids" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="CSA Books 4 Kids | Libri illustrati per bambini" />
-  <meta property="og:description" content="Grandi macchine, piccole avventure. Scopri la collana di libri per bambini di Marco Salucci." />
-  <meta property="og:image" content="assets/construction-site-adventures/Logo.ITA.v2.png" />
+  <meta property="og:title" content="Chi siamo | CSA Books 4 Kids" />
+  <meta property="og:description" content="Scopri Marco Salucci, autore e creatore di CSA Books 4 Kids: storie per bambini nate dalla passione per camion, ruspe e cantieri." />
+  <meta property="og:image" content="assets/author/SALUCCI.Marco.png" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CSA Books 4 Kids | Children's Picture Books" />
-  <meta name="twitter:description" content="Picture books and fun stories for curious little minds." />
-  <meta name="twitter:image" content="assets/construction-site-adventures/Logo.ITA.v2.png" />
+  <meta name="twitter:title" content="About | CSA Books 4 Kids" />
+  <meta name="twitter:description" content="Meet Marco Salucci, author and creator of CSA Books 4 Kids picture books." />
+  <meta name="twitter:image" content="assets/author/SALUCCI.Marco.png" />
 
   <!-- Google Fonts: Fredoka & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,7 +50,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <!-- Brand Logo con Logo Collana sulla sinistra -->
-      <div class="brand-identity" aria-label="CSA Books 4 Kids">
+      <a href="index.html" class="brand-identity" aria-label="CSA Books 4 Kids Homepage">
         <img 
           src="assets/construction-site-adventures/Logo.ITA.v2.png" 
           alt="Logo Collana" 
@@ -61,12 +61,12 @@
           <span class="brand-name">CSA Books <span class="highlight">4 Kids</span></span>
           <span class="brand-tagline">Kids Publishing</span>
         </div>
-      </div>
+      </a>
 
       <!-- Navigazione Principale -->
       <nav class="site-nav" aria-label="Navigazione principale">
-        <a href="#catalogo" class="nav-link active" id="nav-link-books">Libri</a>
-        <a href="about.html" class="nav-link" id="nav-link-about">Chi siamo</a>
+        <a href="index.html#catalogo" class="nav-link" id="nav-link-books">Libri</a>
+        <a href="about.html" class="nav-link active" id="nav-link-about">Chi siamo</a>
       </nav>
 
       <!-- Header Actions: Contatto Email, Social & Language Switcher FlagCDN -->
@@ -95,7 +95,7 @@
           </a>
         </div>
 
-        <!-- Selettore Lingua Interfaccia con Bandiere FlagCDN (come Cozy Coloring Chaos) -->
+        <!-- Selettore Lingua Interfaccia con Bandiere FlagCDN -->
         <div class="lang-switcher" role="group" aria-label="Language Selector">
           <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-pressed="false" title="English">
             <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="18" height="13" alt="English" class="lang-flag-img" loading="eager">
@@ -138,65 +138,109 @@
     </div>
   </header>
 
-  <main>
-    <!-- ======================================================================
-         HERO BANNER COMPLETO 16:9 (MOSTRATO PER INTERO SENZA TAGLI)
-         ====================================================================== -->
-    <section class="hero-banner" id="hero-banner" aria-label="CSA Books 4 Kids Hero">
-      <div class="container hero-banner-wrapper">
-        <div class="hero-banner-container">
-          <img 
-            src="assets/banner/banner-csa-books-4-kids.jpg" 
-            alt="CSA Books 4 Kids - Grandi avventure per piccoli lettori" 
-            class="hero-banner-img" 
-            id="hero-banner-img"
-            fetchpriority="high"
-          />
-          <div class="hero-banner-overlay">
-            <h1 class="hero-title" id="hero-title">CSA Books <span class="highlight">4 Kids</span></h1>
-            <p class="hero-subtitle" id="hero-subtitle">Grandi avventure per piccoli lettori</p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- ======================================================================
+       MAIN CONTENT: ABOUT / CHI SIAMO
+       ====================================================================== -->
+  <main class="about-main">
+    <div class="container about-container">
 
-    <!-- ======================================================================
-         GRIGLIA CATALOGO LIBRI CON SELETTORE EDIZIONE SECONDARIO
-         ====================================================================== -->
-    <section class="catalog-section" id="catalogo">
-      <div class="container">
-        <!-- Selettore Secondario Lingua Libri (Indipendente dalla lingua del sito) -->
-        <div class="book-filters-container">
-          <div class="book-filters" role="tablist" aria-label="Filtra libri per lingua">
-            <button type="button" class="filter-btn active" data-book-lang="it" role="tab" aria-selected="true" onclick="setBookLanguageFilter('it')">
-              <img src="https://flagcdn.com/24x18/it.png" srcset="https://flagcdn.com/48x36/it.png 2x" width="18" height="13" alt="" class="lang-flag-img" loading="eager">
-              <span class="filter-text" id="filter-text-it">Edizione Italiana</span>
-              <span class="filter-count">8</span>
-            </button>
-            <button type="button" class="filter-btn" data-book-lang="en" role="tab" aria-selected="false" onclick="setBookLanguageFilter('en')">
-              <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="18" height="13" alt="" class="lang-flag-img" loading="eager">
-              <span class="filter-text" id="filter-text-en">English Edition</span>
-              <span class="filter-count">8</span>
-            </button>
-            <button type="button" class="filter-btn" data-book-lang="all" role="tab" aria-selected="false" onclick="setBookLanguageFilter('all')">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
-                <path d="M6 6h10"></path>
-                <path d="M6 10h10"></path>
-              </svg>
-              <span class="filter-text" id="filter-text-all">Tutte le edizioni</span>
-              <span class="filter-count">16</span>
-            </button>
+      <!-- Header Section con Badge & Titolo Principale -->
+      <div class="about-page-header">
+        <div class="about-badge-wrapper">
+          <span class="about-badge" id="about-badge">L'Autore</span>
+        </div>
+        <h1 class="about-page-title" id="about-page-title">Chi c'è dietro CSA Books 4 Kids</h1>
+      </div>
+
+      <!-- Sezione Hero: Foto Ritratto & Profilo Autore -->
+      <section class="about-hero-grid" aria-label="Profilo Autore Marco Salucci">
+        <!-- Colonna 1: Ritratto Professionale Naturale (nessun filtro / cartoon) -->
+        <div class="about-portrait-card">
+          <div class="about-portrait-frame">
+            <img 
+              src="assets/author/SALUCCI.Marco.png" 
+              alt="Marco Salucci - Autore e creatore di CSA Books 4 Kids" 
+              class="about-portrait-img" 
+              id="about-portrait-img"
+              fetchpriority="high"
+            />
           </div>
         </div>
 
-        <!-- Griglia Card Libri -->
-        <div class="catalog-grid" id="books-catalog-grid">
-          <!-- Popolato dinamicamente da script.js -->
-        </div>
-      </div>
-    </section>
+        <!-- Colonna 2: Nome, Ruolo e Primi Paragrafi Biografici -->
+        <div class="about-author-info">
+          <h2 class="about-author-name">Marco Salucci</h2>
+          <p class="about-author-role" id="about-author-role">Autore e creatore di CSA Books 4 Kids</p>
 
+          <div class="about-bio-lead">
+            <p class="about-bio-p" id="about-bio-p1">
+              Marco Salucci è un autore e creatore italiano di libri per bambini. Vive in Trentino-Alto Adige, circondato dalle montagne e dalla natura, che spesso alimentano la sua immaginazione e il suo modo di raccontare.
+            </p>
+            <p class="about-bio-p" id="about-bio-p2">
+              Da sempre ama insegnare e trasmettere conoscenze, convinto che una storia possa essere molto più di un semplice passatempo: può diventare un piccolo ponte tra crescita, curiosità e divertimento.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sezione: La Storia & Ispirazione -->
+      <section class="about-story-section" aria-label="La storia e l'ispirazione">
+        <h3 class="about-section-heading" id="about-story-title">La storia dietro CSA Books 4 Kids</h3>
+        <p class="about-bio-p" id="about-bio-p3">
+          La sua più grande ispirazione è suo figlio. È stata proprio la sua passione per camion, ruspe, gru e cantieri a dare vita a Le Avventure del Cantiere, una collana pensata per i bambini curiosi e per tutti quelli che rimangono affascinati dalle grandi macchine protagoniste di piccole grandi avventure.
+        </p>
+
+        <!-- Box Evidenziato Ispirazione Personale -->
+        <div class="about-inspiration-card">
+          <div class="about-inspiration-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21h18"></path>
+              <path d="M5 21V7l8-4v18"></path>
+              <path d="M19 21V11l-6-4"></path>
+              <path d="M9 9h1"></path>
+              <path d="M9 13h1"></path>
+              <path d="M9 17h1"></path>
+            </svg>
+          </div>
+          <p class="about-inspiration-text" id="about-inspiration-text">
+            Una passione per camion, ruspe e cantieri ha fatto nascere un intero mondo di storie.
+          </p>
+        </div>
+
+        <!-- Paragrafi Biografici di Prospettiva e Valori -->
+        <p class="about-bio-p" id="about-bio-p4">
+          Nei suoi libri Marco cerca di creare qualcosa che vada oltre la semplice lettura: momenti da condividere tra genitori e figli, attraverso storie semplici, emozioni, gioco e scoperta.
+        </p>
+        <p class="about-bio-p" id="about-bio-p5">
+          Il suo obiettivo è riportare la lettura al centro del tempo trascorso insieme e offrire ai bambini storie capaci di farli sorridere, immaginare e imparare, lontano per qualche momento dai piccoli schermi.
+        </p>
+      </section>
+
+      <!-- Closing Statement / Filosofia del Progetto -->
+      <section class="about-closing-section" aria-label="Filosofia del progetto">
+        <div class="about-closing-card">
+          <div class="about-closing-icon" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <blockquote class="about-closing-text" id="about-closing-text">
+            Perché le storie più belle non sono solo quelle che i bambini leggono, ma quelle che genitori e figli vivono insieme.
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Call to Action Finale -->
+      <section class="about-cta-section" aria-label="Esplora il catalogo">
+        <a href="index.html#catalogo" class="btn-buy about-cta-btn" id="about-cta-btn">
+          <span id="about-cta-btn-text">Scopri i nostri libri</span>
+          <svg class="btn-buy-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      </section>
+
+    </div>
   </main>
 
   <!-- ======================================================================
@@ -212,7 +256,7 @@
           </p>
         </div>
         <div class="footer-nav">
-          <a href="#catalogo" class="footer-nav-link" id="footer-nav-books">Libri</a>
+          <a href="index.html#catalogo" class="footer-nav-link" id="footer-nav-books">Libri</a>
           <a href="about.html" class="footer-nav-link" id="footer-nav-about">Chi siamo</a>
         </div>
       </div>
@@ -222,60 +266,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- ======================================================================
-       MODAL POPUP ANTEPRIMA LIBRO (READ SAMPLE)
-       ====================================================================== -->
-  <div class="sample-modal-backdrop" id="sample-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="sample-modal-title">
-    <div class="sample-modal-dialog">
-      <div class="sample-modal-header">
-        <div class="sample-modal-title-group">
-          <span class="sample-modal-badge" id="sample-modal-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-            </svg>
-            <span>Anteprima</span>
-          </span>
-          <h3 class="sample-modal-title" id="sample-modal-title">Titolo Libro</h3>
-        </div>
-        <button type="button" class="sample-modal-close" onclick="closeSampleModal()" aria-label="Chiudi anteprima">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-
-      <div class="sample-modal-body">
-        <button type="button" class="sample-nav-btn prev" id="sample-prev-btn" onclick="changeSamplePage(-1)" aria-label="Pagina precedente">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
-        
-        <div class="sample-page-viewer" id="sample-viewer">
-          <div class="sample-img-container">
-            <img src="" alt="Anteprima pagina" id="sample-page-img" class="sample-page-img" />
-          </div>
-          <div class="sample-page-info">
-            <span class="sample-page-label" id="sample-page-label">Copertina</span>
-            <span class="sample-page-counter" id="sample-page-counter">1 / 9</span>
-          </div>
-        </div>
-
-        <button type="button" class="sample-nav-btn next" id="sample-next-btn" onclick="changeSamplePage(1)" aria-label="Pagina successiva">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
-      </div>
-
-      <div class="sample-modal-footer" id="sample-modal-footer">
-        <!-- Popolato dinamicamente da script.js -->
-      </div>
-    </div>
-  </div>
 
   <!-- Scripts -->
   <script src="books.js"></script>
