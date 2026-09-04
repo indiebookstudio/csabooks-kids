@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I Personaggi | Le Avventure del Cantiere - CSA Books 4 Kids</title>
+  <meta name="description" content="Scopri i protagonisti della collana Le Avventure del Cantiere: Benny l'escavatore, Bruno il camion, Leo la gru, Nina la betoniera, Rino il rullo e Rudy la ruspa." />
+
+  <!-- Preconnect per Google Fonts e FlagCDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://flagcdn.com" crossorigin />
+
+  <!-- Typography: Fredoka per titoli caldi e accoglienti, Quicksand per corpo testo pulito -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Foglio di Stile Unificato del Brand -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page-characters">
+
+  <!-- ======================================================================
+       INTESTAZIONE SITO (Identica a index.html e about.html)
+       ====================================================================== -->
+  <header class="site-header">
+    <!-- BARRA SUPERIORE: Email, Social (Instagram, TikTok) e Selettore Lingua FlagCDN -->
+    <div class="site-topbar">
+      <div class="container topbar-inner">
+        <!-- Social & Email Links -->
+        <div class="topbar-links">
+          <!-- Email Contact -->
+          <a href="mailto:csabooks.kids@gmail.com" class="topbar-btn topbar-email" id="topbar-email-btn" aria-label="Email csabooks.kids@gmail.com" title="csabooks.kids@gmail.com">
+            <svg class="topbar-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            <span class="topbar-label label-full">csabooks.kids@gmail.com</span>
+            <span class="topbar-label label-short">Email</span>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/csabooks.kids" target="_blank" rel="noopener noreferrer" class="topbar-btn topbar-instagram" aria-label="Instagram @csabooks.kids" title="Instagram @csabooks.kids">
+            <svg class="topbar-icon" viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span class="topbar-label label-full">@csabooks.kids</span>
+            <span class="topbar-label label-short">Instagram</span>
+          </a>
+
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@csabooks.kids" target="_blank" rel="noopener noreferrer" class="topbar-btn topbar-tiktok" aria-label="TikTok @csabooks.kids" title="TikTok @csabooks.kids">
+            <svg class="topbar-icon" viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.67 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.33V8.87a8.28 8.28 0 0 0 4.91 1.6V7.02a4.85 4.85 0 0 1-1-.33z"/></svg>
+            <span class="topbar-label label-full">@csabooks.kids</span>
+            <span class="topbar-label label-short">TikTok</span>
+          </a>
+        </div>
+
+        <!-- Selettore Lingua Interfaccia con Bandiere FlagCDN -->
+        <div class="lang-switcher" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-pressed="false" title="English">
+            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="18" height="13" alt="English" class="lang-flag-img" loading="eager">
+            <span class="lang-code">EN</span>
+          </button>
+          <button type="button" class="lang-btn active" data-lang="it" onclick="setLanguage('it')" aria-pressed="true" title="Italiano">
+            <img src="https://flagcdn.com/24x18/it.png" srcset="https://flagcdn.com/48x36/it.png 2x" width="18" height="13" alt="Italiano" class="lang-flag-img" loading="eager">
+            <span class="lang-code">IT</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="de" onclick="setLanguage('de')" aria-pressed="false" title="Deutsch">
+            <img src="https://flagcdn.com/24x18/de.png" srcset="https://flagcdn.com/48x36/de.png 2x" width="18" height="13" alt="Deutsch" class="lang-flag-img" loading="eager">
+            <span class="lang-code">DE</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="fr" onclick="setLanguage('fr')" aria-pressed="false" title="Français">
+            <img src="https://flagcdn.com/24x18/fr.png" srcset="https://flagcdn.com/48x36/fr.png 2x" width="18" height="13" alt="Français" class="lang-flag-img" loading="eager">
+            <span class="lang-code">FR</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="es" onclick="setLanguage('es')" aria-pressed="false" title="Español">
+            <img src="https://flagcdn.com/24x18/es.png" srcset="https://flagcdn.com/48x36/es.png 2x" width="18" height="13" alt="Español" class="lang-flag-img" loading="eager">
+            <span class="lang-code">ES</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="nl" onclick="setLanguage('nl')" aria-pressed="false" title="Nederlands">
+            <img src="https://flagcdn.com/24x18/nl.png" srcset="https://flagcdn.com/48x36/nl.png 2x" width="18" height="13" alt="Nederlands" class="lang-flag-img" loading="eager">
+            <span class="lang-code">NL</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="pl" onclick="setLanguage('pl')" aria-pressed="false" title="Polski">
+            <img src="https://flagcdn.com/24x18/pl.png" srcset="https://flagcdn.com/48x36/pl.png 2x" width="18" height="13" alt="Polski" class="lang-flag-img" loading="eager">
+            <span class="lang-code">PL</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="sv" onclick="setLanguage('sv')" aria-pressed="false" title="Svenska">
+            <img src="https://flagcdn.com/24x18/se.png" srcset="https://flagcdn.com/48x36/se.png 2x" width="18" height="13" alt="Svenska" class="lang-flag-img" loading="eager">
+            <span class="lang-code">SE</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="ja" onclick="setLanguage('ja')" aria-pressed="false" title="日本語">
+            <img src="https://flagcdn.com/24x18/jp.png" srcset="https://flagcdn.com/48x36/jp.png 2x" width="18" height="13" alt="日本語" class="lang-flag-img" loading="eager">
+            <span class="lang-code">JP</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRA PRINCIPALE: Brand Identity & Navigazione -->
+    <div class="site-header-main">
+      <div class="container header-inner">
+        <!-- Brand Identity -->
+        <a href="index.html" class="brand-identity" aria-label="CSA Books 4 Kids">
+          <img 
+            src="assets/construction-site-adventures/Logo.ITA.v2.png" 
+            alt="Logo Collana" 
+            class="header-series-logo" 
+            id="series-logo-img"
+          />
+          <div class="brand-text-group">
+            <span class="brand-name">CSA Books <span class="highlight">4 Kids</span></span>
+            <span class="brand-tagline">Kids Publishing</span>
+          </div>
+        </a>
+
+        <!-- Navigazione Principale -->
+        <nav class="site-nav" aria-label="Navigazione principale">
+          <a href="index.html#catalogo" class="nav-link" id="nav-link-books">I Libri</a>
+          <a href="characters.html" class="nav-link active" id="nav-link-characters">I Personaggi</a>
+          <a href="about.html" class="nav-link" id="nav-link-about">Chi siamo</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       MAIN CONTENT: LA COLLANA & I PERSONAGGI
+       ====================================================================== -->
+  <main class="characters-main">
+    <div class="container characters-container">
+
+      <!-- ==================================================================
+           SEZIONE 1: COLLECTION HERO
+           ================================================================== -->
+      <section class="characters-hero-section" aria-label="Introduzione Collana">
+        <div class="characters-hero-logo-frame">
+          <img 
+            src="assets/construction-site-adventures/Logo.ITA.v2.png" 
+            alt="Le Avventure del Cantiere - Logo Collana" 
+            class="characters-hero-logo" 
+            id="collection-hero-logo"
+            fetchpriority="high"
+          />
+        </div>
+
+        <h1 class="characters-hero-title" id="characters-hero-title">Un mondo di scoperte, amicizia e grandi macchine</h1>
+
+        <div class="characters-hero-lead-box">
+          <p class="characters-hero-lead" id="characters-hero-desc">
+            "Le Avventure del Cantiere" è una collana di storie illustrate per bambini che ha come protagonisti un gruppo di simpatici veicoli da costruzione. Ogni libro trasforma una sfida quotidiana di cantiere in una piccola grande avventura ricca di amicizia, curiosità, lavoro di squadra e scoperta, offrendo a genitori e figli storie semplici e coinvolgenti da condividere insieme.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SEZIONE 2: PERCHÉ QUESTA COLLANA / I VALORI
+           ================================================================== -->
+      <section class="characters-values-section" aria-label="I Valori della Collana">
+        <div class="characters-section-header">
+          <h2 class="characters-section-title" id="characters-values-title">Cosa Rende Speciale Questa Collana</h2>
+          <p class="characters-section-subtitle" id="characters-values-subtitle">Valori importanti raccontati attraverso storie semplici, divertenti e ricche di cuore</p>
+        </div>
+
+        <div class="characters-values-grid">
+          <!-- Valore 1: Amicizia e Collaborazione -->
+          <div class="value-card">
+            <div class="value-icon-wrapper" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="value-card-title" id="value-1-title">Amicizia e Squadra</h3>
+            <p class="value-card-text" id="value-1-desc">Nessun lavoro è troppo grande quando ci si aiuta: le storie mostrano la bellezza della cooperazione e del rispetto reciproco.</p>
+          </div>
+
+          <!-- Valore 2: Curiosità e Scoperta -->
+          <div class="value-card">
+            <div class="value-icon-wrapper" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+            </div>
+            <h3 class="value-card-title" id="value-2-title">Curiosità e Scoperta</h3>
+            <p class="value-card-text" id="value-2-desc">La curiosità è il motore della crescita: ogni pagina stimola le domande dei piccoli e accende la loro immaginazione.</p>
+          </div>
+
+          <!-- Valore 3: Aiuto Reciproco & Problem Solving -->
+          <div class="value-card">
+            <div class="value-icon-wrapper" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+              </svg>
+            </div>
+            <h3 class="value-card-title" id="value-3-title">Risolvere i Problemi</h3>
+            <p class="value-card-text" id="value-3-desc">I protagonisti affrontano piccoli imprevisti con calma e ingegno, insegnando che a ogni problema c'è una soluzione.</p>
+          </div>
+
+          <!-- Valore 4: Lettura Condivisa in Famiglia -->
+          <div class="value-card">
+            <div class="value-icon-wrapper" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h3 class="value-card-title" id="value-4-title">Tempo Insieme</h3>
+            <p class="value-card-text" id="value-4-desc">Un'occasione speciale per genitori e figli di ritrovarsi ogni sera, lontano da schermi e distrazioni tecnologiche.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SEZIONE 3: INCONTRA I PROTAGONISTI (I 6 PERSONAGGI)
+           ================================================================== -->
+      <section class="characters-grid-section" aria-label="I Sei Protagonisti">
+        <div class="characters-section-header">
+          <h2 class="characters-section-title" id="characters-section-title">Incontra i Protagonisti</h2>
+          <p class="characters-section-subtitle" id="characters-section-subtitle">Sei amici speciali sempre pronti a lavorare insieme e a vivere grandi avventure!</p>
+        </div>
+
+        <div class="characters-cards-grid">
+          <!-- 1. Benny -->
+          <article class="character-card" id="character-card-benny">
+            <div class="character-image-frame">
+              <img 
+                src="assets/brand/Benny.jpeg" 
+                alt="Benny l'escavatore giallo" 
+                class="character-card-img" 
+                id="character-img-benny" 
+                loading="eager"
+              />
+            </div>
+            <div class="character-card-body">
+              <h3 class="character-card-name" id="character-name-benny">Benny</h3>
+              <span class="character-card-role" id="character-role-benny">L'Escavatore</span>
+              <p class="character-card-desc" id="character-desc-benny">
+                Curioso, entusiasta e dal cuore grande. Con la sua benna scava buche, scopre segreti nascosti e non si tira mai indietro quando c'è da aiutare un amico in difficoltà.
+              </p>
+            </div>
+          </article>
+
+          <!-- 2. Bruno -->
+          <article class="character-card" id="character-card-bruno">
+            <div class="character-image-frame">
+              <img 
+                src="assets/brand/Bruno.jpeg" 
+                alt="Bruno il camion" 
+                class="character-card-img" 
+                id="character-img-bruno" 
+                loading="lazy"
+              />
+            </div>
+            <div class="character-card-body">
+              <h3 class="character-card-name" id="character-name-bruno">Bruno</h3>
+              <span class="character-card-role" id="character-role-bruno">Il Camion</span>
+              <p class="character-card-desc" id="character-desc-bruno">
+                Forte, generoso e sempre allegro. Con il suo capiente cassone trasporta sabbia e pietre pesanti, regalando sempre un sorriso e una mano alla squadra.
+              </p>
+            </div>
+          </article>
+
+          <!-- 3. Leo -->
+          <article class="character-card" id="character-card-leo">
+            <div class="character-image-frame">
+              <img 
+                src="assets/brand/Leo.jpeg" 
+                alt="Leo la gru" 
+                class="character-card-img" 
+                id="character-img-leo" 
+                loading="lazy"
+              />
+            </div>
+            <div class="character-card-body">
+              <h3 class="character-card-name" id="character-name-leo">Leo</h3>
+              <span class="character-card-role" id="character-role-leo">La Gru</span>
+              <p class="character-card-desc" id="character-desc-leo">
+                Paziente, attento e protettivo. Dall'alto del cantiere vede tutto con chiarezza e, con il suo lungo braccio meccanico, solleva carichi e risolve i problemi più complicati.
+              </p>
+            </div>
+          </article>
+
+          <!-- 4. Nina -->
+          <article class="character-card" id="character-card-nina">
+            <div class="character-image-frame">
+              <img 
+                src="assets/brand/Nina.jpeg" 
+                alt="Nina la betoniera" 
+                class="character-card-img" 
+                id="character-img-nina" 
+                loading="lazy"
+              />
+            </div>
+            <div class="character-card-body">
+              <h3 class="character-card-name" id="character-name-nina">Nina</h3>
+              <span class="character-card-role" id="character-role-nina">La Betoniera</span>
+              <p class="character-card-desc" id="character-desc-nina">
+                Vivace, precisa e piena di energia positiva. Il suo tamburo gira senza sosta per preparare la miscela perfetta, portando buonumore ovunque ci sia da costruire.
+              </p>
+            </div>
+          </article>
+
+          <!-- 5. Rino -->
+          <article class="character-card" id="character-card-rino">
+            <div class="character-image-frame">
+              <img 
+                src="assets/brand/Rino.jpeg" 
+                alt="Rino il rullo" 
+                class="character-card-img" 
+                id="character-img-rino" 
+                loading="lazy"
+              />
+            </div>
+            <div class="character-card-body">
+              <h3 class="character-card-name" id="character-name-rino">Rino</h3>
+              <span class="character-card-role" id="character-role-rino">Il Rullo</span>
+              <p class="character-card-desc" id="character-desc-rino">
+                Calmo, determinato e rassicurante. Con il suo pesante rullo d'acciaio spiana ogni sentiero difficile, dimostrando che con la pazienza si supera qualsiasi ostacolo.
+              </p>
+            </div>
+          </article>
+
+          <!-- 6. Rudy -->
+          <article class="character-card" id="character-card-rudy">
+            <div class="character-image-frame">
+              <img 
+                src="assets/brand/Rudy.jpeg" 
+                alt="Rudy la ruspa" 
+                class="character-card-img" 
+                id="character-img-rudy" 
+                loading="lazy"
+              />
+            </div>
+            <div class="character-card-body">
+              <h3 class="character-card-name" id="character-name-rudy">Rudy</h3>
+              <span class="character-card-role" id="character-role-rudy">La Ruspa</span>
+              <p class="character-card-desc" id="character-desc-rudy">
+                Energico, forte e coraggioso. Con la sua grande lama spiana la strada e affronta ogni sfida con grinta e un grande sorriso.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           SEZIONE 4: CTA CATALOGO LIBRI
+           ================================================================== -->
+      <section class="characters-cta-section" aria-label="Scopri le Avventure nei Libri">
+        <div class="characters-cta-card">
+          <div class="characters-cta-icon" aria-hidden="true">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <h2 class="characters-cta-title" id="characters-cta-title">Vivi le Avventure del Cantiere</h2>
+          <p class="characters-cta-desc" id="characters-cta-desc">
+            I sei amici ti aspettano in tutte le loro avventure illustrate, piene di illustrazioni a colori, dialoghi divertenti e valori positivi da leggere insieme.
+          </p>
+          <a href="index.html#catalogo" class="btn-buy characters-cta-btn" id="characters-cta-btn">
+            <span id="characters-cta-btn-text">Scopri i libri della collana</span>
+            <svg class="btn-buy-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER (Identico a index.html e about.html)
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-main">
+        <div>
+          <div class="footer-brand-title">CSA Books 4 Kids</div>
+          <p id="footer-about-text" style="max-width: 500px; font-size: 0.9rem;">
+            Storie e libri illustrati pensati per accendere la fantasia e la curiosità dei più piccoli.
+          </p>
+        </div>
+        <div class="footer-nav">
+          <a href="index.html#catalogo" class="footer-nav-link" id="footer-nav-books">I Libri</a>
+          <a href="characters.html" class="footer-nav-link" id="footer-nav-characters">I Personaggi</a>
+          <a href="about.html" class="footer-nav-link" id="footer-nav-about">Chi siamo</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-copy">
+        <p id="footer-copyright-text">&copy; 2026 CSA Books 4 Kids. Tutti i diritti riservati.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Funzionali e Multilingua -->
+  <script src="books.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
