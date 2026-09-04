@@ -37,7 +37,7 @@
   <!-- Google Fonts: Fredoka & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
@@ -63,29 +63,69 @@
         </div>
       </div>
 
-      <!-- Header Actions: Social & Language Switcher -->
+      <!-- Header Actions: Contatto Email, Social & Language Switcher FlagCDN -->
       <div class="header-actions">
-        <!-- Social Pills -->
-        <div class="social-header-links">
-          <a href="https://www.instagram.com/csabooks.kids" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="Instagram @csabooks.kids">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            <span>@csabooks.kids</span>
+        <!-- Social & Email Links -->
+        <div class="topbar-links">
+          <!-- Email Contact -->
+          <a href="mailto:csabooks.kids@gmail.com" class="topbar-btn topbar-email" id="topbar-email-btn" aria-label="Email csabooks.kids@gmail.com">
+            <svg class="topbar-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            <span class="topbar-label">csabooks.kids@gmail.com</span>
           </a>
-          <a href="https://www.tiktok.com/@csabooks.kids" target="_blank" rel="noopener noreferrer" class="social-pill-link" aria-label="TikTok @csabooks.kids">
-            <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.67 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.33V8.87a8.28 8.28 0 0 0 4.91 1.6V7.02a4.85 4.85 0 0 1-1-.33z"/></svg>
-            <span>@csabooks.kids</span>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/csabooks.kids" target="_blank" rel="noopener noreferrer" class="topbar-btn" aria-label="Instagram @csabooks.kids">
+            <svg class="topbar-icon" viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span class="topbar-label">@csabooks.kids</span>
+          </a>
+
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@csabooks.kids" target="_blank" rel="noopener noreferrer" class="topbar-btn" aria-label="TikTok @csabooks.kids">
+            <svg class="topbar-icon" viewBox="0 0 24 24" width="15" height="15"><path fill="currentColor" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.67 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.33V8.87a8.28 8.28 0 0 0 4.91 1.6V7.02a4.85 4.85 0 0 1-1-.33z"/></svg>
+            <span class="topbar-label">@csabooks.kids</span>
           </a>
         </div>
 
-        <!-- Selettore Lingua Rapido -->
-        <div class="lang-switcher-box" role="group" aria-label="Seleziona Lingua">
-          <button type="button" class="lang-btn active" data-lang="it" onclick="setLanguage('it')" aria-pressed="true">
-            <span>🇮🇹</span>
-            <span>Italiano</span>
+        <!-- Selettore Lingua Interfaccia con Bandiere FlagCDN (come Cozy Coloring Chaos) -->
+        <div class="lang-switcher" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-pressed="false" title="English">
+            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="18" height="13" alt="English" class="lang-flag-img" loading="eager">
+            <span class="lang-code">EN</span>
           </button>
-          <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-pressed="false">
-            <span>🇬🇧</span>
-            <span>English</span>
+          <button type="button" class="lang-btn active" data-lang="it" onclick="setLanguage('it')" aria-pressed="true" title="Italiano">
+            <img src="https://flagcdn.com/24x18/it.png" srcset="https://flagcdn.com/48x36/it.png 2x" width="18" height="13" alt="Italiano" class="lang-flag-img" loading="eager">
+            <span class="lang-code">IT</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="de" onclick="setLanguage('de')" aria-pressed="false" title="Deutsch">
+            <img src="https://flagcdn.com/24x18/de.png" srcset="https://flagcdn.com/48x36/de.png 2x" width="18" height="13" alt="Deutsch" class="lang-flag-img" loading="eager">
+            <span class="lang-code">DE</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="fr" onclick="setLanguage('fr')" aria-pressed="false" title="Français">
+            <img src="https://flagcdn.com/24x18/fr.png" srcset="https://flagcdn.com/48x36/fr.png 2x" width="18" height="13" alt="Français" class="lang-flag-img" loading="eager">
+            <span class="lang-code">FR</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="es" onclick="setLanguage('es')" aria-pressed="false" title="Español">
+            <img src="https://flagcdn.com/24x18/es.png" srcset="https://flagcdn.com/48x36/es.png 2x" width="18" height="13" alt="Español" class="lang-flag-img" loading="eager">
+            <span class="lang-code">ES</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="nl" onclick="setLanguage('nl')" aria-pressed="false" title="Nederlands">
+            <img src="https://flagcdn.com/24x18/nl.png" srcset="https://flagcdn.com/48x36/nl.png 2x" width="18" height="13" alt="Nederlands" class="lang-flag-img" loading="eager">
+            <span class="lang-code">NL</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="pl" onclick="setLanguage('pl')" aria-pressed="false" title="Polski">
+            <img src="https://flagcdn.com/24x18/pl.png" srcset="https://flagcdn.com/48x36/pl.png 2x" width="18" height="13" alt="Polski" class="lang-flag-img" loading="eager">
+            <span class="lang-code">PL</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="sv" onclick="setLanguage('sv')" aria-pressed="false" title="Svenska">
+            <img src="https://flagcdn.com/24x18/se.png" srcset="https://flagcdn.com/48x36/se.png 2x" width="18" height="13" alt="Svenska" class="lang-flag-img" loading="eager">
+            <span class="lang-code">SE</span>
+          </button>
+          <button type="button" class="lang-btn" data-lang="ja" onclick="setLanguage('ja')" aria-pressed="false" title="日本語">
+            <img src="https://flagcdn.com/24x18/jp.png" srcset="https://flagcdn.com/48x36/jp.png 2x" width="18" height="13" alt="日本語" class="lang-flag-img" loading="eager">
+            <span class="lang-code">JP</span>
           </button>
         </div>
       </div>
@@ -94,10 +134,57 @@
 
   <main>
     <!-- ======================================================================
-         GRIGLIA CATALOGO LIBRI (8 CARD IMMEDIATAMENTE VISIBILI)
+         HERO BANNER COMPLETO 16:9 (MOSTRATO PER INTERO SENZA TAGLI)
+         ====================================================================== -->
+    <section class="hero-banner" id="hero-banner" aria-label="CSA Books 4 Kids Hero">
+      <div class="container hero-banner-wrapper">
+        <div class="hero-banner-container">
+          <img 
+            src="assets/banner/banner-csa-books-4-kids.jpg" 
+            alt="CSA Books 4 Kids - Grandi avventure per piccoli lettori" 
+            class="hero-banner-img" 
+            id="hero-banner-img"
+            fetchpriority="high"
+          />
+          <div class="hero-banner-overlay">
+            <h1 class="hero-title" id="hero-title">CSA Books <span class="highlight">4 Kids</span></h1>
+            <p class="hero-subtitle" id="hero-subtitle">Grandi avventure per piccoli lettori</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         GRIGLIA CATALOGO LIBRI CON SELETTORE EDIZIONE SECONDARIO
          ====================================================================== -->
     <section class="catalog-section" id="catalogo">
       <div class="container">
+        <!-- Selettore Secondario Lingua Libri (Indipendente dalla lingua del sito) -->
+        <div class="book-filters-container">
+          <div class="book-filters" role="tablist" aria-label="Filtra libri per lingua">
+            <button type="button" class="filter-btn active" data-book-lang="it" role="tab" aria-selected="true" onclick="setBookLanguageFilter('it')">
+              <img src="https://flagcdn.com/24x18/it.png" srcset="https://flagcdn.com/48x36/it.png 2x" width="18" height="13" alt="" class="lang-flag-img" loading="eager">
+              <span class="filter-text" id="filter-text-it">Edizione Italiana</span>
+              <span class="filter-count">8</span>
+            </button>
+            <button type="button" class="filter-btn" data-book-lang="en" role="tab" aria-selected="false" onclick="setBookLanguageFilter('en')">
+              <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="18" height="13" alt="" class="lang-flag-img" loading="eager">
+              <span class="filter-text" id="filter-text-en">English Edition</span>
+              <span class="filter-count">8</span>
+            </button>
+            <button type="button" class="filter-btn" data-book-lang="all" role="tab" aria-selected="false" onclick="setBookLanguageFilter('all')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
+                <path d="M6 6h10"></path>
+                <path d="M6 10h10"></path>
+              </svg>
+              <span class="filter-text" id="filter-text-all">Tutte le edizioni</span>
+              <span class="filter-count">16</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Griglia Card Libri -->
         <div class="catalog-grid" id="books-catalog-grid">
           <!-- Popolato dinamicamente da script.js -->
         </div>
@@ -133,14 +220,29 @@
     <div class="sample-modal-dialog">
       <div class="sample-modal-header">
         <div class="sample-modal-title-group">
-          <span class="sample-modal-badge" id="sample-modal-badge">📖 Read Sample</span>
+          <span class="sample-modal-badge" id="sample-modal-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+            <span>Anteprima</span>
+          </span>
           <h3 class="sample-modal-title" id="sample-modal-title">Titolo Libro</h3>
         </div>
-        <button type="button" class="sample-modal-close" onclick="closeSampleModal()" aria-label="Chiudi anteprima">✕</button>
+        <button type="button" class="sample-modal-close" onclick="closeSampleModal()" aria-label="Chiudi anteprima">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
       </div>
 
       <div class="sample-modal-body">
-        <button type="button" class="sample-nav-btn prev" id="sample-prev-btn" onclick="changeSamplePage(-1)" aria-label="Pagina precedente">◀</button>
+        <button type="button" class="sample-nav-btn prev" id="sample-prev-btn" onclick="changeSamplePage(-1)" aria-label="Pagina precedente">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
         
         <div class="sample-page-viewer" id="sample-viewer">
           <div class="sample-img-container">
@@ -152,11 +254,15 @@
           </div>
         </div>
 
-        <button type="button" class="sample-nav-btn next" id="sample-next-btn" onclick="changeSamplePage(1)" aria-label="Pagina successiva">▶</button>
+        <button type="button" class="sample-nav-btn next" id="sample-next-btn" onclick="changeSamplePage(1)" aria-label="Pagina successiva">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
       </div>
 
       <div class="sample-modal-footer" id="sample-modal-footer">
-        <!-- Bottone Amazon dinamico popolato da script.js -->
+        <!-- Popolato dinamicamente da script.js -->
       </div>
     </div>
   </div>
