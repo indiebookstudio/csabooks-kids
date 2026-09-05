@@ -48,7 +48,7 @@ const I18N = {
     copyright: "© 2026 CSA Books 4 Kids. Tutti i diritti riservati."
     ,
     navBooks: "Storie",
-    navColoring: "Libri da colorare",
+    navColoring: "Da colorare",
     navCharacters: "Personaggi",
     navAbout: "La nostra storia",
     aboutPageTitle: "La storia dietro CSA Books 4 Kids",
@@ -86,7 +86,7 @@ const I18N = {
     copyright: "© 2026 CSA Books 4 Kids. All rights reserved."
     ,
     navBooks: "Stories",
-    navColoring: "Coloring Books",
+    navColoring: "Coloring",
     navAbout: "Our Story",
     aboutPageTitle: "The Story Behind CSA Books 4 Kids",
     aboutMetaTitle: "Our Story | CSA Books 4 Kids",
@@ -123,7 +123,7 @@ const I18N = {
     copyright: "© 2026 CSA Books 4 Kids. Alle Rechte vorbehalten."
     ,
     navBooks: "Geschichten",
-    navColoring: "Malbücher",
+    navColoring: "Zum Ausmalen",
     navAbout: "Unsere Geschichte",
     aboutPageTitle: "Die Geschichte hinter CSA Books 4 Kids",
     aboutMetaTitle: "Unsere Geschichte | CSA Books 4 Kids",
@@ -160,7 +160,7 @@ const I18N = {
     copyright: "© 2026 CSA Books 4 Kids. Tous droits réservés."
     ,
     navBooks: "Histoires",
-    navColoring: "Livres de coloriage",
+    navColoring: "À colorier",
     navAbout: "Notre histoire",
     aboutPageTitle: "L'histoire derrière CSA Books 4 Kids",
     aboutMetaTitle: "Notre histoire | CSA Books 4 Kids",
@@ -197,7 +197,7 @@ const I18N = {
     copyright: "© 2026 CSA Books 4 Kids. Todos los derechos reservados."
     ,
     navBooks: "Cuentos",
-    navColoring: "Libros para colorear",
+    navColoring: "Para colorear",
     navAbout: "Nuestra historia",
     aboutPageTitle: "La historia detrás de CSA Books 4 Kids",
     aboutMetaTitle: "Nuestra historia | CSA Books 4 Kids",
@@ -234,7 +234,7 @@ const I18N = {
     copyright: "© 2026 CSA Books 4 Kids. Alle rechten voorbehouden."
     ,
     navBooks: "Verhalen",
-    navColoring: "Kleurboeken",
+    navColoring: "Kleurplaten",
     navAbout: "Ons verhaal",
     aboutPageTitle: "Het verhaal achter CSA Books 4 Kids",
     aboutMetaTitle: "Ons verhaal | CSA Books 4 Kids",
@@ -271,7 +271,7 @@ const I18N = {
     copyright: "© 2026 CSA Books 4 Kids. Wszelkie prawa zastrzeżone."
     ,
     navBooks: "Opowieści",
-    navColoring: "Kolorowanki",
+    navColoring: "Do kolorowania",
     navAbout: "Nasza historia",
     aboutPageTitle: "Historia stojąca za CSA Books 4 Kids",
     aboutMetaTitle: "Nasza historia | CSA Books 4 Kids",
@@ -308,7 +308,7 @@ const I18N = {
     copyright: "© 2026 CSA Books 4 Kids. Alla rättigheter förbehållna."
     ,
     navBooks: "Berättelser",
-    navColoring: "Målarböcker",
+    navColoring: "Att måla",
     navAbout: "Vår historia",
     aboutPageTitle: "Historien bakom CSA Books 4 Kids",
     aboutMetaTitle: "Vår historia | CSA Books 4 Kids",
@@ -345,7 +345,7 @@ const I18N = {
     copyright: "© 2026 CSA Books 4 Kids. 無断転載を禁じます。"
     ,
     navBooks: "お話",
-    navColoring: "ぬりえ絵本",
+    navColoring: "ぬりえ",
     navAbout: "私たちの物語",
     aboutPageTitle: "CSA Books 4 Kids の誕生秘話",
     aboutMetaTitle: "私たちの物語 | CSA Books 4 Kids",
@@ -1105,7 +1105,25 @@ Object.keys(ABOUT_I18N).forEach(lang => {
 // ============================================================================
 const FANO_I18N = {
   "it": {
-    "navColoring": "Libri da colorare",
+    "navColoring": "Da colorare",
+    "fanoCoverFront": "表紙",
+    "fanoCoverBack": "裏表紙",
+    "fanoCoverFront": "Framsida",
+    "fanoCoverBack": "Baksida",
+    "fanoCoverFront": "Przód",
+    "fanoCoverBack": "Tył",
+    "fanoCoverFront": "Voorkant",
+    "fanoCoverBack": "Achterkant",
+    "fanoCoverFront": "Portada",
+    "fanoCoverBack": "Contraportada",
+    "fanoCoverFront": "Recto",
+    "fanoCoverBack": "Verso",
+    "fanoCoverFront": "Vorderseite",
+    "fanoCoverBack": "Rückseite",
+    "fanoCoverFront": "Front",
+    "fanoCoverBack": "Back",
+    "fanoCoverFront": "Fronte",
+    "fanoCoverBack": "Retro",
     "navBooks": "Storie",
     "navCharacters": "Personaggi",
     "fanoMetaTitle": "Fano col naso all'insù | Libro da colorare per bambini",
@@ -1143,7 +1161,7 @@ const FANO_I18N = {
     "fanoReview2Text": "Davvero bellissimo, ben fatto e divertente!<br />Unisce l’arte del colorare insieme ai propri figli, con la scoperta del territorio.<br />Inoltre sono presenti anche quiz da colorare e risolvere!<br />Non so se lo adoro di più io o mi figlio che ha subito iniziarlo a colorarlo tutto!!<br />Super consigliato!!"
   },
   "en": {
-    "navColoring": "Coloring Books",
+    "navColoring": "Coloring",
     "navBooks": "Stories",
     "navCharacters": "Characters",
     "fanoMetaTitle": "Fano with Your Head in the Clouds | Kids Coloring Book",
@@ -1181,7 +1199,7 @@ const FANO_I18N = {
     "fanoReview2Text": "Truly wonderful, well made, and lots of fun!<br />It combines coloring together with your children and discovering the local area.<br />There are also fun quizzes to color and solve!<br />I don't know who loves it more, me or my son who immediately started coloring the whole thing!!<br />Highly recommended!!"
   },
   "de": {
-    "navColoring": "Malbücher",
+    "navColoring": "Zum Ausmalen",
     "navBooks": "Geschichten",
     "navCharacters": "Figuren",
     "fanoMetaTitle": "Fano mit erhobenem Kopf | Malbuch für Kinder",
@@ -1219,7 +1237,7 @@ const FANO_I18N = {
     "fanoReview2Text": "Wirklich wunderschön, liebevoll gestaltet und unterhaltsam!<br />Es verbindet gemeinsames Malen mit den eigenen Kindern und das Entdecken der Region.<br />Dazu gibt es tolle Quizze zum Ausmalen und Rätseln!<br />Ich weiß nicht, wer es mehr liebt – ich oder mein Sohn, der sofort angefangen hat, das ganze Buch auszumalen!!<br />Wärmstens empfohlen!!"
   },
   "fr": {
-    "navColoring": "Livres de coloriage",
+    "navColoring": "À colorier",
     "navBooks": "Histoires",
     "navCharacters": "Personnages",
     "fanoMetaTitle": "Fano le nez en l'air | Livre de coloriage pour enfants",
@@ -1257,7 +1275,7 @@ const FANO_I18N = {
     "fanoReview2Text": "Vraiment magnifique, très bien conçu et amusant !<br />Il allie le plaisir de colorier avec ses enfants à la découverte du territoire.<br />En plus, il y a des quiz à colorier et à résoudre !<br />Je ne sais pas qui l'adore le plus, moi ou mon fils qui a tout de suite commencé à tout colorier !!<br />Super recommandé !!"
   },
   "es": {
-    "navColoring": "Libros para colorear",
+    "navColoring": "Para colorear",
     "navBooks": "Cuentos",
     "navCharacters": "Personajes",
     "fanoMetaTitle": "Fano con la nariz hacia arriba | Libro para colorear infantil",
@@ -1295,7 +1313,7 @@ const FANO_I18N = {
     "fanoReview2Text": "¡Verdaderamente hermoso, bien hecho y divertido!<br />Une el arte de colorear junto a los hijos con el descubrimiento del territorio.<br />¡Además incluye cuestionarios para colorear y resolver!<br />¡¡No sé si me gusta más a mí o a mi hijo, que enseguida se puso a colorearlo entero!!<br />¡¡Super recomendado!!"
   },
   "nl": {
-    "navColoring": "Kleurboeken",
+    "navColoring": "Kleurplaten",
     "navBooks": "Verhalen",
     "navCharacters": "Personages",
     "fanoMetaTitle": "Fano met je neus in de lucht | Kleurboek voor kinderen",
@@ -1333,7 +1351,7 @@ const FANO_I18N = {
     "fanoReview2Text": "Echt prachtig, goed gemaakt en heel leuk!<br />Het combineert gezellig kleuren met je kinderen met het ontdekken van de streek.<br />Er staan ook leuke quizzen in om in te kleuren en op te lossen!<br />Ik weet niet wie er meer van houdt, ik of mijn zoon die meteen het hele boek begon in te kleuren!!<br />Zeker een aanrader!!"
   },
   "pl": {
-    "navColoring": "Kolorowanki",
+    "navColoring": "Do kolorowania",
     "navBooks": "Opowieści",
     "navCharacters": "Bohaterowie",
     "fanoMetaTitle": "Fano z zadartym nosem | Książka do kolorowania dla dzieci",
@@ -1371,7 +1389,7 @@ const FANO_I18N = {
     "fanoReview2Text": "Naprawdę przepiękna, świetnie zrobiona i wciągająca!<br />Łączy wspólne kolorowanie z dziećmi z odkrywaniem uroków regionu.<br />Są też zagadki i quizy do kolorowania i rozwiązywania!<br />Nie wiem, komu podoba się bardziej – mnie czy mojemu synowi, który od razu zaczął kolorować od deski do deski!!<br />Gorąco polecam!!"
   },
   "sv": {
-    "navColoring": "Målarböcker",
+    "navColoring": "Att måla",
     "navBooks": "Berättelser",
     "navCharacters": "Karaktärer",
     "fanoMetaTitle": "Fano med näsan i vädret | Målarbok för barn",
@@ -1409,7 +1427,7 @@ const FANO_I18N = {
     "fanoReview2Text": "Verkligen jättefin, välgjord och rolig!<br />Kombinerar glädjen i att måla tillsammans med barnen med att upptäcka stadens historia.<br />Det finns även klurigheter att färglägga och lösa!<br />Jag vet inte vem som älskar den mest, jag eller min son som genast började färglägga alltihop!!<br />Varmt rekommenderad!!"
   },
   "ja": {
-    "navColoring": "ぬりえ絵本",
+    "navColoring": "ぬりえ",
     "navBooks": "お話",
     "navCharacters": "キャラクター",
     "fanoMetaTitle": "見上げてごらんファーノの街 | 子ども向けぬりえ＆アクティビティブック",
@@ -1511,6 +1529,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initReviewsSlider();
   initAuthorCarousel();
   initFanoSliders();
+  initFanoCoverCarousel();
   handleDirectBookDeepLink();
   initGlobalDropdownCloser();
   initSampleModalEvents();
@@ -1749,12 +1768,12 @@ function applyLanguage(lang) {
   setText('nav-link-books', strings.navBooks || 'Storie');
   setText('nav-link-characters', strings.navCharacters || 'Personaggi');
   setText('nav-link-reviews', strings.navReviews || 'Recensioni');
-  setText('nav-link-coloring', strings.navColoring || 'Libri da colorare');
+  setText('nav-link-coloring', strings.navColoring || 'Da colorare');
   setText('nav-link-about', strings.navAbout || 'La nostra storia');
   setText('footer-nav-books', strings.navBooks || 'Storie');
   setText('footer-nav-characters', strings.navCharacters || 'Personaggi');
   setText('footer-nav-reviews', strings.navReviews || 'Recensioni');
-  setText('footer-nav-coloring', strings.navColoring || 'Libri da colorare');
+  setText('footer-nav-coloring', strings.navColoring || 'Da colorare');
   setText('footer-nav-about', strings.navAbout || 'La nostra storia');
 
   // Characters Page (se presente su characters.html)
@@ -1874,6 +1893,8 @@ function applyLanguage(lang) {
     setText('fano-final-title', strings.fanoFinalTitle || 'Scopri Fano, colora la sua storia e crea la tua avventura!');
     setText('fano-final-cta-text', strings.fanoFinalCta || 'Scopri il libro su Amazon');
     setText('fano-origin-note', strings.fanoOriginNote || 'Un libro fatto da un fanese per amore della sua città.');
+    setText('fano-pill-front', strings.fanoCoverFront || 'Fronte');
+    setText('fano-pill-back', strings.fanoCoverBack || 'Retro');
 
     // Localize Fano reviews
     setText('fano-review-text-1', `"${strings.fanoReview1Text || 'Bellissimo! Il primo libro da colorare e con attività sulla città di Fano!'}"`);
@@ -3671,4 +3692,86 @@ function initSingleFanoSlider(opts) {
 
   updateDots();
   updatePosition();
+}
+
+
+/* ==========================================================================
+   FANO COVER CAROUSEL (Manual only - NO autoplay)
+   ========================================================================== */
+let fanoCoverIndex = 0;
+
+function goToFanoCoverSlide(index) {
+  const carousel = document.getElementById('fano-cover-carousel');
+  if (!carousel) return;
+  const slides = carousel.querySelectorAll('.fano-cover-slide');
+  const pills = carousel.querySelectorAll('.fano-cover-pill');
+  const prevBtn = document.getElementById('fano-cover-prev');
+  const nextBtn = document.getElementById('fano-cover-next');
+  if (!slides || slides.length === 0) return;
+
+  fanoCoverIndex = Math.max(0, Math.min(slides.length - 1, index));
+
+  slides.forEach((slide, idx) => {
+    const isActive = (idx === fanoCoverIndex);
+    slide.classList.toggle('active', isActive);
+    slide.setAttribute('aria-hidden', !isActive);
+  });
+
+  pills.forEach((pill, idx) => {
+    const isActive = (idx === fanoCoverIndex);
+    pill.classList.toggle('active', isActive);
+    pill.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
+
+  if (prevBtn) {
+    prevBtn.disabled = (fanoCoverIndex === 0);
+  }
+  if (nextBtn) {
+    nextBtn.disabled = (fanoCoverIndex === slides.length - 1);
+  }
+}
+
+function changeFanoCoverSlide(delta) {
+  goToFanoCoverSlide(fanoCoverIndex + delta);
+}
+
+window.goToFanoCoverSlide = goToFanoCoverSlide;
+window.changeFanoCoverSlide = changeFanoCoverSlide;
+
+function initFanoCoverCarousel() {
+  const carousel = document.getElementById('fano-cover-carousel');
+  if (!carousel) return;
+
+  goToFanoCoverSlide(0);
+
+  // Keyboard navigation when focused on carousel
+  carousel.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      changeFanoCoverSlide(-1);
+    } else if (e.key === 'ArrowRight') {
+      changeFanoCoverSlide(1);
+    }
+  });
+
+  // Touch swipe support (manual gesture only)
+  let touchStartX = 0;
+  carousel.addEventListener('touchstart', (e) => {
+    if (e.touches && e.touches.length > 0) {
+      touchStartX = e.touches[0].clientX;
+    }
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', (e) => {
+    if (e.changedTouches && e.changedTouches.length > 0) {
+      const touchEndX = e.changedTouches[0].clientX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) {
+          changeFanoCoverSlide(1);
+        } else {
+          changeFanoCoverSlide(-1);
+        }
+      }
+    }
+  }, { passive: true });
 }

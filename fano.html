@@ -202,7 +202,7 @@
           <a href="index.html#catalogo" class="nav-link" id="nav-link-books">Storie</a>
           <a href="characters.html" class="nav-link" id="nav-link-characters">Personaggi</a>
           <a href="index.html#recensioni" class="nav-link" id="nav-link-reviews">Recensioni</a>
-          <a href="fano.html" class="nav-link active" id="nav-link-coloring">Libri da colorare</a>
+          <a href="fano.html" class="nav-link active" id="nav-link-coloring">Da colorare</a>
           <a href="about.html" class="nav-link" id="nav-link-about">La nostra storia</a>
         </nav>
       </div>
@@ -221,16 +221,46 @@
           
           <!-- Colonna Sinistra: Copertina del libro -->
           <div class="fano-cover-container">
-            <div class="fano-cover-wrapper">
-              <img 
-                src="assets/fano/Front.Cover.ITA.png" 
-                alt="Copertina del libro Fano col naso all'insù" 
-                class="fano-cover-img"
-                width="1545" 
-                height="2000" 
-                fetchpriority="high"
-                loading="eager"
-              />
+            <div class="fano-cover-carousel" id="fano-cover-carousel" role="region" aria-label="Copertina del libro">
+              <div class="fano-cover-stage">
+                <div class="fano-cover-slides" id="fano-cover-slides">
+                  <div class="fano-cover-slide active" data-cover-index="0" aria-label="Copertina frontale">
+                    <img 
+                      src="assets/fano/Front.Cover.ITA.png" 
+                      alt="Copertina frontale del libro Fano col naso all'insù" 
+                      class="fano-cover-img"
+                      width="1545" 
+                      height="2000" 
+                      fetchpriority="high"
+                      loading="eager"
+                    />
+                  </div>
+                  <div class="fano-cover-slide" data-cover-index="1" aria-label="Retro copertina" aria-hidden="true">
+                    <img 
+                      src="assets/fano/Back.Cover.ITA.png" 
+                      alt="Retro copertina del libro Fano col naso all'insù" 
+                      class="fano-cover-img"
+                      width="1545" 
+                      height="1999" 
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <!-- Frecce di navigazione manuale -->
+                <button type="button" class="fano-cover-arrow prev" id="fano-cover-prev" onclick="changeFanoCoverSlide(-1)" aria-label="Mostra copertina frontale" disabled>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button type="button" class="fano-cover-arrow next" id="fano-cover-next" onclick="changeFanoCoverSlide(1)" aria-label="Mostra retro copertina">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+
+              <!-- Indicatori Fronte / Retro -->
+              <div class="fano-cover-indicators" id="fano-cover-indicators" role="tablist" aria-label="Selezione copertina">
+                <button type="button" class="fano-cover-pill active" onclick="goToFanoCoverSlide(0)" role="tab" aria-selected="true" id="fano-pill-front">Fronte</button>
+                <button type="button" class="fano-cover-pill" onclick="goToFanoCoverSlide(1)" role="tab" aria-selected="false" id="fano-pill-back">Retro</button>
+              </div>
             </div>
           </div>
 
@@ -709,7 +739,7 @@
           <a href="index.html#catalogo" class="footer-nav-link" id="footer-nav-books">Storie</a>
           <a href="characters.html" class="footer-nav-link" id="footer-nav-characters">Personaggi</a>
           <a href="index.html#recensioni" class="footer-nav-link" id="footer-nav-reviews">Recensioni</a>
-          <a href="fano.html" class="footer-nav-link" id="footer-nav-coloring">Libri da colorare</a>
+          <a href="fano.html" class="footer-nav-link" id="footer-nav-coloring">Da colorare</a>
           <a href="about.html" class="footer-nav-link" id="footer-nav-about">La nostra storia</a>
         </div>
       </div>

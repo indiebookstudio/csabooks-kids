@@ -2893,19 +2893,136 @@ button {
   justify-content: center;
 }
 
-.fano-cover-wrapper {
+.fano-cover-carousel {
   position: relative;
   max-width: 380px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fano-cover-stage {
+  position: relative;
+  width: 100%;
+}
+
+.fano-cover-slides {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1545 / 2000;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(21, 29, 42, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  background: #F3F4F6;
+}
+
+.fano-cover-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.fano-cover-slide.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .fano-cover-img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1545 / 2000;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 16px 36px rgba(21, 29, 42, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  object-fit: cover;
   display: block;
+}
+
+/* Frecce carosello copertina */
+.fano-cover-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.2s ease;
+}
+
+.fano-cover-arrow:hover:not(:disabled) {
+  background: #FFFFFF;
+  color: var(--c-primary, #E05A47);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.fano-cover-arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.fano-cover-arrow.prev {
+  left: -20px;
+}
+
+.fano-cover-arrow.next {
+  right: -20px;
+}
+
+@media (max-width: 640px) {
+  .fano-cover-arrow.prev {
+    left: 8px;
+  }
+  .fano-cover-arrow.next {
+    right: 8px;
+  }
+}
+
+/* Indicatori pillole Fronte / Retro */
+.fano-cover-indicators {
+  display: inline-flex;
+  gap: 0.35rem;
+  margin-top: 1rem;
+  background: #F3F4F6;
+  padding: 4px;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.fano-cover-pill {
+  padding: 0.35rem 1.1rem;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4B5563;
+  background: transparent;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.fano-cover-pill:hover {
+  color: #111827;
+}
+
+.fano-cover-pill.active {
+  background: #FFFFFF;
+  color: #111827;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .fano-info-container {
