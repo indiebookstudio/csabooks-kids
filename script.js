@@ -48,7 +48,7 @@ const I18N = {
     copyright: "© 2026 CSA Books 4 Kids. Tutti i diritti riservati."
     ,
     navBooks: "I Libri",
-    navAbout: "Chi siamo",
+    navAbout: "La nostra storia",
     aboutPageTitle: "Chi c'è dietro CSA Books 4 Kids",
     aboutMetaTitle: "Chi siamo | CSA Books 4 Kids",
     aboutMetaDesc: "Scopri Marco Salucci, autore e creatore di CSA Books 4 Kids: libri illustrati e storie per bambini nate dalla passione per camion, ruspe e cantieri.",
@@ -867,6 +867,7 @@ Object.keys(REVIEWS_I18N).forEach(lang => {
 // ============================================================================
 const ABOUT_I18N = {
   "it": {
+    "navAbout": "La nostra storia",
     "aboutPageTitle": "Chi c'è dietro CSA Books 4 Kids",
     "aboutMetaTitle": "Chi siamo | CSA Books 4 Kids",
     "aboutMetaDesc": "Scopri Marco Salucci, autore e creatore di CSA Books 4 Kids: libri illustrati e storie per bambini nate dalla passione per camion, ruspe e cantieri.",
@@ -1330,11 +1331,11 @@ function applyLanguage(lang) {
   setText('nav-link-books', strings.navBooks || 'I Libri');
   setText('nav-link-characters', strings.navCharacters || 'I Personaggi');
   setText('nav-link-reviews', strings.navReviews || 'Recensioni');
-  setText('nav-link-about', strings.navAbout || 'Chi siamo');
+  setText('nav-link-about', strings.navAbout || 'La nostra storia');
   setText('footer-nav-books', strings.navBooks || 'I Libri');
   setText('footer-nav-characters', strings.navCharacters || 'I Personaggi');
   setText('footer-nav-reviews', strings.navReviews || 'Recensioni');
-  setText('footer-nav-about', strings.navAbout || 'Chi siamo');
+  setText('footer-nav-about', strings.navAbout || 'La nostra storia');
 
   // Characters Page (se presente su characters.html)
   if (document.getElementById('characters-hero-title')) {
