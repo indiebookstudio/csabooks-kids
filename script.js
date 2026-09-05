@@ -781,6 +781,87 @@ Object.keys(CHARACTERS_I18N).forEach(lang => {
   }
 });
 
+const REVIEWS_I18N = {
+  it: {
+    navReviews: "Recensioni",
+    reviewsTitle: "Cosa Dicono i Genitori",
+    reviewsRatingSr: "Valutazione: 5 su 5 stelle",
+    reviewsAmazonSource: "Recensione Amazon",
+    reviewsPrevAria: "Recensioni precedenti",
+    reviewsNextAria: "Recensioni successive"
+  },
+  en: {
+    navReviews: "Reviews",
+    reviewsTitle: "What Parents Are Saying",
+    reviewsRatingSr: "Rating: 5 out of 5 stars",
+    reviewsAmazonSource: "Amazon Review",
+    reviewsPrevAria: "Previous reviews",
+    reviewsNextAria: "Next reviews"
+  },
+  de: {
+    navReviews: "Bewertungen",
+    reviewsTitle: "Was Eltern sagen",
+    reviewsRatingSr: "Bewertung: 5 von 5 Sternen",
+    reviewsAmazonSource: "Amazon-Rezension",
+    reviewsPrevAria: "Vorherige Bewertungen",
+    reviewsNextAria: "Nächste Bewertungen"
+  },
+  fr: {
+    navReviews: "Avis",
+    reviewsTitle: "Ce que disent les parents",
+    reviewsRatingSr: "Note : 5 sur 5 étoiles",
+    reviewsAmazonSource: "Avis Amazon",
+    reviewsPrevAria: "Avis précédents",
+    reviewsNextAria: "Avis suivants"
+  },
+  es: {
+    navReviews: "Opiniones",
+    reviewsTitle: "Lo que dicen los padres",
+    reviewsRatingSr: "Calificación: 5 de 5 estrellas",
+    reviewsAmazonSource: "Opinión en Amazon",
+    reviewsPrevAria: "Opiniones anteriores",
+    reviewsNextAria: "Opiniones siguientes"
+  },
+  nl: {
+    navReviews: "Recensies",
+    reviewsTitle: "Wat ouders zeggen",
+    reviewsRatingSr: "Beoordeling: 5 van de 5 sterren",
+    reviewsAmazonSource: "Amazon-recensie",
+    reviewsPrevAria: "Vorige recensies",
+    reviewsNextAria: "Volgende recensies"
+  },
+  pl: {
+    navReviews: "Opinie",
+    reviewsTitle: "Co mówią rodzice",
+    reviewsRatingSr: "Ocena: 5 na 5 gwiazdek",
+    reviewsAmazonSource: "Opinia z Amazon",
+    reviewsPrevAria: "Poprzednie opinie",
+    reviewsNextAria: "Następne opinie"
+  },
+  sv: {
+    navReviews: "Recensioner",
+    reviewsTitle: "Vad föräldrar säger",
+    reviewsRatingSr: "Betyg: 5 av 5 stjärnor",
+    reviewsAmazonSource: "Amazon-recension",
+    reviewsPrevAria: "Föregående recensioner",
+    reviewsNextAria: "Nästa recensioner"
+  },
+  ja: {
+    navReviews: "レビュー",
+    reviewsTitle: "保護者の方々の声",
+    reviewsRatingSr: "評価：5つ星のうち5",
+    reviewsAmazonSource: "Amazonカスタマーレビュー",
+    reviewsPrevAria: "前のレビュー",
+    reviewsNextAria: "次のレビュー"
+  }
+};
+
+Object.keys(REVIEWS_I18N).forEach(lang => {
+  if (I18N[lang]) {
+    Object.assign(I18N[lang], REVIEWS_I18N[lang]);
+  }
+});
+
 // ============================================================================
 // STATO DELL'APPLICAZIONE
 // ============================================================================
@@ -816,6 +897,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   applyLanguage(currentLanguage);
+  initMobileLanguageDropdown();
+  initHeroCarousel();
+  initReviewsSlider();
   handleDirectBookDeepLink();
   initGlobalDropdownCloser();
   initSampleModalEvents();
@@ -974,12 +1058,48 @@ window.setBookLanguageFilter = function(filterCode) {
 function applyLanguage(lang) {
   const strings = I18N[lang] || I18N.it;
 
-  // Aggiorna bottoni lingua interfaccia (bandiere FlagCDN)
-  document.querySelectorAll('.lang-switcher .lang-btn').forEach(btn => {
+  // Aggiorna bottoni lingua interfaccia (sia barra desktop che dropdown mobile)
+  document.querySelectorAll('.lang-btn').forEach(btn => {
     const isActive = (btn.dataset.lang === lang);
     btn.classList.toggle('active', isActive);
     btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    if (btn.getAttribute('role') === 'option') {
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    }
   });
+
+  // Aggiorna trigger selettore lingua mobile
+  const mobileFlag = document.getElementById('lang-mobile-selected-flag');
+  const mobileCode = document.getElementById('lang-mobile-selected-code');
+  const LANG_FLAGS = {
+    it: 'https://flagcdn.com/24x18/it.png',
+    en: 'https://flagcdn.com/24x18/gb.png',
+    de: 'https://flagcdn.com/24x18/de.png',
+    fr: 'https://flagcdn.com/24x18/fr.png',
+    es: 'https://flagcdn.com/24x18/es.png',
+    nl: 'https://flagcdn.com/24x18/nl.png',
+    pl: 'https://flagcdn.com/24x18/pl.png',
+    sv: 'https://flagcdn.com/24x18/se.png',
+    ja: 'https://flagcdn.com/24x18/jp.png'
+  };
+  const LANG_CODES = {
+    it: 'IT', en: 'EN', de: 'DE', fr: 'FR', es: 'ES', nl: 'NL', pl: 'PL', sv: 'SE', ja: 'JP'
+  };
+  if (mobileFlag && LANG_FLAGS[lang]) {
+    mobileFlag.src = LANG_FLAGS[lang];
+    mobileFlag.alt = (LANG_CODES[lang] || lang).toUpperCase();
+  }
+  if (mobileCode && LANG_CODES[lang]) {
+    mobileCode.textContent = LANG_CODES[lang];
+  }
+
+  // Chiudi dropdown mobile se aperto
+  const langMobileDropdown = document.getElementById('lang-mobile-dropdown');
+  const langMobileSelect = document.getElementById('lang-mobile-select');
+  const langMobileTrigger = document.getElementById('lang-mobile-trigger');
+  if (langMobileDropdown) langMobileDropdown.classList.remove('show');
+  if (langMobileSelect) langMobileSelect.classList.remove('open');
+  if (langMobileTrigger) langMobileTrigger.setAttribute('aria-expanded', 'false');
 
   // Aggiorna logo collana in base alla lingua (Italiano vs Inglese/Internazionale)
   const logoImg = document.getElementById('series-logo-img');
@@ -1000,6 +1120,8 @@ function applyLanguage(lang) {
   if (heroBannerImg && strings.heroBannerAlt) {
     heroBannerImg.alt = strings.heroBannerAlt;
   }
+  updateHeroCarouselTranslations(lang);
+  updateReviewsTranslations(lang);
 
   // Testi Filtri Libri Secondari
   setText('filter-text-all', strings.filterAll);
@@ -1014,9 +1136,11 @@ function applyLanguage(lang) {
   // Navigation Links
   setText('nav-link-books', strings.navBooks || 'I Libri');
   setText('nav-link-characters', strings.navCharacters || 'I Personaggi');
+  setText('nav-link-reviews', strings.navReviews || 'Recensioni');
   setText('nav-link-about', strings.navAbout || 'Chi siamo');
   setText('footer-nav-books', strings.navBooks || 'I Libri');
   setText('footer-nav-characters', strings.navCharacters || 'I Personaggi');
+  setText('footer-nav-reviews', strings.navReviews || 'Recensioni');
   setText('footer-nav-about', strings.navAbout || 'Chi siamo');
 
   // Characters Page (se presente su characters.html)
@@ -1107,7 +1231,6 @@ function applyLanguage(lang) {
   // About Page (se presente su about.html)
   if (document.getElementById('about-page-title')) {
     setText('about-page-title', strings.aboutPageTitle);
-    setText('about-badge', strings.aboutBadge);
     setText('about-author-role', strings.aboutAuthorRole);
     setText('about-bio-p1', strings.aboutBioP1);
     setText('about-bio-p2', strings.aboutBioP2);
@@ -1389,6 +1512,38 @@ function initGlobalDropdownCloser() {
       document.querySelectorAll('.custom-market-select').forEach(s => s.classList.remove('open'));
       document.querySelectorAll('.market-trigger').forEach(t => t.setAttribute('aria-expanded', 'false'));
     }
+    if (!e.target.closest('#lang-mobile-select')) {
+      const dropdown = document.getElementById('lang-mobile-dropdown');
+      const select = document.getElementById('lang-mobile-select');
+      const trigger = document.getElementById('lang-mobile-trigger');
+      if (dropdown) dropdown.classList.remove('show');
+      if (select) select.classList.remove('open');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+function initMobileLanguageDropdown() {
+  const trigger = document.getElementById('lang-mobile-trigger');
+  const select = document.getElementById('lang-mobile-select');
+  const dropdown = document.getElementById('lang-mobile-dropdown');
+
+  if (trigger && dropdown) {
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = dropdown.classList.contains('show');
+      dropdown.classList.toggle('show', !isOpen);
+      if (select) select.classList.toggle('open', !isOpen);
+      trigger.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (dropdown) dropdown.classList.remove('show');
+      if (select) select.classList.remove('open');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    }
   });
 }
 
@@ -1660,3 +1815,761 @@ function escapeJs(str) {
   if (!str) return '';
   return String(str).replace(/'/g, "\\'").replace(/"/g, '\\"');
 }
+
+/* ==========================================================================
+   HERO BANNER DYNAMIC IMAGE CAROUSEL
+   ========================================================================== */
+const heroCarouselState = {
+  manifest: [],
+  currentIndex: 0,
+  timer: null,
+  intervalMs: 5000,
+  isPaused: false,
+  touchStartX: 0,
+  touchEndX: 0,
+  initialized: false
+};
+
+function getBannerAlt(item, lang) {
+  const strings = I18N[lang] || I18N.it;
+  const key = (item && item.characterKey) ? item.characterKey : '';
+  if (key === 'banner') {
+    return strings.heroBannerAlt || 'CSA Books 4 Kids - Grandi avventure per piccoli lettori';
+  }
+  if (key === 'benny') {
+    return strings.charBennyAlt ? `${strings.charBennyAlt} - CSA Books 4 Kids` : 'Benny - CSA Books 4 Kids';
+  }
+  if (key === 'bruno') {
+    return strings.charBrunoAlt ? `${strings.charBrunoAlt} - CSA Books 4 Kids` : 'Bruno - CSA Books 4 Kids';
+  }
+  if (key === 'leo') {
+    return strings.charLeoAlt ? `${strings.charLeoAlt} - CSA Books 4 Kids` : 'Leo - CSA Books 4 Kids';
+  }
+  if (key === 'nina') {
+    return strings.charNinaAlt ? `${strings.charNinaAlt} - CSA Books 4 Kids` : 'Nina - CSA Books 4 Kids';
+  }
+  if (key === 'rino') {
+    return strings.charRinoAlt ? `${strings.charRinoAlt} - CSA Books 4 Kids` : 'Rino - CSA Books 4 Kids';
+  }
+  if (key === 'rudy') {
+    return strings.charRudyAlt ? `${strings.charRudyAlt} - CSA Books 4 Kids` : 'Rudy - CSA Books 4 Kids';
+  }
+  return `CSA Books 4 Kids - ${item.title || 'Banner'}`;
+}
+
+function initHeroCarousel() {
+  const container = document.getElementById('hero-carousel');
+  const slidesTrack = document.getElementById('hero-carousel-slides');
+  if (!container || !slidesTrack) return;
+
+  // 1. Prefer synchronously available window.BANNER_MANIFEST
+  if (Array.isArray(window.BANNER_MANIFEST) && window.BANNER_MANIFEST.length > 0) {
+    setupHeroCarousel(window.BANNER_MANIFEST);
+    return;
+  }
+
+  // 2. Fallback to fetch banners.json
+  fetch('assets/banner/banners.json?t=' + Date.now())
+    .then(res => {
+      if (!res.ok) throw new Error('Status ' + res.status);
+      return res.json();
+    })
+    .then(data => {
+      if (Array.isArray(data) && data.length > 0) {
+        setupHeroCarousel(data);
+      }
+    })
+    .catch(err => {
+      console.warn('[Carousel] Using fallback static hero banner:', err);
+    });
+}
+
+function shuffleBanners(items) {
+  if (!Array.isArray(items) || items.length <= 1) return items;
+
+  // Trova l'immagine principale (banner ufficiale della collana)
+  const mainBannerIndex = items.findIndex(item => 
+    item.characterKey === 'banner' || 
+    (item.file && item.file.toLowerCase().includes('banner-csa-books-4-kids'))
+  );
+
+  let mainBanner = null;
+  let remaining = [...items];
+  if (mainBannerIndex !== -1) {
+    mainBanner = remaining.splice(mainBannerIndex, 1)[0];
+  }
+
+  // Fisher-Yates Shuffle sul resto delle immagini
+  for (let i = remaining.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [remaining[i], remaining[j]] = [remaining[j], remaining[i]];
+  }
+
+  // Pass per evitare che due immagini consecutive appartengano allo stesso personaggio
+  for (let i = 1; i < remaining.length; i++) {
+    if (remaining[i].characterKey && remaining[i].characterKey === remaining[i - 1].characterKey) {
+      let swapIdx = -1;
+      for (let j = i + 1; j < remaining.length; j++) {
+        if (remaining[j].characterKey !== remaining[i].characterKey) {
+          swapIdx = j;
+          break;
+        }
+      }
+      if (swapIdx === -1) {
+        for (let j = 0; j < i - 1; j++) {
+          if (remaining[j].characterKey !== remaining[i].characterKey && (j === 0 || remaining[j - 1].characterKey !== remaining[i].characterKey)) {
+            swapIdx = j;
+            break;
+          }
+        }
+      }
+      if (swapIdx !== -1) {
+        [remaining[i], remaining[swapIdx]] = [remaining[swapIdx], remaining[i]];
+      }
+    }
+  }
+
+  // L'immagine principale della collana deve essere sempre la prima slide
+  return mainBanner ? [mainBanner, ...remaining] : remaining;
+}
+
+function setupHeroCarousel(items) {
+  const container = document.getElementById('hero-carousel');
+  const slidesTrack = document.getElementById('hero-carousel-slides');
+  const indicatorsContainer = document.getElementById('hero-carousel-indicators');
+  const prevBtn = document.getElementById('hero-carousel-prev');
+  const nextBtn = document.getElementById('hero-carousel-next');
+
+  if (!container || !slidesTrack) return;
+
+  const shuffledItems = shuffleBanners(items);
+  heroCarouselState.manifest = shuffledItems;
+  heroCarouselState.currentIndex = 0;
+  const total = shuffledItems.length;
+
+  // Render slides preserving the first element for zero CLS
+  slidesTrack.innerHTML = shuffledItems.map((item, idx) => {
+    const isActive = idx === 0;
+    const altText = escapeHtml(getBannerAlt(item, currentLanguage));
+    const isPriority = idx === 0;
+    return `
+      <div class="hero-carousel-slide ${isActive ? 'active' : ''}" 
+           data-index="${idx}" 
+           role="group" 
+           aria-roledescription="slide" 
+           aria-label="${idx + 1} di ${total}"
+           ${isActive ? '' : 'aria-hidden="true"'}>
+        <img 
+          src="${escapeHtml(item.src)}" 
+          alt="${altText}" 
+          class="hero-banner-img" 
+          ${isPriority ? 'id="hero-banner-img" fetchpriority="high" loading="eager"' : 'loading="lazy"'}
+        />
+      </div>
+    `;
+  }).join('');
+
+  // Render indicator dots
+  if (indicatorsContainer) {
+    if (total <= 1) {
+      indicatorsContainer.style.display = 'none';
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+    } else {
+      indicatorsContainer.style.display = 'flex';
+      if (prevBtn) prevBtn.style.display = 'flex';
+      if (nextBtn) nextBtn.style.display = 'flex';
+
+      indicatorsContainer.innerHTML = shuffledItems.map((item, idx) => {
+        const isActive = idx === 0;
+        return `
+          <button type="button" 
+                  class="hero-carousel-dot ${isActive ? 'active' : ''}" 
+                  data-slide-to="${idx}" 
+                  role="tab" 
+                  aria-selected="${isActive ? 'true' : 'false'}" 
+                  aria-label="Slide ${idx + 1} di ${total}">
+          </button>
+        `;
+      }).join('');
+
+      // Indicators click handler
+      indicatorsContainer.querySelectorAll('.hero-carousel-dot').forEach(dot => {
+        dot.addEventListener('click', (e) => {
+          e.preventDefault();
+          const slideIdx = parseInt(dot.getAttribute('data-slide-to'), 10);
+          if (!isNaN(slideIdx)) {
+            goToHeroSlide(slideIdx);
+            resetHeroAutoplay();
+          }
+        });
+      });
+    }
+  }
+
+  // Prev / Next button click handlers
+  if (prevBtn) {
+    prevBtn.onclick = (e) => {
+      e.preventDefault();
+      goToHeroSlide(heroCarouselState.currentIndex - 1);
+      resetHeroAutoplay();
+    };
+  }
+  if (nextBtn) {
+    nextBtn.onclick = (e) => {
+      e.preventDefault();
+      goToHeroSlide(heroCarouselState.currentIndex + 1);
+      resetHeroAutoplay();
+    };
+  }
+
+  if (!heroCarouselState.initialized) {
+    heroCarouselState.initialized = true;
+
+    // Keyboard navigation when carousel container has focus
+    container.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        goToHeroSlide(heroCarouselState.currentIndex - 1);
+        resetHeroAutoplay();
+      } else if (e.key === 'ArrowRight') {
+        goToHeroSlide(heroCarouselState.currentIndex + 1);
+        resetHeroAutoplay();
+      }
+    });
+
+    // Pause autoplay on mouse hover / resume on mouse leave
+    container.addEventListener('mouseenter', () => {
+      heroCarouselState.isPaused = true;
+      clearTimeout(heroCarouselState.timer);
+    });
+    container.addEventListener('mouseleave', () => {
+      heroCarouselState.isPaused = false;
+      startHeroAutoplay();
+    });
+
+    // Pause autoplay on focus / resume on blur
+    container.addEventListener('focusin', () => {
+      heroCarouselState.isPaused = true;
+      clearTimeout(heroCarouselState.timer);
+    });
+    container.addEventListener('focusout', (e) => {
+      if (!container.contains(e.relatedTarget)) {
+        heroCarouselState.isPaused = false;
+        startHeroAutoplay();
+      }
+    });
+
+    // Touch swipe support on mobile devices
+    container.addEventListener('touchstart', (e) => {
+      if (e.touches && e.touches.length === 1) {
+        heroCarouselState.touchStartX = e.touches[0].clientX;
+      }
+    }, { passive: true });
+
+    container.addEventListener('touchend', (e) => {
+      if (e.changedTouches && e.changedTouches.length === 1) {
+        heroCarouselState.touchEndX = e.changedTouches[0].clientX;
+        const diff = heroCarouselState.touchStartX - heroCarouselState.touchEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) {
+            goToHeroSlide(heroCarouselState.currentIndex + 1);
+          } else {
+            goToHeroSlide(heroCarouselState.currentIndex - 1);
+          }
+          resetHeroAutoplay();
+        }
+      }
+    }, { passive: true });
+  }
+
+  updateHeroCarouselTranslations(currentLanguage);
+  startHeroAutoplay();
+}
+
+function goToHeroSlide(index) {
+  const total = heroCarouselState.manifest.length;
+  if (total <= 1) return;
+
+  const newIndex = (index + total) % total;
+  heroCarouselState.currentIndex = newIndex;
+
+  const slides = document.querySelectorAll('.hero-carousel-slide');
+  slides.forEach((slide, idx) => {
+    const isActive = idx === newIndex;
+    slide.classList.toggle('active', isActive);
+    if (isActive) {
+      slide.removeAttribute('aria-hidden');
+    } else {
+      slide.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  const dots = document.querySelectorAll('.hero-carousel-dot');
+  dots.forEach((dot, idx) => {
+    const isActive = idx === newIndex;
+    dot.classList.toggle('active', isActive);
+    dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
+}
+
+function startHeroAutoplay() {
+  clearTimeout(heroCarouselState.timer);
+  if (heroCarouselState.manifest.length <= 1) return;
+  if (heroCarouselState.isPaused) return;
+
+  // Respect prefers-reduced-motion
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
+
+  heroCarouselState.timer = setTimeout(() => {
+    goToHeroSlide(heroCarouselState.currentIndex + 1);
+    startHeroAutoplay();
+  }, heroCarouselState.intervalMs);
+}
+
+function resetHeroAutoplay() {
+  clearTimeout(heroCarouselState.timer);
+  startHeroAutoplay();
+}
+
+function updateHeroCarouselTranslations(lang) {
+  if (!heroCarouselState.manifest || heroCarouselState.manifest.length === 0) return;
+  const total = heroCarouselState.manifest.length;
+
+  const slides = document.querySelectorAll('.hero-carousel-slide');
+  slides.forEach((slide, idx) => {
+    const item = heroCarouselState.manifest[idx];
+    if (!item) return;
+    const altText = getBannerAlt(item, lang);
+    const img = slide.querySelector('.hero-banner-img');
+    if (img) img.alt = altText;
+    slide.setAttribute('aria-label', `${idx + 1} di ${total}: ${altText}`);
+  });
+
+  // Localize navigation buttons
+  const prevBtn = document.getElementById('hero-carousel-prev');
+  const nextBtn = document.getElementById('hero-carousel-next');
+  const navLabels = {
+    it: { prev: 'Slide precedente', next: 'Slide successiva' },
+    en: { prev: 'Previous slide', next: 'Next slide' },
+    de: { prev: 'Vorherige Folie', next: 'Nächste Folie' },
+    fr: { prev: 'Diapositive précédente', next: 'Diapositive suivante' },
+    es: { prev: 'Diapositiva anterior', next: 'Diapositiva siguiente' },
+    nl: { prev: 'Vorige dia', next: 'Volgende dia' },
+    pl: { prev: 'Poprzedni slajd', next: 'Następny slajd' },
+    sv: { prev: 'Föregående bild', next: 'Nästa bild' },
+    ja: { prev: '前のスライド', next: '次のスライド' }
+  };
+  const labels = navLabels[lang] || navLabels.it;
+  if (prevBtn) {
+    prevBtn.setAttribute('aria-label', labels.prev);
+    prevBtn.title = labels.prev;
+  }
+  if (nextBtn) {
+    nextBtn.setAttribute('aria-label', labels.next);
+    nextBtn.title = labels.next;
+  }
+}
+
+/* ==========================================================================
+   SEZIONE RECENSIONI CLIENTI AMAZON (SOCIAL PROOF AUTENTICO)
+   ========================================================================== */
+const AMAZON_REVIEWS = [
+  {
+    reviewer: "Stefania Omiccioli",
+    rating: 5,
+    text: {
+      it: "Momenti di sano divertimento e riflessioni condivise coi più piccoli. La lettura ideale per cementare il legame d'affetto tra genitori e figli, all'insegna della leggerezza, ma anche dei primi intelligenti approcci ai grandi temi della vita. Consigliatissimo!!",
+      en: "Moments of wholesome fun and shared reflections with the little ones. The ideal read to strengthen the bond of affection between parents and children, filled with lightness, but also the first smart approaches to the great themes of life. Highly recommended!!",
+      de: "Momente des gesunden Vergnügens und gemeinsame Gedanken mit den Kleinen. Die ideale Lektüre, um das Band der Zuneigung zwischen Eltern und Kindern zu stärken – geprägt von Leichtigkeit, aber auch ersten klugen Annäherungen an die großen Themen des Lebens. Wärmstens empfohlen!!",
+      fr: "Des moments de pur plaisir et de réflexions partagées avec les plus petits. La lecture idéale pour cimenter le lien d'affection entre parents et enfants, placée sous le signe de la légèreté, mais aussi des premières approches intelligentes des grands thèmes de la vie. Vivement recommandé !!",
+      es: "Momentos de sana diversión y reflexiones compartidas con los más pequeños. La lectura ideal para fortalecer el vínculo de afecto entre padres e hijos, marcada por la ligereza, pero también por los primeros acercamientos inteligentes a los grandes temas de la vida. ¡¡Muy recomendado!!",
+      nl: "Momenten van gezond plezier en gedeelde reflecties met de kleintjes. De ideale lectuur om de band van genegenheid tussen ouders en kinderen te versterken, in het teken van luchtigheid, maar ook van de eerste slimme benaderingen van de grote levensthema's. Zeer aanbevolen!!",
+      pl: "Chwile zdrowej zabawy i wspólnych refleksji z najmłodszymi. Idealna lektura, by zacieśnić więź miłości między rodzicami a dziećmi, pełna lekkości, ale też pierwszego mądrego podejścia do wielkich tematów życia. Gorąco polecam!!",
+      sv: "Stunder av sund glädje och gemensam eftertanke med de små. Den perfekta läsningen för att stärka bandet av kärlek mellan föräldrar och barn, präglad av lätthet, men också de första kloka närmandena till livets stora frågor. Rekommenderas varmt!!",
+      ja: "子どもたちと一緒に楽しむ健全な時間と、心を通わせる語らいのひととき。親子の絆を深めるのにぴったりの絵本で、軽やかな楽しさの中に、人生の大切なテーマへの知的な第一歩が詰まっています。心からおすすめします！！"
+    }
+  },
+  {
+    reviewer: "Michele L.",
+    rating: 5,
+    text: {
+      it: "Per stimolare la curiosità. Bellissimo libro, un po' diverso dal solito perché fa approcciare alla storia in maniera divertente e che incuriosisce i piccoli. La mia bimba di 4 anni dopo averlo finito ha chiesto se la portavamo a vedere gli scavi a Roma!! Consigliatissimo, lettura bella e non pesante, adatto dai 2 anni, illustrazioni molto belle!!",
+      en: "To stimulate curiosity. Beautiful book, a little different from usual because it approaches history in a fun way that intrigues the little ones. My 4-year-old girl, after finishing it, asked if we could take her to see the excavations in Rome!! Highly recommended, lovely and light reading, suitable from 2 years old, very beautiful illustrations!!",
+      de: "Um die Neugier zu wecken. Wunderschönes Buch, ein wenig anders als gewohnt, weil es auf unterhaltsame Weise an die Geschichte heranführt und die Kleinen neugierig macht. Meine 4-jährige Tochter fragte nach dem Lesen, ob wir sie zu den Ausgrabungen nach Rom mitnehmen könnten!! Wärmstens empfohlen, schöne und leichte Lektüre, geeignet ab 2 Jahren, sehr schöne Illustrationen!!",
+      fr: "Pour stimuler la curiosité. Magnifique livre, un peu différent de l'ordinaire car il aborde l'histoire de manière amusante et pique la curiosité des petits. Ma petite fille de 4 ans, après l'avoir terminé, a demandé si on pouvait l'emmener voir les fouilles à Rome !! Vivement recommandé, lecture belle et légère, adapté dès 2 ans, très belles illustrations !!",
+      es: "Para estimular la curiosidad. Hermoso libro, un poco diferente a lo habitual porque acerca a la historia de una forma divertida que despierta la curiosidad de los más pequeños. ¡¡Mi niña de 4 años, después de terminarlo, preguntó si la llevábamos a ver las excavaciones a Roma!! Muy recomendado, lectura amena y no pesada, apto a partir de los 2 años, ¡¡ilustraciones preciosas!!",
+      nl: "Om de nieuwsgierigheid te prikkelen. Prachtig boek, net even anders dan gewoonlijk omdat het op een leuke manier naar de geschiedenis toeleidt en de kleintjes nieuwsgierig maakt. Mijn 4-jarige dochter vroeg na het uitlezen of we haar mee konden nemen naar de opgravingen in Rome!! Zeer aanbevolen, fijn en niet te zwaar om te lezen, geschikt vanaf 2 jaar, hele mooie illustraties!!",
+      pl: "Żeby rozbudzić ciekawość. Przepiękna książka, nieco inna niż zwykle, bo przybliża historię w zabawny sposób, który ciekawi maluchy. Moja 4-letnia córeczka po jej skończeniu zapytała, czy zabierzemy ją zobaczyć wykopaliska w Rzymie!! Gorąco polecam, wspaniała i lekka lektura, odpowiednia od 2 lat, bardzo piękne ilustracje!!",
+      sv: "För att väcka nyfikenheten. Jättefin bok, lite annorlunda än vanligt eftersom den närmar sig historien på ett roligt sätt som fångar barnens intresse. Min 4-åriga flicka frågade efter att ha läst ut den om vi kunde ta med henne för att titta på utgrävningarna i Rom!! Rekommenderas varmt, fin och lättläst, passar från 2 år, jättefina illustrationer!!",
+      ja: "好奇心を刺激するために。普段とはひと味違う素晴らしい本で、楽しく子どもたちの興味を惹きつけながら歴史に触れさせてくれます。4歳の娘は読み終えた後、「ローマの発掘現場を見に連れて行って！」と聞いてきました！！ 心からおすすめ、美しく読みやすい内容で、2歳から楽しめ、イラストもとても綺麗です！！"
+    }
+  },
+  {
+    reviewer: "Edoardo Gattei",
+    rating: 5,
+    text: {
+      it: "Super!! Consigliata da un amico, questa collana si è rivelata una piacevolissima sorpresa. Mio figlio adora tutti i personaggi e la lettura di questi libri è entrata a far parte del nostro rituale della nanna! Un must have per tutti i bimbi amanti dei libri e appassionati di ruspe/ trattori ...",
+      en: "Super!! Recommended by a friend, this series turned out to be a delightful surprise. My son loves all the characters and reading these books has become part of our bedtime routine! A must-have for all little ones who love books and are passionate about bulldozers/tractors...",
+      de: "Super!! Von einem Freund empfohlen, hat sich diese Reihe als eine äußerst erfreuliche Überraschung erwiesen. Mein Sohn liebt alle Charaktere und das Lesen dieser Bücher ist Teil unseres Einschlafrituals geworden! Ein Must-have für alle Kinder, die Bücher lieben und von Baggern/Traktoren begeistert sind ...",
+      fr: "Super !! Conseillée par un ami, cette collection s'est avérée être une très agréable surprise. Mon fils adore tous les personnages et la lecture de ces livres fait désormais partie de notre rituel du coucher ! Un must-have pour tous les petits amateurs de livres et passionnés de pelleteuses/tracteurs...",
+      es: "¡¡Súper!! Recomendada por un amigo, esta colección resultó ser una sorpresa muy agradable. ¡A mi hijo le encantan todos los personajes y la lectura de estos libros se ha convertido en parte de nuestro ritual para ir a dormir! Un imprescindible para todos los niños amantes de los libros y apasionados de las excavadoras/tractores...",
+      nl: "Super!! Aanbevolen door een vriend, bleek deze reeks een buitengewoon aangename verrassing. Mijn zoon is dol op alle personages en het lezen van deze boeken is vast onderdeel van ons bedtijdritueel geworden! Een must-have voor alle kindjes die van boeken houden en dol zijn op graafmachines/tractoren...",
+      pl: "Super!! Polecona przez znajomego, ta seria okazała się przemiłą niespodzianką. Mój syn uwielbia wszystkich bohaterów, a czytanie tych książeczek stało się częścią naszego rytuału zasypiania! Obowiązkowa pozycja dla wszystkich dzieci kochających książki i zafascynowanych koparkami/traktorami...",
+      sv: "Super!! Rekommenderad av en vän, den här serien visade sig vara en mycket trevlig överraskning. Min son älskar alla karaktärer och läsningen av dessa böcker har blivit en del av vår godnattsrutin! Ett måste för alla barn som älskar böcker och är förtjusta i grävskopor/traktorer...",
+      ja: "最高です！！ 友人に勧められて購入しましたが、このシリーズは嬉しい驚きでした。息子はすべてのキャラクターが大好きで、この本を読むことが寝かしつけの習慣になりました！ 絵本が好きなお子さんや、ショベルカーやトラクターが大好きな子どもたちには必携の一冊です……"
+    }
+  },
+  {
+    reviewer: "chiara",
+    rating: 5,
+    text: {
+      it: "Papere da salvare. Libro molto carino per imparare a rispettare gli animali che ci circondano e che i bambini vedono nella loro quotidianità, da educatrice apprezzo libri del genere. Facile e comprensibile, con immagini utili alla comprensione dei più piccoli, e scrittura in stampato maiuscolo per i più grandi.",
+      en: "Ducks to rescue. Very sweet book for learning to respect the animals around us that children see in their daily lives; as an educator, I truly appreciate books of this kind. Easy and understandable, with images that help little ones comprehend, and uppercase print text for older children.",
+      de: "Enten zu retten. Sehr schönes Buch, um den Respekt vor den Tieren zu lernen, die uns umgeben und die Kinder in ihrem Alltag sehen; als Erzieherin schätze ich solche Bücher sehr. Leicht und verständlich, mit Bildern, die den Kleinsten beim Verstehen helfen, und Druckschrift in Großbuchstaben für die Größeren.",
+      fr: "Des canards à sauver. Très joli livre pour apprendre à respecter les animaux qui nous entourent et que les enfants voient dans leur quotidien ; en tant qu'éducatrice, j'apprécie beaucoup ce genre de livres. Facile et compréhensible, avec des images utiles à la compréhension des plus petits, et une écriture en majuscules d'imprimerie pour les plus grands.",
+      es: "Patos para salvar. Libro muy bonito para aprender a respetar a los animales que nos rodean y que los niños ven en su vida cotidiana; como educadora, aprecio mucho libros de este tipo. Fácil y comprensible, con imágenes útiles para la comprensión de los más pequeños, y letra mayúscula de imprenta para los más grandes.",
+      nl: "Eendjes om te redden. Heel lief boekje om respect te leren voor de dieren om ons heen die kinderen in hun dagelijks leven zien; als opvoedster waardeer ik dit soort boeken enorm. Eenvoudig en begrijpelijk, met illustraties die kleintjes helpen het verhaal te begrijpen, en hoofdletters in blokschrift voor de grotere kinderen.",
+      pl: "Kaczuszki do uratowania. Bardzo ładna książeczka do nauki szacunku dla zwierząt, które nas otaczają i które dzieci widzą na co dzień; jako pedagożka bardzo cenię tego typu książki. Prosta i zrozumiała, z ilustracjami pomagającymi w zrozumieniu najmłodszym i drukowanymi dużymi literami dla starszaków.",
+      sv: "Änder att rädda. Mycket fin bok för att lära sig respektera djuren runt omkring oss som barnen möter i sin vardag; som pedagog uppskattar jag verkligen sådana här böcker. Lätt och begriplig, med bilder som underlättar förståelsen för de minsta, och text i versaler för de lite äldre.",
+      ja: "助けを待つアヒルたち。子どもたちが日常で目にする身近な動物たちを大切にする心を育てる、とても素敵な絵本です。教育関係者として、こうした絵本を高く評価しています。わかりやすく読みやすい内容で、小さな子の理解を助ける絵と、少し大きくなった子のための読みやすい文字が使われています。"
+    }
+  },
+  {
+    reviewer: "Martina",
+    rating: 5,
+    text: {
+      it: "CONSIGLIATISSIMO. Primo che abbiamo preso della collana, li prenderemo tutti! Semplice e intuitivo, mio figlio lo adora!",
+      en: "HIGHLY RECOMMENDED. First one we got from the series, we will get them all! Simple and intuitive, my son loves it!",
+      de: "WÄRMSTENS EMPFOHLEN. Das erste, das wir aus der Reihe gekauft haben, wir werden sie alle holen! Einfach und intuitiv, mein Sohn liebt es!",
+      fr: "VIVEMENT RECOMMANDÉ. Le premier que nous achetons dans la collection, nous allons tous les prendre ! Simple et intuitif, mon fils l'adore !",
+      es: "MUY RECOMENDADO. El primero que compramos de la colección, ¡nos haremos con todos! Sencillo e intuitivo, ¡a mi hijo le encanta!",
+      nl: "ZEER AANBEVOLEN. De eerste die we van de reeks hebben gekocht, we gaan ze allemaal halen! Eenvoudig en intuïtief, mijn zoon is er dol op!",
+      pl: "GORĄCO POLECAM. Pierwsza, którą kupiliśmy z tej serii, kupimy wszystkie! Prosta i intuicyjna, mój syn ją uwielbia!",
+      sv: "REKOMMENDERAS VARMT. Den första vi köpte ur serien, vi kommer att köpa alla! Enkel och intuitiv, min son älskar den!",
+      ja: "心からおすすめ。シリーズで最初に手にした1冊ですが、全部揃えるつもりです！ シンプルで直感的にわかりやすく、息子も夢中になっています！"
+    }
+  },
+  {
+    reviewer: "Mattia B.",
+    rating: 5,
+    text: {
+      it: "Colorato e divertente. La mia bimba di 20 mesi ha gradito il regalo, disegni curati e storia divertente per i bambini.",
+      en: "Colorful and fun. My 20-month-old girl enjoyed the gift, well-crafted drawings and a fun story for children.",
+      de: "Farbenfroh und unterhaltsam. Meiner 20 Monate alten Tochter hat das Geschenk gefallen, liebevolle Zeichnungen und eine lustige Geschichte für Kinder.",
+      fr: "Coloré et amusant. Ma petite fille de 20 mois a beaucoup apprécié le cadeau, des dessins soignés et une histoire amusante pour les enfants.",
+      es: "Colorido y divertido. A mi niña de 20 meses le gustó el regalo, dibujos cuidados y una historia divertida para los niños.",
+      nl: "Kleurrijk en leuk. Mijn 20 maanden oude dochter vond het een geweldig cadeau, verzorgde tekeningen en een leuk verhaal voor kinderen.",
+      pl: "Kolorowa i zabawna. Mojej 20-miesięcznej córeczce prezent bardzo się spodobał, staranne rysunki i ciekawa historia dla dzieci.",
+      sv: "Färgglad och rolig. Min 20 månader gamla flicka uppskattade presenten, fina teckningar och en rolig berättelse för barnen.",
+      ja: "カラフルで楽しい。20か月の娘はこのプレゼントをとても喜びました。丁寧なイラストと子ども向けの楽しいお話です。"
+    }
+  },
+  {
+    reviewer: "Eleonora",
+    rating: 5,
+    text: {
+      it: "Bruno il camion e lo stagno delle papere. Attraverso questa storia emergono diversi temi importanti per la crescita dei bambini, come l'empatia, la solidarietà e il desiderio di aiutare il prossimo. Il racconto trasmette valori positivi e invita il lettore a riflettere sull'importanza della gentilezza e della collaborazione. Inoltre, le immagini sono curate e coinvolgenti: accompagnano il testo, rendono la lettura più piacevole e aiutano a comprendere meglio la storia e le emozioni dei personaggi.",
+      en: "Bruno the dump truck and the duck pond. Through this story, several important themes for children's growth emerge, such as empathy, solidarity, and the desire to help others. The tale conveys positive values and invites the reader to reflect on the importance of kindness and collaboration. In addition, the illustrations are refined and engaging: they accompany the text, make reading more enjoyable, and help to better understand the story and the emotions of the characters.",
+      de: "Bruno der Lastwagen und der Ententeich. Durch diese Geschichte kommen verschiedene wichtige Themen für das Heranwachsen von Kindern zum Vorschein, wie Empathie, Solidarität und der Wunsch, anderen zu helfen. Die Erzählung vermittelt positive Werte und lädt dazu ein, über die Bedeutung von Freundlichkeit und Zusammenarbeit nachzudenken. Zudem sind die Bilder liebevoll und fesselnd: Sie begleiten den Text, machen das Lesen angenehmer und helfen, die Geschichte und die Gefühle der Figuren besser zu verstehen.",
+      fr: "Bruno le camion et la mare aux canards. À travers cette histoire émergent plusieurs thèmes importants pour le développement des enfants, tels que l'empathie, la solidarité et le désir d'aider son prochain. Le récit transmet des valeurs positives et invite le lecteur à réfléchir sur l'importance de la gentillesse et de la collaboration. De plus, les illustrations sont soignées et captivantes : elles accompagnent le texte, rendent la lecture plus agréable et aident à mieux comprendre l'histoire et les émotions des personnages.",
+      es: "Bruno el camión y el estanque de los patos. A través de este cuento surgen varios temas importantes para el crecimiento de los niños, como la empatía, la solidaridad y el deseo de ayudar al prójimo. El relato transmite valores positivos e invita al lector a reflexionar sobre la importancia de la amabilidad y la colaboración. Además, las ilustraciones son cuidadas y envolventes: acompañan al texto, hacen la lectura más agradable y ayudan a comprender mejor la historia y las emociones de los personajes.",
+      nl: "Bruno de kiepauto en de eendenvijver. Door dit verhaal komen verschillende belangrijke thema's voor de ontwikkeling van kinderen naar voren, zoals empathie, solidariteit en de wens om anderen te helpen. Het verhaal brengt positieve waarden over en nodigt de lezer uit om na te denken over het belang van vriendelijkheid en samenwerking. Bovendien zijn de illustraties verzorgd en meeslepend: ze vergezellen de tekst, maken het lezen aangenamer en helpen het verhaal en de emoties van de personages beter te begrijpen.",
+      pl: "Bruno wywrotka i staw z kaczuszkami. Poprzez tę historię wyłania się kilka ważnych tematów dla rozwoju dzieci, takich jak empatia, solidarność i chęć pomocy innym. Opowieść przekazuje pozytywne wartości i zachęca czytelnika do refleksji nad znaczeniem życzliwości i współpracy. Ponadto ilustracje są staranne i wciągające: towarzyszą tekstowi, czynią czytanie przyjemniejszym i pomagają lepiej zrozumieć historię oraz emocje bohaterów.",
+      sv: "Lastbilen Bruno och ankdammen. Genom den här sagan lyfts flera viktiga teman för barns utveckling fram, såsom empati, solidaritet och viljan att hjälpa andra. Berättelsen förmedlar positiva värderingar och bjuder in läsaren att reflektera över vikten av vänlighet och samarbete. Dessutom är bilderna välgjorda och fängslande: de ackompanjerar texten, gör läsningen mer njutbar och hjälper till att bättre förstå historien och karaktärernas känslor.",
+      ja: "ダンプカーのブルーノとアヒルの池。この物語を通じて、思いやりや助け合い、他者を助けたいという気持ちなど、子どもの成長に欠かせない数々の大切なテーマが描かれています。前向きな価値観を伝え、優しさと協力の大切さについて考えさせてくれるお話です。さらに、丁寧で魅力的なイラストが文章に寄り添い、読書をより楽しいものにしながら、物語や登場人物の感情への理解を深めてくれます。"
+    }
+  },
+  {
+    reviewer: "Erdunga",
+    rating: 5,
+    text: {
+      it: "Mio figlio li adora! È incredibile quanto questi libri abbiano aiutato mio figlio a rilassarsi prima di andare a dormire. Leggerli insieme la sera è diventato un momento speciale della nostra routine e lo accompagnano dolcemente verso il sonno. Li adora letteralmente e ogni sera non vede l'ora di sceglierne uno. Li consiglio davvero a chi cerca letture piacevoli e rilassanti per i più piccoli.",
+      en: "My son loves them! It is incredible how much these books have helped my son relax before going to sleep. Reading them together in the evening has become a special moment of our routine and gently eases him into sleep. He literally adores them and every evening can't wait to pick one. I truly recommend them to anyone looking for pleasant and relaxing reads for the little ones.",
+      de: "Mein Sohn liebt sie! Es ist unglaublich, wie sehr diese Bücher meinem Sohn geholfen haben, sich vor dem Schlafengehen zu entspannen. Sie abends gemeinsam zu lesen, ist zu einem besonderen Moment unserer Routine geworden und begleitet ihn sanft in den Schlaf. Er liebt sie buchstäblich und kann es jeden Abend kaum erwarten, sich eines auszusuchen. Ich empfehle sie wirklich jedem, der angenehme und entspannende Lektüre für die Kleinen sucht.",
+      fr: "Mon fils les adore ! C'est incroyable à quel point ces livres ont aidé mon fils à se détendre avant d'aller dormir. Les lire ensemble le soir est devenu un moment privilégié de notre routine et l'accompagne doucement vers le sommeil. Il les adore littéralement et chaque soir, il a hâte d'en choisir un. Je les recommande vivement à tous ceux qui recherchent des lectures agréables et apaisantes pour les plus petits.",
+      es: "¡Mi hijo los adora! Es increíble cuánto han ayudado estos libros a mi hijo a relajarse antes de ir a dormir. Leerlos juntos por la noche se ha convertido en un momento especial de nuestra rutina y lo acompañan dulcemente hacia el sueño. Literalmente los adora y cada noche está deseando elegir uno. Los recomiendo de verdad a cualquiera que busque lecturas agradables y relajantes para los más pequeños.",
+      nl: "Mijn zoon is er dol op! Het is ongelooflijk hoeveel deze boeken mijn zoon hebben geholpen om te ontspannen voor het slapengaan. Ze 's avonds samen lezen is een bijzonder moment in onze routine geworden en begeleidt hem zachtjes naar de slaap. Hij is er letterlijk dol op en kan elke avond niet wachten om er eentje te kiezen. Ik raad ze echt aan voor wie op zoek is naar prettige en ontspannende verhalen voor de kleintjes.",
+      pl: "Mój syn je uwielbia! To niesamowite, jak bardzo te książki pomogły mojemu synowi wyciszyć się przed snem. Wspólne czytanie wieczorem stało się wyjątkową częścią naszej rutyny i łagodnie prowadzi go w stronę snu. Dosłownie je uwielbia i każdego wieczoru nie może się doczekać, aż wybierze jedną z nich. Z całego serca polecam je każdemu, kto szuka przyjemnych i wyciszających lektur dla najmłodszych.",
+      sv: "Min son älskar dem! Det är otroligt hur mycket de här böckerna har hjälpt min son att varva ner innan han ska sova. Att läsa dem tillsammans på kvällen har blivit en speciell stund i vår rutin och vaggar honom mjukt till sömns. Han fullkomligt älskar dem och ser varje kväll fram emot att välja en. Jag rekommenderar dem verkligen till alla som söker trevlig och lugnande läsning för de små.",
+      ja: "息子が大のお気に入りです！ この本が寝る前の息子のリラックスにどれほど役立ったか、驚くほどです。夜に一緒に読むことが日課の特別な時間になり、心地よい眠りへと優しく導いてくれます。息子は文字通り夢中になっていて、毎晩どれを読もうか選ぶのが待ちきれない様子です。小さな子のための心地よくリラックスできる本を探している方に、心からおすすめします。"
+    }
+  }
+];
+
+const reviewsSliderState = {
+  currentIndex: 0,
+  touchStartX: 0,
+  touchEndX: 0,
+  initialized: false
+};
+
+function getVisibleReviewCardsCount() {
+  const width = window.innerWidth;
+  if (width > 1024) return 3;
+  if (width > 640) return 2;
+  return 1;
+}
+
+function getMaxReviewIndex() {
+  const visible = getVisibleReviewCardsCount();
+  return Math.max(0, AMAZON_REVIEWS.length - visible);
+}
+
+function initReviewsSlider() {
+  const track = document.getElementById('reviews-slider-track');
+  const carousel = document.getElementById('reviews-carousel');
+  const prevBtn = document.getElementById('reviews-prev-btn');
+  const nextBtn = document.getElementById('reviews-next-btn');
+
+  if (!track || !carousel) return;
+
+  renderReviewCards();
+  updateReviewsSliderPosition();
+  renderReviewIndicators();
+
+  if (prevBtn) {
+    prevBtn.onclick = (e) => {
+      e.preventDefault();
+      slideReviews(-1);
+    };
+  }
+
+  if (nextBtn) {
+    nextBtn.onclick = (e) => {
+      e.preventDefault();
+      slideReviews(1);
+    };
+  }
+
+  if (!reviewsSliderState.initialized) {
+    reviewsSliderState.initialized = true;
+
+    // Keyboard navigation on carousel
+    carousel.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        slideReviews(-1);
+      } else if (e.key === 'ArrowRight') {
+        slideReviews(1);
+      }
+    });
+
+    // Touch swipe support
+    carousel.addEventListener('touchstart', (e) => {
+      if (e.touches && e.touches.length === 1) {
+        reviewsSliderState.touchStartX = e.touches[0].clientX;
+      }
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', (e) => {
+      if (e.changedTouches && e.changedTouches.length === 1) {
+        reviewsSliderState.touchEndX = e.changedTouches[0].clientX;
+        const diff = reviewsSliderState.touchStartX - reviewsSliderState.touchEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) {
+            slideReviews(1);
+          } else {
+            slideReviews(-1);
+          }
+        }
+      }
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+      const maxIdx = getMaxReviewIndex();
+      if (reviewsSliderState.currentIndex > maxIdx) {
+        reviewsSliderState.currentIndex = maxIdx;
+      }
+      updateReviewsSliderPosition();
+      renderReviewIndicators();
+    });
+  }
+
+  updateReviewsTranslations(currentLanguage);
+}
+
+function renderReviewCards() {
+  const track = document.getElementById('reviews-slider-track');
+  if (!track) return;
+
+  const strings = I18N[currentLanguage] || I18N.it;
+  const ratingSr = strings.reviewsRatingSr || 'Valutazione: 5 su 5 stelle';
+  const amazonSource = strings.reviewsAmazonSource || 'Recensione Amazon';
+
+  track.innerHTML = AMAZON_REVIEWS.map((review, idx) => {
+    const initial = review.reviewer.charAt(0).toUpperCase();
+    const reviewText = (typeof review.text === 'object' && review.text[currentLanguage])
+      ? review.text[currentLanguage]
+      : (review.text.it || review.text);
+    return `
+      <article class="review-card" data-review-index="${idx}">
+        <div class="review-card-header">
+          <div class="review-stars" aria-label="${escapeHtml(ratingSr)}">
+            <span class="sr-only">${escapeHtml(ratingSr)}</span>
+            <span aria-hidden="true">★★★★★</span>
+          </div>
+          <span class="review-quote-mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+          </span>
+        </div>
+        <div class="review-body">
+          <p class="review-text">"${escapeHtml(reviewText)}"</p>
+        </div>
+        <div class="review-card-footer">
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar" aria-hidden="true">${escapeHtml(initial)}</div>
+            <h3 class="reviewer-name">${escapeHtml(review.reviewer)}</h3>
+          </div>
+          <div class="review-amazon-badge" title="Recensione autentica da Amazon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.958 10.09c0 1.25-.049 2.29-.868 3.33-.615.79-1.45 1.27-2.374 1.27-1.303 0-1.964-.99-1.964-2.45 0-2.88 2.374-3.4 5.206-3.4v1.25zm3.078 6.64c-.247-.2-.3-.54-.086-.79.542-.64.839-1.46.839-2.31V9.2c0-2.44-1.28-3.83-3.667-3.83-2.02 0-3.619.98-4.212 2.76-.086.26.049.52.32.58l1.492.3c.247.05.493-.08.592-.32.32-.77.986-1.19 1.897-1.19 1.159 0 1.825.64 1.825 1.77v.46c-3.15.15-6.079.9-6.079 4.34 0 2.22 1.405 3.51 3.292 3.51 1.628 0 2.738-.7 3.32-1.78.173.55.604 1.05 1.171 1.34.222.11.493.04.604-.17l1.036-1.57c.123-.19.086-.44-.123-.59l-.021-.01zm4.724 4.88c-4.402 3.24-10.457 4.14-15.656 1.4-1.023-.54-2.047-1.2-2.922-1.99-.247-.22-.271-.58-.062-.83.21-.24.567-.27.814-.06.814.71 1.763 1.33 2.713 1.82 4.747 2.49 10.334 1.68 14.39-1.25.32-.23.765-.02.765.37 0 .19-.111.37-.259.54h.215zm.691-1.35c-.456-.58-3.033-.27-4.192-.13-.357.04-.419-.28-.1-.5 2.059-1.45 5.29-1.03 5.672-.57.382.46-.222 3.65-2.182 5.25-.308.25-.592.12-.456-.22.456-1.11 1.714-3.25 1.258-3.83z"/>
+            </svg>
+            <span class="amazon-label-text">${escapeHtml(amazonSource)}</span>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+}
+
+function slideReviews(direction) {
+  const maxIndex = getMaxReviewIndex();
+  let nextIndex = reviewsSliderState.currentIndex + direction;
+  if (nextIndex < 0) nextIndex = 0;
+  if (nextIndex > maxIndex) nextIndex = maxIndex;
+
+  reviewsSliderState.currentIndex = nextIndex;
+  updateReviewsSliderPosition();
+  updateReviewIndicators();
+}
+
+function goToReviewSlide(index) {
+  const maxIndex = getMaxReviewIndex();
+  reviewsSliderState.currentIndex = Math.min(Math.max(0, index), maxIndex);
+  updateReviewsSliderPosition();
+  updateReviewIndicators();
+}
+
+function updateReviewsSliderPosition() {
+  const track = document.getElementById('reviews-slider-track');
+  const prevBtn = document.getElementById('reviews-prev-btn');
+  const nextBtn = document.getElementById('reviews-next-btn');
+  if (!track) return;
+
+  const firstCard = track.querySelector('.review-card');
+  if (!firstCard) return;
+
+  const cardWidth = firstCard.offsetWidth;
+  const style = window.getComputedStyle(track);
+  const gap = parseFloat(style.gap) || 24;
+
+  const offset = reviewsSliderState.currentIndex * (cardWidth + gap);
+  track.style.transform = `translateX(-${offset}px)`;
+
+  const maxIndex = getMaxReviewIndex();
+  if (prevBtn) {
+    prevBtn.disabled = (reviewsSliderState.currentIndex === 0);
+  }
+  if (nextBtn) {
+    nextBtn.disabled = (reviewsSliderState.currentIndex >= maxIndex);
+  }
+}
+
+function renderReviewIndicators() {
+  const indicators = document.getElementById('reviews-indicators');
+  if (!indicators) return;
+
+  const maxIndex = getMaxReviewIndex();
+  const totalDots = maxIndex + 1;
+
+  if (totalDots <= 1) {
+    indicators.style.display = 'none';
+    return;
+  }
+
+  indicators.style.display = 'flex';
+  let dotsHtml = '';
+  for (let i = 0; i < totalDots; i++) {
+    const isActive = i === reviewsSliderState.currentIndex;
+    dotsHtml += `
+      <button type="button" 
+              class="reviews-dot ${isActive ? 'active' : ''}" 
+              data-dot-index="${i}" 
+              role="tab" 
+              aria-selected="${isActive ? 'true' : 'false'}" 
+              aria-label="Gruppo recensioni ${i + 1} di ${totalDots}">
+      </button>
+    `;
+  }
+  indicators.innerHTML = dotsHtml;
+
+  indicators.querySelectorAll('.reviews-dot').forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dotIdx = parseInt(dot.getAttribute('data-dot-index'), 10);
+      if (!isNaN(dotIdx)) {
+        goToReviewSlide(dotIdx);
+      }
+    });
+  });
+}
+
+function updateReviewIndicators() {
+  const dots = document.querySelectorAll('.reviews-dot');
+  dots.forEach((dot, idx) => {
+    const isActive = idx === reviewsSliderState.currentIndex;
+    dot.classList.toggle('active', isActive);
+    dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
+}
+
+function updateReviewsTranslations(lang) {
+  const strings = I18N[lang] || I18N.it;
+  setText('reviews-section-title', strings.reviewsTitle || 'Cosa Dicono i Genitori');
+
+  const prevBtn = document.getElementById('reviews-prev-btn');
+  const nextBtn = document.getElementById('reviews-next-btn');
+  if (prevBtn && strings.reviewsPrevAria) {
+    prevBtn.setAttribute('aria-label', strings.reviewsPrevAria);
+    prevBtn.title = strings.reviewsPrevAria;
+  }
+  if (nextBtn && strings.reviewsNextAria) {
+    nextBtn.setAttribute('aria-label', strings.reviewsNextAria);
+    nextBtn.title = strings.reviewsNextAria;
+  }
+
+  const track = document.getElementById('reviews-slider-track');
+  if (track) {
+    const ratingSr = strings.reviewsRatingSr || 'Valutazione: 5 su 5 stelle';
+    const amazonSource = strings.reviewsAmazonSource || 'Recensione Amazon';
+
+    track.querySelectorAll('.review-stars .sr-only').forEach(el => {
+      el.textContent = ratingSr;
+    });
+    track.querySelectorAll('.review-stars').forEach(el => {
+      el.setAttribute('aria-label', ratingSr);
+    });
+    track.querySelectorAll('.amazon-label-text').forEach(el => {
+      el.textContent = amazonSource;
+    });
+
+    track.querySelectorAll('.review-card').forEach(card => {
+      const idx = parseInt(card.getAttribute('data-review-index'), 10);
+      const review = AMAZON_REVIEWS[idx];
+      if (review) {
+        const textEl = card.querySelector('.review-text');
+        const reviewText = (typeof review.text === 'object' && review.text[lang])
+          ? review.text[lang]
+          : (review.text.it || review.text);
+        if (textEl) {
+          textEl.textContent = `"${reviewText}"`;
+        }
+      }
+    });
+  }
+}
+
+

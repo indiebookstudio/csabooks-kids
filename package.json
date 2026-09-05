@@ -1,0 +1,17 @@
+{
+  "name": "csabooks-kids",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CSA Books 4 Kids - Official Website & Catalog",
+  "scripts": {
+    "build": "node scripts/generate-banners.js",
+    "generate-banners": "node scripts/generate-banners.js"
+  },
+  "keywords": [
+    "childrens-books",
+    "kids-books",
+    "picture-books"
+  ],
+  "author": "Marco Salucci",
+  "license": "UNLICENSED"
+}

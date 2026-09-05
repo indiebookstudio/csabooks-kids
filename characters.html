@@ -53,44 +53,105 @@
           </a>
         </div>
 
-        <!-- Selettore Lingua Interfaccia con Bandiere FlagCDN -->
-        <div class="lang-switcher" role="group" aria-label="Language Selector">
-          <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-pressed="false" title="English">
-            <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="18" height="13" alt="English" class="lang-flag-img" loading="eager">
-            <span class="lang-code">EN</span>
-          </button>
-          <button type="button" class="lang-btn active" data-lang="it" onclick="setLanguage('it')" aria-pressed="true" title="Italiano">
-            <img src="https://flagcdn.com/24x18/it.png" srcset="https://flagcdn.com/48x36/it.png 2x" width="18" height="13" alt="Italiano" class="lang-flag-img" loading="eager">
-            <span class="lang-code">IT</span>
-          </button>
-          <button type="button" class="lang-btn" data-lang="de" onclick="setLanguage('de')" aria-pressed="false" title="Deutsch">
-            <img src="https://flagcdn.com/24x18/de.png" srcset="https://flagcdn.com/48x36/de.png 2x" width="18" height="13" alt="Deutsch" class="lang-flag-img" loading="eager">
-            <span class="lang-code">DE</span>
-          </button>
-          <button type="button" class="lang-btn" data-lang="fr" onclick="setLanguage('fr')" aria-pressed="false" title="Français">
-            <img src="https://flagcdn.com/24x18/fr.png" srcset="https://flagcdn.com/48x36/fr.png 2x" width="18" height="13" alt="Français" class="lang-flag-img" loading="eager">
-            <span class="lang-code">FR</span>
-          </button>
-          <button type="button" class="lang-btn" data-lang="es" onclick="setLanguage('es')" aria-pressed="false" title="Español">
-            <img src="https://flagcdn.com/24x18/es.png" srcset="https://flagcdn.com/48x36/es.png 2x" width="18" height="13" alt="Español" class="lang-flag-img" loading="eager">
-            <span class="lang-code">ES</span>
-          </button>
-          <button type="button" class="lang-btn" data-lang="nl" onclick="setLanguage('nl')" aria-pressed="false" title="Nederlands">
-            <img src="https://flagcdn.com/24x18/nl.png" srcset="https://flagcdn.com/48x36/nl.png 2x" width="18" height="13" alt="Nederlands" class="lang-flag-img" loading="eager">
-            <span class="lang-code">NL</span>
-          </button>
-          <button type="button" class="lang-btn" data-lang="pl" onclick="setLanguage('pl')" aria-pressed="false" title="Polski">
-            <img src="https://flagcdn.com/24x18/pl.png" srcset="https://flagcdn.com/48x36/pl.png 2x" width="18" height="13" alt="Polski" class="lang-flag-img" loading="eager">
-            <span class="lang-code">PL</span>
-          </button>
-          <button type="button" class="lang-btn" data-lang="sv" onclick="setLanguage('sv')" aria-pressed="false" title="Svenska">
-            <img src="https://flagcdn.com/24x18/se.png" srcset="https://flagcdn.com/48x36/se.png 2x" width="18" height="13" alt="Svenska" class="lang-flag-img" loading="eager">
-            <span class="lang-code">SE</span>
-          </button>
-          <button type="button" class="lang-btn" data-lang="ja" onclick="setLanguage('ja')" aria-pressed="false" title="日本語">
-            <img src="https://flagcdn.com/24x18/jp.png" srcset="https://flagcdn.com/48x36/jp.png 2x" width="18" height="13" alt="日本語" class="lang-flag-img" loading="eager">
-            <span class="lang-code">JP</span>
-          </button>
+        <!-- Selettore Lingua Interfaccia: Desktop Bandiere + Mobile Dropdown -->
+        <div class="lang-switcher-wrapper">
+          <!-- Desktop: Fila di Bandiere FlagCDN -->
+          <div class="lang-switcher lang-switcher-desktop" role="group" aria-label="Language Selector">
+            <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')" aria-pressed="false" title="English">
+              <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="18" height="13" alt="English" class="lang-flag-img" loading="eager">
+              <span class="lang-code">EN</span>
+            </button>
+            <button type="button" class="lang-btn active" data-lang="it" onclick="setLanguage('it')" aria-pressed="true" title="Italiano">
+              <img src="https://flagcdn.com/24x18/it.png" srcset="https://flagcdn.com/48x36/it.png 2x" width="18" height="13" alt="Italiano" class="lang-flag-img" loading="eager">
+              <span class="lang-code">IT</span>
+            </button>
+            <button type="button" class="lang-btn" data-lang="de" onclick="setLanguage('de')" aria-pressed="false" title="Deutsch">
+              <img src="https://flagcdn.com/24x18/de.png" srcset="https://flagcdn.com/48x36/de.png 2x" width="18" height="13" alt="Deutsch" class="lang-flag-img" loading="eager">
+              <span class="lang-code">DE</span>
+            </button>
+            <button type="button" class="lang-btn" data-lang="fr" onclick="setLanguage('fr')" aria-pressed="false" title="Français">
+              <img src="https://flagcdn.com/24x18/fr.png" srcset="https://flagcdn.com/48x36/fr.png 2x" width="18" height="13" alt="Français" class="lang-flag-img" loading="eager">
+              <span class="lang-code">FR</span>
+            </button>
+            <button type="button" class="lang-btn" data-lang="es" onclick="setLanguage('es')" aria-pressed="false" title="Español">
+              <img src="https://flagcdn.com/24x18/es.png" srcset="https://flagcdn.com/48x36/es.png 2x" width="18" height="13" alt="Español" class="lang-flag-img" loading="eager">
+              <span class="lang-code">ES</span>
+            </button>
+            <button type="button" class="lang-btn" data-lang="nl" onclick="setLanguage('nl')" aria-pressed="false" title="Nederlands">
+              <img src="https://flagcdn.com/24x18/nl.png" srcset="https://flagcdn.com/48x36/nl.png 2x" width="18" height="13" alt="Nederlands" class="lang-flag-img" loading="eager">
+              <span class="lang-code">NL</span>
+            </button>
+            <button type="button" class="lang-btn" data-lang="pl" onclick="setLanguage('pl')" aria-pressed="false" title="Polski">
+              <img src="https://flagcdn.com/24x18/pl.png" srcset="https://flagcdn.com/48x36/pl.png 2x" width="18" height="13" alt="Polski" class="lang-flag-img" loading="eager">
+              <span class="lang-code">PL</span>
+            </button>
+            <button type="button" class="lang-btn" data-lang="sv" onclick="setLanguage('sv')" aria-pressed="false" title="Svenska">
+              <img src="https://flagcdn.com/24x18/se.png" srcset="https://flagcdn.com/48x36/se.png 2x" width="18" height="13" alt="Svenska" class="lang-flag-img" loading="eager">
+              <span class="lang-code">SE</span>
+            </button>
+            <button type="button" class="lang-btn" data-lang="ja" onclick="setLanguage('ja')" aria-pressed="false" title="日本語">
+              <img src="https://flagcdn.com/24x18/jp.png" srcset="https://flagcdn.com/48x36/jp.png 2x" width="18" height="13" alt="日本語" class="lang-flag-img" loading="eager">
+              <span class="lang-code">JP</span>
+            </button>
+          </div>
+
+          <!-- Mobile: Dropdown Compatto Elegante -->
+          <div class="lang-mobile-select" id="lang-mobile-select">
+            <button type="button" class="lang-mobile-trigger" id="lang-mobile-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Seleziona Lingua">
+              <img src="https://flagcdn.com/24x18/it.png" alt="IT" class="lang-mobile-flag" id="lang-mobile-selected-flag">
+              <span class="lang-mobile-code" id="lang-mobile-selected-code">IT</span>
+              <svg class="lang-mobile-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="lang-mobile-dropdown" id="lang-mobile-dropdown" role="listbox">
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="it" role="option" onclick="setLanguage('it')">
+                <img src="https://flagcdn.com/24x18/it.png" alt="Italiano" class="lang-flag-img">
+                <span class="lang-mobile-name">Italiano</span>
+                <span class="lang-mobile-short">IT</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="en" role="option" onclick="setLanguage('en')">
+                <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="lang-flag-img">
+                <span class="lang-mobile-name">English</span>
+                <span class="lang-mobile-short">EN</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="de" role="option" onclick="setLanguage('de')">
+                <img src="https://flagcdn.com/24x18/de.png" alt="Deutsch" class="lang-flag-img">
+                <span class="lang-mobile-name">Deutsch</span>
+                <span class="lang-mobile-short">DE</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="fr" role="option" onclick="setLanguage('fr')">
+                <img src="https://flagcdn.com/24x18/fr.png" alt="Français" class="lang-flag-img">
+                <span class="lang-mobile-name">Français</span>
+                <span class="lang-mobile-short">FR</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="es" role="option" onclick="setLanguage('es')">
+                <img src="https://flagcdn.com/24x18/es.png" alt="Español" class="lang-flag-img">
+                <span class="lang-mobile-name">Español</span>
+                <span class="lang-mobile-short">ES</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="nl" role="option" onclick="setLanguage('nl')">
+                <img src="https://flagcdn.com/24x18/nl.png" alt="Nederlands" class="lang-flag-img">
+                <span class="lang-mobile-name">Nederlands</span>
+                <span class="lang-mobile-short">NL</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="pl" role="option" onclick="setLanguage('pl')">
+                <img src="https://flagcdn.com/24x18/pl.png" alt="Polski" class="lang-flag-img">
+                <span class="lang-mobile-name">Polski</span>
+                <span class="lang-mobile-short">PL</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="sv" role="option" onclick="setLanguage('sv')">
+                <img src="https://flagcdn.com/24x18/se.png" alt="Svenska" class="lang-flag-img">
+                <span class="lang-mobile-name">Svenska</span>
+                <span class="lang-mobile-short">SE</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="ja" role="option" onclick="setLanguage('ja')">
+                <img src="https://flagcdn.com/24x18/jp.png" alt="日本語" class="lang-flag-img">
+                <span class="lang-mobile-name">日本語</span>
+                <span class="lang-mobile-short">JP</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -116,6 +177,7 @@
         <nav class="site-nav" aria-label="Navigazione principale">
           <a href="index.html#catalogo" class="nav-link" id="nav-link-books">I Libri</a>
           <a href="characters.html" class="nav-link active" id="nav-link-characters">I Personaggi</a>
+          <a href="index.html#recensioni" class="nav-link" id="nav-link-reviews">Recensioni</a>
           <a href="about.html" class="nav-link" id="nav-link-about">Chi siamo</a>
         </nav>
       </div>
@@ -386,6 +448,7 @@
         <div class="footer-nav">
           <a href="index.html#catalogo" class="footer-nav-link" id="footer-nav-books">I Libri</a>
           <a href="characters.html" class="footer-nav-link" id="footer-nav-characters">I Personaggi</a>
+          <a href="index.html#recensioni" class="footer-nav-link" id="footer-nav-reviews">Recensioni</a>
           <a href="about.html" class="footer-nav-link" id="footer-nav-about">Chi siamo</a>
         </div>
       </div>

@@ -1,0 +1,4 @@
+#!/bin/sh
+# Automatically regenerate banner manifest before each commit
+node scripts/generate-banners.js
+git add assets/banner/banners.json assets/banner/banners.js

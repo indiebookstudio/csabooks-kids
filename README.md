@@ -62,14 +62,18 @@ Click su "Acquista su Amazon.it" o "Buy on Amazon" (Marketplace locale con ASIN)
         └── 08.Leo.Cinciallegra/ (IT / US)
 ```
 
----
+## 🎠 Gestione Automatica Banner Hero (Carousel)
 
-## 🚀 Come Pubblicare su GitHub Pages
+Il banner hero è un carousel dinamico e responsive guidato direttamente dal contenuto della cartella `assets/banner/`.
 
-1. Carica tutti i file sul repository GitHub `main`.
-2. Vai su **Settings** → **Pages**.
-3. Seleziona **Deploy from a branch** → branch `main` → cartella `/ (root)`.
-4. Clicca su **Save**.
+* **Per aggiungere un banner:** Inserisci una nuova immagine (`.jpg`, `.jpeg`, `.png`, `.webp`) in `assets/banner/`.
+* **Per rimuovere un banner:** Elimina il file corrispondente da `assets/banner/`.
+* **Ordinamento:** Le slide vengono ordinate automaticamente in ordine alfabetico per nome file. Rinomina i file per stabilire l'ordine desiderato (ad esempio `01.banner.jpg`, `02.benny.jpg`).
+* **Testi alternativi (Accessibilità):** Vengono tradotti automaticamente in tutte le 9 lingue supportate in base al nome del personaggio o del file, senza dover modificare il codice.
+
+Dopo aver aggiunto o eliminato un'immagine, basta fare `git commit` e `git push`:
+- Un hook pre-commit e la GitHub Action (`.github/workflows/deploy.yml`) aggiornano automaticamente i manifest `banners.json` e `banners.js`.
+- In alternativa, è possibile eseguire manualmente `npm run build` o `node scripts/generate-banners.js`.
 
 ---
 

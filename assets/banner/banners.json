@@ -1,0 +1,80 @@
+[
+  {
+    "file": "banner-csa-books-4-kids.jpg",
+    "src": "assets/banner/banner-csa-books-4-kids.jpg",
+    "characterKey": "banner",
+    "title": "Banner Csa Books 4 Kids"
+  },
+  {
+    "file": "Benny.01.jpeg",
+    "src": "assets/banner/Benny.01.jpeg",
+    "characterKey": "benny",
+    "title": "Benny 01"
+  },
+  {
+    "file": "Benny.02.jpeg",
+    "src": "assets/banner/Benny.02.jpeg",
+    "characterKey": "benny",
+    "title": "Benny 02"
+  },
+  {
+    "file": "Bruno.01.jpeg",
+    "src": "assets/banner/Bruno.01.jpeg",
+    "characterKey": "bruno",
+    "title": "Bruno 01"
+  },
+  {
+    "file": "Bruno.02.jpeg",
+    "src": "assets/banner/Bruno.02.jpeg",
+    "characterKey": "bruno",
+    "title": "Bruno 02"
+  },
+  {
+    "file": "Leo.01.jpeg",
+    "src": "assets/banner/Leo.01.jpeg",
+    "characterKey": "leo",
+    "title": "Leo 01"
+  },
+  {
+    "file": "Leo.02.jpeg",
+    "src": "assets/banner/Leo.02.jpeg",
+    "characterKey": "leo",
+    "title": "Leo 02"
+  },
+  {
+    "file": "Nina.01.jpeg",
+    "src": "assets/banner/Nina.01.jpeg",
+    "characterKey": "nina",
+    "title": "Nina 01"
+  },
+  {
+    "file": "Nina.02.jpeg",
+    "src": "assets/banner/Nina.02.jpeg",
+    "characterKey": "nina",
+    "title": "Nina 02"
+  },
+  {
+    "file": "Rino.01.jpeg",
+    "src": "assets/banner/Rino.01.jpeg",
+    "characterKey": "rino",
+    "title": "Rino 01"
+  },
+  {
+    "file": "Rino.02.jpeg",
+    "src": "assets/banner/Rino.02.jpeg",
+    "characterKey": "rino",
+    "title": "Rino 02"
+  },
+  {
+    "file": "Rudy.01.jpeg",
+    "src": "assets/banner/Rudy.01.jpeg",
+    "characterKey": "rudy",
+    "title": "Rudy 01"
+  },
+  {
+    "file": "Rudy.02.jpeg",
+    "src": "assets/banner/Rudy.02.jpeg",
+    "characterKey": "rudy",
+    "title": "Rudy 02"
+  }
+]
