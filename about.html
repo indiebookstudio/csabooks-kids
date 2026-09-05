@@ -258,19 +258,86 @@
           La mia più grande ispirazione è mio figlio. È stata proprio la sua passione irrefrenabile per camion, ruspe, gru e cantieri a dare vita a Le Avventure del Cantiere, una collana pensata per tutti i bambini curiosi e per chi ama le grandi macchine protagoniste di storie semplici, divertenti e ricche di valori.
         </p>
 
-        <!-- Box Evidenziato Ispirazione Personale -->
-        <div class="about-inspiration-card">
-          <div class="about-inspiration-icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 21h18"></path>
-              <path d="M5 21V7l8-4v18"></path>
-              <path d="M19 21V11l-6-4"></path>
-              <path d="M9 9h1"></path>
-              <path d="M9 13h1"></path>
-              <path d="M9 17h1"></path>
-            </svg>
+        <!-- Nuova Sezione: Tutto è cominciato da qui (Carosello Foto Origini) -->
+        <div class="about-origins-section" aria-label="Le origini della collana">
+          <h4 class="about-sub-heading" id="about-origin-title">Tutto è cominciato da qui</h4>
+          <p class="about-section-subtitle" id="about-origin-subtitle">
+            Prima dei libri c'era una passione: camion, ruspe, gru e cantieri osservati con gli occhi pieni di curiosità.
+          </p>
+
+          <div class="author-carousel" id="author-carousel" role="region" aria-roledescription="carousel" aria-label="Fotografie delle origini e ispirazione" tabindex="0">
+            <div class="author-carousel-stage">
+              <div class="author-carousel-track" id="author-carousel-track">
+                <!-- Slide 1 -->
+                <div class="author-carousel-slide active" role="group" aria-roledescription="slide" aria-label="1 di 10" aria-hidden="false">
+                  <img src="assets/author/foto.01.jpg" alt="Un bambino tocca con la mano il cingolo di un grande escavatore giallo nel bosco" width="683" height="911" class="author-carousel-img" fetchpriority="high" />
+                </div>
+                <!-- Slide 2 -->
+                <div class="author-carousel-slide" role="group" aria-roledescription="slide" aria-label="2 di 10" aria-hidden="true">
+                  <img src="assets/author/foto.03.jpg" alt="Un bambino indica un dumper e una pala meccanica attraverso la rete di un cantiere" width="683" height="911" loading="lazy" class="author-carousel-img" />
+                </div>
+                <!-- Slide 3 -->
+                <div class="author-carousel-slide" role="group" aria-roledescription="slide" aria-label="3 di 10" aria-hidden="true">
+                  <img src="assets/author/foto.04.jpg" alt="Un bambino osserva da vicino un escavatore gommato giallo in una piazza" width="683" height="911" loading="lazy" class="author-carousel-img" />
+                </div>
+                <!-- Slide 4 -->
+                <div class="author-carousel-slide" role="group" aria-roledescription="slide" aria-label="4 di 10" aria-hidden="true">
+                  <img src="assets/author/foto.05.jpg" alt="Un bambino osserva incuriosito un mini escavatore cingolato" width="683" height="911" loading="lazy" class="author-carousel-img" />
+                </div>
+                <!-- Slide 5 -->
+                <div class="author-carousel-slide" role="group" aria-roledescription="slide" aria-label="5 di 10" aria-hidden="true">
+                  <img src="assets/author/foto.06.jpg" alt="Un bambino guarda affascinato la grande ruota e la cabina di un muletto" width="683" height="911" loading="lazy" class="author-carousel-img" />
+                </div>
+                <!-- Slide 6 -->
+                <div class="author-carousel-slide" role="group" aria-roledescription="slide" aria-label="6 di 10" aria-hidden="true">
+                  <img src="assets/author/foto.07.jpg" alt="Un bambino in piedi alla recinzione osserva un escavatore al lavoro" width="683" height="911" loading="lazy" class="author-carousel-img" />
+                </div>
+                <!-- Slide 7 -->
+                <div class="author-carousel-slide" role="group" aria-roledescription="slide" aria-label="7 di 10" aria-hidden="true">
+                  <img src="assets/author/foto.08.jpg" alt="Un bambino accovacciato nell'erba sbircia un cantiere attraverso la siepe" width="683" height="911" loading="lazy" class="author-carousel-img" />
+                </div>
+                <!-- Slide 8 -->
+                <div class="author-carousel-slide" role="group" aria-roledescription="slide" aria-label="8 di 10" aria-hidden="true">
+                  <img src="assets/author/foto.09.jpg" alt="Un bambino osserva un escavatore arancione in manovra su un terreno di montagna" width="683" height="911" loading="lazy" class="author-carousel-img" />
+                </div>
+                <!-- Slide 9 -->
+                <div class="author-carousel-slide" role="group" aria-roledescription="slide" aria-label="9 di 10" aria-hidden="true">
+                  <img src="assets/author/foto.10.jpg" alt="Un bambino con cappellino bianco ammira il possente braccio di un escavatore" width="683" height="911" loading="lazy" class="author-carousel-img" />
+                </div>
+                <!-- Slide 10 (Orizzontale 4:3) -->
+                <div class="author-carousel-slide" role="group" aria-roledescription="slide" aria-label="10 di 10" aria-hidden="true">
+                  <img src="assets/author/foto.11.jpg" alt="Un bambino con caschetto osserva un sollevatore telescopico rosso attraverso la recinzione" width="1215" height="911" loading="lazy" class="author-carousel-img" />
+                </div>
+              </div>
+
+              <!-- Frecce di navigazione -->
+              <button type="button" class="author-carousel-arrow prev" id="author-carousel-prev" aria-label="Foto precedente">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button type="button" class="author-carousel-arrow next" id="author-carousel-next" aria-label="Foto successiva">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+
+            <!-- Indicatori dots -->
+            <div class="author-carousel-indicators" id="author-carousel-indicators" role="tablist" aria-label="Seleziona foto">
+              <button type="button" class="author-dot active" role="tab" aria-selected="true" aria-label="Foto 1 di 10" data-index="0"></button>
+              <button type="button" class="author-dot" role="tab" aria-selected="false" aria-label="Foto 2 di 10" data-index="1"></button>
+              <button type="button" class="author-dot" role="tab" aria-selected="false" aria-label="Foto 3 di 10" data-index="2"></button>
+              <button type="button" class="author-dot" role="tab" aria-selected="false" aria-label="Foto 4 di 10" data-index="3"></button>
+              <button type="button" class="author-dot" role="tab" aria-selected="false" aria-label="Foto 5 di 10" data-index="4"></button>
+              <button type="button" class="author-dot" role="tab" aria-selected="false" aria-label="Foto 6 di 10" data-index="5"></button>
+              <button type="button" class="author-dot" role="tab" aria-selected="false" aria-label="Foto 7 di 10" data-index="6"></button>
+              <button type="button" class="author-dot" role="tab" aria-selected="false" aria-label="Foto 8 di 10" data-index="7"></button>
+              <button type="button" class="author-dot" role="tab" aria-selected="false" aria-label="Foto 9 di 10" data-index="8"></button>
+              <button type="button" class="author-dot" role="tab" aria-selected="false" aria-label="Foto 10 di 10" data-index="9"></button>
+            </div>
           </div>
-          <p class="about-inspiration-text" id="about-inspiration-text">
+        </div>
+
+        <!-- Frase di Raccordo Editoriale -->
+        <div class="about-bridge-card">
+          <p class="about-bridge-text" id="about-inspiration-text">
             Una passione per camion, ruspe e cantieri ha fatto nascere un intero mondo di storie.
           </p>
         </div>
@@ -279,6 +346,27 @@
         <p class="about-bio-p" id="about-bio-p4">
           Attraverso i miei libri cerco di creare qualcosa che vada oltre la semplice lettura: momenti da condividere tra genitori e figli, fatti di gioco, emozione e scoperta.
         </p>
+
+        <!-- Nuova Sezione: Dalle macchine ai libri (Foto Lettura Condivisa) -->
+        <div class="about-reading-section" aria-label="Dalle macchine ai libri">
+          <h4 class="about-sub-heading" id="about-reading-title">Dalle macchine ai libri</h4>
+          <p class="about-section-subtitle" id="about-reading-subtitle">
+            Quelle passioni che hanno dato vita alle storie oggi possono diventare momenti da leggere e condividere insieme.
+          </p>
+          <div class="about-reading-grid">
+            <figure class="about-reading-figure">
+              <div class="about-reading-frame">
+                <img src="assets/author/foto.a.jpg" alt="Un bambino sfoglia con curiosità il libro illustrato di Bruno il camion" width="683" height="911" loading="lazy" class="about-reading-img" />
+              </div>
+            </figure>
+            <figure class="about-reading-figure">
+              <div class="about-reading-frame">
+                <img src="assets/author/foto.b.jpg" alt="Momento di lettura condivisa della storia tra genitore e figlio" width="683" height="911" loading="lazy" class="about-reading-img" />
+              </div>
+            </figure>
+          </div>
+        </div>
+
         <p class="about-bio-p" id="about-bio-p5">
           Vorrei contribuire a riportare la lettura al centro del tempo trascorso insieme, offrendo ai bambini storie capaci di farli sorridere, immaginare e imparare, lontano per qualche momento dai piccoli schermi.
         </p>

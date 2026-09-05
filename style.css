@@ -1474,7 +1474,220 @@ button {
   margin-bottom: 1.1rem;
 }
 
-/* Highlighted Inspiration Callout Card */
+/* Sub-headings for author page sections */
+.about-sub-heading {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--c-text-primary);
+  line-height: 1.3;
+  margin-bottom: 0.45rem;
+}
+
+.about-section-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--c-text-secondary);
+  margin: 0 0 1.5rem 0;
+}
+
+/* Origins Section & Carousel */
+.about-origins-section {
+  margin: 2.25rem 0 2rem 0;
+}
+
+.author-carousel {
+  position: relative;
+  margin: 1.25rem 0 2rem 0;
+  outline: none;
+}
+
+.author-carousel:focus-visible {
+  outline: 2px solid var(--c-primary);
+  outline-offset: 4px;
+  border-radius: 22px;
+}
+
+.author-carousel-stage {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background: linear-gradient(180deg, #FAF8F5 0%, #F3EFEA 100%);
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(21, 29, 42, 0.08);
+  box-shadow: 0 14px 34px rgba(21, 29, 42, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-carousel-track {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.author-carousel-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s ease;
+}
+
+.author-carousel-slide.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.author-carousel-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(21, 29, 42, 0.09);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Carousel Arrows */
+.author-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--c-text-primary);
+  border: 1px solid rgba(21, 29, 42, 0.08);
+  box-shadow: 0 4px 14px rgba(21, 29, 42, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.author-carousel-arrow:hover {
+  background: #FFFFFF;
+  color: var(--c-primary);
+  transform: translateY(-50%) scale(1.06);
+  box-shadow: 0 6px 18px rgba(21, 29, 42, 0.18);
+}
+
+.author-carousel-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.author-carousel-arrow.prev {
+  left: 14px;
+}
+
+.author-carousel-arrow.next {
+  right: 14px;
+}
+
+/* Dots Indicators */
+.author-carousel-indicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+
+.author-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: var(--radius-pill);
+  background: rgba(21, 29, 42, 0.2);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.author-dot:hover {
+  background: rgba(240, 90, 40, 0.6);
+}
+
+.author-dot.active {
+  background: var(--c-primary);
+  width: 26px;
+}
+
+/* Bridge Card (Frase di raccordo tra carosello e lettura) */
+.about-bridge-card {
+  background: linear-gradient(135deg, rgba(240, 90, 40, 0.06) 0%, rgba(255, 179, 0, 0.09) 100%);
+  border-left: 4px solid var(--c-primary);
+  border-radius: 14px;
+  padding: 1.15rem 1.4rem;
+  margin: 2.25rem 0 2rem 0;
+  box-shadow: 0 4px 16px rgba(240, 90, 40, 0.05);
+}
+
+.about-bridge-text {
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--c-text-primary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Reading Gallery Section: Foto a + Foto b */
+.about-reading-section {
+  margin: 2.5rem 0 2rem 0;
+}
+
+.about-reading-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.about-reading-figure {
+  margin: 0;
+}
+
+.about-reading-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #FAF8F5;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 12px 30px rgba(21, 29, 42, 0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.about-reading-frame:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(21, 29, 42, 0.12);
+}
+
+.about-reading-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Highlighted Inspiration Callout Card (Legacy & Utility) */
 .about-inspiration-card {
   background: linear-gradient(135deg, rgba(240, 90, 40, 0.08) 0%, rgba(255, 179, 0, 0.12) 100%);
   border-left: 5px solid var(--c-primary);
@@ -1844,6 +2057,58 @@ button {
     font-size: 0.98rem;
     line-height: 1.7;
     text-align: left;
+  }
+
+  .author-carousel-stage {
+    height: 380px;
+    border-radius: 18px;
+  }
+
+  .author-carousel-slide {
+    padding: 10px;
+  }
+
+  .author-carousel-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .author-carousel-arrow svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .author-carousel-arrow.prev {
+    left: 8px;
+  }
+
+  .author-carousel-arrow.next {
+    right: 8px;
+  }
+
+  .about-sub-heading {
+    font-size: 1.2rem;
+  }
+
+  .about-section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-bridge-card {
+    padding: 1rem 1.15rem;
+  }
+
+  .about-bridge-text {
+    font-size: 1.02rem;
+  }
+
+  .about-reading-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .about-inspiration-card {

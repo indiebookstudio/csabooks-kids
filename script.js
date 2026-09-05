@@ -876,8 +876,12 @@ const ABOUT_I18N = {
     "aboutBioP1": "Sono nato in Italia e oggi vivo in Trentino-Alto Adige, immerso tra montagne e natura che spesso alimentano la mia immaginazione.",
     "aboutBioP2": "Amo insegnare e trasmettere conoscenze, e penso che ogni storia possa diventare un piccolo ponte tra crescita, curiosità e divertimento.",
     "aboutBioP3": "La mia più grande ispirazione è mio figlio. È stata proprio la sua passione irrefrenabile per camion, ruspe, gru e cantieri a dare vita a Le Avventure del Cantiere, una collana pensata per tutti i bambini curiosi e per chi ama le grandi macchine protagoniste di storie semplici, divertenti e ricche di valori.",
+    "aboutOriginTitle": "Tutto è cominciato da qui",
+    "aboutOriginSubtitle": "Prima dei libri c'era una passione: camion, ruspe, gru e cantieri osservati con gli occhi pieni di curiosità.",
     "aboutInspirationText": "Una passione per camion, ruspe e cantieri ha fatto nascere un intero mondo di storie.",
     "aboutBioP4": "Attraverso i miei libri cerco di creare qualcosa che vada oltre la semplice lettura: momenti da condividere tra genitori e figli, fatti di gioco, emozione e scoperta.",
+    "aboutReadingTitle": "Dalle macchine ai libri",
+    "aboutReadingSubtitle": "Quelle passioni che hanno dato vita alle storie oggi possono diventare momenti da leggere e condividere insieme.",
     "aboutBioP5": "Vorrei contribuire a riportare la lettura al centro del tempo trascorso insieme, offrendo ai bambini storie capaci di farli sorridere, immaginare e imparare, lontano per qualche momento dai piccoli schermi.",
     "aboutClosingText": "Perché le storie più belle non sono solo quelle che i bambini leggono, ma quelle che genitori e figli vivono insieme.",
     "aboutCtaBtn": "Scopri i miei libri"
@@ -892,8 +896,12 @@ const ABOUT_I18N = {
     "aboutBioP1": "I was born in Italy and today I live in Trentino-Alto Adige, surrounded by mountains and nature that constantly spark my imagination.",
     "aboutBioP2": "I love teaching and sharing knowledge, and I believe every story can become a gentle bridge between growth, curiosity, and fun.",
     "aboutBioP3": "My greatest inspiration is my son. It was his unstoppable passion for trucks, excavators, cranes, and construction sites that brought Le Avventure del Cantiere (Construction Site Adventures) to life — a book series created for all curious children and anyone who loves big machines starring in simple, engaging stories filled with positive values.",
+    "aboutOriginTitle": "It all started here",
+    "aboutOriginSubtitle": "Before the books, there was a passion: trucks, excavators, cranes and construction sites watched with eyes full of curiosity.",
     "aboutInspirationText": "A passion for trucks, excavators and construction sites gave birth to an entire world of stories.",
     "aboutBioP4": "Through my books, I strive to create something that goes beyond reading: meaningful moments to share between parents and children, filled with play, emotion, and discovery.",
+    "aboutReadingTitle": "From machines to books",
+    "aboutReadingSubtitle": "Those passions that brought the stories to life can now become moments to read and share together.",
     "aboutBioP5": "I want to help bring shared reading back to the heart of family time, offering children stories that make them smile, wonder, and learn — away from screens, even just for a little while.",
     "aboutClosingText": "Because the best stories aren't just the ones children read, but the ones parents and children experience together.",
     "aboutCtaBtn": "Discover my books"
@@ -908,8 +916,12 @@ const ABOUT_I18N = {
     "aboutBioP1": "Ich bin in Italien geboren und lebe heute in Trentino-Südtirol, umgeben von Bergen und Natur, die meine Fantasie immer wieder beflügeln.",
     "aboutBioP2": "Ich liebe es zu unterrichten und Wissen weiterzugeben, und ich glaube daran, dass jede Geschichte zu einer kleinen Brücke zwischen Entwicklung, Neugier und Spaß werden kann.",
     "aboutBioP3": "Meine größte Inspiration ist mein Sohn. Seine unbändige Begeisterung für Lastwagen, Bagger, Kräne und Baustellen hat Le Avventure del Cantiere (Baustellenabenteuer) ins Leben gerufen – eine Buchreihe für neugierige Kinder und alle, die große Maschinen in einfachen, fröhlichen und werteorientierten Geschichten lieben.",
+    "aboutOriginTitle": "Hier hat alles begonnen",
+    "aboutOriginSubtitle": "Vor den Büchern gab es eine Leidenschaft: Lastwagen, Bagger, Kräne und Baustellen, betrachtet mit neugierigen Augen.",
     "aboutInspirationText": "Aus der Leidenschaft für Lastwagen, Bagger und Baustellen entstand eine ganze Welt voller Geschichten.",
     "aboutBioP4": "Mit meinen Büchern möchte ich etwas schaffen, das über das bloße Lesen hinausgeht: Momente der Nähe zwischen Eltern und Kindern, geprägt von Spiel, Emotionen und Entdeckerfreude.",
+    "aboutReadingTitle": "Von Maschinen zu Büchern",
+    "aboutReadingSubtitle": "Die Leidenschaften, die diese Geschichten zum Leben erweckt haben, können heute zu Momenten des gemeinsamen Lesens werden.",
     "aboutBioP5": "Ich möchte dazu beitragen, das gemeinsame Lesen wieder in den Mittelpunkt der Familienzeit zu rücken – mit Geschichten, die Kinder zum Lächeln, Träumen und Lernen anregen, für einen Moment fernab von kleinen Bildschirmen.",
     "aboutClosingText": "Denn die schönsten Geschichten sind nicht nur jene, die Kinder lesen, sondern die, die Eltern und Kinder gemeinsam erleben.",
     "aboutCtaBtn": "Entdecke meine Bücher"
@@ -924,8 +936,12 @@ const ABOUT_I18N = {
     "aboutBioP1": "Je suis né en Italie et je vis aujourd'hui dans le Trentin-Haut-Adige, au cœur de montagnes et d'une nature qui nourrissent souvent mon imagination.",
     "aboutBioP2": "J'aime enseigner et transmettre le savoir, et je crois que chaque histoire peut devenir une passerelle complice entre éveil, curiosité et amusement.",
     "aboutBioP3": "Ma plus grande inspiration est mon fils. C'est sa passion débordante pour les camions, les pelleteuses, les grues et les chantiers qui a donné naissance à Le Avventure del Cantiere (Les Aventures du Chantier), une collection conçue pour tous les petits curieux et les passionnés de grands engins à travers des récits simples, amusants et riches en valeurs.",
+    "aboutOriginTitle": "Tout a commencé ici",
+    "aboutOriginSubtitle": "Avant les livres, il y avait une passion : camions, pelleteuses, grues et chantiers observés avec des yeux pleins de curiosité.",
     "aboutInspirationText": "Une passion pour les camions, pelleteuses et chantiers a donné naissance à tout un univers d'histoires.",
     "aboutBioP4": "À travers mes livres, je cherche à créer quelque chose qui dépasse la simple lecture : des moments privilégiés à partager entre parents et enfants, faits de jeu, d'émotion et de découverte.",
+    "aboutReadingTitle": "Des machines aux livres",
+    "aboutReadingSubtitle": "Ces passions qui ont donné naissance aux histoires peuvent aujourd'hui devenir des moments à lire et à partager ensemble.",
     "aboutBioP5": "J'aimerais contribuer à replacer la lecture au cœur des moments passés ensemble, en offrant aux enfants des histoires qui les font sourire, imaginer et apprendre, loin des petits écrans le temps d'un instant.",
     "aboutClosingText": "Parce que les plus belles histoires ne sont pas seulement celles que les enfants lisent, mais celles que parents et enfants partagent ensemble.",
     "aboutCtaBtn": "Découvrir mes livres"
@@ -940,8 +956,12 @@ const ABOUT_I18N = {
     "aboutBioP1": "Nací en Italia y hoy vivo en Trentino-Alto Adigio, rodeado de montañas y naturaleza que a menudo despiertan mi imaginación.",
     "aboutBioP2": "Me encanta enseñar y compartir conocimientos, y creo firmemente que cada historia puede convertirse en un puente entre el crecimiento, la curiosidad y la diversión.",
     "aboutBioP3": "Mi mayor inspiración es mi hijo. Fue precisamente su pasión incontenible por los camiones, excavadoras, grúas y obras lo que dio vida a Le Avventure del Cantiere (Las Aventuras de la Construcción), una colección pensada para todos los niños curiosos y para quienes aman las grandes máquinas protagonistas de historias sencillas, divertidas y llenas de valores.",
+    "aboutOriginTitle": "Todo comenzó aquí",
+    "aboutOriginSubtitle": "Antes de los libros había una pasión: camiones, excavadoras, grúas y obras de construcción observados con ojos llenos de curiosidad.",
     "aboutInspirationText": "Una pasión por camiones, excavadoras y obras dio origen a todo un mundo de historias.",
     "aboutBioP4": "A través de mis libros intento crear algo que vaya más allá de la lectura: momentos entrañables para compartir entre padres e hijos, llenos de juego, emoción y descubrimiento.",
+    "aboutReadingTitle": "De las máquinas a los libros",
+    "aboutReadingSubtitle": "Aquellas pasiones que dieron vida a las historias hoy pueden convertirse en momentos para leer y compartir juntos.",
     "aboutBioP5": "Quiero contribuir a devolver la lectura al centro del tiempo en familia, ofreciendo a los pequeños historias capaces de hacerlos sonreír, imaginar y aprender, lejos de las pantallas al menos por un rato.",
     "aboutClosingText": "Porque las mejores historias no son solo las que los niños leen, sino las que padres e hijos viven juntos.",
     "aboutCtaBtn": "Descubre mis libros"
@@ -956,8 +976,12 @@ const ABOUT_I18N = {
     "aboutBioP1": "Ik ben geboren in Italië en woon tegenwoordig in Trentino-Zuid-Tirol, omgeven door bergen en natuur die mijn fantasie voortdurend voeden.",
     "aboutBioP2": "Ik hou van lesgeven en het delen van kennis, en ik geloof dat elk verhaal een waardevolle brug kan slaan tussen groei, nieuwsgierigheid en plezier.",
     "aboutBioP3": "Mijn grootste inspiratie is mijn zoon. Zijn grenzeloze passie voor vrachtwagens, graafmachines, kranen en bouwplaatsen bracht Le Avventure del Cantiere (Bouwplaatsavonturen) tot leven – een boekenreeks gemaakt voor nieuwsgierige kinderen en iedereen die houdt van grote machines in eenvoudige, vrolijke verhalen vol mooie waarden.",
+    "aboutOriginTitle": "Het begon allemaal hier",
+    "aboutOriginSubtitle": "Vóór de boeken was er een passie: vrachtwagens, graafmachines, kranen en bouwplaatsen bekeken met ogen vol nieuwsgierigheid.",
     "aboutInspirationText": "Een passie voor vrachtwagens, graafmachines en bouwplaatsen bracht een hele wereld vol verhalen tot leven.",
     "aboutBioP4": "Met mijn boeken wil ik iets creëren dat verder gaat dan alleen lezen: dierbare momenten om samen te delen tussen ouders en kinderen, vol spel, emotie en ontdekking.",
+    "aboutReadingTitle": "Van machines naar boeken",
+    "aboutReadingSubtitle": "Die passies die de verhalen tot leven brachten, kunnen nu momenten worden om samen te lezen en te delen.",
     "aboutBioP5": "Ik wil graag helpen om samen lezen weer centraal te stellen in de tijd die we als gezin doorbrengen, met verhalen die kinderen laten glimlachen, dromen en leren – even helemaal weg van beeldschermen.",
     "aboutClosingText": "Omdat de mooiste verhalen niet alleen de verhalen zijn die kinderen lezen, maar de verhalen die ouders en kinderen samen beleven.",
     "aboutCtaBtn": "Ontdek mijn boeken"
@@ -972,8 +996,12 @@ const ABOUT_I18N = {
     "aboutBioP1": "Urodziłem się we Włoszech, a dziś mieszkam w Trydencie-Górnej Adydze, w otoczeniu gór i przyrody, które nieustannie rozbudzają moją wyobraźnię.",
     "aboutBioP2": "Uwielbiam uczyć i dzielić się wiedzą, a także wierzę, że każda opowieść może stać się pomostem łączącym rozwój, ciekawość i dobrą zabawę.",
     "aboutBioP3": "Moją największą inspiracją jest mój syn. To właśnie jego niespożyta fascynacja ciężarówkami, koparkami, dźwigami i placami budowy dała początek serii Le Avventure del Cantiere (Przygody na placu budowy) – stworzonej dla wszystkich ciekawych świata dzieci oraz miłośników wielkich maszyn, pełnej prostych, wesołych i wartościowych historii.",
+    "aboutOriginTitle": "Wszystko zaczęło się tutaj",
+    "aboutOriginSubtitle": "Przed książkami była pasja: ciężarówki, koparki, dźwigi i place budowy obserwowane z ciekawością w oczach.",
     "aboutInspirationText": "Pasja do ciężarówek, koparek i placów budowy dała początek całemu światu opowieści.",
     "aboutBioP4": "Poprzez moje książki staram się tworzyć coś więcej niż samą lekturę: wyjątkowe chwile bliskości dla rodziców i dzieci, wypełnione wspólną zabawą, emocjami i odkrywaniem świata.",
+    "aboutReadingTitle": "Od maszyn do książek",
+    "aboutReadingSubtitle": "Te same pasje, które dały początek opowieściom, dziś stają się chwilami do wspólnego czytania i dzielenia się nimi.",
     "aboutBioP5": "Pragnę przywrócić wspólne czytanie do centrum rodzinnego czasu, oferując dzieciom historie, które wywołują uśmiech, rozwijają wyobraźnię i uczą – z dala od małych ekranów choć na chwilę.",
     "aboutClosingText": "Bo najpiękniejsze historie to nie tylko te, które dzieci czytają, ale te, które rodzice i dzieci przeżywają wspólnie.",
     "aboutCtaBtn": "Odkryj moje książki"
@@ -988,8 +1016,12 @@ const ABOUT_I18N = {
     "aboutBioP1": "Jag är född i Italien och bor idag i Trentino-Sydtyrolen, omgiven av berg och natur som ständigt ger näring åt min fantasi.",
     "aboutBioP2": "Jag har alltid älskat att undervisa och dela med mig av kunskap, och jag är övertygad om att varje berättelse kan bli en bro mellan utveckling, nyfikenhet och glädje.",
     "aboutBioP3": "Min största inspiration är min son. Det var hans outtröttliga intresse för lastbilar, grävmaskiner, lyftkranar och byggarbetsplatser som gav liv åt Le Avventure del Cantiere (Byggarbetsplatsens äventyr) – en bokserie skapad för alla nyfikna barn och alla som älskar stora maskiner i enkla, roliga och värdegrundade berättelser.",
+    "aboutOriginTitle": "Allt började här",
+    "aboutOriginSubtitle": "Före böckerna fanns en passion: lastbilar, grävmaskiner, lyftkranar och byggarbetsplatser betraktade med nyfikna ögon.",
     "aboutInspirationText": "En passion för lastbilar, grävmaskiner och byggarbetsplatser födde en hel värld av berättelser.",
     "aboutBioP4": "Genom mina böcker vill jag skapa något som sträcker sig bortom själva läsningen: meningsfulla stunder att dela mellan föräldrar och barn, fyllda av lek, känslor och upptäckarglädje.",
+    "aboutReadingTitle": "Från maskiner till böcker",
+    "aboutReadingSubtitle": "De passioner som väckte berättelserna till liv kan nu bli stunder att läsa och dela tillsammans.",
     "aboutBioP5": "Jag vill bidra till att sätta gemensam läsning i centrum för familjetiden, och erbjuda barn berättelser som får dem att le, fantisera och lära – en stund bortom alla små skärmar.",
     "aboutClosingText": "För de finaste berättelserna är inte bara de som barnen läser, utan de som föräldrar och barn upplever tillsammans.",
     "aboutCtaBtn": "Upptäck mina böcker"
@@ -1004,8 +1036,12 @@ const ABOUT_I18N = {
     "aboutBioP1": "私はイタリアで生まれ、現在は山々と豊かな自然に囲まれたトレンティーノ＝アルト・アディジェ州に暮らしています。この自然が、私の想像力の大きな源となっています。",
     "aboutBioP2": "私は人に教え、知識を分かち合うことが大好きです。一つひとつの物語が、成長と好奇心、そして楽しさを結ぶ小さな架け橋になると信じています。",
     "aboutBioP3": "私の何よりのインスピレーションは息子です。トラックやショベルカー、クレーン車、工事現場への息子のあふれる情熱から、『Le Avventure del Cantiere』（工事現場の冒険）シリーズが誕生しました。好奇心旺盛な子どもたちや、大きな働く車が大好きなすべての読者のために、シンプルで楽しく、大切な価値観が詰まった物語を届けています。",
+    "aboutOriginTitle": "すべてはここから始まりました",
+    "aboutOriginSubtitle": "本ができる前、そこには情熱がありました。トラック、ショベルカー、クレーン車、工事現場を好奇心いっぱいの目で見つめていました。",
     "aboutInspirationText": "トラックやショベルカー、工事現場への情熱から、物語の世界が誕生しました。",
     "aboutBioP4": "私の絵本を通じて、単なる読書にとどまらない、親子で共有できる特別なひととき――遊びや感動、新しい発見に満ちた時間――をお届けしたいと考えています。",
+    "aboutReadingTitle": "働く車から絵本へ",
+    "aboutReadingSubtitle": "物語を生み出したその情熱が、今では親子で一緒に読み、共有する温かい時間になっています。",
     "aboutBioP5": "小さな画面から少し離れて、子どもたちが笑顔になり、想像を膨らませ、学べる物語を届けることで、親子が寄り添う時間の中に読書のぬくもりを取り戻すお手伝いができれば幸いです。",
     "aboutClosingText": "最高の物語とは、子どもがひとりで読むものだけでなく、親と子が心を通わせて共に体験するものだからです。",
     "aboutCtaBtn": "私の本を見る"
@@ -1056,6 +1092,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileLanguageDropdown();
   initHeroCarousel();
   initReviewsSlider();
+  initAuthorCarousel();
   handleDirectBookDeepLink();
   initGlobalDropdownCloser();
   initSampleModalEvents();
@@ -1392,8 +1429,12 @@ function applyLanguage(lang) {
     setText('about-bio-p2', strings.aboutBioP2);
     setText('about-story-title', strings.aboutStoryTitle);
     setText('about-bio-p3', strings.aboutBioP3);
+    setText('about-origin-title', strings.aboutOriginTitle);
+    setText('about-origin-subtitle', strings.aboutOriginSubtitle);
     setText('about-inspiration-text', strings.aboutInspirationText);
     setText('about-bio-p4', strings.aboutBioP4);
+    setText('about-reading-title', strings.aboutReadingTitle);
+    setText('about-reading-subtitle', strings.aboutReadingSubtitle);
     setText('about-bio-p5', strings.aboutBioP5);
     setText('about-closing-text', strings.aboutClosingText);
     setText('about-cta-btn-text', strings.aboutCtaBtn);
@@ -2727,5 +2768,156 @@ function updateReviewsTranslations(lang) {
     });
   }
 }
+
+/* ==========================================================================
+   AUTHOR PAGE: ORIGINS CAROUSEL CONTROLLER
+   ========================================================================== */
+
+const authorCarouselState = {
+  currentIndex: 0,
+  totalSlides: 10,
+  timer: null,
+  resumeTimer: null,
+  intervalMs: 5000,
+  isPaused: false,
+  touchStartX: 0,
+  touchEndX: 0,
+  initialized: false
+};
+
+function initAuthorCarousel() {
+  const container = document.getElementById('author-carousel');
+  if (!container) return;
+
+  const slides = container.querySelectorAll('.author-carousel-slide');
+  const dots = container.querySelectorAll('.author-dot');
+  const prevBtn = document.getElementById('author-carousel-prev');
+  const nextBtn = document.getElementById('author-carousel-next');
+
+  if (!slides || slides.length === 0) return;
+  authorCarouselState.totalSlides = slides.length;
+
+  function showAuthorSlide(index) {
+    const total = authorCarouselState.totalSlides;
+    index = ((index % total) + total) % total;
+    authorCarouselState.currentIndex = index;
+
+    slides.forEach((slide, idx) => {
+      const isActive = (idx === index);
+      if (isActive) {
+        slide.classList.add('active');
+        slide.setAttribute('aria-hidden', 'false');
+      } else {
+        slide.classList.remove('active');
+        slide.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    dots.forEach((dot, idx) => {
+      const isActive = (idx === index);
+      if (isActive) {
+        dot.classList.add('active');
+        dot.setAttribute('aria-selected', 'true');
+      } else {
+        dot.classList.remove('active');
+        dot.setAttribute('aria-selected', 'false');
+      }
+    });
+
+    scheduleNextSlide();
+  }
+
+  function scheduleNextSlide() {
+    clearTimeout(authorCarouselState.timer);
+    if (authorCarouselState.isPaused || authorCarouselState.totalSlides <= 1) return;
+    authorCarouselState.timer = setTimeout(() => {
+      showAuthorSlide(authorCarouselState.currentIndex + 1);
+    }, authorCarouselState.intervalMs);
+  }
+
+  function pauseAndScheduleResume(delayMs = 6000) {
+    authorCarouselState.isPaused = true;
+    clearTimeout(authorCarouselState.timer);
+    clearTimeout(authorCarouselState.resumeTimer);
+    authorCarouselState.resumeTimer = setTimeout(() => {
+      authorCarouselState.isPaused = false;
+      scheduleNextSlide();
+    }, delayMs);
+  }
+
+  if (!authorCarouselState.initialized) {
+    authorCarouselState.initialized = true;
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        pauseAndScheduleResume();
+        showAuthorSlide(authorCarouselState.currentIndex - 1);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        pauseAndScheduleResume();
+        showAuthorSlide(authorCarouselState.currentIndex + 1);
+      });
+    }
+
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        pauseAndScheduleResume();
+        showAuthorSlide(idx);
+      });
+    });
+
+    // Pause on hover
+    container.addEventListener('mouseenter', () => {
+      authorCarouselState.isPaused = true;
+      clearTimeout(authorCarouselState.timer);
+    });
+
+    container.addEventListener('mouseleave', () => {
+      authorCarouselState.isPaused = false;
+      scheduleNextSlide();
+    });
+
+    // Accessible keyboard navigation
+    container.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        pauseAndScheduleResume();
+        showAuthorSlide(authorCarouselState.currentIndex - 1);
+      } else if (e.key === 'ArrowRight') {
+        pauseAndScheduleResume();
+        showAuthorSlide(authorCarouselState.currentIndex + 1);
+      }
+    });
+
+    // Touch swipe support for smartphone
+    container.addEventListener('touchstart', (e) => {
+      if (e.touches && e.touches[0]) {
+        authorCarouselState.touchStartX = e.touches[0].clientX;
+      }
+      authorCarouselState.isPaused = true;
+      clearTimeout(authorCarouselState.timer);
+    }, { passive: true });
+
+    container.addEventListener('touchend', (e) => {
+      if (e.changedTouches && e.changedTouches[0]) {
+        authorCarouselState.touchEndX = e.changedTouches[0].clientX;
+        const diff = authorCarouselState.touchStartX - authorCarouselState.touchEndX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) {
+            showAuthorSlide(authorCarouselState.currentIndex + 1);
+          } else {
+            showAuthorSlide(authorCarouselState.currentIndex - 1);
+          }
+        }
+      }
+      pauseAndScheduleResume(5000);
+    }, { passive: true });
+  }
+
+  showAuthorSlide(0);
+}
+
 
 
