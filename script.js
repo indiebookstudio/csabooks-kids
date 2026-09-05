@@ -31,8 +31,8 @@ const AMAZON_MARKETS = {
 const I18N = {
   it: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
-    heroSubtitle: "Grandi avventure per piccoli lettori",
-    heroBannerAlt: "CSA Books 4 Kids - Grandi avventure per piccoli lettori",
+    heroSubtitle: "Storie per bambini, nate da un papà e una mamma.",
+    heroBannerAlt: "CSA Books 4 Kids - Storie per bambini, nate da un papà e una mamma.",
     authorBy: "Di",
     readSampleBtn: "Leggi Estratto",
     sampleBadge: "Anteprima",
@@ -68,8 +68,8 @@ const I18N = {
   },
   en: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
-    heroSubtitle: "Big adventures for little readers",
-    heroBannerAlt: "CSA Books 4 Kids - Big adventures for little readers",
+    heroSubtitle: "Children's stories, made by a dad and a mom.",
+    heroBannerAlt: "CSA Books 4 Kids - Children's stories, made by a dad and a mom.",
     authorBy: "By",
     readSampleBtn: "Read Sample",
     sampleBadge: "Sample Preview",
@@ -104,8 +104,8 @@ const I18N = {
   },
   de: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
-    heroSubtitle: "Große Abenteuer für kleine Leser",
-    heroBannerAlt: "CSA Books 4 Kids - Große Abenteuer für kleine Leser",
+    heroSubtitle: "Kindergeschichten, von einem Papa und einer Mama.",
+    heroBannerAlt: "CSA Books 4 Kids - Kindergeschichten, von einem Papa und einer Mama.",
     authorBy: "Von",
     readSampleBtn: "Leseprobe",
     sampleBadge: "Vorschau",
@@ -140,8 +140,8 @@ const I18N = {
   },
   fr: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
-    heroSubtitle: "De grandes aventures pour les petits lecteurs",
-    heroBannerAlt: "CSA Books 4 Kids - De grandes aventures pour les petits lecteurs",
+    heroSubtitle: "Histoires pour enfants, créées par un papa et une maman.",
+    heroBannerAlt: "CSA Books 4 Kids - Histoires pour enfants, créées par un papa et une maman.",
     authorBy: "Par",
     readSampleBtn: "Lire un extrait",
     sampleBadge: "Aperçu",
@@ -176,8 +176,8 @@ const I18N = {
   },
   es: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
-    heroSubtitle: "Grandes aventuras para pequeños lectores",
-    heroBannerAlt: "CSA Books 4 Kids - Grandes aventuras para pequeños lectores",
+    heroSubtitle: "Cuentos infantiles, creados por un papá y una mamá.",
+    heroBannerAlt: "CSA Books 4 Kids - Cuentos infantiles, creados por un papá y una mamá.",
     authorBy: "Por",
     readSampleBtn: "Leer muestra",
     sampleBadge: "Vista previa",
@@ -212,8 +212,8 @@ const I18N = {
   },
   nl: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
-    heroSubtitle: "Grote avonturen voor kleine lezers",
-    heroBannerAlt: "CSA Books 4 Kids - Grote avonturen voor kleine lezers",
+    heroSubtitle: "Kinderverhalen, gemaakt door een papa en een mama.",
+    heroBannerAlt: "CSA Books 4 Kids - Kinderverhalen, gemaakt door een papa en een mama.",
     authorBy: "Door",
     readSampleBtn: "Inkijkexemplaar",
     sampleBadge: "Voorbeeld",
@@ -248,8 +248,8 @@ const I18N = {
   },
   pl: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
-    heroSubtitle: "Wielkie przygody dla małych czytelników",
-    heroBannerAlt: "CSA Books 4 Kids - Wielkie przygody dla małych czytelników",
+    heroSubtitle: "Opowieści dla dzieci, stworzone przez tatę i mamę.",
+    heroBannerAlt: "CSA Books 4 Kids - Opowieści dla dzieci, stworzone przez tatę i mamę.",
     authorBy: "Autor",
     readSampleBtn: "Darmowy fragment",
     sampleBadge: "Podgląd",
@@ -284,8 +284,8 @@ const I18N = {
   },
   sv: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
-    heroSubtitle: "Stora äventyr för små läsare",
-    heroBannerAlt: "CSA Books 4 Kids - Stora äventyr för små läsare",
+    heroSubtitle: "Barnberättelser, skapade av en pappa och en mamma.",
+    heroBannerAlt: "CSA Books 4 Kids - Barnberättelser, skapade av en pappa och en mamma.",
     authorBy: "Av",
     readSampleBtn: "Läs ett smakprov",
     sampleBadge: "Förhandsvisning",
@@ -320,8 +320,8 @@ const I18N = {
   },
   ja: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
-    heroSubtitle: "小さな読者のための大冒険",
-    heroBannerAlt: "CSA Books 4 Kids - 小さな読者のための大冒険",
+    heroSubtitle: "パパとママが作った、子どもたちのための物語。",
+    heroBannerAlt: "CSA Books 4 Kids - パパとママが作った、子どもたちのための物語。",
     authorBy: "作",
     readSampleBtn: "無料サンプル",
     sampleBadge: "プレビュー",
@@ -1359,8 +1359,7 @@ function applyLanguage(lang) {
   setText('filter-text-en', strings.filterEn);
   updateBookFilterButtons();
 
-  // Footer & Brand Intro
-  setText('home-brand-tagline', strings.footerAbout);
+  // Footer
   setText('footer-about-text', strings.footerAbout);
   setText('footer-copyright-text', strings.copyright);
 
@@ -2070,7 +2069,7 @@ function getBannerAlt(item, lang) {
   const strings = I18N[lang] || I18N.it;
   const key = (item && item.characterKey) ? item.characterKey : '';
   if (key === 'banner') {
-    return strings.heroBannerAlt || 'CSA Books 4 Kids - Grandi avventure per piccoli lettori';
+    return strings.heroBannerAlt || 'CSA Books 4 Kids - Storie per bambini, nate da un papà e una mamma.';
   }
   if (key === 'benny') {
     return strings.charBennyAlt ? `${strings.charBennyAlt} - CSA Books 4 Kids` : 'Benny - CSA Books 4 Kids';
