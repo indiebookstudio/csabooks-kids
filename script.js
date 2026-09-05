@@ -47,8 +47,9 @@ const I18N = {
     footerAbout: "Storie per bambini, nate da un papà e una mamma.",
     copyright: "© 2026 CSA Books 4 Kids. Tutti i diritti riservati."
     ,
-    navBooks: "I libri",
-    navCharacters: "I personaggi",
+    navBooks: "Storie",
+    navColoring: "Libri da colorare",
+    navCharacters: "Personaggi",
     navAbout: "La nostra storia",
     aboutPageTitle: "La storia dietro CSA Books 4 Kids",
     aboutMetaTitle: "La nostra storia | CSA Books 4 Kids",
@@ -56,7 +57,7 @@ const I18N = {
     aboutBadge: "L'Autore",
     aboutAuthorRole: "Autore e creatore di CSA Books 4 Kids",
     aboutStoryTitle: "L'ispirazione: un'avventura di famiglia",
-    aboutBioP1: "Sono nato in Italia e oggi vivo in Trentino-Alto Adige, immerso tra montagne e natura che spesso alimentano la mia immaginazione.",
+    aboutBioP1: "Sono nato a Fano, nelle Marche, e oggi vivo in Trentino-Alto Adige, immerso tra montagne e natura che spesso alimentano la mia immaginazione.",
     aboutBioP2: "Amo insegnare e trasmettere conoscenze, e penso che ogni storia possa diventare un piccolo ponte tra crescita, curiosità e divertimento.",
     aboutBioP3: "La mia più grande ispirazione è mio figlio. È stata proprio la sua passione irrefrenabile per camion, ruspe, gru e cantieri a dare vita a Le Avventure del Cantiere, una collana pensata per tutti i bambini curiosi e per chi ama le grandi macchine protagoniste di storie semplici, divertenti e ricche di valori.",
     aboutBioFamily: "I libri sono scritti da me, ma ogni storia nasce e prende forma insieme alla mamma di nostro figlio: un lavoro a quattro mani per trovare le parole giuste, il ritmo perfetto e quel calore che rende speciale la lettura prima della nanna.",
@@ -84,7 +85,8 @@ const I18N = {
     footerAbout: "Children's stories, made by a dad and a mom.",
     copyright: "© 2026 CSA Books 4 Kids. All rights reserved."
     ,
-    navBooks: "Books",
+    navBooks: "Stories",
+    navColoring: "Coloring Books",
     navAbout: "Our Story",
     aboutPageTitle: "The Story Behind CSA Books 4 Kids",
     aboutMetaTitle: "Our Story | CSA Books 4 Kids",
@@ -92,7 +94,7 @@ const I18N = {
     aboutBadge: "About the Creator",
     aboutAuthorRole: "Author & Creator of CSA Books 4 Kids",
     aboutStoryTitle: "The Inspiration: A Family Adventure",
-    aboutBioP1: "I was born in Italy and today I live in Trentino-Alto Adige, surrounded by mountains and nature that constantly spark my imagination.",
+    aboutBioP1: "I was born in Fano, in the Marche region of Italy, and today I live in Trentino-Alto Adige, surrounded by mountains and nature that constantly spark my imagination.",
     aboutBioP2: "I love teaching and sharing knowledge, and I believe every story can become a gentle bridge between growth, curiosity, and fun.",
     aboutBioP3: "My greatest inspiration is my son. It was his unstoppable passion for trucks, excavators, cranes, and construction sites that brought Le Avventure del Cantiere (Construction Site Adventures) to life — a book series created for all curious children and anyone who loves big machines starring in simple, engaging stories filled with positive values.",
     aboutBioFamily: "The books are written by me, but every story takes shape together with our child's mom: a joint effort to find the right words, the perfect rhythm, and that warmth that makes bedtime reading special.",
@@ -120,7 +122,8 @@ const I18N = {
     footerAbout: "Kindergeschichten, von einem Papa und einer Mama.",
     copyright: "© 2026 CSA Books 4 Kids. Alle Rechte vorbehalten."
     ,
-    navBooks: "Bücher",
+    navBooks: "Geschichten",
+    navColoring: "Malbücher",
     navAbout: "Unsere Geschichte",
     aboutPageTitle: "Die Geschichte hinter CSA Books 4 Kids",
     aboutMetaTitle: "Unsere Geschichte | CSA Books 4 Kids",
@@ -128,7 +131,7 @@ const I18N = {
     aboutBadge: "Der Autor",
     aboutAuthorRole: "Autor und Gründer von CSA Books 4 Kids",
     aboutStoryTitle: "Die Inspiration: Ein Familienabenteuer",
-    aboutBioP1: "Ich bin in Italien geboren und lebe heute in Trentino-Südtirol, umgeben von Bergen und Natur, die meine Fantasie immer wieder beflügeln.",
+    aboutBioP1: "Ich bin in Fano in den Marken geboren und lebe heute in Trentino-Südtirol, umgeben von Bergen und Natur, die meine Fantasie immer wieder beflügeln.",
     aboutBioP2: "Ich liebe es zu unterrichten und Wissen weiterzugeben, und ich glaube daran, dass jede Geschichte zu einer kleinen Brücke zwischen Entwicklung, Neugier und Spaß werden kann.",
     aboutBioP3: "Meine größte Inspiration ist mein Sohn. Seine unbändige Begeisterung für Lastwagen, Bagger, Kräne und Baustellen hat Le Avventure del Cantiere (Baustellenabenteuer) ins Leben gerufen – eine Buchreihe für neugierige Kinder und alle, die große Maschinen in einfachen, fröhlichen und werteorientierten Geschichten lieben.",
     aboutBioFamily: "Die Bücher werden von mir geschrieben, doch jede Geschichte entsteht gemeinsam mit der Mutter unseres Sohnes: eine liebevolle Zusammenarbeit, um die richtigen Worte, den perfekten Rhythmus und jene Wärme zu finden, die das Vorlesen vor dem Einschlafen so besonders macht.",
@@ -156,7 +159,8 @@ const I18N = {
     footerAbout: "Histoires pour enfants, créées par un papa et une maman.",
     copyright: "© 2026 CSA Books 4 Kids. Tous droits réservés."
     ,
-    navBooks: "Livres",
+    navBooks: "Histoires",
+    navColoring: "Livres de coloriage",
     navAbout: "Notre histoire",
     aboutPageTitle: "L'histoire derrière CSA Books 4 Kids",
     aboutMetaTitle: "Notre histoire | CSA Books 4 Kids",
@@ -164,7 +168,7 @@ const I18N = {
     aboutBadge: "L'Auteur",
     aboutAuthorRole: "Auteur et créateur de CSA Books 4 Kids",
     aboutStoryTitle: "L'inspiration : une aventure de famille",
-    aboutBioP1: "Je suis né en Italie et je vis aujourd'hui dans le Trentin-Haut-Adige, entouré par la nature et les montagnes, sources de mon inspiration.",
+    aboutBioP1: "Je suis né à Fano, dans les Marches, et je vis aujourd'hui dans le Trentin-Haut-Adige, entouré par la nature et les montagnes, sources de mon inspiration.",
     aboutBioP2: "J'ai toujours aimé transmettre le savoir, convaincu qu'une histoire peut devenir un pont précieux entre éveil, curiosité et amusement.",
     aboutBioP3: "Ma plus grande inspiration est mon fils. C'est sa passion débordante pour les camions, pelleteuses et chantiers qui a donné vie à la collection 'Le Avventure del Cantiere' pour les petits curieux.",
     aboutBioFamily: "Les livres sont écrits par moi, mais chaque histoire prend vie aux côtés de la maman de notre enfant : un travail à quatre mains pour trouver les mots justes, le rythme parfait et cette chaleur qui rend la lecture du soir si précieuse.",
@@ -192,7 +196,8 @@ const I18N = {
     footerAbout: "Cuentos infantiles, creados por un papá y una mamá.",
     copyright: "© 2026 CSA Books 4 Kids. Todos los derechos reservados."
     ,
-    navBooks: "Libros",
+    navBooks: "Cuentos",
+    navColoring: "Libros para colorear",
     navAbout: "Nuestra historia",
     aboutPageTitle: "La historia detrás de CSA Books 4 Kids",
     aboutMetaTitle: "Nuestra historia | CSA Books 4 Kids",
@@ -200,7 +205,7 @@ const I18N = {
     aboutBadge: "El Autor",
     aboutAuthorRole: "Autor y creador de CSA Books 4 Kids",
     aboutStoryTitle: "La inspiración: una aventura familiar",
-    aboutBioP1: "Nací en Italia y hoy vivo en Trentino-Alto Adigio, rodeado de montañas y naturaleza que alimentan mi imaginación.",
+    aboutBioP1: "Nací en Fano, en las Marcas (Italia), y hoy vivo en Trentino-Alto Adigio, rodeado de montañas y naturaleza que alimentan mi imaginación.",
     aboutBioP2: "Siempre me ha apasionado enseñar y transmitir conocimientos, convencido de que un cuento es un puente entre el crecimiento, la curiosidad y la diversión.",
     aboutBioP3: "Mi mayor inspiración es mi hijo. Su fascinación por los camiones, excavadoras y grúas inspiró 'Le Avventure del Cantiere' para pequeños lectores curiosos.",
     aboutBioFamily: "Los libros están escritos por mí, pero cada historia cobra vida junto con la madre de nuestro hijo: un trabajo conjunto para encontrar las palabras adecuadas, el ritmo perfecto y esa calidez que hace tan especial la lectura antes de dormir.",
@@ -228,7 +233,8 @@ const I18N = {
     footerAbout: "Kinderverhalen, gemaakt door een papa en een mama.",
     copyright: "© 2026 CSA Books 4 Kids. Alle rechten voorbehouden."
     ,
-    navBooks: "Boeken",
+    navBooks: "Verhalen",
+    navColoring: "Kleurboeken",
     navAbout: "Ons verhaal",
     aboutPageTitle: "Het verhaal achter CSA Books 4 Kids",
     aboutMetaTitle: "Ons verhaal | CSA Books 4 Kids",
@@ -236,7 +242,7 @@ const I18N = {
     aboutBadge: "De Auteur",
     aboutAuthorRole: "Auteur en bedenker van CSA Books 4 Kids",
     aboutStoryTitle: "De inspiratie: een familie-avontuur",
-    aboutBioP1: "Ik ben geboren in Italië en woon tegenwoordig in Trentino-Zuid-Tirol, omgeven door bergen en natuur die mijn fantasie voortdurend voeden.",
+    aboutBioP1: "Ik ben geboren in Fano, in de regio Marche, en woon tegenwoordig in Trentino-Zuid-Tirol, omgeven door bergen en natuur die mijn fantasie voortdurend voeden.",
     aboutBioP2: "Ik hou van lesgeven en het delen van kennis, en ik geloof dat elk verhaal een waardevolle brug kan slaan tussen groei, nieuwsgierigheid en plezier.",
     aboutBioP3: "Mijn grootste inspiratie is mijn zoon. Zijn grenzeloze passie voor vrachtwagens, graafmachines, kranen en bouwplaatsen bracht Le Avventure del Cantiere (Bouwplaatsavonturen) tot leven – een boekenreeks gemaakt voor nieuwsgierige kinderen en iedereen die houdt van grote machines in eenvoudige, vrolijke verhalen vol mooie waarden.",
     aboutBioFamily: "De boeken zijn door mij geschreven, maar elk verhaal krijgt vorm samen met de moeder van ons kind: een gezamenlijke zoektocht naar de juiste woorden, het perfecte ritme en die warmte die voorlezen voor het slapengaan zo bijzonder maakt.",
@@ -264,7 +270,8 @@ const I18N = {
     footerAbout: "Opowieści dla dzieci, stworzone przez tatę i mamę.",
     copyright: "© 2026 CSA Books 4 Kids. Wszelkie prawa zastrzeżone."
     ,
-    navBooks: "Książki",
+    navBooks: "Opowieści",
+    navColoring: "Kolorowanki",
     navAbout: "Nasza historia",
     aboutPageTitle: "Historia stojąca za CSA Books 4 Kids",
     aboutMetaTitle: "Nasza historia | CSA Books 4 Kids",
@@ -272,7 +279,7 @@ const I18N = {
     aboutBadge: "Autor",
     aboutAuthorRole: "Autor i twórca CSA Books 4 Kids",
     aboutStoryTitle: "Inspiracja: rodzinna przygoda",
-    aboutBioP1: "Urodziłem się we Włoszech, a dziś mieszkam w Trydencie-Górnej Adydze, w otoczeniu gór i przyrody, które nieustannie rozbudzają moją wyobraźnię.",
+    aboutBioP1: "Urodziłem się w Fano w regionie Marche, a dziś mieszkam w Trydencie-Górnej Adydze, w otoczeniu gór i przyrody, które nieustannie rozbudzają moją wyobraźnię.",
     aboutBioP2: "Uwielbiam uczyć i dzielić się wiedzą, a także wierzę, że każda opowieść może stać się pomostem łączącym rozwój, ciekawość i dobrą zabawę.",
     aboutBioP3: "Moją największą inspiracją jest mój syn. To właśnie jego niespożyta fascynacja ciężarówkami, koparkami, dźwigami i placami budowy dała początek serii Le Avventure del Cantiere (Przygody na placu budowy) – stworzonej dla wszystkich ciekawych świata dzieci oraz miłośników wielkich maszyn, pełnej prostych, wesołych i wartościowych historii.",
     aboutBioFamily: "Książki piszę ja, ale każda historia rodzi się i nabiera kształtu razem z mamą naszego synka: to wspólna praca, by znaleźć właściwe słowa, idealny rytm i ciepło, które czyni wieczorne czytanie tak wyjątkowym.",
@@ -300,7 +307,8 @@ const I18N = {
     footerAbout: "Barnberättelser, skapade av en pappa och en mamma.",
     copyright: "© 2026 CSA Books 4 Kids. Alla rättigheter förbehållna."
     ,
-    navBooks: "Böcker",
+    navBooks: "Berättelser",
+    navColoring: "Målarböcker",
     navAbout: "Vår historia",
     aboutPageTitle: "Historien bakom CSA Books 4 Kids",
     aboutMetaTitle: "Vår historia | CSA Books 4 Kids",
@@ -308,7 +316,7 @@ const I18N = {
     aboutBadge: "Författaren",
     aboutAuthorRole: "Författare och skapare av CSA Books 4 Kids",
     aboutStoryTitle: "Inspirationen: ett familjeäventyr",
-    aboutBioP1: "Jag är född i Italien och bor idag i Trentino-Sydtyrolen, omgiven av berg och natur som ständigt ger näring åt min fantasi.",
+    aboutBioP1: "Jag är född i Fano i Marche och bor idag i Trentino-Sydtyrolen, omgiven av berg och natur som ständigt ger näring åt min fantasi.",
     aboutBioP2: "Jag har alltid älskat att undervisa och dela med mig av kunskap, och jag är övertygad om att varje berättelse kan bli en bro mellan utveckling, nyfikenhet och glädje.",
     aboutBioP3: "Min största inspiration är min son. Det var hans outtröttliga intresse för lastbilar, grävmaskiner, lyftkranar och byggarbetsplatser som gav liv åt Le Avventure del Cantiere (Byggarbetsplatsens äventyr) – en bokserie skapad för alla nyfikna barn och alla som älskar stora maskiner i enkla, roliga och värdegrundade berättelser.",
     aboutBioFamily: "Böckerna är skrivna av mig, men varje berättelse växer fram tillsammans med vårt barns mamma: ett gemensamt arbete för att hitta de rätta orden, den perfekta rytmen och den värme som gör godnattsagan så speciell.",
@@ -336,7 +344,8 @@ const I18N = {
     footerAbout: "パパとママが作った、子どもたちのための物語。",
     copyright: "© 2026 CSA Books 4 Kids. 無断転載を禁じます。"
     ,
-    navBooks: "本",
+    navBooks: "お話",
+    navColoring: "ぬりえ絵本",
     navAbout: "私たちの物語",
     aboutPageTitle: "CSA Books 4 Kids の誕生秘話",
     aboutMetaTitle: "私たちの物語 | CSA Books 4 Kids",
@@ -344,7 +353,7 @@ const I18N = {
     aboutBadge: "著者紹介",
     aboutAuthorRole: "CSA Books 4 Kids 著者・クリエイター",
     aboutStoryTitle: "インスピレーション：家族の冒険",
-    aboutBioP1: "私はイタリアで生まれ、現在は山々と豊かな自然に囲まれたトレンティーノ＝アルト・アディジェ州に暮らしています。この自然が、私の想像力の大きな源となっています。",
+    aboutBioP1: "私はイタリア・マルケ州のファーノで生まれ、現在は山々と豊かな自然に囲まれたトレンティーノ＝アルト・アディジェ州に暮らしています。この自然が、私の想像力の大きな源となっています。",
     aboutBioP2: "私は人に教え、知識を分かち合うことが大好きです。一つひとつの物語が、成長と好奇心、そして楽しさを結ぶ小さな架け橋になると信じています。",
     aboutBioP3: "私の何よりのインスピレーションは息子です。トラックやショベルカー、クレーン車、工事現場への息子のあふれる情熱から、『Le Avventure del Cantiere』（工事現場の冒険）シリーズが誕生しました。好奇心旺盛な子どもたちや、大きな働く車が大好きなすべての読者のために、シンプルで楽しく、大切な価値観が詰まった物語を届けています。",
     aboutBioFamily: "本は私が執筆していますが、すべての物語は息子の母親と一緒に形作られています。ぴったりの言葉、心地よいリズム、そしておやすみ前の読み聞かせを特別にする温もりを見つけるための、二人三脚の創作です。",
@@ -361,7 +370,7 @@ const I18N = {
 // ============================================================================
 const CHARACTERS_I18N = {
   "it": {
-    "navCharacters": "I personaggi",
+    "navCharacters": "Personaggi",
     "charactersPageTitle": "Un mondo di scoperte, amicizia e grandi macchine",
     "charactersMetaTitle": "I personaggi | Le Avventure del Cantiere - CSA Books 4 Kids",
     "charactersMetaDesc": "Scopri i protagonisti della collana Le Avventure del Cantiere: Benny l'escavatore, Bruno il camion, Leo la gru, Nina la betoniera, Rino il rullo e Rudy la ruspa.",
@@ -455,7 +464,7 @@ const CHARACTERS_I18N = {
     "charactersCtaBtn": "Explore the Books"
   },
   "de": {
-    "navCharacters": "Die Figuren",
+    "navCharacters": "Figuren",
     "charactersPageTitle": "Eine Welt voller Entdeckungen, Freundschaft und großer Maschinen",
     "charactersMetaTitle": "Die Figuren | Baustellen-Abenteuer - CSA Books 4 Kids",
     "charactersMetaDesc": "Lerne die sympathischen Helden der Baustellen-Abenteuer kennen: Benny den Bagger, Bruno den Kipper, Leo den Kran, Nina die Betonmischerin, Rino die Walze und Rudy die Planierraupe.",
@@ -502,7 +511,7 @@ const CHARACTERS_I18N = {
     "charactersCtaBtn": "Bücher der Reihe entdecken"
   },
   "fr": {
-    "navCharacters": "Les Personnages",
+    "navCharacters": "Personnages",
     "charactersPageTitle": "Un monde de découvertes, d'amitié et de grands engins",
     "charactersMetaTitle": "Les Personnages | Les Aventures du Chantier - CSA Books 4 Kids",
     "charactersMetaDesc": "Découvrez les héros des Aventures du Chantier : Benny la pelleteuse, Bruno le camion, Léo la grue, Nina la bétonnière, Rino le rouleau et Rudy le bulldozer.",
@@ -549,7 +558,7 @@ const CHARACTERS_I18N = {
     "charRudyAlt": "Rudy le bulldozer"
   },
   "es": {
-    "navCharacters": "Los Personajes",
+    "navCharacters": "Personajes",
     "charactersPageTitle": "Un mundo de descubrimientos, amistad y grandes máquinas",
     "charactersMetaTitle": "Los Personajes | Las Aventuras de la Construcción - CSA Books 4 Kids",
     "charactersMetaDesc": "Descubre a los entrañables protagonistas de Las Aventuras de la Construcción: Benny la excavadora, Bruno el camión, Leo la grúa, Nina la hormigonera, Rino el rodillo y Rudy el buldócer.",
@@ -596,7 +605,7 @@ const CHARACTERS_I18N = {
     "charRudyAlt": "Rudy el buldócer"
   },
   "nl": {
-    "navCharacters": "De Personages",
+    "navCharacters": "Personages",
     "charactersPageTitle": "Een wereld vol ontdekkingen, vriendschap en grote machines",
     "charactersMetaTitle": "De Personages | Bouwplaats Avonturen - CSA Books 4 Kids",
     "charactersMetaDesc": "Maak kennis met de helden van Bouwplaats Avonturen: Benny de graafmachine, Bruno de kiepauto, Leo de kraan, Nina de betonmolen, Rino de wals en Rudy de bulldozer.",
@@ -690,7 +699,7 @@ const CHARACTERS_I18N = {
     "charactersCtaBtn": "Odkryj książki z serii"
   },
   "sv": {
-    "navCharacters": "Karaktärerna",
+    "navCharacters": "Karaktärer",
     "charactersPageTitle": "En värld av upptäckter, vänskap och stora maskiner",
     "charactersMetaTitle": "Karaktärerna | Byggarbetsplatsens Äventyr - CSA Books 4 Kids",
     "charactersMetaDesc": "Möt de charmiga hjältarna i Byggarbetsplatsens Äventyr: grävmaskinen Benny, tippbilen Bruno, kranbilen Leo, betongbilen Nina, välten Rino och schaktmaskinen Rudy.",
@@ -893,7 +902,7 @@ const ABOUT_I18N = {
     "aboutBadge": "L'Autore",
     "aboutAuthorRole": "Autore e creatore di CSA Books 4 Kids",
     "aboutStoryTitle": "L'ispirazione: un'avventura di famiglia",
-    "aboutBioP1": "Sono nato in Italia e oggi vivo in Trentino-Alto Adige, immerso tra montagne e natura che spesso alimentano la mia immaginazione.",
+    "aboutBioP1": "Sono nato a Fano, nelle Marche, e oggi vivo in Trentino-Alto Adige, immerso tra montagne e natura che spesso alimentano la mia immaginazione.",
     "aboutBioP2": "Amo insegnare e trasmettere conoscenze, e penso che ogni storia possa diventare un piccolo ponte tra crescita, curiosità e divertimento.",
     "aboutBioP3": "La mia più grande ispirazione è mio figlio. È stata proprio la sua passione irrefrenabile per camion, ruspe, gru e cantieri a dare vita a Le Avventure del Cantiere, una collana pensata per tutti i bambini curiosi e per chi ama le grandi macchine protagoniste di storie semplici, divertenti e ricche di valori.",
     "aboutBioFamily": "I libri sono scritti da me, ma ogni storia nasce e prende forma insieme alla mamma di nostro figlio: un lavoro a quattro mani per trovare le parole giuste, il ritmo perfetto e quel calore che rende speciale la lettura prima della nanna.",
@@ -915,7 +924,7 @@ const ABOUT_I18N = {
     "aboutBadge": "About the Creator",
     "aboutAuthorRole": "Author & Creator of CSA Books 4 Kids",
     "aboutStoryTitle": "The Inspiration: A Family Adventure",
-    "aboutBioP1": "I was born in Italy and today I live in Trentino-Alto Adige, surrounded by mountains and nature that constantly spark my imagination.",
+    "aboutBioP1": "I was born in Fano, in the Marche region of Italy, and today I live in Trentino-Alto Adige, surrounded by mountains and nature that constantly spark my imagination.",
     "aboutBioP2": "I love teaching and sharing knowledge, and I believe every story can become a gentle bridge between growth, curiosity, and fun.",
     "aboutBioP3": "My greatest inspiration is my son. It was his unstoppable passion for trucks, excavators, cranes, and construction sites that brought Le Avventure del Cantiere (Construction Site Adventures) to life — a book series created for all curious children and anyone who loves big machines starring in simple, engaging stories filled with positive values.",
     "aboutBioFamily": "The books are written by me, but every story takes shape together with our child's mom: a joint effort to find the right words, the perfect rhythm, and that warmth that makes bedtime reading special.",
@@ -937,7 +946,7 @@ const ABOUT_I18N = {
     "aboutBadge": "Über den Autor",
     "aboutAuthorRole": "Autor & Gründer von CSA Books 4 Kids",
     "aboutStoryTitle": "Die Inspiration: Ein Familienabenteuer",
-    "aboutBioP1": "Ich bin in Italien geboren und lebe heute in Trentino-Südtirol, umgeben von Bergen und Natur, die meine Fantasie immer wieder beflügeln.",
+    "aboutBioP1": "Ich bin in Fano in den Marken geboren und lebe heute in Trentino-Südtirol, umgeben von Bergen und Natur, die meine Fantasie immer wieder beflügeln.",
     "aboutBioP2": "Ich liebe es zu unterrichten und Wissen weiterzugeben, und ich glaube daran, dass jede Geschichte zu einer kleinen Brücke zwischen Entwicklung, Neugier und Spaß werden kann.",
     "aboutBioP3": "Meine größte Inspiration ist mein Sohn. Seine unbändige Begeisterung für Lastwagen, Bagger, Kräne und Baustellen hat Le Avventure del Cantiere (Baustellenabenteuer) ins Leben gerufen – eine Buchreihe für neugierige Kinder und alle, die große Maschinen in einfachen, fröhlichen und werteorientierten Geschichten lieben.",
     "aboutBioFamily": "Die Bücher werden von mir geschrieben, doch jede Geschichte entsteht gemeinsam mit der Mutter unseres Sohnes: eine liebevolle Zusammenarbeit, um die richtigen Worte, den perfekten Rhythmus und jene Wärme zu finden, die das Vorlesen vor dem Einschlafen so besonders macht.",
@@ -959,7 +968,7 @@ const ABOUT_I18N = {
     "aboutBadge": "L'Auteur",
     "aboutAuthorRole": "Auteur & créateur de CSA Books 4 Kids",
     "aboutStoryTitle": "L'inspiration : une aventure de famille",
-    "aboutBioP1": "Je suis né en Italie et je vis aujourd'hui dans le Trentin-Haut-Adige, au cœur de montagnes et d'une nature qui nourrissent souvent mon imagination.",
+    "aboutBioP1": "Je suis né à Fano, dans les Marches, et je vis aujourd'hui dans le Trentin-Haut-Adige, au cœur de montagnes et d'une nature qui nourrissent souvent mon imagination.",
     "aboutBioP2": "J'aime enseigner et transmettre le savoir, et je crois que chaque histoire peut devenir une passerelle complice entre éveil, curiosité et amusement.",
     "aboutBioP3": "Ma plus grande inspiration est mon fils. C'est sa passion débordante pour les camions, les pelleteuses, les grues et les chantiers qui a donné naissance à Le Avventure del Cantiere (Les Aventures du Chantier), une collection conçue pour tous les petits curieux et les passionnés de grands engins à travers des récits simples, amusants et riches en valeurs.",
     "aboutBioFamily": "Les livres sont écrits par moi, mais chaque histoire prend vie aux côtés de la maman de notre enfant : un travail à quatre mains pour trouver les mots justes, le rythme parfait et cette chaleur qui rend la lecture du soir si précieuse.",
@@ -981,7 +990,7 @@ const ABOUT_I18N = {
     "aboutBadge": "El Autor",
     "aboutAuthorRole": "Autor y creador de CSA Books 4 Kids",
     "aboutStoryTitle": "La inspiración: una aventura familiar",
-    "aboutBioP1": "Nací en Italia y hoy vivo en Trentino-Alto Adigio, rodeado de montañas y naturaleza que a menudo despiertan mi imaginación.",
+    "aboutBioP1": "Nací en Fano, en las Marcas (Italia), y hoy vivo en Trentino-Alto Adigio, rodeado de montañas y naturaleza que a menudo despiertan mi imaginación.",
     "aboutBioP2": "Me encanta enseñar y compartir conocimientos, y creo firmemente que cada historia puede convertirse en un puente entre el crecimiento, la curiosidad y la diversión.",
     "aboutBioP3": "Mi mayor inspiración es mi hijo. Fue precisamente su pasión incontenible por los camiones, excavadoras, grúas y obras lo que dio vida a Le Avventure del Cantiere (Las Aventuras de la Construcción), una colección pensada para todos los niños curiosos y para quienes aman las grandes máquinas protagonistas de historias sencillas, divertidas y llenas de valores.",
     "aboutBioFamily": "Los libros están escritos por mí, pero cada historia cobra vida junto con la madre de nuestro hijo: un trabajo conjunto para encontrar las palabras adecuadas, el ritmo perfecto y esa calidez que hace tan especial la lectura antes de dormir.",
@@ -1003,7 +1012,7 @@ const ABOUT_I18N = {
     "aboutBadge": "Over de auteur",
     "aboutAuthorRole": "Auteur en bedenker van CSA Books 4 Kids",
     "aboutStoryTitle": "De inspiratie: een familie-avontuur",
-    "aboutBioP1": "Ik ben geboren in Italië en woon tegenwoordig in Trentino-Zuid-Tirol, omgeven door bergen en natuur die mijn fantasie voortdurend voeden.",
+    "aboutBioP1": "Ik ben geboren in Fano, in de regio Marche, en woon tegenwoordig in Trentino-Zuid-Tirol, omgeven door bergen en natuur die mijn fantasie voortdurend voeden.",
     "aboutBioP2": "Ik hou van lesgeven en het delen van kennis, en ik geloof dat elk verhaal een waardevolle brug kan slaan tussen groei, nieuwsgierigheid en plezier.",
     "aboutBioP3": "Mijn grootste inspiratie is mijn zoon. Zijn grenzeloze passie voor vrachtwagens, graafmachines, kranen en bouwplaatsen bracht Le Avventure del Cantiere (Bouwplaatsavonturen) tot leven – een boekenreeks gemaakt voor nieuwsgierige kinderen en iedereen die houdt van grote machines in eenvoudige, vrolijke verhalen vol mooie waarden.",
     "aboutBioFamily": "De boeken zijn door mij geschreven, maar elk verhaal krijgt vorm samen met de moeder van ons kind: een gezamenlijke zoektocht naar de juiste woorden, het perfecte ritme en die warmte die voorlezen voor het slapengaan zo bijzonder maakt.",
@@ -1025,7 +1034,7 @@ const ABOUT_I18N = {
     "aboutBadge": "O autorze",
     "aboutAuthorRole": "Autor i twórca CSA Books 4 Kids",
     "aboutStoryTitle": "Inspiracja: rodzinna przygoda",
-    "aboutBioP1": "Urodziłem się we Włoszech, a dziś mieszkam w Trydencie-Górnej Adydze, w otoczeniu gór i przyrody, które nieustannie rozbudzają moją wyobraźnię.",
+    "aboutBioP1": "Urodziłem się w Fano w regionie Marche, a dziś mieszkam w Trydencie-Górnej Adydze, w otoczeniu gór i przyrody, które nieustannie rozbudzają moją wyobraźnię.",
     "aboutBioP2": "Uwielbiam uczyć i dzielić się wiedzą, a także wierzę, że każda opowieść może stać się pomostem łączącym rozwój, ciekawość i dobrą zabawę.",
     "aboutBioP3": "Moją największą inspiracją jest mój syn. To właśnie jego niespożyta fascynacja ciężarówkami, koparkami, dźwigami i placami budowy dała początek serii Le Avventure del Cantiere (Przygody na placu budowy) – stworzonej dla wszystkich ciekawych świata dzieci oraz miłośników wielkich maszyn, pełnej prostych, wesołych i wartościowych historii.",
     "aboutBioFamily": "Książki piszę ja, ale każda historia rodzi się i nabiera kształtu razem z mamą naszego synka: to wspólna praca, by znaleźć właściwe słowa, idealny rytm i ciepło, które czyni wieczorne czytanie tak wyjątkowym.",
@@ -1047,7 +1056,7 @@ const ABOUT_I18N = {
     "aboutBadge": "Om skaparen",
     "aboutAuthorRole": "Författare och skapare av CSA Books 4 Kids",
     "aboutStoryTitle": "Inspirationen: ett familjeäventyr",
-    "aboutBioP1": "Jag är född i Italien och bor idag i Trentino-Sydtyrolen, omgiven av berg och natur som ständigt ger näring åt min fantasi.",
+    "aboutBioP1": "Jag är född i Fano i Marche och bor idag i Trentino-Sydtyrolen, omgiven av berg och natur som ständigt ger näring åt min fantasi.",
     "aboutBioP2": "Jag har alltid älskat att undervisa och dela med mig av kunskap, och jag är övertygad om att varje berättelse kan bli en bro mellan utveckling, nyfikenhet och glädje.",
     "aboutBioP3": "Min största inspiration är min son. Det var hans outtröttliga intresse för lastbilar, grävmaskiner, lyftkranar och byggarbetsplatser som gav liv åt Le Avventure del Cantiere (Byggarbetsplatsens äventyr) – en bokserie skapad för alla nyfikna barn och alla som älskar stora maskiner i enkla, roliga och värdegrundade berättelser.",
     "aboutBioFamily": "Böckerna är skrivna av mig, men varje berättelse växer fram tillsammans med vårt barns mamma: ett gemensamt arbete för att hitta de rätta orden, den perfekta rytmen och den värme som gör godnattsagan så speciell.",
@@ -1069,7 +1078,7 @@ const ABOUT_I18N = {
     "aboutBadge": "著者紹介",
     "aboutAuthorRole": "CSA Books 4 Kids 著者・クリエイター",
     "aboutStoryTitle": "インスピレーション：家族の冒険",
-    "aboutBioP1": "私はイタリアで生まれ、現在は山々と豊かな自然に囲まれたトレンティーノ＝アルト・アディジェ州に暮らしています。この自然が、私の想像力の大きな源となっています。",
+    "aboutBioP1": "私はイタリア・マルケ州のファーノで生まれ、現在は山々と豊かな自然に囲まれたトレンティーノ＝アルト・アディジェ州に暮らしています。この自然が、私の想像力の大きな源となっています。",
     "aboutBioP2": "私は人に教え、知識を分かち合うことが大好きです。一つひとつの物語が、成長と好奇心、そして楽しさを結ぶ小さな架け橋になると信じています。",
     "aboutBioP3": "私の何よりのインスピレーションは息子です。トラックやショベルカー、クレーン車、工事現場への息子のあふれる情熱から、『Le Avventure del Cantiere』（工事現場の冒険）シリーズが誕生しました。好奇心旺盛な子どもたちや、大きな働く車が大好きなすべての読者のために、シンプルで楽しく、大切な価値観が詰まった物語を届けています。",
     "aboutBioFamily": "本は私が執筆していますが、すべての物語は息子の母親と一緒に形作られています。ぴったりの言葉、心地よいリズム、そしておやすみ前の読み聞かせを特別にする温もりを見つけるための、二人三脚の創作です。",
@@ -1090,6 +1099,349 @@ Object.keys(ABOUT_I18N).forEach(lang => {
     Object.assign(I18N[lang], ABOUT_I18N[lang]);
   }
 });
+
+// ============================================================================
+// TRADUZIONI PAGINA FANO COL NASO ALL'INSÙ (fano.html)
+// ============================================================================
+const FANO_I18N = {
+  "it": {
+    "navColoring": "Libri da colorare",
+    "navBooks": "Storie",
+    "navCharacters": "Personaggi",
+    "fanoMetaTitle": "Fano col naso all'insù | Libro da colorare per bambini",
+    "fanoMetaDesc": "Scopri Fano col naso all'insù, il libro da colorare di Marco Salucci con oltre 40 disegni, giochi e attività per bambini dai 5 ai 10 anni alla scoperta della storia e delle tradizioni di Fano.",
+    "fanoAuthorBadge": "Di Marco Salucci",
+    "fanoTitle": "Fano col naso all'insù",
+    "fanoSubtitle": "La città di Vitruvio da scoprire e colorare",
+    "fanoBadgeFeature": "40+ disegni, giochi e attività creative",
+    "fanoAgeHint": "Perfetto per bambini dai 5 ai 10 anni",
+    "fanoHeroCta": "Scopri il libro su Amazon",
+    "fanoStoryHeading": "Un viaggio speciale alla scoperta di Fano… tra storia, colori e curiosità!",
+    "fanoStoryP1": "Con \"Fano col naso all'insù\", i bambini esplorano la città di Vitruvio attraverso 40+ disegni da colorare, giochi e attività creative pensati per imparare divertendosi.",
+    "fanoStoryP2": "Dalle antiche origini di Fanum Fortunae, la città fondata dai Romani, fino alle sue tradizioni più amate, i bambini scopriranno una Fano piena di storie: la Basilica di Vitruvio, l'Arco d'Augusto, la Fontana della Fortuna, il Teatro della Fortuna, il porto, il famoso Carnevale, la Moretta fanese e le tradizioni del mare come il gustoso brodetto.",
+    "fanoStoryP3": "Tra le pagine prenderanno vita monumenti, personaggi e curiosità che renderanno ogni disegno una piccola avventura da colorare e scoprire.",
+    "fanoStoryP4": "Ma questo non è solo un libro da colorare: è un viaggio fatto di curiosità, osservazione e fantasia. I bambini potranno esprimere la propria creatività, allenare concentrazione e manualità e avvicinarsi alla storia e alla cultura di una città unica attraverso il gioco.",
+    "fanoInsideTitle": "Dentro il libro",
+    "fanoInsideSubtitle": "Più di 40 disegni, giochi e attività per scoprire Fano divertendosi.",
+    "fanoColoredTitle": "E tu, come la coloreresti?",
+    "fanoColoredSubtitle": "Le stesse illustrazioni possono trasformarsi completamente con la fantasia e i colori di ogni bambino.",
+    "fanoKidsTitle": "Perché i bambini lo ameranno",
+    "fanoKidsPoint1": "Oltre 40 tra disegni, giochi e attività creative e interattive",
+    "fanoKidsPoint2": "Monumenti e simboli di Fano da colorare e personalizzare",
+    "fanoKidsPoint3": "Curiosità sorprendenti per imparare divertendosi",
+    "fanoParentsTitle": "Perché piace ai genitori",
+    "fanoParentsPoint1": "Un'attività creativa senza schermi",
+    "fanoParentsPoint2": "Un modo originale per avvicinare i bambini alla storia e al territorio",
+    "fanoParentsPoint3": "Un regalo educativo per piccoli esploratori e famiglie in viaggio",
+    "fanoOccasionNote": "Per casa, scuola, vacanze o come ricordo speciale di Fano e delle Marche.",
+    "fanoReviewsSectionTitle": "Cosa dicono i lettori su Amazon",
+    "fanoReviewsSectionSubtitle": "Recensioni reali e verificate da chi ha già scoperto il libro",
+    "fanoFinalTitle": "Scopri Fano, colora la sua storia e crea la tua avventura!",
+    "fanoFinalCta": "Scopri il libro su Amazon"
+  },
+  "en": {
+    "navColoring": "Coloring Books",
+    "navBooks": "Stories",
+    "navCharacters": "Characters",
+    "fanoMetaTitle": "Fano with Your Head in the Clouds | Kids Coloring Book",
+    "fanoMetaDesc": "Discover Fano with Your Head in the Clouds by Marco Salucci: a coloring and activity book with 40+ drawings and games for children aged 5-10 exploring the history and traditions of Fano.",
+    "fanoAuthorBadge": "By Marco Salucci",
+    "fanoTitle": "Fano col naso all'insù",
+    "fanoSubtitle": "Vitruvius' city to discover and color",
+    "fanoBadgeFeature": "40+ drawings, games & creative activities",
+    "fanoAgeHint": "Perfect for children aged 5 to 10",
+    "fanoHeroCta": "Discover the book on Amazon",
+    "fanoStoryHeading": "A special journey to discover Fano… through history, colors, and curiosity!",
+    "fanoStoryP1": "With \"Fano col naso all'insù\", children explore Vitruvius' city through 40+ coloring pages, games, and creative activities designed to learn while having fun.",
+    "fanoStoryP2": "From the ancient roots of Fanum Fortunae, the city founded by the Romans, to its most beloved traditions, kids will discover a Fano full of stories: the Basilica of Vitruvius, the Arch of Augustus, the Fountain of Fortune, the Teatro della Fortuna, the harbor, the famous Carnival, the Moretta fanese, and seafaring traditions like the flavorful brodetto.",
+    "fanoStoryP3": "Monuments, characters, and surprising curiosities come to life across the pages, turning every drawing into a little adventure to color and uncover.",
+    "fanoStoryP4": "More than just a coloring book, this is an inspiring journey of curiosity, observation, and imagination. Children can express their creativity, train concentration and fine motor skills, and connect with the history and culture of a unique Italian city through play.",
+    "fanoInsideTitle": "Inside the Book",
+    "fanoInsideSubtitle": "Over 40 drawings, puzzles, and activities to discover Fano while having fun.",
+    "fanoColoredTitle": "And how would you color it?",
+    "fanoColoredSubtitle": "The very same illustrations can transform completely through every child's imagination and choice of colors.",
+    "fanoKidsTitle": "Why Kids Will Love It",
+    "fanoKidsPoint1": "Over 40 drawings, interactive games, and creative activities",
+    "fanoKidsPoint2": "Fano's iconic monuments and symbols to color and personalize",
+    "fanoKidsPoint3": "Surprising facts to learn and explore while playing",
+    "fanoParentsTitle": "Why Parents Love It",
+    "fanoParentsPoint1": "A screen-free creative activity",
+    "fanoParentsPoint2": "An inspiring way to introduce children to history and local culture",
+    "fanoParentsPoint3": "An educational gift for little explorers and traveling families",
+    "fanoOccasionNote": "For home, school, vacations, or as a special keepsake of Fano and the Marche region.",
+    "fanoReviewsSectionTitle": "What Readers Say on Amazon",
+    "fanoReviewsSectionSubtitle": "Authentic, verified reviews from families who already explored the book",
+    "fanoFinalTitle": "Discover Fano, color its history, and start your adventure!",
+    "fanoFinalCta": "Discover the book on Amazon"
+  },
+  "de": {
+    "navColoring": "Malbücher",
+    "navBooks": "Geschichten",
+    "navCharacters": "Figuren",
+    "fanoMetaTitle": "Fano mit erhobenem Kopf | Malbuch für Kinder",
+    "fanoMetaDesc": "Entdecke Fano mit erhobenem Kopf von Marco Salucci: ein Mal- und Mitmachbuch mit über 40 Zeichnungen, Spielen und Aktivitäten für Kinder von 5 bis 10 Jahren.",
+    "fanoAuthorBadge": "Von Marco Salucci",
+    "fanoTitle": "Fano col naso all'insù",
+    "fanoSubtitle": "Die Stadt von Vitruv zum Entdecken und Ausmalen",
+    "fanoBadgeFeature": "40+ Zeichnungen, Rätsel und kreative Aktivitäten",
+    "fanoAgeHint": "Ideal für Kinder von 5 bis 10 Jahren",
+    "fanoHeroCta": "Das Buch auf Amazon entdecken",
+    "fanoStoryHeading": "Eine besondere Reise nach Fano… voller Geschichte, Farben und Entdeckungen!",
+    "fanoStoryP1": "Mit \"Fano col naso all'insù\" erkunden Kinder die Stadt von Vitruv durch mehr als 40 Malvorlagen, Spiele und kreative Aufgaben, die spielerisches Lernen fördern.",
+    "fanoStoryP2": "Von den antiken Ursprüngen von Fanum Fortunae bis zu den lebendigen Traditionen entdecken Kinder ein faszinierendes Fano: die Basilika von Vitruv, den Augustusbogen, den Glücksbrunnen, das Teatro della Fortuna, den Hafen, den berühmten Karneval, die Moretta fanese und Meeresköstlichkeiten wie den Brodetto.",
+    "fanoStoryP3": "Bauwerke, Persönlichkeiten und spannende Besonderheiten erwachen auf den Seiten zum Leben und verwandeln jede Zeichnung in ein kleines Abenteuer.",
+    "fanoStoryP4": "Dieses Buch ist weit mehr als ein Malbuch: Es ist eine Reise voller Neugier und Fantasie. Kinder entfalten ihre Kreativität, stärken Konzentration und Feinmotorik und lernen die Kultur einer geschichtsträchtigen Stadt spielerisch kennen.",
+    "fanoInsideTitle": "Blick ins Buch",
+    "fanoInsideSubtitle": "Über 40 Zeichnungen, Spiele und Aktivitäten, um Fano mit Freude zu entdecken.",
+    "fanoColoredTitle": "Und wie würdest du es ausmalen?",
+    "fanoColoredSubtitle": "Die gleichen Zeichnungen verwandeln sich durch die Fantasie jedes Kindes in einzigartige Kunstwerke.",
+    "fanoKidsTitle": "Warum Kinder es lieben werden",
+    "fanoKidsPoint1": "Über 40 Zeichnungen, interaktive Spiele und kreative Aufgaben",
+    "fanoKidsPoint2": "Wahrzeichen und Symbole von Fano zum Ausmalen und Gestalten",
+    "fanoKidsPoint3": "Spannende Anekdoten und Wissenswertes zum spielerischen Lernen",
+    "fanoParentsTitle": "Warum Eltern begeistert sind",
+    "fanoParentsPoint1": "Kreative Beschäftigung ganz ohne Bildschirme",
+    "fanoParentsPoint2": "Eine wunderbare Möglichkeit, Kinder für Geschichte und Kultur zu begeistern",
+    "fanoParentsPoint3": "Ein lehrreiches Geschenk für kleine Entdecker und reisende Familien",
+    "fanoOccasionNote": "Für Zuhause, die Schule, den Urlaub oder als besondere Erinnerung an Fano und die Marken.",
+    "fanoReviewsSectionTitle": "Was Leser auf Amazon sagen",
+    "fanoReviewsSectionSubtitle": "Echte und verifizierte Bewertungen von Familien, die das Buch bereits entdeckt haben",
+    "fanoFinalTitle": "Entdecke Fano, male seine Geschichte aus und erlebe dein Abenteuer!",
+    "fanoFinalCta": "Das Buch auf Amazon entdecken"
+  },
+  "fr": {
+    "navColoring": "Livres de coloriage",
+    "navBooks": "Histoires",
+    "navCharacters": "Personnages",
+    "fanoMetaTitle": "Fano le nez en l'air | Livre de coloriage pour enfants",
+    "fanoMetaDesc": "Découvrez Fano le nez en l'air par Marco Salucci : un livre de coloriage et d'activités avec plus de 40 dessins et jeux pour enfants de 5 à 10 ans.",
+    "fanoAuthorBadge": "Par Marco Salucci",
+    "fanoTitle": "Fano col naso all'insù",
+    "fanoSubtitle": "La cité de Vitruve à découvrir et à colorier",
+    "fanoBadgeFeature": "40+ dessins, jeux et activités créatives",
+    "fanoAgeHint": "Parfait pour les enfants de 5 à 10 ans",
+    "fanoHeroCta": "Découvrir le livre sur Amazon",
+    "fanoStoryHeading": "Un voyage exceptionnel à Fano… entre histoire, couleurs et curiosités !",
+    "fanoStoryP1": "Avec \"Fano col naso all'insù\", les enfants explorent la cité de Vitruve à travers plus de 40 coloriages, jeux et activités créatives conçus pour apprendre en s'amusant.",
+    "fanoStoryP2": "Des origines antiques de Fanum Fortunae, fondée par les Romains, à ses traditions emblématiques, les enfants découvrent un Fano riche en histoires : la Basilique de Vitruve, l'Arc d'Auguste, la Fontaine de la Fortune, le Teatro della Fortuna, le port, le célèbre Carnaval, la Moretta fanese et la tradition du brodetto.",
+    "fanoStoryP3": "Au fil des pages, monuments, personnages et anecdotes prennent vie, transformant chaque dessin en une belle aventure à colorier.",
+    "fanoStoryP4": "Bien plus qu'un simple livre de coloriage, c'est une invitation à la curiosité, à l'observation et à l'imagination. Les enfants développent leur créativité, exercent leur concentration et découvrent la culture d'une ville unique par le jeu.",
+    "fanoInsideTitle": "Dans le livre",
+    "fanoInsideSubtitle": "Plus de 40 dessins, énigmes et activités pour explorer Fano dans la joie.",
+    "fanoColoredTitle": "Et toi, comment le colorierais-tu ?",
+    "fanoColoredSubtitle": "Les mêmes illustrations se métamorphosent au gré de l'imagination et des couleurs de chaque enfant.",
+    "fanoKidsTitle": "Pourquoi les enfants vont l'adorer",
+    "fanoKidsPoint1": "Plus de 40 dessins, jeux interactifs et activités créatives",
+    "fanoKidsPoint2": "Monuments et symboles de Fano à colorier et personnaliser",
+    "fanoKidsPoint3": "Curiosités captivantes pour apprendre en s'amusant",
+    "fanoParentsTitle": "Pourquoi les parents l'apprécient",
+    "fanoParentsPoint1": "Une activité créative et bienfaisante loin des écrans",
+    "fanoParentsPoint2": "Une façon originale de sensibiliser les enfants à l'histoire et au patrimoine",
+    "fanoParentsPoint3": "Un cadeau éducatif idéal pour les petits explorateurs et les voyages en famille",
+    "fanoOccasionNote": "Pour la maison, l'école, les vacances ou comme précieux souvenir de Fano et des Marches.",
+    "fanoReviewsSectionTitle": "Les avis des lecteurs sur Amazon",
+    "fanoReviewsSectionSubtitle": "Commentaires réels et vérifiés de parents qui ont partagé le livre",
+    "fanoFinalTitle": "Explore Fano, colorie son histoire et crée ta propre aventure !",
+    "fanoFinalCta": "Découvrir le livre sur Amazon"
+  },
+  "es": {
+    "navColoring": "Libros para colorear",
+    "navBooks": "Cuentos",
+    "navCharacters": "Personajes",
+    "fanoMetaTitle": "Fano con la nariz hacia arriba | Libro para colorear infantil",
+    "fanoMetaDesc": "Descubre Fano con la nariz hacia arriba de Marco Salucci: más de 40 dibujos, juegos y actividades para niños de 5 a 10 años para descubrir la historia de Fano.",
+    "fanoAuthorBadge": "Por Marco Salucci",
+    "fanoTitle": "Fano col naso all'insù",
+    "fanoSubtitle": "La ciudad de Vitruvio para descubrir y colorear",
+    "fanoBadgeFeature": "40+ dibujos, juegos y actividades creativas",
+    "fanoAgeHint": "Ideal para niños de 5 a 10 años",
+    "fanoHeroCta": "Descubrir el libro en Amazon",
+    "fanoStoryHeading": "¡Un viaje especial para descubrir Fano… entre historia, colores y curiosidades!",
+    "fanoStoryP1": "Con \"Fano col naso all'insù\", los niños exploran la ciudad de Vitruvio a través de más de 40 dibujos para colorear, juegos y actividades creativas diseñadas para aprender jugando.",
+    "fanoStoryP2": "Desde los antiguos orígenes de Fanum Fortunae, fundada por los romanos, hasta sus tradiciones más queridas, los niños descubrirán una Fano llena de encanto: la Basílica de Vitruvio, el Arco de Augusto, la Fuente de la Fortuna, el Teatro de la Fortuna, el puerto, el famoso Carnaval, la Moretta fanese y las tradiciones marineras como el delicioso brodetto.",
+    "fanoStoryP3": "Monumentos, personajes y curiosidades cobran vida en cada página, haciendo de cada ilustración una pequeña aventura para colorear y explorar.",
+    "fanoStoryP4": "No es solo un libro para colorear: es una experiencia de curiosidad, observación y creatividad. Los niños podrán ejercitar su motricidad fina, concentración y acercarse al patrimonio cultural de una forma lúdica y cercana.",
+    "fanoInsideTitle": "Dentro del libro",
+    "fanoInsideSubtitle": "Más de 40 dibujos, acertijos y actividades para descubrir Fano divirtiéndose.",
+    "fanoColoredTitle": "¿Y tú, cómo lo colorearías?",
+    "fanoColoredSubtitle": "Las mismas ilustraciones se transforman por completo con la imaginación y los colores de cada niño.",
+    "fanoKidsTitle": "Por qué les encantará a los niños",
+    "fanoKidsPoint1": "Más de 40 dibujos, juegos interactivos y actividades creativas",
+    "fanoKidsPoint2": "Monumentos y símbolos de Fano para colorear y personalizar",
+    "fanoKidsPoint3": "Curiosidades fascinantes para aprender mientras se divierten",
+    "fanoParentsTitle": "Por qué convence a los padres",
+    "fanoParentsPoint1": "Una actividad creativa y tranquila sin pantallas",
+    "fanoParentsPoint2": "Una forma enriquecedora de acercar a los pequeños a la historia y el territorio",
+    "fanoParentsPoint3": "Un regalo educativo para pequeños viajeros y familias curiosas",
+    "fanoOccasionNote": "Para casa, el colegio, vacaciones o como recuerdo especial de Fano y las Marcas.",
+    "fanoReviewsSectionTitle": "Lo que opinan los lectores en Amazon",
+    "fanoReviewsSectionSubtitle": "Reseñas reales y verificadas de familias que ya disfrutan del libro",
+    "fanoFinalTitle": "¡Descubre Fano, colorea su historia y vive tu propia aventura!",
+    "fanoFinalCta": "Descubrir el libro en Amazon"
+  },
+  "nl": {
+    "navColoring": "Kleurboeken",
+    "navBooks": "Verhalen",
+    "navCharacters": "Personages",
+    "fanoMetaTitle": "Fano met je neus in de lucht | Kleurboek voor kinderen",
+    "fanoMetaDesc": "Ontdek Fano met je neus in de lucht van Marco Salucci: een kleur- en doeboek met meer dan 40 tekeningen en spelletjes voor kinderen van 5 tot 10 jaar.",
+    "fanoAuthorBadge": "Door Marco Salucci",
+    "fanoTitle": "Fano col naso all'insù",
+    "fanoSubtitle": "De stad van Vitruvius om te ontdekken en in te kleuren",
+    "fanoBadgeFeature": "40+ tekeningen, spelletjes & creatieve activiteiten",
+    "fanoAgeHint": "Perfect voor kinderen van 5 tot 10 jaar",
+    "fanoHeroCta": "Ontdek het boek op Amazon",
+    "fanoStoryHeading": "Een bijzondere reis naar Fano… vol geschiedenis, kleuren en ontdekkingen!",
+    "fanoStoryP1": "Met \"Fano col naso all'insù\" verkennen kinderen de stad van Vitruvius via meer dan 40 kleurplaten, puzzels en creatieve opdrachten om spelenderwijs te leren.",
+    "fanoStoryP2": "Van de Romeinse oorsprong van Fanum Fortunae tot de levendige tradities ontdekken kinderen een stad vol verhalen: de Basiliek van Vitruvius, de Boog van Augustus, de Fontein van Fortuna, het Teatro della Fortuna, de haven, het beroemde Carnaval, de Moretta fanese en lokale zeetradities zoals brodetto.",
+    "fanoStoryP3": "Monumenten, historische figuren en leuke weetjes komen tot leven, waardoor elke plaat een nieuw avontuur wordt om in te kleuren.",
+    "fanoStoryP4": "Dit is niet zomaar een kleurboek: het is een ontdekkingsreis voor de verbeelding. Kinderen ontwikkelen hun creativiteit en concentratie en maken op een speelse manier kennis met cultuur en geschiedenis.",
+    "fanoInsideTitle": "In het boek",
+    "fanoInsideSubtitle": "Ruim 40 tekeningen, raadsels en doevoorbeelden om Fano met plezier te ontdekken.",
+    "fanoColoredTitle": "En hoe zou jij het inkleuren?",
+    "fanoColoredSubtitle": "Dezelfde illustraties komen geheel tot leven dankzij de fantasie en kleuren van ieder kind.",
+    "fanoKidsTitle": "Waarom kinderen er dol op zijn",
+    "fanoKidsPoint1": "Meer dan 40 tekeningen, interactieve spelletjes en creatieve opdrachten",
+    "fanoKidsPoint2": "Bekende monumenten en symbolen van Fano om zelf in te kleuren",
+    "fanoKidsPoint3": "Verrassende weetjes om al spelend meer te leren",
+    "fanoParentsTitle": "Waarom ouders het waarderen",
+    "fanoParentsPoint1": "Een creatieve activiteit zonder beeldschermen",
+    "fanoParentsPoint2": "Een inspirerende manier om kinderen te betrekken bij geschiedenis en erfgoed",
+    "fanoParentsPoint3": "Een leerzaam cadeau voor jonge ontdekkers en reizende gezinnen",
+    "fanoOccasionNote": "Voor thuis, op school, op vakantie of als bijzondere herinnering aan Fano en de Marken.",
+    "fanoReviewsSectionTitle": "Wat lezers zeggen op Amazon",
+    "fanoReviewsSectionSubtitle": "Echte en geverifieerde recensies van ouders die het boek al ontdekten",
+    "fanoFinalTitle": "Ontdek Fano, kleur haar geschiedenis in en beleef je eigen avontuur!",
+    "fanoFinalCta": "Ontdek het boek op Amazon"
+  },
+  "pl": {
+    "navColoring": "Kolorowanki",
+    "navBooks": "Opowieści",
+    "navCharacters": "Bohaterowie",
+    "fanoMetaTitle": "Fano z zadartym nosem | Książka do kolorowania dla dzieci",
+    "fanoMetaDesc": "Odkryj Fano z zadartym nosem autorstwa Marco Salucciego: kolorowanka z ponad 40 rysunkami, grami i zadaniami dla dzieci w wieku 5-10 lat.",
+    "fanoAuthorBadge": "Autor: Marco Salucci",
+    "fanoTitle": "Fano col naso all'insù",
+    "fanoSubtitle": "Miasto Witruwiusza do odkrywania i kolorowania",
+    "fanoBadgeFeature": "40+ rysunków, gier i kreatywnych zadań",
+    "fanoAgeHint": "Idealne dla dzieci w wieku 5–10 lat",
+    "fanoHeroCta": "Odkryj książkę na Amazonie",
+    "fanoStoryHeading": "Niezwykła podróż po Fano… pełna historii, kolorów i ciekawostek!",
+    "fanoStoryP1": "Dzięki książce \"Fano col naso all'insù\" dzieci poznają miasto Witruwiusza przez ponad 40 kolorowanek, zagadek i zabaw edukacyjnych łączących naukę z frajdą.",
+    "fanoStoryP2": "Od starożytnych początków rzymskiego Fanum Fortunae po barwne tradycje, mali czytelnicy odkrywają urokliwe Fano: Bazylikę Witruwiusza, Łuk Augusta, Fontannę Fortuny, Teatro della Fortuna, port, słynny Karnawał, Morettę fanese i morskie przysmaki takie jak brodetto.",
+    "fanoStoryP3": "Zabytki, postacie i fascynujące ciekawostki ożywają na stronach, zamieniając każdy rysunek w małą przygodę do pokolorowania.",
+    "fanoStoryP4": "To coś więcej niż zwykła kolorowanka: to podróż rozwijająca spostrzegawczość, kreatywność i zdolności manualne, przybliżająca dzieciom kulturę w lekki, zabawowy sposób.",
+    "fanoInsideTitle": "W środku książki",
+    "fanoInsideSubtitle": "Ponad 40 rysunków, łamigłówek i zabaw do wesołego odkrywania Fano.",
+    "fanoColoredTitle": "A Ty jak byś to pokolorował?",
+    "fanoColoredSubtitle": "Te same ilustracje nabierają zupełnie nowego wyrazu dzięki wyobraźni i kolorom każdego dziecka.",
+    "fanoKidsTitle": "Dlaczego dzieci ją pokochają",
+    "fanoKidsPoint1": "Ponad 40 rysunków, gier i angażujących zadań twórczych",
+    "fanoKidsPoint2": "Zabytki i symbole Fano do samodzielnego pokolorowania",
+    "fanoKidsPoint3": "Ciekawe fakty pozwalające uczyć się przez zabawę",
+    "fanoParentsTitle": "Dlaczego rodzice ją docenią",
+    "fanoParentsPoint1": "Wartościowa i kreatywna zabawa z dala od ekranów",
+    "fanoParentsPoint2": "Oryginalny sposób na zainteresowanie dzieci historią i podróżami",
+    "fanoParentsPoint3": "Mądry prezent dla małych odkrywców i rodzin w podróży",
+    "fanoOccasionNote": "Do domu, szkoły, na wakacje lub jako piękna pamiątka z Fano i regionu Marche.",
+    "fanoReviewsSectionTitle": "Co mówią czytelnicy na Amazonie",
+    "fanoReviewsSectionSubtitle": "Autentyczne, zweryfikowane opinie rodzin, które poznały tę książkę",
+    "fanoFinalTitle": "Odkryj Fano, pokoloruj jego historię i twórz własne przygody!",
+    "fanoFinalCta": "Odkryj książkę na Amazonie"
+  },
+  "sv": {
+    "navColoring": "Målarböcker",
+    "navBooks": "Berättelser",
+    "navCharacters": "Karaktärer",
+    "fanoMetaTitle": "Fano med näsan i vädret | Målarbok för barn",
+    "fanoMetaDesc": "Upptäck Fano med näsan i vädret av Marco Salucci: en målar- och aktivitetsbok med över 40 teckningar och lekar för barn i åldern 5–10 år.",
+    "fanoAuthorBadge": "Av Marco Salucci",
+    "fanoTitle": "Fano col naso all'insù",
+    "fanoSubtitle": "Vitruvius stad att upptäcka och färglägga",
+    "fanoBadgeFeature": "40+ teckningar, lekar och kreativa pyssel",
+    "fanoAgeHint": "Perfekt för barn mellan 5 och 10 år",
+    "fanoHeroCta": "Upptäck boken på Amazon",
+    "fanoStoryHeading": "En spännande resa till Fano… genom historia, färger och nyfikenhet!",
+    "fanoStoryP1": "Med \"Fano col naso all'insù\" utforskar barn Vitruvius stad genom över 40 målarbilder, gåtor och kreativa uppgifter utformade för att lära genom lek.",
+    "fanoStoryP2": "Från de romerska rötterna i Fanum Fortunae till stadens mest älskade traditioner upptäcker barnen ett Fano rikt på berättelser: Vitruvius basilika, Augustusbågen, Fortunafontänen, Teatro della Fortuna, hamnen, den berömda karnevalen, Moretta fanese och havets läckerheter som brodetto.",
+    "fanoStoryP3": "Monument, figurer och spännande fakta vaknar till liv på sidorna och förvandlar varje teckning till ett litet äventyr att färglägga.",
+    "fanoStoryP4": "Det här är mer än bara en målarbok: det är en resa fylld av upptäckarglädje och fantasi. Barnen får uttrycka sin kreativitet, öva koncentration och bekanta sig med italiensk historia på ett roligt sätt.",
+    "fanoInsideTitle": "I boken",
+    "fanoInsideSubtitle": "Över 40 teckningar, pyssel och aktiviteter för att upptäcka Fano med glädje.",
+    "fanoColoredTitle": "Och hur skulle du färglägga den?",
+    "fanoColoredSubtitle": "Samma illustrationer kan förvandlas helt genom varje barns unika fantasi och färgval.",
+    "fanoKidsTitle": "Varför barnen älskar den",
+    "fanoKidsPoint1": "Över 40 målarbilder, interaktiva lekar och kreativa övningar",
+    "fanoKidsPoint2": "Fanos kända monument och symboler att färglägga och göra personliga",
+    "fanoKidsPoint3": "Roliga fakta att upptäcka och lära sig under tiden",
+    "fanoParentsTitle": "Varför föräldrar uppskattar den",
+    "fanoParentsPoint1": "Ett skärmfritt och kreativt nöje",
+    "fanoParentsPoint2": "Ett inspirerande sätt att väcka intresse för historia och kultur",
+    "fanoParentsPoint3": "En pedagogisk present till små upptäckare och resande familjer",
+    "fanoOccasionNote": "För hemmet, skolan, semestern eller som ett fint minne från Fano och Marche.",
+    "fanoReviewsSectionTitle": "Vad läsarna säger på Amazon",
+    "fanoReviewsSectionSubtitle": "Äkta och verifierade recensioner från familjer som redan läst och färglagt boken",
+    "fanoFinalTitle": "Upptäck Fano, färglägg dess historia och skapa ditt äventyr!",
+    "fanoFinalCta": "Upptäck boken på Amazon"
+  },
+  "ja": {
+    "navColoring": "ぬりえ絵本",
+    "navBooks": "お話",
+    "navCharacters": "キャラクター",
+    "fanoMetaTitle": "見上げてごらんファーノの街 | 子ども向けぬりえ＆アクティビティブック",
+    "fanoMetaDesc": "マルコ・サルッチによる『見上げてごらんファーノの街』：5〜10歳のお子様向けの40以上のぬりえ、クイズ、アクティビティが詰まった絵本。",
+    "fanoAuthorBadge": "作：マルコ・サルッチ",
+    "fanoTitle": "Fano col naso all'insù",
+    "fanoSubtitle": "ウィトルウィウスの街を発見して彩ろう",
+    "fanoBadgeFeature": "40以上のぬりえ・クイズ・創作アクティビティ",
+    "fanoAgeHint": "5歳から10歳のお子様にぴったり",
+    "fanoHeroCta": "Amazonで本を見る",
+    "fanoStoryHeading": "歴史と色彩、知的好奇心あふれるファーノへの特別な旅！",
+    "fanoStoryP1": "『Fano col naso all'insù』は、40以上のぬりえやクイズ、楽しいアクティビティを通じて、子どもたちがウィトルウィウスゆかりの街を楽しく学べる一冊です。",
+    "fanoStoryP2": "古代ローマ人が築いた「ファヌム・フォルトゥナエ」から受け継がれる伝統まで、ウィトルウィウスのバシリカ、アウグストゥスの門、フォルトゥナの噴水、劇場、港、有名なカーニバルや郷土の味など、ファーノの豊かな物語に出会えます。",
+    "fanoStoryP3": "歴史的建造物や街のシンボルがページの中で生き生きとよみがえり、1ページごとに新しい発見と冒険が広がります。",
+    "fanoStoryP4": "ただ塗るだけでなく、観察力や想像力、集中力を育む知育ブックです。画面から離れて、遊びながら豊かな歴史と文化に親しむことができます。",
+    "fanoInsideTitle": "本の中をのぞいてみよう",
+    "fanoInsideSubtitle": "40以上のぬりえやクイズで、ファーノの街を楽しく発見。",
+    "fanoColoredTitle": "きみならどんな色でぬってみる？",
+    "fanoColoredSubtitle": "同じ線画でも、子どもたち一人ひとりの自由な感性と色彩でまったく新しい世界に生まれ変わります。",
+    "fanoKidsTitle": "子どもたちに喜ばれる理由",
+    "fanoKidsPoint1": "40以上のぬりえ、知育パズル、創作アクティビティ",
+    "fanoKidsPoint2": "ファーノの有名な名所やシンボルを自分だけの色で彩れる",
+    "fanoKidsPoint3": "遊びながら楽しく学べる驚きの豆知識が満載",
+    "fanoParentsTitle": "保護者の方におすすめする理由",
+    "fanoParentsPoint1": "スクリーンから離れてじっくり取り組める創造的な時間",
+    "fanoParentsPoint2": "歴史や地域文化への興味を自然に育む教育的アプローチ",
+    "fanoParentsPoint3": "小さな冒険家や旅好きなご家族への素敵なプレゼント",
+    "fanoOccasionNote": "ご家庭や学校、旅の思い出、ファーノやマルケ州の記念に。",
+    "fanoReviewsSectionTitle": "Amazonカスタマーレビュー",
+    "fanoReviewsSectionSubtitle": "実際に本を楽しんでいただいたご家族からの本物の声",
+    "fanoFinalTitle": "ファーノの街に出会い、歴史を彩り、きみだけの冒険を始めよう！",
+    "fanoFinalCta": "Amazonで本を見る"
+  }
+};
+
+Object.keys(FANO_I18N).forEach(lang => {
+  if (I18N[lang]) {
+    Object.assign(I18N[lang], FANO_I18N[lang]);
+  }
+});
+
+function getFanoAmazonUrl(lang) {
+  const marketMap = {
+    it: 'https://www.amazon.it/dp/B0HD2X6HVJ',
+    en: 'https://www.amazon.com/dp/B0HD2X6HVJ',
+    de: 'https://www.amazon.de/dp/B0HD2X6HVJ',
+    fr: 'https://www.amazon.fr/dp/B0HD2X6HVJ',
+    es: 'https://www.amazon.es/dp/B0HD2X6HVJ',
+    nl: 'https://www.amazon.nl/dp/B0HD2X6HVJ',
+    pl: 'https://www.amazon.pl/dp/B0HD2X6HVJ',
+    sv: 'https://www.amazon.se/dp/B0HD2X6HVJ',
+    ja: 'https://www.amazon.co.jp/dp/B0HD2X6HVJ'
+  };
+  return marketMap[lang] || marketMap.it;
+}
+
 
 // ============================================================================
 // STATO DELL'APPLICAZIONE
@@ -1116,6 +1468,7 @@ document.addEventListener('DOMContentLoaded', () => {
       selectedMarketState[b.id] = userDetectedMarket;
     });
   }
+  selectedMarketState['fano'] = userDetectedMarket;
 
   // Allinea il filtro lingua libri iniziale (se l'utente è su sito italiano -> IT, altrimenti EN)
   const savedBookLang = localStorage.getItem('csabooks_book_lang');
@@ -1130,6 +1483,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroCarousel();
   initReviewsSlider();
   initAuthorCarousel();
+  initFanoSliders();
   handleDirectBookDeepLink();
   initGlobalDropdownCloser();
   initSampleModalEvents();
@@ -1262,6 +1616,7 @@ window.setLanguage = function(langCode) {
       selectedMarketState[b.id] = marketForLang;
     });
   }
+  selectedMarketState['fano'] = marketForLang;
 
   const url = new URL(window.location);
   url.searchParams.set('lang', langCode);
@@ -1364,13 +1719,15 @@ function applyLanguage(lang) {
   setText('footer-copyright-text', strings.copyright);
 
   // Navigation Links
-  setText('nav-link-books', strings.navBooks || 'I libri');
-  setText('nav-link-characters', strings.navCharacters || 'I personaggi');
+  setText('nav-link-books', strings.navBooks || 'Storie');
+  setText('nav-link-characters', strings.navCharacters || 'Personaggi');
   setText('nav-link-reviews', strings.navReviews || 'Recensioni');
+  setText('nav-link-coloring', strings.navColoring || 'Libri da colorare');
   setText('nav-link-about', strings.navAbout || 'La nostra storia');
-  setText('footer-nav-books', strings.navBooks || 'I libri');
-  setText('footer-nav-characters', strings.navCharacters || 'I personaggi');
+  setText('footer-nav-books', strings.navBooks || 'Storie');
+  setText('footer-nav-characters', strings.navCharacters || 'Personaggi');
   setText('footer-nav-reviews', strings.navReviews || 'Recensioni');
+  setText('footer-nav-coloring', strings.navColoring || 'Libri da colorare');
   setText('footer-nav-about', strings.navAbout || 'La nostra storia');
 
   // Characters Page (se presente su characters.html)
@@ -1455,6 +1812,50 @@ function applyLanguage(lang) {
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && strings.charactersMetaDesc) {
       metaDesc.setAttribute('content', strings.charactersMetaDesc);
+    }
+  }
+
+
+  // Fano Page (se presente su fano.html)
+  if (document.getElementById('fano-page-main')) {
+    setText('fano-author-badge', strings.fanoAuthorBadge || 'Di Marco Salucci');
+    setText('fano-title', strings.fanoTitle || "Fano col naso all'insù");
+    setText('fano-subtitle', strings.fanoSubtitle || 'La città di Vitruvio da scoprire e colorare');
+    setText('fano-badge-feature', strings.fanoBadgeFeature || '40+ disegni, giochi e attività creative');
+    setText('fano-age-hint', strings.fanoAgeHint || 'Perfetto per bambini dai 5 ai 10 anni');
+    setText('fano-hero-cta-text', strings.fanoHeroCta || 'Scopri il libro su Amazon');
+    setText('fano-story-heading', strings.fanoStoryHeading || 'Un viaggio speciale alla scoperta di Fano… tra storia, colori e curiosità!');
+    setText('fano-story-p1', strings.fanoStoryP1);
+    setText('fano-story-p2', strings.fanoStoryP2);
+    setText('fano-story-p3', strings.fanoStoryP3);
+    setText('fano-story-p4', strings.fanoStoryP4);
+    setText('fano-inside-title', strings.fanoInsideTitle || 'Dentro il libro');
+    setText('fano-inside-subtitle', strings.fanoInsideSubtitle || 'Più di 40 disegni, giochi e attività per scoprire Fano divertendosi.');
+    setText('fano-colored-title', strings.fanoColoredTitle || 'E tu, come la coloreresti?');
+    setText('fano-colored-subtitle', strings.fanoColoredSubtitle || 'Le stesse illustrazioni possono trasformarsi completamente con la fantasia e i colori di ogni bambino.');
+    setText('fano-kids-title', strings.fanoKidsTitle || 'Perché i bambini lo ameranno');
+    setText('fano-kids-point-1', strings.fanoKidsPoint1);
+    setText('fano-kids-point-2', strings.fanoKidsPoint2);
+    setText('fano-kids-point-3', strings.fanoKidsPoint3);
+    setText('fano-parents-title', strings.fanoParentsTitle || 'Perché piace ai genitori');
+    setText('fano-parents-point-1', strings.fanoParentsPoint1);
+    setText('fano-parents-point-2', strings.fanoParentsPoint2);
+    setText('fano-parents-point-3', strings.fanoParentsPoint3);
+    setText('fano-occasion-note', strings.fanoOccasionNote || 'Per casa, scuola, vacanze o come ricordo speciale di Fano e delle Marche.');
+    setText('fano-reviews-section-title', strings.fanoReviewsSectionTitle || 'Cosa dicono i lettori su Amazon');
+    setText('fano-reviews-section-subtitle', strings.fanoReviewsSectionSubtitle || 'Recensioni autentiche e verificate da chi ha già scoperto il libro');
+    setText('fano-final-title', strings.fanoFinalTitle || 'Scopri Fano, colora la sua storia e crea la tua avventura!');
+    setText('fano-final-cta-text', strings.fanoFinalCta || 'Scopri il libro su Amazon');
+
+    // Update Amazon marketplace and links for Fano
+    renderFanoMarketSelector(lang);
+
+    if (strings.fanoMetaTitle) {
+      document.title = strings.fanoMetaTitle;
+    }
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && strings.fanoMetaDesc) {
+      metaDesc.setAttribute('content', strings.fanoMetaDesc);
     }
   }
 
@@ -1693,15 +2094,72 @@ window.selectBookMarket = function(bookId, marketKey) {
     localStorage.setItem('csabooks_user_market', marketKey);
   } catch (e) {}
 
-  const book = BOOKS.find(b => b.id === bookId);
-  if (!book) return;
-
   const marketInfo = AMAZON_MARKETS[marketKey];
-  const targetUrl = getBookUrlForMarket(book, marketKey);
   const strings = I18N[currentLanguage] || I18N.it;
   const buyButtonText = (typeof strings.viewOn === 'function') 
     ? strings.viewOn(marketInfo.buttonLabel) 
-    : `BUY ON ${marketInfo.buttonLabel.toUpperCase()}`;
+    : `ACQUISTA SU ${marketInfo.buttonLabel.toUpperCase()}`;
+
+  // Se il libro selezionato è Fano col naso all'insù
+  if (bookId === 'fano') {
+    const asin = 'B0HD2X6HVJ';
+    const targetUrl = `https://www.${marketInfo.domain}/dp/${asin}`;
+
+    // Aggiorna il trigger Fano
+    const selectEl = document.getElementById('custom-market-select-fano');
+    if (selectEl) {
+      const flagImg = selectEl.querySelector('.market-flag-img');
+      const nameSpan = selectEl.querySelector('.market-selected-name');
+      if (flagImg) {
+        flagImg.src = `https://flagcdn.com/24x18/${marketInfo.flagCode}.png`;
+        flagImg.srcset = `https://flagcdn.com/48x36/${marketInfo.flagCode}.png 2x`;
+        flagImg.alt = marketInfo.name;
+      }
+      if (nameSpan) {
+        nameSpan.textContent = marketInfo.name;
+      }
+
+      selectEl.querySelectorAll('.market-option').forEach(opt => {
+        const isSel = (opt.getAttribute('data-market-key') === marketKey);
+        opt.classList.toggle('selected', isSel);
+        opt.setAttribute('aria-selected', isSel ? 'true' : 'false');
+        const checkSpan = opt.querySelector('.market-option-check');
+        if (isSel && !checkSpan) {
+          opt.insertAdjacentHTML('beforeend', '<span class="market-option-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span>');
+        } else if (!isSel && checkSpan) {
+          checkSpan.remove();
+        }
+      });
+    }
+
+    // Aggiorna pulsante Hero Fano
+    const heroBtn = document.getElementById('buy-btn-fano') || document.getElementById('fano-hero-cta');
+    if (heroBtn) {
+      heroBtn.href = targetUrl;
+      const textSpan = heroBtn.querySelector('#fano-hero-cta-text') || heroBtn.querySelector('.btn-buy-text');
+      if (textSpan) textSpan.textContent = buyButtonText;
+      heroBtn.setAttribute('aria-label', `${buyButtonText} - Fano col naso all'insù`);
+    }
+
+    // Aggiorna pulsante Bottom Fano
+    const finalBtn = document.getElementById('buy-btn-fano-bottom') || document.getElementById('fano-final-cta');
+    if (finalBtn) {
+      finalBtn.href = targetUrl;
+      const textSpan = finalBtn.querySelector('#fano-final-cta-text') || finalBtn.querySelector('.btn-buy-text');
+      if (textSpan) textSpan.textContent = buyButtonText;
+      finalBtn.setAttribute('aria-label', `${buyButtonText} - Fano col naso all'insù`);
+    }
+
+    // Chiudi menu a tendina
+    document.querySelectorAll('.market-dropdown-menu').forEach(m => m.style.display = 'none');
+    document.querySelectorAll('.custom-market-select').forEach(s => s.classList.remove('open'));
+    return;
+  }
+
+  const book = BOOKS.find(b => b.id === bookId);
+  if (!book) return;
+
+  const targetUrl = getBookUrlForMarket(book, marketKey);
 
   // Aggiorna il trigger del libro
   const selectEl = document.getElementById(`custom-market-select-${bookId}`);
@@ -1739,6 +2197,78 @@ window.selectBookMarket = function(bookId, marketKey) {
   document.querySelectorAll('.market-dropdown-menu').forEach(m => m.style.display = 'none');
   document.querySelectorAll('.custom-market-select').forEach(s => s.classList.remove('open'));
 };
+
+function renderFanoMarketSelector(lang) {
+  const selectWrapper = document.getElementById('custom-market-select-fano');
+  if (!selectWrapper) return;
+
+  const currentMarketKey = selectedMarketState['fano'] || userDetectedMarket || 'it';
+  selectedMarketState['fano'] = currentMarketKey;
+  const marketInfo = AMAZON_MARKETS[currentMarketKey] || AMAZON_MARKETS.it;
+  const strings = I18N[lang] || I18N.it;
+
+  const labelEl = document.getElementById('fano-market-label');
+  if (labelEl && strings.selectStore) {
+    labelEl.textContent = strings.selectStore;
+  }
+
+  const triggerBtn = selectWrapper.querySelector('.market-trigger');
+  if (triggerBtn) {
+    triggerBtn.innerHTML = `
+      <span class="market-trigger-content">
+        <img src="https://flagcdn.com/24x18/${marketInfo.flagCode}.png" srcset="https://flagcdn.com/48x36/${marketInfo.flagCode}.png 2x" alt="${escapeHtml(marketInfo.name)}" width="20" height="15" class="market-flag-img" loading="eager">
+        <span class="market-selected-name">${escapeHtml(marketInfo.name)}</span>
+      </span>
+      <svg class="market-chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    `;
+    triggerBtn.setAttribute('aria-label', `${strings.selectStore || 'Seleziona Store Amazon'} - Fano col naso all'insù`);
+  }
+
+  const menuEl = document.getElementById('market-dropdown-fano');
+  if (menuEl) {
+    const marketOptionsHtml = Object.entries(AMAZON_MARKETS).map(([key, info]) => {
+      const isSelected = (key === currentMarketKey);
+      return `
+        <div 
+          class="market-option ${isSelected ? 'selected' : ''}" 
+          data-market-key="${key}"
+          role="option" 
+          aria-selected="${isSelected ? 'true' : 'false'}"
+          onclick="selectBookMarket('fano', '${key}')"
+        >
+          <img src="https://flagcdn.com/24x18/${info.flagCode}.png" srcset="https://flagcdn.com/48x36/${info.flagCode}.png 2x" alt="" width="20" height="15" class="market-flag-img">
+          <span class="market-option-name">${escapeHtml(info.name)}</span>
+          ${isSelected ? '<span class="market-option-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span>' : ''}
+        </div>
+      `;
+    }).join('');
+    menuEl.innerHTML = marketOptionsHtml;
+  }
+
+  const asin = 'B0HD2X6HVJ';
+  const targetUrl = `https://www.${marketInfo.domain}/dp/${asin}`;
+  const buyButtonText = (typeof strings.viewOn === 'function') 
+    ? strings.viewOn(marketInfo.buttonLabel) 
+    : `ACQUISTA SU ${marketInfo.buttonLabel.toUpperCase()}`;
+
+  const heroBtn = document.getElementById('buy-btn-fano') || document.getElementById('fano-hero-cta');
+  if (heroBtn) {
+    heroBtn.href = targetUrl;
+    const textSpan = heroBtn.querySelector('#fano-hero-cta-text') || heroBtn.querySelector('.btn-buy-text');
+    if (textSpan) textSpan.textContent = buyButtonText;
+    heroBtn.setAttribute('aria-label', `${buyButtonText} - Fano col naso all'insù`);
+  }
+
+  const finalBtn = document.getElementById('buy-btn-fano-bottom') || document.getElementById('fano-final-cta');
+  if (finalBtn) {
+    finalBtn.href = targetUrl;
+    const textSpan = finalBtn.querySelector('#fano-final-cta-text') || finalBtn.querySelector('.btn-buy-text');
+    if (textSpan) textSpan.textContent = buyButtonText;
+    finalBtn.setAttribute('aria-label', `${buyButtonText} - Fano col naso all'insù`);
+  }
+}
 
 function initGlobalDropdownCloser() {
   document.addEventListener('click', (e) => {
@@ -2957,3 +3487,150 @@ function initAuthorCarousel() {
 
 
 
+
+
+/* ==========================================================================
+   FANO CAROUSELS (PAGINE ORIGINALI & ILLUSTRAZIONI COLORATE)
+   ========================================================================== */
+function initFanoSliders() {
+  if (document.getElementById('fano-slider-pages')) {
+    initSingleFanoSlider({
+      sliderId: 'fano-slider-pages',
+      trackId: 'fano-pages-track',
+      prevBtnId: 'fano-pages-prev',
+      nextBtnId: 'fano-pages-next',
+      dotsId: 'fano-pages-dots'
+    });
+  }
+  if (document.getElementById('fano-slider-colored')) {
+    initSingleFanoSlider({
+      sliderId: 'fano-slider-colored',
+      trackId: 'fano-colored-track',
+      prevBtnId: 'fano-colored-prev',
+      nextBtnId: 'fano-colored-next',
+      dotsId: 'fano-colored-dots'
+    });
+  }
+}
+
+function initSingleFanoSlider(opts) {
+  const slider = document.getElementById(opts.sliderId);
+  const track = document.getElementById(opts.trackId);
+  const prevBtn = document.getElementById(opts.prevBtnId);
+  const nextBtn = document.getElementById(opts.nextBtnId);
+  const dotsContainer = document.getElementById(opts.dotsId);
+
+  if (!slider || !track) return;
+
+  const cards = track.children;
+  const totalCards = cards.length;
+  if (totalCards === 0) return;
+
+  let currentIndex = 0;
+
+  function getVisibleCount() {
+    const w = window.innerWidth;
+    if (w >= 1024) return 3;
+    if (w >= 640) return 2;
+    return 1;
+  }
+
+  function getMaxIndex() {
+    const visible = getVisibleCount();
+    return Math.max(0, totalCards - visible);
+  }
+
+  function updateDots() {
+    if (!dotsContainer) return;
+    const maxIdx = getMaxIndex();
+    const count = maxIdx + 1;
+    if (count <= 1) {
+      dotsContainer.style.display = 'none';
+      return;
+    }
+    dotsContainer.style.display = 'flex';
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < count; i++) {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'fano-slider-dot' + (i === currentIndex ? ' active' : '');
+      dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+      dot.onclick = () => {
+        currentIndex = i;
+        updatePosition();
+      };
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function updatePosition() {
+    const maxIdx = getMaxIndex();
+    if (currentIndex > maxIdx) currentIndex = maxIdx;
+    if (currentIndex < 0) currentIndex = 0;
+
+    const firstCard = cards[0];
+    if (!firstCard) return;
+
+    const cardWidth = firstCard.offsetWidth;
+    const style = window.getComputedStyle(track);
+    const gap = parseFloat(style.gap) || 20;
+    const offset = currentIndex * (cardWidth + gap);
+
+    track.style.transform = 'translateX(-' + offset + 'px)';
+
+    if (prevBtn) prevBtn.disabled = (currentIndex === 0);
+    if (nextBtn) nextBtn.disabled = (currentIndex >= maxIdx);
+
+    if (dotsContainer) {
+      const dots = dotsContainer.querySelectorAll('.fano-slider-dot');
+      dots.forEach((d, idx) => {
+        d.classList.toggle('active', idx === currentIndex);
+      });
+    }
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      currentIndex = Math.max(0, currentIndex - 1);
+      updatePosition();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      currentIndex = Math.min(getMaxIndex(), currentIndex + 1);
+      updatePosition();
+    });
+  }
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        currentIndex = Math.min(getMaxIndex(), currentIndex + 1);
+      } else {
+        currentIndex = Math.max(0, currentIndex - 1);
+      }
+      updatePosition();
+    }
+  }, { passive: true });
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      updateDots();
+      updatePosition();
+    }, 100);
+  });
+
+  updateDots();
+  updatePosition();
+}
