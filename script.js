@@ -44,10 +44,11 @@ const I18N = {
     filterAll: "Tutte le edizioni",
     filterIt: "Edizione Italiana",
     filterEn: "Edizione Inglese",
-    footerAbout: "Storie e libri illustrati pensati per accendere la fantasia e la curiosità dei più piccoli.",
+    footerAbout: "Storie per bambini, nate da un papà e una mamma.",
     copyright: "© 2026 CSA Books 4 Kids. Tutti i diritti riservati."
     ,
-    navBooks: "I Libri",
+    navBooks: "I libri",
+    navCharacters: "I personaggi",
     navAbout: "La nostra storia",
     aboutPageTitle: "La storia dietro CSA Books 4 Kids",
     aboutMetaTitle: "La nostra storia | CSA Books 4 Kids",
@@ -80,7 +81,7 @@ const I18N = {
     filterAll: "All Editions",
     filterIt: "Italian Edition",
     filterEn: "English Edition",
-    footerAbout: "Inspiring picture books designed to spark young imaginations and curious minds.",
+    footerAbout: "Children's stories, made by a dad and a mom.",
     copyright: "© 2026 CSA Books 4 Kids. All rights reserved."
     ,
     navBooks: "Books",
@@ -116,7 +117,7 @@ const I18N = {
     filterAll: "Alle Ausgaben",
     filterIt: "Italienische Ausgabe",
     filterEn: "Englische Ausgabe",
-    footerAbout: "Inspirierende Bilderbücher, die Fantasie und Neugier kleiner Leser wecken.",
+    footerAbout: "Kindergeschichten, von einem Papa und einer Mama.",
     copyright: "© 2026 CSA Books 4 Kids. Alle Rechte vorbehalten."
     ,
     navBooks: "Bücher",
@@ -152,7 +153,7 @@ const I18N = {
     filterAll: "Toutes les éditions",
     filterIt: "Édition Italienne",
     filterEn: "Édition Anglaise",
-    footerAbout: "Des livres d'images inspirants conçus pour éveiller l'imagination et la curiosité des petits lecteurs.",
+    footerAbout: "Histoires pour enfants, créées par un papa et une maman.",
     copyright: "© 2026 CSA Books 4 Kids. Tous droits réservés."
     ,
     navBooks: "Livres",
@@ -165,7 +166,7 @@ const I18N = {
     aboutStoryTitle: "L'inspiration : une aventure de famille",
     aboutBioP1: "Je suis né en Italie et je vis aujourd'hui dans le Trentin-Haut-Adige, entouré par la nature et les montagnes, sources de mon inspiration.",
     aboutBioP2: "J'ai toujours aimé transmettre le savoir, convaincu qu'une histoire peut devenir un pont précieux entre éveil, curiosité et amusement.",
-    aboutBioP3: "Ma plus grande inspiration est mon fils. C'est sa passion pour les camions, pelleteuses et chantiers qui a donné vie à la collection 'Le Avventure del Cantiere' pour les petits curieux.",
+    aboutBioP3: "Ma plus grande inspiration est mon fils. C'est sa passion débordante pour les camions, pelleteuses et chantiers qui a donné vie à la collection 'Le Avventure del Cantiere' pour les petits curieux.",
     aboutBioFamily: "Les livres sont écrits par moi, mais chaque histoire prend vie aux côtés de la maman de notre enfant : un travail à quatre mains pour trouver les mots justes, le rythme parfait et cette chaleur qui rend la lecture du soir si précieuse.",
     aboutInspirationText: "Une passion pour les camions, pelleteuses et chantiers a donné naissance à tout un univers d'histoires.",
     aboutBioP4: "À travers mes livres, je cherche à offrir des moments de partage complice entre parents et enfants, faits d'émotion, de jeu et de découverte.",
@@ -188,7 +189,7 @@ const I18N = {
     filterAll: "Todas las ediciones",
     filterIt: "Edición Italiana",
     filterEn: "Edición Inglesa",
-    footerAbout: "Libros ilustrados pensados para encender la imaginación y la curiosidad de los más pequeños.",
+    footerAbout: "Cuentos infantiles, creados por un papá y una mamá.",
     copyright: "© 2026 CSA Books 4 Kids. Todos los derechos reservados."
     ,
     navBooks: "Libros",
@@ -224,7 +225,7 @@ const I18N = {
     filterAll: "Alle edities",
     filterIt: "Italiaanse editie",
     filterEn: "Engelse editie",
-    footerAbout: "Inspirerende prentenboeken ontworpen om de fantasie en nieuwsgierigheid van kleine lezers te prikkelen.",
+    footerAbout: "Kinderverhalen, gemaakt door een papa en een mama.",
     copyright: "© 2026 CSA Books 4 Kids. Alle rechten voorbehouden."
     ,
     navBooks: "Boeken",
@@ -260,7 +261,7 @@ const I18N = {
     filterAll: "Wszystkie wydania",
     filterIt: "Wydanie włoskie",
     filterEn: "Wydanie angielskie",
-    footerAbout: "Inspirujące książki z obrazkami pobudzające wyobraźnię i ciekawość małych czytelników.",
+    footerAbout: "Opowieści dla dzieci, stworzone przez tatę i mamę.",
     copyright: "© 2026 CSA Books 4 Kids. Wszelkie prawa zastrzeżone."
     ,
     navBooks: "Książki",
@@ -296,7 +297,7 @@ const I18N = {
     filterAll: "Alla utgåvor",
     filterIt: "Italiensk utgåva",
     filterEn: "Engelsk utgåva",
-    footerAbout: "Inspirerande bilderböcker utformade för att väcka fantasi och nyfikenhet hos små läsare.",
+    footerAbout: "Barnberättelser, skapade av en pappa och en mamma.",
     copyright: "© 2026 CSA Books 4 Kids. Alla rättigheter förbehållna."
     ,
     navBooks: "Böcker",
@@ -332,7 +333,7 @@ const I18N = {
     filterAll: "すべての版",
     filterIt: "イタリア語版",
     filterEn: "英語版",
-    footerAbout: "小さな読者の想像力と好奇心を刺激する絵本。",
+    footerAbout: "パパとママが作った、子どもたちのための物語。",
     copyright: "© 2026 CSA Books 4 Kids. 無断転載を禁じます。"
     ,
     navBooks: "本",
@@ -360,9 +361,9 @@ const I18N = {
 // ============================================================================
 const CHARACTERS_I18N = {
   "it": {
-    "navCharacters": "I Personaggi",
+    "navCharacters": "I personaggi",
     "charactersPageTitle": "Un mondo di scoperte, amicizia e grandi macchine",
-    "charactersMetaTitle": "I Personaggi | Le Avventure del Cantiere - CSA Books 4 Kids",
+    "charactersMetaTitle": "I personaggi | Le Avventure del Cantiere - CSA Books 4 Kids",
     "charactersMetaDesc": "Scopri i protagonisti della collana Le Avventure del Cantiere: Benny l'escavatore, Bruno il camion, Leo la gru, Nina la betoniera, Rino il rullo e Rudy la ruspa.",
     "charactersBadge": "La Collana Ufficiale",
     "charactersHeroDesc": "\"Le Avventure del Cantiere\" è una collana di storie illustrate per bambini che ha come protagonisti un gruppo di simpatici veicoli da costruzione. Ogni libro trasforma una sfida quotidiana di cantiere in una piccola grande avventura ricca di amicizia, curiosità, lavoro di squadra e scoperta, offrendo a genitori e figli storie semplici e coinvolgenti da condividere insieme.",
@@ -794,6 +795,7 @@ const REVIEWS_I18N = {
   it: {
     navReviews: "Recensioni",
     reviewsTitle: "Cosa Dicono i Genitori",
+    reviewsRatingLabel: "Valutazione: ",
     reviewsRatingSr: "Valutazione: 5 su 5 stelle",
     reviewsAmazonSource: "Recensione Amazon",
     reviewsPrevAria: "Recensioni precedenti",
@@ -802,6 +804,7 @@ const REVIEWS_I18N = {
   en: {
     navReviews: "Reviews",
     reviewsTitle: "What Parents Are Saying",
+    reviewsRatingLabel: "Rating: ",
     reviewsRatingSr: "Rating: 5 out of 5 stars",
     reviewsAmazonSource: "Amazon Review",
     reviewsPrevAria: "Previous reviews",
@@ -810,6 +813,7 @@ const REVIEWS_I18N = {
   de: {
     navReviews: "Bewertungen",
     reviewsTitle: "Was Eltern sagen",
+    reviewsRatingLabel: "Bewertung: ",
     reviewsRatingSr: "Bewertung: 5 von 5 Sternen",
     reviewsAmazonSource: "Amazon-Rezension",
     reviewsPrevAria: "Vorherige Bewertungen",
@@ -818,6 +822,7 @@ const REVIEWS_I18N = {
   fr: {
     navReviews: "Avis",
     reviewsTitle: "Ce que disent les parents",
+    reviewsRatingLabel: "Évaluation : ",
     reviewsRatingSr: "Note : 5 sur 5 étoiles",
     reviewsAmazonSource: "Avis Amazon",
     reviewsPrevAria: "Avis précédents",
@@ -826,6 +831,7 @@ const REVIEWS_I18N = {
   es: {
     navReviews: "Opiniones",
     reviewsTitle: "Lo que dicen los padres",
+    reviewsRatingLabel: "Valoración: ",
     reviewsRatingSr: "Calificación: 5 de 5 estrellas",
     reviewsAmazonSource: "Opinión en Amazon",
     reviewsPrevAria: "Opiniones anteriores",
@@ -834,6 +840,7 @@ const REVIEWS_I18N = {
   nl: {
     navReviews: "Recensies",
     reviewsTitle: "Wat ouders zeggen",
+    reviewsRatingLabel: "Beoordeling: ",
     reviewsRatingSr: "Beoordeling: 5 van de 5 sterren",
     reviewsAmazonSource: "Amazon-recensie",
     reviewsPrevAria: "Vorige recensies",
@@ -842,6 +849,7 @@ const REVIEWS_I18N = {
   pl: {
     navReviews: "Opinie",
     reviewsTitle: "Co mówią rodzice",
+    reviewsRatingLabel: "Ocena: ",
     reviewsRatingSr: "Ocena: 5 na 5 gwiazdek",
     reviewsAmazonSource: "Opinia z Amazon",
     reviewsPrevAria: "Poprzednie opinie",
@@ -850,6 +858,7 @@ const REVIEWS_I18N = {
   sv: {
     navReviews: "Recensioner",
     reviewsTitle: "Vad föräldrar säger",
+    reviewsRatingLabel: "Betyg: ",
     reviewsRatingSr: "Betyg: 5 av 5 stjärnor",
     reviewsAmazonSource: "Amazon-recension",
     reviewsPrevAria: "Föregående recensioner",
@@ -858,6 +867,7 @@ const REVIEWS_I18N = {
   ja: {
     navReviews: "レビュー",
     reviewsTitle: "保護者の方々の声",
+    reviewsRatingLabel: "評価: ",
     reviewsRatingSr: "評価：5つ星のうち5",
     reviewsAmazonSource: "Amazonカスタマーレビュー",
     reviewsPrevAria: "前のレビュー",
@@ -1350,17 +1360,17 @@ function applyLanguage(lang) {
   updateBookFilterButtons();
 
   // Footer & Brand Intro
-  setText('home-brand-desc', strings.footerAbout);
+  setText('home-brand-tagline', strings.footerAbout);
   setText('footer-about-text', strings.footerAbout);
   setText('footer-copyright-text', strings.copyright);
 
   // Navigation Links
-  setText('nav-link-books', strings.navBooks || 'I Libri');
-  setText('nav-link-characters', strings.navCharacters || 'I Personaggi');
+  setText('nav-link-books', strings.navBooks || 'I libri');
+  setText('nav-link-characters', strings.navCharacters || 'I personaggi');
   setText('nav-link-reviews', strings.navReviews || 'Recensioni');
   setText('nav-link-about', strings.navAbout || 'La nostra storia');
-  setText('footer-nav-books', strings.navBooks || 'I Libri');
-  setText('footer-nav-characters', strings.navCharacters || 'I Personaggi');
+  setText('footer-nav-books', strings.navBooks || 'I libri');
+  setText('footer-nav-characters', strings.navCharacters || 'I personaggi');
   setText('footer-nav-reviews', strings.navReviews || 'Recensioni');
   setText('footer-nav-about', strings.navAbout || 'La nostra storia');
 
@@ -2620,7 +2630,7 @@ function renderReviewCards() {
   if (!track) return;
 
   const strings = I18N[currentLanguage] || I18N.it;
-  const ratingSr = strings.reviewsRatingSr || 'Valutazione: 5 su 5 stelle';
+  const ratingLabel = strings.reviewsRatingLabel || 'Valutazione: ';
   const amazonSource = strings.reviewsAmazonSource || 'Recensione Amazon';
 
   track.innerHTML = AMAZON_REVIEWS.map((review, idx) => {
@@ -2631,9 +2641,9 @@ function renderReviewCards() {
     return `
       <article class="review-card" data-review-index="${idx}">
         <div class="review-card-header">
-          <div class="review-stars" aria-label="${escapeHtml(ratingSr)}">
-            <span class="sr-only">${escapeHtml(ratingSr)}</span>
-            <span aria-hidden="true">★★★★★</span>
+          <div class="review-stars" aria-label="${escapeHtml(ratingLabel)} 5/5">
+            <span class="review-rating-label">${escapeHtml(ratingLabel)}</span>
+            <span class="review-stars-icons" aria-hidden="true">★★★★★</span>
           </div>
           <span class="review-quote-mark" aria-hidden="true">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -2650,9 +2660,7 @@ function renderReviewCards() {
             <h3 class="reviewer-name">${escapeHtml(review.reviewer)}</h3>
           </div>
           <div class="review-amazon-badge" title="Recensione autentica da Amazon">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M13.958 10.09c0 1.25-.049 2.29-.868 3.33-.615.79-1.45 1.27-2.374 1.27-1.303 0-1.964-.99-1.964-2.45 0-2.88 2.374-3.4 5.206-3.4v1.25zm3.078 6.64c-.247-.2-.3-.54-.086-.79.542-.64.839-1.46.839-2.31V9.2c0-2.44-1.28-3.83-3.667-3.83-2.02 0-3.619.98-4.212 2.76-.086.26.049.52.32.58l1.492.3c.247.05.493-.08.592-.32.32-.77.986-1.19 1.897-1.19 1.159 0 1.825.64 1.825 1.77v.46c-3.15.15-6.079.9-6.079 4.34 0 2.22 1.405 3.51 3.292 3.51 1.628 0 2.738-.7 3.32-1.78.173.55.604 1.05 1.171 1.34.222.11.493.04.604-.17l1.036-1.57c.123-.19.086-.44-.123-.59l-.021-.01zm4.724 4.88c-4.402 3.24-10.457 4.14-15.656 1.4-1.023-.54-2.047-1.2-2.922-1.99-.247-.22-.271-.58-.062-.83.21-.24.567-.27.814-.06.814.71 1.763 1.33 2.713 1.82 4.747 2.49 10.334 1.68 14.39-1.25.32-.23.765-.02.765.37 0 .19-.111.37-.259.54h.215zm.691-1.35c-.456-.58-3.033-.27-4.192-.13-.357.04-.419-.28-.1-.5 2.059-1.45 5.29-1.03 5.672-.57.382.46-.222 3.65-2.182 5.25-.308.25-.592.12-.456-.22.456-1.11 1.714-3.25 1.258-3.83z"/>
-            </svg>
+            <img src="assets/amazon-logo.jpg" alt="Amazon" class="review-amazon-img" width="18" height="18" />
             <span class="amazon-label-text">${escapeHtml(amazonSource)}</span>
           </div>
         </div>
@@ -2769,14 +2777,14 @@ function updateReviewsTranslations(lang) {
 
   const track = document.getElementById('reviews-slider-track');
   if (track) {
-    const ratingSr = strings.reviewsRatingSr || 'Valutazione: 5 su 5 stelle';
+    const ratingLabel = strings.reviewsRatingLabel || 'Valutazione: ';
     const amazonSource = strings.reviewsAmazonSource || 'Recensione Amazon';
 
-    track.querySelectorAll('.review-stars .sr-only').forEach(el => {
-      el.textContent = ratingSr;
+    track.querySelectorAll('.review-rating-label').forEach(el => {
+      el.textContent = ratingLabel;
     });
     track.querySelectorAll('.review-stars').forEach(el => {
-      el.setAttribute('aria-label', ratingSr);
+      el.setAttribute('aria-label', ratingLabel + '5/5');
     });
     track.querySelectorAll('.amazon-label-text').forEach(el => {
       el.textContent = amazonSource;
