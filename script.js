@@ -1120,7 +1120,7 @@ const FANO_I18N = {
     "fanoStoryP1": "Con \"Fano col naso all'insù\", i bambini esplorano la città di Vitruvio attraverso 40+ disegni da colorare, giochi e attività creative pensati per imparare divertendosi.",
     "fanoStoryP2": "Dalle antiche origini di Fanum Fortunae, la città fondata dai Romani, fino alle sue tradizioni più amate, i bambini scopriranno una Fano piena di storie: la Basilica di Vitruvio, l'Arco d'Augusto, la Fontana della Fortuna, il Teatro della Fortuna, il porto, il famoso Carnevale, la Moretta fanese e le tradizioni del mare come il gustoso brodetto.",
     "fanoStoryP3": "Tra le pagine prenderanno vita monumenti, personaggi e curiosità che renderanno ogni disegno una piccola avventura da colorare e scoprire.",
-    "fanoStoryP4": "Ma questo non è solo un libro da colorare: è un viaggio fatto di curiosità, osservazione e fantasia. I bambini potranno esprimere la propria creatività, allenare concentrazione e manualità e avvicinarsi alla storia e alla cultura di una città unica attraverso il gioco.",
+    "fanoStoryP4": "Nato da un fanese per amore della sua città, questo non è solo un libro da colorare: è un viaggio fatto di curiosità, osservazione e fantasia. I bambini potranno esprimere la propria creatività, allenare concentrazione e manualità e avvicinarsi alla storia e alla cultura di una città unica attraverso il gioco.",
     "fanoInsideTitle": "Dentro il libro",
     "fanoInsideSubtitle": "Più di 40 disegni, giochi e attività per scoprire Fano divertendosi.",
     "fanoColoredTitle": "E tu, come la coloreresti?",
@@ -1137,7 +1137,10 @@ const FANO_I18N = {
     "fanoReviewsSectionTitle": "Cosa dicono i lettori su Amazon",
     "fanoReviewsSectionSubtitle": "Recensioni reali e verificate da chi ha già scoperto il libro",
     "fanoFinalTitle": "Scopri Fano, colora la sua storia e crea la tua avventura!",
-    "fanoFinalCta": "Scopri il libro su Amazon"
+    "fanoFinalCta": "Scopri il libro su Amazon",
+    "fanoOriginNote": "Un libro fatto da un fanese per amore della sua città.",
+    "fanoReview1Text": "Bellissimo! Il primo libro da colorare e con attività sulla città di Fano!",
+    "fanoReview2Text": "Davvero bellissimo, ben fatto e divertente!<br />Unisce l’arte del colorare insieme ai propri figli, con la scoperta del territorio.<br />Inoltre sono presenti anche quiz da colorare e risolvere!<br />Non so se lo adoro di più io o mi figlio che ha subito iniziarlo a colorarlo tutto!!<br />Super consigliato!!"
   },
   "en": {
     "navColoring": "Coloring Books",
@@ -1155,7 +1158,7 @@ const FANO_I18N = {
     "fanoStoryP1": "With \"Fano col naso all'insù\", children explore Vitruvius' city through 40+ coloring pages, games, and creative activities designed to learn while having fun.",
     "fanoStoryP2": "From the ancient roots of Fanum Fortunae, the city founded by the Romans, to its most beloved traditions, kids will discover a Fano full of stories: the Basilica of Vitruvius, the Arch of Augustus, the Fountain of Fortune, the Teatro della Fortuna, the harbor, the famous Carnival, the Moretta fanese, and seafaring traditions like the flavorful brodetto.",
     "fanoStoryP3": "Monuments, characters, and surprising curiosities come to life across the pages, turning every drawing into a little adventure to color and uncover.",
-    "fanoStoryP4": "More than just a coloring book, this is an inspiring journey of curiosity, observation, and imagination. Children can express their creativity, train concentration and fine motor skills, and connect with the history and culture of a unique Italian city through play.",
+    "fanoStoryP4": "Created by a native of Fano out of love for his hometown, this is not just a coloring book: it is a journey of curiosity, observation, and imagination. Children can express their creativity, develop concentration and dexterity, and get closer to the rich history and culture of a unique Italian city through play.",
     "fanoInsideTitle": "Inside the Book",
     "fanoInsideSubtitle": "Over 40 drawings, puzzles, and activities to discover Fano while having fun.",
     "fanoColoredTitle": "And how would you color it?",
@@ -1172,7 +1175,10 @@ const FANO_I18N = {
     "fanoReviewsSectionTitle": "What Readers Say on Amazon",
     "fanoReviewsSectionSubtitle": "Authentic, verified reviews from families who already explored the book",
     "fanoFinalTitle": "Discover Fano, color its history, and start your adventure!",
-    "fanoFinalCta": "Discover the book on Amazon"
+    "fanoFinalCta": "Discover the book on Amazon",
+    "fanoOriginNote": "A book made by a native of Fano out of love for his city.",
+    "fanoReview1Text": "Wonderful! The first coloring and activity book about the city of Fano!",
+    "fanoReview2Text": "Truly wonderful, well made, and lots of fun!<br />It combines coloring together with your children and discovering the local area.<br />There are also fun quizzes to color and solve!<br />I don't know who loves it more, me or my son who immediately started coloring the whole thing!!<br />Highly recommended!!"
   },
   "de": {
     "navColoring": "Malbücher",
@@ -1190,7 +1196,7 @@ const FANO_I18N = {
     "fanoStoryP1": "Mit \"Fano col naso all'insù\" erkunden Kinder die Stadt von Vitruv durch mehr als 40 Malvorlagen, Spiele und kreative Aufgaben, die spielerisches Lernen fördern.",
     "fanoStoryP2": "Von den antiken Ursprüngen von Fanum Fortunae bis zu den lebendigen Traditionen entdecken Kinder ein faszinierendes Fano: die Basilika von Vitruv, den Augustusbogen, den Glücksbrunnen, das Teatro della Fortuna, den Hafen, den berühmten Karneval, die Moretta fanese und Meeresköstlichkeiten wie den Brodetto.",
     "fanoStoryP3": "Bauwerke, Persönlichkeiten und spannende Besonderheiten erwachen auf den Seiten zum Leben und verwandeln jede Zeichnung in ein kleines Abenteuer.",
-    "fanoStoryP4": "Dieses Buch ist weit mehr als ein Malbuch: Es ist eine Reise voller Neugier und Fantasie. Kinder entfalten ihre Kreativität, stärken Konzentration und Feinmotorik und lernen die Kultur einer geschichtsträchtigen Stadt spielerisch kennen.",
+    "fanoStoryP4": "Geschaffen von einem gebürtigen Fanese aus Liebe zu seiner Heimatstadt, ist dies weit mehr als ein Malbuch: Es ist eine Reise voller Neugier, Beobachtung und Fantasie. Kinder entfalten ihre Kreativität, stärken Konzentration und Feinmotorik und lernen die Kultur einer geschichtsträchtigen Stadt spielerisch kennen.",
     "fanoInsideTitle": "Blick ins Buch",
     "fanoInsideSubtitle": "Über 40 Zeichnungen, Spiele und Aktivitäten, um Fano mit Freude zu entdecken.",
     "fanoColoredTitle": "Und wie würdest du es ausmalen?",
@@ -1207,7 +1213,10 @@ const FANO_I18N = {
     "fanoReviewsSectionTitle": "Was Leser auf Amazon sagen",
     "fanoReviewsSectionSubtitle": "Echte und verifizierte Bewertungen von Familien, die das Buch bereits entdeckt haben",
     "fanoFinalTitle": "Entdecke Fano, male seine Geschichte aus und erlebe dein Abenteuer!",
-    "fanoFinalCta": "Das Buch auf Amazon entdecken"
+    "fanoFinalCta": "Das Buch auf Amazon entdecken",
+    "fanoOriginNote": "Ein Buch, geschaffen von einem Fanese aus Liebe zu seiner Stadt.",
+    "fanoReview1Text": "Wunderschön! Das erste Mal- und Mitmachbuch über die Stadt Fano!",
+    "fanoReview2Text": "Wirklich wunderschön, liebevoll gestaltet und unterhaltsam!<br />Es verbindet gemeinsames Malen mit den eigenen Kindern und das Entdecken der Region.<br />Dazu gibt es tolle Quizze zum Ausmalen und Rätseln!<br />Ich weiß nicht, wer es mehr liebt – ich oder mein Sohn, der sofort angefangen hat, das ganze Buch auszumalen!!<br />Wärmstens empfohlen!!"
   },
   "fr": {
     "navColoring": "Livres de coloriage",
@@ -1225,7 +1234,7 @@ const FANO_I18N = {
     "fanoStoryP1": "Avec \"Fano col naso all'insù\", les enfants explorent la cité de Vitruve à travers plus de 40 coloriages, jeux et activités créatives conçus pour apprendre en s'amusant.",
     "fanoStoryP2": "Des origines antiques de Fanum Fortunae, fondée par les Romains, à ses traditions emblématiques, les enfants découvrent un Fano riche en histoires : la Basilique de Vitruve, l'Arc d'Auguste, la Fontaine de la Fortune, le Teatro della Fortuna, le port, le célèbre Carnaval, la Moretta fanese et la tradition du brodetto.",
     "fanoStoryP3": "Au fil des pages, monuments, personnages et anecdotes prennent vie, transformant chaque dessin en une belle aventure à colorier.",
-    "fanoStoryP4": "Bien plus qu'un simple livre de coloriage, c'est une invitation à la curiosité, à l'observation et à l'imagination. Les enfants développent leur créativité, exercent leur concentration et découvrent la culture d'une ville unique par le jeu.",
+    "fanoStoryP4": "Né du cœur d'un habitant de Fano par amour pour sa ville, ce n'est pas seulement un livre de coloriage : c'est un voyage fait de curiosité, d'observation et d'imagination. Les enfants peuvent exprimer leur créativité, développer concentration et motricité, et s'initier à l'histoire et à la culture d'une ville unique à travers le jeu.",
     "fanoInsideTitle": "Dans le livre",
     "fanoInsideSubtitle": "Plus de 40 dessins, énigmes et activités pour explorer Fano dans la joie.",
     "fanoColoredTitle": "Et toi, comment le colorierais-tu ?",
@@ -1242,7 +1251,10 @@ const FANO_I18N = {
     "fanoReviewsSectionTitle": "Les avis des lecteurs sur Amazon",
     "fanoReviewsSectionSubtitle": "Commentaires réels et vérifiés de parents qui ont partagé le livre",
     "fanoFinalTitle": "Explore Fano, colorie son histoire et crée ta propre aventure !",
-    "fanoFinalCta": "Découvrir le livre sur Amazon"
+    "fanoFinalCta": "Découvrir le livre sur Amazon",
+    "fanoOriginNote": "Un livre créé par un enfant de Fano par amour pour sa ville.",
+    "fanoReview1Text": "Magnifique ! Le tout premier livre de coloriage et d'activités sur la ville de Fano !",
+    "fanoReview2Text": "Vraiment magnifique, très bien conçu et amusant !<br />Il allie le plaisir de colorier avec ses enfants à la découverte du territoire.<br />En plus, il y a des quiz à colorier et à résoudre !<br />Je ne sais pas qui l'adore le plus, moi ou mon fils qui a tout de suite commencé à tout colorier !!<br />Super recommandé !!"
   },
   "es": {
     "navColoring": "Libros para colorear",
@@ -1260,7 +1272,7 @@ const FANO_I18N = {
     "fanoStoryP1": "Con \"Fano col naso all'insù\", los niños exploran la ciudad de Vitruvio a través de más de 40 dibujos para colorear, juegos y actividades creativas diseñadas para aprender jugando.",
     "fanoStoryP2": "Desde los antiguos orígenes de Fanum Fortunae, fundada por los romanos, hasta sus tradiciones más queridas, los niños descubrirán una Fano llena de encanto: la Basílica de Vitruvio, el Arco de Augusto, la Fuente de la Fortuna, el Teatro de la Fortuna, el puerto, el famoso Carnaval, la Moretta fanese y las tradiciones marineras como el delicioso brodetto.",
     "fanoStoryP3": "Monumentos, personajes y curiosidades cobran vida en cada página, haciendo de cada ilustración una pequeña aventura para colorear y explorar.",
-    "fanoStoryP4": "No es solo un libro para colorear: es una experiencia de curiosidad, observación y creatividad. Los niños podrán ejercitar su motricidad fina, concentración y acercarse al patrimonio cultural de una forma lúdica y cercana.",
+    "fanoStoryP4": "Nacido del amor de un fanés por su ciudad natal, este no es solo un libro para colorear: es un viaje de curiosidad, observación e imaginación. Los niños podrán expresar su creatividad, entrenar la concentración y la motricidad, y acercarse a la historia y cultura de una ciudad única a través del juego.",
     "fanoInsideTitle": "Dentro del libro",
     "fanoInsideSubtitle": "Más de 40 dibujos, acertijos y actividades para descubrir Fano divirtiéndose.",
     "fanoColoredTitle": "¿Y tú, cómo lo colorearías?",
@@ -1277,7 +1289,10 @@ const FANO_I18N = {
     "fanoReviewsSectionTitle": "Lo que opinan los lectores en Amazon",
     "fanoReviewsSectionSubtitle": "Reseñas reales y verificadas de familias que ya disfrutan del libro",
     "fanoFinalTitle": "¡Descubre Fano, colorea su historia y vive tu propia aventura!",
-    "fanoFinalCta": "Descubrir el libro en Amazon"
+    "fanoFinalCta": "Descubrir el libro en Amazon",
+    "fanoOriginNote": "Un libro hecho por un fanés por amor a su ciudad.",
+    "fanoReview1Text": "¡Precioso! ¡El primer libro para colorear y con actividades sobre la ciudad de Fano!",
+    "fanoReview2Text": "¡Verdaderamente hermoso, bien hecho y divertido!<br />Une el arte de colorear junto a los hijos con el descubrimiento del territorio.<br />¡Además incluye cuestionarios para colorear y resolver!<br />¡¡No sé si me gusta más a mí o a mi hijo, que enseguida se puso a colorearlo entero!!<br />¡¡Super recomendado!!"
   },
   "nl": {
     "navColoring": "Kleurboeken",
@@ -1295,7 +1310,7 @@ const FANO_I18N = {
     "fanoStoryP1": "Met \"Fano col naso all'insù\" verkennen kinderen de stad van Vitruvius via meer dan 40 kleurplaten, puzzels en creatieve opdrachten om spelenderwijs te leren.",
     "fanoStoryP2": "Van de Romeinse oorsprong van Fanum Fortunae tot de levendige tradities ontdekken kinderen een stad vol verhalen: de Basiliek van Vitruvius, de Boog van Augustus, de Fontein van Fortuna, het Teatro della Fortuna, de haven, het beroemde Carnaval, de Moretta fanese en lokale zeetradities zoals brodetto.",
     "fanoStoryP3": "Monumenten, historische figuren en leuke weetjes komen tot leven, waardoor elke plaat een nieuw avontuur wordt om in te kleuren.",
-    "fanoStoryP4": "Dit is niet zomaar een kleurboek: het is een ontdekkingsreis voor de verbeelding. Kinderen ontwikkelen hun creativiteit en concentratie en maken op een speelse manier kennis met cultuur en geschiedenis.",
+    "fanoStoryP4": "Gecreëerd door een inwoner van Fano uit liefde voor zijn stad, is dit niet zomaar een kleurboek: het is een reis vol nieuwsgierigheid, observatie en verbeelding. Kinderen kunnen hun creativiteit de vrije loop laten, concentratie en behendigheid oefenen en spelenderwijs kennismaken met de rijke geschiedenis en cultuur van een unieke stad.",
     "fanoInsideTitle": "In het boek",
     "fanoInsideSubtitle": "Ruim 40 tekeningen, raadsels en doevoorbeelden om Fano met plezier te ontdekken.",
     "fanoColoredTitle": "En hoe zou jij het inkleuren?",
@@ -1312,7 +1327,10 @@ const FANO_I18N = {
     "fanoReviewsSectionTitle": "Wat lezers zeggen op Amazon",
     "fanoReviewsSectionSubtitle": "Echte en geverifieerde recensies van ouders die het boek al ontdekten",
     "fanoFinalTitle": "Ontdek Fano, kleur haar geschiedenis in en beleef je eigen avontuur!",
-    "fanoFinalCta": "Ontdek het boek op Amazon"
+    "fanoFinalCta": "Ontdek het boek op Amazon",
+    "fanoOriginNote": "Een boek gemaakt door een inwoner van Fano uit liefde voor zijn stad.",
+    "fanoReview1Text": "Prachtig! Het allereerste kleur- en activiteitenboek over de stad Fano!",
+    "fanoReview2Text": "Echt prachtig, goed gemaakt en heel leuk!<br />Het combineert gezellig kleuren met je kinderen met het ontdekken van de streek.<br />Er staan ook leuke quizzen in om in te kleuren en op te lossen!<br />Ik weet niet wie er meer van houdt, ik of mijn zoon die meteen het hele boek begon in te kleuren!!<br />Zeker een aanrader!!"
   },
   "pl": {
     "navColoring": "Kolorowanki",
@@ -1330,7 +1348,7 @@ const FANO_I18N = {
     "fanoStoryP1": "Dzięki książce \"Fano col naso all'insù\" dzieci poznają miasto Witruwiusza przez ponad 40 kolorowanek, zagadek i zabaw edukacyjnych łączących naukę z frajdą.",
     "fanoStoryP2": "Od starożytnych początków rzymskiego Fanum Fortunae po barwne tradycje, mali czytelnicy odkrywają urokliwe Fano: Bazylikę Witruwiusza, Łuk Augusta, Fontannę Fortuny, Teatro della Fortuna, port, słynny Karnawał, Morettę fanese i morskie przysmaki takie jak brodetto.",
     "fanoStoryP3": "Zabytki, postacie i fascynujące ciekawostki ożywają na stronach, zamieniając każdy rysunek w małą przygodę do pokolorowania.",
-    "fanoStoryP4": "To coś więcej niż zwykła kolorowanka: to podróż rozwijająca spostrzegawczość, kreatywność i zdolności manualne, przybliżająca dzieciom kulturę w lekki, zabawowy sposób.",
+    "fanoStoryP4": "Stworzona przez mieszkańca Fano z miłości do swojego miasta, nie jest to zwykła kolorowanka: to podróż pełna ciekawości, spostrzegawczości i wyobraźni. Dzieci mogą rozwijać swoją kreatywność, ćwiczyć koncentrację i sprawność manualną oraz poznawać historię i kulturę wyjątkowego miasta poprzez zabawę.",
     "fanoInsideTitle": "W środku książki",
     "fanoInsideSubtitle": "Ponad 40 rysunków, łamigłówek i zabaw do wesołego odkrywania Fano.",
     "fanoColoredTitle": "A Ty jak byś to pokolorował?",
@@ -1347,7 +1365,10 @@ const FANO_I18N = {
     "fanoReviewsSectionTitle": "Co mówią czytelnicy na Amazonie",
     "fanoReviewsSectionSubtitle": "Autentyczne, zweryfikowane opinie rodzin, które poznały tę książkę",
     "fanoFinalTitle": "Odkryj Fano, pokoloruj jego historię i twórz własne przygody!",
-    "fanoFinalCta": "Odkryj książkę na Amazonie"
+    "fanoFinalCta": "Odkryj książkę na Amazonie",
+    "fanoOriginNote": "Książka stworzona przez mieszkańca Fano z miłości do swojego miasta.",
+    "fanoReview1Text": "Przepiękna! Pierwsza kolorowanka z zadaniami o mieście Fano!",
+    "fanoReview2Text": "Naprawdę przepiękna, świetnie zrobiona i wciągająca!<br />Łączy wspólne kolorowanie z dziećmi z odkrywaniem uroków regionu.<br />Są też zagadki i quizy do kolorowania i rozwiązywania!<br />Nie wiem, komu podoba się bardziej – mnie czy mojemu synowi, który od razu zaczął kolorować od deski do deski!!<br />Gorąco polecam!!"
   },
   "sv": {
     "navColoring": "Målarböcker",
@@ -1365,7 +1386,7 @@ const FANO_I18N = {
     "fanoStoryP1": "Med \"Fano col naso all'insù\" utforskar barn Vitruvius stad genom över 40 målarbilder, gåtor och kreativa uppgifter utformade för att lära genom lek.",
     "fanoStoryP2": "Från de romerska rötterna i Fanum Fortunae till stadens mest älskade traditioner upptäcker barnen ett Fano rikt på berättelser: Vitruvius basilika, Augustusbågen, Fortunafontänen, Teatro della Fortuna, hamnen, den berömda karnevalen, Moretta fanese och havets läckerheter som brodetto.",
     "fanoStoryP3": "Monument, figurer och spännande fakta vaknar till liv på sidorna och förvandlar varje teckning till ett litet äventyr att färglägga.",
-    "fanoStoryP4": "Det här är mer än bara en målarbok: det är en resa fylld av upptäckarglädje och fantasi. Barnen får uttrycka sin kreativitet, öva koncentration och bekanta sig med italiensk historia på ett roligt sätt.",
+    "fanoStoryP4": "Skapad av en Fano-bo av kärlek till sin stad, är detta inte bara en målarbok: det är en resa fylld av nyfikenhet, observation och fantasi. Barnen får uttrycka sin kreativitet, träna koncentration och finmotorik och bekanta sig med en unik stads historia och kultur genom lek.",
     "fanoInsideTitle": "I boken",
     "fanoInsideSubtitle": "Över 40 teckningar, pyssel och aktiviteter för att upptäcka Fano med glädje.",
     "fanoColoredTitle": "Och hur skulle du färglägga den?",
@@ -1382,7 +1403,10 @@ const FANO_I18N = {
     "fanoReviewsSectionTitle": "Vad läsarna säger på Amazon",
     "fanoReviewsSectionSubtitle": "Äkta och verifierade recensioner från familjer som redan läst och färglagt boken",
     "fanoFinalTitle": "Upptäck Fano, färglägg dess historia och skapa ditt äventyr!",
-    "fanoFinalCta": "Upptäck boken på Amazon"
+    "fanoFinalCta": "Upptäck boken på Amazon",
+    "fanoOriginNote": "En bok skapad av en Fano-bo av kärlek till sin hemstad.",
+    "fanoReview1Text": "Underbar! Den allra första målar- och aktivitetsboken om staden Fano!",
+    "fanoReview2Text": "Verkligen jättefin, välgjord och rolig!<br />Kombinerar glädjen i att måla tillsammans med barnen med att upptäcka stadens historia.<br />Det finns även klurigheter att färglägga och lösa!<br />Jag vet inte vem som älskar den mest, jag eller min son som genast började färglägga alltihop!!<br />Varmt rekommenderad!!"
   },
   "ja": {
     "navColoring": "ぬりえ絵本",
@@ -1400,7 +1424,7 @@ const FANO_I18N = {
     "fanoStoryP1": "『Fano col naso all'insù』は、40以上のぬりえやクイズ、楽しいアクティビティを通じて、子どもたちがウィトルウィウスゆかりの街を楽しく学べる一冊です。",
     "fanoStoryP2": "古代ローマ人が築いた「ファヌム・フォルトゥナエ」から受け継がれる伝統まで、ウィトルウィウスのバシリカ、アウグストゥスの門、フォルトゥナの噴水、劇場、港、有名なカーニバルや郷土の味など、ファーノの豊かな物語に出会えます。",
     "fanoStoryP3": "歴史的建造物や街のシンボルがページの中で生き生きとよみがえり、1ページごとに新しい発見と冒険が広がります。",
-    "fanoStoryP4": "ただ塗るだけでなく、観察力や想像力、集中力を育む知育ブックです。画面から離れて、遊びながら豊かな歴史と文化に親しむことができます。",
+    "fanoStoryP4": "生まれ育ったファーノへの深い愛から誕生したこの本は、単なるぬりえにとどまりません。好奇心、観察力、そして豊かな想像力を育む特別な冒険の旅です。子どもたちは遊びを通じて創造性を発揮し、集中力と手先の器用さを磨きながら、この比類なき街の歴史や文化に親しむことができます。",
     "fanoInsideTitle": "本の中をのぞいてみよう",
     "fanoInsideSubtitle": "40以上のぬりえやクイズで、ファーノの街を楽しく発見。",
     "fanoColoredTitle": "きみならどんな色でぬってみる？",
@@ -1417,7 +1441,10 @@ const FANO_I18N = {
     "fanoReviewsSectionTitle": "Amazonカスタマーレビュー",
     "fanoReviewsSectionSubtitle": "実際に本を楽しんでいただいたご家族からの本物の声",
     "fanoFinalTitle": "ファーノの街に出会い、歴史を彩り、きみだけの冒険を始めよう！",
-    "fanoFinalCta": "Amazonで本を見る"
+    "fanoFinalCta": "Amazonで本を見る",
+    "fanoOriginNote": "生まれ故郷ファーノへの愛から、地元の著者が心を込めて生み出した一冊。",
+    "fanoReview1Text": "素晴らしい！ファーノの街をテーマにした、初めてのぬりえ＆アクティビティブックです！",
+    "fanoReview2Text": "本当に素晴らしく、丁寧な作りでとても楽しいです！<br />親子で一緒にぬりえを楽しみながら、地域の魅力や歴史を発見できます。<br />色を塗りながら解くクイズや遊びも盛りだくさん！<br />私と息子のどちらが夢中になっているかわからないくらいで、息子は早速夢中で塗り始めました！！<br />心からおすすめです！！"
   }
 };
 
@@ -1846,6 +1873,17 @@ function applyLanguage(lang) {
     setText('fano-reviews-section-subtitle', strings.fanoReviewsSectionSubtitle || 'Recensioni autentiche e verificate da chi ha già scoperto il libro');
     setText('fano-final-title', strings.fanoFinalTitle || 'Scopri Fano, colora la sua storia e crea la tua avventura!');
     setText('fano-final-cta-text', strings.fanoFinalCta || 'Scopri il libro su Amazon');
+    setText('fano-origin-note', strings.fanoOriginNote || 'Un libro fatto da un fanese per amore della sua città.');
+
+    // Localize Fano reviews
+    setText('fano-review-text-1', `"${strings.fanoReview1Text || 'Bellissimo! Il primo libro da colorare e con attività sulla città di Fano!'}"`);
+    setText('fano-review-text-2', `"${strings.fanoReview2Text || 'Davvero bellissimo, ben fatto e divertente!<br />Unisce l’arte del colorare insieme ai propri figli, con la scoperta del territorio.<br />Inoltre sono presenti anche quiz da colorare e risolvere!<br />Non so se lo adoro di più io o mi figlio che ha subito iniziarlo a colorarlo tutto!!<br />Super consigliato!!'}"`);
+    document.querySelectorAll('.fano-rating-label').forEach(el => {
+      el.textContent = strings.reviewsRatingLabel || 'Valutazione: ';
+    });
+    document.querySelectorAll('.fano-amazon-source').forEach(el => {
+      el.textContent = strings.reviewsAmazonSource || 'Recensione Amazon';
+    });
 
     // Update Amazon marketplace and links for Fano
     renderFanoMarketSelector(lang);
