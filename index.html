@@ -199,11 +199,13 @@
 
         <!-- Navigazione Principale -->
         <nav class="site-nav" aria-label="Navigazione principale">
-          <a href="#catalogo" class="nav-link active" id="nav-link-books">Storie</a>
+          <a href="#collana" class="nav-link" id="nav-link-series">Collana</a>
+          <a href="#libri" class="nav-link" id="nav-link-books">Libri</a>
           <a href="characters.html" class="nav-link" id="nav-link-characters">Personaggi</a>
+          <a href="#valori" class="nav-link" id="nav-link-values">Valori</a>
           <a href="#recensioni" class="nav-link" id="nav-link-reviews">Recensioni</a>
+          <a href="about.html" class="nav-link" id="nav-link-about">Chi siamo</a>
           <a href="fano.html" class="nav-link" id="nav-link-coloring">Da colorare</a>
-          <a href="about.html" class="nav-link" id="nav-link-about">La nostra storia</a>
         </nav>
       </div>
     </div>
@@ -257,10 +259,59 @@
     </section>
 
     <!-- ======================================================================
-         GRIGLIA CATALOGO LIBRI CON SELETTORE EDIZIONE SECONDARIO
+         SEZIONE 1: LA COLLANA
          ====================================================================== -->
-    <section class="catalog-section" id="catalogo">
+    <section class="series-section" id="collana" aria-label="La Collana">
+      <div class="container series-container">
+        <div class="series-logo-frame">
+          <img 
+            src="assets/construction-site-adventures/Logo.ITA.v2.png" 
+            alt="Le Avventure del Cantiere - Logo Collana" 
+            class="series-logo-img" 
+            id="series-section-logo" 
+            loading="lazy"
+          />
+        </div>
+
+        <h2 class="series-title" id="series-section-title">La Collana</h2>
+
+        <div class="series-lead-box">
+          <p class="series-lead-text" id="series-lead-text">
+            "Le Avventure del Cantiere" è una collana di storie illustrate per bambini che ha come protagonisti un gruppo di simpatici veicoli da costruzione. Ogni libro trasforma una sfida quotidiana di cantiere in una piccola grande avventura ricca di amicizia, curiosità, lavoro di squadra e scoperta, offrendo a genitori e figli storie semplici e coinvolgenti da condividere insieme.
+          </p>
+        </div>
+
+        <div class="series-characters-preview">
+          <div class="series-chars-avatars">
+            <span class="series-char-avatar" title="Benny"><img src="assets/brand/Benny.jpeg" alt="Benny" loading="lazy" /></span>
+            <span class="series-char-avatar" title="Bruno"><img src="assets/brand/Bruno.jpeg" alt="Bruno" loading="lazy" /></span>
+            <span class="series-char-avatar" title="Leo"><img src="assets/brand/Leo.jpeg" alt="Leo" loading="lazy" /></span>
+            <span class="series-char-avatar" title="Nina"><img src="assets/brand/Nina.jpeg" alt="Nina" loading="lazy" /></span>
+            <span class="series-char-avatar" title="Rino"><img src="assets/brand/Rino.jpeg" alt="Rino" loading="lazy" /></span>
+            <span class="series-char-avatar" title="Rudy"><img src="assets/brand/Rudy.jpeg" alt="Rudy" loading="lazy" /></span>
+          </div>
+          <p class="series-chars-intro" id="series-chars-intro">
+            Sei simpatici veicoli da cantiere — Benny, Bruno, Leo, Nina, Rino e Rudy — pronti a collaborare e ad affrontare ogni sfida insieme.
+          </p>
+          <a href="characters.html" class="series-characters-cta" id="series-chars-cta">
+            <span id="series-chars-cta-text">Scopri i personaggi delle Avventure del Cantiere</span>
+            <span class="cta-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEZIONE 2: I LIBRI (CATALOGO CON FILTRI E ANTEPRIMA)
+         ====================================================================== -->
+    <section class="catalog-section" id="libri">
+      <span id="catalogo" style="position: absolute; margin-top: -110px;"></span>
       <div class="container">
+        <div class="catalog-header">
+          <h2 class="catalog-title" id="books-section-title">I Libri</h2>
+          <p class="catalog-subtitle" id="books-section-subtitle">Storie illustrate per piccoli lettori: scopri tutti i libri disponibili</p>
+        </div>
+
         <!-- Selettore Secondario Lingua Libri (Indipendente dalla lingua del sito) -->
         <div class="book-filters-container">
           <div class="book-filters" role="tablist" aria-label="Filtra libri per lingua">
@@ -294,12 +345,127 @@
     </section>
 
     <!-- ======================================================================
-         SEZIONE RECENSIONI CLIENTI AMAZON (SOCIAL PROOF AUTENTICO)
+         SEZIONE 3: VALORI (BAMBINI & GENITORI)
+         ====================================================================== -->
+    <section class="values-section" id="valori" aria-label="I Valori della Collana">
+      <div class="container">
+        <div class="values-header">
+          <h2 class="values-title" id="values-section-title">Valori</h2>
+          <p class="values-subtitle" id="values-section-subtitle">Perché le Avventure del Cantiere piacciono sia ai bambini sia ai genitori</p>
+        </div>
+
+        <div class="values-grid">
+          <!-- Blocco Bambini -->
+          <div class="values-card kids">
+            <div class="values-card-header">
+              <div class="values-card-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="values-card-title" id="values-kids-title">Perché piace ai bambini</h3>
+            </div>
+            <ul class="values-list">
+              <li class="values-item">
+                <span class="values-bullet" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span id="values-kids-item-1">Grandi macchine e cantieri</span>
+              </li>
+              <li class="values-item">
+                <span class="values-bullet" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span id="values-kids-item-2">Personaggi riconoscibili</span>
+              </li>
+              <li class="values-item">
+                <span class="values-bullet" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span id="values-kids-item-3">Piccole grandi avventure</span>
+              </li>
+              <li class="values-item">
+                <span class="values-bullet" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span id="values-kids-item-4">Curiosità da esplorare</span>
+              </li>
+              <li class="values-item">
+                <span class="values-bullet" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span id="values-kids-item-5">Problemi da risolvere insieme</span>
+              </li>
+              <li class="values-item">
+                <span class="values-bullet" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span id="values-kids-item-6">Amicizia e collaborazione</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Blocco Genitori -->
+          <div class="values-card parents">
+            <div class="values-card-header">
+              <div class="values-card-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </div>
+              <h3 class="values-card-title" id="values-parents-title">Perché piace ai genitori</h3>
+            </div>
+            <ul class="values-list">
+              <li class="values-item">
+                <span class="values-bullet" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span id="values-parents-item-1">Storie positive e rassicuranti</span>
+              </li>
+              <li class="values-item">
+                <span class="values-bullet" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span id="values-parents-item-2">Valori educativi senza essere didascaliche</span>
+              </li>
+              <li class="values-item">
+                <span class="values-bullet" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span id="values-parents-item-3">Collaborazione e amicizia</span>
+              </li>
+              <li class="values-item">
+                <span class="values-bullet" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span id="values-parents-item-4">Curiosità e problem solving</span>
+              </li>
+              <li class="values-item">
+                <span class="values-bullet" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span id="values-parents-item-5">Lettura condivisa prima della nanna</span>
+              </li>
+              <li class="values-item">
+                <span class="values-bullet" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span id="values-parents-item-6">Personaggi ricorrenti a cui affezionarsi</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEZIONE 4: RECENSIONI CLIENTI AMAZON (SOCIAL PROOF AUTENTICO)
          ====================================================================== -->
     <section class="reviews-section" id="recensioni" aria-label="Recensioni Amazon">
       <div class="container">
         <div class="reviews-header">
-          <h2 class="reviews-title" id="reviews-section-title">Cosa Dicono i Genitori</h2>
+          <h2 class="reviews-title" id="reviews-section-title">Recensioni</h2>
+          <p class="reviews-subtitle" id="reviews-section-subtitle">Cosa dicono i genitori che hanno letto le nostre storie</p>
         </div>
 
         <div class="reviews-carousel-wrapper" id="reviews-carousel" role="region" aria-roledescription="carousel" aria-label="Recensioni dei clienti Amazon" tabindex="0">
@@ -329,24 +495,66 @@
 
   </main>
 
-  <!-- ======================================================================
-       FOOTER
+    <!-- ======================================================================
+       FOOTER (4 COLONNE)
        ====================================================================== -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-content">
-        <div>
-          <div class="footer-brand-title">CSA Books 4 Kids</div>
-          <p id="footer-about-text" style="max-width: 500px; font-size: 0.9rem;">
-            Storie per bambini, nate da un papà e una mamma.
+      <div class="footer-grid">
+        <!-- Colonna 1: Brand & Filosofia -->
+        <div class="footer-col footer-col-brand">
+          <div class="footer-brand">
+            <div class="footer-brand-title">CSA Books <span class="highlight">4 Kids</span></div>
+          </div>
+          <p class="footer-tagline" id="footer-tagline-text">
+            Storie per bambini, nate in famiglia e cresciute con la fantasia.
+          </p>
+          <p class="footer-mission" id="footer-mission-text">
+            Libri illustrati pensati per accendere la curiosità e condividere momenti speciali tra genitori e figli.
           </p>
         </div>
-        <div class="footer-nav">
-          <a href="#catalogo" class="footer-nav-link" id="footer-nav-books">Storie</a>
-          <a href="characters.html" class="footer-nav-link" id="footer-nav-characters">Personaggi</a>
-          <a href="#recensioni" class="footer-nav-link" id="footer-nav-reviews">Recensioni</a>
-          <a href="fano.html" class="footer-nav-link" id="footer-nav-coloring">Da colorare</a>
-          <a href="about.html" class="footer-nav-link" id="footer-nav-about">La nostra storia</a>
+
+        <!-- Colonna 2: La Collana -->
+        <div class="footer-col footer-col-series">
+          <h3 class="footer-col-title" id="footer-series-title">Collana</h3>
+          <nav class="footer-links-list" aria-label="Link collana footer">
+            <a href="#collana" class="footer-link" id="footer-link-series">Collana</a>
+            <a href="#libri" class="footer-link" id="footer-link-books">Libri</a>
+            <a href="characters.html" class="footer-link" id="footer-link-characters">Personaggi</a>
+            <a href="#valori" class="footer-link" id="footer-link-values">Valori</a>
+          </nav>
+        </div>
+
+        <!-- Colonna 3: Esplora -->
+        <div class="footer-col footer-col-nav">
+          <h3 class="footer-col-title" id="footer-nav-title">Esplora</h3>
+          <nav class="footer-links-list" aria-label="Link esplora footer">
+            <a href="#recensioni" class="footer-link" id="footer-link-reviews">Recensioni</a>
+            <a href="about.html" class="footer-link" id="footer-link-about">Chi siamo</a>
+            <a href="fano.html" class="footer-link" id="footer-link-coloring">Da colorare</a>
+          </nav>
+        </div>
+
+        <!-- Colonna 4: Seguici & Contatti -->
+        <div class="footer-col footer-col-contact">
+          <h3 class="footer-col-title" id="footer-contact-title">Seguici</h3>
+          <div class="footer-contact-list">
+            <a href="mailto:csabooks.kids@gmail.com" class="footer-contact-item" aria-label="Email csabooks.kids@gmail.com">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>csabooks.kids@gmail.com</span>
+            </a>
+            <a href="https://www.instagram.com/csabooks.kids" target="_blank" rel="noopener noreferrer" class="footer-contact-item" aria-label="Instagram @csabooks.kids">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@csabooks.kids" target="_blank" rel="noopener noreferrer" class="footer-contact-item" aria-label="TikTok @csabooks.kids">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.67 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.33V8.87a8.28 8.28 0 0 0 4.91 1.6V7.02a4.85 4.85 0 0 1-1-.33z"/></svg>
+              <span>TikTok</span>
+            </a>
+          </div>
         </div>
       </div>
 

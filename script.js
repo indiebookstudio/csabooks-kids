@@ -800,10 +800,57 @@ Object.keys(CHARACTERS_I18N).forEach(lang => {
   }
 });
 
+
+// Aggiunte internazionalizzazione per footer a 4 colonne
+const FOOTER_EXTRA_I18N = {
+  "it": {
+    "footerSeriesTitle": "Collana",
+    "footerMission": "Libri illustrati pensati per accendere la curiosità e condividere momenti speciali tra genitori e figli."
+  },
+  "en": {
+    "footerSeriesTitle": "Series",
+    "footerMission": "Illustrated children's books created to inspire curiosity and nurture meaningful family moments."
+  },
+  "de": {
+    "footerSeriesTitle": "Buchreihe",
+    "footerMission": "Illustrierte Kinderbücher, die Neugier wecken und wertvolle gemeinsame Lesemomente schenken."
+  },
+  "fr": {
+    "footerSeriesTitle": "Collection",
+    "footerMission": "Des livres illustrés pour éveiller la curiosité et partager des moments précieux en famille."
+  },
+  "es": {
+    "footerSeriesTitle": "Colección",
+    "footerMission": "Libros ilustrados diseñados para despertar la curiosidad y compartir momentos especiales en familia."
+  },
+  "nl": {
+    "footerSeriesTitle": "Boekenreeks",
+    "footerMission": "Geïllustreerde kinderboeken om nieuwsgierigheid te prikkelen en fijne familiemomenten te delen."
+  },
+  "pl": {
+    "footerSeriesTitle": "Seria",
+    "footerMission": "Ilustrowane książeczki dla dzieci rozbudzające ciekawość i tworzące piękne chwile z rodziną."
+  },
+  "sv": {
+    "footerSeriesTitle": "Bokserie",
+    "footerMission": "Illustrerade barnböcker skapade för att väcka nyfikenhet och ge fina stunder tillsammans."
+  },
+  "ja": {
+    "footerSeriesTitle": "シリーズ",
+    "footerMission": "子どもの好奇心を育み、親子の特別な読書時間を届ける絵本シリーズ。"
+  }
+};
+Object.keys(FOOTER_EXTRA_I18N).forEach(lang => {
+  if (I18N[lang]) {
+    Object.assign(I18N[lang], FOOTER_EXTRA_I18N[lang]);
+  }
+});
+
 const REVIEWS_I18N = {
   it: {
     navReviews: "Recensioni",
-    reviewsTitle: "Cosa Dicono i Genitori",
+    reviewsTitle: "Recensioni",
+    reviewsSubtitle: "Cosa dicono i genitori che hanno letto le nostre storie",
     reviewsRatingLabel: "Valutazione: ",
     reviewsRatingSr: "Valutazione: 5 su 5 stelle",
     reviewsAmazonSource: "Recensione Amazon",
@@ -812,7 +859,8 @@ const REVIEWS_I18N = {
   },
   en: {
     navReviews: "Reviews",
-    reviewsTitle: "What Parents Are Saying",
+    reviewsTitle: "Reviews",
+    reviewsSubtitle: "What parents who have read our stories are saying",
     reviewsRatingLabel: "Rating: ",
     reviewsRatingSr: "Rating: 5 out of 5 stars",
     reviewsAmazonSource: "Amazon Review",
@@ -821,7 +869,8 @@ const REVIEWS_I18N = {
   },
   de: {
     navReviews: "Bewertungen",
-    reviewsTitle: "Was Eltern sagen",
+    reviewsTitle: "Rezensionen",
+    reviewsSubtitle: "Was Eltern sagen, die unsere Geschichten gelesen haben",
     reviewsRatingLabel: "Bewertung: ",
     reviewsRatingSr: "Bewertung: 5 von 5 Sternen",
     reviewsAmazonSource: "Amazon-Rezension",
@@ -830,7 +879,8 @@ const REVIEWS_I18N = {
   },
   fr: {
     navReviews: "Avis",
-    reviewsTitle: "Ce que disent les parents",
+    reviewsTitle: "Avis",
+    reviewsSubtitle: "Ce que disent les parents qui ont lu nos histoires",
     reviewsRatingLabel: "Évaluation : ",
     reviewsRatingSr: "Note : 5 sur 5 étoiles",
     reviewsAmazonSource: "Avis Amazon",
@@ -839,7 +889,8 @@ const REVIEWS_I18N = {
   },
   es: {
     navReviews: "Opiniones",
-    reviewsTitle: "Lo que dicen los padres",
+    reviewsTitle: "Reseñas",
+    reviewsSubtitle: "Lo que dicen los padres que han leído nuestras historias",
     reviewsRatingLabel: "Valoración: ",
     reviewsRatingSr: "Calificación: 5 de 5 estrellas",
     reviewsAmazonSource: "Opinión en Amazon",
@@ -848,7 +899,8 @@ const REVIEWS_I18N = {
   },
   nl: {
     navReviews: "Recensies",
-    reviewsTitle: "Wat ouders zeggen",
+    reviewsTitle: "Recensies",
+    reviewsSubtitle: "Wat ouders zeggen die onze verhalen hebben gelezen",
     reviewsRatingLabel: "Beoordeling: ",
     reviewsRatingSr: "Beoordeling: 5 van de 5 sterren",
     reviewsAmazonSource: "Amazon-recensie",
@@ -857,7 +909,8 @@ const REVIEWS_I18N = {
   },
   pl: {
     navReviews: "Opinie",
-    reviewsTitle: "Co mówią rodzice",
+    reviewsTitle: "Recenzje",
+    reviewsSubtitle: "Co mówią rodzice, którzy przeczytali nasze opowiadania",
     reviewsRatingLabel: "Ocena: ",
     reviewsRatingSr: "Ocena: 5 na 5 gwiazdek",
     reviewsAmazonSource: "Opinia z Amazon",
@@ -866,7 +919,8 @@ const REVIEWS_I18N = {
   },
   sv: {
     navReviews: "Recensioner",
-    reviewsTitle: "Vad föräldrar säger",
+    reviewsTitle: "Recensioner",
+    reviewsSubtitle: "Vad föräldrar som har läst våra berättelser säger",
     reviewsRatingLabel: "Betyg: ",
     reviewsRatingSr: "Betyg: 5 av 5 stjärnor",
     reviewsAmazonSource: "Amazon-recension",
@@ -875,7 +929,8 @@ const REVIEWS_I18N = {
   },
   ja: {
     navReviews: "レビュー",
-    reviewsTitle: "保護者の方々の声",
+    reviewsTitle: "レビュー",
+    reviewsSubtitle: "私たちの物語を読んだ保護者の方々の声",
     reviewsRatingLabel: "評価: ",
     reviewsRatingSr: "評価：5つ星のうち5",
     reviewsAmazonSource: "Amazonカスタマーレビュー",
@@ -1472,6 +1527,524 @@ Object.keys(FANO_I18N).forEach(lang => {
   }
 });
 
+// ============================================================================
+// TRADUZIONI RIORGANIZZAZIONE SITO (Navigazione, Collana, Libri, Valori, Footer)
+// ============================================================================
+const SITE_REORG_I18N = {
+  it: {
+    navSeries: "Collana",
+    navBooks: "Libri",
+    navCharacters: "Personaggi",
+    navValues: "Valori",
+    navReviews: "Recensioni",
+    navAbout: "Chi siamo",
+    navColoring: "Da colorare",
+
+    seriesSectionTitle: "La Collana",
+    seriesCharsIntro: "Sei simpatici veicoli da cantiere — Benny, Bruno, Leo, Nina, Rino e Rudy — pronti a collaborare e ad affrontare ogni sfida insieme.",
+    seriesCharsCta: "Scopri i personaggi delle Avventure del Cantiere",
+
+    booksSectionTitle: "I Libri",
+    booksSectionSubtitle: "Storie illustrate per piccoli lettori: scopri tutti i libri disponibili",
+
+    valuesSectionTitle: "Valori",
+    valuesSectionSubtitle: "Perché le Avventure del Cantiere piacciono sia ai bambini sia ai genitori",
+    valuesKidsTitle: "Perché piace ai bambini",
+    valuesKids1: "Grandi macchine e cantieri",
+    valuesKids2: "Personaggi riconoscibili",
+    valuesKids3: "Piccole grandi avventure",
+    valuesKids4: "Curiosità da esplorare",
+    valuesKids5: "Problemi da risolvere insieme",
+    valuesKids6: "Amicizia e collaborazione",
+
+    valuesParentsTitle: "Perché piace ai genitori",
+    valuesParents1: "Storie positive e rassicuranti",
+    valuesParents2: "Valori educativi senza essere didascaliche",
+    valuesParents3: "Collaborazione e amicizia",
+    valuesParents4: "Curiosità e problem solving",
+    valuesParents5: "Lettura condivisa prima della nanna",
+    valuesParents6: "Personaggi ricorrenti a cui affezionarsi",
+
+    charBennyRole: "Escavatore",
+    charBrunoRole: "Camion da cantiere",
+    charLeoRole: "Gru",
+    charNinaRole: "Betoniera",
+    charRinoRole: "Rullo compressore",
+    charRudyRole: "Bulldozer",
+
+    footerTagline: "Storie per bambini, nate in famiglia e cresciute con la fantasia.",
+    footerExploreTitle: "Esplora",
+    footerFollowTitle: "Seguici"
+  },
+  en: {
+    navSeries: "Series",
+    navBooks: "Books",
+    navCharacters: "Characters",
+    navValues: "Values",
+    navReviews: "Reviews",
+    navAbout: "About Us",
+    navColoring: "Coloring",
+
+    seriesSectionTitle: "The Series",
+    seriesCharsIntro: "Six friendly construction vehicles — Benny, Bruno, Leo, Nina, Rino, and Rudy — always ready to team up and share big adventures!",
+    seriesCharsCta: "Discover the characters of Construction Site Adventures",
+
+    booksSectionTitle: "The Books",
+    booksSectionSubtitle: "Picture books for little readers: discover all available titles",
+
+    valuesSectionTitle: "Values",
+    valuesSectionSubtitle: "Why Construction Site Adventures is loved by both children and parents",
+    valuesKidsTitle: "Why kids love it",
+    valuesKids1: "Big machines and busy construction sites",
+    valuesKids2: "Easily recognizable, friendly characters",
+    valuesKids3: "Exciting, heartwarming adventures",
+    valuesKids4: "Wonder and curiosity to explore",
+    valuesKids5: "Clever problem solving together",
+    valuesKids6: "Friendship and teamwork",
+
+    valuesParentsTitle: "Why parents love it",
+    valuesParents1: "Positive and reassuring stories",
+    valuesParents2: "Educational values without being preachy",
+    valuesParents3: "Cooperation and kindness",
+    valuesParents4: "Curiosity and creative thinking",
+    valuesParents5: "Quality shared bedtime reading",
+    valuesParents6: "Recurring characters children grow fond of",
+
+    charBennyRole: "Excavator",
+    charBrunoRole: "Dump Truck",
+    charLeoRole: "Crane",
+    charNinaRole: "Cement Mixer",
+    charRinoRole: "Roller",
+    charRudyRole: "Bulldozer",
+
+    footerTagline: "Children's stories, born in the family and grown with imagination.",
+    footerExploreTitle: "Explore",
+    footerFollowTitle: "Follow Us"
+  },
+  de: {
+    navSeries: "Buchreihe",
+    navBooks: "Bücher",
+    navCharacters: "Figuren",
+    navValues: "Werte",
+    navReviews: "Bewertungen",
+    navAbout: "Über uns",
+    navColoring: "Zum Ausmalen",
+
+    seriesSectionTitle: "Die Buchreihe",
+    seriesCharsIntro: "Sechs fröhliche Baustellenfahrzeuge – Benny, Bruno, Leo, Nina, Rino und Rudy – immer bereit zusammenzuarbeiten und große Abenteuer zu erleben!",
+    seriesCharsCta: "Entdecke die Charaktere der Baustellenabenteuer",
+
+    booksSectionTitle: "Die Bücher",
+    booksSectionSubtitle: "Bilderbücher für kleine Leser: Entdecke alle verfügbaren Titel",
+
+    valuesSectionTitle: "Werte",
+    valuesSectionSubtitle: "Warum Baustellenabenteuer sowohl Kindern als auch Eltern gefällt",
+    valuesKidsTitle: "Warum Kinder es lieben",
+    valuesKids1: "Große Maschinen und Baustellen",
+    valuesKids2: "Wiedererkennbare Charaktere",
+    valuesKids3: "Spannende Abenteuer",
+    valuesKids4: "Neugier zum Entdecken",
+    valuesKids5: "Gemeinsam Probleme lösen",
+    valuesKids6: "Freundschaft und Zusammenarbeit",
+
+    valuesParentsTitle: "Warum Eltern es lieben",
+    valuesParents1: "Positive und beruhigende Geschichten",
+    valuesParents2: "Pädagogische Werte ohne belehrend zu wirken",
+    valuesParents3: "Zusammenhalt und Freundschaft",
+    valuesParents4: "Neugier und Problemlösung",
+    valuesParents5: "Gemeinsames Vorlesen vor dem Einschlafen",
+    valuesParents6: "Wiederkehrende Figuren zum Liebhaben",
+
+    charBennyRole: "Bagger",
+    charBrunoRole: "Muldenkipper",
+    charLeoRole: "Kran",
+    charNinaRole: "Betonmischer",
+    charRinoRole: "Walze",
+    charRudyRole: "Planierraupe",
+
+    footerTagline: "Kindergeschichten, in der Familie entstanden und mit Fantasie gewachsen.",
+    footerExploreTitle: "Entdecken",
+    footerFollowTitle: "Folgen Sie uns"
+  },
+  fr: {
+    navSeries: "Collection",
+    navBooks: "Livres",
+    navCharacters: "Personnages",
+    navValues: "Valeurs",
+    navReviews: "Avis",
+    navAbout: "Qui sommes-nous",
+    navColoring: "À colorier",
+
+    seriesSectionTitle: "La Collection",
+    seriesCharsIntro: "Six sympathiques véhicules de chantier — Benny, Bruno, Leo, Nina, Rino et Rudy — toujours prêts à s'entraider et à vivre de grandes aventures !",
+    seriesCharsCta: "Découvre les personnages des Aventures du Chantier",
+
+    booksSectionTitle: "Les Livres",
+    booksSectionSubtitle: "Albums illustrés pour petits lecteurs : découvrez tous les titres disponibles",
+
+    valuesSectionTitle: "Valeurs",
+    valuesSectionSubtitle: "Pourquoi Les Aventures du Chantier plaisent aux enfants et aux parents",
+    valuesKidsTitle: "Pourquoi les enfants adorent",
+    valuesKids1: "Grandes machines et chantiers",
+    valuesKids2: "Personnages attachants et reconnaissables",
+    valuesKids3: "Petites et grandes aventures",
+    valuesKids4: "Curiosité et découverte",
+    valuesKids5: "Défis à résoudre ensemble",
+    valuesKids6: "Amitié et entraide",
+
+    valuesParentsTitle: "Pourquoi les parents adorent",
+    valuesParents1: "Histoires positives et rassurantes",
+    valuesParents2: "Valeurs éducatives sans être moralisatrices",
+    valuesParents3: "Coopération et amitié",
+    valuesParents4: "Curiosité et résolution de problèmes",
+    valuesParents5: "Lecture partagée avant le coucher",
+    valuesParents6: "Personnages récurrents auxquels s'attacher",
+
+    charBennyRole: "Pelleteuse",
+    charBrunoRole: "Camion benne",
+    charLeoRole: "Grue",
+    charNinaRole: "Bétonnière",
+    charRinoRole: "Rouleau compresseur",
+    charRudyRole: "Bulldozer",
+
+    footerTagline: "Histoires pour enfants, nées en famille et nourries d'imagination.",
+    footerExploreTitle: "Explorer",
+    footerFollowTitle: "Suivez-nous"
+  },
+  es: {
+    navSeries: "Colección",
+    navBooks: "Libros",
+    navCharacters: "Personajes",
+    navValues: "Valores",
+    navReviews: "Opiniones",
+    navAbout: "Quiénes somos",
+    navColoring: "Para colorear",
+
+    seriesSectionTitle: "La Colección",
+    seriesCharsIntro: "Seis simpáticos vehículos de construcción — Benny, Bruno, Leo, Nina, Rino y Rudy — ¡siempre listos para colaborar y vivir grandes aventuras!",
+    seriesCharsCta: "Descubre los personajes de Las Aventuras de la Construcción",
+
+    booksSectionTitle: "Los Libros",
+    booksSectionSubtitle: "Cuentos ilustrados para pequeños lectores: descubre todos los libros disponibles",
+
+    valuesSectionTitle: "Valores",
+    valuesSectionSubtitle: "Por qué Las Aventuras de la Construcción gustan tanto a niños como a padres",
+    valuesKidsTitle: "Por qué encanta a los niños",
+    valuesKids1: "Grandes máquinas y obras de construcción",
+    valuesKids2: "Personajes reconocibles",
+    valuesKids3: "Aventuras llenas de entusiasmo",
+    valuesKids4: "Curiosidad por explorar",
+    valuesKids5: "Problemas para resolver juntos",
+    valuesKids6: "Amistad y compañerismo",
+
+    valuesParentsTitle: "Por qué convence a los padres",
+    valuesParents1: "Historias positivas y tranquilizadoras",
+    valuesParents2: "Valores educativos sin ser sermoneadores",
+    valuesParents3: "Colaboración y amistad",
+    valuesParents4: "Curiosidad y resolución de problemas",
+    valuesParents5: "Lectura compartida antes de dormir",
+    valuesParents6: "Personajes recurrentes a los que tomar cariño",
+
+    charBennyRole: "Excavadora",
+    charBrunoRole: "Camión volquete",
+    charLeoRole: "Grúa",
+    charNinaRole: "Hormigonera",
+    charRinoRole: "Rodillo compactador",
+    charRudyRole: "Bulldozer",
+
+    footerTagline: "Cuentos infantiles, nacidos en familia y crecidos con imaginación.",
+    footerExploreTitle: "Explorar",
+    footerFollowTitle: "Síguenos"
+  },
+  nl: {
+    navSeries: "Reeks",
+    navBooks: "Boeken",
+    navCharacters: "Personages",
+    navValues: "Waarden",
+    navReviews: "Recensies",
+    navAbout: "Over ons",
+    navColoring: "Kleuren",
+
+    seriesSectionTitle: "De Reeks",
+    seriesCharsIntro: "Zes vriendelijke bouwvoertuigen — Benny, Bruno, Leo, Nina, Rino en Rudy — altijd klaar om samen te werken en grote avonturen te beleven!",
+    seriesCharsCta: "Ontdek de personages van Avonturen op de Bouwplaats",
+
+    booksSectionTitle: "De Boeken",
+    booksSectionSubtitle: "Prentenboeken voor kleine lezertjes: ontdek alle beschikbare titels",
+
+    valuesSectionTitle: "Waarden",
+    valuesSectionSubtitle: "Waarom Avonturen op de Bouwplaats geliefd is bij zowel kinderen als ouders",
+    valuesKidsTitle: "Waarom kinderen er dol op zijn",
+    valuesKids1: "Grote machines en bouwplaatsen",
+    valuesKids2: "Herkenbare personages",
+    valuesKids3: "Mooie avonturen",
+    valuesKids4: "Nieuwsgierigheid om te ontdekken",
+    valuesKids5: "Problemen om samen op te lossen",
+    valuesKids6: "Vriendschap en samenwerking",
+
+    valuesParentsTitle: "Waarom ouders er dol op zijn",
+    valuesParents1: "Positieve en geruststellende verhalen",
+    valuesParents2: "Leerzame waarden zonder belerend te zijn",
+    valuesParents3: "Samenwerking en vriendschap",
+    valuesParents4: "Nieuwsgierigheid en probleemoplossing",
+    valuesParents5: "Gezellig samen lezen voor het slapengaan",
+    valuesParents6: "Herkenbare figuren om van te gaan houden",
+
+    charBennyRole: "Graafmachine",
+    charBrunoRole: "Kiepauto",
+    charLeoRole: "Kraanwagen",
+    charNinaRole: "Betonmolen",
+    charRinoRole: "Wals",
+    charRudyRole: "Bulldozer",
+
+    footerTagline: "Kinderverhalen, geboren in het gezin en gegroeid met fantasie.",
+    footerExploreTitle: "Ontdekken",
+    footerFollowTitle: "Volg ons"
+  },
+  pl: {
+    navSeries: "Seria",
+    navBooks: "Książki",
+    navCharacters: "Postacie",
+    navValues: "Wartości",
+    navReviews: "Opinie",
+    navAbout: "O nas",
+    navColoring: "Kolorowanki",
+
+    seriesSectionTitle: "Seria",
+    seriesCharsIntro: "Sześć sympatycznych pojazdów budowlanych — Benny, Bruno, Leo, Nina, Rino i Rudy — zawsze gotowych do pomocy i wspólnych przygód!",
+    seriesCharsCta: "Poznaj bohaterów Przygód na Placu Budowy",
+
+    booksSectionTitle: "Książki",
+    booksSectionSubtitle: "Książki z obrazkami dla małych czytelników: odkryj wszystkie dostępne tytuły",
+
+    valuesSectionTitle: "Wartości",
+    valuesSectionSubtitle: "Dlaczego Przygody na Placu Budowy zachwycają zarówno dzieci, jak i rodziców",
+    valuesKidsTitle: "Dlaczego dzieci to uwielbiają",
+    valuesKids1: "Wielkie maszyny i place budowy",
+    valuesKids2: "Rozpoznawalni bohaterowie",
+    valuesKids3: "Wspaniałe przygody",
+    valuesKids4: "Ciekawość świata",
+    valuesKids5: "Rozwiązywanie problemów razem",
+    valuesKids6: "Przyjaźń i współpraca",
+
+    valuesParentsTitle: "Dlaczego rodzice to cenią",
+    valuesParents1: "Pozytywne i uspokajające historie",
+    valuesParents2: "Wartości edukacyjne bez moralizowania",
+    valuesParents3: "Współpraca i wzajemny szacunek",
+    valuesParents4: "Ciekawość i kreatywne myślenie",
+    valuesParents5: "Wspólne czytanie przed snem",
+    valuesParents6: "Powracający bohaterowie, których łatwo pokochać",
+
+    charBennyRole: "Koparka",
+    charBrunoRole: "Wywrotka",
+    charLeoRole: "Dźwig",
+    charNinaRole: "Betoniarka",
+    charRinoRole: "Walec drogowy",
+    charRudyRole: "Spychacz",
+
+    footerTagline: "Opowieści dla dzieci, zrodzone w rodzinie i rozwijane z wyobraźnią.",
+    footerExploreTitle: "Odkrywaj",
+    footerFollowTitle: "Obserwuj nas"
+  },
+  sv: {
+    navSeries: "Bokserie",
+    navBooks: "Böcker",
+    navCharacters: "Karaktärer",
+    navValues: "Värden",
+    navReviews: "Recensioner",
+    navAbout: "Om oss",
+    navColoring: "Målarböcker",
+
+    seriesSectionTitle: "Bokserien",
+    seriesCharsIntro: "Sex glada byggfordon – Benny, Bruno, Leo, Nina, Rino och Rudy – alltid redo att samarbeta och uppleva stora äventyr!",
+    seriesCharsCta: "Upptäck karaktärerna i Byggäventyren",
+
+    booksSectionTitle: "Böckerna",
+    booksSectionSubtitle: "Bilderböcker för små läsare: upptäck alla tillgängliga böcker",
+
+    valuesSectionTitle: "Värden",
+    valuesSectionSubtitle: "Varför Byggäventyren älskas av både barn och föräldrar",
+    valuesKidsTitle: "Varför barn älskar det",
+    valuesKids1: "Stora maskiner och spännande byggarbetsplatser",
+    valuesKids2: "Lättigenkännliga figurer",
+    valuesKids3: "Härliga äventyr",
+    valuesKids4: "Nyfikenhet och upptäckarglädje",
+    valuesKids5: "Klurig problemlösning",
+    valuesKids6: "Vänskap och samarbete",
+
+    valuesParentsTitle: "Varför föräldrar uppskattar det",
+    valuesParents1: "Positiva och trygga berättelser",
+    valuesParents2: "Pedagogiska värden utan att bli mästrande",
+    valuesParents3: "Samarbete och omtanke",
+    valuesParents4: "Nyfikenhet och problemlösning",
+    valuesParents5: "Mysig gemensam läsning vid nattning",
+    valuesParents6: "Återkommande karaktärer att tycka om",
+
+    charBennyRole: "Grävmaskin",
+    charBrunoRole: "Dumper",
+    charLeoRole: "Mobilkran",
+    charNinaRole: "Betongblandare",
+    charRinoRole: "Vält",
+    charRudyRole: "Schaktmaskin",
+
+    footerTagline: "Barnberättelser, födda i familjen och uppvuxna med fantasi.",
+    footerExploreTitle: "Utforska",
+    footerFollowTitle: "Följ oss"
+  },
+  ja: {
+    navSeries: "シリーズ",
+    navBooks: "本",
+    navCharacters: "キャラクター",
+    navValues: "大切にしている価値",
+    navReviews: "レビュー",
+    navAbout: "私たちについて",
+    navColoring: "ぬりえ",
+
+    seriesSectionTitle: "シリーズ紹介",
+    seriesCharsIntro: "工事現場のゆかいな6台のなかまたち（ベニー、ブルーノ、レオ、ニーナ、リノ、ルディ）が、いつも助け合いながら大冒険を繰り広げます！",
+    seriesCharsCta: "『工事現場のなかまたち』のキャラクターを見る",
+
+    booksSectionTitle: "絵本一覧",
+    booksSectionSubtitle: "小さなお子さまのための絵本：現在読める作品をチェック",
+
+    valuesSectionTitle: "大切にしている価値",
+    valuesSectionSubtitle: "『工事現場のなかまたち』が子どもたちと保護者の双方に愛される理由",
+    valuesKidsTitle: "子どもたちが大好きな理由",
+    valuesKids1: "働く大きな車と工事現場の魅力",
+    valuesKids2: "親しみやすく個性豊かなキャラクター",
+    valuesKids3: "ワクワクする毎日の冒険",
+    valuesKids4: "知的好奇心を刺激する発見",
+    valuesKids5: "力を合わせて問題を解決する楽しさ",
+    valuesKids6: "友情とチームワークの大切さ",
+
+    valuesParentsTitle: "保護者の方に喜ばれる理由",
+    valuesParents1: "前向きで安心して読み聞かせできる物語",
+    valuesParents2: "説教くさくならず自然に伝わる教育的価値",
+    valuesParents3: "思いやりと助け合いの心",
+    valuesParents4: "好奇心と課題解決力の育成",
+    valuesParents5: "おやすみ前の親子のふれあいタイム",
+    valuesParents6: "シリーズを通じて愛着がわく登場人物たち",
+
+    charBennyRole: "ショベルカー",
+    charBrunoRole: "ダンプトラック",
+    charLeoRole: "クレーン車",
+    charNinaRole: "ミキサー車",
+    charRinoRole: "ロードローラー",
+    charRudyRole: "ブルドーザー",
+
+    footerTagline: "家族の中で生まれ、想像力とともに育まれた子どものための物語。",
+    footerExploreTitle: "コンテンツ",
+    footerFollowTitle: "フォロー"
+  }
+};
+
+Object.keys(SITE_REORG_I18N).forEach(lang => {
+  if (I18N[lang]) {
+    Object.assign(I18N[lang], SITE_REORG_I18N[lang]);
+  }
+});
+
+// Aggiornamenti Fano I18N
+const FANO_UPDATES_I18N = {
+  "it": {
+    "fanoOriginNote": "Fano vista con gli occhi di chi la conosce e la ama",
+    "fanoStoryP4": "Nato dal desiderio autentico di far scoprire Fano attraverso gli occhi di chi la conosce e la ama, questo non è solo un libro da colorare: è un viaggio fatto di curiosità, osservazione e fantasia. I bambini potranno esprimere la propria creatività, allenare concentrazione e manualità e avvicinarsi alla storia e alla cultura di una città unica attraverso il gioco.",
+    "fanoInsideTitle": "Dentro il libro",
+    "fanoInsideSubtitle": "Pagine da colorare ricche di dettagli, monumenti storici e tradizioni di Fano.",
+    "fanoActivitiesTitle": "Non solo da colorare",
+    "fanoActivitiesSubtitle": "Nel libro trovi anche attività creative per conoscere Fano giocando.",
+    "fanoColoredTitle": "Guarda come possono prendere vita",
+    "fanoColoredSubtitle": "Una dimostrazione di come le illustrazioni in bianco e nero possono trasformarsi con i colori e la fantasia di ogni bambino."
+  },
+  "en": {
+    "fanoOriginNote": "Fano seen through the eyes of someone who knows and loves it",
+    "fanoStoryP4": "Born from an authentic desire to discover Fano through the eyes of those who know and love it, this is not just a coloring book: it is a journey of curiosity, observation, and imagination. Children can express their creativity, develop concentration and dexterity, and get closer to the rich history and culture of a unique city through play.",
+    "fanoInsideTitle": "Inside the book",
+    "fanoInsideSubtitle": "Coloring pages rich in detail, historical landmarks, and the traditions of Fano.",
+    "fanoActivitiesTitle": "Not just for coloring",
+    "fanoActivitiesSubtitle": "Inside the book you will also find creative activities to discover Fano while playing.",
+    "fanoColoredTitle": "See how they can come to life",
+    "fanoColoredSubtitle": "An example of how black-and-white drawings can be transformed by every child's imagination and colors."
+  },
+  "de": {
+    "fanoOriginNote": "Fano mit den Augen derer gesehen, die die Stadt kennen und lieben",
+    "fanoStoryP4": "Aus dem echten Wunsch heraus entstanden, Fano mit den Augen derer zu entdecken, die die Stadt kennen und lieben, ist dies weit mehr als ein Malbuch: Es ist eine Reise voller Neugier, Beobachtung und Fantasie. Kinder entfalten ihre Kreativität, stärken Konzentration und Feinmotorik und lernen die Kultur einer geschichtsträchtigen Stadt spielerisch kennen.",
+    "fanoInsideTitle": "Ein Blick ins Buch",
+    "fanoInsideSubtitle": "Detailreiche Ausmalseiten mit historischen Denkmälern und Traditionen von Fano.",
+    "fanoActivitiesTitle": "Nicht nur zum Ausmalen",
+    "fanoActivitiesSubtitle": "Im Buch findest du auch kreative Aktivitäten, um Fano spielerisch zu entdecken.",
+    "fanoColoredTitle": "Sieh, wie sie zum Leben erwachen",
+    "fanoColoredSubtitle": "Ein Beispiel dafür, wie sich die Schwarz-Weiß-Zeichnungen mit den Farben und der Fantasie jedes Kindes verwandeln können."
+  },
+  "fr": {
+    "fanoOriginNote": "Fano vue à travers les yeux de qui la connaît et l'aime",
+    "fanoStoryP4": "Né du désir authentique de faire découvrir Fano à travers les yeux de qui la connaît et l'aime, ce n'est pas seulement un livre de coloriage : c'est un voyage fait de curiosité, d'observation et d'imagination. Les enfants peuvent exprimer leur créativité, développer concentration et motricité, et s'initier à l'histoire et à la culture d'une ville unique à travers le jeu.",
+    "fanoInsideTitle": "À l'intérieur du livre",
+    "fanoInsideSubtitle": "Des pages à colorier riches en détails, monuments historiques et traditions de Fano.",
+    "fanoActivitiesTitle": "Pas seulement à colorier",
+    "fanoActivitiesSubtitle": "Dans le livre, vous trouverez également des activités créatives pour découvrir Fano en s'amusant.",
+    "fanoColoredTitle": "Regardez comme elles prennent vie",
+    "fanoColoredSubtitle": "Un exemple de la façon dont les dessins en noir et blanc peuvent se métamorphoser grâce aux couleurs et à l'imagination des enfants."
+  },
+  "es": {
+    "fanoOriginNote": "Fano vista con los ojos de quien la conoce y la ama",
+    "fanoStoryP4": "Nacido del deseo auténtico de dar a conocer Fano a través de los ojos de quien la conoce y la ama, este no es solo un libro para colorear: es un viaje de curiosidad, observación e imaginación. Los niños podrán expresar su creatividad, entrenar la concentración y la motricidad, y acercarse a la historia y cultura de una ciudad única a través del juego.",
+    "fanoInsideTitle": "Dentro del libro",
+    "fanoInsideSubtitle": "Páginas para colorear repletas de detalles, monumentos históricos y tradiciones de Fano.",
+    "fanoActivitiesTitle": "No solo para colorear",
+    "fanoActivitiesSubtitle": "En el libro también encontrarás actividades creativas para descubrir Fano jugando.",
+    "fanoColoredTitle": "Mira cómo pueden cobrar vida",
+    "fanoColoredSubtitle": "Un ejemplo de cómo los dibujos en blanco y negro pueden transformarse con los colores y la imaginación de cada niño."
+  },
+  "nl": {
+    "fanoOriginNote": "Fano gezien door de ogen van wie de stad kent en liefheeft",
+    "fanoStoryP4": "Geboren uit het oprechte verlangen om Fano te laten ontdekken door de ogen van wie de stad kent en liefheeft, is dit niet zomaar een kleurboek: het is een reis vol nieuwsgierigheid, observatie en verbeelding. Kinderen kunnen hun creativiteit de vrije loop laten, concentratie en behendigheid oefenen en spelenderwijs kennismaken met de rijke geschiedenis en cultuur van een unieke stad.",
+    "fanoInsideTitle": "In het boek",
+    "fanoInsideSubtitle": "Kleurplaten vol details, historische monumenten en tradities van Fano.",
+    "fanoActivitiesTitle": "Niet alleen om te kleuren",
+    "fanoActivitiesSubtitle": "In het boek vind je ook creatieve activiteiten om Fano spelenderwijs te ontdekken.",
+    "fanoColoredTitle": "Kijk hoe ze tot leven kunnen komen",
+    "fanoColoredSubtitle": "Een voorbeeld van hoe de zwart-wittekeningen kunnen transformeren door de kleuren en verbeelding van elk kind."
+  },
+  "pl": {
+    "fanoOriginNote": "Fano widziane oczami kogoś, kto je zna i kocha",
+    "fanoStoryP4": "Zrodzona z autentycznego pragnienia ukazywania Fano oczami kogoś, kto je zna i kocha, nie jest to zwykła kolorowanka: to podróż pełna ciekawości, spostrzegawczości i wyobraźni. Dzieci mogą rozwijać swoją kreatywność, ćwiczyć koncentrację i sprawność manualną oraz poznawać historię i kulturę wyjątkowego miasta poprzez zabawę.",
+    "fanoInsideTitle": "Wewnątrz książki",
+    "fanoInsideSubtitle": "Kolorowanki pełne detali, zabytków i tradycji Fano.",
+    "fanoActivitiesTitle": "Nie tylko do kolorowania",
+    "fanoActivitiesSubtitle": "W książce znajdziesz również kreatywne zadania, by poznawać Fano poprzez zabawę.",
+    "fanoColoredTitle": "Zobacz, jak mogą ożyć",
+    "fanoColoredSubtitle": "Przykład tego, jak czarno-białe rysunki mogą się przemienić dzięki wyobraźni i kolorom każdego dziecka."
+  },
+  "sv": {
+    "fanoOriginNote": "Fano sett genom ögonen på den som känner och älskar staden",
+    "fanoStoryP4": "Född ur en genuin önskan att låta barn upptäcka Fano genom ögonen på den som känner och älskar staden, är detta inte bara en målarbok: det är en resa fylld av nyfikenhet, observation och fantasi. Barnen får uttrycka sin kreativitet, träna koncentration och finmotorik och bekanta sig med en unik stads historia och kultur genom lek.",
+    "fanoInsideTitle": "I boken",
+    "fanoInsideSubtitle": "Målarbilder fulla av detaljer, historiska monument och traditioner från Fano.",
+    "fanoActivitiesTitle": "Inte bara att färglägga",
+    "fanoActivitiesSubtitle": "I boken hittar du även kreativa aktiviteter för att upptäcka Fano genom lek.",
+    "fanoColoredTitle": "Se hur de kan få liv",
+    "fanoColoredSubtitle": "Ett exempel på hur svartvita teckningar kan förvandlas med färgerna och fantasin hos varje barn."
+  },
+  "ja": {
+    "fanoOriginNote": "街を深く知り、愛する人の目を通して描かれたファーノ",
+    "fanoStoryP4": "街を深く知り、心から愛する人の目を通してファーノを届けたいという純粋な想いから誕生したこの本は、単なるぬりえにとどまりません。好奇心、観察力、そして豊かな想像力を育む特別な冒険の旅です。子どもたちは遊びを通じて創造性を発揮し、集中力と手先の器用さを磨きながら、この街の歴史や文化に親しむことができます。",
+    "fanoInsideTitle": "本の中をのぞいてみよう",
+    "fanoInsideSubtitle": "ファーノの歴史的建造物や伝統が細やかに描かれたぬりえページ。",
+    "fanoActivitiesTitle": "ぬりえだけじゃない！",
+    "fanoActivitiesSubtitle": "遊びながらファーノを発見できるクリエイティブなアクティビティも満載。",
+    "fanoColoredTitle": "命を吹き込まれたイラストたち",
+    "fanoColoredSubtitle": "モノクロの線画が子どもたちの豊かな色彩と想像力でどのように生き生きと輝くかをご覧ください。"
+  }
+};
+Object.keys(FANO_UPDATES_I18N).forEach(lang => {
+  if (I18N[lang]) {
+    Object.assign(I18N[lang], FANO_UPDATES_I18N[lang]);
+  }
+});
+
+
+
 function getFanoAmazonUrl(lang) {
   const marketMap = {
     it: 'https://www.amazon.it/dp/B0HD2X6HVJ',
@@ -1763,21 +2336,87 @@ function applyLanguage(lang) {
   // Footer
   setText('footer-about-text', strings.footerAbout);
   setText('footer-copyright-text', strings.copyright);
+  setText('footer-tagline-text', strings.footerTagline || 'Storie per bambini, nate in famiglia e cresciute con la fantasia.');
+  setText('footer-mission-text', strings.footerMission || 'Libri illustrati pensati per accendere la curiosità e condividere momenti speciali tra genitori e figli.');
+  setText('footer-series-title', strings.footerSeriesTitle || strings.navSeries || 'Collana');
+  setText('footer-nav-title', strings.footerExploreTitle || 'Esplora');
+  setText('footer-contact-title', strings.footerFollowTitle || 'Seguici');
 
-  // Navigation Links
-  setText('nav-link-books', strings.navBooks || 'Storie');
+  const footerSeriesLogo = document.getElementById('footer-series-logo');
+  if (footerSeriesLogo) {
+    if (lang === 'it') {
+      footerSeriesLogo.src = 'assets/construction-site-adventures/Logo.ITA.v2.png';
+      footerSeriesLogo.alt = 'Le Avventure del Cantiere';
+    } else {
+      footerSeriesLogo.src = 'assets/construction-site-adventures/Logo.ENG.v2.png';
+      footerSeriesLogo.alt = 'Construction Site Adventures';
+    }
+  }
+
+  // Navigation Links (Header & Footer)
+  setText('nav-link-series', strings.navSeries || 'Collana');
+  setText('nav-link-books', strings.navBooks || 'Libri');
   setText('nav-link-characters', strings.navCharacters || 'Personaggi');
+  setText('nav-link-values', strings.navValues || 'Valori');
   setText('nav-link-reviews', strings.navReviews || 'Recensioni');
+  setText('nav-link-about', strings.navAbout || 'Chi siamo');
   setText('nav-link-coloring', strings.navColoring || 'Da colorare');
-  setText('nav-link-about', strings.navAbout || 'La nostra storia');
-  setText('footer-nav-books', strings.navBooks || 'Storie');
-  setText('footer-nav-characters', strings.navCharacters || 'Personaggi');
-  setText('footer-nav-reviews', strings.navReviews || 'Recensioni');
-  setText('footer-nav-coloring', strings.navColoring || 'Da colorare');
-  setText('footer-nav-about', strings.navAbout || 'La nostra storia');
+
+  setText('footer-link-series', strings.navSeries || 'Collana');
+  setText('footer-link-books', strings.navBooks || 'Libri');
+  setText('footer-link-characters', strings.navCharacters || 'Personaggi');
+  setText('footer-link-values', strings.navValues || 'Valori');
+  setText('footer-link-reviews', strings.navReviews || 'Recensioni');
+  setText('footer-link-about', strings.navAbout || 'Chi siamo');
+  setText('footer-link-coloring', strings.navColoring || 'Da colorare');
+
+  // Homepage Sezione "La Collana" (se presente su index.html)
+  if (document.getElementById('series-section-title')) {
+    const seriesLogo = document.getElementById('series-section-logo');
+    if (seriesLogo) {
+      if (lang === 'it') {
+        seriesLogo.src = 'assets/construction-site-adventures/Logo.ITA.v2.png';
+        seriesLogo.alt = 'Le Avventure del Cantiere - Logo Collana';
+      } else {
+        seriesLogo.src = 'assets/construction-site-adventures/Logo.ENG.v2.png';
+        seriesLogo.alt = 'Construction Site Adventures - Series Logo';
+      }
+    }
+    setText('series-section-title', strings.seriesSectionTitle || 'La Collana');
+    setText('series-lead-text', strings.charactersHeroDesc);
+    setText('series-chars-intro', strings.seriesCharsIntro);
+    setText('series-chars-cta-text', strings.seriesCharsCta);
+  }
+
+  // Homepage Sezione "I Libri"
+  if (document.getElementById('books-section-title')) {
+    setText('books-section-title', strings.booksSectionTitle || 'I Libri');
+    setText('books-section-subtitle', strings.booksSectionSubtitle);
+  }
+
+  // Homepage Sezione "Valori"
+  if (document.getElementById('values-section-title')) {
+    setText('values-section-title', strings.valuesSectionTitle || 'Valori');
+    setText('values-section-subtitle', strings.valuesSectionSubtitle);
+    setText('values-kids-title', strings.valuesKidsTitle || 'Perché piace ai bambini');
+    setText('values-kids-item-1', strings.valuesKids1);
+    setText('values-kids-item-2', strings.valuesKids2);
+    setText('values-kids-item-3', strings.valuesKids3);
+    setText('values-kids-item-4', strings.valuesKids4);
+    setText('values-kids-item-5', strings.valuesKids5);
+    setText('values-kids-item-6', strings.valuesKids6);
+
+    setText('values-parents-title', strings.valuesParentsTitle || 'Perché piace ai genitori');
+    setText('values-parents-item-1', strings.valuesParents1);
+    setText('values-parents-item-2', strings.valuesParents2);
+    setText('values-parents-item-3', strings.valuesParents3);
+    setText('values-parents-item-4', strings.valuesParents4);
+    setText('values-parents-item-5', strings.valuesParents5);
+    setText('values-parents-item-6', strings.valuesParents6);
+  }
 
   // Characters Page (se presente su characters.html)
-  if (document.getElementById('characters-hero-title')) {
+  if (document.getElementById('characters-section-title') || document.getElementById('characters-hero-title')) {
     const charLogoImg = document.getElementById('collection-hero-logo');
     if (charLogoImg) {
       if (lang === 'it') {
@@ -1876,9 +2515,11 @@ function applyLanguage(lang) {
     setText('fano-story-p3', strings.fanoStoryP3);
     setText('fano-story-p4', strings.fanoStoryP4);
     setText('fano-inside-title', strings.fanoInsideTitle || 'Dentro il libro');
-    setText('fano-inside-subtitle', strings.fanoInsideSubtitle || 'Più di 40 disegni, giochi e attività per scoprire Fano divertendosi.');
-    setText('fano-colored-title', strings.fanoColoredTitle || 'E tu, come la coloreresti?');
-    setText('fano-colored-subtitle', strings.fanoColoredSubtitle || 'Le stesse illustrazioni possono trasformarsi completamente con la fantasia e i colori di ogni bambino.');
+    setText('fano-inside-subtitle', strings.fanoInsideSubtitle || 'Pagine da colorare ricche di dettagli, monumenti storici e tradizioni di Fano.');
+    setText('fano-activities-title', strings.fanoActivitiesTitle || 'Non solo da colorare');
+    setText('fano-activities-subtitle', strings.fanoActivitiesSubtitle || 'Nel libro trovi anche attività creative per conoscere Fano giocando.');
+    setText('fano-colored-title', strings.fanoColoredTitle || 'Guarda come possono prendere vita');
+    setText('fano-colored-subtitle', strings.fanoColoredSubtitle || 'Una dimostrazione di come le illustrazioni in bianco e nero possono trasformarsi con i colori e la fantasia di ogni bambino.');
     setText('fano-kids-title', strings.fanoKidsTitle || 'Perché i bambini lo ameranno');
     setText('fano-kids-point-1', strings.fanoKidsPoint1);
     setText('fano-kids-point-2', strings.fanoKidsPoint2);
@@ -1892,7 +2533,7 @@ function applyLanguage(lang) {
     setText('fano-reviews-section-subtitle', strings.fanoReviewsSectionSubtitle || 'Recensioni autentiche e verificate da chi ha già scoperto il libro');
     setText('fano-final-title', strings.fanoFinalTitle || 'Scopri Fano, colora la sua storia e crea la tua avventura!');
     setText('fano-final-cta-text', strings.fanoFinalCta || 'Scopri il libro su Amazon');
-    setText('fano-origin-note', strings.fanoOriginNote || 'Un libro fatto da un fanese per amore della sua città.');
+    setText('fano-origin-note', strings.fanoOriginNote || 'Fano vista con gli occhi di chi la conosce e la ama');
     setText('fano-pill-front', strings.fanoCoverFront || 'Fronte');
     setText('fano-pill-back', strings.fanoCoverBack || 'Retro');
 
@@ -2123,8 +2764,17 @@ function renderBookCatalog(lang) {
    5. CONTROLLO DROPDOWN MARKETPLACE SULLE CARD E NEL MODAL
    ========================================================================== */
 
+function closeAllMarketDropdowns() {
+  document.querySelectorAll('.market-dropdown-menu').forEach(m => m.style.display = 'none');
+  document.querySelectorAll('.custom-market-select').forEach(s => s.classList.remove('open'));
+  document.querySelectorAll('.market-trigger').forEach(t => t.setAttribute('aria-expanded', 'false'));
+  document.querySelectorAll('.book-card').forEach(c => c.classList.remove('has-dropdown-open'));
+}
+
 window.toggleMarketDropdown = function(bookId, event) {
-  if (event) event.stopPropagation();
+  if (event) {
+    event.stopPropagation();
+  }
   const selectEl = document.getElementById(`custom-market-select-${bookId}`);
   const menuEl = document.getElementById(`market-dropdown-${bookId}`);
   const triggerBtn = selectEl ? selectEl.querySelector('.market-trigger') : null;
@@ -2132,15 +2782,19 @@ window.toggleMarketDropdown = function(bookId, event) {
 
   const isOpen = (menuEl.style.display === 'block');
 
-  // Chiudi tutti gli altri dropdown
-  document.querySelectorAll('.market-dropdown-menu').forEach(m => m.style.display = 'none');
-  document.querySelectorAll('.custom-market-select').forEach(s => s.classList.remove('open'));
-  document.querySelectorAll('.market-trigger').forEach(t => t.setAttribute('aria-expanded', 'false'));
+  // Chiudi tutti gli altri dropdown e ripristina stacking context
+  closeAllMarketDropdowns();
 
   if (!isOpen) {
     menuEl.style.display = 'block';
     selectEl.classList.add('open');
-    if (triggerBtn) triggerBtn.setAttribute('aria-expanded', 'true');
+    const parentCard = selectEl.closest('.book-card');
+    if (parentCard) {
+      parentCard.classList.add('has-dropdown-open');
+    }
+    if (triggerBtn) {
+      triggerBtn.setAttribute('aria-expanded', 'true');
+    }
   }
 };
 
@@ -2210,8 +2864,7 @@ window.selectBookMarket = function(bookId, marketKey) {
     }
 
     // Chiudi menu a tendina
-    document.querySelectorAll('.market-dropdown-menu').forEach(m => m.style.display = 'none');
-    document.querySelectorAll('.custom-market-select').forEach(s => s.classList.remove('open'));
+    closeAllMarketDropdowns();
     return;
   }
 
@@ -2253,8 +2906,7 @@ window.selectBookMarket = function(bookId, marketKey) {
   }
 
   // Chiudi menu a tendina
-  document.querySelectorAll('.market-dropdown-menu').forEach(m => m.style.display = 'none');
-  document.querySelectorAll('.custom-market-select').forEach(s => s.classList.remove('open'));
+  closeAllMarketDropdowns();
 };
 
 function renderFanoMarketSelector(lang) {
@@ -2330,11 +2982,9 @@ function renderFanoMarketSelector(lang) {
 }
 
 function initGlobalDropdownCloser() {
-  document.addEventListener('click', (e) => {
+  const handleOutsideClick = (e) => {
     if (!e.target.closest('.custom-market-select')) {
-      document.querySelectorAll('.market-dropdown-menu').forEach(m => m.style.display = 'none');
-      document.querySelectorAll('.custom-market-select').forEach(s => s.classList.remove('open'));
-      document.querySelectorAll('.market-trigger').forEach(t => t.setAttribute('aria-expanded', 'false'));
+      closeAllMarketDropdowns();
     }
     if (!e.target.closest('#lang-mobile-select')) {
       const dropdown = document.getElementById('lang-mobile-dropdown');
@@ -2344,7 +2994,10 @@ function initGlobalDropdownCloser() {
       if (select) select.classList.remove('open');
       if (trigger) trigger.setAttribute('aria-expanded', 'false');
     }
-  });
+  };
+
+  document.addEventListener('click', handleOutsideClick);
+  document.addEventListener('touchend', handleOutsideClick, { passive: true });
 }
 
 function initMobileLanguageDropdown() {
@@ -3350,7 +4003,8 @@ function updateReviewIndicators() {
 
 function updateReviewsTranslations(lang) {
   const strings = I18N[lang] || I18N.it;
-  setText('reviews-section-title', strings.reviewsTitle || 'Cosa Dicono i Genitori');
+  setText('reviews-section-title', strings.reviewsTitle || 'Recensioni');
+  setText('reviews-section-subtitle', strings.reviewsSubtitle || 'Cosa dicono i genitori che hanno letto le nostre storie');
 
   const prevBtn = document.getElementById('reviews-prev-btn');
   const nextBtn = document.getElementById('reviews-next-btn');
@@ -3559,6 +4213,15 @@ function initFanoSliders() {
       prevBtnId: 'fano-pages-prev',
       nextBtnId: 'fano-pages-next',
       dotsId: 'fano-pages-dots'
+    });
+  }
+  if (document.getElementById('fano-slider-activities')) {
+    initSingleFanoSlider({
+      sliderId: 'fano-slider-activities',
+      trackId: 'fano-activities-track',
+      prevBtnId: 'fano-activities-prev',
+      nextBtnId: 'fano-activities-next',
+      dotsId: 'fano-activities-dots'
     });
   }
   if (document.getElementById('fano-slider-colored')) {

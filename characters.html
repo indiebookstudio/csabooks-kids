@@ -174,11 +174,13 @@
 
         <!-- Navigazione Principale -->
         <nav class="site-nav" aria-label="Navigazione principale">
-          <a href="index.html#catalogo" class="nav-link" id="nav-link-books">Storie</a>
+          <a href="index.html#collana" class="nav-link" id="nav-link-series">Collana</a>
+          <a href="index.html#libri" class="nav-link" id="nav-link-books">Libri</a>
           <a href="characters.html" class="nav-link active" id="nav-link-characters">Personaggi</a>
+          <a href="index.html#valori" class="nav-link" id="nav-link-values">Valori</a>
           <a href="index.html#recensioni" class="nav-link" id="nav-link-reviews">Recensioni</a>
+          <a href="about.html" class="nav-link" id="nav-link-about">Chi siamo</a>
           <a href="fano.html" class="nav-link" id="nav-link-coloring">Da colorare</a>
-          <a href="about.html" class="nav-link" id="nav-link-about">La nostra storia</a>
         </nav>
       </div>
     </div>
@@ -191,95 +193,11 @@
     <div class="container characters-container">
 
       <!-- ==================================================================
-           SEZIONE 1: COLLECTION HERO
+           SEZIONE PROTAGONISTI (I 6 PERSONAGGI)
            ================================================================== -->
-      <section class="characters-hero-section" aria-label="Introduzione Collana">
-        <div class="characters-hero-logo-frame">
-          <img 
-            src="assets/construction-site-adventures/Logo.ITA.v2.png" 
-            alt="Le Avventure del Cantiere - Logo Collana" 
-            class="characters-hero-logo" 
-            id="collection-hero-logo"
-            fetchpriority="high"
-          />
-        </div>
-
-        <h1 class="characters-hero-title" id="characters-hero-title">Un mondo di scoperte, amicizia e grandi macchine</h1>
-
-        <div class="characters-hero-lead-box">
-          <p class="characters-hero-lead" id="characters-hero-desc">
-            "Le Avventure del Cantiere" è una collana di storie illustrate per bambini che ha come protagonisti un gruppo di simpatici veicoli da costruzione. Ogni libro trasforma una sfida quotidiana di cantiere in una piccola grande avventura ricca di amicizia, curiosità, lavoro di squadra e scoperta, offrendo a genitori e figli storie semplici e coinvolgenti da condividere insieme.
-          </p>
-        </div>
-      </section>
-
-      <!-- ==================================================================
-           SEZIONE 2: PERCHÉ QUESTA COLLANA / I VALORI
-           ================================================================== -->
-      <section class="characters-values-section" aria-label="I Valori della Collana">
+      <section class="characters-grid-section" aria-label="I Personaggi">
         <div class="characters-section-header">
-          <h2 class="characters-section-title" id="characters-values-title">Cosa Rende Speciale Questa Collana</h2>
-          <p class="characters-section-subtitle" id="characters-values-subtitle">Valori importanti raccontati attraverso storie semplici, divertenti e ricche di cuore</p>
-        </div>
-
-        <div class="characters-values-grid">
-          <!-- Valore 1: Amicizia e Collaborazione -->
-          <div class="value-card">
-            <div class="value-icon-wrapper" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <h3 class="value-card-title" id="value-1-title">Amicizia e Squadra</h3>
-            <p class="value-card-text" id="value-1-desc">Nessun lavoro è troppo grande quando ci si aiuta: le storie mostrano la bellezza della cooperazione e del rispetto reciproco.</p>
-          </div>
-
-          <!-- Valore 2: Curiosità e Scoperta -->
-          <div class="value-card">
-            <div class="value-icon-wrapper" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-              </svg>
-            </div>
-            <h3 class="value-card-title" id="value-2-title">Curiosità e Scoperta</h3>
-            <p class="value-card-text" id="value-2-desc">La curiosità è il motore della crescita: ogni pagina stimola le domande dei piccoli e accende la loro immaginazione.</p>
-          </div>
-
-          <!-- Valore 3: Aiuto Reciproco & Problem Solving -->
-          <div class="value-card">
-            <div class="value-icon-wrapper" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
-              </svg>
-            </div>
-            <h3 class="value-card-title" id="value-3-title">Risolvere i Problemi</h3>
-            <p class="value-card-text" id="value-3-desc">I protagonisti affrontano piccoli imprevisti con calma e ingegno, insegnando che a ogni problema c'è una soluzione.</p>
-          </div>
-
-          <!-- Valore 4: Lettura Condivisa in Famiglia -->
-          <div class="value-card">
-            <div class="value-icon-wrapper" aria-hidden="true">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-              </svg>
-            </div>
-            <h3 class="value-card-title" id="value-4-title">Tempo Insieme</h3>
-            <p class="value-card-text" id="value-4-desc">Un'occasione speciale per genitori e figli di ritrovarsi ogni sera, lontano da schermi e distrazioni tecnologiche.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==================================================================
-           SEZIONE 3: INCONTRA I PROTAGONISTI (I 6 PERSONAGGI)
-           ================================================================== -->
-      <section class="characters-grid-section" aria-label="I Sei Protagonisti">
-        <div class="characters-section-header">
-          <h2 class="characters-section-title" id="characters-section-title">Incontra i Protagonisti</h2>
+          <h1 class="characters-section-title" id="characters-section-title">Conosci i nostri personaggi</h1>
           <p class="characters-section-subtitle" id="characters-section-subtitle">Sei amici speciali sempre pronti a lavorare insieme e a vivere grandi avventure!</p>
         </div>
 
@@ -289,15 +207,15 @@
             <div class="character-image-frame">
               <img 
                 src="assets/brand/Benny.jpeg" 
-                alt="Benny l'escavatore giallo" 
+                alt="Benny l'escavatore" 
                 class="character-card-img" 
                 id="character-img-benny" 
                 loading="eager"
               />
             </div>
             <div class="character-card-body">
-              <h3 class="character-card-name" id="character-name-benny">Benny</h3>
-              <span class="character-card-role" id="character-role-benny">L'Escavatore</span>
+              <h2 class="character-card-name" id="character-name-benny">Benny</h2>
+              <span class="character-card-role" id="character-role-benny">Escavatore</span>
               <p class="character-card-desc" id="character-desc-benny">
                 Curioso, entusiasta e dal cuore grande. Con la sua benna scava buche, scopre segreti nascosti e non si tira mai indietro quando c'è da aiutare un amico in difficoltà.
               </p>
@@ -309,15 +227,15 @@
             <div class="character-image-frame">
               <img 
                 src="assets/brand/Bruno.jpeg" 
-                alt="Bruno il camion" 
+                alt="Bruno il camion da cantiere" 
                 class="character-card-img" 
                 id="character-img-bruno" 
                 loading="lazy"
               />
             </div>
             <div class="character-card-body">
-              <h3 class="character-card-name" id="character-name-bruno">Bruno</h3>
-              <span class="character-card-role" id="character-role-bruno">Il Camion</span>
+              <h2 class="character-card-name" id="character-name-bruno">Bruno</h2>
+              <span class="character-card-role" id="character-role-bruno">Camion da cantiere</span>
               <p class="character-card-desc" id="character-desc-bruno">
                 Forte, generoso e sempre allegro. Con il suo capiente cassone trasporta sabbia e pietre pesanti, regalando sempre un sorriso e una mano alla squadra.
               </p>
@@ -336,8 +254,8 @@
               />
             </div>
             <div class="character-card-body">
-              <h3 class="character-card-name" id="character-name-leo">Leo</h3>
-              <span class="character-card-role" id="character-role-leo">La Gru</span>
+              <h2 class="character-card-name" id="character-name-leo">Leo</h2>
+              <span class="character-card-role" id="character-role-leo">Gru</span>
               <p class="character-card-desc" id="character-desc-leo">
                 Paziente, attento e protettivo. Dall'alto del cantiere vede tutto con chiarezza e, con il suo lungo braccio meccanico, solleva carichi e risolve i problemi più complicati.
               </p>
@@ -356,8 +274,8 @@
               />
             </div>
             <div class="character-card-body">
-              <h3 class="character-card-name" id="character-name-nina">Nina</h3>
-              <span class="character-card-role" id="character-role-nina">La Betoniera</span>
+              <h2 class="character-card-name" id="character-name-nina">Nina</h2>
+              <span class="character-card-role" id="character-role-nina">Betoniera</span>
               <p class="character-card-desc" id="character-desc-nina">
                 Vivace, precisa e piena di energia positiva. Il suo tamburo gira senza sosta per preparare la miscela perfetta, portando buonumore ovunque ci sia da costruire.
               </p>
@@ -369,15 +287,15 @@
             <div class="character-image-frame">
               <img 
                 src="assets/brand/Rino.jpeg" 
-                alt="Rino il rullo" 
+                alt="Rino il rullo compressore" 
                 class="character-card-img" 
                 id="character-img-rino" 
                 loading="lazy"
               />
             </div>
             <div class="character-card-body">
-              <h3 class="character-card-name" id="character-name-rino">Rino</h3>
-              <span class="character-card-role" id="character-role-rino">Il Rullo</span>
+              <h2 class="character-card-name" id="character-name-rino">Rino</h2>
+              <span class="character-card-role" id="character-role-rino">Rullo compressore</span>
               <p class="character-card-desc" id="character-desc-rino">
                 Calmo, determinato e rassicurante. Con il suo pesante rullo d'acciaio spiana ogni sentiero difficile, dimostrando che con la pazienza si supera qualsiasi ostacolo.
               </p>
@@ -389,15 +307,15 @@
             <div class="character-image-frame">
               <img 
                 src="assets/brand/Rudy.jpeg" 
-                alt="Rudy la ruspa" 
+                alt="Rudy il bulldozer" 
                 class="character-card-img" 
                 id="character-img-rudy" 
                 loading="lazy"
               />
             </div>
             <div class="character-card-body">
-              <h3 class="character-card-name" id="character-name-rudy">Rudy</h3>
-              <span class="character-card-role" id="character-role-rudy">La Ruspa</span>
+              <h2 class="character-card-name" id="character-name-rudy">Rudy</h2>
+              <span class="character-card-role" id="character-role-rudy">Bulldozer</span>
               <p class="character-card-desc" id="character-desc-rudy">
                 Energico, forte e coraggioso. Con la sua grande lama spiana la strada e affronta ogni sfida con grinta e un grande sorriso.
               </p>
@@ -407,7 +325,7 @@
       </section>
 
       <!-- ==================================================================
-           SEZIONE 4: CTA CATALOGO LIBRI
+           SEZIONE CTA CATALOGO LIBRI
            ================================================================== -->
       <section class="characters-cta-section" aria-label="Scopri le Avventure nei Libri">
         <div class="characters-cta-card">
@@ -421,7 +339,7 @@
           <p class="characters-cta-desc" id="characters-cta-desc">
             I sei amici ti aspettano in tutte le loro avventure illustrate, piene di illustrazioni a colori, dialoghi divertenti e valori positivi da leggere insieme.
           </p>
-          <a href="index.html#catalogo" class="btn-buy characters-cta-btn" id="characters-cta-btn">
+          <a href="index.html#libri" class="btn-buy characters-cta-btn" id="characters-cta-btn">
             <span id="characters-cta-btn-text">Scopri i libri della collana</span>
             <svg class="btn-buy-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <polyline points="9 18 15 12 9 6"></polyline>
@@ -433,24 +351,66 @@
     </div>
   </main>
 
-  <!-- ======================================================================
-       FOOTER (Identico a index.html e about.html)
+    <!-- ======================================================================
+       FOOTER (4 COLONNE)
        ====================================================================== -->
   <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-main">
-        <div>
-          <div class="footer-brand-title">CSA Books 4 Kids</div>
-          <p id="footer-about-text" style="max-width: 500px; font-size: 0.9rem;">
-            Storie per bambini, nate da un papà e una mamma.
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Colonna 1: Brand & Filosofia -->
+        <div class="footer-col footer-col-brand">
+          <div class="footer-brand">
+            <div class="footer-brand-title">CSA Books <span class="highlight">4 Kids</span></div>
+          </div>
+          <p class="footer-tagline" id="footer-tagline-text">
+            Storie per bambini, nate in famiglia e cresciute con la fantasia.
+          </p>
+          <p class="footer-mission" id="footer-mission-text">
+            Libri illustrati pensati per accendere la curiosità e condividere momenti speciali tra genitori e figli.
           </p>
         </div>
-        <div class="footer-nav">
-          <a href="index.html#catalogo" class="footer-nav-link" id="footer-nav-books">Storie</a>
-          <a href="characters.html" class="footer-nav-link" id="footer-nav-characters">Personaggi</a>
-          <a href="index.html#recensioni" class="footer-nav-link" id="footer-nav-reviews">Recensioni</a>
-          <a href="fano.html" class="footer-nav-link" id="footer-nav-coloring">Da colorare</a>
-          <a href="about.html" class="footer-nav-link" id="footer-nav-about">La nostra storia</a>
+
+        <!-- Colonna 2: La Collana -->
+        <div class="footer-col footer-col-series">
+          <h3 class="footer-col-title" id="footer-series-title">Collana</h3>
+          <nav class="footer-links-list" aria-label="Link collana footer">
+            <a href="index.html#collana" class="footer-link" id="footer-link-series">Collana</a>
+            <a href="index.html#libri" class="footer-link" id="footer-link-books">Libri</a>
+            <a href="characters.html" class="footer-link" id="footer-link-characters">Personaggi</a>
+            <a href="index.html#valori" class="footer-link" id="footer-link-values">Valori</a>
+          </nav>
+        </div>
+
+        <!-- Colonna 3: Esplora -->
+        <div class="footer-col footer-col-nav">
+          <h3 class="footer-col-title" id="footer-nav-title">Esplora</h3>
+          <nav class="footer-links-list" aria-label="Link esplora footer">
+            <a href="index.html#recensioni" class="footer-link" id="footer-link-reviews">Recensioni</a>
+            <a href="about.html" class="footer-link" id="footer-link-about">Chi siamo</a>
+            <a href="fano.html" class="footer-link" id="footer-link-coloring">Da colorare</a>
+          </nav>
+        </div>
+
+        <!-- Colonna 4: Seguici & Contatti -->
+        <div class="footer-col footer-col-contact">
+          <h3 class="footer-col-title" id="footer-contact-title">Seguici</h3>
+          <div class="footer-contact-list">
+            <a href="mailto:csabooks.kids@gmail.com" class="footer-contact-item" aria-label="Email csabooks.kids@gmail.com">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>csabooks.kids@gmail.com</span>
+            </a>
+            <a href="https://www.instagram.com/csabooks.kids" target="_blank" rel="noopener noreferrer" class="footer-contact-item" aria-label="Instagram @csabooks.kids">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@csabooks.kids" target="_blank" rel="noopener noreferrer" class="footer-contact-item" aria-label="TikTok @csabooks.kids">
+              <svg class="footer-contact-icon" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.67 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.33V8.87a8.28 8.28 0 0 0 4.91 1.6V7.02a4.85 4.85 0 0 1-1-.33z"/></svg>
+              <span>TikTok</span>
+            </a>
+          </div>
         </div>
       </div>
 
