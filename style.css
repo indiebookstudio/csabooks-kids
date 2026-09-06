@@ -2089,12 +2089,8 @@ button {
   }
 }
 
-@media (max-width: 860px) {
-  .container {
-    padding: 0 1rem;
-  }
-
-  /* 1. Barra Superiore: Contatti/Social a sinistra e Selettore Lingua a discesa a destra */
+@media (max-width: 1180px) {
+  /* 1. Barra Superiore: se la barra di selezione lingua non ci sta, switch a dropdown */
   .site-topbar {
     padding: 0.35rem 0;
     overflow: visible;
@@ -2133,13 +2129,36 @@ button {
     display: inline !important;
   }
 
-  /* Breakpoint: Nascondi fila desktop di 9 bandiere e mostra Dropdown compatto */
+  /* Switch: nascondi fila estesa di 9 bandiere e mostra menu a tendina compatto */
   .lang-switcher-desktop {
     display: none !important;
   }
 
   .lang-mobile-select {
     display: inline-flex !important;
+  }
+}
+
+/* Regola attiva anche se lo spazio si riduce dinamicamente o su schermi ad alta densità/zoom */
+.topbar-inner.force-compact-lang .lang-switcher-desktop {
+  display: none !important;
+}
+
+.topbar-inner.force-compact-lang .lang-mobile-select {
+  display: inline-flex !important;
+}
+
+.topbar-inner.force-compact-lang .label-full {
+  display: none !important;
+}
+
+.topbar-inner.force-compact-lang .label-short {
+  display: inline !important;
+}
+
+@media (max-width: 860px) {
+  .container {
+    padding: 0 1rem;
   }
 }
 

@@ -2180,6 +2180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   applyLanguage(currentLanguage);
   initMobileLanguageDropdown();
+  checkTopbarFit();
   initHeroCarousel();
   initReviewsSlider();
   initAuthorCarousel();
@@ -3083,6 +3084,27 @@ function initGlobalDropdownCloser() {
   document.addEventListener('click', handleOutsideClick);
   document.addEventListener('touchend', handleOutsideClick, { passive: true });
 }
+
+
+function checkTopbarFit() {
+  const topbar = document.querySelector('.topbar-inner');
+  if (!topbar) return;
+  const links = topbar.querySelector('.topbar-links');
+  const langDesktop = topbar.querySelector('.lang-switcher-desktop');
+  if (!links || !langDesktop) return;
+
+  if (window.innerWidth > 1180) {
+    const totalRequiredWidth = links.scrollWidth + langDesktop.scrollWidth + 40;
+    const availableWidth = topbar.clientWidth;
+    const shouldForceCompact = totalRequiredWidth > availableWidth;
+    topbar.classList.toggle('force-compact-lang', shouldForceCompact);
+  } else {
+    topbar.classList.remove('force-compact-lang');
+  }
+}
+
+window.addEventListener('resize', checkTopbarFit);
+window.addEventListener('load', checkTopbarFit);
 
 function initMobileLanguageDropdown() {
   const trigger = document.getElementById('lang-mobile-trigger');
