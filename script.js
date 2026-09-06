@@ -9,20 +9,20 @@
 // AMAZON MARKETPLACE DEFINITIONS (14 Official Stores)
 // ============================================================================
 const AMAZON_MARKETS = {
-  us: { name: "Amazon.com (US)", code: "US", flagCode: "us", domain: "amazon.com", buttonLabel: "Amazon.com (US)" },
-  uk: { name: "Amazon.co.uk (UK)", code: "UK", flagCode: "gb", domain: "amazon.co.uk", buttonLabel: "Amazon.co.uk (UK)" },
-  de: { name: "Amazon.de (DE)", code: "DE", flagCode: "de", domain: "amazon.de", buttonLabel: "Amazon.de (DE)" },
-  fr: { name: "Amazon.fr (FR)", code: "FR", flagCode: "fr", domain: "amazon.fr", buttonLabel: "Amazon.fr (FR)" },
-  es: { name: "Amazon.es (ES)", code: "ES", flagCode: "es", domain: "amazon.es", buttonLabel: "Amazon.es (ES)" },
-  it: { name: "Amazon.it (IT)", code: "IT", flagCode: "it", domain: "amazon.it", buttonLabel: "Amazon.it (IT)" },
-  nl: { name: "Amazon.nl (NL)", code: "NL", flagCode: "nl", domain: "amazon.nl", buttonLabel: "Amazon.nl (NL)" },
-  pl: { name: "Amazon.pl (PL)", code: "PL", flagCode: "pl", domain: "amazon.pl", buttonLabel: "Amazon.pl (PL)" },
-  se: { name: "Amazon.se (SE)", code: "SE", flagCode: "se", domain: "amazon.se", buttonLabel: "Amazon.se (SE)" },
-  be: { name: "Amazon.com.be (BE)", code: "BE", flagCode: "be", domain: "amazon.com.be", buttonLabel: "Amazon.com.be (BE)" },
-  ie: { name: "Amazon.ie (IE)", code: "IE", flagCode: "ie", domain: "amazon.ie", buttonLabel: "Amazon.ie (IE)" },
-  jp: { name: "Amazon.co.jp (JP)", code: "JP", flagCode: "jp", domain: "amazon.co.jp", buttonLabel: "Amazon.co.jp (JP)" },
-  ca: { name: "Amazon.ca (CA)", code: "CA", flagCode: "ca", domain: "amazon.ca", buttonLabel: "Amazon.ca (CA)" },
-  au: { name: "Amazon.com.au (AU)", code: "AU", flagCode: "au", domain: "amazon.com.au", buttonLabel: "Amazon.com.au (AU)" }
+  us: { name: "Amazon.com (US)", code: "US", flagCode: "us", domain: "amazon.com", buttonLabel: "Amazon.com" },
+  uk: { name: "Amazon.co.uk (UK)", code: "UK", flagCode: "gb", domain: "amazon.co.uk", buttonLabel: "Amazon.co.uk" },
+  de: { name: "Amazon.de (DE)", code: "DE", flagCode: "de", domain: "amazon.de", buttonLabel: "Amazon.de" },
+  fr: { name: "Amazon.fr (FR)", code: "FR", flagCode: "fr", domain: "amazon.fr", buttonLabel: "Amazon.fr" },
+  es: { name: "Amazon.es (ES)", code: "ES", flagCode: "es", domain: "amazon.es", buttonLabel: "Amazon.es" },
+  it: { name: "Amazon.it (IT)", code: "IT", flagCode: "it", domain: "amazon.it", buttonLabel: "Amazon.it" },
+  nl: { name: "Amazon.nl (NL)", code: "NL", flagCode: "nl", domain: "amazon.nl", buttonLabel: "Amazon.nl" },
+  pl: { name: "Amazon.pl (PL)", code: "PL", flagCode: "pl", domain: "amazon.pl", buttonLabel: "Amazon.pl" },
+  se: { name: "Amazon.se (SE)", code: "SE", flagCode: "se", domain: "amazon.se", buttonLabel: "Amazon.se" },
+  be: { name: "Amazon.com.be (BE)", code: "BE", flagCode: "be", domain: "amazon.com.be", buttonLabel: "Amazon.com.be" },
+  ie: { name: "Amazon.ie (IE)", code: "IE", flagCode: "ie", domain: "amazon.ie", buttonLabel: "Amazon.ie" },
+  jp: { name: "Amazon.co.jp (JP)", code: "JP", flagCode: "jp", domain: "amazon.co.jp", buttonLabel: "Amazon.co.jp" },
+  ca: { name: "Amazon.ca (CA)", code: "CA", flagCode: "ca", domain: "amazon.ca", buttonLabel: "Amazon.ca" },
+  au: { name: "Amazon.com.au (AU)", code: "AU", flagCode: "au", domain: "amazon.com.au", buttonLabel: "Amazon.com.au" }
 };
 
 // ============================================================================
