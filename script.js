@@ -410,7 +410,7 @@ const CHARACTERS_I18N = {
     "charRinoAlt": "Rino il rullo",
     "charRudyName": "Rudy",
     "charRudyRole": "La Ruspa",
-    "charRudyDesc": "Energico, forte e coraggioso. Con la sua grande lama spiana la strada e affronta ogni sfida con grinta e un grande sorriso.",
+    "charRudyDesc": "Energica, forte e coraggiosa. Con la sua grande lama spiana la strada e affronta ogni sfida con grinta e un grande sorriso.",
     "charRudyAlt": "Rudy la ruspa",
     "charactersCtaTitle": "Vivi le Avventure del Cantiere",
     "charactersCtaDesc": "I sei amici ti aspettano in tutte le loro avventure illustrate, piene di illustrazioni a colori, dialoghi divertenti e valori positivi da leggere insieme.",
@@ -1648,11 +1648,11 @@ const SITE_REORG_I18N = {
     valuesParents6: "Personaggi ricorrenti a cui affezionarsi",
 
     charBennyRole: "Escavatore",
-    charBrunoRole: "Camion da cantiere",
+    charBrunoRole: "Camion",
     charLeoRole: "Gru",
     charNinaRole: "Betoniera",
     charRinoRole: "Rullo compressore",
-    charRudyRole: "Bulldozer",
+    charRudyRole: "Ruspa",
 
     footerTagline: "Storie per bambini, nate in famiglia e cresciute con la fantasia.",
     footerExploreTitle: "Esplora",
