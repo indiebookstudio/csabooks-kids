@@ -1158,6 +1158,88 @@ Object.keys(ABOUT_I18N).forEach(lang => {
 // ============================================================================
 // TRADUZIONI PAGINA FANO COL NASO ALL'INSÙ (fano.html)
 // ============================================================================
+
+// Traduzioni complete estese per pagina Fano
+const FANO_EXTRA_COMPLETE_I18N = {
+  "it": {
+    "fanoCoverFront": "Fronte",
+    "fanoCoverBack": "Retro",
+    "fanoBenefitsSectionTitle": "Perché scegliere questo libro",
+    "fanoBenefitsSectionSubtitle": "Un'esperienza coinvolgente pensata per stimolare la fantasia dei più piccoli e rassicurare i genitori.",
+    "fanoActivitiesTitle": "Non solo da colorare",
+    "fanoActivitiesSubtitle": "Nel libro trovi anche attività creative per conoscere Fano giocando."
+  },
+  "en": {
+    "fanoCoverFront": "Front",
+    "fanoCoverBack": "Back",
+    "fanoBenefitsSectionTitle": "Why Choose This Book",
+    "fanoBenefitsSectionSubtitle": "An engaging experience designed to spark children's imagination and reassure parents.",
+    "fanoActivitiesTitle": "More Than Just Coloring",
+    "fanoActivitiesSubtitle": "Inside the book you'll also find creative activities to discover Fano through play."
+  },
+  "de": {
+    "fanoCoverFront": "Vorderseite",
+    "fanoCoverBack": "Rückseite",
+    "fanoBenefitsSectionTitle": "Warum dieses Buch wählen",
+    "fanoBenefitsSectionSubtitle": "Ein fesselndes Erlebnis, das die Fantasie der Kleinen anregt und Eltern begeistert.",
+    "fanoActivitiesTitle": "Nicht nur zum Ausmalen",
+    "fanoActivitiesSubtitle": "Im Buch findest du auch kreative Aktivitäten, um Fano spielerisch zu entdecken."
+  },
+  "fr": {
+    "fanoCoverFront": "Face avant",
+    "fanoCoverBack": "Dos",
+    "fanoBenefitsSectionTitle": "Pourquoi choisir ce livre",
+    "fanoBenefitsSectionSubtitle": "Une expérience captivante conçue pour stimuler l'imagination des plus petits et rassurer les parents.",
+    "fanoActivitiesTitle": "Bien plus que du coloriage",
+    "fanoActivitiesSubtitle": "Dans le livre, vous trouverez aussi des activités créatives pour découvrir Fano en s'amusant."
+  },
+  "es": {
+    "fanoCoverFront": "Portada",
+    "fanoCoverBack": "Contraportada",
+    "fanoBenefitsSectionTitle": "Por qué elegir este libro",
+    "fanoBenefitsSectionSubtitle": "Una experiencia cautivadora diseñada para estimular la imaginación de los pequeños y dar tranquilidad a los padres.",
+    "fanoActivitiesTitle": "No solo para colorear",
+    "fanoActivitiesSubtitle": "En el libro también encontrarás actividades creativas para conocer Fano jugando."
+  },
+  "nl": {
+    "fanoCoverFront": "Voorkant",
+    "fanoCoverBack": "Achterkant",
+    "fanoBenefitsSectionTitle": "Waarom dit boek kiezen",
+    "fanoBenefitsSectionSubtitle": "Een boeiende ervaring om de verbeelding van kleintjes te prikkelen en ouders gerust te stellen.",
+    "fanoActivitiesTitle": "Niet alleen om te kleuren",
+    "fanoActivitiesSubtitle": "In het boek vind je ook creatieve activiteiten om Fano al spelend te ontdekken."
+  },
+  "pl": {
+    "fanoCoverFront": "Przód",
+    "fanoCoverBack": "Tył",
+    "fanoBenefitsSectionTitle": "Dlaczego warto wybrać tę książkę",
+    "fanoBenefitsSectionSubtitle": "Wciągające doświadczenie stworzone, by pobudzać wyobraźnię najmłodszych i cieszyć rodziców.",
+    "fanoActivitiesTitle": "Nie tylko do kolorowania",
+    "fanoActivitiesSubtitle": "W książce znajdziesz także kreatywne zabawy, by odkrywać Fano poprzez zabawę."
+  },
+  "sv": {
+    "fanoCoverFront": "Framsida",
+    "fanoCoverBack": "Baksida",
+    "fanoBenefitsSectionTitle": "Varför välja denna bok",
+    "fanoBenefitsSectionSubtitle": "En engagerande upplevelse skapad för att stimulera barnens fantasi och glädja föräldrar.",
+    "fanoActivitiesTitle": "Inte bara målarbilder",
+    "fanoActivitiesSubtitle": "I boken hittar du också kreativa aktiviteter för att upptäcka Fano genom lek."
+  },
+  "ja": {
+    "fanoCoverFront": "表紙",
+    "fanoCoverBack": "裏表紙",
+    "fanoBenefitsSectionTitle": "この絵本が選ばれる理由",
+    "fanoBenefitsSectionSubtitle": "子どもの豊かな想像力を刺激し、保護者の方にも安心して楽しんでいただける特別な体験。",
+    "fanoActivitiesTitle": "ぬりえだけじゃない！",
+    "fanoActivitiesSubtitle": "遊びながらファーノの魅力を学べる、楽しいクリエイティブなアクティビティも満載。"
+  }
+};
+Object.keys(FANO_EXTRA_COMPLETE_I18N).forEach(lang => {
+  if (I18N[lang]) {
+    Object.assign(I18N[lang], FANO_EXTRA_COMPLETE_I18N[lang]);
+  }
+});
+
 const FANO_I18N = {
   "it": {
     "navColoring": "Da colorare",
@@ -2514,6 +2596,8 @@ function applyLanguage(lang) {
     setText('fano-story-p2', strings.fanoStoryP2);
     setText('fano-story-p3', strings.fanoStoryP3);
     setText('fano-story-p4', strings.fanoStoryP4);
+    setText('fano-benefits-section-title', strings.fanoBenefitsSectionTitle || 'Perché scegliere questo libro');
+    setText('fano-benefits-section-subtitle', strings.fanoBenefitsSectionSubtitle || "Un'esperienza coinvolgente pensata per stimolare la fantasia dei più piccoli e rassicurare i genitori.");
     setText('fano-inside-title', strings.fanoInsideTitle || 'Dentro il libro');
     setText('fano-inside-subtitle', strings.fanoInsideSubtitle || 'Pagine da colorare ricche di dettagli, monumenti storici e tradizioni di Fano.');
     setText('fano-activities-title', strings.fanoActivitiesTitle || 'Non solo da colorare');

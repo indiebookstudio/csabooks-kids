@@ -3546,32 +3546,69 @@ button {
 
 .fano-badges-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.75rem;
-  align-items: center;
   margin-bottom: 2rem;
+  max-width: 540px;
 }
 
-.fano-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.45rem 0.95rem;
-  border-radius: var(--radius-pill);
-  background: #F3F4F6;
-  border: 1px solid #E5E7EB;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: #374151;
+@media (min-width: 640px) {
+  .fano-badges-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0.85rem;
+  }
 }
 
-.fano-age-hint {
+.fano-feature-chip {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: #4B5563;
+  gap: 0.75rem;
+  padding: 0.65rem 1.1rem;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(229, 231, 235, 0.9);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  flex: 1 1 auto;
+}
+
+.fano-feature-chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(240, 90, 40, 0.4);
+  box-shadow: 0 6px 16px rgba(240, 90, 40, 0.08);
+}
+
+.fano-chip-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--c-primary-soft);
+  color: var(--c-primary);
+  flex-shrink: 0;
+}
+
+.fano-feature-chip-age .fano-chip-icon {
+  background: #EFF6FF;
+  color: #2563EB;
+}
+
+.fano-chip-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.fano-chip-label {
+  font-family: var(--font-heading);
+  font-size: 0.93rem;
+  font-weight: 700;
+  color: #1F2937;
+  line-height: 1.35;
 }
 
 .fano-hero-cta-wrapper {
