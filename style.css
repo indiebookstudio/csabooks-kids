@@ -209,6 +209,18 @@ button {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
 }
 
+
+/* YouTube Button */
+.topbar-youtube {
+  color: #1F2937;
+}
+
+.topbar-youtube:hover {
+  border-color: #FF0000;
+  color: #FF0000;
+  background-color: rgba(255, 0, 0, 0.08);
+}
+
 .topbar-tiktok:hover {
   background-color: #000000;
   color: #FFFFFF;

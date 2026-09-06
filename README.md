@@ -33,6 +33,7 @@ Click su "Acquista su Amazon.it" o "Buy on Amazon" (Marketplace locale con ASIN)
 5. **Account Social Ufficiali:**
    - Instagram: [`@csabooks.kids`](https://www.instagram.com/csabooks.kids)
    - TikTok: [`@csabooks.kids`](https://www.tiktok.com/@csabooks.kids)
+   - YouTube: [`@csabookskids`](https://www.youtube.com/channel/UCJHJOCak9LyUjG0akPfKqAw)
 6. **Marketplace Amazon Intelligenti:**
    - **Edizione Italiana:** Pulsante diretto `🇮🇹 ACQUISTA SU AMAZON.IT`.
    - **Edizione Inglese:** Menu rapido con i marketplace internazionali (Amazon.com, Amazon.co.uk, Amazon.it, ecc.).
