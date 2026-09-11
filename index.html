@@ -278,9 +278,18 @@
     <section class="storytime-section" id="storytime" aria-label="Storytime">
       <div class="container hero-banner-wrapper">
         <div class="storytime-card" id="storytime-card">
-          <!-- Visual: Book Cover with Minimal YouTube Play Treatment -->
+          <!-- Visual: Book Cover (Clicca per visualizzare nel catalogo) -->
           <div class="storytime-media-col">
-            <a class="storytime-cover-frame" id="storytime-cover-link" role="button" aria-label="Benny the Excavator and the Shape-Shifting Hill - Storytime on YouTube" tabindex="0">
+            <div 
+              class="storytime-cover-frame" 
+              id="storytime-cover-frame" 
+              role="button" 
+              tabindex="0" 
+              onclick="jumpToStorytimeBook()" 
+              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();jumpToStorytimeBook();}"
+              aria-label="Vai al libro nel catalogo"
+              title="Vai al libro nel catalogo"
+            >
               <img 
                 src="assets/construction-site-adventures/01.Benny.Collina/US/Front.Cover.png" 
                 alt="Benny the Excavator and the Shape-Shifting Hill - Storytime" 
@@ -288,14 +297,7 @@
                 id="storytime-cover-img"
                 loading="lazy"
               />
-              <div class="storytime-play-overlay" aria-hidden="true">
-                <span class="storytime-play-btn">
-                  <svg class="storytime-play-icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="none">
-                    <polygon points="9 6 18 12 9 18" fill="#E62117"></polygon>
-                  </svg>
-                </span>
-              </div>
-            </a>
+            </div>
           </div>
 
           <!-- Editorial Content: Storytime Hierarchy -->

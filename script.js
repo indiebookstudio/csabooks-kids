@@ -34,7 +34,7 @@ const I18N = {
     heroSubtitle: "Storie per bambini, nate da un papà e una mamma.",
     heroBannerAlt: "CSA Books 4 Kids - Storie per bambini, nate da un papà e una mamma.",
     authorBy: "Di",
-    readSampleBtn: "Leggi Estratto",
+    readSampleBtn: "Estratto",
     sampleBadge: "Anteprima",
     frontCoverLabel: "Copertina",
     backCoverLabel: "Retro Copertina",
@@ -72,7 +72,7 @@ const I18N = {
     heroSubtitle: "Children's stories, made by a dad and a mom.",
     heroBannerAlt: "CSA Books 4 Kids - Children's stories, made by a dad and a mom.",
     authorBy: "By",
-    readSampleBtn: "Read Sample",
+    readSampleBtn: "Sample",
     sampleBadge: "Sample Preview",
     frontCoverLabel: "Front Cover",
     backCoverLabel: "Back Cover",
@@ -146,7 +146,7 @@ const I18N = {
     heroSubtitle: "Histoires pour enfants, créées par un papa et une maman.",
     heroBannerAlt: "CSA Books 4 Kids - Histoires pour enfants, créées par un papa et une maman.",
     authorBy: "Par",
-    readSampleBtn: "Lire un extrait",
+    readSampleBtn: "Extrait",
     sampleBadge: "Aperçu",
     frontCoverLabel: "Couverture",
     backCoverLabel: "Quatrième de couverture",
@@ -183,7 +183,7 @@ const I18N = {
     heroSubtitle: "Cuentos infantiles, creados por un papá y una mamá.",
     heroBannerAlt: "CSA Books 4 Kids - Cuentos infantiles, creados por un papá y una mamá.",
     authorBy: "Por",
-    readSampleBtn: "Leer muestra",
+    readSampleBtn: "Muestra",
     sampleBadge: "Vista previa",
     frontCoverLabel: "Portada",
     backCoverLabel: "Contraportada",
@@ -220,7 +220,7 @@ const I18N = {
     heroSubtitle: "Kinderverhalen, gemaakt door een papa en een mama.",
     heroBannerAlt: "CSA Books 4 Kids - Kinderverhalen, gemaakt door een papa en een mama.",
     authorBy: "Door",
-    readSampleBtn: "Inkijkexemplaar",
+    readSampleBtn: "Fragment",
     sampleBadge: "Voorbeeld",
     frontCoverLabel: "Voorkant",
     backCoverLabel: "Achterkant",
@@ -257,7 +257,7 @@ const I18N = {
     heroSubtitle: "Opowieści dla dzieci, stworzone przez tatę i mamę.",
     heroBannerAlt: "CSA Books 4 Kids - Opowieści dla dzieci, stworzone przez tatę i mamę.",
     authorBy: "Autor",
-    readSampleBtn: "Darmowy fragment",
+    readSampleBtn: "Fragment",
     sampleBadge: "Podgląd",
     frontCoverLabel: "Okładka",
     backCoverLabel: "Tylna okładka",
@@ -294,7 +294,7 @@ const I18N = {
     heroSubtitle: "Barnberättelser, skapade av en pappa och en mamma.",
     heroBannerAlt: "CSA Books 4 Kids - Barnberättelser, skapade av en pappa och en mamma.",
     authorBy: "Av",
-    readSampleBtn: "Läs ett smakprov",
+    readSampleBtn: "Smakprov",
     sampleBadge: "Förhandsvisning",
     frontCoverLabel: "Omslag",
     backCoverLabel: "Baksida",
@@ -331,7 +331,7 @@ const I18N = {
     heroSubtitle: "パパとママが作った、子どもたちのための物語。",
     heroBannerAlt: "CSA Books 4 Kids - パパとママが作った、子どもたちのための物語。",
     authorBy: "作",
-    readSampleBtn: "無料サンプル",
+    readSampleBtn: "サンプル",
     sampleBadge: "プレビュー",
     frontCoverLabel: "表紙",
     backCoverLabel: "裏表紙",
@@ -2884,9 +2884,15 @@ function renderStorytimeSection(lang) {
     coverImg.alt = `${strings.storytimeTitle || item.title} - Storytime`;
   }
 
-  // 1. YouTube Button & Cover Link
+  const coverFrame = document.getElementById('storytime-cover-frame');
+  if (coverFrame) {
+    const jumpLabel = (lang === 'it') ? "Vai al libro nel catalogo" : "View book in catalog";
+    coverFrame.setAttribute('title', `${strings.storytimeTitle || item.title} - ${jumpLabel}`);
+    coverFrame.setAttribute('aria-label', `${strings.storytimeTitle || item.title} - ${jumpLabel}`);
+  }
+
+  // 1. YouTube Button
   const ctaBtn = document.getElementById('storytime-cta-btn');
-  const coverLink = document.getElementById('storytime-cover-link');
   const effectiveYoutubeUrl = (typeof getStorytimeYoutubeUrl === 'function')
     ? getStorytimeYoutubeUrl(item)
     : (item.youtubeUrl || null);
@@ -2900,14 +2906,6 @@ function renderStorytimeSection(lang) {
       ctaBtn.classList.remove('is-unlinked');
       ctaBtn.setAttribute('title', strings.storytimeCtaYoutube || strings.storytimeCta || item.ctaText || 'Watch on YouTube');
     }
-    if (coverLink) {
-      coverLink.href = effectiveYoutubeUrl;
-      coverLink.setAttribute('target', '_blank');
-      coverLink.setAttribute('rel', 'noopener noreferrer');
-      coverLink.removeAttribute('aria-disabled');
-      coverLink.classList.remove('is-unlinked');
-      coverLink.setAttribute('title', `${strings.storytimeTitle || item.title} - Storytime on YouTube`);
-    }
   } else {
     if (ctaBtn) {
       ctaBtn.removeAttribute('href');
@@ -2916,14 +2914,6 @@ function renderStorytimeSection(lang) {
       ctaBtn.setAttribute('aria-disabled', 'true');
       ctaBtn.classList.add('is-unlinked');
       ctaBtn.removeAttribute('title');
-    }
-    if (coverLink) {
-      coverLink.removeAttribute('href');
-      coverLink.removeAttribute('target');
-      coverLink.removeAttribute('rel');
-      coverLink.setAttribute('aria-disabled', 'true');
-      coverLink.classList.add('is-unlinked');
-      coverLink.removeAttribute('title');
     }
   }
 
@@ -2953,6 +2943,50 @@ function renderStorytimeSection(lang) {
     }
   }
 }
+
+/**
+ * Salta al catalogo ed evidenzia il libro corrispondente allo Storytime (es. Benny)
+ */
+window.jumpToStorytimeBook = function() {
+  const item = (typeof getFeaturedStorytimeItem === 'function')
+    ? getFeaturedStorytimeItem(currentLanguage)
+    : (typeof STORYTIME_ITEMS !== 'undefined' ? STORYTIME_ITEMS[0] : null);
+
+  if (!item || !item.bookId) {
+    const catalogEl = document.getElementById('libri');
+    if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
+
+  const targetBookId = item.bookId;
+  const targetBook = (typeof BOOKS !== 'undefined' && Array.isArray(BOOKS))
+    ? BOOKS.find(b => b.id === targetBookId)
+    : null;
+  const targetLang = targetBook ? targetBook.languageCode : (item.language || 'it');
+
+  // Se il filtro secondario lingua libri esclude il libro, impostalo sulla lingua del libro
+  if (currentBookLanguage !== 'all' && currentBookLanguage !== targetLang) {
+    if (typeof window.setBookLanguageFilter === 'function') {
+      window.setBookLanguageFilter(targetLang);
+    }
+  }
+
+  setTimeout(() => {
+    const card = document.getElementById(`card-${targetBookId}`);
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      card.classList.remove('book-card-highlighted');
+      void card.offsetWidth; // trigger reflow
+      card.classList.add('book-card-highlighted');
+      setTimeout(() => {
+        card.classList.remove('book-card-highlighted');
+      }, 3000);
+    } else {
+      const catalogEl = document.getElementById('libri');
+      if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, 80);
+};
 
 /* ==========================================================================
    3.6 AGGIORNAMENTO LINK SPOTIFY COLLANA (TOPBAR & FOOTER)
