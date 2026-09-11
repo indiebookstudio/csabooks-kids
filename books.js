@@ -20,6 +20,63 @@ const LANGUAGE_META = {
 };
 
 // ==========================================================================
+// CONFIGURAZIONE STORYTIME (YOUTUBE READ-ALOUD STORIES)
+// Inserisci qui l'URL YouTube del video nel campo 'youtubeUrl' appena disponibile.
+// ==========================================================================
+const STORYTIME_ITEMS = [
+  {
+    id: "benny-collina-it",
+    bookId: "benny-collina-it",
+    language: "it",
+    eyebrow: "STORYTIME",
+    title: "Benny l'escavatore e la collina che cambiava forma",
+    description: "Ascolta l'avventura di Benny mentre la storia prende vita su YouTube.",
+    ctaText: "Guarda la storia su YouTube",
+    catalogCtaText: "Guarda la storia",
+    cover: "assets/construction-site-adventures/01.Benny.Collina/IT/Front.Cover.png",
+    // ---> INSERISCI L'URL YOUTUBE QUI (es. "https://www.youtube.com/watch?v=...") <---
+    youtubeUrl: "https://youtu.be/Q5BzuefwUuA"
+  },
+  {
+    id: "benny-hill-en",
+    bookId: "benny-hill-en",
+    language: "en",
+    eyebrow: "STORYTIME",
+    title: "Benny the Excavator and the Shape-Shifting Hill",
+    description: "Listen to Benny's adventure as the story comes to life on YouTube.",
+    ctaText: "Watch the story on YouTube",
+    catalogCtaText: "Watch the story",
+    cover: "assets/construction-site-adventures/01.Benny.Collina/US/Front.Cover.png",
+    // ---> INSERISCI L'URL YOUTUBE QUI (es. "https://www.youtube.com/watch?v=...") <---
+    youtubeUrl: "https://youtu.be/K04YwfVBCpE"
+  }
+];
+
+function getStorytimeYoutubeUrl(item) {
+  if (!item) return null;
+  if (item.youtubeUrl) return item.youtubeUrl;
+  if (typeof STORYTIME_ITEMS !== 'undefined' && Array.isArray(STORYTIME_ITEMS)) {
+    const anyWithUrl = STORYTIME_ITEMS.find(s => s.youtubeUrl);
+    if (anyWithUrl) return anyWithUrl.youtubeUrl;
+  }
+  return null;
+}
+
+function getStorytimeItemForBook(bookId) {
+  if (typeof STORYTIME_ITEMS === 'undefined' || !Array.isArray(STORYTIME_ITEMS)) return null;
+  return STORYTIME_ITEMS.find(item => item.bookId === bookId || item.id === bookId) || null;
+}
+
+function getFeaturedStorytimeItem(lang) {
+  if (typeof STORYTIME_ITEMS === 'undefined' || !Array.isArray(STORYTIME_ITEMS)) return null;
+  if (lang) {
+    const matching = STORYTIME_ITEMS.find(item => item.language === lang);
+    if (matching) return matching;
+  }
+  return STORYTIME_ITEMS.find(item => item.language === 'en') || STORYTIME_ITEMS[0] || null;
+}
+
+// ==========================================================================
 // DATABASE LIBRI COLLANA (16 edizioni con anteprime complete sfogliabili)
 // ==========================================================================
 const BOOKS = [

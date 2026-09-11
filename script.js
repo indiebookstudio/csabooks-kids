@@ -846,6 +846,78 @@ Object.keys(FOOTER_EXTRA_I18N).forEach(lang => {
   }
 });
 
+const STORYTIME_I18N = {
+  it: {
+    storytimeEyebrow: "STORYTIME",
+    storytimeTitle: "Benny l'escavatore e la collina che cambiava forma",
+    storytimeDesc: "Ascolta l'avventura di Benny mentre la storia prende vita su YouTube.",
+    storytimeCta: "Guarda la storia su YouTube",
+    storytimeChip: "Guarda la storia"
+  },
+  en: {
+    storytimeEyebrow: "STORYTIME",
+    storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
+    storytimeDesc: "Listen to Benny's adventure as the story comes to life on YouTube.",
+    storytimeCta: "Watch the story on YouTube",
+    storytimeChip: "Watch the story"
+  },
+  de: {
+    storytimeEyebrow: "STORYTIME",
+    storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
+    storytimeDesc: "Höre dir Bennys Abenteuer an, während die Geschichte auf YouTube zum Leben erwacht.",
+    storytimeCta: "Die Geschichte auf YouTube ansehen",
+    storytimeChip: "Geschichte ansehen"
+  },
+  fr: {
+    storytimeEyebrow: "STORYTIME",
+    storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
+    storytimeDesc: "Écoutez l'aventure de Benny tandis que l'histoire prend vie sur YouTube.",
+    storytimeCta: "Regarder l'histoire sur YouTube",
+    storytimeChip: "Voir l'histoire"
+  },
+  es: {
+    storytimeEyebrow: "STORYTIME",
+    storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
+    storytimeDesc: "Escucha la aventura de Benny mientras la historia cobra vida en YouTube.",
+    storytimeCta: "Ver la historia en YouTube",
+    storytimeChip: "Ver la historia"
+  },
+  nl: {
+    storytimeEyebrow: "STORYTIME",
+    storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
+    storytimeDesc: "Luister naar Benny's avontuur terwijl het verhaal tot leven komt op YouTube.",
+    storytimeCta: "Bekijk het verhaal op YouTube",
+    storytimeChip: "Verhaal bekijken"
+  },
+  pl: {
+    storytimeEyebrow: "STORYTIME",
+    storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
+    storytimeDesc: "Posłuchaj przygody Benny'ego, gdy historia ożywa na YouTube.",
+    storytimeCta: "Obejrzyj historię na YouTube",
+    storytimeChip: "Zobacz historię"
+  },
+  sv: {
+    storytimeEyebrow: "STORYTIME",
+    storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
+    storytimeDesc: "Lyssna på Bennys äventyr när sagan får liv på YouTube.",
+    storytimeCta: "Titta på sagan på YouTube",
+    storytimeChip: "Se sagan"
+  },
+  ja: {
+    storytimeEyebrow: "STORYTIME",
+    storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
+    storytimeDesc: "YouTubeで物語が生き生きと動き出す、ベニーの冒険をお聴きください。",
+    storytimeCta: "YouTubeでお話を観る",
+    storytimeChip: "お話を観る"
+  }
+};
+
+Object.keys(STORYTIME_I18N).forEach(lang => {
+  if (I18N[lang]) {
+    Object.assign(I18N[lang], STORYTIME_I18N[lang]);
+  }
+});
+
 const REVIEWS_I18N = {
   it: {
     navReviews: "Recensioni",
@@ -2189,7 +2261,18 @@ document.addEventListener('DOMContentLoaded', () => {
   handleDirectBookDeepLink();
   initGlobalDropdownCloser();
   initSampleModalEvents();
+  initStorytimeEvents();
 });
+
+function initStorytimeEvents() {
+  document.addEventListener('click', (e) => {
+    const unlinked = e.target.closest('.is-unlinked');
+    if (unlinked) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  });
+}
 
 /* ==========================================================================
    1. RILEVAMENTO LINGUA & MARKETPLACE GEOGRAFICO AUTOMATICO
@@ -2452,6 +2535,9 @@ function applyLanguage(lang) {
   setText('footer-link-reviews', strings.navReviews || 'Recensioni');
   setText('footer-link-about', strings.navAbout || 'Chi siamo');
   setText('footer-link-coloring', strings.navColoring || 'Da colorare');
+
+  // Homepage Sezione "Storytime" (se presente su index.html)
+  renderStorytimeSection(lang);
 
   // Homepage Sezione "La Collana" (se presente su index.html)
   if (document.getElementById('series-section-title')) {
@@ -2723,6 +2809,83 @@ function getBookInitialMarket(bookId) {
 }
 
 /* ==========================================================================
+   3.5 RENDERING SEZIONE STORYTIME (HOMEPAGE)
+   ========================================================================== */
+
+function renderStorytimeSection(lang) {
+  const section = document.getElementById('storytime');
+  if (!section) return;
+
+  const strings = I18N[lang] || I18N.it;
+
+  const item = (typeof getFeaturedStorytimeItem === 'function')
+    ? getFeaturedStorytimeItem(lang)
+    : ((typeof STORYTIME_ITEMS !== 'undefined' && STORYTIME_ITEMS[0]) ? STORYTIME_ITEMS[0] : null);
+
+  if (!item) return;
+
+  const eyebrowEl = document.getElementById('storytime-eyebrow');
+  if (eyebrowEl) eyebrowEl.textContent = strings.storytimeEyebrow || item.eyebrow || 'STORYTIME';
+
+  const titleEl = document.getElementById('storytime-title');
+  if (titleEl) titleEl.textContent = strings.storytimeTitle || item.title;
+
+  const descEl = document.getElementById('storytime-desc');
+  if (descEl) descEl.textContent = strings.storytimeDesc || item.description;
+
+  const ctaTextEl = document.getElementById('storytime-cta-text');
+  if (ctaTextEl) ctaTextEl.textContent = strings.storytimeCta || item.ctaText;
+
+  const coverImg = document.getElementById('storytime-cover-img');
+  if (coverImg && item.cover) {
+    coverImg.src = item.cover;
+    coverImg.alt = `${strings.storytimeTitle || item.title} - Storytime`;
+  }
+
+  const ctaBtn = document.getElementById('storytime-cta-btn');
+  const coverLink = document.getElementById('storytime-cover-link');
+  const effectiveUrl = (typeof getStorytimeYoutubeUrl === 'function')
+    ? getStorytimeYoutubeUrl(item)
+    : (item.youtubeUrl || null);
+
+  if (effectiveUrl) {
+    if (ctaBtn) {
+      ctaBtn.href = effectiveUrl;
+      ctaBtn.setAttribute('target', '_blank');
+      ctaBtn.setAttribute('rel', 'noopener noreferrer');
+      ctaBtn.removeAttribute('aria-disabled');
+      ctaBtn.classList.remove('is-unlinked');
+      ctaBtn.setAttribute('title', strings.storytimeCta || item.ctaText || 'Watch on YouTube');
+    }
+    if (coverLink) {
+      coverLink.href = effectiveUrl;
+      coverLink.setAttribute('target', '_blank');
+      coverLink.setAttribute('rel', 'noopener noreferrer');
+      coverLink.removeAttribute('aria-disabled');
+      coverLink.classList.remove('is-unlinked');
+      coverLink.setAttribute('title', `${strings.storytimeTitle || item.title} - Storytime on YouTube`);
+    }
+  } else {
+    if (ctaBtn) {
+      ctaBtn.removeAttribute('href');
+      ctaBtn.removeAttribute('target');
+      ctaBtn.removeAttribute('rel');
+      ctaBtn.setAttribute('aria-disabled', 'true');
+      ctaBtn.classList.add('is-unlinked');
+      ctaBtn.removeAttribute('title');
+    }
+    if (coverLink) {
+      coverLink.removeAttribute('href');
+      coverLink.removeAttribute('target');
+      coverLink.removeAttribute('rel');
+      coverLink.setAttribute('aria-disabled', 'true');
+      coverLink.classList.add('is-unlinked');
+      coverLink.removeAttribute('title');
+    }
+  }
+}
+
+/* ==========================================================================
    4. RENDERING CATALOGO LIBRI CON SELETTORE MARKETPLACE FLUIDO
    ========================================================================== */
 
@@ -2760,6 +2923,34 @@ function renderBookCatalog(lang) {
       </button>
     ` : '';
 
+    const storytimeItem = (typeof getStorytimeItemForBook === 'function') ? getStorytimeItemForBook(book.id) : null;
+    let storytimeChipHtml = '';
+    if (storytimeItem) {
+      const ctaLabel = strings.storytimeChip || storytimeItem.catalogCtaText || 'Storytime';
+      const effectiveUrl = (typeof getStorytimeYoutubeUrl === 'function')
+        ? getStorytimeYoutubeUrl(storytimeItem)
+        : storytimeItem.youtubeUrl;
+      if (effectiveUrl) {
+        storytimeChipHtml = `
+          <a href="${escapeHtml(effectiveUrl)}" target="_blank" rel="noopener noreferrer" class="card-meta-chip chip-storytime-btn" aria-label="${escapeHtml(ctaLabel)} - ${escapeHtml(book.title)}">
+            <svg class="chip-svg chip-storytime-svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <polygon points="6 3 20 12 6 21 6 3"></polygon>
+            </svg>
+            <span>${escapeHtml(ctaLabel)}</span>
+          </a>
+        `;
+      } else {
+        storytimeChipHtml = `
+          <a role="button" aria-disabled="true" class="card-meta-chip chip-storytime-btn is-unlinked" aria-label="${escapeHtml(ctaLabel)} - ${escapeHtml(book.title)}" tabindex="0">
+            <svg class="chip-svg chip-storytime-svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <polygon points="6 3 20 12 6 21 6 3"></polygon>
+            </svg>
+            <span>${escapeHtml(ctaLabel)}</span>
+          </a>
+        `;
+      }
+    }
+
     const buyButtonText = (typeof strings.viewOn === 'function') 
       ? strings.viewOn(marketInfo.buttonLabel) 
       : `BUY ON ${marketInfo.buttonLabel.toUpperCase()}`;
@@ -2789,6 +2980,7 @@ function renderBookCatalog(lang) {
 
         <div class="book-card-meta">
           ${sampleChipHtml}
+          ${storytimeChipHtml}
         </div>
 
         <h2 class="book-card-title">${escapeHtml(book.title)}</h2>
