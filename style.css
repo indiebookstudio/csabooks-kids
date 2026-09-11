@@ -221,6 +221,22 @@ button {
   background-color: rgba(255, 0, 0, 0.08);
 }
 
+/* Spotify Button */
+.topbar-spotify {
+  color: #1F2937;
+}
+
+.topbar-spotify:hover {
+  border-color: #1DB954;
+  color: #1DB954;
+  background-color: rgba(29, 185, 84, 0.08);
+}
+
+.topbar-btn.is-unlinked {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 .topbar-tiktok:hover {
   background-color: #000000;
   color: #FFFFFF;
@@ -867,35 +883,60 @@ button {
 .storytime-action-wrapper {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.85rem;
+  flex-wrap: wrap;
 }
 
 .storytime-cta-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  padding: 0.8rem 1.65rem;
+  padding: 0.8rem 1.5rem;
   background-color: var(--c-primary);
   color: #FFFFFF;
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: 0.96rem;
   font-weight: 600;
   border-radius: var(--radius-pill);
-  box-shadow: 0 4px 14px rgba(240, 90, 40, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
   transition: var(--transition);
   text-decoration: none;
   cursor: pointer;
 }
 
-.storytime-cta-btn:hover {
-  background-color: var(--c-primary-hover);
+.storytime-cta-youtube {
+  background-color: #E62117;
+  box-shadow: 0 4px 14px rgba(230, 33, 23, 0.28);
+}
+
+.storytime-cta-youtube:hover {
+  background-color: #CC1810;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(240, 90, 40, 0.35);
+  box-shadow: 0 6px 20px rgba(230, 33, 23, 0.38);
+  color: #FFFFFF;
+}
+
+.storytime-cta-spotify {
+  background-color: #1DB954;
+  box-shadow: 0 4px 14px rgba(29, 185, 84, 0.28);
+}
+
+.storytime-cta-spotify:hover {
+  background-color: #1aa34a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(29, 185, 84, 0.38);
   color: #FFFFFF;
 }
 
 .storytime-cta-btn:active {
   transform: translateY(0);
+}
+
+.storytime-cta-btn.is-unlinked {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
 }
 
 .storytime-cta-icon {
@@ -917,6 +958,10 @@ button {
 
   .storytime-content-col {
     align-items: center;
+  }
+
+  .storytime-action-wrapper {
+    justify-content: center;
   }
 
   .storytime-cover-frame {
@@ -954,6 +999,12 @@ button {
 
   .storytime-desc {
     font-size: 0.92rem;
+  }
+
+  .storytime-action-wrapper {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.65rem;
   }
 
   .storytime-cta-btn {
@@ -1322,24 +1373,50 @@ button {
   color: #FFFFFF;
 }
 
-/* Subtle Catalog Storytime Chip */
+/* Subtle Catalog Storytime Chip (YouTube) */
 .chip-storytime-btn {
-  background-color: var(--c-primary-soft);
-  color: var(--c-primary);
-  border: 1px solid rgba(240, 90, 40, 0.22);
+  background-color: rgba(230, 33, 23, 0.08);
+  color: #CC1810;
+  border: 1px solid rgba(230, 33, 23, 0.22);
 }
 
 .chip-storytime-btn:hover {
-  background-color: var(--c-primary);
+  background-color: #E62117;
   color: #FFFFFF;
-  border-color: var(--c-primary);
+  border-color: #E62117;
 }
 
 .chip-storytime-btn .chip-storytime-svg {
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   flex-shrink: 0;
   fill: currentColor;
+}
+
+/* Subtle Catalog Spotify Chip */
+.chip-spotify-btn {
+  background-color: rgba(29, 185, 84, 0.08);
+  color: #15883e;
+  border: 1px solid rgba(29, 185, 84, 0.22);
+}
+
+.chip-spotify-btn:hover {
+  background-color: #1DB954;
+  color: #FFFFFF;
+  border-color: #1DB954;
+}
+
+.chip-spotify-btn .chip-spotify-svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  fill: currentColor;
+}
+
+.card-meta-chip.is-unlinked {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
 }
 
 .chip-svg {

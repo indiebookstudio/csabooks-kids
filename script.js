@@ -850,65 +850,101 @@ const STORYTIME_I18N = {
   it: {
     storytimeEyebrow: "STORYTIME",
     storytimeTitle: "Benny l'escavatore e la collina che cambiava forma",
-    storytimeDesc: "Ascolta l'avventura di Benny mentre la storia prende vita su YouTube.",
-    storytimeCta: "Guarda la storia su YouTube",
-    storytimeChip: "Guarda la storia"
+    storytimeDesc: "Ascolta l'avventura di Benny mentre la storia prende vita su YouTube e Spotify.",
+    storytimeCta: "Guarda su YouTube",
+    storytimeCtaYoutube: "Guarda su YouTube",
+    storytimeCtaSpotify: "Ascolta su Spotify",
+    storytimeChip: "YouTube",
+    storytimeChipYoutube: "YouTube",
+    storytimeChipSpotify: "Spotify"
   },
   en: {
     storytimeEyebrow: "STORYTIME",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
-    storytimeDesc: "Listen to Benny's adventure as the story comes to life on YouTube.",
-    storytimeCta: "Watch the story on YouTube",
-    storytimeChip: "Watch the story"
+    storytimeDesc: "Listen to Benny's adventure as the story comes to life on YouTube and Spotify.",
+    storytimeCta: "Watch on YouTube",
+    storytimeCtaYoutube: "Watch on YouTube",
+    storytimeCtaSpotify: "Listen on Spotify",
+    storytimeChip: "YouTube",
+    storytimeChipYoutube: "YouTube",
+    storytimeChipSpotify: "Spotify"
   },
   de: {
     storytimeEyebrow: "STORYTIME",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
-    storytimeDesc: "Höre dir Bennys Abenteuer an, während die Geschichte auf YouTube zum Leben erwacht.",
-    storytimeCta: "Die Geschichte auf YouTube ansehen",
-    storytimeChip: "Geschichte ansehen"
+    storytimeDesc: "Höre dir Bennys Abenteuer an, während die Geschichte auf YouTube und Spotify zum Leben erwacht.",
+    storytimeCta: "Auf YouTube ansehen",
+    storytimeCtaYoutube: "Auf YouTube ansehen",
+    storytimeCtaSpotify: "Auf Spotify hören",
+    storytimeChip: "YouTube",
+    storytimeChipYoutube: "YouTube",
+    storytimeChipSpotify: "Spotify"
   },
   fr: {
     storytimeEyebrow: "STORYTIME",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
-    storytimeDesc: "Écoutez l'aventure de Benny tandis que l'histoire prend vie sur YouTube.",
-    storytimeCta: "Regarder l'histoire sur YouTube",
-    storytimeChip: "Voir l'histoire"
+    storytimeDesc: "Écoutez l'aventure de Benny tandis que l'histoire prend vie sur YouTube et Spotify.",
+    storytimeCta: "Regarder sur YouTube",
+    storytimeCtaYoutube: "Regarder sur YouTube",
+    storytimeCtaSpotify: "Écouter sur Spotify",
+    storytimeChip: "YouTube",
+    storytimeChipYoutube: "YouTube",
+    storytimeChipSpotify: "Spotify"
   },
   es: {
     storytimeEyebrow: "STORYTIME",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
-    storytimeDesc: "Escucha la aventura de Benny mientras la historia cobra vida en YouTube.",
-    storytimeCta: "Ver la historia en YouTube",
-    storytimeChip: "Ver la historia"
+    storytimeDesc: "Escucha la aventura de Benny mientras la historia cobra vida en YouTube y Spotify.",
+    storytimeCta: "Ver en YouTube",
+    storytimeCtaYoutube: "Ver en YouTube",
+    storytimeCtaSpotify: "Escuchar en Spotify",
+    storytimeChip: "YouTube",
+    storytimeChipYoutube: "YouTube",
+    storytimeChipSpotify: "Spotify"
   },
   nl: {
     storytimeEyebrow: "STORYTIME",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
-    storytimeDesc: "Luister naar Benny's avontuur terwijl het verhaal tot leven komt op YouTube.",
-    storytimeCta: "Bekijk het verhaal op YouTube",
-    storytimeChip: "Verhaal bekijken"
+    storytimeDesc: "Luister naar Benny's avontuur terwijl het verhaal tot leven komt op YouTube en Spotify.",
+    storytimeCta: "Bekijk op YouTube",
+    storytimeCtaYoutube: "Bekijk op YouTube",
+    storytimeCtaSpotify: "Luister op Spotify",
+    storytimeChip: "YouTube",
+    storytimeChipYoutube: "YouTube",
+    storytimeChipSpotify: "Spotify"
   },
   pl: {
     storytimeEyebrow: "STORYTIME",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
-    storytimeDesc: "Posłuchaj przygody Benny'ego, gdy historia ożywa na YouTube.",
-    storytimeCta: "Obejrzyj historię na YouTube",
-    storytimeChip: "Zobacz historię"
+    storytimeDesc: "Posłuchaj przygody Benny'ego, gdy historia ożywa na YouTube i Spotify.",
+    storytimeCta: "Oglądaj na YouTube",
+    storytimeCtaYoutube: "Oglądaj na YouTube",
+    storytimeCtaSpotify: "Słuchaj na Spotify",
+    storytimeChip: "YouTube",
+    storytimeChipYoutube: "YouTube",
+    storytimeChipSpotify: "Spotify"
   },
   sv: {
     storytimeEyebrow: "STORYTIME",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
-    storytimeDesc: "Lyssna på Bennys äventyr när sagan får liv på YouTube.",
-    storytimeCta: "Titta på sagan på YouTube",
-    storytimeChip: "Se sagan"
+    storytimeDesc: "Lyssna på Bennys äventyr när sagan får liv på YouTube och Spotify.",
+    storytimeCta: "Titta på YouTube",
+    storytimeCtaYoutube: "Titta på YouTube",
+    storytimeCtaSpotify: "Lyssna på Spotify",
+    storytimeChip: "YouTube",
+    storytimeChipYoutube: "YouTube",
+    storytimeChipSpotify: "Spotify"
   },
   ja: {
     storytimeEyebrow: "STORYTIME",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
-    storytimeDesc: "YouTubeで物語が生き生きと動き出す、ベニーの冒険をお聴きください。",
-    storytimeCta: "YouTubeでお話を観る",
-    storytimeChip: "お話を観る"
+    storytimeDesc: "YouTubeやSpotifyで物語が生き生きと動き出す、ベニーの冒険をお聴きください。",
+    storytimeCta: "YouTubeで観る",
+    storytimeCtaYoutube: "YouTubeで観る",
+    storytimeCtaSpotify: "Spotifyで聴く",
+    storytimeChip: "YouTube",
+    storytimeChipYoutube: "YouTube",
+    storytimeChipSpotify: "Spotify"
   }
 };
 
@@ -2539,6 +2575,9 @@ function applyLanguage(lang) {
   // Homepage Sezione "Storytime" (se presente su index.html)
   renderStorytimeSection(lang);
 
+  // Link Spotify della Collana (Topbar e Footer)
+  updateSeriesSpotifyLinks(lang);
+
   // Homepage Sezione "La Collana" (se presente su index.html)
   if (document.getElementById('series-section-title')) {
     const seriesLogo = document.getElementById('series-section-logo');
@@ -2834,7 +2873,10 @@ function renderStorytimeSection(lang) {
   if (descEl) descEl.textContent = strings.storytimeDesc || item.description;
 
   const ctaTextEl = document.getElementById('storytime-cta-text');
-  if (ctaTextEl) ctaTextEl.textContent = strings.storytimeCta || item.ctaText;
+  if (ctaTextEl) ctaTextEl.textContent = strings.storytimeCtaYoutube || strings.storytimeCta || item.ctaText || 'Watch on YouTube';
+
+  const spotifyTextEl = document.getElementById('storytime-spotify-text');
+  if (spotifyTextEl) spotifyTextEl.textContent = strings.storytimeCtaSpotify || 'Listen on Spotify';
 
   const coverImg = document.getElementById('storytime-cover-img');
   if (coverImg && item.cover) {
@@ -2842,23 +2884,24 @@ function renderStorytimeSection(lang) {
     coverImg.alt = `${strings.storytimeTitle || item.title} - Storytime`;
   }
 
+  // 1. YouTube Button & Cover Link
   const ctaBtn = document.getElementById('storytime-cta-btn');
   const coverLink = document.getElementById('storytime-cover-link');
-  const effectiveUrl = (typeof getStorytimeYoutubeUrl === 'function')
+  const effectiveYoutubeUrl = (typeof getStorytimeYoutubeUrl === 'function')
     ? getStorytimeYoutubeUrl(item)
     : (item.youtubeUrl || null);
 
-  if (effectiveUrl) {
+  if (effectiveYoutubeUrl) {
     if (ctaBtn) {
-      ctaBtn.href = effectiveUrl;
+      ctaBtn.href = effectiveYoutubeUrl;
       ctaBtn.setAttribute('target', '_blank');
       ctaBtn.setAttribute('rel', 'noopener noreferrer');
       ctaBtn.removeAttribute('aria-disabled');
       ctaBtn.classList.remove('is-unlinked');
-      ctaBtn.setAttribute('title', strings.storytimeCta || item.ctaText || 'Watch on YouTube');
+      ctaBtn.setAttribute('title', strings.storytimeCtaYoutube || strings.storytimeCta || item.ctaText || 'Watch on YouTube');
     }
     if (coverLink) {
-      coverLink.href = effectiveUrl;
+      coverLink.href = effectiveYoutubeUrl;
       coverLink.setAttribute('target', '_blank');
       coverLink.setAttribute('rel', 'noopener noreferrer');
       coverLink.removeAttribute('aria-disabled');
@@ -2883,6 +2926,68 @@ function renderStorytimeSection(lang) {
       coverLink.removeAttribute('title');
     }
   }
+
+  // 2. Spotify Button
+  const spotifyBtn = document.getElementById('storytime-spotify-btn');
+  const effectiveSpotifyUrl = (typeof getStorytimeSpotifyUrl === 'function')
+    ? getStorytimeSpotifyUrl(item)
+    : (item.spotifyUrl || null);
+
+  if (effectiveSpotifyUrl) {
+    if (spotifyBtn) {
+      spotifyBtn.href = effectiveSpotifyUrl;
+      spotifyBtn.setAttribute('target', '_blank');
+      spotifyBtn.setAttribute('rel', 'noopener noreferrer');
+      spotifyBtn.removeAttribute('aria-disabled');
+      spotifyBtn.classList.remove('is-unlinked');
+      spotifyBtn.setAttribute('title', strings.storytimeCtaSpotify || 'Listen on Spotify');
+    }
+  } else {
+    if (spotifyBtn) {
+      spotifyBtn.removeAttribute('href');
+      spotifyBtn.removeAttribute('target');
+      spotifyBtn.removeAttribute('rel');
+      spotifyBtn.setAttribute('aria-disabled', 'true');
+      spotifyBtn.classList.add('is-unlinked');
+      spotifyBtn.removeAttribute('title');
+    }
+  }
+}
+
+/* ==========================================================================
+   3.6 AGGIORNAMENTO LINK SPOTIFY COLLANA (TOPBAR & FOOTER)
+   ========================================================================== */
+
+function updateSeriesSpotifyLinks(lang) {
+  const url = (typeof getSpotifySeriesUrl === 'function')
+    ? getSpotifySeriesUrl(lang)
+    : (lang === 'it' ? null : 'https://open.spotify.com/show/4lLJo6ZXfVhITTnPFCCMIS?si=j3SzwenwRxq6BgIUBhl4cg');
+
+  const topbarBtns = document.querySelectorAll('.topbar-spotify');
+  const footerBtns = document.querySelectorAll('.footer-spotify-btn');
+  const allBtns = [...topbarBtns, ...footerBtns];
+
+  allBtns.forEach(btn => {
+    if (url) {
+      btn.href = url;
+      btn.setAttribute('target', '_blank');
+      btn.setAttribute('rel', 'noopener noreferrer');
+      btn.removeAttribute('aria-disabled');
+      btn.classList.remove('is-unlinked');
+      const seriesTitle = (lang === 'it') ? 'Le Avventure del Cantiere' : 'Construction Site Adventures';
+      btn.setAttribute('title', `Spotify - ${seriesTitle}`);
+      btn.setAttribute('aria-label', `Spotify - ${seriesTitle}`);
+    } else {
+      btn.removeAttribute('href');
+      btn.removeAttribute('target');
+      btn.removeAttribute('rel');
+      btn.setAttribute('aria-disabled', 'true');
+      btn.classList.add('is-unlinked');
+      const comingSoon = (lang === 'it') ? 'Spotify (Disponibile a breve)' : 'Spotify (Coming soon)';
+      btn.setAttribute('title', comingSoon);
+      btn.setAttribute('aria-label', comingSoon);
+    }
+  });
 }
 
 /* ==========================================================================
@@ -2925,27 +3030,52 @@ function renderBookCatalog(lang) {
 
     const storytimeItem = (typeof getStorytimeItemForBook === 'function') ? getStorytimeItemForBook(book.id) : null;
     let storytimeChipHtml = '';
+    let spotifyChipHtml = '';
     if (storytimeItem) {
-      const ctaLabel = strings.storytimeChip || storytimeItem.catalogCtaText || 'Storytime';
-      const effectiveUrl = (typeof getStorytimeYoutubeUrl === 'function')
+      const ytLabel = strings.storytimeChipYoutube || strings.storytimeChip || 'YouTube';
+      const effectiveYtUrl = (typeof getStorytimeYoutubeUrl === 'function')
         ? getStorytimeYoutubeUrl(storytimeItem)
         : storytimeItem.youtubeUrl;
-      if (effectiveUrl) {
+      if (effectiveYtUrl) {
         storytimeChipHtml = `
-          <a href="${escapeHtml(effectiveUrl)}" target="_blank" rel="noopener noreferrer" class="card-meta-chip chip-storytime-btn" aria-label="${escapeHtml(ctaLabel)} - ${escapeHtml(book.title)}">
+          <a href="${escapeHtml(effectiveYtUrl)}" target="_blank" rel="noopener noreferrer" class="card-meta-chip chip-storytime-btn" aria-label="${escapeHtml(ytLabel)} - ${escapeHtml(book.title)}">
             <svg class="chip-svg chip-storytime-svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <polygon points="6 3 20 12 6 21 6 3"></polygon>
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
             </svg>
-            <span>${escapeHtml(ctaLabel)}</span>
+            <span>${escapeHtml(ytLabel)}</span>
           </a>
         `;
       } else {
         storytimeChipHtml = `
-          <a role="button" aria-disabled="true" class="card-meta-chip chip-storytime-btn is-unlinked" aria-label="${escapeHtml(ctaLabel)} - ${escapeHtml(book.title)}" tabindex="0">
+          <a role="button" aria-disabled="true" class="card-meta-chip chip-storytime-btn is-unlinked" aria-label="${escapeHtml(ytLabel)} - ${escapeHtml(book.title)}" tabindex="0">
             <svg class="chip-svg chip-storytime-svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <polygon points="6 3 20 12 6 21 6 3"></polygon>
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
             </svg>
-            <span>${escapeHtml(ctaLabel)}</span>
+            <span>${escapeHtml(ytLabel)}</span>
+          </a>
+        `;
+      }
+
+      const spLabel = strings.storytimeChipSpotify || 'Spotify';
+      const effectiveSpUrl = (typeof getStorytimeSpotifyUrl === 'function')
+        ? getStorytimeSpotifyUrl(storytimeItem)
+        : storytimeItem.spotifyUrl;
+      if (effectiveSpUrl) {
+        spotifyChipHtml = `
+          <a href="${escapeHtml(effectiveSpUrl)}" target="_blank" rel="noopener noreferrer" class="card-meta-chip chip-spotify-btn" aria-label="${escapeHtml(spLabel)} - ${escapeHtml(book.title)}">
+            <svg class="chip-svg chip-spotify-svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.5 17.3c-.2.3-.6.4-.9.2-2.5-1.5-5.6-1.9-9.3-1-.3.1-.7-.1-.8-.4-.1-.3.1-.7.4-.8 4-1 7.4-.5 10.3 1.2.3.2.4.6.3.8zm1.5-3.3c-.3.4-.8.5-1.2.3-3-1.8-7.5-2.4-11-1.3-.4.1-.9-.1-1-.5-.1-.4.1-.9.5-1 4.1-1.2 9.1-.6 12.4 1.5.4.2.5.7.3 1zm.1-3.4c-3.6-2.1-9.5-2.3-12.9-1.3-.5.2-1.1-.1-1.3-.6-.2-.5.1-1.1.6-1.3 4-1.2 10.5-1 14.6 1.5.5.3.6.9.3 1.4-.3.5-.9.6-1.3.3z"/>
+            </svg>
+            <span>${escapeHtml(spLabel)}</span>
+          </a>
+        `;
+      } else {
+        spotifyChipHtml = `
+          <a role="button" aria-disabled="true" class="card-meta-chip chip-spotify-btn is-unlinked" aria-label="${escapeHtml(spLabel)} - ${escapeHtml(book.title)}" tabindex="0">
+            <svg class="chip-svg chip-spotify-svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.5 17.3c-.2.3-.6.4-.9.2-2.5-1.5-5.6-1.9-9.3-1-.3.1-.7-.1-.8-.4-.1-.3.1-.7.4-.8 4-1 7.4-.5 10.3 1.2.3.2.4.6.3.8zm1.5-3.3c-.3.4-.8.5-1.2.3-3-1.8-7.5-2.4-11-1.3-.4.1-.9-.1-1-.5-.1-.4.1-.9.5-1 4.1-1.2 9.1-.6 12.4 1.5.4.2.5.7.3 1zm.1-3.4c-3.6-2.1-9.5-2.3-12.9-1.3-.5.2-1.1-.1-1.3-.6-.2-.5.1-1.1.6-1.3 4-1.2 10.5-1 14.6 1.5.5.3.6.9.3 1.4-.3.5-.9.6-1.3.3z"/>
+            </svg>
+            <span>${escapeHtml(spLabel)}</span>
           </a>
         `;
       }
@@ -2981,6 +3111,7 @@ function renderBookCatalog(lang) {
         <div class="book-card-meta">
           ${sampleChipHtml}
           ${storytimeChipHtml}
+          ${spotifyChipHtml}
         </div>
 
         <h2 class="book-card-title">${escapeHtml(book.title)}</h2>

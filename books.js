@@ -30,12 +30,13 @@ const STORYTIME_ITEMS = [
     language: "it",
     eyebrow: "STORYTIME",
     title: "Benny l'escavatore e la collina che cambiava forma",
-    description: "Ascolta l'avventura di Benny mentre la storia prende vita su YouTube.",
+    description: "Ascolta l'avventura di Benny mentre la storia prende vita su YouTube e Spotify.",
     ctaText: "Guarda la storia su YouTube",
     catalogCtaText: "Guarda la storia",
     cover: "assets/construction-site-adventures/01.Benny.Collina/IT/Front.Cover.png",
     // ---> INSERISCI L'URL YOUTUBE QUI (es. "https://www.youtube.com/watch?v=...") <---
-    youtubeUrl: "https://youtu.be/Q5BzuefwUuA"
+    youtubeUrl: "https://youtu.be/Q5BzuefwUuA",
+    spotifyUrl: "https://open.spotify.com/episode/7wCHeAATwC0cMo3cLz09GT?si=_KomHQZ3QOurT1-MfCcu1Q"
   },
   {
     id: "benny-hill-en",
@@ -43,12 +44,13 @@ const STORYTIME_ITEMS = [
     language: "en",
     eyebrow: "STORYTIME",
     title: "Benny the Excavator and the Shape-Shifting Hill",
-    description: "Listen to Benny's adventure as the story comes to life on YouTube.",
+    description: "Listen to Benny's adventure as the story comes to life on YouTube and Spotify.",
     ctaText: "Watch the story on YouTube",
     catalogCtaText: "Watch the story",
     cover: "assets/construction-site-adventures/01.Benny.Collina/US/Front.Cover.png",
     // ---> INSERISCI L'URL YOUTUBE QUI (es. "https://www.youtube.com/watch?v=...") <---
-    youtubeUrl: "https://youtu.be/K04YwfVBCpE"
+    youtubeUrl: "https://youtu.be/K04YwfVBCpE",
+    spotifyUrl: "https://open.spotify.com/episode/1MozkoCFeSIlzyyLK12ZdO?si=fYTl5BGnSCqdoI0e8l37CQ"
   }
 ];
 
@@ -58,6 +60,16 @@ function getStorytimeYoutubeUrl(item) {
   if (typeof STORYTIME_ITEMS !== 'undefined' && Array.isArray(STORYTIME_ITEMS)) {
     const anyWithUrl = STORYTIME_ITEMS.find(s => s.youtubeUrl);
     if (anyWithUrl) return anyWithUrl.youtubeUrl;
+  }
+  return null;
+}
+
+function getStorytimeSpotifyUrl(item) {
+  if (!item) return null;
+  if (item.spotifyUrl) return item.spotifyUrl;
+  if (typeof STORYTIME_ITEMS !== 'undefined' && Array.isArray(STORYTIME_ITEMS)) {
+    const anyWithUrl = STORYTIME_ITEMS.find(s => s.spotifyUrl);
+    if (anyWithUrl) return anyWithUrl.spotifyUrl;
   }
   return null;
 }
@@ -74,6 +86,24 @@ function getFeaturedStorytimeItem(lang) {
     if (matching) return matching;
   }
   return STORYTIME_ITEMS.find(item => item.language === 'en') || STORYTIME_ITEMS[0] || null;
+}
+
+// ==========================================================================
+// CONFIGURAZIONE SPOTIFY DELLA COLLANA (PODCAST SHOW)
+// Inserisci qui l'URL Spotify della collana italiana appena disponibile.
+// ==========================================================================
+const SPOTIFY_SERIES_URLS = {
+  // Collana in lingua italiana (mostrata sul sito in italiano)
+  it: "https://open.spotify.com/show/4lrP422K6AJpbuWLb6GX97?si=G-YpP0vdQdunglxDTTN7Qg",
+  // Collana in lingua inglese (utilizzata per tutte le altre lingue: en, de, fr, es, nl, pl, sv, ja)
+  en: "https://open.spotify.com/show/4lLJo6ZXfVhITTnPFCCMIS?si=j3SzwenwRxq6BgIUBhl4cg"
+};
+
+function getSpotifySeriesUrl(lang) {
+  if (lang === 'it') {
+    return (typeof SPOTIFY_SERIES_URLS !== 'undefined' && SPOTIFY_SERIES_URLS.it) ? SPOTIFY_SERIES_URLS.it : null;
+  }
+  return (typeof SPOTIFY_SERIES_URLS !== 'undefined' && SPOTIFY_SERIES_URLS.en) ? SPOTIFY_SERIES_URLS.en : null;
 }
 
 // ==========================================================================
