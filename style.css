@@ -201,14 +201,16 @@ button {
   background-color: rgba(225, 48, 108, 0.08);
 }
 
-/* TikTok Button - Dark Signature Pill */
+/* TikTok Button */
 .topbar-tiktok {
-  background-color: #111827;
-  color: #FFFFFF;
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
+  color: #1F2937;
 }
 
+.topbar-tiktok:hover {
+  border-color: #000000;
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0.06);
+}
 
 /* YouTube Button */
 .topbar-youtube {
@@ -235,13 +237,6 @@ button {
 .topbar-btn.is-unlinked {
   opacity: 0.55;
   cursor: not-allowed;
-}
-
-.topbar-tiktok:hover {
-  background-color: #000000;
-  color: #FFFFFF;
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 12px rgba(254, 44, 85, 0.25), 0 4px 12px rgba(37, 244, 238, 0.18);
 }
 
 /* Responsive Label Switching */
@@ -756,15 +751,15 @@ button {
 .storytime-card {
   max-width: 1040px;
   margin: 0 auto;
-  background-color: var(--c-bg-surface);
-  border: 1px solid var(--c-border);
+  background: linear-gradient(145deg, #151E2E 0%, #0B1120 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
-  padding: 2.25rem;
+  padding: 2.5rem;
   display: grid;
   grid-template-columns: minmax(260px, 340px) 1fr;
   gap: 2.75rem;
   align-items: center;
-  box-shadow: 0 8px 24px rgba(21, 29, 42, 0.04), 0 1px 3px rgba(21, 29, 42, 0.03);
+  box-shadow: 0 20px 45px rgba(11, 17, 32, 0.22), 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .storytime-media-col {
@@ -782,9 +777,9 @@ button {
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-md);
   overflow: hidden;
-  background-color: var(--c-bg-subtle);
-  border: 1px solid var(--c-border);
-  box-shadow: 0 12px 28px rgba(21, 29, 42, 0.1), 0 2px 6px rgba(21, 29, 42, 0.04);
+  background-color: #0B1120;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   text-decoration: none;
 }
@@ -808,13 +803,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(21, 29, 42, 0.1);
+  background: rgba(11, 17, 32, 0.18);
   transition: background 0.3s ease;
   pointer-events: none;
 }
 
 .storytime-cover-frame:hover .storytime-play-overlay {
-  background: rgba(21, 29, 42, 0.16);
+  background: rgba(11, 17, 32, 0.28);
 }
 
 .storytime-play-btn {
@@ -824,7 +819,7 @@ button {
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22), 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.9);
   display: flex;
   align-items: center;
@@ -835,7 +830,7 @@ button {
 .storytime-cover-frame:hover .storytime-play-btn {
   transform: scale(1.08);
   background: #FFFFFF;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
 .storytime-play-icon {
@@ -855,27 +850,31 @@ button {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-heading);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--c-primary);
-  margin-bottom: 0.5rem;
+  color: #FF7A50;
+  background: rgba(240, 90, 40, 0.16);
+  border: 1px solid rgba(240, 90, 40, 0.32);
+  padding: 0.28rem 0.85rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.85rem;
 }
 
 .storytime-title {
   font-family: var(--font-heading);
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.6rem, 2.5vw, 2.25rem);
   font-weight: 700;
-  color: var(--c-text-primary);
+  color: #FFFFFF;
   line-height: 1.22;
   margin-bottom: 0.85rem;
 }
 
 .storytime-desc {
-  font-size: clamp(0.95rem, 1.25vw, 1.1rem);
-  color: var(--c-text-secondary);
-  line-height: 1.55;
+  font-size: clamp(0.95rem, 1.25vw, 1.08rem);
+  color: #CBD5E1;
+  line-height: 1.6;
   margin-bottom: 1.75rem;
   max-width: 520px;
 }
