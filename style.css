@@ -749,15 +749,16 @@ button {
 }
 
 .storytime-card {
-  max-width: 1040px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   background: linear-gradient(145deg, #151E2E 0%, #0B1120 100%);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
-  padding: 2.5rem;
+  padding: 2.5rem 3rem;
   display: grid;
   grid-template-columns: minmax(260px, 340px) 1fr;
-  gap: 2.75rem;
+  gap: 3.25rem;
   align-items: center;
   box-shadow: 0 20px 45px rgba(11, 17, 32, 0.22), 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -876,7 +877,7 @@ button {
   color: #CBD5E1;
   line-height: 1.6;
   margin-bottom: 1.75rem;
-  max-width: 520px;
+  max-width: 600px;
 }
 
 .storytime-action-wrapper {
