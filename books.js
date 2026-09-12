@@ -51,6 +51,19 @@ const STORYTIME_ITEMS = [
     // ---> INSERISCI L'URL YOUTUBE QUI (es. "https://www.youtube.com/watch?v=...") <---
     youtubeUrl: "https://youtu.be/K04YwfVBCpE",
     spotifyUrl: "https://open.spotify.com/episode/1MozkoCFeSIlzyyLK12ZdO?si=fYTl5BGnSCqdoI0e8l37CQ"
+  },
+  {
+    id: "benny-colline-fr",
+    bookId: "benny-colline-fr",
+    language: "fr",
+    eyebrow: "STORYTIME",
+    title: "Benny l'excavateur et la colline qui changeait de forme",
+    description: "Écoutez l'aventure de Benny alors que l'histoire prend vie sur YouTube et Spotify.",
+    ctaText: "Regarder l'histoire sur YouTube",
+    catalogCtaText: "Regarder l'histoire",
+    cover: "assets/construction-site-adventures/01.Benny.Collina/FR/Front.Cover.png",
+    youtubeUrl: "https://youtu.be/ZA1w4TEGJrU",
+    spotifyUrl: "https://open.spotify.com/episode/7GqRkvmZx10YyRr3RFzNXH?si=y6rF_IdoTYKjtwezeriO2w"
   }
 ];
 
@@ -74,8 +87,12 @@ function getStorytimeSpotifyUrl(item) {
   return null;
 }
 
-function getStorytimeItemForBook(bookId) {
+function getStorytimeItemForBook(bookId, lang) {
   if (typeof STORYTIME_ITEMS === 'undefined' || !Array.isArray(STORYTIME_ITEMS)) return null;
+  if (lang) {
+    const matchWithLang = STORYTIME_ITEMS.find(item => (item.bookId === bookId || item.id === bookId) && item.language === lang);
+    if (matchWithLang) return matchWithLang;
+  }
   return STORYTIME_ITEMS.find(item => item.bookId === bookId || item.id === bookId) || null;
 }
 
@@ -90,20 +107,22 @@ function getFeaturedStorytimeItem(lang) {
 
 // ==========================================================================
 // CONFIGURAZIONE SPOTIFY DELLA COLLANA (PODCAST SHOW)
-// Inserisci qui l'URL Spotify della collana italiana appena disponibile.
 // ==========================================================================
 const SPOTIFY_SERIES_URLS = {
   // Collana in lingua italiana (mostrata sul sito in italiano)
   it: "https://open.spotify.com/show/4lrP422K6AJpbuWLb6GX97?si=G-YpP0vdQdunglxDTTN7Qg",
-  // Collana in lingua inglese (utilizzata per tutte le altre lingue: en, de, fr, es, nl, pl, sv, ja)
+  // Collana in lingua francese (mostrata sul sito in francese)
+  fr: "https://open.spotify.com/show/10Vzvqat68PHkhzLEE8Jar?si=_0ORy3KTS0aNLn-QtlFx2Q",
+  // Collana in lingua inglese (utilizzata per tutte le altre lingue: en, de, es, nl, pl, sv, ja)
   en: "https://open.spotify.com/show/4lLJo6ZXfVhITTnPFCCMIS?si=j3SzwenwRxq6BgIUBhl4cg"
 };
 
 function getSpotifySeriesUrl(lang) {
-  if (lang === 'it') {
-    return (typeof SPOTIFY_SERIES_URLS !== 'undefined' && SPOTIFY_SERIES_URLS.it) ? SPOTIFY_SERIES_URLS.it : null;
+  if (typeof SPOTIFY_SERIES_URLS === 'undefined') return null;
+  if (lang && SPOTIFY_SERIES_URLS[lang]) {
+    return SPOTIFY_SERIES_URLS[lang];
   }
-  return (typeof SPOTIFY_SERIES_URLS !== 'undefined' && SPOTIFY_SERIES_URLS.en) ? SPOTIFY_SERIES_URLS.en : null;
+  return SPOTIFY_SERIES_URLS.en || null;
 }
 
 // ==========================================================================
@@ -168,6 +187,32 @@ const BOOKS = [
     }
   },
   {
+    "id": "benny-colline-fr",
+    "volume": 1,
+    "collection": "construction-site",
+    "title": "Benny l'excavateur et la colline qui changeait de forme",
+    "subtitle": "Livre illustré pour enfants 2-5 ans",
+    "author": "Marco Salucci",
+    "language": "Français",
+    "languageCode": "fr",
+    "age": "2–5 ans",
+    "badge": "Tome 1",
+    "comingSoon": true,
+    "cover": "assets/construction-site-adventures/01.Benny.Collina/FR/Front.Cover.png",
+    "preview": [
+      "assets/construction-site-adventures/01.Benny.Collina/FR/Front.Cover.png",
+      "assets/construction-site-adventures/01.Benny.Collina/FR/2.png",
+      "assets/construction-site-adventures/01.Benny.Collina/FR/3.png",
+      "assets/construction-site-adventures/01.Benny.Collina/FR/4.png",
+      "assets/construction-site-adventures/01.Benny.Collina/FR/5.png",
+      "assets/construction-site-adventures/01.Benny.Collina/FR/6.png",
+      "assets/construction-site-adventures/01.Benny.Collina/FR/7.png",
+      "assets/construction-site-adventures/01.Benny.Collina/FR/8.png",
+      "assets/construction-site-adventures/01.Benny.Collina/FR/Back.Cover.png"
+    ],
+    "amazon": {}
+  },
+  {
     "id": "rudy-spiaggia-it",
     "volume": 2,
     "collection": "construction-site",
@@ -223,6 +268,24 @@ const BOOKS = [
       "co_uk": "B0H6XV8LN6",
       "it": "B0H6XV8LN6"
     }
+  },
+  {
+    "id": "rudy-plage-fr",
+    "volume": 2,
+    "collection": "construction-site",
+    "title": "Rudy le bulldozer et la plage qui disparaissait",
+    "subtitle": "Livre illustré pour enfants 2-5 ans",
+    "author": "Marco Salucci",
+    "language": "Français",
+    "languageCode": "fr",
+    "age": "2–5 ans",
+    "badge": "Tome 2",
+    "comingSoon": true,
+    "cover": "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/Front.Cover.png",
+    "preview": [
+      "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/Front.Cover.png"
+    ],
+    "amazon": {}
   },
   {
     "id": "leo-montagna-it",
@@ -282,6 +345,24 @@ const BOOKS = [
     }
   },
   {
+    "id": "leo-gemmes-fr",
+    "volume": 3,
+    "collection": "construction-site",
+    "title": "Leo la grue et les gemmes de la montagne",
+    "subtitle": "Livre illustré pour enfants 2-5 ans",
+    "author": "Marco Salucci",
+    "language": "Français",
+    "languageCode": "fr",
+    "age": "2–5 ans",
+    "badge": "Tome 3",
+    "comingSoon": true,
+    "cover": "assets/construction-site-adventures/03.Leo.Montagna/FR/Front.Cover.png",
+    "preview": [
+      "assets/construction-site-adventures/03.Leo.Montagna/FR/Front.Cover.png"
+    ],
+    "amazon": {}
+  },
+  {
     "id": "bruno-papere-it",
     "volume": 4,
     "collection": "construction-site",
@@ -337,6 +418,24 @@ const BOOKS = [
       "co_uk": "B0H6SDVJDZ",
       "it": "B0H6SDVJDZ"
     }
+  },
+  {
+    "id": "bruno-canards-fr",
+    "volume": 4,
+    "collection": "construction-site",
+    "title": "Bruno le camion et la mare aux canards",
+    "subtitle": "Livre illustré pour enfants 2-5 ans",
+    "author": "Marco Salucci",
+    "language": "Français",
+    "languageCode": "fr",
+    "age": "2–5 ans",
+    "badge": "Tome 4",
+    "comingSoon": true,
+    "cover": "assets/construction-site-adventures/04.Bruno.Papere/FR/Front.Cover.png",
+    "preview": [
+      "assets/construction-site-adventures/04.Bruno.Papere/FR/Front.Cover.png"
+    ],
+    "amazon": {}
   },
   {
     "id": "benny-roma-it",
@@ -396,6 +495,24 @@ const BOOKS = [
     }
   },
   {
+    "id": "benny-antiquite-fr",
+    "volume": 5,
+    "collection": "construction-site",
+    "title": "Benny l'excavateur et les pièces de l'antiquité romaine",
+    "subtitle": "Livre illustré pour enfants 2-5 ans",
+    "author": "Marco Salucci",
+    "language": "Français",
+    "languageCode": "fr",
+    "age": "2–5 ans",
+    "badge": "Tome 5",
+    "comingSoon": true,
+    "cover": "assets/construction-site-adventures/05.Benny.Roma/FR/Front.Cover.png",
+    "preview": [
+      "assets/construction-site-adventures/05.Benny.Roma/FR/Front.Cover.png"
+    ],
+    "amazon": {}
+  },
+  {
     "id": "nina-conigli-it",
     "volume": 6,
     "collection": "construction-site",
@@ -451,6 +568,24 @@ const BOOKS = [
       "co_uk": "B0H723KGZ5",
       "it": "B0H723KGZ5"
     }
+  },
+  {
+    "id": "nina-lapins-fr",
+    "volume": 6,
+    "collection": "construction-site",
+    "title": "Nina la bétonnière et le pont des petits lapins",
+    "subtitle": "Livre illustré pour enfants 2-5 ans",
+    "author": "Marco Salucci",
+    "language": "Français",
+    "languageCode": "fr",
+    "age": "2–5 ans",
+    "badge": "Tome 6",
+    "comingSoon": true,
+    "cover": "assets/construction-site-adventures/06.Nina.Conigli/FR/Front.Cover.png",
+    "preview": [
+      "assets/construction-site-adventures/06.Nina.Conigli/FR/Front.Cover.png"
+    ],
+    "amazon": {}
   },
   {
     "id": "rino-ladri-it",
@@ -510,6 +645,24 @@ const BOOKS = [
     }
   },
   {
+    "id": "rino-voleurs-fr",
+    "volume": 7,
+    "collection": "construction-site",
+    "title": "Rino le rouleau compresseur et les voleurs du chantier",
+    "subtitle": "Livre illustré pour enfants 2-5 ans",
+    "author": "Marco Salucci",
+    "language": "Français",
+    "languageCode": "fr",
+    "age": "2–5 ans",
+    "badge": "Tome 7",
+    "comingSoon": true,
+    "cover": "assets/construction-site-adventures/07.Rino.Ladri/FR/Front.Cover.png",
+    "preview": [
+      "assets/construction-site-adventures/07.Rino.Ladri/FR/Front.Cover.png"
+    ],
+    "amazon": {}
+  },
+  {
     "id": "leo-cinciallegra-it",
     "volume": 8,
     "collection": "construction-site",
@@ -565,5 +718,23 @@ const BOOKS = [
       "co_uk": "B0H7LPQ8KX",
       "it": "B0H7LPQ8KX"
     }
+  },
+  {
+    "id": "leo-mesange-fr",
+    "volume": 8,
+    "collection": "construction-site",
+    "title": "Leo la grue et le nid de la mésange",
+    "subtitle": "Livre illustré pour enfants 2-5 ans",
+    "author": "Marco Salucci",
+    "language": "Français",
+    "languageCode": "fr",
+    "age": "2–5 ans",
+    "badge": "Tome 8",
+    "comingSoon": true,
+    "cover": "assets/construction-site-adventures/08.Leo.Cinciallegra/FR/Front.Cover.png",
+    "preview": [
+      "assets/construction-site-adventures/08.Leo.Cinciallegra/FR/Front.Cover.png"
+    ],
+    "amazon": {}
   }
 ];

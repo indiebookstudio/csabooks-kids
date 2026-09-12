@@ -44,6 +44,8 @@ const I18N = {
     filterAll: "Tutte le edizioni",
     filterIt: "Edizione Italiana",
     filterEn: "Edizione Inglese",
+    filterFr: "Edizione Francese",
+    comingSoon: "Disponibile a breve",
     footerAbout: "Storie per bambini, nate da un papà e una mamma.",
     copyright: "© 2026 CSA Books 4 Kids. Tutti i diritti riservati."
     ,
@@ -82,6 +84,8 @@ const I18N = {
     filterAll: "All Editions",
     filterIt: "Italian Edition",
     filterEn: "English Edition",
+    filterFr: "French Edition",
+    comingSoon: "Coming Soon",
     footerAbout: "Children's stories, made by a dad and a mom.",
     copyright: "© 2026 CSA Books 4 Kids. All rights reserved."
     ,
@@ -119,6 +123,8 @@ const I18N = {
     filterAll: "Alle Ausgaben",
     filterIt: "Italienische Ausgabe",
     filterEn: "Englische Ausgabe",
+    filterFr: "Französische Ausgabe",
+    comingSoon: "Demnächst verfügbar",
     footerAbout: "Kindergeschichten, von einem Papa und einer Mama.",
     copyright: "© 2026 CSA Books 4 Kids. Alle Rechte vorbehalten."
     ,
@@ -156,6 +162,8 @@ const I18N = {
     filterAll: "Toutes les éditions",
     filterIt: "Édition Italienne",
     filterEn: "Édition Anglaise",
+    filterFr: "Édition Française",
+    comingSoon: "Bientôt disponible",
     footerAbout: "Histoires pour enfants, créées par un papa et une maman.",
     copyright: "© 2026 CSA Books 4 Kids. Tous droits réservés."
     ,
@@ -170,13 +178,18 @@ const I18N = {
     aboutStoryTitle: "L'inspiration : une aventure de famille",
     aboutBioP1: "Je suis né à Fano, dans les Marches, et je vis aujourd'hui dans le Trentin-Haut-Adige, entouré par la nature et les montagnes, sources de mon inspiration.",
     aboutBioP2: "J'ai toujours aimé transmettre le savoir, convaincu qu'une histoire peut devenir un pont précieux entre éveil, curiosité et amusement.",
-    aboutBioP3: "Ma plus grande inspiration est mon fils. C'est sa passion débordante pour les camions, pelleteuses et chantiers qui a donné vie à la collection 'Le Avventure del Cantiere' pour les petits curieux.",
+    aboutBioP3: "Ma plus grande inspiration est mon fils. C'est sa passion débordante pour les camions, pelleteuses et chantiers qui a donné vie à la collection « Les Aventures du Chantier » pour les petits curieux.",
     aboutBioFamily: "Les livres sont écrits par moi, mais chaque histoire prend vie aux côtés de la maman de notre enfant : un travail à quatre mains pour trouver les mots justes, le rythme parfait et cette chaleur qui rend la lecture du soir si précieuse.",
     aboutInspirationText: "Une passion pour les camions, pelleteuses et chantiers a donné naissance à tout un univers d'histoires.",
     aboutBioP4: "À travers mes livres, je cherche à offrir des moments de partage complice entre parents et enfants, faits d'émotion, de jeu et de découverte.",
     aboutBioP5: "Mon objectif est de replacer la lecture au cœur des moments en famille, avec des récits qui font sourire et grandir, loin des écrans.",
     aboutClosingText: "Parce que les plus belles histoires ne sont pas seulement celles que les enfants lisent, mais celles que parents et enfants partagent ensemble.",
-    aboutCtaBtn: "Découvrir mes livres"
+    aboutCtaBtn: "Découvrir mes livres",
+    storytimeEyebrow: "STORYTIME",
+    storytimeTitle: "Benny l'excavateur et la colline qui changeait de forme",
+    storytimeDesc: "Écoutez l'aventure de Benny alors que l'histoire prend vie sur YouTube et Spotify.",
+    storytimeCtaYoutube: "Regarder sur YouTube",
+    storytimeCtaSpotify: "Écouter sur Spotify"
   },
   es: {
     heroTitle: 'CSA Books <span class="highlight">4 Kids</span>',
@@ -193,6 +206,8 @@ const I18N = {
     filterAll: "Todas las ediciones",
     filterIt: "Edición Italiana",
     filterEn: "Edición Inglesa",
+    filterFr: "Edición Francesa",
+    comingSoon: "Próximamente",
     footerAbout: "Cuentos infantiles, creados por un papá y una mamá.",
     copyright: "© 2026 CSA Books 4 Kids. Todos los derechos reservados."
     ,
@@ -209,7 +224,7 @@ const I18N = {
     aboutBioP2: "Siempre me ha apasionado enseñar y transmitir conocimientos, convencido de que un cuento es un puente entre el crecimiento, la curiosidad y la diversión.",
     aboutBioP3: "Mi mayor inspiración es mi hijo. Su fascinación por los camiones, excavadoras y grúas inspiró 'Le Avventure del Cantiere' para pequeños lectores curiosos.",
     aboutBioFamily: "Los libros están escritos por mí, pero cada historia cobra vida junto con la madre de nuestro hijo: un trabajo conjunto para encontrar las palabras adecuadas, el ritmo perfecto y esa calidez que hace tan especial la lectura antes de dormir.",
-    aboutInspirationText: "Una pasión por camiones, excavadoras y obras dio origen a todo un mundo de historias.",
+    aboutInspirationText: "Una passion por camiones, excavadoras y obras dio origen a todo un mundo de historias.",
     aboutBioP4: "En mis libros, busco crear momentos entrañables para compartir en familia a través de relatos sencillos, emoción, juego y descubrimiento.",
     aboutBioP5: "Mi objetivo es situar la lectura en el centro del tiempo en familia, ofreciendo historias que despierten sonrisas e imaginación, lejos de las pantallas.",
     aboutClosingText: "Porque las mejores historias no son solo las que leen los niños, sino las que padres e hijos viven juntos.",
@@ -230,6 +245,8 @@ const I18N = {
     filterAll: "Alle edities",
     filterIt: "Italiaanse editie",
     filterEn: "Engelse editie",
+    filterFr: "Franse editie",
+    comingSoon: "Binnenkort beschikbaar",
     footerAbout: "Kinderverhalen, gemaakt door een papa en een mama.",
     copyright: "© 2026 CSA Books 4 Kids. Alle rechten voorbehouden."
     ,
@@ -267,6 +284,8 @@ const I18N = {
     filterAll: "Wszystkie wydania",
     filterIt: "Wydanie włoskie",
     filterEn: "Wydanie angielskie",
+    filterFr: "Wydanie francuskie",
+    comingSoon: "Wkrótce dostępne",
     footerAbout: "Opowieści dla dzieci, stworzone przez tatę i mamę.",
     copyright: "© 2026 CSA Books 4 Kids. Wszelkie prawa zastrzeżone."
     ,
@@ -304,6 +323,8 @@ const I18N = {
     filterAll: "Alla utgåvor",
     filterIt: "Italiensk utgåva",
     filterEn: "Engelsk utgåva",
+    filterFr: "Fransk utgåva",
+    comingSoon: "Kommer snart",
     footerAbout: "Barnberättelser, skapade av en pappa och en mamma.",
     copyright: "© 2026 CSA Books 4 Kids. Alla rättigheter förbehållna."
     ,
@@ -341,6 +362,8 @@ const I18N = {
     filterAll: "すべての版",
     filterIt: "イタリア語版",
     filterEn: "英語版",
+    filterFr: "フランス語版",
+    comingSoon: "近日公開",
     footerAbout: "パパとママが作った、子どもたちのための物語。",
     copyright: "© 2026 CSA Books 4 Kids. 無断転載を禁じます。"
     ,
@@ -514,9 +537,9 @@ const CHARACTERS_I18N = {
     "navCharacters": "Personnages",
     "charactersPageTitle": "Un monde de découvertes, d'amitié et de grands engins",
     "charactersMetaTitle": "Les Personnages | Les Aventures du Chantier - CSA Books 4 Kids",
-    "charactersMetaDesc": "Découvrez les héros des Aventures du Chantier : Benny la pelleteuse, Bruno le camion, Léo la grue, Nina la bétonnière, Rino le rouleau et Rudy le bulldozer.",
+    "charactersMetaDesc": "Découvrez les héros des Aventures du Chantier : Benny l'excavateur, Leo la grue, Rudy le bulldozer, Bruno le camion, Nina la bétonnière et Rino le rouleau.",
     "charactersBadge": "La Collection Officielle",
-    "charactersHeroDesc": "« Le Avventure del Cantiere » (Les Aventures du Chantier) est une collection d'histoires illustrées pour enfants mettant en scène de sympathiques engins de construction. Chaque livre transforme un défi du quotidien en une formidable aventure d'amitié, de curiosité, d'entraide et de découverte.",
+    "charactersHeroDesc": "« Les Aventures du Chantier » est une collection d'histoires illustrées pour enfants mettant en scène de sympathiques engins de construction. Chaque livre transforme un défi du quotidien en une formidable aventure d'amitié, de curiosité, d'entraide et de découverte.",
     "charactersValuesTitle": "Ce Qui Rend Cette Collection Unique",
     "charactersValuesSubtitle": "Des valeurs essentielles transmises à travers des récits simples, chaleureux et captivants",
     "value1Title": "Amitié & Esprit d'Équipe",
@@ -530,25 +553,25 @@ const CHARACTERS_I18N = {
     "charactersSectionTitle": "Rencontrez les Personnages",
     "charactersSectionSubtitle": "Six amis formidables toujours prêts à bâtir ensemble et à vivre de belles aventures !",
     "charBennyName": "Benny",
-    "charBennyRole": "La Pelleteuse",
+    "charBennyRole": "L'Excavateur",
     "charBennyDesc": "Curieux, dynamique et très généreux. Avec son godet, il adore creuser, découvrir des surprises cachées et voler au secours de ses amis.",
-    "charBennyAlt": "Benny la pelleteuse",
+    "charBennyAlt": "Benny l'excavateur",
     "charBrunoName": "Bruno",
-    "charBrunoRole": "Le Camion-Benne",
+    "charBrunoRole": "Le Camion",
     "charBrunoDesc": "Robuste, joyeux et infatigable. Grâce à sa grande benne, il transporte sable et cailloux en distribuant bonne humeur et coups de main.",
-    "charBrunoAlt": "Bruno le camion-benne",
-    "charLeoName": "Léo",
+    "charBrunoAlt": "Bruno le camion",
+    "charLeoName": "Leo",
     "charLeoRole": "La Grue",
     "charLeoDesc": "Patient, attentif et rassurant. Du haut de son mât, il veille sur tout le chantier et soulève avec délicatesse les charges les plus lourdes.",
-    "charLeoAlt": "Léo la grue",
+    "charLeoAlt": "Leo la grue",
     "charNinaName": "Nina",
     "charNinaRole": "La Bétonnière",
     "charNinaDesc": "Pétillante, appliquée et pleine d'entrain. Sa cuve bicolore tourne sans cesse pour préparer le mortier idéal dans la bonne humeur.",
-    "charNinaAlt": "Nina la bétonnière orange et blanche",
+    "charNinaAlt": "Nina la bétonnière",
     "charRinoName": "Rino",
     "charRinoRole": "Le Rouleau",
     "charRinoDesc": "Calme, persévérant et bienveillant. Avec son lourd tambour d'acier, il aplanit les routes difficiles et prouve que la sérénité vient à bout de tout.",
-    "charRinoAlt": "Rino le rouleau compresseur vert",
+    "charRinoAlt": "Rino le rouleau",
     "charactersCtaTitle": "Vivez les Aventures du Chantier",
     "charactersCtaDesc": "Les six amis vous attendent dans leurs albums illustrés pour de doux moments de lecture complice en famille.",
     "charactersCtaBtn": "Découvrir les livres de la collection",
@@ -882,7 +905,7 @@ const STORYTIME_I18N = {
   },
   fr: {
     storytimeEyebrow: "STORYTIME",
-    storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
+    storytimeTitle: "Benny l'excavateur et la colline qui changeait de forme",
     storytimeDesc: "Écoutez l'aventure de Benny tandis que l'histoire prend vie sur YouTube et Spotify.",
     storytimeCta: "Regarder sur YouTube",
     storytimeCtaYoutube: "Regarder sur YouTube",
@@ -1890,11 +1913,11 @@ const SITE_REORG_I18N = {
     valuesParents5: "Lecture partagée avant le coucher",
     valuesParents6: "Personnages récurrents auxquels s'attacher",
 
-    charBennyRole: "Pelleteuse",
-    charBrunoRole: "Camion benne",
+    charBennyRole: "Excavateur",
+    charBrunoRole: "Camion",
     charLeoRole: "Grue",
     charNinaRole: "Bétonnière",
-    charRinoRole: "Rouleau compresseur",
+    charRinoRole: "Rouleau",
     charRudyRole: "Bulldozer",
 
     footerTagline: "Histoires pour enfants, nées en famille et nourries d'imagination.",
@@ -2278,12 +2301,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   selectedMarketState['fano'] = userDetectedMarket;
 
-  // Allinea il filtro lingua libri iniziale (se l'utente è su sito italiano -> IT, altrimenti EN)
+  // Allinea il filtro lingua libri iniziale (se l'utente è su sito italiano -> IT, se francese -> FR, altrimenti EN)
+  const urlParams = new URLSearchParams(window.location.search);
+  const explicitUrlLang = (urlParams.get('lang') || '').toLowerCase();
   const savedBookLang = localStorage.getItem('csabooks_book_lang');
-  if (savedBookLang && (savedBookLang === 'it' || savedBookLang === 'en' || savedBookLang === 'all')) {
+
+  if (explicitUrlLang && (explicitUrlLang === 'fr' || explicitUrlLang === 'it' || explicitUrlLang === 'en')) {
+    currentBookLanguage = explicitUrlLang;
+  } else if (currentLanguage === 'fr') {
+    currentBookLanguage = 'fr';
+  } else if (currentLanguage === 'it') {
+    currentBookLanguage = 'it';
+  } else if (savedBookLang && (savedBookLang === 'it' || savedBookLang === 'en' || savedBookLang === 'fr' || savedBookLang === 'all')) {
     currentBookLanguage = savedBookLang;
   } else {
-    currentBookLanguage = (currentLanguage === 'it') ? 'it' : 'en';
+    currentBookLanguage = 'en';
   }
 
   applyLanguage(currentLanguage);
@@ -2424,6 +2456,18 @@ window.setLanguage = function(langCode) {
     localStorage.setItem('csabooks_lang', langCode);
   } catch (e) {}
 
+  // Sincronizza automaticamente la lingua dei libri con la lingua selezionata (se it o fr)
+  if (langCode === 'fr') {
+    currentBookLanguage = 'fr';
+    try { localStorage.setItem('csabooks_book_lang', 'fr'); } catch (e) {}
+  } else if (langCode === 'it') {
+    currentBookLanguage = 'it';
+    try { localStorage.setItem('csabooks_book_lang', 'it'); } catch (e) {}
+  } else if (currentBookLanguage === 'fr') {
+    currentBookLanguage = 'en';
+    try { localStorage.setItem('csabooks_book_lang', 'en'); } catch (e) {}
+  }
+
   // Sincronizza automaticamente il marketplace di default con la lingua selezionata
   const marketForLang = getDefaultMarketForLanguage(langCode);
   userDetectedMarket = marketForLang;
@@ -2447,7 +2491,7 @@ window.setLanguage = function(langCode) {
 };
 
 window.setBookLanguageFilter = function(filterCode) {
-  if (filterCode !== 'it' && filterCode !== 'en' && filterCode !== 'all') return;
+  if (filterCode !== 'it' && filterCode !== 'en' && filterCode !== 'fr' && filterCode !== 'all') return;
   currentBookLanguage = filterCode;
   try {
     localStorage.setItem('csabooks_book_lang', filterCode);
@@ -2533,6 +2577,7 @@ function applyLanguage(lang) {
   setText('filter-text-all', strings.filterAll);
   setText('filter-text-it', strings.filterIt);
   setText('filter-text-en', strings.filterEn);
+  setText('filter-text-fr', strings.filterFr);
   updateBookFilterButtons();
 
   // Footer
@@ -2711,7 +2756,11 @@ function applyLanguage(lang) {
 
   // Fano Page (se presente su fano.html)
   if (document.getElementById('fano-page-main')) {
-    setText('fano-author-badge', strings.fanoAuthorBadge || 'Di Marco Salucci');
+    const fanoAuthorEl = document.getElementById('fano-author-badge');
+    if (fanoAuthorEl) {
+      fanoAuthorEl.textContent = strings.fanoAuthorBadge || 'Di Marco Salucci';
+      fanoAuthorEl.setAttribute('href', `about.html?lang=${encodeURIComponent(lang)}`);
+    }
     setText('fano-title', strings.fanoTitle || "Fano col naso all'insù");
     setText('fano-subtitle', strings.fanoSubtitle || 'La città di Vitruvio da scoprire e colorare');
     setText('fano-badge-feature', strings.fanoBadgeFeature || '40+ disegni, giochi e attività creative');
@@ -2823,9 +2872,10 @@ function setText(elementId, text) {
    ========================================================================== */
 
 function getBookAsin(book) {
+  if (!book) return '';
   if (book.asin) return book.asin.trim();
   if (book.amazon && typeof book.amazon === 'object') {
-    return book.amazon.com || book.amazon.it || book.amazon.co_uk || Object.values(book.amazon)[0];
+    return book.amazon.com || book.amazon.it || book.amazon.co_uk || Object.values(book.amazon)[0] || '';
   }
   return '';
 }
@@ -2886,7 +2936,9 @@ function renderStorytimeSection(lang) {
 
   const coverFrame = document.getElementById('storytime-cover-frame');
   if (coverFrame) {
-    const jumpLabel = (lang === 'it') ? "Vai al libro nel catalogo" : "View book in catalog";
+    const jumpLabel = (lang === 'it') 
+      ? "Vai al libro nel catalogo" 
+      : (lang === 'fr' ? "Voir le livre dans le catalogue" : "View book in catalog");
     coverFrame.setAttribute('title', `${strings.storytimeTitle || item.title} - ${jumpLabel}`);
     coverFrame.setAttribute('aria-label', `${strings.storytimeTitle || item.title} - ${jumpLabel}`);
   }
@@ -2995,7 +3047,7 @@ window.jumpToStorytimeBook = function() {
 function updateSeriesSpotifyLinks(lang) {
   const url = (typeof getSpotifySeriesUrl === 'function')
     ? getSpotifySeriesUrl(lang)
-    : (lang === 'it' ? null : 'https://open.spotify.com/show/4lLJo6ZXfVhITTnPFCCMIS?si=j3SzwenwRxq6BgIUBhl4cg');
+    : (lang === 'it' ? null : (lang === 'fr' ? 'https://open.spotify.com/show/10Vzvqat68PHkhzLEE8Jar?si=_0ORy3KTS0aNLn-QtlFx2Q' : 'https://open.spotify.com/show/4lLJo6ZXfVhITTnPFCCMIS?si=j3SzwenwRxq6BgIUBhl4cg'));
 
   const topbarBtns = document.querySelectorAll('.topbar-spotify');
   const footerBtns = document.querySelectorAll('.footer-spotify-btn');
@@ -3008,7 +3060,9 @@ function updateSeriesSpotifyLinks(lang) {
       btn.setAttribute('rel', 'noopener noreferrer');
       btn.removeAttribute('aria-disabled');
       btn.classList.remove('is-unlinked');
-      const seriesTitle = (lang === 'it') ? 'Le Avventure del Cantiere' : 'Construction Site Adventures';
+      const seriesTitle = (lang === 'it') 
+        ? 'Le Avventure del Cantiere' 
+        : (lang === 'fr' ? 'Les Aventures du Chantier' : 'Construction Site Adventures');
       btn.setAttribute('title', `Spotify - ${seriesTitle}`);
       btn.setAttribute('aria-label', `Spotify - ${seriesTitle}`);
     } else {
@@ -3017,7 +3071,9 @@ function updateSeriesSpotifyLinks(lang) {
       btn.removeAttribute('rel');
       btn.setAttribute('aria-disabled', 'true');
       btn.classList.add('is-unlinked');
-      const comingSoon = (lang === 'it') ? 'Spotify (Disponibile a breve)' : 'Spotify (Coming soon)';
+      const comingSoon = (lang === 'it') 
+        ? 'Spotify (Disponibile a breve)' 
+        : (lang === 'fr' ? 'Spotify (Bientôt disponible)' : 'Spotify (Coming soon)');
       btn.setAttribute('title', comingSoon);
       btn.setAttribute('aria-label', comingSoon);
     }
@@ -3046,6 +3102,9 @@ function renderBookCatalog(lang) {
   }
 
   const cardsHtml = currentBooks.map((book, index) => {
+    const isComingSoon = Boolean(book.comingSoon) || !getBookAsin(book);
+    const comingSoonText = strings.comingSoon || (lang === 'fr' ? 'Bientôt disponible' : 'Coming soon');
+
     const marketKey = getBookInitialMarket(book.id);
     selectedMarketState[book.id] = marketKey;
     const marketInfo = AMAZON_MARKETS[marketKey] || AMAZON_MARKETS.us;
@@ -3062,7 +3121,7 @@ function renderBookCatalog(lang) {
       </button>
     ` : '';
 
-    const storytimeItem = (typeof getStorytimeItemForBook === 'function') ? getStorytimeItemForBook(book.id) : null;
+    const storytimeItem = (typeof getStorytimeItemForBook === 'function') ? getStorytimeItemForBook(book.id, lang) : null;
     let storytimeChipHtml = '';
     let spotifyChipHtml = '';
     if (storytimeItem) {
@@ -3131,26 +3190,28 @@ function renderBookCatalog(lang) {
       `;
     }).join('');
 
-    return `
-      <article class="book-card" id="card-${escapeHtml(book.id)}">
-        <div class="book-cover-wrap" onclick="openSampleModal('${escapeJs(book.id)}')" role="button" tabindex="0" title="${escapeHtml(strings.readSampleBtn)} - ${escapeHtml(book.title)}">
-          <img 
-            src="${escapeHtml(book.cover)}" 
-            alt="${escapeHtml(book.title)}" 
-            loading="lazy"
-            onerror="handleCoverError(this, '${escapeJs(book.title)}')"
-          />
+    const coverBadgeHtml = isComingSoon 
+      ? `<span class="book-cover-badge-coming-soon">${escapeHtml(comingSoonText)}</span>`
+      : '';
+
+    let actionAreaHtml = '';
+    if (isComingSoon) {
+      actionAreaHtml = `
+        <div class="book-action-area book-action-coming-soon">
+          <button 
+            type="button" 
+            class="btn-buy btn-buy-coming-soon is-disabled" 
+            id="buy-btn-${escapeHtml(book.id)}"
+            disabled 
+            aria-disabled="true"
+            aria-label="${escapeHtml(comingSoonText)} - ${escapeHtml(book.title)}"
+          >
+            <span class="btn-buy-text">${escapeHtml(comingSoonText)}</span>
+          </button>
         </div>
-
-        <div class="book-card-meta">
-          ${sampleChipHtml}
-          ${storytimeChipHtml}
-          ${spotifyChipHtml}
-        </div>
-
-        <h2 class="book-card-title">${escapeHtml(book.title)}</h2>
-        <div class="book-card-author"><span class="muted">${escapeHtml(strings.authorBy)}</span> ${escapeHtml(book.author || 'Marco Salucci')}</div>
-
+      `;
+    } else {
+      actionAreaHtml = `
         <div class="book-action-area">
           <div class="market-selector-wrapper">
             <label class="market-label">
@@ -3195,9 +3256,40 @@ function renderBookCatalog(lang) {
             </svg>
           </a>
         </div>
+      `;
+    }
+
+    return `
+      <article class="book-card ${isComingSoon ? 'book-card-coming-soon' : ''}" id="card-${escapeHtml(book.id)}">
+        <div class="book-cover-wrap" onclick="openSampleModal('${escapeJs(book.id)}')" role="button" tabindex="0" title="${escapeHtml(strings.readSampleBtn)} - ${escapeHtml(book.title)}">
+          <img 
+            src="${escapeHtml(book.cover)}" 
+            alt="${escapeHtml(book.title)}" 
+            loading="lazy"
+            onerror="handleCoverError(this, '${escapeJs(book.title)}')"
+          />
+          ${coverBadgeHtml}
+        </div>
+
+        <div class="book-card-meta">
+          ${sampleChipHtml}
+          ${storytimeChipHtml}
+          ${spotifyChipHtml}
+        </div>
+
+        <h2 class="book-card-title">${escapeHtml(book.title)}</h2>
+        <div class="book-card-author"><span class="muted">${escapeHtml(strings.authorBy)}</span> <a href="about.html?lang=${encodeURIComponent(lang)}" class="book-author-link">${escapeHtml(book.author || 'Marco Salucci')}</a></div>
+
+        ${actionAreaHtml}
       </article>
     `;
   }).join('');
+
+  if (currentBooks.length === 1) {
+    grid.classList.add('is-single-book');
+  } else {
+    grid.classList.remove('is-single-book');
+  }
 
   grid.innerHTML = cardsHtml;
 }
@@ -3492,9 +3584,21 @@ function initMobileLanguageDropdown() {
    ========================================================================== */
 
 function buildModalAmazonAction(book, marketKey, lang) {
+  const strings = I18N[lang] || I18N.it;
+  const isComingSoon = Boolean(book && book.comingSoon) || !getBookAsin(book);
+  if (isComingSoon) {
+    const comingSoonText = strings.comingSoon || (lang === 'fr' ? 'Bientôt disponible' : 'Coming soon');
+    return `
+      <div class="modal-action-row modal-action-coming-soon">
+        <button type="button" class="btn-buy btn-buy-coming-soon is-disabled" disabled aria-disabled="true">
+          <span class="btn-buy-text">${escapeHtml(comingSoonText)}</span>
+        </button>
+      </div>
+    `;
+  }
+
   const marketInfo = AMAZON_MARKETS[marketKey] || AMAZON_MARKETS.us;
   const targetUrl = getBookUrlForMarket(book, marketKey);
-  const strings = I18N[lang] || I18N.it;
   const buyButtonText = (typeof strings.viewOn === 'function') 
     ? strings.viewOn(marketInfo.buttonLabel) 
     : `BUY ON ${marketInfo.buttonLabel.toUpperCase()}`;
