@@ -191,13 +191,12 @@ const BOOKS = [
     "volume": 1,
     "collection": "construction-site",
     "title": "Benny l'excavateur et la colline qui changeait de forme",
-    "subtitle": "Livre illustré pour enfants 2-5 ans",
+    "subtitle": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
     "author": "Marco Salucci",
     "language": "Français",
     "languageCode": "fr",
     "age": "2–5 ans",
     "badge": "Tome 1",
-    "comingSoon": true,
     "cover": "assets/construction-site-adventures/01.Benny.Collina/FR/Front.Cover.png",
     "preview": [
       "assets/construction-site-adventures/01.Benny.Collina/FR/Front.Cover.png",
@@ -210,7 +209,23 @@ const BOOKS = [
       "assets/construction-site-adventures/01.Benny.Collina/FR/8.png",
       "assets/construction-site-adventures/01.Benny.Collina/FR/Back.Cover.png"
     ],
-    "amazon": {}
+    "asin": "B0HJM5R74L",
+    "amazon": {
+      "fr": "B0HJM5R74L",
+      "com": "B0HJM5R74L",
+      "it": "B0HJM5R74L",
+      "de": "B0HJM5R74L",
+      "es": "B0HJM5R74L",
+      "co_uk": "B0HJM5R74L",
+      "ca": "B0HJM5R74L",
+      "nl": "B0HJM5R74L",
+      "pl": "B0HJM5R74L",
+      "se": "B0HJM5R74L",
+      "jp": "B0HJM5R74L",
+      "au": "B0HJM5R74L",
+      "be": "B0HJM5R74L",
+      "ie": "B0HJM5R74L"
+    }
   },
   {
     "id": "rudy-spiaggia-it",
