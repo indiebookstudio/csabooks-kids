@@ -47,7 +47,7 @@ Click su "Acquista su Amazon.it" o "Buy on Amazon" (Marketplace locale con ASIN)
 ├── index.html        # Struttura, SEO & OpenGraph per CSA Books 4 Kids
 ├── style.css         # Design system elegante, professionale e responsive
 ├── script.js         # Rilevamento locale, i18n dinamico, switch lingua e deep-linking
-├── books.js          # Database completo degli 8 volumi (IT ed EN) con ASIN reali
+├── books.js          # Database completo dei volumi (IT ed EN) con ASIN reali
 ├── README.md         # Documentazione del progetto
 └── assets/
     └── construction-site-adventures/
@@ -60,7 +60,8 @@ Click su "Acquista su Amazon.it" o "Buy on Amazon" (Marketplace locale con ASIN)
         ├── 05.Benny.Roma/ (IT / US)
         ├── 06.Nina.Conigli/ (IT / US)
         ├── 07.Rino.Ladri/ (IT / US)
-        └── 08.Leo.Cinciallegra/ (IT / US)
+        ├── 08.Leo.Cinciallegra/ (IT / US)
+        └── 09.Leo.Rudy.Savana/ (IT)
 ```
 
 ## 🎠 Gestione Automatica Banner Hero (Carousel)

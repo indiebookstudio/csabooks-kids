@@ -2312,10 +2312,10 @@ document.addEventListener('DOMContentLoaded', () => {
     currentBookLanguage = 'fr';
   } else if (currentLanguage === 'it') {
     currentBookLanguage = 'it';
-  } else if (savedBookLang && (savedBookLang === 'it' || savedBookLang === 'en' || savedBookLang === 'fr' || savedBookLang === 'all')) {
+  } else if (savedBookLang && (savedBookLang === 'it' || savedBookLang === 'en' || savedBookLang === 'fr')) {
     currentBookLanguage = savedBookLang;
   } else {
-    currentBookLanguage = 'en';
+    currentBookLanguage = 'it';
   }
 
   applyLanguage(currentLanguage);
@@ -2491,7 +2491,7 @@ window.setLanguage = function(langCode) {
 };
 
 window.setBookLanguageFilter = function(filterCode) {
-  if (filterCode !== 'it' && filterCode !== 'en' && filterCode !== 'fr' && filterCode !== 'all') return;
+  if (filterCode !== 'it' && filterCode !== 'en' && filterCode !== 'fr') return;
   currentBookLanguage = filterCode;
   try {
     localStorage.setItem('csabooks_book_lang', filterCode);
@@ -2860,6 +2860,21 @@ function updateBookFilterButtons() {
     btn.classList.toggle('active', isAct);
     btn.setAttribute('aria-selected', isAct ? 'true' : 'false');
   });
+
+  if (typeof BOOKS !== 'undefined' && Array.isArray(BOOKS)) {
+    const countItEl = document.querySelector('.filter-btn[data-book-lang="it"] .filter-count');
+    const countEnEl = document.querySelector('.filter-btn[data-book-lang="en"] .filter-count');
+    const countFrEl = document.querySelector('.filter-btn[data-book-lang="fr"] .filter-count');
+    if (countItEl) {
+      countItEl.textContent = BOOKS.filter(b => b.collection === 'construction-site' && b.languageCode === 'it').length;
+    }
+    if (countEnEl) {
+      countEnEl.textContent = BOOKS.filter(b => b.collection === 'construction-site' && b.languageCode === 'en').length;
+    }
+    if (countFrEl) {
+      countFrEl.textContent = BOOKS.filter(b => b.collection === 'construction-site' && b.languageCode === 'fr').length;
+    }
+  }
 }
 
 function setText(elementId, text) {
@@ -3259,8 +3274,11 @@ function renderBookCatalog(lang) {
       `;
     }
 
+    const isNew = Boolean(book.isNew);
+    const newBadgeHtml = isNew ? `<span class="book-badge-new">NUOVO</span>` : '';
+
     return `
-      <article class="book-card ${isComingSoon ? 'book-card-coming-soon' : ''}" id="card-${escapeHtml(book.id)}">
+      <article class="book-card ${isComingSoon ? 'book-card-coming-soon' : ''} ${isNew ? 'book-card-new' : ''}" id="card-${escapeHtml(book.id)}">
         <div class="book-cover-wrap" onclick="openSampleModal('${escapeJs(book.id)}')" role="button" tabindex="0" title="${escapeHtml(strings.readSampleBtn)} - ${escapeHtml(book.title)}">
           <img 
             src="${escapeHtml(book.cover)}" 
@@ -3277,7 +3295,7 @@ function renderBookCatalog(lang) {
           ${spotifyChipHtml}
         </div>
 
-        <h2 class="book-card-title">${escapeHtml(book.title)}</h2>
+        <h2 class="book-card-title">${escapeHtml(book.title)}${newBadgeHtml}</h2>
         <div class="book-card-author"><span class="muted">${escapeHtml(strings.authorBy)}</span> <a href="about.html?lang=${encodeURIComponent(lang)}" class="book-author-link">${escapeHtml(book.author || 'Marco Salucci')}</a></div>
 
         ${actionAreaHtml}

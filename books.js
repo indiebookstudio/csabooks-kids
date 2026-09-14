@@ -126,9 +126,38 @@ function getSpotifySeriesUrl(lang) {
 }
 
 // ==========================================================================
-// DATABASE LIBRI COLLANA (16 edizioni con anteprime complete sfogliabili)
+// DATABASE LIBRI COLLANA (17 edizioni con anteprime complete sfogliabili)
 // ==========================================================================
 const BOOKS = [
+  {
+    "id": "leo-rudy-savana-it",
+    "volume": 9,
+    "collection": "construction-site",
+    "isNew": true,
+    "title": "Leo la gru & Rudy la ruspa in Missione Savana",
+    "subtitle": "Libro illustrato per bambini 2-5 anni",
+    "author": "Marco Salucci",
+    "language": "Italiano",
+    "languageCode": "it",
+    "age": "2–5 anni",
+    "badge": "Volume 9",
+    "cover": "assets/construction-site-adventures/09.Leo.Rudy.Savana/IT/Front.Cover.png",
+    "preview": [
+      "assets/construction-site-adventures/09.Leo.Rudy.Savana/IT/Front.Cover.png",
+      "assets/construction-site-adventures/09.Leo.Rudy.Savana/IT/2.png",
+      "assets/construction-site-adventures/09.Leo.Rudy.Savana/IT/3.png",
+      "assets/construction-site-adventures/09.Leo.Rudy.Savana/IT/4.png",
+      "assets/construction-site-adventures/09.Leo.Rudy.Savana/IT/5.png",
+      "assets/construction-site-adventures/09.Leo.Rudy.Savana/IT/6.png",
+      "assets/construction-site-adventures/09.Leo.Rudy.Savana/IT/7.png",
+      "assets/construction-site-adventures/09.Leo.Rudy.Savana/IT/8.png",
+      "assets/construction-site-adventures/09.Leo.Rudy.Savana/IT/Back.Cover.png"
+    ],
+    "amazon": {
+      "it": "B0HJRRRDMX",
+      "com": "B0HJRRRDMX"
+    }
+  },
   {
     "id": "benny-collina-it",
     "volume": 1,

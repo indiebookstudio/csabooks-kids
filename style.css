@@ -1243,7 +1243,7 @@ button {
 
 .catalog-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
   position: relative;
   justify-content: center;
@@ -1434,10 +1434,31 @@ button {
   line-height: 1.25;
   margin-bottom: 0.25rem;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 2.5rem;
+  min-height: 2.6rem;
+}
+
+/* Badge "NUOVO" accanto al titolo nella card libro */
+.book-badge-new {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #FF6A00 0%, #E63900 100%);
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.52rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px rgba(230, 57, 0, 0.35);
+  margin-left: 0.45rem;
+  vertical-align: middle;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .book-card-author {
