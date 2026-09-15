@@ -872,6 +872,11 @@ Object.keys(FOOTER_EXTRA_I18N).forEach(lang => {
 const STORYTIME_I18N = {
   it: {
     storytimeEyebrow: "STORYTIME",
+    storytimeNewBadge: "NOVITÀ",
+    storytimeNewPill: "NUOVO VIDEO",
+    storytimePrevBtn: "Video precedente",
+    storytimeNextBtn: "Video successivo",
+    storytimeSelectVideo: "Seleziona video",
     storytimeTitle: "Benny l'escavatore e la collina che cambiava forma",
     storytimeDesc: "Ascolta l'avventura di Benny mentre la storia prende vita su YouTube e Spotify.",
     storytimeCta: "Guarda su YouTube",
@@ -883,6 +888,11 @@ const STORYTIME_I18N = {
   },
   en: {
     storytimeEyebrow: "STORYTIME",
+    storytimeNewBadge: "NEW",
+    storytimeNewPill: "NEW VIDEO",
+    storytimePrevBtn: "Previous video",
+    storytimeNextBtn: "Next video",
+    storytimeSelectVideo: "Select video",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
     storytimeDesc: "Listen to Benny's adventure as the story comes to life on YouTube and Spotify.",
     storytimeCta: "Watch on YouTube",
@@ -894,6 +904,11 @@ const STORYTIME_I18N = {
   },
   de: {
     storytimeEyebrow: "STORYTIME",
+    storytimeNewBadge: "NEU",
+    storytimeNewPill: "NEUES VIDEO",
+    storytimePrevBtn: "Vorheriges Video",
+    storytimeNextBtn: "Nächstes Video",
+    storytimeSelectVideo: "Video auswählen",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
     storytimeDesc: "Höre dir Bennys Abenteuer an, während die Geschichte auf YouTube und Spotify zum Leben erwacht.",
     storytimeCta: "Auf YouTube ansehen",
@@ -905,6 +920,11 @@ const STORYTIME_I18N = {
   },
   fr: {
     storytimeEyebrow: "STORYTIME",
+    storytimeNewBadge: "NOUVEAUTÉ",
+    storytimeNewPill: "NOUVELLE VIDÉO",
+    storytimePrevBtn: "Vidéo précédente",
+    storytimeNextBtn: "Vidéo suivante",
+    storytimeSelectVideo: "Sélectionner la vidéo",
     storytimeTitle: "Benny l'excavateur et la colline qui changeait de forme",
     storytimeDesc: "Écoutez l'aventure de Benny tandis que l'histoire prend vie sur YouTube et Spotify.",
     storytimeCta: "Regarder sur YouTube",
@@ -916,6 +936,11 @@ const STORYTIME_I18N = {
   },
   es: {
     storytimeEyebrow: "STORYTIME",
+    storytimeNewBadge: "NOVEDAD",
+    storytimeNewPill: "NUEVO VIDEO",
+    storytimePrevBtn: "Video anterior",
+    storytimeNextBtn: "Video siguiente",
+    storytimeSelectVideo: "Seleccionar video",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
     storytimeDesc: "Escucha la aventura de Benny mientras la historia cobra vida en YouTube y Spotify.",
     storytimeCta: "Ver en YouTube",
@@ -927,6 +952,11 @@ const STORYTIME_I18N = {
   },
   nl: {
     storytimeEyebrow: "STORYTIME",
+    storytimeNewBadge: "NIEUW",
+    storytimeNewPill: "NIEUWE VIDEO",
+    storytimePrevBtn: "Vorige video",
+    storytimeNextBtn: "Volgende video",
+    storytimeSelectVideo: "Video selecteren",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
     storytimeDesc: "Luister naar Benny's avontuur terwijl het verhaal tot leven komt op YouTube en Spotify.",
     storytimeCta: "Bekijk op YouTube",
@@ -938,6 +968,11 @@ const STORYTIME_I18N = {
   },
   pl: {
     storytimeEyebrow: "STORYTIME",
+    storytimeNewBadge: "NOWOŚĆ",
+    storytimeNewPill: "NOWE WIDEO",
+    storytimePrevBtn: "Poprzednie wideo",
+    storytimeNextBtn: "Następne wideo",
+    storytimeSelectVideo: "Wybierz wideo",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
     storytimeDesc: "Posłuchaj przygody Benny'ego, gdy historia ożywa na YouTube i Spotify.",
     storytimeCta: "Oglądaj na YouTube",
@@ -949,6 +984,11 @@ const STORYTIME_I18N = {
   },
   sv: {
     storytimeEyebrow: "STORYTIME",
+    storytimeNewBadge: "NYHET",
+    storytimeNewPill: "NY VIDEO",
+    storytimePrevBtn: "Föregående video",
+    storytimeNextBtn: "Nästa video",
+    storytimeSelectVideo: "Välj video",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
     storytimeDesc: "Lyssna på Bennys äventyr när sagan får liv på YouTube och Spotify.",
     storytimeCta: "Titta på YouTube",
@@ -960,6 +1000,11 @@ const STORYTIME_I18N = {
   },
   ja: {
     storytimeEyebrow: "STORYTIME",
+    storytimeNewBadge: "新作",
+    storytimeNewPill: "新しい動画",
+    storytimePrevBtn: "前の動画",
+    storytimeNextBtn: "次の動画",
+    storytimeSelectVideo: "動画を選択",
     storytimeTitle: "Benny the Excavator and the Shape-Shifting Hill",
     storytimeDesc: "YouTubeやSpotifyで物語が生き生きと動き出す、ベニーの冒険をお聴きください。",
     storytimeCta: "YouTubeで観る",
@@ -2330,6 +2375,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initGlobalDropdownCloser();
   initSampleModalEvents();
   initStorytimeEvents();
+  initStorytimeSlider();
 });
 
 function initStorytimeEvents() {
@@ -2913,123 +2959,330 @@ function getBookInitialMarket(bookId) {
 }
 
 /* ==========================================================================
-   3.5 RENDERING SEZIONE STORYTIME (HOMEPAGE)
+   3.5 RENDERING SEZIONE STORYTIME SLIDER (HOMEPAGE)
    ========================================================================== */
+
+const storytimeSliderState = {
+  items: [],
+  currentIndex: 0,
+  timer: null,
+  intervalMs: 7000,
+  isPaused: false,
+  touchStartX: 0,
+  touchEndX: 0,
+  initialized: false
+};
 
 function renderStorytimeSection(lang) {
   const section = document.getElementById('storytime');
-  if (!section) return;
+  const track = document.getElementById('storytime-slider-track');
+  const indicators = document.getElementById('storytime-slider-indicators');
+  const prevBtn = document.getElementById('storytime-slider-prev');
+  const nextBtn = document.getElementById('storytime-slider-next');
+
+  if (!section || !track) return;
 
   const strings = I18N[lang] || I18N.it;
+  const items = (typeof getStorytimeItems === 'function')
+    ? getStorytimeItems(lang)
+    : ((typeof STORYTIME_ITEMS !== 'undefined') ? STORYTIME_ITEMS.filter(s => s.language === lang && s.youtubeUrl) : []);
 
-  const item = (typeof getFeaturedStorytimeItem === 'function')
-    ? getFeaturedStorytimeItem(lang)
-    : ((typeof STORYTIME_ITEMS !== 'undefined' && STORYTIME_ITEMS[0]) ? STORYTIME_ITEMS[0] : null);
-
-  if (!item) return;
-
-  const eyebrowEl = document.getElementById('storytime-eyebrow');
-  if (eyebrowEl) eyebrowEl.textContent = strings.storytimeEyebrow || item.eyebrow || 'STORYTIME';
-
-  const titleEl = document.getElementById('storytime-title');
-  if (titleEl) titleEl.textContent = strings.storytimeTitle || item.title;
-
-  const descEl = document.getElementById('storytime-desc');
-  if (descEl) descEl.textContent = strings.storytimeDesc || item.description;
-
-  const ctaTextEl = document.getElementById('storytime-cta-text');
-  if (ctaTextEl) ctaTextEl.textContent = strings.storytimeCtaYoutube || strings.storytimeCta || item.ctaText || 'Watch on YouTube';
-
-  const spotifyTextEl = document.getElementById('storytime-spotify-text');
-  if (spotifyTextEl) spotifyTextEl.textContent = strings.storytimeCtaSpotify || 'Listen on Spotify';
-
-  const coverImg = document.getElementById('storytime-cover-img');
-  if (coverImg && item.cover) {
-    coverImg.src = item.cover;
-    coverImg.alt = `${strings.storytimeTitle || item.title} - Storytime`;
+  if (!items || items.length === 0) {
+    section.style.display = 'none';
+    return;
   }
+  section.style.display = '';
 
-  const coverFrame = document.getElementById('storytime-cover-frame');
-  if (coverFrame) {
-    const jumpLabel = (lang === 'it') 
-      ? "Vai al libro nel catalogo" 
-      : (lang === 'fr' ? "Voir le livre dans le catalogue" : "View book in catalog");
-    coverFrame.setAttribute('title', `${strings.storytimeTitle || item.title} - ${jumpLabel}`);
-    coverFrame.setAttribute('aria-label', `${strings.storytimeTitle || item.title} - ${jumpLabel}`);
-  }
+  storytimeSliderState.items = items;
+  storytimeSliderState.currentIndex = 0; // Il più nuovo (Leo nel caso italiano) appare per primo!
 
-  // 1. YouTube Button
-  const ctaBtn = document.getElementById('storytime-cta-btn');
-  const effectiveYoutubeUrl = (typeof getStorytimeYoutubeUrl === 'function')
-    ? getStorytimeYoutubeUrl(item)
-    : (item.youtubeUrl || null);
+  const total = items.length;
+  const jumpLabel = (lang === 'it') 
+    ? "Vai al libro nel catalogo" 
+    : (lang === 'fr' ? "Voir le livre dans le catalogue" : "View book in catalog");
+  const newBadgeLabel = strings.storytimeNewBadge || 'NOVITÀ';
+  const newPillLabel = strings.storytimeNewPill || 'NUOVO VIDEO';
+  const ctaYtLabel = strings.storytimeCtaYoutube || strings.storytimeCta || 'Guarda su YouTube';
+  const ctaSpLabel = strings.storytimeCtaSpotify || 'Ascolta su Spotify';
 
-  if (effectiveYoutubeUrl) {
-    if (ctaBtn) {
-      ctaBtn.href = effectiveYoutubeUrl;
-      ctaBtn.setAttribute('target', '_blank');
-      ctaBtn.setAttribute('rel', 'noopener noreferrer');
-      ctaBtn.removeAttribute('aria-disabled');
-      ctaBtn.classList.remove('is-unlinked');
-      ctaBtn.setAttribute('title', strings.storytimeCtaYoutube || strings.storytimeCta || item.ctaText || 'Watch on YouTube');
-    }
+  // Render delle slide
+  track.innerHTML = items.map((item, idx) => {
+    const isActive = idx === 0;
+    const isPriority = idx === 0;
+    const newBadgeHtml = item.isNew 
+      ? `<span class="storytime-badge-new">${escapeHtml(newBadgeLabel)}</span>` 
+      : '';
+    const newPillHtml = item.isNew 
+      ? `<span class="storytime-pill-new">${escapeHtml(newPillLabel)}</span>` 
+      : '';
+
+    const effectiveYoutubeUrl = (typeof getStorytimeYoutubeUrl === 'function')
+      ? getStorytimeYoutubeUrl(item)
+      : (item.youtubeUrl || null);
+
+    const effectiveSpotifyUrl = (typeof getStorytimeSpotifyUrl === 'function')
+      ? getStorytimeSpotifyUrl(item)
+      : (item.spotifyUrl || null);
+
+    const youtubeBtnHtml = effectiveYoutubeUrl ? `
+      <a href="${escapeHtml(effectiveYoutubeUrl)}" target="_blank" rel="noopener noreferrer" class="storytime-cta-btn storytime-cta-youtube" title="${escapeHtml(ctaYtLabel)}">
+        <svg class="storytime-cta-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+        <span>${escapeHtml(ctaYtLabel)}</span>
+      </a>
+    ` : '';
+
+    const spotifyBtnHtml = effectiveSpotifyUrl ? `
+      <a href="${escapeHtml(effectiveSpotifyUrl)}" target="_blank" rel="noopener noreferrer" class="storytime-cta-btn storytime-cta-spotify" title="${escapeHtml(ctaSpLabel)}">
+        <svg class="storytime-cta-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.5 17.3c-.2.3-.6.4-.9.2-2.5-1.5-5.6-1.9-9.3-1-.3.1-.7-.1-.8-.4-.1-.3.1-.7.4-.8 4-1 7.4-.5 10.3 1.2.3.2.4.6.3.8zm1.5-3.3c-.3.4-.8.5-1.2.3-3-1.8-7.5-2.4-11-1.3-.4.1-.9-.1-1-.5-.1-.4.1-.9.5-1 4.1-1.2 9.1-.6 12.4 1.5.4.2.5.7.3 1zm.1-3.4c-3.6-2.1-9.5-2.3-12.9-1.3-.5.2-1.1-.1-1.3-.6-.2-.5.1-1.1.6-1.3 4-1.2 10.5-1 14.6 1.5.5.3.6.9.3 1.4-.3.5-.9.6-1.3.3z"/>
+        </svg>
+        <span>${escapeHtml(ctaSpLabel)}</span>
+      </a>
+    ` : '';
+
+    const bookId = item.bookId || item.id;
+
+    return `
+      <div class="storytime-slide ${isActive ? 'active' : ''}" data-index="${idx}" role="group" aria-roledescription="slide" aria-label="${idx + 1} di ${total}" ${isActive ? '' : 'aria-hidden="true"'}>
+        <div class="storytime-card">
+          <div class="storytime-media-col">
+            <div 
+              class="storytime-cover-frame" 
+              role="button" 
+              tabindex="0" 
+              onclick="jumpToStorytimeBook('${escapeHtml(bookId)}')" 
+              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();jumpToStorytimeBook('${escapeHtml(bookId)}');}" 
+              aria-label="${escapeHtml(item.title)} - ${escapeHtml(jumpLabel)}" 
+              title="${escapeHtml(item.title)} - ${escapeHtml(jumpLabel)}"
+            >
+              <img 
+                src="${escapeHtml(item.cover)}" 
+                alt="${escapeHtml(item.title)} - Storytime" 
+                class="storytime-cover-img" 
+                ${isPriority ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}
+              />
+              ${newBadgeHtml}
+            </div>
+          </div>
+          <div class="storytime-content-col">
+            <div class="storytime-eyebrow-wrapper">
+              <div class="storytime-eyebrow">${escapeHtml(item.eyebrow || strings.storytimeEyebrow || 'STORYTIME')}</div>
+              ${newPillHtml}
+            </div>
+            <h2 class="storytime-title">${escapeHtml(item.title)}</h2>
+            <p class="storytime-desc">${escapeHtml(item.description)}</p>
+            <div class="storytime-action-wrapper">
+              ${youtubeBtnHtml}
+              ${spotifyBtnHtml}
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Aggiorna controlli
+  if (total <= 1) {
+    if (prevBtn) prevBtn.style.display = 'none';
+    if (nextBtn) nextBtn.style.display = 'none';
+    if (indicators) indicators.style.display = 'none';
+    stopStorytimeAutoplay();
   } else {
-    if (ctaBtn) {
-      ctaBtn.removeAttribute('href');
-      ctaBtn.removeAttribute('target');
-      ctaBtn.removeAttribute('rel');
-      ctaBtn.setAttribute('aria-disabled', 'true');
-      ctaBtn.classList.add('is-unlinked');
-      ctaBtn.removeAttribute('title');
+    if (prevBtn) {
+      prevBtn.style.display = 'flex';
+      prevBtn.setAttribute('aria-label', strings.storytimePrevBtn || 'Video precedente');
+      prevBtn.setAttribute('title', strings.storytimePrevBtn || 'Video precedente');
     }
+    if (nextBtn) {
+      nextBtn.style.display = 'flex';
+      nextBtn.setAttribute('aria-label', strings.storytimeNextBtn || 'Video successivo');
+      nextBtn.setAttribute('title', strings.storytimeNextBtn || 'Video successivo');
+    }
+    if (indicators) {
+      indicators.style.display = 'flex';
+      indicators.innerHTML = items.map((item, idx) => {
+        const isActive = idx === 0;
+        return `
+          <button type="button" 
+                  class="storytime-slider-dot ${isActive ? 'active' : ''}" 
+                  data-slide-to="${idx}" 
+                  role="tab" 
+                  aria-selected="${isActive ? 'true' : 'false'}" 
+                  aria-label="${idx + 1} di ${total} - ${escapeHtml(item.title)}"
+                  title="${escapeHtml(item.title)}">
+          </button>
+        `;
+      }).join('');
+    }
+    startStorytimeAutoplay();
   }
 
-  // 2. Spotify Button
-  const spotifyBtn = document.getElementById('storytime-spotify-btn');
-  const effectiveSpotifyUrl = (typeof getStorytimeSpotifyUrl === 'function')
-    ? getStorytimeSpotifyUrl(item)
-    : (item.spotifyUrl || null);
+  track.style.transform = 'translateX(0%)';
+}
 
-  if (effectiveSpotifyUrl) {
-    if (spotifyBtn) {
-      spotifyBtn.href = effectiveSpotifyUrl;
-      spotifyBtn.setAttribute('target', '_blank');
-      spotifyBtn.setAttribute('rel', 'noopener noreferrer');
-      spotifyBtn.removeAttribute('aria-disabled');
-      spotifyBtn.classList.remove('is-unlinked');
-      spotifyBtn.setAttribute('title', strings.storytimeCtaSpotify || 'Listen on Spotify');
+function goToStorytimeSlide(index) {
+  const { items } = storytimeSliderState;
+  if (!items || items.length === 0) return;
+
+  const total = items.length;
+  let nextIndex = index;
+  if (nextIndex >= total) nextIndex = 0;
+  if (nextIndex < 0) nextIndex = total - 1;
+
+  storytimeSliderState.currentIndex = nextIndex;
+
+  const track = document.getElementById('storytime-slider-track');
+  if (track) {
+    track.style.transform = `translateX(-${nextIndex * 100}%)`;
+  }
+
+  // Update slide classes and aria
+  const slides = document.querySelectorAll('.storytime-slide');
+  slides.forEach((slide, idx) => {
+    const isActive = idx === nextIndex;
+    slide.classList.toggle('active', isActive);
+    if (isActive) {
+      slide.removeAttribute('aria-hidden');
+    } else {
+      slide.setAttribute('aria-hidden', 'true');
     }
-  } else {
-    if (spotifyBtn) {
-      spotifyBtn.removeAttribute('href');
-      spotifyBtn.removeAttribute('target');
-      spotifyBtn.removeAttribute('rel');
-      spotifyBtn.setAttribute('aria-disabled', 'true');
-      spotifyBtn.classList.add('is-unlinked');
-      spotifyBtn.removeAttribute('title');
+  });
+
+  // Update indicator dots
+  const dots = document.querySelectorAll('.storytime-slider-dot');
+  dots.forEach((dot, idx) => {
+    const isActive = idx === nextIndex;
+    dot.classList.toggle('active', isActive);
+    dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
+}
+
+function startStorytimeAutoplay() {
+  stopStorytimeAutoplay();
+  if (!storytimeSliderState.items || storytimeSliderState.items.length <= 1) return;
+  storytimeSliderState.timer = setInterval(() => {
+    if (!storytimeSliderState.isPaused) {
+      goToStorytimeSlide(storytimeSliderState.currentIndex + 1);
     }
+  }, storytimeSliderState.intervalMs);
+}
+
+function stopStorytimeAutoplay() {
+  if (storytimeSliderState.timer) {
+    clearInterval(storytimeSliderState.timer);
+    storytimeSliderState.timer = null;
   }
 }
 
-/**
- * Salta al catalogo ed evidenzia il libro corrispondente allo Storytime (es. Benny)
- */
-window.jumpToStorytimeBook = function() {
-  const item = (typeof getFeaturedStorytimeItem === 'function')
-    ? getFeaturedStorytimeItem(currentLanguage)
-    : (typeof STORYTIME_ITEMS !== 'undefined' ? STORYTIME_ITEMS[0] : null);
+function resetStorytimeAutoplay() {
+  stopStorytimeAutoplay();
+  startStorytimeAutoplay();
+}
 
-  if (!item || !item.bookId) {
+function initStorytimeSlider() {
+  const container = document.getElementById('storytime-slider');
+  const prevBtn = document.getElementById('storytime-slider-prev');
+  const nextBtn = document.getElementById('storytime-slider-next');
+  const indicators = document.getElementById('storytime-slider-indicators');
+
+  if (!container || storytimeSliderState.initialized) return;
+  storytimeSliderState.initialized = true;
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      goToStorytimeSlide(storytimeSliderState.currentIndex - 1);
+      resetStorytimeAutoplay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      goToStorytimeSlide(storytimeSliderState.currentIndex + 1);
+      resetStorytimeAutoplay();
+    });
+  }
+
+  if (indicators) {
+    indicators.addEventListener('click', (e) => {
+      const dot = e.target.closest('.storytime-slider-dot');
+      if (dot) {
+        e.preventDefault();
+        const slideIdx = parseInt(dot.getAttribute('data-slide-to'), 10);
+        if (!isNaN(slideIdx)) {
+          goToStorytimeSlide(slideIdx);
+          resetStorytimeAutoplay();
+        }
+      }
+    });
+  }
+
+  // Hover and focus pause
+  container.addEventListener('mouseenter', () => { storytimeSliderState.isPaused = true; });
+  container.addEventListener('mouseleave', () => { storytimeSliderState.isPaused = false; });
+  container.addEventListener('focusin', () => { storytimeSliderState.isPaused = true; });
+  container.addEventListener('focusout', () => { storytimeSliderState.isPaused = false; });
+
+  // Touch swipe support
+  container.addEventListener('touchstart', (e) => {
+    if (e.touches && e.touches.length > 0) {
+      storytimeSliderState.touchStartX = e.touches[0].clientX;
+    }
+  }, { passive: true });
+
+  container.addEventListener('touchend', (e) => {
+    if (e.changedTouches && e.changedTouches.length > 0) {
+      storytimeSliderState.touchEndX = e.changedTouches[0].clientX;
+      const diff = storytimeSliderState.touchStartX - storytimeSliderState.touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) {
+          goToStorytimeSlide(storytimeSliderState.currentIndex + 1);
+        } else {
+          goToStorytimeSlide(storytimeSliderState.currentIndex - 1);
+        }
+        resetStorytimeAutoplay();
+      }
+    }
+  }, { passive: true });
+
+  // Keyboard navigation when container or child has focus
+  container.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      goToStorytimeSlide(storytimeSliderState.currentIndex - 1);
+      resetStorytimeAutoplay();
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      goToStorytimeSlide(storytimeSliderState.currentIndex + 1);
+      resetStorytimeAutoplay();
+    }
+  });
+}
+
+/**
+ * Salta al catalogo ed evidenzia il libro corrispondente allo Storytime (es. Leo o Benny)
+ */
+window.jumpToStorytimeBook = function(explicitBookId) {
+  let targetBookId = explicitBookId;
+  if (!targetBookId) {
+    const currentItem = (storytimeSliderState.items && storytimeSliderState.items[storytimeSliderState.currentIndex]) 
+      || (typeof getFeaturedStorytimeItem === 'function' ? getFeaturedStorytimeItem(currentLanguage) : null);
+    if (currentItem) targetBookId = currentItem.bookId || currentItem.id;
+  }
+
+  if (!targetBookId) {
     const catalogEl = document.getElementById('libri');
     if (catalogEl) catalogEl.scrollIntoView({ behavior: 'smooth' });
     return;
   }
 
-  const targetBookId = item.bookId;
   const targetBook = (typeof BOOKS !== 'undefined' && Array.isArray(BOOKS))
     ? BOOKS.find(b => b.id === targetBookId)
     : null;
-  const targetLang = targetBook ? targetBook.languageCode : (item.language || 'it');
+  const targetLang = targetBook ? targetBook.languageCode : (currentLanguage || 'it');
 
   // Se il filtro secondario lingua libri esclude il libro, impostalo sulla lingua del libro
   if (currentBookLanguage !== 'all' && currentBookLanguage !== targetLang) {
@@ -3275,7 +3528,8 @@ function renderBookCatalog(lang) {
     }
 
     const isNew = Boolean(book.isNew);
-    const newBadgeHtml = isNew ? `<span class="book-badge-new">NUOVO</span>` : '';
+    const newBadgeText = strings.bookBadgeNew || (lang === 'fr' ? 'NOUVEAU' : (lang === 'en' ? 'NEW' : (lang === 'de' ? 'NEU' : (lang === 'es' ? 'NUEVO' : 'NUOVO'))));
+    const newBadgeHtml = isNew ? `<span class="book-badge-new">${escapeHtml(newBadgeText)}</span>` : '';
 
     return `
       <article class="book-card ${isComingSoon ? 'book-card-coming-soon' : ''} ${isNew ? 'book-card-new' : ''}" id="card-${escapeHtml(book.id)}">

@@ -278,47 +278,120 @@
          ====================================================================== -->
     <section class="storytime-section" id="storytime" aria-label="Storytime">
       <div class="container hero-banner-wrapper">
-        <div class="storytime-card" id="storytime-card">
-          <!-- Visual: Book Cover (Clicca per visualizzare nel catalogo) -->
-          <div class="storytime-media-col">
-            <div 
-              class="storytime-cover-frame" 
-              id="storytime-cover-frame" 
-              role="button" 
-              tabindex="0" 
-              onclick="jumpToStorytimeBook()" 
-              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();jumpToStorytimeBook();}"
-              aria-label="Vai al libro nel catalogo"
-              title="Vai al libro nel catalogo"
-            >
-              <img 
-                src="assets/construction-site-adventures/01.Benny.Collina/US/Front.Cover.png" 
-                alt="Benny the Excavator and the Shape-Shifting Hill - Storytime" 
-                class="storytime-cover-img" 
-                id="storytime-cover-img"
-                loading="lazy"
-              />
-            </div>
-          </div>
+        <div class="storytime-slider-wrapper">
+          <div class="storytime-slider" id="storytime-slider" role="region" aria-roledescription="carousel" aria-label="Storytime Video">
+            <!-- Slider Track con i video disponibili -->
+            <div class="storytime-slider-track" id="storytime-slider-track">
+              <!-- Slide 0: Leo la gru e le gemme della montagna (Nuovo video!) -->
+              <div class="storytime-slide active" data-index="0" role="group" aria-roledescription="slide" aria-label="1 di 2">
+                <div class="storytime-card">
+                  <div class="storytime-media-col">
+                    <div 
+                      class="storytime-cover-frame" 
+                      role="button" 
+                      tabindex="0" 
+                      onclick="jumpToStorytimeBook('leo-montagna-it')" 
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();jumpToStorytimeBook('leo-montagna-it');}" 
+                      aria-label="Leo la gru e le gemme della montagna - Vai al libro nel catalogo"
+                      title="Leo la gru e le gemme della montagna - Vai al libro nel catalogo"
+                    >
+                      <img 
+                        src="assets/construction-site-adventures/03.Leo.Montagna/IT/Front.Cover.png" 
+                        alt="Leo la gru e le gemme della montagna - Storytime" 
+                        class="storytime-cover-img" 
+                        loading="eager"
+                        fetchpriority="high"
+                      />
+                      <span class="storytime-badge-new">NOVITÀ</span>
+                    </div>
+                  </div>
+                  <div class="storytime-content-col">
+                    <div class="storytime-eyebrow-wrapper">
+                      <div class="storytime-eyebrow">STORYTIME</div>
+                      <span class="storytime-pill-new">NUOVO VIDEO</span>
+                    </div>
+                    <h2 class="storytime-title">Leo la gru e le gemme della montagna</h2>
+                    <p class="storytime-desc">Ascolta l'avventura di Leo mentre la storia prende vita su YouTube e Spotify.</p>
+                    <div class="storytime-action-wrapper">
+                      <a href="https://youtu.be/7VBlotwS230" target="_blank" rel="noopener noreferrer" class="storytime-cta-btn storytime-cta-youtube" title="Guarda su YouTube">
+                        <svg class="storytime-cta-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                          <path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        <span>Guarda su YouTube</span>
+                      </a>
+                      <a href="https://open.spotify.com/episode/1Ri2dxfymPcWnlwrVGnx6h?si=tOTipQZ0Q_up9VRmrjQI3Q" target="_blank" rel="noopener noreferrer" class="storytime-cta-btn storytime-cta-spotify" title="Ascolta su Spotify">
+                        <svg class="storytime-cta-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                          <path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.5 17.3c-.2.3-.6.4-.9.2-2.5-1.5-5.6-1.9-9.3-1-.3.1-.7-.1-.8-.4-.1-.3.1-.7.4-.8 4-1 7.4-.5 10.3 1.2.3.2.4.6.3.8zm1.5-3.3c-.3.4-.8.5-1.2.3-3-1.8-7.5-2.4-11-1.3-.4.1-.9-.1-1-.5-.1-.4.1-.9.5-1 4.1-1.2 9.1-.6 12.4 1.5.4.2.5.7.3 1zm.1-3.4c-3.6-2.1-9.5-2.3-12.9-1.3-.5.2-1.1-.1-1.3-.6-.2-.5.1-1.1.6-1.3 4-1.2 10.5-1 14.6 1.5.5.3.6.9.3 1.4-.3.5-.9.6-1.3.3z"/>
+                        </svg>
+                        <span>Ascolta su Spotify</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-          <!-- Editorial Content: Storytime Hierarchy -->
-          <div class="storytime-content-col">
-            <div class="storytime-eyebrow" id="storytime-eyebrow">STORYTIME</div>
-            <h2 class="storytime-title" id="storytime-title">Benny the Excavator and the Shape-Shifting Hill</h2>
-            <p class="storytime-desc" id="storytime-desc">Listen to Benny's adventure as the story comes to life on YouTube and Spotify.</p>
-            <div class="storytime-action-wrapper">
-              <a class="storytime-cta-btn storytime-cta-youtube" id="storytime-cta-btn" role="button" aria-disabled="true" tabindex="0">
-                <svg class="storytime-cta-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                  <path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-                <span id="storytime-cta-text">Watch on YouTube</span>
-              </a>
-              <a class="storytime-cta-btn storytime-cta-spotify" id="storytime-spotify-btn" role="button" aria-disabled="true" tabindex="0">
-                <svg class="storytime-cta-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                  <path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.5 17.3c-.2.3-.6.4-.9.2-2.5-1.5-5.6-1.9-9.3-1-.3.1-.7-.1-.8-.4-.1-.3.1-.7.4-.8 4-1 7.4-.5 10.3 1.2.3.2.4.6.3.8zm1.5-3.3c-.3.4-.8.5-1.2.3-3-1.8-7.5-2.4-11-1.3-.4.1-.9-.1-1-.5-.1-.4.1-.9.5-1 4.1-1.2 9.1-.6 12.4 1.5.4.2.5.7.3 1zm.1-3.4c-3.6-2.1-9.5-2.3-12.9-1.3-.5.2-1.1-.1-1.3-.6-.2-.5.1-1.1.6-1.3 4-1.2 10.5-1 14.6 1.5.5.3.6.9.3 1.4-.3.5-.9.6-1.3.3z"/>
-                </svg>
-                <span id="storytime-spotify-text">Listen on Spotify</span>
-              </a>
+              <!-- Slide 1: Benny l'escavatore e la collina che cambiava forma -->
+              <div class="storytime-slide" data-index="1" role="group" aria-roledescription="slide" aria-label="2 di 2" aria-hidden="true">
+                <div class="storytime-card">
+                  <div class="storytime-media-col">
+                    <div 
+                      class="storytime-cover-frame" 
+                      role="button" 
+                      tabindex="0" 
+                      onclick="jumpToStorytimeBook('benny-collina-it')" 
+                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();jumpToStorytimeBook('benny-collina-it');}" 
+                      aria-label="Benny l'escavatore e la collina che cambiava forma - Vai al libro nel catalogo"
+                      title="Benny l'escavatore e la collina che cambiava forma - Vai al libro nel catalogo"
+                    >
+                      <img 
+                        src="assets/construction-site-adventures/01.Benny.Collina/IT/Front.Cover.png" 
+                        alt="Benny l'escavatore e la collina che cambiava forma - Storytime" 
+                        class="storytime-cover-img" 
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="storytime-content-col">
+                    <div class="storytime-eyebrow-wrapper">
+                      <div class="storytime-eyebrow">STORYTIME</div>
+                    </div>
+                    <h2 class="storytime-title">Benny l'escavatore e la collina che cambiava forma</h2>
+                    <p class="storytime-desc">Ascolta l'avventura di Benny mentre la storia prende vita su YouTube e Spotify.</p>
+                    <div class="storytime-action-wrapper">
+                      <a href="https://youtu.be/Q5BzuefwUuA" target="_blank" rel="noopener noreferrer" class="storytime-cta-btn storytime-cta-youtube" title="Guarda su YouTube">
+                        <svg class="storytime-cta-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                          <path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        <span>Guarda su YouTube</span>
+                      </a>
+                      <a href="https://open.spotify.com/episode/7wCHeAATwC0cMo3cLz09GT?si=_KomHQZ3QOurT1-MfCcu1Q" target="_blank" rel="noopener noreferrer" class="storytime-cta-btn storytime-cta-spotify" title="Ascolta su Spotify">
+                        <svg class="storytime-cta-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                          <path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.5 17.3c-.2.3-.6.4-.9.2-2.5-1.5-5.6-1.9-9.3-1-.3.1-.7-.1-.8-.4-.1-.3.1-.7.4-.8 4-1 7.4-.5 10.3 1.2.3.2.4.6.3.8zm1.5-3.3c-.3.4-.8.5-1.2.3-3-1.8-7.5-2.4-11-1.3-.4.1-.9-.1-1-.5-.1-.4.1-.9.5-1 4.1-1.2 9.1-.6 12.4 1.5.4.2.5.7.3 1zm.1-3.4c-3.6-2.1-9.5-2.3-12.9-1.3-.5.2-1.1-.1-1.3-.6-.2-.5.1-1.1.6-1.3 4-1.2 10.5-1 14.6 1.5.5.3.6.9.3 1.4-.3.5-.9.6-1.3.3z"/>
+                        </svg>
+                        <span>Ascolta su Spotify</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Frecce di navigazione -->
+            <button type="button" class="storytime-slider-btn storytime-slider-prev" id="storytime-slider-prev" aria-label="Video precedente">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="storytime-slider-btn storytime-slider-next" id="storytime-slider-next" aria-label="Video successivo">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+
+            <!-- Indicatori (Dots) -->
+            <div class="storytime-slider-indicators" id="storytime-slider-indicators" role="tablist" aria-label="Seleziona video storytime">
+              <button type="button" class="storytime-slider-dot active" data-slide-to="0" role="tab" aria-selected="true" aria-label="Video 1 di 2"></button>
+              <button type="button" class="storytime-slider-dot" data-slide-to="1" role="tab" aria-selected="false" aria-label="Video 2 di 2"></button>
             </div>
           </div>
         </div>

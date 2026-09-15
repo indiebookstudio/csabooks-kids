@@ -24,6 +24,21 @@ const LANGUAGE_META = {
 // Inserisci qui l'URL YouTube del video nel campo 'youtubeUrl' appena disponibile.
 // ==========================================================================
 const STORYTIME_ITEMS = [
+  // --- ITALIANO ---
+  {
+    id: "leo-montagna-it",
+    bookId: "leo-montagna-it",
+    language: "it",
+    eyebrow: "STORYTIME",
+    title: "Leo la gru e le gemme della montagna",
+    description: "Ascolta l'avventura di Leo mentre la storia prende vita su YouTube e Spotify.",
+    ctaText: "Guarda la storia su YouTube",
+    catalogCtaText: "Guarda la storia",
+    cover: "assets/construction-site-adventures/03.Leo.Montagna/IT/Front.Cover.png",
+    youtubeUrl: "https://youtu.be/7VBlotwS230",
+    spotifyUrl: "https://open.spotify.com/episode/1Ri2dxfymPcWnlwrVGnx6h?si=tOTipQZ0Q_up9VRmrjQI3Q",
+    isNew: true
+  },
   {
     id: "benny-collina-it",
     bookId: "benny-collina-it",
@@ -34,10 +49,10 @@ const STORYTIME_ITEMS = [
     ctaText: "Guarda la storia su YouTube",
     catalogCtaText: "Guarda la storia",
     cover: "assets/construction-site-adventures/01.Benny.Collina/IT/Front.Cover.png",
-    // ---> INSERISCI L'URL YOUTUBE QUI (es. "https://www.youtube.com/watch?v=...") <---
     youtubeUrl: "https://youtu.be/Q5BzuefwUuA",
     spotifyUrl: "https://open.spotify.com/episode/7wCHeAATwC0cMo3cLz09GT?si=_KomHQZ3QOurT1-MfCcu1Q"
   },
+  // --- INGLESE ---
   {
     id: "benny-hill-en",
     bookId: "benny-hill-en",
@@ -48,9 +63,23 @@ const STORYTIME_ITEMS = [
     ctaText: "Watch the story on YouTube",
     catalogCtaText: "Watch the story",
     cover: "assets/construction-site-adventures/01.Benny.Collina/US/Front.Cover.png",
-    // ---> INSERISCI L'URL YOUTUBE QUI (es. "https://www.youtube.com/watch?v=...") <---
     youtubeUrl: "https://youtu.be/K04YwfVBCpE",
     spotifyUrl: "https://open.spotify.com/episode/1MozkoCFeSIlzyyLK12ZdO?si=fYTl5BGnSCqdoI0e8l37CQ"
+  },
+  // --- FRANCESE ---
+  {
+    id: "leo-gemmes-fr",
+    bookId: "leo-gemmes-fr",
+    language: "fr",
+    eyebrow: "STORYTIME",
+    title: "Leo la grue et les gemmes de la montagne",
+    description: "Écoutez l'aventure de Leo alors que l'histoire prend vie sur YouTube et Spotify.",
+    ctaText: "Regarder l'histoire sur YouTube",
+    catalogCtaText: "Regarder l'histoire",
+    cover: "assets/construction-site-adventures/03.Leo.Montagna/FR/Front.Cover.png",
+    youtubeUrl: "https://youtu.be/pLCu8kXU_Co",
+    spotifyUrl: "https://open.spotify.com/episode/5KDjTi8icy4K2o2t4AWoFm?si=FZMydvQnSqOob-mSWE9WFg",
+    isNew: true
   },
   {
     id: "benny-colline-fr",
@@ -67,42 +96,42 @@ const STORYTIME_ITEMS = [
   }
 ];
 
+function getStorytimeItems(lang) {
+  if (typeof STORYTIME_ITEMS === 'undefined' || !Array.isArray(STORYTIME_ITEMS)) return [];
+  // Restituisce tutti i video attivi per la lingua corrente (con youtubeUrl configurato)
+  let items = STORYTIME_ITEMS.filter(item => item.language === lang && item.youtubeUrl);
+  if (items.length === 0) {
+    // Fallback sulla lingua inglese per le lingue che non hanno video specifici
+    items = STORYTIME_ITEMS.filter(item => item.language === 'en' && item.youtubeUrl);
+  }
+  if (items.length === 0) {
+    items = STORYTIME_ITEMS.filter(item => !!item.youtubeUrl);
+  }
+  return items;
+}
+
 function getStorytimeYoutubeUrl(item) {
   if (!item) return null;
-  if (item.youtubeUrl) return item.youtubeUrl;
-  if (typeof STORYTIME_ITEMS !== 'undefined' && Array.isArray(STORYTIME_ITEMS)) {
-    const anyWithUrl = STORYTIME_ITEMS.find(s => s.youtubeUrl);
-    if (anyWithUrl) return anyWithUrl.youtubeUrl;
-  }
-  return null;
+  return item.youtubeUrl || null;
 }
 
 function getStorytimeSpotifyUrl(item) {
   if (!item) return null;
-  if (item.spotifyUrl) return item.spotifyUrl;
-  if (typeof STORYTIME_ITEMS !== 'undefined' && Array.isArray(STORYTIME_ITEMS)) {
-    const anyWithUrl = STORYTIME_ITEMS.find(s => s.spotifyUrl);
-    if (anyWithUrl) return anyWithUrl.spotifyUrl;
-  }
-  return null;
+  return item.spotifyUrl || null;
 }
 
 function getStorytimeItemForBook(bookId, lang) {
   if (typeof STORYTIME_ITEMS === 'undefined' || !Array.isArray(STORYTIME_ITEMS)) return null;
   if (lang) {
-    const matchWithLang = STORYTIME_ITEMS.find(item => (item.bookId === bookId || item.id === bookId) && item.language === lang);
+    const matchWithLang = STORYTIME_ITEMS.find(item => (item.bookId === bookId || item.id === bookId) && item.language === lang && item.youtubeUrl);
     if (matchWithLang) return matchWithLang;
   }
-  return STORYTIME_ITEMS.find(item => item.bookId === bookId || item.id === bookId) || null;
+  return STORYTIME_ITEMS.find(item => (item.bookId === bookId || item.id === bookId) && item.youtubeUrl) || null;
 }
 
 function getFeaturedStorytimeItem(lang) {
-  if (typeof STORYTIME_ITEMS === 'undefined' || !Array.isArray(STORYTIME_ITEMS)) return null;
-  if (lang) {
-    const matching = STORYTIME_ITEMS.find(item => item.language === lang);
-    if (matching) return matching;
-  }
-  return STORYTIME_ITEMS.find(item => item.language === 'en') || STORYTIME_ITEMS[0] || null;
+  const items = getStorytimeItems(lang);
+  return items[0] || (typeof STORYTIME_ITEMS !== 'undefined' ? STORYTIME_ITEMS[0] : null);
 }
 
 // ==========================================================================
@@ -219,6 +248,7 @@ const BOOKS = [
     "id": "benny-colline-fr",
     "volume": 1,
     "collection": "construction-site",
+    "isNew": true,
     "title": "Benny l'excavateur et la colline qui changeait de forme",
     "subtitle": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
     "author": "Marco Salucci",
@@ -317,19 +347,43 @@ const BOOKS = [
     "id": "rudy-plage-fr",
     "volume": 2,
     "collection": "construction-site",
+    "isNew": true,
     "title": "Rudy le bulldozer et la plage qui disparaissait",
-    "subtitle": "Livre illustré pour enfants 2-5 ans",
+    "subtitle": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
     "author": "Marco Salucci",
     "language": "Français",
     "languageCode": "fr",
     "age": "2–5 ans",
     "badge": "Tome 2",
-    "comingSoon": true,
     "cover": "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/Front.Cover.png",
     "preview": [
-      "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/Front.Cover.png"
+      "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/Front.Cover.png",
+      "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/2.png",
+      "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/3.png",
+      "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/4.png",
+      "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/5.png",
+      "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/6.png",
+      "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/7.png",
+      "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/8.png",
+      "assets/construction-site-adventures/02.Rudy.Spiaggia/FR/Back.Cover.png"
     ],
-    "amazon": {}
+    "asin": "B0HJX2H3MF",
+    "amazon": {
+      "fr": "B0HJX2H3MF",
+      "com": "B0HJX2H3MF",
+      "it": "B0HJX2H3MF",
+      "de": "B0HJX2H3MF",
+      "es": "B0HJX2H3MF",
+      "co_uk": "B0HJX2H3MF",
+      "ca": "B0HJX2H3MF",
+      "nl": "B0HJX2H3MF",
+      "pl": "B0HJX2H3MF",
+      "se": "B0HJX2H3MF",
+      "jp": "B0HJX2H3MF",
+      "au": "B0HJX2H3MF",
+      "be": "B0HJX2H3MF",
+      "ie": "B0HJX2H3MF"
+    }
   },
   {
     "id": "leo-montagna-it",
@@ -392,19 +446,43 @@ const BOOKS = [
     "id": "leo-gemmes-fr",
     "volume": 3,
     "collection": "construction-site",
+    "isNew": true,
     "title": "Leo la grue et les gemmes de la montagne",
-    "subtitle": "Livre illustré pour enfants 2-5 ans",
+    "subtitle": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
     "author": "Marco Salucci",
     "language": "Français",
     "languageCode": "fr",
     "age": "2–5 ans",
     "badge": "Tome 3",
-    "comingSoon": true,
     "cover": "assets/construction-site-adventures/03.Leo.Montagna/FR/Front.Cover.png",
     "preview": [
-      "assets/construction-site-adventures/03.Leo.Montagna/FR/Front.Cover.png"
+      "assets/construction-site-adventures/03.Leo.Montagna/FR/Front.Cover.png",
+      "assets/construction-site-adventures/03.Leo.Montagna/FR/2.png",
+      "assets/construction-site-adventures/03.Leo.Montagna/FR/3.png",
+      "assets/construction-site-adventures/03.Leo.Montagna/FR/4.png",
+      "assets/construction-site-adventures/03.Leo.Montagna/FR/5.png",
+      "assets/construction-site-adventures/03.Leo.Montagna/FR/6.png",
+      "assets/construction-site-adventures/03.Leo.Montagna/FR/7.png",
+      "assets/construction-site-adventures/03.Leo.Montagna/FR/8.png",
+      "assets/construction-site-adventures/03.Leo.Montagna/FR/Back.Cover.png"
     ],
-    "amazon": {}
+    "asin": "B0HJWY3YZ4",
+    "amazon": {
+      "fr": "B0HJWY3YZ4",
+      "com": "B0HJWY3YZ4",
+      "it": "B0HJWY3YZ4",
+      "de": "B0HJWY3YZ4",
+      "es": "B0HJWY3YZ4",
+      "co_uk": "B0HJWY3YZ4",
+      "ca": "B0HJWY3YZ4",
+      "nl": "B0HJWY3YZ4",
+      "pl": "B0HJWY3YZ4",
+      "se": "B0HJWY3YZ4",
+      "jp": "B0HJWY3YZ4",
+      "au": "B0HJWY3YZ4",
+      "be": "B0HJWY3YZ4",
+      "ie": "B0HJWY3YZ4"
+    }
   },
   {
     "id": "bruno-papere-it",
