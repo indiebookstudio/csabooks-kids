@@ -40,8 +40,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="campaign.css" />
+  <link rel="stylesheet" href="style.css?v=2.5" />
+  <link rel="stylesheet" href="campaign.css?v=2.5" />
 </head>
 <body>
 
@@ -278,12 +278,12 @@
          ====================================================================== -->
     <section class="storytime-section" id="storytime" aria-label="Storytime">
       <div class="container hero-banner-wrapper">
-        <div class="storytime-slider-wrapper">
-          <div class="storytime-slider" id="storytime-slider" role="region" aria-roledescription="carousel" aria-label="Storytime Video">
+        <div class="storytime-slider-wrapper" style="position: relative; width: 100%; max-width: 100%; overflow: hidden;">
+          <div class="storytime-slider" id="storytime-slider" role="region" aria-roledescription="carousel" aria-label="Storytime Video" style="position: relative; width: 100%; max-width: 100%; overflow: hidden;">
             <!-- Slider Track con i video disponibili -->
-            <div class="storytime-slider-track" id="storytime-slider-track">
+            <div class="storytime-slider-track" id="storytime-slider-track" style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; align-items: stretch; width: 100%; box-sizing: border-box;">
               <!-- Slide 0: Leo la gru e le gemme della montagna (Nuovo video!) -->
-              <div class="storytime-slide active" data-index="0" role="group" aria-roledescription="slide" aria-label="1 di 2">
+              <div class="storytime-slide active" data-index="0" role="group" aria-roledescription="slide" aria-label="1 di 2" style="flex: 0 0 100% !important; min-width: 100% !important; max-width: 100% !important; width: 100% !important; flex-shrink: 0 !important; box-sizing: border-box;">
                 <div class="storytime-card">
                   <div class="storytime-media-col">
                     <div 
@@ -331,7 +331,7 @@
               </div>
 
               <!-- Slide 1: Benny l'escavatore e la collina che cambiava forma -->
-              <div class="storytime-slide" data-index="1" role="group" aria-roledescription="slide" aria-label="2 di 2" aria-hidden="true">
+              <div class="storytime-slide" data-index="1" role="group" aria-roledescription="slide" aria-label="2 di 2" aria-hidden="true" style="flex: 0 0 100% !important; min-width: 100% !important; max-width: 100% !important; width: 100% !important; flex-shrink: 0 !important; box-sizing: border-box;">
                 <div class="storytime-card">
                   <div class="storytime-media-col">
                     <div 
@@ -764,9 +764,9 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/banner/banners.js"></script>
-  <script src="books.js"></script>
-  <script src="script.js"></script>
-  <script src="campaign.js"></script>
+  <script src="assets/banner/banners.js?v=2.5"></script>
+  <script src="books.js?v=2.5"></script>
+  <script src="script.js?v=2.5"></script>
+  <script src="campaign.js?v=2.5"></script>
 </body>
 </html>

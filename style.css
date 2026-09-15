@@ -751,27 +751,39 @@ button {
 .storytime-slider-wrapper {
   position: relative;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .storytime-slider {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  max-width: 100%;
+  overflow: hidden !important;
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 45px rgba(11, 17, 32, 0.22), 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .storytime-slider-track {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch;
   width: 100%;
   transition: transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: transform;
+  box-sizing: border-box;
 }
 
 .storytime-slide {
-  min-width: 100%;
-  width: 100%;
-  flex-shrink: 0;
+  flex: 0 0 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  flex-shrink: 0 !important;
+  flex-grow: 0 !important;
   box-sizing: border-box;
 }
 
@@ -1067,10 +1079,27 @@ button {
     padding: 2.25rem 0 2.5rem 0;
   }
 
+  .storytime-slider-track {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    width: 100% !important;
+  }
+
+  .storytime-slide {
+    flex: 0 0 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+  }
+
   .storytime-card {
     grid-template-columns: 1fr;
     gap: 1.75rem;
-    padding: 2rem 1.5rem 2.5rem 1.5rem;
+    padding: 2rem 1.5rem 2.75rem 1.5rem;
     text-align: center;
   }
 
@@ -1113,8 +1142,25 @@ button {
 }
 
 @media (max-width: 480px) {
+  .storytime-slider-track {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    width: 100% !important;
+  }
+
+  .storytime-slide {
+    flex: 0 0 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+  }
+
   .storytime-card {
-    padding: 1.5rem 1rem 2.5rem 1rem;
+    padding: 1.5rem 1.75rem 3.5rem 1.75rem;
     border-radius: var(--radius-md);
   }
 

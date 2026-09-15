@@ -2992,6 +2992,11 @@ function renderStorytimeSection(lang) {
     return;
   }
   section.style.display = '';
+  track.style.display = 'flex';
+  track.style.flexDirection = 'row';
+  track.style.flexWrap = 'nowrap';
+  track.style.alignItems = 'stretch';
+  track.style.width = '100%';
 
   storytimeSliderState.items = items;
   storytimeSliderState.currentIndex = 0; // Il più nuovo (Leo nel caso italiano) appare per primo!
@@ -3045,7 +3050,7 @@ function renderStorytimeSection(lang) {
     const bookId = item.bookId || item.id;
 
     return `
-      <div class="storytime-slide ${isActive ? 'active' : ''}" data-index="${idx}" role="group" aria-roledescription="slide" aria-label="${idx + 1} di ${total}" ${isActive ? '' : 'aria-hidden="true"'}>
+      <div class="storytime-slide ${isActive ? 'active' : ''}" data-index="${idx}" role="group" aria-roledescription="slide" aria-label="${idx + 1} di ${total}" ${isActive ? '' : 'aria-hidden="true"'} style="flex: 0 0 100% !important; min-width: 100% !important; max-width: 100% !important; width: 100% !important; flex-shrink: 0 !important; box-sizing: border-box;">
         <div class="storytime-card">
           <div class="storytime-media-col">
             <div 
