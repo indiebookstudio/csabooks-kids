@@ -1022,6 +1022,171 @@ Object.keys(STORYTIME_I18N).forEach(lang => {
   }
 });
 
+// ============================================================================
+// TRADUZIONI PAGINA SEGRETA BONUS (Bundle Volume 1 - QR Code)
+// ============================================================================
+const BONUS_I18N = {
+  it: {
+    bonusMetaTitle: "Bonus da Colorare | Raccolta Vol. 1 - Le Avventure del Cantiere",
+    bonusMetaDesc: "Scarica il PDF bonus esclusivo con i disegni da colorare della raccolta Le Avventure del Cantiere Volume 1.",
+    bonusBadgeText: "Regalo speciale per i lettori",
+    bonusTitle: 'Le Avventure del Cantiere — <span class="highlight">Raccolta Vol. 1</span>',
+    bonusLead: "Grazie per aver scelto la nostra raccolta di storie! Come promesso nel libro, ecco il tuo regalo speciale: i disegni ufficiali da stampare e colorare con tutti i simpatici veicoli del cantiere.",
+    bonusBtnLabel: "Scarica il PDF con i Disegni da Colorare",
+    bonusBtnSublabel: "PDF ad alta risoluzione • Pronto per la stampa",
+    bonusNote: "File PDF sicuro • Scaricabile e stampabile ogni volta che desideri",
+    bonusFeat1Title: "Stampa a casa",
+    bonusFeat1Desc: "Stampa tutte le copie che desideri per divertirti a colorare con matite, pennarelli o pastelli.",
+    bonusFeat2Title: "Tutti i personaggi",
+    bonusFeat2Desc: "Benny l'escavatore, Leo la gru, Bruno il camion e tutti gli amici ti aspettano per prendere vita con i tuoi colori.",
+    bonusFeat3Title: "Divertimento senza schermi",
+    bonusFeat3Desc: "Un'attività creativa e rilassante, perfetta da condividere in famiglia dopo la lettura delle storie.",
+    bonusCoverAlt: "Copertina ufficiale del libro Raccolta Volume 1 - Le Avventure del Cantiere"
+  },
+  en: {
+    bonusMetaTitle: "Coloring Bonus | Collection Vol. 1 - Construction Site Adventures",
+    bonusMetaDesc: "Download the exclusive printable coloring PDF bonus from the Construction Site Adventures Volume 1 book collection.",
+    bonusBadgeText: "Special Gift for Readers",
+    bonusTitle: 'Construction Site Adventures — <span class="highlight">Collection Vol. 1</span>',
+    bonusLead: "Thank you for choosing our story collection! As promised in your book, here is your special gift: the official printable coloring pages featuring all the friendly construction vehicles.",
+    bonusBtnLabel: "Download the Coloring Pages PDF",
+    bonusBtnSublabel: "High-resolution PDF • Ready to print",
+    bonusNote: "Safe PDF file • Download and print whenever you wish",
+    bonusFeat1Title: "Print at Home",
+    bonusFeat1Desc: "Print as many copies as you like to enjoy coloring with crayons, markers, or colored pencils.",
+    bonusFeat2Title: "All the Characters",
+    bonusFeat2Desc: "Benny the Excavator, Leo the Crane, Bruno the Dump Truck, and friends are ready to come alive with your colors.",
+    bonusFeat3Title: "Screen-Free Fun",
+    bonusFeat3Desc: "A relaxing, creative activity to share together as a family after reading the bedtime stories.",
+    bonusCoverAlt: "Official book cover of Collection Volume 1 - Construction Site Adventures"
+  },
+  de: {
+    bonusMetaTitle: "Malvorlagen-Bonus | Sammelband Vol. 1 - Baustellen-Abenteuer",
+    bonusMetaDesc: "Lade das exklusive Ausmal-PDF des Buches Baustellen-Abenteuer Band 1 herunter.",
+    bonusBadgeText: "Besonderes Geschenk für Leser",
+    bonusTitle: 'Baustellen-Abenteuer — <span class="highlight">Sammelband Vol. 1</span>',
+    bonusLead: "Vielen Dank, dass du dich für unseren Sammelband entschieden hast! Wie im Buch versprochen, ist hier dein besonderes Geschenk: die offiziellen Malvorlagen zum Ausdrucken mit allen Baustellen-Fahrzeugen.",
+    bonusBtnLabel: "Malvorlagen-PDF herunterladen",
+    bonusBtnSublabel: "Hochauflösendes PDF • Bereit zum Ausdrucken",
+    bonusNote: "Sichere PDF-Datei • Jederzeit herunterladen und ausdrucken",
+    bonusFeat1Title: "Zuhause ausdrucken",
+    bonusFeat1Desc: "Drucke so viele Exemplare aus, wie du möchtest, und male mit Buntstiften, Wachsmalern oder Filzstiften.",
+    bonusFeat2Title: "Alle Figuren",
+    bonusFeat2Desc: "Benny der Bagger, Leo der Kran, Bruno der Kipper und ihre Freunde warten darauf, bunt ausgemalt zu werden.",
+    bonusFeat3Title: "Bildschirmfreier Spaß",
+    bonusFeat3Desc: "Eine entspannende, kreative Beschäftigung für die ganze Familie nach dem Vorlesen der Geschichten.",
+    bonusCoverAlt: "Offizielles Buchcover von Sammelband Band 1 - Baustellen-Abenteuer"
+  },
+  fr: {
+    bonusMetaTitle: "Coloriages Bonus | Recueil Vol. 1 - Les Aventures du Chantier",
+    bonusMetaDesc: "Téléchargez le PDF bonus exclusif de coloriages du livre Les Aventures du Chantier Volume 1.",
+    bonusBadgeText: "Cadeau exclusif pour les lecteurs",
+    bonusTitle: 'Les Aventures du Chantier — <span class="highlight">Recueil Vol. 1</span>',
+    bonusLead: "Merci d'avoir choisi notre recueil d'histoires ! Comme promis dans votre livre, voici votre cadeau spécial : les coloriages officiels à imprimer avec tous les héros du chantier.",
+    bonusBtnLabel: "Télécharger le PDF de Coloriages",
+    bonusBtnSublabel: "PDF haute résolution • Prêt à imprimer",
+    bonusNote: "Fichier PDF sécurisé • À télécharger et imprimer à volonté",
+    bonusFeat1Title: "Imprimez à la maison",
+    bonusFeat1Desc: "Imprimez autant d'exemplaires que vous le souhaitez pour colorier avec crayons, feutres ou pastels.",
+    bonusFeat2Title: "Tous les personnages",
+    bonusFeat2Desc: "Benny l'excavateur, Leo la grue, Bruno le camion et tous leurs amis attendent vos plus belles couleurs.",
+    bonusFeat3Title: "Plaisir sans écran",
+    bonusFeat3Desc: "Une activité créative et relaxante à partager en famille après la lecture des histoires du soir.",
+    bonusCoverAlt: "Couverture officielle du recueil Volume 1 - Les Aventures du Chantier"
+  },
+  es: {
+    bonusMetaTitle: "Bonus para Colorear | Colección Vol. 1 - Las Aventuras de la Construcción",
+    bonusMetaDesc: "Descarga el PDF bonus exclusivo con láminas para colorear de Las Aventuras de la Construcción Volumen 1.",
+    bonusBadgeText: "Regalo especial para los lectores",
+    bonusTitle: 'Las Aventuras de la Construcción — <span class="highlight">Colección Vol. 1</span>',
+    bonusLead: "¡Gracias por elegir nuestra colección de cuentos! Como prometimos en el libro, aquí tienes tu regalo especial: los dibujos oficiales para imprimir y colorear con todos los vehículos de la obra.",
+    bonusBtnLabel: "Descargar el PDF con Dibujos para Colorear",
+    bonusBtnSublabel: "PDF en alta resolución • Listo para imprimir",
+    bonusNote: "Archivo PDF seguro • Descarga e imprime todas las veces que quieras",
+    bonusFeat1Title: "Imprime en casa",
+    bonusFeat1Desc: "Imprime tantas copias como desees para disfrutar coloreando con lápices, ceras o rotuladores.",
+    bonusFeat2Title: "Todos los personajes",
+    bonusFeat2Desc: "Benny la excavadora, Leo la grúa, Bruno el camión y sus amigos te esperan para cobrar vida con tus colores.",
+    bonusFeat3Title: "Diversión sin pantallas",
+    bonusFeat3Desc: "Una actividad creativa y relajante para compartir en familia tras la lectura del cuento.",
+    bonusCoverAlt: "Portada oficial del libro Colección Volumen 1 - Las Aventuras de la Construcción"
+  },
+  nl: {
+    bonusMetaTitle: "Kleurplaten Bonus | Verhalenbundel Vol. 1 - Bouwplaatsavonturen",
+    bonusMetaDesc: "Download de exclusieve printbare kleurplaten-PDF van het boek Bouwplaatsavonturen Deel 1.",
+    bonusBadgeText: "Speciaal cadeau voor lezers",
+    bonusTitle: 'Bouwplaatsavonturen — <span class="highlight">Verhalenbundel Vol. 1</span>',
+    bonusLead: "Bedankt voor het kiezen van onze verhalenbundel! Zoals beloofd in het boek, is hier jouw speciale cadeau: de officiële printbare kleurplaten met alle vrolijke bouwvoertuigen.",
+    bonusBtnLabel: "Download de Kleurplaten PDF",
+    bonusBtnSublabel: "Hoge resolutie PDF • Klaar om te printen",
+    bonusNote: "Veilig PDF-bestand • Download en print zo vaak als je wilt",
+    bonusFeat1Title: "Print thuis",
+    bonusFeat1Desc: "Print zoveel exemplaren als je wilt en kleur ze in met kleurpotloden, stiften of krijtjes.",
+    bonusFeat2Title: "Alle personages",
+    bonusFeat2Desc: "Benny de graafmachine, Leo de kraan, Bruno de kiepwagen en al hun vriendjes wachten op jouw kleuren.",
+    bonusFeat3Title: "Plezier zonder scherm",
+    bonusFeat3Desc: "Een ontspannen en creatieve activiteit om samen als gezin te beleven na het voorlezen.",
+    bonusCoverAlt: "Officiële boekomslag van Verhalenbundel Deel 1 - Bouwplaatsavonturen"
+  },
+  pl: {
+    bonusMetaTitle: "Bonusowe Kolorowanki | Zbiór Opowiadań Vol. 1 - Przygody na Placu Budowy",
+    bonusMetaDesc: "Pobierz ekskluzywny plik PDF z kolorowankami do wydrukowania z książki Przygody na Placu Budowy Tom 1.",
+    bonusBadgeText: "Specjalny prezent dla czytelników",
+    bonusTitle: 'Przygody na Placu Budowy — <span class="highlight">Zbiór Opowiadań Vol. 1</span>',
+    bonusLead: "Dziękujemy za wybranie naszego zbioru opowiadań! Tak jak obiecaliśmy w książce, oto Twój wyjątkowy prezent: oficjalne kolorowanki do wydrukowania ze wszystkimi wspaniałymi pojazdami budowlanymi.",
+    bonusBtnLabel: "Pobierz PDF z Kolorowankami",
+    bonusBtnSublabel: "PDF w wysokiej rozdzielczości • Gotowy do druku",
+    bonusNote: "Bezpieczny plik PDF • Pobieraj i drukuj kiedy tylko chcesz",
+    bonusFeat1Title: "Drukuj w domu",
+    bonusFeat1Desc: "Wydrukuj tyle kopii, ile chcesz, i baw się kolorowaniem kredkami, flamastrami lub pastelami.",
+    bonusFeat2Title: "Wszyscy bohaterowie",
+    bonusFeat2Desc: "Koparka Benny, dźwig Leo, wywrotka Bruno i ich przyjaciele czekają na ożywienie kolorami.",
+    bonusFeat3Title: "Zabawa bez ekranów",
+    bonusFeat3Desc: "Relaksująca i twórcza aktywność dla całej rodziny po wspólnym czytaniu opowieści.",
+    bonusCoverAlt: "Oficjalna okładka książki Zbiór Opowiadań Tom 1 - Przygody na Placu Budowy"
+  },
+  sv: {
+    bonusMetaTitle: "Målarbonus | Berättelsesamling Vol. 1 - Byggarbetsplatsens Äventyr",
+    bonusMetaDesc: "Ladda ner den exklusiva PDF:en med målarbilder från boken Byggarbetsplatsens Äventyr Del 1.",
+    bonusBadgeText: "Speciell gåva till läsarna",
+    bonusTitle: 'Byggarbetsplatsens Äventyr — <span class="highlight">Samlingsvolym 1</span>',
+    bonusLead: "Tack för att du valde vår berättelsesamling! Som utlovat i boken är här din speciella gåva: de officiella målarbilderna att skriva ut med alla vännerna på byggarbetsplatsen.",
+    bonusBtnLabel: "Ladda ner PDF med Målarbilder",
+    bonusBtnSublabel: "Högupplöst PDF • Klar att skriva ut",
+    bonusNote: "Säker PDF-fil • Ladda ner och skriv ut när du vill",
+    bonusFeat1Title: "Skriv ut hemma",
+    bonusFeat1Desc: "Skriv ut så många kopior du vill och färglägg med färgpennor, kritor eller tuschpennor.",
+    bonusFeat2Title: "Alla figurerna",
+    bonusFeat2Desc: "Grävmaskinen Benny, lyftkranen Leo, dumpern Bruno och deras vänner väntar på dina färger.",
+    bonusFeat3Title: "Skärmfri glädje",
+    bonusFeat3Desc: "En lugn och kreativ stund att dela tillsammans i familjen efter sagostunden.",
+    bonusCoverAlt: "Officiellt bokomslag för Samlingsvolym 1 - Byggarbetsplatsens Äventyr"
+  },
+  ja: {
+    bonusMetaTitle: "読者限定ぬりえ特典 | おはなし集 第1巻 - 工事現場の冒険",
+    bonusMetaDesc: "『工事現場の冒険 おはなし集 第1巻』の読者限定プリント用ぬりえPDFをダウンロード。",
+    bonusBadgeText: "読者限定の特別プレゼント",
+    bonusTitle: '工事現場の冒険 — <span class="highlight">おはなし集 第1巻</span>',
+    bonusLead: "おはなし集をお手に取っていただき、ありがとうございます！ 本の中で約束したとおり、工事現場で活躍する仲間たちを印刷して塗れる公式ぬりえをプレゼントします。",
+    bonusBtnLabel: "ぬりえPDFをダウンロード",
+    bonusBtnSublabel: "高解像度PDF • すぐに印刷して遊べます",
+    bonusNote: "安心のPDFファイル • いつでも何度でも印刷できます",
+    bonusFeat1Title: "おうちで印刷",
+    bonusFeat1Desc: "クレヨンや色鉛筆、サインペンなど、好きな画材で何度でも印刷して遊べます。",
+    bonusFeat2Title: "人気の仲間たちが勢ぞろい",
+    bonusFeat2Desc: "ショベルカーのベニー、クレーン車のレオ、ダンプカーのブルーノたちが君の色を待っています。",
+    bonusFeat3Title: "スクリーンから離れた親子の時間",
+    bonusFeat3Desc: "読み聞かせのあとに親子で一緒に楽しめる、創造力あふれるおだやかな時間をお届けします。",
+    bonusCoverAlt: "工事現場の冒険 おはなし集 第1巻 公式表紙"
+  }
+};
+
+Object.keys(BONUS_I18N).forEach(lang => {
+  if (I18N[lang]) {
+    Object.assign(I18N[lang], BONUS_I18N[lang]);
+  }
+});
+
 const REVIEWS_I18N = {
   it: {
     navReviews: "Recensioni",
@@ -2894,6 +3059,39 @@ function applyLanguage(lang) {
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && strings.aboutMetaDesc) {
       metaDesc.setAttribute('content', strings.aboutMetaDesc);
+    }
+  }
+
+  // Bonus Landing Page (se presente su csa-vol1-bonus-8f2e91b7d4a6.html)
+  if (document.getElementById('bonus-page-main')) {
+    setText('bonus-badge-text', strings.bonusBadgeText || 'Regalo speciale per i lettori');
+    const bonusTitleEl = document.getElementById('bonus-title');
+    if (bonusTitleEl && strings.bonusTitle) {
+      bonusTitleEl.innerHTML = strings.bonusTitle;
+    }
+    setText('bonus-lead', strings.bonusLead);
+    setText('bonus-btn-label', strings.bonusBtnLabel || 'Scarica il PDF con i Disegni da Colorare');
+    setText('bonus-btn-sublabel', strings.bonusBtnSublabel || 'PDF ad alta risoluzione • Pronto per la stampa');
+    setText('bonus-note-text', strings.bonusNote || 'File PDF sicuro • Scaricabile e stampabile ogni volta che desideri');
+
+    setText('bonus-feat1-title', strings.bonusFeat1Title || 'Stampa a casa');
+    setText('bonus-feat1-desc', strings.bonusFeat1Desc);
+    setText('bonus-feat2-title', strings.bonusFeat2Title || 'Tutti i personaggi');
+    setText('bonus-feat2-desc', strings.bonusFeat2Desc);
+    setText('bonus-feat3-title', strings.bonusFeat3Title || 'Divertimento senza schermi');
+    setText('bonus-feat3-desc', strings.bonusFeat3Desc);
+
+    const bonusCoverImg = document.getElementById('bonus-cover-img');
+    if (bonusCoverImg && strings.bonusCoverAlt) {
+      bonusCoverImg.alt = strings.bonusCoverAlt;
+    }
+
+    if (strings.bonusMetaTitle) {
+      document.title = strings.bonusMetaTitle;
+    }
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && strings.bonusMetaDesc) {
+      metaDesc.setAttribute('content', strings.bonusMetaDesc);
     }
   }
 

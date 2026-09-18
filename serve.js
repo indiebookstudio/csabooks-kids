@@ -14,7 +14,8 @@ const mimeTypes = {
   '.gif': 'image/gif',
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
-  '.webp': 'image/webp'
+  '.webp': 'image/webp',
+  '.pdf': 'application/pdf'
 };
 
 const server = http.createServer((req, res) => {
@@ -22,16 +23,25 @@ const server = http.createServer((req, res) => {
   if (reqPath === '/') reqPath = '/index.html';
   const filePath = path.join(__dirname, reqPath);
 
-  fs.stat(filePath, (err, stats) => {
+  let targetPath = filePath;
+  if (!fs.existsSync(targetPath) || fs.statSync(targetPath).isDirectory()) {
+    if (fs.existsSync(targetPath + '.html')) {
+      targetPath = targetPath + '.html';
+    } else if (fs.existsSync(path.join(targetPath, 'index.html'))) {
+      targetPath = path.join(targetPath, 'index.html');
+    }
+  }
+
+  fs.stat(targetPath, (err, stats) => {
     if (err || !stats.isFile()) {
       res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
       res.end('File Not Found: ' + reqPath);
       return;
     }
-    const ext = path.extname(filePath).toLowerCase();
+    const ext = path.extname(targetPath).toLowerCase();
     const contentType = mimeTypes[ext] || 'application/octet-stream';
     res.writeHead(200, { 'Content-Type': contentType });
-    fs.createReadStream(filePath).pipe(res);
+    fs.createReadStream(targetPath).pipe(res);
   });
 });
 
