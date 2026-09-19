@@ -15,7 +15,10 @@ const mimeTypes = {
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
   '.webp': 'image/webp',
-  '.pdf': 'application/pdf'
+  '.pdf': 'application/pdf',
+  '.mp4': 'video/mp4',
+  '.wav': 'audio/wav',
+  '.mp3': 'audio/mpeg'
 };
 
 const server = http.createServer((req, res) => {
