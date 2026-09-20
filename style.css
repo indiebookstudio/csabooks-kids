@@ -4790,7 +4790,7 @@ button {
   display: grid;
   grid-template-columns: 380px 1fr;
   gap: 3.5rem;
-  align-items: center;
+  align-items: start;
   max-width: 1120px;
   margin: 0 auto;
 }
@@ -4798,7 +4798,7 @@ button {
 .bonus-cover-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .bonus-cover-card {
