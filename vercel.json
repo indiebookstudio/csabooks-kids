@@ -1,3 +1,22 @@
 {
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/csa-vol1-bonus-8f2e91b7d4a6",
+      "destination": "/csa-vol1-bonus-8f2e91b7d4a6.html"
+    },
+    {
+      "source": "/csa-vol1-bonus-8f2e91b7d4a6/",
+      "destination": "/csa-vol1-bonus-8f2e91b7d4a6.html"
+    },
+    {
+      "source": "/csa-vol1-ep1-ita-7b3f91a8d2c4",
+      "destination": "/csa-vol1-ep1-ita-7b3f91a8d2c4.html"
+    },
+    {
+      "source": "/csa-vol1-ep1-ita-7b3f91a8d2c4/",
+      "destination": "/csa-vol1-ep1-ita-7b3f91a8d2c4.html"
+    }
+  ]
 }

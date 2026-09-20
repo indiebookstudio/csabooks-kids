@@ -79,4 +79,16 @@ Dopo aver aggiunto o eliminato un'immagine, basta fare `git commit` e `git push`
 
 ---
 
+## ⚠️ ROTTE IMMUTABILI QR CODE (LIBRI CARTACEI)
+
+> **ATTENZIONE TASSATIVA PER QUALSIASI SVILUPPATORE O AGENTE AI:**
+> I seguenti link sono **stampati fisicamente in formato QR Code all'interno dei libri cartacei in commercio**.
+> **NON DEVONO MAI ESSERE RINOMINATI, SPOSTATI O CANCELLATI PER NESSUN MOTIVO AL MONDO**:
+> 1. `https://csabookskids.com/csa-vol1-bonus-8f2e91b7d4a6` (File: `csa-vol1-bonus-8f2e91b7d4a6.html`) — Bonus Disegni da Colorare (Raccolta Vol. 1)
+> 2. `https://csabookskids.com/csa-vol1-ep1-ita-7b3f91a8d2c4` (File: `csa-vol1-ep1-ita-7b3f91a8d2c4.html`) — Episodio 1 Audio & Video Read-Aloud
+> 
+> Consulta [PERMANENT_QR_ROUTES.md](PERMANENT_QR_ROUTES.md) per il registro completo delle protezioni attive (doppio fallback file/directory, intercettazione automatica in `404.html`, rewrite in `vercel.json` e test automatico `test-qr-routes.js`).
+
+---
+
 © 2026 **CSA Books 4 Kids** & **Marco Salucci**. Tutti i diritti riservati.
