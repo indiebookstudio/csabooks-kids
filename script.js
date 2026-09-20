@@ -1028,10 +1028,27 @@ Object.keys(STORYTIME_I18N).forEach(lang => {
 const BONUS_I18N = {
   it: {
     bonusMetaTitle: "Bonus da Colorare | Raccolta Vol. 1 - Le Avventure del Cantiere",
-    bonusMetaDesc: "Scarica il PDF bonus esclusivo con i disegni da colorare della raccolta Le Avventure del Cantiere Volume 1.",
+    bonusMetaDesc: "Ricevi via email il PDF bonus esclusivo con i disegni da colorare della raccolta Le Avventure del Cantiere Volume 1.",
     bonusBadgeText: "Regalo speciale per i lettori",
     bonusTitle: 'Le Avventure del Cantiere — <span class="highlight">Raccolta Vol. 1</span>',
     bonusLead: "Grazie per aver scelto la nostra raccolta di storie! Come promesso nel libro, ecco il tuo regalo speciale: i disegni ufficiali da stampare e colorare con tutti i simpatici veicoli del cantiere.",
+    bonusFormBadge: "📩 Ricevi il regalo via email",
+    bonusFormTitle: "Compila per ricevere subito il PDF con i disegni",
+    bonusFormDesc: "Inserisci il tuo nome e la tua email: ti invieremo immediatamente il file PDF ad alta risoluzione in allegato, pronto per essere stampato.",
+    bonusFirstNameLabel: "Nome *",
+    bonusLastNameLabel: "Cognome *",
+    bonusEmailLabel: "La tua Email *",
+    bonusFirstPlaceholder: "Es. Marco",
+    bonusLastPlaceholder: "Es. Rossi",
+    bonusEmailPlaceholder: "iltuoindirizzo@email.com",
+    bonusSubmitBtnText: "Invia i Disegni alla mia Email 🎨",
+    bonusPrivacyText: "I tuoi dati sono al sicuro. Riceverai solo il file PDF richiesto e le novità della collana. Zero spam.",
+    bonusSending: "Invio dell'email in corso con il PDF allegato...",
+    bonusSuccess: "Fantastico! 🎉 Abbiamo inviato l'email con il PDF allegato a <strong>{email}</strong>.<br>Controlla la tua casella di posta (e anche la cartella Spam o Promozioni se non la vedi subito).",
+    bonusError: "Si è verificato un errore durante l'invio. Riprova tra qualche istante o scrivici a csabooks.kids@gmail.com.",
+    bonusValidationError: "Compila tutti i campi obbligatori per ricevere il regalo.",
+    bonusInvalidEmail: "Inserisci un indirizzo email valido.",
+    bonusSentBtnText: "Inviato con Successo! ✓",
     bonusBtnLabel: "Scarica il PDF con i Disegni da Colorare",
     bonusBtnSublabel: "PDF ad alta risoluzione • Pronto per la stampa",
     bonusNote: "File PDF sicuro • Scaricabile e stampabile ogni volta che desideri",
@@ -1045,10 +1062,27 @@ const BONUS_I18N = {
   },
   en: {
     bonusMetaTitle: "Coloring Bonus | Collection Vol. 1 - Construction Site Adventures",
-    bonusMetaDesc: "Download the exclusive printable coloring PDF bonus from the Construction Site Adventures Volume 1 book collection.",
+    bonusMetaDesc: "Receive the exclusive printable coloring PDF bonus from the Construction Site Adventures Volume 1 book collection by email.",
     bonusBadgeText: "Special Gift for Readers",
     bonusTitle: 'Construction Site Adventures — <span class="highlight">Collection Vol. 1</span>',
     bonusLead: "Thank you for choosing our story collection! As promised in your book, here is your special gift: the official printable coloring pages featuring all the friendly construction vehicles.",
+    bonusFormBadge: "📩 Receive your gift by email",
+    bonusFormTitle: "Fill in the form to receive your printable coloring PDF",
+    bonusFormDesc: "Enter your name and email: we will immediately send you the high-resolution PDF attachment, ready to print.",
+    bonusFirstNameLabel: "First Name *",
+    bonusLastNameLabel: "Last Name *",
+    bonusEmailLabel: "Your Email *",
+    bonusFirstPlaceholder: "e.g. John",
+    bonusLastPlaceholder: "e.g. Smith",
+    bonusEmailPlaceholder: "youremail@example.com",
+    bonusSubmitBtnText: "Send Coloring Pages to My Email 🎨",
+    bonusPrivacyText: "Your information is safe. You will only receive the requested PDF and book series news. Zero spam.",
+    bonusSending: "Sending email with the attached PDF...",
+    bonusSuccess: "Awesome! 🎉 We sent the email with the attached PDF to <strong>{email}</strong>.<br>Check your inbox (and check your Spam or Promotions folder just in case).",
+    bonusError: "An error occurred while sending. Please try again in a moment or contact us at csabooks.kids@gmail.com.",
+    bonusValidationError: "Please fill in all required fields to receive your gift.",
+    bonusInvalidEmail: "Please enter a valid email address.",
+    bonusSentBtnText: "Sent Successfully! ✓",
     bonusBtnLabel: "Download the Coloring Pages PDF",
     bonusBtnSublabel: "High-resolution PDF • Ready to print",
     bonusNote: "Safe PDF file • Download and print whenever you wish",
@@ -1062,10 +1096,27 @@ const BONUS_I18N = {
   },
   de: {
     bonusMetaTitle: "Malvorlagen-Bonus | Sammelband Vol. 1 - Baustellen-Abenteuer",
-    bonusMetaDesc: "Lade das exklusive Ausmal-PDF des Buches Baustellen-Abenteuer Band 1 herunter.",
+    bonusMetaDesc: "Erhalte das exklusive Ausmal-PDF des Buches Baustellen-Abenteuer Band 1 per E-Mail.",
     bonusBadgeText: "Besonderes Geschenk für Leser",
     bonusTitle: 'Baustellen-Abenteuer — <span class="highlight">Sammelband Vol. 1</span>',
     bonusLead: "Vielen Dank, dass du dich für unseren Sammelband entschieden hast! Wie im Buch versprochen, ist hier dein besonderes Geschenk: die offiziellen Malvorlagen zum Ausdrucken mit allen Baustellen-Fahrzeugen.",
+    bonusFormBadge: "📩 Geschenk per E-Mail erhalten",
+    bonusFormTitle: "Ausfüllen, um das Ausmal-PDF sofort zu erhalten",
+    bonusFormDesc: "Gib deinen Namen und deine E-Mail-Adresse ein: Wir senden dir das hochauflösende PDF direkt im Anhang zum Ausdrucken.",
+    bonusFirstNameLabel: "Vorname *",
+    bonusLastNameLabel: "Nachname *",
+    bonusEmailLabel: "Deine E-Mail *",
+    bonusFirstPlaceholder: "z.B. Max",
+    bonusLastPlaceholder: "z.B. Müller",
+    bonusEmailPlaceholder: "deinemail@beispiel.de",
+    bonusSubmitBtnText: "Ausmalbilder an meine E-Mail senden 🎨",
+    bonusPrivacyText: "Deine Daten sind sicher. Du erhältst nur das angeforderte PDF und Neuigkeiten. Kein Spam.",
+    bonusSending: "E-Mail mit dem PDF-Anhang wird gesendet...",
+    bonusSuccess: "Großartig! 🎉 Wir haben die E-Mail mit dem PDF-Anhang an <strong>{email}</strong> gesendet.<br>Prüfe deinen Posteingang (auch den Spam-Ordner).",
+    bonusError: "Beim Senden ist ein Fehler aufgetreten. Bitte versuche es erneut oder schreibe an csabooks.kids@gmail.com.",
+    bonusValidationError: "Bitte fülle alle Pflichtfelder aus.",
+    bonusInvalidEmail: "Bitte gib eine gültige E-Mail-Adresse ein.",
+    bonusSentBtnText: "Erfolgreich gesendet! ✓",
     bonusBtnLabel: "Malvorlagen-PDF herunterladen",
     bonusBtnSublabel: "Hochauflösendes PDF • Bereit zum Ausdrucken",
     bonusNote: "Sichere PDF-Datei • Jederzeit herunterladen und ausdrucken",
@@ -1079,10 +1130,27 @@ const BONUS_I18N = {
   },
   fr: {
     bonusMetaTitle: "Coloriages Bonus | Recueil Vol. 1 - Les Aventures du Chantier",
-    bonusMetaDesc: "Téléchargez le PDF bonus exclusif de coloriages du livre Les Aventures du Chantier Volume 1.",
+    bonusMetaDesc: "Recevez par e-mail le PDF bonus exclusif de coloriages du livre Les Aventures du Chantier Volume 1.",
     bonusBadgeText: "Cadeau exclusif pour les lecteurs",
     bonusTitle: 'Les Aventures du Chantier — <span class="highlight">Recueil Vol. 1</span>',
     bonusLead: "Merci d'avoir choisi notre recueil d'histoires ! Comme promis dans votre livre, voici votre cadeau spécial : les coloriages officiels à imprimer avec tous les héros du chantier.",
+    bonusFormBadge: "📩 Recevoir le cadeau par e-mail",
+    bonusFormTitle: "Remplissez pour recevoir immédiatement le PDF de coloriages",
+    bonusFormDesc: "Saisissez votre prénom et votre e-mail : nous vous enverrons immédiatement le fichier PDF haute résolution en pièce jointe, prêt à imprimer.",
+    bonusFirstNameLabel: "Prénom *",
+    bonusLastNameLabel: "Nom *",
+    bonusEmailLabel: "Votre E-mail *",
+    bonusFirstPlaceholder: "Ex. Pierre",
+    bonusLastPlaceholder: "Ex. Dupont",
+    bonusEmailPlaceholder: "votre.email@exemple.fr",
+    bonusSubmitBtnText: "Envoyer les Coloriages à mon E-mail 🎨",
+    bonusPrivacyText: "Vos données sont en sécurité. Vous ne recevrez que le PDF demandé et des nouvelles de la collection. Zéro spam.",
+    bonusSending: "Envoi de l'e-mail avec le PDF en pièce jointe...",
+    bonusSuccess: "Formidable ! 🎉 Nous avons envoyé l'e-mail avec le PDF en pièce jointe à <strong>{email}</strong>.<br>Vérifiez votre boîte de réception (et vos spams si nécessaire).",
+    bonusError: "Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter à csabooks.kids@gmail.com.",
+    bonusValidationError: "Veuillez remplir tous les champs obligatoires.",
+    bonusInvalidEmail: "Veuillez saisir une adresse e-mail valide.",
+    bonusSentBtnText: "Envoyé avec succès ! ✓",
     bonusBtnLabel: "Télécharger le PDF de Coloriages",
     bonusBtnSublabel: "PDF haute résolution • Prêt à imprimer",
     bonusNote: "Fichier PDF sécurisé • À télécharger et imprimer à volonté",
@@ -1096,10 +1164,27 @@ const BONUS_I18N = {
   },
   es: {
     bonusMetaTitle: "Bonus para Colorear | Colección Vol. 1 - Las Aventuras de la Construcción",
-    bonusMetaDesc: "Descarga el PDF bonus exclusivo con láminas para colorear de Las Aventuras de la Construcción Volumen 1.",
+    bonusMetaDesc: "Recibe por correo electrónico el PDF bonus exclusivo con láminas para colorear de Las Aventuras de la Construcción Volumen 1.",
     bonusBadgeText: "Regalo especial para los lectores",
     bonusTitle: 'Las Aventuras de la Construcción — <span class="highlight">Colección Vol. 1</span>',
     bonusLead: "¡Gracias por elegir nuestra colección de cuentos! Como prometimos en el libro, aquí tienes tu regalo especial: los dibujos oficiales para imprimir y colorear con todos los vehículos de la obra.",
+    bonusFormBadge: "📩 Recibe el regalo por email",
+    bonusFormTitle: "Completa para recibir de inmediato el PDF para colorear",
+    bonusFormDesc: "Introduce tu nombre y correo electrónico: te enviaremos de inmediato el archivo PDF en alta resolución adjunto, listo para imprimir.",
+    bonusFirstNameLabel: "Nombre *",
+    bonusLastNameLabel: "Apellidos *",
+    bonusEmailLabel: "Tu Email *",
+    bonusFirstPlaceholder: "Ej. Carlos",
+    bonusLastPlaceholder: "Ej. García",
+    bonusEmailPlaceholder: "tuemail@ejemplo.es",
+    bonusSubmitBtnText: "Enviar los Dibujos a mi Email 🎨",
+    bonusPrivacyText: "Tus datos están protegidos. Solo recibirás el PDF solicitado y novedades de la colección. Cero spam.",
+    bonusSending: "Enviando correo con el archivo PDF adjunto...",
+    bonusSuccess: "¡Genial! 🎉 Hemos enviado el correo con el PDF adjunto a <strong>{email}</strong>.<br>Revisa tu bandeja de entrada (y la carpeta de spam por si acaso).",
+    bonusError: "Ocurrió un error al enviar. Por favor inténtalo de nuevo o escríbenos a csabooks.kids@gmail.com.",
+    bonusValidationError: "Por favor completa todos los campos requeridos.",
+    bonusInvalidEmail: "Por favor introduce un correo electrónico válido.",
+    bonusSentBtnText: "¡Enviado con éxito! ✓",
     bonusBtnLabel: "Descargar el PDF con Dibujos para Colorear",
     bonusBtnSublabel: "PDF en alta resolución • Listo para imprimir",
     bonusNote: "Archivo PDF seguro • Descarga e imprime todas las veces que quieras",
@@ -1113,10 +1198,27 @@ const BONUS_I18N = {
   },
   nl: {
     bonusMetaTitle: "Kleurplaten Bonus | Verhalenbundel Vol. 1 - Bouwplaatsavonturen",
-    bonusMetaDesc: "Download de exclusieve printbare kleurplaten-PDF van het boek Bouwplaatsavonturen Deel 1.",
+    bonusMetaDesc: "Ontvang de exclusieve printbare kleurplaten-PDF van het boek Bouwplaatsavonturen Deel 1 per e-mail.",
     bonusBadgeText: "Speciaal cadeau voor lezers",
     bonusTitle: 'Bouwplaatsavonturen — <span class="highlight">Verhalenbundel Vol. 1</span>',
     bonusLead: "Bedankt voor het kiezen van onze verhalenbundel! Zoals beloofd in het boek, is hier jouw speciale cadeau: de officiële printbare kleurplaten met alle vrolijke bouwvoertuigen.",
+    bonusFormBadge: "📩 Ontvang het cadeau per e-mail",
+    bonusFormTitle: "Vul in om direct de kleurplaten-PDF te ontvangen",
+    bonusFormDesc: "Vul je naam en e-mailadres in: we sturen je direct de hoge resolutie PDF als bijlage, klaar om te printen.",
+    bonusFirstNameLabel: "Voornaam *",
+    bonusLastNameLabel: "Achternaam *",
+    bonusEmailLabel: "Je E-mail *",
+    bonusFirstPlaceholder: "Bijv. Daan",
+    bonusLastPlaceholder: "Bijv. Jansen",
+    bonusEmailPlaceholder: "jouwemail@voorbeeld.nl",
+    bonusSubmitBtnText: "Stuur de Kleurplaten naar mijn E-mail 🎨",
+    bonusPrivacyText: "Je gegevens zijn veilig. Je ontvangt alleen de gevraagde PDF en nieuws. Geen spam.",
+    bonusSending: "E-mail met de PDF-bijlage wordt verzonden...",
+    bonusSuccess: "Geweldig! 🎉 We hebben de e-mail met de PDF-bijlage verstuurd naar <strong>{email}</strong>.<br>Controleer je inbox (en eventueel je spambox).",
+    bonusError: "Er is een fout opgetreden bij het verzenden. Probeer het opnieuw of mail naar csabooks.kids@gmail.com.",
+    bonusValidationError: "Vul alle verplichte velden in.",
+    bonusInvalidEmail: "Voer een geldig e-mailadres in.",
+    bonusSentBtnText: "Succesvol verzonden! ✓",
     bonusBtnLabel: "Download de Kleurplaten PDF",
     bonusBtnSublabel: "Hoge resolutie PDF • Klaar om te printen",
     bonusNote: "Veilig PDF-bestand • Download en print zo vaak als je wilt",
@@ -1130,10 +1232,27 @@ const BONUS_I18N = {
   },
   pl: {
     bonusMetaTitle: "Bonusowe Kolorowanki | Zbiór Opowiadań Vol. 1 - Przygody na Placu Budowy",
-    bonusMetaDesc: "Pobierz ekskluzywny plik PDF z kolorowankami do wydrukowania z książki Przygody na Placu Budowy Tom 1.",
+    bonusMetaDesc: "Odbierz ekskluzywny plik PDF z kolorowankami do wydrukowania z książki Przygody na Placu Budowy Tom 1 przez e-mail.",
     bonusBadgeText: "Specjalny prezent dla czytelników",
     bonusTitle: 'Przygody na Placu Budowy — <span class="highlight">Zbiór Opowiadań Vol. 1</span>',
     bonusLead: "Dziękujemy za wybranie naszego zbioru opowiadań! Tak jak obiecaliśmy w książce, oto Twój wyjątkowy prezent: oficjalne kolorowanki do wydrukowania ze wszystkimi wspaniałymi pojazdami budowlanymi.",
+    bonusFormBadge: "📩 Odbierz prezent e-mailem",
+    bonusFormTitle: "Wypełnij formularz, aby natychmiast otrzymać kolorowanki w PDF",
+    bonusFormDesc: "Wpisz swoje imię i adres e-mail: natychmiast wyślemy Ci plik PDF w wysokiej rozdzielczości w załączniku, gotowy do druku.",
+    bonusFirstNameLabel: "Imię *",
+    bonusLastNameLabel: "Nazwisko *",
+    bonusEmailLabel: "Twój E-mail *",
+    bonusFirstPlaceholder: "Np. Piotr",
+    bonusLastPlaceholder: "Np. Nowak",
+    bonusEmailPlaceholder: "twojemail@przyklad.pl",
+    bonusSubmitBtnText: "Wyślij Kolorowanki na Mój E-mail 🎨",
+    bonusPrivacyText: "Twoje dane są bezpieczne. Otrzymasz tylko zamówiony plik PDF i aktualności. Zero spamu.",
+    bonusSending: "Wysyłanie wiadomości e-mail z załącznikiem PDF...",
+    bonusSuccess: "Wspaniale! 🎉 Wysłaliśmy wiadomość z załączonym plikiem PDF na adres <strong>{email}</strong>.<br>Sprawdź swoją skrzynkę odbiorczą (w tym folder Spam).",
+    bonusError: "Wystąpił błąd podczas wysyłania. Spróbuj ponownie lub napisz do nas na csabooks.kids@gmail.com.",
+    bonusValidationError: "Proszę wypełnić wszystkie wymagane pola.",
+    bonusInvalidEmail: "Wprowadź prawidłowy adres e-mail.",
+    bonusSentBtnText: "Wysłano pomyślnie! ✓",
     bonusBtnLabel: "Pobierz PDF z Kolorowankami",
     bonusBtnSublabel: "PDF w wysokiej rozdzielczości • Gotowy do druku",
     bonusNote: "Bezpieczny plik PDF • Pobieraj i drukuj kiedy tylko chcesz",
@@ -1147,10 +1266,27 @@ const BONUS_I18N = {
   },
   sv: {
     bonusMetaTitle: "Målarbonus | Berättelsesamling Vol. 1 - Byggarbetsplatsens Äventyr",
-    bonusMetaDesc: "Ladda ner den exklusiva PDF:en med målarbilder från boken Byggarbetsplatsens Äventyr Del 1.",
+    bonusMetaDesc: "Få den exklusiva PDF:en med målarbilder från boken Byggarbetsplatsens Äventyr Del 1 via e-post.",
     bonusBadgeText: "Speciell gåva till läsarna",
     bonusTitle: 'Byggarbetsplatsens Äventyr — <span class="highlight">Samlingsvolym 1</span>',
     bonusLead: "Tack för att du valde vår berättelsesamling! Som utlovat i boken är här din speciella gåva: de officiella målarbilderna att skriva ut med alla vännerna på byggarbetsplatsen.",
+    bonusFormBadge: "📩 Få gåvan via e-post",
+    bonusFormTitle: "Fyll i för att få målarbilderna som PDF direkt",
+    bonusFormDesc: "Ange ditt namn och din e-post: vi skickar genast den högupplösta PDF-filen som bilaga, klar att skriva ut.",
+    bonusFirstNameLabel: "Förnamn *",
+    bonusLastNameLabel: "Efternamn *",
+    bonusEmailLabel: "Din E-post *",
+    bonusFirstPlaceholder: "T.ex. Erik",
+    bonusLastPlaceholder: "T.ex. Johansson",
+    bonusEmailPlaceholder: "dinepost@exempel.se",
+    bonusSubmitBtnText: "Skicka Målarbilderna till Min E-post 🎨",
+    bonusPrivacyText: "Dina uppgifter är säkra. Du får bara den efterfrågade PDF-filen och nyheter. Ingen spam.",
+    bonusSending: "Skickar e-post med den bifogade PDF-filen...",
+    bonusSuccess: "Toppen! 🎉 Vi har skickat mejlet med bifogad PDF till <strong>{email}</strong>.<br>Kolla din inkorg (och skräpposten om du inte hittar det).",
+    bonusError: "Ett fel uppstod vid sändning. Försök igen eller kontakta oss på csabooks.kids@gmail.com.",
+    bonusValidationError: "Vänligen fyll i alla obligatoriska fält.",
+    bonusInvalidEmail: "Ange en giltig e-postadress.",
+    bonusSentBtnText: "Skickat! ✓",
     bonusBtnLabel: "Ladda ner PDF med Målarbilder",
     bonusBtnSublabel: "Högupplöst PDF • Klar att skriva ut",
     bonusNote: "Säker PDF-fil • Ladda ner och skriv ut när du vill",
@@ -1164,10 +1300,27 @@ const BONUS_I18N = {
   },
   ja: {
     bonusMetaTitle: "読者限定ぬりえ特典 | おはなし集 第1巻 - 工事現場の冒険",
-    bonusMetaDesc: "『工事現場の冒険 おはなし集 第1巻』の読者限定プリント用ぬりえPDFをダウンロード。",
+    bonusMetaDesc: "『工事現場の冒険 おはなし集 第1巻』の読者限定プリント用ぬりえPDFをメールでお届け。",
     bonusBadgeText: "読者限定の特別プレゼント",
     bonusTitle: '工事現場の冒険 — <span class="highlight">おはなし集 第1巻</span>',
     bonusLead: "おはなし集をお手に取っていただき、ありがとうございます！ 本の中で約束したとおり、工事現場で活躍する仲間たちを印刷して塗れる公式ぬりえをプレゼントします。",
+    bonusFormBadge: "📩 メールでプレゼントを受け取る",
+    bonusFormTitle: "ぬりえPDFをメールで受け取る",
+    bonusFormDesc: "お名前とメールアドレスをご入力ください。印刷してすぐに遊べる高解像度ぬりえPDFを添付してお送りします。",
+    bonusFirstNameLabel: "名 *",
+    bonusLastNameLabel: "姓 *",
+    bonusEmailLabel: "メールアドレス *",
+    bonusFirstPlaceholder: "例：太郎",
+    bonusLastPlaceholder: "例：山田",
+    bonusEmailPlaceholder: "yourname@example.jp",
+    bonusSubmitBtnText: "ぬりえをメールで受け取る 🎨",
+    bonusPrivacyText: "ご入力いただいた情報は安全に管理されます。ご請求のPDFおよびシリーズの最新情報のみをお届けします。スパムは一切ありません。",
+    bonusSending: "ぬりえPDFを添付してメールを送信中...",
+    bonusSuccess: "送信完了しました！ 🎉 <strong>{email}</strong> 宛てにぬりえPDFを添付したメールをお送りしました。<br>受信トレイをご確認ください（届かない場合は迷惑メールフォルダもご確認ください）。",
+    bonusError: "送信中にエラーが発生しました。しばらくしてからもう一度お試しいただくか、csabooks.kids@gmail.com までご連絡ください。",
+    bonusValidationError: "すべての必須項目を入力してください。",
+    bonusInvalidEmail: "有効なメールアドレスを入力してください。",
+    bonusSentBtnText: "送信が完了しました！ ✓",
     bonusBtnLabel: "ぬりえPDFをダウンロード",
     bonusBtnSublabel: "高解像度PDF • すぐに印刷して遊べます",
     bonusNote: "安心のPDFファイル • いつでも何度でも印刷できます",
@@ -2541,6 +2694,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSampleModalEvents();
   initStorytimeEvents();
   initStorytimeSlider();
+  initBonusFormEvents();
 });
 
 function initStorytimeEvents() {
@@ -2549,6 +2703,118 @@ function initStorytimeEvents() {
     if (unlinked) {
       e.preventDefault();
       e.stopPropagation();
+    }
+  });
+}
+
+function initBonusFormEvents() {
+  const form = document.getElementById('bonus-email-form');
+  if (!form) return;
+
+  const btnSubmit = document.getElementById('bonus-submit-btn');
+  const btnText = document.getElementById('bonus-submit-btn-text');
+  const statusBox = document.getElementById('bonus-form-status');
+  const firstNameInput = document.getElementById('bonus-first-name');
+  const lastNameInput = document.getElementById('bonus-last-name');
+  const emailInput = document.getElementById('bonus-email');
+  const honeypotInput = document.getElementById('bonus-field-website');
+
+  function showStatus(type, htmlContent) {
+    if (!statusBox) return;
+    statusBox.className = `bonus-form-status ${type}`;
+    statusBox.innerHTML = htmlContent;
+    statusBox.style.display = 'block';
+  }
+
+  function getTranslation(key, fallback) {
+    if (typeof I18N !== 'undefined' && I18N[currentLanguage] && I18N[currentLanguage][key]) {
+      return I18N[currentLanguage][key];
+    }
+    return fallback;
+  }
+
+  function safeEscape(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const firstName = (firstNameInput ? firstNameInput.value : '').trim();
+    const lastName = (lastNameInput ? lastNameInput.value : '').trim();
+    const email = (emailInput ? emailInput.value : '').trim().toLowerCase();
+    const honeypot = (honeypotInput ? honeypotInput.value : '').trim();
+
+    if (!firstName || !lastName || !email) {
+      showStatus('error', getTranslation('bonusValidationError', 'Compila tutti i campi obbligatori per ricevere il regalo.'));
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (!emailRegex.test(email)) {
+      showStatus('error', getTranslation('bonusInvalidEmail', 'Inserisci un indirizzo email valido.'));
+      return;
+    }
+
+    // Loading State
+    btnSubmit.disabled = true;
+    const originalBtnHtml = btnText ? btnText.innerHTML : 'Invia i Disegni alla mia Email 🎨';
+    if (btnText) {
+      btnText.textContent = getTranslation('bonusSending', 'Invio in corso...');
+    }
+    showStatus('loading', `<span class="bonus-spinner"></span> <span>${getTranslation('bonusSending', 'Invio in corso...')}</span>`);
+
+    let backendUrl = window.CSA_BACKEND_URL;
+    if (!backendUrl) {
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        backendUrl = '/api/send-bonus';
+      } else {
+        backendUrl = 'https://csabooks-kids.vercel.app/api/send-bonus';
+      }
+    }
+
+    try {
+      const response = await fetch(backendUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          firstName,
+          lastName,
+          email,
+          website: honeypot,
+          lang: currentLanguage || 'it'
+        })
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (response.ok && data.success) {
+        let successMsg = getTranslation('bonusSuccess', 'Fantastico! 🎉 Abbiamo inviato l\'email con il PDF allegato a <strong>{email}</strong>.<br>Controlla la tua casella di posta (e anche la cartella Spam o Promozioni se non la vedi subito).');
+        successMsg = successMsg.replace('{email}', safeEscape(email));
+        showStatus('success', successMsg);
+        form.reset();
+        if (btnText) {
+          btnText.textContent = getTranslation('bonusSentBtnText', 'Inviato con Successo! ✓');
+        }
+        btnSubmit.disabled = true;
+      } else {
+        const errorMsg = data.error || getTranslation('bonusError', 'Si è verificato un errore durante l\'invio. Riprova tra qualche istante o scrivici a csabooks.kids@gmail.com.');
+        showStatus('error', errorMsg);
+        btnSubmit.disabled = false;
+        if (btnText) btnText.innerHTML = originalBtnHtml;
+      }
+    } catch (err) {
+      console.error('[Bonus Form Dispatch Error]:', err);
+      showStatus('error', getTranslation('bonusError', 'Si è verificato un errore di connessione. Riprova tra qualche istante o scrivici a csabooks.kids@gmail.com.'));
+      btnSubmit.disabled = false;
+      if (btnText) btnText.innerHTML = originalBtnHtml;
     }
   });
 }
@@ -3070,6 +3336,30 @@ function applyLanguage(lang) {
       bonusTitleEl.innerHTML = strings.bonusTitle;
     }
     setText('bonus-lead', strings.bonusLead);
+
+    // Form elementi e campi
+    setText('bonus-form-badge', strings.bonusFormBadge || '📩 Ricevi il regalo via email');
+    setText('bonus-form-title', strings.bonusFormTitle || 'Compila per ricevere subito il PDF con i disegni');
+    setText('bonus-form-desc', strings.bonusFormDesc || 'Inserisci il tuo nome e la tua email: ti invieremo immediatamente il file PDF ad alta risoluzione in allegato, pronto per essere stampato.');
+    setText('bonus-first-name-label', strings.bonusFirstNameLabel || 'Nome *');
+    setText('bonus-last-name-label', strings.bonusLastNameLabel || 'Cognome *');
+    setText('bonus-email-label', strings.bonusEmailLabel || 'La tua Email *');
+    setText('bonus-submit-btn-text', strings.bonusSubmitBtnText || 'Invia i Disegni alla mia Email 🎨');
+    setText('bonus-privacy-text', strings.bonusPrivacyText || 'I tuoi dati sono al sicuro. Riceverai solo il file PDF richiesto e le novità della collana. Zero spam.');
+
+    const firstInput = document.getElementById('bonus-first-name');
+    if (firstInput && strings.bonusFirstPlaceholder) {
+      firstInput.placeholder = strings.bonusFirstPlaceholder;
+    }
+    const lastInput = document.getElementById('bonus-last-name');
+    if (lastInput && strings.bonusLastPlaceholder) {
+      lastInput.placeholder = strings.bonusLastPlaceholder;
+    }
+    const emailInput = document.getElementById('bonus-email');
+    if (emailInput && strings.bonusEmailPlaceholder) {
+      emailInput.placeholder = strings.bonusEmailPlaceholder;
+    }
+
     setText('bonus-btn-label', strings.bonusBtnLabel || 'Scarica il PDF con i Disegni da Colorare');
     setText('bonus-btn-sublabel', strings.bonusBtnSublabel || 'PDF ad alta risoluzione • Pronto per la stampa');
     setText('bonus-note-text', strings.bonusNote || 'File PDF sicuro • Scaricabile e stampabile ogni volta che desideri');

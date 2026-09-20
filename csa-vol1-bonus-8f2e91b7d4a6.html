@@ -254,36 +254,89 @@
             Grazie per aver scelto la nostra raccolta di storie! Come promesso nel libro, ecco il tuo regalo speciale: i disegni ufficiali da stampare e colorare con tutti i simpatici veicoli del cantiere.
           </p>
 
-          <!-- Box Download CTA -->
-          <div class="bonus-cta-box">
-            <a 
-              href="assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/Bonus.CSA.Vol.1.pdf" 
-              download="Bonus-CSA-Volume1-Disegni-da-Colorare.pdf" 
-              class="btn-bonus-download" 
-              id="bonus-download-btn"
-              aria-label="Scarica il PDF con i disegni da colorare"
-            >
-              <div class="btn-bonus-icon-wrapper">
-                <svg class="btn-bonus-icon" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" stroke-linecap="round" stroke-linejoin="round"/>
-                  <polyline points="7 10 12 15 17 10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <line x1="12" y1="15" x2="12" y2="3" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="btn-bonus-text-group">
-                <span class="btn-bonus-label" id="bonus-btn-label">Scarica il PDF con i Disegni da Colorare</span>
-                <span class="btn-bonus-sublabel" id="bonus-btn-sublabel">PDF ad alta risoluzione • Pronto per la stampa</span>
-              </div>
-            </a>
-
-            <div class="bonus-note" id="bonus-note">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
-              <span id="bonus-note-text">File PDF sicuro • Scaricabile e stampabile ogni volta che desideri</span>
+          <!-- Box Form Ricevi Bonus via Email -->
+          <div class="bonus-form-card">
+            <div class="bonus-form-header">
+              <span class="bonus-form-badge" id="bonus-form-badge">📩 Ricevi il regalo via email</span>
+              <h2 class="bonus-form-title" id="bonus-form-title">Compila per ricevere subito il PDF con i disegni</h2>
+              <p class="bonus-form-desc" id="bonus-form-desc">Inserisci il tuo nome e la tua email: ti invieremo immediatamente il file PDF ad alta risoluzione in allegato, pronto per essere stampato.</p>
             </div>
+
+            <form id="bonus-email-form" class="bonus-form" novalidate>
+              <!-- Campo invisibile anti-spam (Honeypot) -->
+              <div class="bonus-form-honeypot" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden;">
+                <label for="bonus-field-website">Non compilare questo campo</label>
+                <input type="text" name="website" id="bonus-field-website" tabindex="-1" autocomplete="off" />
+              </div>
+
+              <div class="bonus-form-row">
+                <div class="bonus-field-group">
+                  <label for="bonus-first-name" class="bonus-field-label" id="bonus-first-name-label">Nome *</label>
+                  <input 
+                    type="text" 
+                    id="bonus-first-name" 
+                    name="firstName" 
+                    class="bonus-field-input" 
+                    required 
+                    placeholder="Es. Marco" 
+                    autocomplete="given-name" 
+                  />
+                </div>
+
+                <div class="bonus-field-group">
+                  <label for="bonus-last-name" class="bonus-field-label" id="bonus-last-name-label">Cognome *</label>
+                  <input 
+                    type="text" 
+                    id="bonus-last-name" 
+                    name="lastName" 
+                    class="bonus-field-input" 
+                    required 
+                    placeholder="Es. Rossi" 
+                    autocomplete="family-name" 
+                  />
+                </div>
+              </div>
+
+              <div class="bonus-field-group">
+                <label for="bonus-email" class="bonus-field-label" id="bonus-email-label">La tua Email *</label>
+                <div class="bonus-input-icon-wrapper">
+                  <svg class="bonus-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                  <input 
+                    type="email" 
+                    id="bonus-email" 
+                    name="email" 
+                    class="bonus-field-input has-icon" 
+                    required 
+                    placeholder="iltuoindirizzo@email.com" 
+                    autocomplete="email" 
+                  />
+                </div>
+              </div>
+
+              <button type="submit" class="btn-bonus-submit" id="bonus-submit-btn">
+                <span class="btn-bonus-submit-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                </span>
+                <span class="btn-bonus-submit-text" id="bonus-submit-btn-text">Invia i Disegni alla mia Email 🎨</span>
+              </button>
+
+              <!-- Feedback / Stati di Caricamento e Risultato -->
+              <div id="bonus-form-status" class="bonus-form-status" style="display: none;" role="status" aria-live="polite"></div>
+
+              <div class="bonus-privacy-note">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span id="bonus-privacy-text">I tuoi dati sono al sicuro. Riceverai solo il file PDF richiesto e le novità della collana. Zero spam.</span>
+              </div>
+            </form>
           </div>
 
           <!-- Griglia Caratteristiche / Consigli per la Stampa -->
