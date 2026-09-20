@@ -4790,7 +4790,7 @@ button {
   display: grid;
   grid-template-columns: 380px 1fr;
   gap: 3.5rem;
-  align-items: start;
+  align-items: flex-start !important;
   max-width: 1120px;
   margin: 0 auto;
 }
@@ -4798,7 +4798,10 @@ button {
 .bonus-cover-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-start !important;
+  align-self: flex-start !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 .bonus-cover-card {
@@ -4811,6 +4814,7 @@ button {
   background-color: #FFFFFF;
   max-width: 380px;
   width: 100%;
+  margin-top: 0 !important;
 }
 
 .bonus-cover-card:hover {
@@ -4829,6 +4833,9 @@ button {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  align-self: flex-start !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 .bonus-badge {
