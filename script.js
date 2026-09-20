@@ -2768,51 +2768,63 @@ function initBonusFormEvents() {
     }
     showStatus('loading', `<span class="bonus-spinner"></span> <span>${getTranslation('bonusSending', 'Invio in corso...')}</span>`);
 
-    let backendUrl = window.CSA_BACKEND_URL;
-    if (!backendUrl) {
-      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-        backendUrl = '/api/send-bonus';
-      } else {
-        backendUrl = 'https://csabooks-kids.vercel.app/api/send-bonus';
+    const candidateUrls = window.CSA_BACKEND_URL
+      ? [window.CSA_BACKEND_URL]
+      : (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+        ? ['/api/send-bonus']
+        : [
+            'https://csabooks-kids.vercel.app/api/send-bonus',
+            'https://csabooks-kids-saluccimarco-3318s-projects.vercel.app/api/send-bonus'
+          ];
+
+    let success = false;
+    let lastError = null;
+
+    for (const endpoint of candidateUrls) {
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            email,
+            website: honeypot,
+            lang: currentLanguage || 'it'
+          })
+        });
+
+        // Se l'endpoint risponde con 404 DEPLOYMENT_NOT_FOUND, prova il successivo
+        if (response.status === 404 && candidateUrls.length > 1) {
+          continue;
+        }
+
+        const data = await response.json().catch(() => ({}));
+
+        if (response.ok && data.success) {
+          let successMsg = getTranslation('bonusSuccess', 'Fantastico! 🎉 Abbiamo inviato l\'email con il PDF allegato a <strong>{email}</strong>.<br>Controlla la tua casella di posta (e anche la cartella Spam o Promozioni se non la vedi subito).');
+          successMsg = successMsg.replace('{email}', safeEscape(email));
+          showStatus('success', successMsg);
+          form.reset();
+          if (btnText) {
+            btnText.textContent = getTranslation('bonusSentBtnText', 'Inviato con Successo! ✓');
+          }
+          btnSubmit.disabled = true;
+          success = true;
+          break;
+        } else {
+          lastError = data.error || getTranslation('bonusError', 'Si è verificato un errore durante l\'invio. Riprova tra qualche istante o scrivici a csabooks.kids@gmail.com.');
+        }
+      } catch (err) {
+        lastError = getTranslation('bonusError', 'Si è verificato un errore di connessione. Riprova tra qualche istante o scrivici a csabooks.kids@gmail.com.');
       }
     }
 
-    try {
-      const response = await fetch(backendUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          firstName,
-          lastName,
-          email,
-          website: honeypot,
-          lang: currentLanguage || 'it'
-        })
-      });
-
-      const data = await response.json().catch(() => ({}));
-
-      if (response.ok && data.success) {
-        let successMsg = getTranslation('bonusSuccess', 'Fantastico! 🎉 Abbiamo inviato l\'email con il PDF allegato a <strong>{email}</strong>.<br>Controlla la tua casella di posta (e anche la cartella Spam o Promozioni se non la vedi subito).');
-        successMsg = successMsg.replace('{email}', safeEscape(email));
-        showStatus('success', successMsg);
-        form.reset();
-        if (btnText) {
-          btnText.textContent = getTranslation('bonusSentBtnText', 'Inviato con Successo! ✓');
-        }
-        btnSubmit.disabled = true;
-      } else {
-        const errorMsg = data.error || getTranslation('bonusError', 'Si è verificato un errore durante l\'invio. Riprova tra qualche istante o scrivici a csabooks.kids@gmail.com.');
-        showStatus('error', errorMsg);
-        btnSubmit.disabled = false;
-        if (btnText) btnText.innerHTML = originalBtnHtml;
-      }
-    } catch (err) {
-      console.error('[Bonus Form Dispatch Error]:', err);
-      showStatus('error', getTranslation('bonusError', 'Si è verificato un errore di connessione. Riprova tra qualche istante o scrivici a csabooks.kids@gmail.com.'));
+    if (!success) {
+      showStatus('error', lastError || getTranslation('bonusError', 'Si è verificato un errore durante l\'invio. Riprova tra qualche istante o scrivici a csabooks.kids@gmail.com.'));
       btnSubmit.disabled = false;
       if (btnText) btnText.innerHTML = originalBtnHtml;
     }
