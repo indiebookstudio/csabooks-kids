@@ -85,7 +85,10 @@ Dopo aver aggiunto o eliminato un'immagine, basta fare `git commit` e `git push`
 > I seguenti link sono **stampati fisicamente in formato QR Code all'interno dei libri cartacei in commercio**.
 > **NON DEVONO MAI ESSERE RINOMINATI, SPOSTATI O CANCELLATI PER NESSUN MOTIVO AL MONDO**:
 > 1. `https://csabookskids.com/csa-vol1-bonus-8f2e91b7d4a6` (File: `csa-vol1-bonus-8f2e91b7d4a6.html`) — Bonus Disegni da Colorare (Raccolta Vol. 1)
-> 2. `https://csabookskids.com/csa-vol1-ep1-ita-7b3f91a8d2c4` (File: `csa-vol1-ep1-ita-7b3f91a8d2c4.html`) — Episodio 1 Audio & Video Read-Aloud
+> 2. `https://csabookskids.com/csa-vol1-ep1-ita-7b3f91a8d2c4` (File: `csa-vol1-ep1-ita-7b3f91a8d2c4.html`) — Storia 1: Benny l'escavatore (Audio & Video)
+> 3. `https://csabookskids.com/csa-vol1-ep2-ita-4d9e16a2c8f1` (File: `csa-vol1-ep2-ita-4d9e16a2c8f1.html`) — Storia 2: Rudy la ruspa (Audio & Video)
+> 4. `https://csabookskids.com/csa-vol1-ep3-ita-9a5c83e1f7d2` (File: `csa-vol1-ep3-ita-9a5c83e1f7d2.html`) — Storia 3: Leo la gru (Audio & Video)
+> 5. `https://csabookskids.com/csa-vol1-ep4-ita-6e2b94f0a3c5` (File: `csa-vol1-ep4-ita-6e2b94f0a3c5.html`) — Storia 4: Bruno il camion (Audio & Video)
 > 
 > Consulta [PERMANENT_QR_ROUTES.md](PERMANENT_QR_ROUTES.md) per il registro completo delle protezioni attive (doppio fallback file/directory, intercettazione automatica in `404.html`, rewrite in `vercel.json` e test automatico `test-qr-routes.js`).
 

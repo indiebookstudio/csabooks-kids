@@ -26,8 +26,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Stylesheet con cache-buster -->
+  <link rel="stylesheet" href="style.css?v=20260920-v2" />
 </head>
 <body>
 
@@ -215,19 +215,42 @@
     <div class="container">
       <div class="episode-hero-grid">
         
-        <!-- Colonna Sinistra: Copertina dell'Episodio -->
+        <!-- Colonna Sinistra: Copertina del Libro + Copertina dell'Episodio a Fianco -->
         <div class="episode-cover-container">
-          <div class="episode-cover-card">
-            <img 
-              src="assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/01.Cover.png" 
-              alt="Copertina della storia: Benny l'escavatore e la collina che cambiava forma" 
-              class="episode-cover-img"
-              id="episode-cover-img"
-              width="1000" 
-              height="1000" 
-              fetchpriority="high"
-              loading="eager"
-            />
+          <div class="episode-covers-wrapper">
+            <!-- Cover 1: Libro Raccolta Vol. 1 -->
+            <div class="episode-cover-card-item">
+              <div class="episode-cover-tag" id="episode-book-tag">Libro Raccolta</div>
+              <div class="episode-cover-card">
+                <img 
+                  src="assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png" 
+                  alt="Copertina del libro Raccolta Volume 1 - Le Avventure del Cantiere" 
+                  class="episode-cover-img"
+                  id="episode-book-cover-img"
+                  width="1545" 
+                  height="2000" 
+                  fetchpriority="high"
+                  loading="eager"
+                />
+              </div>
+            </div>
+
+            <!-- Cover 2: Episodio 1 -->
+            <div class="episode-cover-card-item">
+              <div class="episode-cover-tag episode-cover-tag-highlight" id="episode-story-tag">Storia 1</div>
+              <div class="episode-cover-card">
+                <img 
+                  src="assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/01.Cover.png" 
+                  alt="Copertina della storia: Benny l'escavatore e la collina che cambiava forma" 
+                  class="episode-cover-img"
+                  id="episode-story-cover-img"
+                  width="1000" 
+                  height="1000" 
+                  fetchpriority="high"
+                  loading="eager"
+                />
+              </div>
+            </div>
           </div>
         </div>
 

@@ -18,7 +18,10 @@
 | Elemento Libro | File HTML Principale | URL Pubblico Stampato nei QR | Fallback Diretto | Note |
 | :--- | :--- | :--- | :--- | :--- |
 | **Bonus Disegni da Colorare (Raccolta Vol. 1)** | `csa-vol1-bonus-8f2e91b7d4a6.html` | `https://csabookskids.com/csa-vol1-bonus-8f2e91b7d4a6` | `csa-vol1-bonus-8f2e91b7d4a6/index.html` | Include form raccolta dati con invio email PDF via Brevo API v3. |
-| **Episodio 1: Benny e la Collina (Audio + Video ITA)** | `csa-vol1-ep1-ita-7b3f91a8d2c4.html` | `https://csabookskids.com/csa-vol1-ep1-ita-7b3f91a8d2c4` | `csa-vol1-ep1-ita-7b3f91a8d2c4/index.html` | Audio e video read-aloud integrati. |
+| **Storia 1: Benny e la Collina (Audio + Video ITA)** | `csa-vol1-ep1-ita-7b3f91a8d2c4.html` | `https://csabookskids.com/csa-vol1-ep1-ita-7b3f91a8d2c4` | `csa-vol1-ep1-ita-7b3f91a8d2c4/index.html` | Audio e video read-aloud + doppia cover affiancata. |
+| **Storia 2: Rudy e la Spiaggia (Audio + Video ITA)** | `csa-vol1-ep2-ita-4d9e16a2c8f1.html` | `https://csabookskids.com/csa-vol1-ep2-ita-4d9e16a2c8f1` | `csa-vol1-ep2-ita-4d9e16a2c8f1/index.html` | Audio e video read-aloud + doppia cover affiancata. |
+| **Storia 3: Leo e la Montagna (Audio + Video ITA)** | `csa-vol1-ep3-ita-9a5c83e1f7d2.html` | `https://csabookskids.com/csa-vol1-ep3-ita-9a5c83e1f7d2` | `csa-vol1-ep3-ita-9a5c83e1f7d2/index.html` | Audio e video read-aloud + doppia cover affiancata. |
+| **Storia 4: Bruno e le Papere (Audio + Video ITA)** | `csa-vol1-ep4-ita-6e2b94f0a3c5.html` | `https://csabookskids.com/csa-vol1-ep4-ita-6e2b94f0a3c5` | `csa-vol1-ep4-ita-6e2b94f0a3c5/index.html` | Audio e video read-aloud + doppia cover affiancata. |
 
 ---
 

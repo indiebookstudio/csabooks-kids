@@ -5283,10 +5283,10 @@ button {
 
 .episode-hero-grid {
   display: grid;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 480px 1fr;
   gap: 3.5rem;
   align-items: start;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -5296,24 +5296,58 @@ button {
   align-items: center;
   gap: 1.25rem;
   position: sticky;
-  top: 120px;
+  top: 100px;
+  width: 100%;
+}
+
+.episode-covers-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.episode-cover-card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  width: 100%;
+}
+
+.episode-cover-tag {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--c-text-secondary);
+  background: #F1EBE4;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-pill);
+  text-align: center;
+  align-self: center;
+}
+
+.episode-cover-tag-highlight {
+  background: var(--c-primary-soft);
+  color: var(--c-primary);
 }
 
 .episode-cover-card {
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(21, 29, 42, 0.16), 0 4px 12px rgba(21, 29, 42, 0.08);
-  border: 4px solid #FFFFFF;
+  box-shadow: 0 16px 36px rgba(21, 29, 42, 0.14), 0 3px 10px rgba(21, 29, 42, 0.06);
+  border: 3.5px solid #FFFFFF;
   background-color: #FFFFFF;
-  max-width: 360px;
   width: 100%;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
 .episode-cover-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 24px 50px rgba(240, 90, 40, 0.2), 0 8px 18px rgba(21, 29, 42, 0.08);
+  box-shadow: 0 22px 46px rgba(240, 90, 40, 0.22), 0 6px 16px rgba(21, 29, 42, 0.08);
 }
 
 .episode-cover-img {
@@ -5615,6 +5649,8 @@ button {
 
   .episode-cover-container {
     position: static;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .episode-content-container {
@@ -5648,8 +5684,15 @@ button {
     padding: 2rem 0 3.5rem 0;
   }
 
-  .episode-cover-card {
-    max-width: 270px;
+  .episode-covers-wrapper {
+    gap: 0.75rem;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .episode-cover-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
   }
 
   .episode-media-actions {
