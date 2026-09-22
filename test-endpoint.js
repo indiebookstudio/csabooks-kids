@@ -70,6 +70,17 @@ async function runTests() {
     assert(res.status === 400, 'Invalid email format should return 400 Bad Request');
   }
 
+  console.log('\n--- 4b. Testing Consent Validation ---');
+  {
+    const req = new Request('http://localhost/api/send-bonus', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ firstName: 'Marco', lastName: 'Rossi', email: 'marco@example.com', consent: false })
+    });
+    const res = await handler(req);
+    assert(res.status === 400, 'False consent should return 400 Bad Request');
+  }
+
   console.log('\n--- 5. Testing Anti-Spam Honeypot ---');
   {
     const req = new Request('http://localhost/api/send-bonus', {

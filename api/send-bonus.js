@@ -292,12 +292,16 @@ export default async function handler(req) {
       return jsonResponse({ success: false, error: "Invalid JSON format." }, 400);
     }
 
-    const { firstName: rawFirst, lastName: rawLast, email: rawEmail, website: honeypot, lang: rawLang } = body || {};
+    const { firstName: rawFirst, lastName: rawLast, email: rawEmail, website: honeypot, lang: rawLang, consent: rawConsent } = body || {};
 
     // 6. Anti-Spam Honeypot: Silent acceptance if filled by a bot
     if (honeypot && String(honeypot).trim().length > 0) {
       console.warn(`[Anti-Spam] Honeypot triggered by IP: ${clientIp}`);
       return jsonResponse({ success: true, message: "Bonus request processed." }, 200);
+    }
+
+    if (rawConsent !== undefined && (rawConsent === false || rawConsent === 'false')) {
+      return jsonResponse({ success: false, error: "Consent is required." }, 400);
     }
 
     // 7. Input Validation & Sanitization

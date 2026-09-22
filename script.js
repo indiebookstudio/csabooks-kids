@@ -1043,6 +1043,8 @@ const BONUS_I18N = {
     bonusEmailPlaceholder: "iltuoindirizzo@email.com",
     bonusSubmitBtnText: "Invia i Disegni alla mia Email 🎨",
     bonusPrivacyText: "I tuoi dati sono al sicuro. Riceverai solo il file PDF richiesto e le novità della collana. Zero spam.",
+    bonusConsentText: "Acconsento a ricevere aggiornamenti via email sulle future uscite e novità della collana CSA Books 4 Kids.",
+    bonusConsentError: "È necessario spuntare la casella di consenso per ricevere il regalo e i futuri aggiornamenti della collana.",
     bonusSending: "Invio dell'email in corso con il PDF allegato...",
     bonusSuccess: "Fantastico! 🎉 Abbiamo inviato l'email con il PDF allegato a <strong>{email}</strong>.<br>Controlla la tua casella di posta (e anche la cartella Spam o Promozioni se non la vedi subito).",
     bonusError: "Si è verificato un errore durante l'invio. Riprova tra qualche istante o scrivici a csabooks.kids@gmail.com.",
@@ -1077,6 +1079,8 @@ const BONUS_I18N = {
     bonusEmailPlaceholder: "youremail@example.com",
     bonusSubmitBtnText: "Send Coloring Pages to My Email 🎨",
     bonusPrivacyText: "Your information is safe. You will only receive the requested PDF and book series news. Zero spam.",
+    bonusConsentText: "I agree to receive email updates and news about upcoming releases in the CSA Books 4 Kids series.",
+    bonusConsentError: "Please check the consent box to receive your gift and future series updates.",
     bonusSending: "Sending email with the attached PDF...",
     bonusSuccess: "Awesome! 🎉 We sent the email with the attached PDF to <strong>{email}</strong>.<br>Check your inbox (and check your Spam or Promotions folder just in case).",
     bonusError: "An error occurred while sending. Please try again in a moment or contact us at csabooks.kids@gmail.com.",
@@ -1111,6 +1115,8 @@ const BONUS_I18N = {
     bonusEmailPlaceholder: "deinemail@beispiel.de",
     bonusSubmitBtnText: "Ausmalbilder an meine E-Mail senden 🎨",
     bonusPrivacyText: "Deine Daten sind sicher. Du erhältst nur das angeforderte PDF und Neuigkeiten. Kein Spam.",
+    bonusConsentText: "Ich bin damit einverstanden, E-Mail-Updates zu Neuerscheinungen der Reihe CSA Books 4 Kids zu erhalten.",
+    bonusConsentError: "Bitte aktiviere das Kontrollkästchen, um das Geschenk und künftige Updates zu erhalten.",
     bonusSending: "E-Mail mit dem PDF-Anhang wird gesendet...",
     bonusSuccess: "Großartig! 🎉 Wir haben die E-Mail mit dem PDF-Anhang an <strong>{email}</strong> gesendet.<br>Prüfe deinen Posteingang (auch den Spam-Ordner).",
     bonusError: "Beim Senden ist ein Fehler aufgetreten. Bitte versuche es erneut oder schreibe an csabooks.kids@gmail.com.",
@@ -1145,6 +1151,8 @@ const BONUS_I18N = {
     bonusEmailPlaceholder: "votre.email@exemple.fr",
     bonusSubmitBtnText: "Envoyer les Coloriages à mon E-mail 🎨",
     bonusPrivacyText: "Vos données sont en sécurité. Vous ne recevrez que le PDF demandé et des nouvelles de la collection. Zéro spam.",
+    bonusConsentText: "J'accepte de recevoir par e-mail les actualités et prochaines parutions de la collection CSA Books 4 Kids.",
+    bonusConsentError: "Veuillez cocher la case de consentement pour recevoir votre cadeau et les futures parutions.",
     bonusSending: "Envoi de l'e-mail avec le PDF en pièce jointe...",
     bonusSuccess: "Formidable ! 🎉 Nous avons envoyé l'e-mail avec le PDF en pièce jointe à <strong>{email}</strong>.<br>Vérifiez votre boîte de réception (et vos spams si nécessaire).",
     bonusError: "Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter à csabooks.kids@gmail.com.",
@@ -1179,6 +1187,8 @@ const BONUS_I18N = {
     bonusEmailPlaceholder: "tuemail@ejemplo.es",
     bonusSubmitBtnText: "Enviar los Dibujos a mi Email 🎨",
     bonusPrivacyText: "Tus datos están protegidos. Solo recibirás el PDF solicitado y novedades de la colección. Cero spam.",
+    bonusConsentText: "Acepto recibir actualizaciones por correo electrónico sobre los próximos lanzamientos de la colección CSA Books 4 Kids.",
+    bonusConsentError: "Es necesario marcar la casilla de consentimiento para recibir el regalo y las novedades de la colección.",
     bonusSending: "Enviando correo con el archivo PDF adjunto...",
     bonusSuccess: "¡Genial! 🎉 Hemos enviado el correo con el PDF adjunto a <strong>{email}</strong>.<br>Revisa tu bandeja de entrada (y la carpeta de spam por si acaso).",
     bonusError: "Ocurrió un error al enviar. Por favor inténtalo de nuevo o escríbenos a csabooks.kids@gmail.com.",
@@ -1213,6 +1223,8 @@ const BONUS_I18N = {
     bonusEmailPlaceholder: "jouwemail@voorbeeld.nl",
     bonusSubmitBtnText: "Stuur de Kleurplaten naar mijn E-mail 🎨",
     bonusPrivacyText: "Je gegevens zijn veilig. Je ontvangt alleen de gevraagde PDF en nieuws. Geen spam.",
+    bonusConsentText: "Ik ga ermee akkoord updates per e-mail te ontvangen over nieuwe uitgaven van CSA Books 4 Kids.",
+    bonusConsentError: "Vink het vakje aan om het cadeau en toekomstige updates te ontvangen.",
     bonusSending: "E-mail met de PDF-bijlage wordt verzonden...",
     bonusSuccess: "Geweldig! 🎉 We hebben de e-mail met de PDF-bijlage verstuurd naar <strong>{email}</strong>.<br>Controleer je inbox (en eventueel je spambox).",
     bonusError: "Er is een fout opgetreden bij het verzenden. Probeer het opnieuw of mail naar csabooks.kids@gmail.com.",
@@ -1247,6 +1259,8 @@ const BONUS_I18N = {
     bonusEmailPlaceholder: "twojemail@przyklad.pl",
     bonusSubmitBtnText: "Wyślij Kolorowanki na Mój E-mail 🎨",
     bonusPrivacyText: "Twoje dane są bezpieczne. Otrzymasz tylko zamówiony plik PDF i aktualności. Zero spamu.",
+    bonusConsentText: "Wyrażam zgodę na otrzymywanie wiadomości e-mail o nowościach w serii CSA Books 4 Kids.",
+    bonusConsentError: "Zaznacz pole wyboru, aby odebrać prezent i otrzymywać informacje o nowych książkach.",
     bonusSending: "Wysyłanie wiadomości e-mail z załącznikiem PDF...",
     bonusSuccess: "Wspaniale! 🎉 Wysłaliśmy wiadomość z załączonym plikiem PDF na adres <strong>{email}</strong>.<br>Sprawdź swoją skrzynkę odbiorczą (w tym folder Spam).",
     bonusError: "Wystąpił błąd podczas wysyłania. Spróbuj ponownie lub napisz do nas na csabooks.kids@gmail.com.",
@@ -1281,6 +1295,8 @@ const BONUS_I18N = {
     bonusEmailPlaceholder: "dinepost@exempel.se",
     bonusSubmitBtnText: "Skicka Målarbilderna till Min E-post 🎨",
     bonusPrivacyText: "Dina uppgifter är säkra. Du får bara den efterfrågade PDF-filen och nyheter. Ingen spam.",
+    bonusConsentText: "Jag samtycker till att ta emot e-postuppdateringar om nya utgåvor i serien CSA Books 4 Kids.",
+    bonusConsentError: "Du måste markera rutan för att ta emot gåvan och framtida uppdateringar.",
     bonusSending: "Skickar e-post med den bifogade PDF-filen...",
     bonusSuccess: "Toppen! 🎉 Vi har skickat mejlet med bifogad PDF till <strong>{email}</strong>.<br>Kolla din inkorg (och skräpposten om du inte hittar det).",
     bonusError: "Ett fel uppstod vid sändning. Försök igen eller kontakta oss på csabooks.kids@gmail.com.",
@@ -1315,6 +1331,8 @@ const BONUS_I18N = {
     bonusEmailPlaceholder: "yourname@example.jp",
     bonusSubmitBtnText: "ぬりえをメールで受け取る 🎨",
     bonusPrivacyText: "ご入力いただいた情報は安全に管理されます。ご請求のPDFおよびシリーズの最新情報のみをお届けします。スパムは一切ありません。",
+    bonusConsentText: "CSA Books 4 Kids シリーズの新作情報や最新ニュースをメールで受け取ることに同意します。",
+    bonusConsentError: "プレゼントおよびシリーズの最新情報を受け取るには、チェックボックスにチェックを入れてください。",
     bonusSending: "ぬりえPDFを添付してメールを送信中...",
     bonusSuccess: "送信完了しました！ 🎉 <strong>{email}</strong> 宛てにぬりえPDFを添付したメールをお送りしました。<br>受信トレイをご確認ください（届かない場合は迷惑メールフォルダもご確認ください）。",
     bonusError: "送信中にエラーが発生しました。しばらくしてからもう一度お試しいただくか、csabooks.kids@gmail.com までご連絡ください。",
@@ -2717,7 +2735,17 @@ function initBonusFormEvents() {
   const firstNameInput = document.getElementById('bonus-first-name');
   const lastNameInput = document.getElementById('bonus-last-name');
   const emailInput = document.getElementById('bonus-email');
+  const consentInput = document.getElementById('bonus-consent');
+  const consentGroup = document.getElementById('bonus-consent-group');
   const honeypotInput = document.getElementById('bonus-field-website');
+
+  if (consentInput && consentGroup) {
+    consentInput.addEventListener('change', () => {
+      if (consentInput.checked) {
+        consentGroup.classList.remove('has-error');
+      }
+    });
+  }
 
   function showStatus(type, htmlContent) {
     if (!statusBox) return;
@@ -2760,6 +2788,15 @@ function initBonusFormEvents() {
       return;
     }
 
+    if (consentInput && !consentInput.checked) {
+      if (consentGroup) {
+        consentGroup.classList.add('has-error');
+      }
+      showStatus('error', getTranslation('bonusConsentError', 'È necessario spuntare la casella di consenso per ricevere il regalo e i futuri aggiornamenti della collana.'));
+      consentInput.focus();
+      return;
+    }
+
     // Loading State
     btnSubmit.disabled = true;
     const originalBtnHtml = btnText ? btnText.innerHTML : 'Invia i Disegni alla mia Email 🎨';
@@ -2771,7 +2808,7 @@ function initBonusFormEvents() {
     const candidateUrls = window.CSA_BACKEND_URL
       ? [window.CSA_BACKEND_URL]
       : (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-        ? ['/api/send-bonus']
+        ? ['/api/send-bonus', 'https://csabooks-kids.vercel.app/api/send-bonus']
         : [
             'https://csabooks-kids.vercel.app/api/send-bonus',
             'https://csabooks-kids-saluccimarco-3318s-projects.vercel.app/api/send-bonus'
@@ -2792,6 +2829,7 @@ function initBonusFormEvents() {
             firstName,
             lastName,
             email,
+            consent: true,
             website: honeypot,
             lang: currentLanguage || 'it'
           })
@@ -2809,6 +2847,9 @@ function initBonusFormEvents() {
           successMsg = successMsg.replace('{email}', safeEscape(email));
           showStatus('success', successMsg);
           form.reset();
+          if (consentGroup) {
+            consentGroup.classList.remove('has-error');
+          }
           if (btnText) {
             btnText.textContent = getTranslation('bonusSentBtnText', 'Inviato con Successo! ✓');
           }
@@ -3356,6 +3397,7 @@ function applyLanguage(lang) {
     setText('bonus-first-name-label', strings.bonusFirstNameLabel || 'Nome *');
     setText('bonus-last-name-label', strings.bonusLastNameLabel || 'Cognome *');
     setText('bonus-email-label', strings.bonusEmailLabel || 'La tua Email *');
+    setText('bonus-consent-text', strings.bonusConsentText);
     setText('bonus-submit-btn-text', strings.bonusSubmitBtnText || 'Invia i Disegni alla mia Email 🎨');
     setText('bonus-privacy-text', strings.bonusPrivacyText || 'I tuoi dati sono al sicuro. Riceverai solo il file PDF richiesto e le novità della collana. Zero spam.');
 
