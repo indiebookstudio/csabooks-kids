@@ -31,6 +31,21 @@ const CONFIG = {
   bonusCoverUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png"
 };
 
+const VOLUMES = {
+  1: {
+    pdfUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/Bonus.CSA.Vol.1.pdf",
+    coverUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png",
+    attachmentName: "Bonus-CSA-Volume1-Disegni-da-Colorare.pdf",
+    volNum: 1
+  },
+  2: {
+    pdfUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Bonus/Bonus.CSA.Vol.2.pdf",
+    coverUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png",
+    attachmentName: "Bonus-CSA-Volume2-Disegni-da-Colorare.pdf",
+    volNum: 2
+  }
+};
+
 // Rate limiter: Map<ip, Array<timestamp>>
 const rateLimitMap = new Map();
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
@@ -133,12 +148,16 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
-function buildEmailHtml({ firstName, lastName, lang }) {
+function buildEmailHtml({ firstName, lastName, lang, volume = 1 }) {
   const emailLangKey = (lang && EMAIL_I18N[lang.toLowerCase()]) ? lang.toLowerCase() : 'it';
   const et = EMAIL_I18N[emailLangKey] || EMAIL_I18N.it;
   const currentYear = new Date().getFullYear();
   const safeFirst = escapeHtml(firstName || '');
   const safeLast = escapeHtml(lastName || '');
+  const volNum = (volume === 2 || volume === '2') ? 2 : 1;
+  const volConfig = VOLUMES[volNum] || VOLUMES[1];
+  const subjectText = volNum === 2 ? et.subject.replace(/Vol\.\s*1/g, 'Vol. 2') : et.subject;
+  const introText = volNum === 2 ? et.intro.replace(/Vol\.\s*1/g, 'Vol. 2') : et.intro;
 
   return `
 <!DOCTYPE html>
@@ -146,7 +165,7 @@ function buildEmailHtml({ firstName, lastName, lang }) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${escapeHtml(et.subject)}</title>
+  <title>${escapeHtml(subjectText)}</title>
 </head>
 <body style="margin: 0; padding: 24px 10px; background-color: #FAF7F2; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #151D2A;">
   <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 580px; background-color: #FFFFFF; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(21, 29, 42, 0.08); border: 1px solid #EFEAE3;">
@@ -169,7 +188,7 @@ function buildEmailHtml({ firstName, lastName, lang }) {
         </h2>
         
         <p style="font-size: 15px; line-height: 1.65; color: #4B5563; margin: 0 0 24px 0;">
-          ${et.intro}
+          ${introText}
         </p>
 
         <!-- Copertina Libro -->
@@ -177,7 +196,7 @@ function buildEmailHtml({ firstName, lastName, lang }) {
           <tr>
             <td align="center" style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(21, 29, 42, 0.18); border: 3px solid #FFFFFF;">
               <a href="${CONFIG.siteUrl}" target="_blank" style="display: block; text-decoration: none;">
-                <img src="${CONFIG.bonusCoverUrl}" alt="Le Avventure del Cantiere - Raccolta Vol. 1" width="200" style="width: 100%; max-width: 200px; height: auto; display: block; border: 0;" />
+                <img src="${volConfig.coverUrl}" alt="Le Avventure del Cantiere - Raccolta Vol. ${volNum}" width="200" style="width: 100%; max-width: 200px; height: auto; display: block; border: 0;" />
               </a>
             </td>
           </tr>
@@ -292,7 +311,7 @@ export default async function handler(req) {
       return jsonResponse({ success: false, error: "Invalid JSON format." }, 400);
     }
 
-    const { firstName: rawFirst, lastName: rawLast, email: rawEmail, website: honeypot, lang: rawLang, consent: rawConsent } = body || {};
+    const { firstName: rawFirst, lastName: rawLast, email: rawEmail, website: honeypot, lang: rawLang, consent: rawConsent, volume: rawVolume } = body || {};
 
     // 6. Anti-Spam Honeypot: Silent acceptance if filled by a bot
     if (honeypot && String(honeypot).trim().length > 0) {
@@ -309,6 +328,8 @@ export default async function handler(req) {
     const lastName = String(rawLast || '').trim();
     const email = String(rawEmail || '').trim().toLowerCase();
     const lang = String(rawLang || 'it').trim().toLowerCase();
+    const volNum = (rawVolume === 2 || rawVolume === '2') ? 2 : 1;
+    const volConfig = VOLUMES[volNum] || VOLUMES[1];
 
     if (!firstName || firstName.length > 80) {
       return jsonResponse({ success: false, error: "First name is required." }, 400);
@@ -334,9 +355,9 @@ export default async function handler(req) {
     }
 
     // 9. Generate HTML Email Body
-    const emailHtml = buildEmailHtml({ firstName, lastName, lang });
+    const emailHtml = buildEmailHtml({ firstName, lastName, lang, volume: volNum });
     const et = EMAIL_I18N[lang] || EMAIL_I18N.it;
-    const emailSubject = et.subject;
+    const emailSubject = volNum === 2 ? et.subject.replace(/Vol\.\s*1/g, 'Vol. 2') : et.subject;
 
     // 10. Build Brevo API Payload
     const recipientName = `${firstName} ${lastName}`.trim() || "Piccolo Artista";
@@ -352,8 +373,8 @@ export default async function handler(req) {
       htmlContent: emailHtml,
       attachment: [
         {
-          name: "Bonus-CSA-Volume1-Disegni-da-Colorare.pdf",
-          url: CONFIG.bonusPdfUrl
+          name: volConfig.attachmentName,
+          url: volConfig.pdfUrl
         }
       ]
     };

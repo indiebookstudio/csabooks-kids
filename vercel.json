@@ -41,6 +41,46 @@
     {
       "source": "/csa-vol1-ep4-ita-6e2b94f0a3c5/",
       "destination": "/csa-vol1-ep4-ita-6e2b94f0a3c5.html"
+    },
+    {
+      "source": "/csa-vol2-bonus-46c694dc3ec4",
+      "destination": "/csa-vol2-bonus-46c694dc3ec4.html"
+    },
+    {
+      "source": "/csa-vol2-bonus-46c694dc3ec4/",
+      "destination": "/csa-vol2-bonus-46c694dc3ec4.html"
+    },
+    {
+      "source": "/csa-vol2-ep1-ita-1c683f8acb67",
+      "destination": "/csa-vol2-ep1-ita-1c683f8acb67.html"
+    },
+    {
+      "source": "/csa-vol2-ep1-ita-1c683f8acb67/",
+      "destination": "/csa-vol2-ep1-ita-1c683f8acb67.html"
+    },
+    {
+      "source": "/csa-vol2-ep2-ita-ed3dabb448ca",
+      "destination": "/csa-vol2-ep2-ita-ed3dabb448ca.html"
+    },
+    {
+      "source": "/csa-vol2-ep2-ita-ed3dabb448ca/",
+      "destination": "/csa-vol2-ep2-ita-ed3dabb448ca.html"
+    },
+    {
+      "source": "/csa-vol2-ep3-ita-2779f3736b81",
+      "destination": "/csa-vol2-ep3-ita-2779f3736b81.html"
+    },
+    {
+      "source": "/csa-vol2-ep3-ita-2779f3736b81/",
+      "destination": "/csa-vol2-ep3-ita-2779f3736b81.html"
+    },
+    {
+      "source": "/csa-vol2-ep4-ita-605c1bd7e4ce",
+      "destination": "/csa-vol2-ep4-ita-605c1bd7e4ce.html"
+    },
+    {
+      "source": "/csa-vol2-ep4-ita-605c1bd7e4ce/",
+      "destination": "/csa-vol2-ep4-ita-605c1bd7e4ce.html"
     }
   ]
 }

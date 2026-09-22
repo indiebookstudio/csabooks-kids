@@ -2817,6 +2817,9 @@ function initBonusFormEvents() {
     let success = false;
     let lastError = null;
 
+    const volumeInput = form.querySelector('input[name="volume"]');
+    const volume = (volumeInput && volumeInput.value) || form.dataset.volume || 1;
+
     for (const endpoint of candidateUrls) {
       try {
         const response = await fetch(endpoint, {
@@ -2831,6 +2834,7 @@ function initBonusFormEvents() {
             email,
             consent: true,
             website: honeypot,
+            volume: Number(volume) || 1,
             lang: currentLanguage || 'it'
           })
         });

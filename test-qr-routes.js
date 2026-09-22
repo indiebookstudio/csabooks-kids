@@ -71,6 +71,64 @@ const REQUIRED_QR_ROUTES = [
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '04.Audio.wav'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '04.Video.mp4')
     ]
+  },
+  {
+    id: 'Bonus Raccolta Vol. 2',
+    htmlFile: 'csa-vol2-bonus-46c694dc3ec4.html',
+    slug: 'csa-vol2-bonus-46c694dc3ec4',
+    dirFallback: path.join('csa-vol2-bonus-46c694dc3ec4', 'index.html'),
+    assetFiles: [
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Front.Cover.png'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', 'Bonus.CSA.Vol.2.pdf')
+    ]
+  },
+  {
+    id: 'Vol. 2 - Episodio 1 Audio/Video ITA',
+    htmlFile: 'csa-vol2-ep1-ita-1c683f8acb67.html',
+    slug: 'csa-vol2-ep1-ita-1c683f8acb67',
+    dirFallback: path.join('csa-vol2-ep1-ita-1c683f8acb67', 'index.html'),
+    assetFiles: [
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Front.Cover.png'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '01.Cover.png'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '01.Audio.wav'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '01.Video.mp4')
+    ]
+  },
+  {
+    id: 'Vol. 2 - Episodio 2 Audio/Video ITA',
+    htmlFile: 'csa-vol2-ep2-ita-ed3dabb448ca.html',
+    slug: 'csa-vol2-ep2-ita-ed3dabb448ca',
+    dirFallback: path.join('csa-vol2-ep2-ita-ed3dabb448ca', 'index.html'),
+    assetFiles: [
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Front.Cover.png'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '02.Cover.png'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '02.Audio.wav'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '02.Video.mp4')
+    ]
+  },
+  {
+    id: 'Vol. 2 - Episodio 3 Audio/Video ITA',
+    htmlFile: 'csa-vol2-ep3-ita-2779f3736b81.html',
+    slug: 'csa-vol2-ep3-ita-2779f3736b81',
+    dirFallback: path.join('csa-vol2-ep3-ita-2779f3736b81', 'index.html'),
+    assetFiles: [
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Front.Cover.png'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '03.Cover.png'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '03.Audio.wav'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '03.Video.mp4')
+    ]
+  },
+  {
+    id: 'Vol. 2 - Episodio 4 Audio/Video ITA',
+    htmlFile: 'csa-vol2-ep4-ita-605c1bd7e4ce.html',
+    slug: 'csa-vol2-ep4-ita-605c1bd7e4ce',
+    dirFallback: path.join('csa-vol2-ep4-ita-605c1bd7e4ce', 'index.html'),
+    assetFiles: [
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Front.Cover.png'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '04.Cover.png'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '04.Audio.wav'),
+      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '04.Video.mp4')
+    ]
   }
 ];
 

@@ -152,6 +152,45 @@ async function runTests() {
     }
   }
 
+  console.log('\n--- 7. Testing Volume 2 Brevo Payload Construction ---');
+  {
+    process.env.BREVO_API_KEY = 'test-brevo-api-key';
+    let interceptedBody = null;
+
+    const originalFetch = globalThis.fetch;
+    globalThis.fetch = async (url, options) => {
+      interceptedBody = JSON.parse(options.body);
+      return new Response(JSON.stringify({ messageId: '<test-msg-456@brevo.com>' }), {
+        status: 201,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    };
+
+    try {
+      const req = new Request('http://localhost/api/send-bonus', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: 'Giulia',
+          lastName: 'Bianchi',
+          email: 'giulia@esempio.it',
+          volume: 2,
+          lang: 'it'
+        })
+      });
+
+      const res = await handler(req);
+      assert(res.status === 200, 'Volume 2 request status should be 200 OK');
+      assert(interceptedBody.subject.includes('Vol. 2'), 'Subject must mention Vol. 2');
+      assert(interceptedBody.attachment[0].url === 'https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Bonus/Bonus.CSA.Vol.2.pdf', 'Attachment URL must point to Volume 2 CDN PDF');
+      assert(interceptedBody.attachment[0].name === 'Bonus-CSA-Volume2-Disegni-da-Colorare.pdf', 'Attachment name must match Volume 2');
+      assert(interceptedBody.htmlContent.includes('Raccolta Vol. 2'), 'HTML content must mention Raccolta Vol. 2');
+      assert(interceptedBody.htmlContent.includes('Giulia Bianchi'), 'HTML must contain recipient name');
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
+  }
+
   console.log(`\n========================================`);
   console.log(`Results: ${passed} passed, ${failed} failed`);
   console.log(`========================================\n`);
