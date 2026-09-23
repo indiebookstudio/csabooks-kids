@@ -3385,14 +3385,65 @@ function applyLanguage(lang) {
     }
   }
 
-  // Bonus Landing Page (se presente su csa-vol1-bonus-8f2e91b7d4a6.html)
-  if (document.getElementById('bonus-page-main')) {
+  // Bonus Landing Page (supporto automatico Volume 1 e Volume 2)
+  const bonusMainEl = document.getElementById('bonus-page-main');
+  if (bonusMainEl) {
+    const isVol2 = (bonusMainEl.dataset.volume === '2') ||
+                   (document.getElementById('bonus-email-form')?.dataset.volume === '2') ||
+                   (typeof window !== 'undefined' && window.location && window.location.pathname.includes('vol2'));
+
     setText('bonus-badge-text', strings.bonusBadgeText || 'Regalo speciale per i lettori');
-    const bonusTitleEl = document.getElementById('bonus-title');
-    if (bonusTitleEl && strings.bonusTitle) {
-      bonusTitleEl.innerHTML = strings.bonusTitle;
+
+    let bonusTitleText = strings.bonusTitle;
+    let bonusLeadText = strings.bonusLead;
+    let bonusFeat2DescText = strings.bonusFeat2Desc;
+    let bonusMetaTitleText = strings.bonusMetaTitle;
+    let bonusMetaDescText = strings.bonusMetaDesc;
+    let bonusCoverAltText = strings.bonusCoverAlt;
+
+    if (isVol2) {
+      if (bonusTitleText) {
+        bonusTitleText = bonusTitleText.replace(/Vol\.\s*1/gi, 'Vol. 2')
+                                       .replace(/Volume\s*1/gi, 'Volume 2')
+                                       .replace(/第1巻/g, '第2巻')
+                                       .replace(/Samlingsvolym\s*1/gi, 'Samlingsvolym 2');
+      }
+      if (bonusLeadText) {
+        bonusLeadText = bonusLeadText.replace('la nostra raccolta', 'la nostra seconda raccolta')
+                                     .replace('our story collection', 'our second story collection')
+                                     .replace('unsere Geschichtensammlung', 'unsere zweite Geschichtensammlung')
+                                     .replace('notre recueil d\'histoires', 'notre deuxième recueil d\'histoires')
+                                     .replace('nuestra colección de cuentos', 'nuestra segunda colección de cuentos');
+      }
+      if (bonusFeat2DescText) {
+        if (lang === 'it') {
+          bonusFeat2DescText = "Nina la betoniera, Benny l'escavatore, Rino il rullo, Leo la gru e tutti gli amici ti aspettano per prendere vita con i tuoi colori.";
+        }
+      }
+      if (bonusMetaTitleText) {
+        bonusMetaTitleText = bonusMetaTitleText.replace(/Vol\.\s*1/gi, 'Vol. 2')
+                                               .replace(/Volume\s*1/gi, 'Volume 2')
+                                               .replace(/第1巻/g, '第2巻');
+      }
+      if (bonusMetaDescText) {
+        bonusMetaDescText = bonusMetaDescText.replace(/Vol\.\s*1/gi, 'Vol. 2')
+                                             .replace(/Volume\s*1/gi, 'Volume 2')
+                                             .replace(/第1巻/g, '第2巻');
+      }
+      if (bonusCoverAltText) {
+        bonusCoverAltText = bonusCoverAltText.replace(/Vol\.\s*1/gi, 'Vol. 2')
+                                             .replace(/Volume\s*1/gi, 'Volume 2')
+                                             .replace(/第1巻/g, '第2巻');
+      }
     }
-    setText('bonus-lead', strings.bonusLead);
+
+    const bonusTitleEl = document.getElementById('bonus-title');
+    if (bonusTitleEl && bonusTitleText) {
+      bonusTitleEl.innerHTML = bonusTitleText;
+    }
+    if (bonusLeadText) {
+      setText('bonus-lead', bonusLeadText);
+    }
 
     // Form elementi e campi
     setText('bonus-form-badge', strings.bonusFormBadge || '📩 Ricevi il regalo via email');
@@ -3425,21 +3476,21 @@ function applyLanguage(lang) {
     setText('bonus-feat1-title', strings.bonusFeat1Title || 'Stampa a casa');
     setText('bonus-feat1-desc', strings.bonusFeat1Desc);
     setText('bonus-feat2-title', strings.bonusFeat2Title || 'Tutti i personaggi');
-    setText('bonus-feat2-desc', strings.bonusFeat2Desc);
+    setText('bonus-feat2-desc', bonusFeat2DescText || strings.bonusFeat2Desc);
     setText('bonus-feat3-title', strings.bonusFeat3Title || 'Divertimento senza schermi');
     setText('bonus-feat3-desc', strings.bonusFeat3Desc);
 
     const bonusCoverImg = document.getElementById('bonus-cover-img');
-    if (bonusCoverImg && strings.bonusCoverAlt) {
-      bonusCoverImg.alt = strings.bonusCoverAlt;
+    if (bonusCoverImg && bonusCoverAltText) {
+      bonusCoverImg.alt = bonusCoverAltText;
     }
 
-    if (strings.bonusMetaTitle) {
-      document.title = strings.bonusMetaTitle;
+    if (bonusMetaTitleText) {
+      document.title = bonusMetaTitleText;
     }
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && strings.bonusMetaDesc) {
-      metaDesc.setAttribute('content', strings.bonusMetaDesc);
+    if (metaDesc && bonusMetaDescText) {
+      metaDesc.setAttribute('content', bonusMetaDescText);
     }
   }
 

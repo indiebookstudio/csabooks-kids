@@ -12,14 +12,14 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nina e il Ponte dei Coniglietti | Audio & Video Raccolta Vol. 2</title>
+  <title>Nina la betoniera e il ponte dei coniglietti | Audio & Video - CSA Books 4 Kids</title>
   
   <!-- Sicurezza & Protezione Crawler (Non Indicizzabile & Non Rintracciabile) -->
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
   <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
   <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
   <meta name="referrer" content="no-referrer" />
-  <meta name="description" content="Ascolta l'audio o guarda il video della storia di Nina la betoniera e il ponte dei coniglietti per i lettori di CSA Books 4 Kids." />
+  <meta name="description" content="Ascolta l'audio o guarda il video della storia Nina la betoniera e il ponte dei coniglietti per i lettori di CSA Books 4 Kids." />
 
   <!-- Google Fonts: Fredoka & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -272,7 +272,7 @@
 
           <!-- Introduzione / Istruzioni -->
           <p class="episode-lead" id="episode-lead">
-            Una voce speciale legge per te questa avventura! Scegli se ascoltare la traccia audio rilassante o guardare il video con le illustrazioni della storia.
+            Ascolta la storia narrata o guarda il video illustrato.
           </p>
 
           <!-- Pulsanti di Scelta Media: Audio o Video -->
@@ -284,10 +284,7 @@
                   <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
                 </svg>
               </div>
-              <div class="btn-media-text-group">
-                <span class="btn-media-title">Ascolta l'Audio</span>
-                <span class="btn-media-subtitle">Lettura a voce alta • Audio</span>
-              </div>
+              <span class="btn-media-title">Ascolta l'Audio</span>
             </button>
 
             <!-- Pulsante Lancia Video -->
@@ -297,10 +294,7 @@
                   <path d="M8 5v14l11-7z"/>
                 </svg>
               </div>
-              <div class="btn-media-text-group">
-                <span class="btn-media-title">Guarda il Video</span>
-                <span class="btn-media-subtitle">Video illustrato • Con Voce</span>
-              </div>
+              <span class="btn-media-title">Guarda il Video</span>
             </button>
           </div>
 
@@ -310,25 +304,12 @@
             <div class="player-header">
               <div class="player-status-badge">
                 <span class="player-status-dot" aria-hidden="true"></span>
-                <span id="player-status-text">Lettore Audio pronto all'ascolto</span>
+                <span id="player-status-text">Audio</span>
               </div>
             </div>
 
             <!-- Box Player Audio (Attivo di Default) -->
             <div class="episode-audio-box" id="audio-player-box">
-              <div class="audio-track-info">
-                <div class="audio-disc-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <circle cx="12" cy="12" r="3"></circle>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="audio-track-title">Traccia Audio — Nina e il ponte dei coniglietti</h3>
-                  <p class="audio-track-sub">Premi Play per ascoltare la voce narrante</p>
-                </div>
-              </div>
-              
               <audio 
                 id="story-audio" 
                 class="episode-native-audio" 
@@ -363,7 +344,7 @@
           <div class="episode-note-card">
             <span class="episode-note-icon" aria-hidden="true">💡</span>
             <div>
-              <strong>Un'idea speciale per la lettura:</strong> puoi avviare l'audio o il video e sfogliare contemporaneamente le pagine del libro fisico insieme al tuo bambino!
+              Sfoglia il libro insieme al tuo bambino durante l'ascolto o la visione!
             </div>
           </div>
 
@@ -476,7 +457,7 @@
         btnVideo.classList.remove('active');
         btnVideo.setAttribute('aria-pressed', 'false');
 
-        statusText.textContent = shouldPlay ? 'Riproduzione traccia audio in corso...' : 'Lettore Audio pronto all\'ascolto';
+        statusText.textContent = shouldPlay ? 'Riproduzione audio in corso...' : 'Audio';
 
         if (shouldPlay) {
           audioEl.play().catch(function() {});
@@ -493,7 +474,7 @@
         btnAudio.classList.remove('active');
         btnAudio.setAttribute('aria-pressed', 'false');
 
-        statusText.textContent = shouldPlay ? 'Riproduzione video in corso...' : 'Lettore Video pronto alla visione';
+        statusText.textContent = shouldPlay ? 'Riproduzione video in corso...' : 'Video';
 
         if (shouldPlay) {
           videoEl.play().catch(function() {});
@@ -512,7 +493,7 @@
         videoEl.pause();
         btnAudio.classList.add('active');
         btnVideo.classList.remove('active');
-        statusText.textContent = 'Riproduzione traccia audio in corso...';
+        statusText.textContent = 'Riproduzione audio in corso...';
       });
 
       videoEl.addEventListener('play', function() {
@@ -535,11 +516,11 @@
       });
 
       audioEl.addEventListener('ended', function() {
-        statusText.textContent = 'Ascolto completato! Riascolta o guarda il video.';
+        statusText.textContent = 'Ascolto completato';
       });
 
       videoEl.addEventListener('ended', function() {
-        statusText.textContent = 'Visione completata! Riguarda o ascolta l\'audio.';
+        statusText.textContent = 'Visione completata';
       });
     })();
   </script>
