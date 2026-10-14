@@ -33,6 +33,10 @@
 | **Storia 3: Rino e i Ladri (Audio + Video ITA)** | `csa-vol2-ep3-ita-2779f3736b81.html` | `https://csabookskids.com/csa-vol2-ep3-ita-2779f3736b81` | `csa-vol2-ep3-ita-2779f3736b81/index.html` | Audio e video read-aloud + doppia cover affiancata. |
 | **Storia 4: Leo e la Cinciallegra (Audio + Video ITA)** | `csa-vol2-ep4-ita-605c1bd7e4ce.html` | `https://csabookskids.com/csa-vol2-ep4-ita-605c1bd7e4ce` | `csa-vol2-ep4-ita-605c1bd7e4ce/index.html` | Audio e video read-aloud + doppia cover affiancata. |
 
+### 🔬 Progetto Autonomo: Einstein, questa te la sei persa!
+| Elemento Libro | File HTML Principale | URL Pubblico Stampato nei QR | Fallback Diretto | Note |
+| :--- | :--- | :--- | :--- | :--- |
+| **Portale QR Completo (Bonus, Esperienze, Fonti SC-00..SC-55)** | `accesso/4dcbbaee2e69a278e4e59eab50430ccc/index.html` | `https://csabookskids.com/accesso/4dcbbaee2e69a278e4e59eab50430ccc/` | `accesso/4dcbbaee2e69a278e4e59eab50430ccc.html` | Microsito completamente autonomo, isolato dal brand CSA, con 5 esperienze bonus e 56 schede scientifiche. |
 
 ---
 

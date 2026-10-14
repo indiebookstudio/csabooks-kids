@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#081727">
+  <meta name="description" content="Otto presenta otto mini-film animati per capire le scoperte più sorprendenti di Einstein, questa te la sei persa!">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:title" content="La scienza prende vita! · Il laboratorio di Otto">
+  <meta property="og:description" content="8 film illustrati e spiegazioni in movimento. Esplora le vere scoperte della scienza con Otto.">
+  <meta property="og:image" content="anteprima.jpg">
+  <title>La scienza prende vita! · Otto</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#filmi">Vai ai filmati</a>
+<header class="topbar wrap">
+  <a class="logo" href="#inizio" aria-label="Torna all'inizio"><span class="logostar">✦</span><span>OTTO <small>IL LABORATORIO DEL MOVIMENTO</small></span></a>
+  <div class="counter" aria-live="polite"><span id="seenCount">0</span> / 8 <span class="counter-name">esplorati</span></div>
+</header>
+<main>
+<section id="inizio" class="hero wrap">
+  <div class="hero-copy">
+    <span class="eyebrow">BONUS ESCLUSIVO · EINSTEIN, QUESTA TE LA SEI PERSA!</span>
+    <h1>LA SCIENZA<br><em>PRENDE VITA!</em></h1>
+    <p class="hero-intro">Otto ha acceso il laboratorio. Guarda cosa succede quando le scoperte escono dalle pagine e cominciano a muoversi.</p>
+    <div class="hero-meta"><span>8 MINI-FILM</span><span>7–12 ANNI</span><span>ILLUSTRATI E SPIEGATI</span></div>
+    <a class="primary" href="#filmi">Esplora le animazioni <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="hero-art"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="shine s-one"></span><span class="shine s-two"></span><img src="assets/otto.webp" alt="Otto, il polpo esploratore, con una lente d’ingrandimento"></div>
+</section>
+<section id="filmi" class="experience wrap" aria-labelledby="exper-head">
+ <div class="section-lead"><div><span class="eyebrow">SCEGLI UN FENOMENO</span><h2 id="exper-head">Otto ti mostra come funziona</h2></div><div class="runtime">8 film · circa 84 secondi in totale</div></div>
+ <div class="theater">
+   <div class="screen-wrap"><video id="player" poster="assets/film_01.jpg" controls playsinline preload="metadata" aria-label="Animazione scientifica selezionata"><source src="video/OTTO_FILM_01_balena.mp4" type="video/mp4">Il tuo browser non supporta i video HTML5: scarica il filmato usando il collegamento qui sotto.</video><div id="videoTag" class="video-tag">FILM 01 / 08</div></div>
+   <div class="theater-info">
+    <span class="eyebrow" id="room">ANIMALI STRAORDINARI</span>
+    <h3 id="filmTitle">La rete invisibile delle megattere</h3>
+    <p id="filmLead">Come possono delle bolle d’aria diventare una rete?</p>
+    <div class="discover-label">LA COSA DA CAPIRE</div><p id="filmExplain">Le balene possono produrre pareti di bolle che riuniscono le prede. Non sono reti materiali: l’aria cambia i movimenti degli animali.</p>
+    <div class="film-meta"><span id="filmCode">SC-05</span><span>11 s · video senza audio</span></div>
+    <div class="player-actions"><a class="secondary" id="getFilm" href="video/OTTO_FILM_01_balena.mp4" download>Scarica MP4 <span aria-hidden="true">↓</span></a><a class="text-link" id="sourceLink" target="_blank" rel="noopener noreferrer" href="https://doi.org/10.1098/rsos.240328">Leggi la fonte ↗</a></div>
+    <div class="next-actions"><button type="button" id="previous" class="arrowbtn" aria-label="Film precedente">←</button><button type="button" id="next" class="nextbtn">Film successivo <span aria-hidden="true">→</span></button></div>
+   </div>
+ </div>
+ <div class="library-head"><h3>Tutti gli otto film</h3><p>Seleziona una scoperta. Puoi riguardarla, metterla in pausa o scaricare il video.</p></div>
+ <div class="film-grid" id="filmGrid" role="list" aria-label="Elenco degli otto filmati"></div>
+</section>
+<section class="closing wrap"><div class="closing-card"><div><span class="eyebrow">IL TUO DIARIO DELLE MERAVIGLIE</span><h2>Quante scoperte hai visto muoversi?</h2><p>Ogni film termina con una spiegazione. Guarda almeno una volta tutti e otto per completare il piccolo percorso di Otto. I progressi rimangono sul tuo dispositivo.</p><div id="progressMarks" class="marks" aria-label="Progressi dei film visualizzati"></div><p id="completion" class="completion" aria-live="polite">Ancora tante sorprese da scoprire!</p></div><img src="assets/otto.webp" alt="Otto incoraggia il lettore a continuare" loading="lazy"></div></section>
+<section class="honesty wrap"><div class="honesty-icon">i</div><div><strong>Come leggere queste animazioni</strong><p>Sono <strong>ricostruzioni illustrate e semplificate</strong> dei meccanismi, non riprese originali degli esperimenti né simulazioni in scala. L’informazione nasce da studi scientifici e fonti istituzionali, raggiungibili con il link presente accanto a ogni film.</p></div></section>
+</main>
+<footer class="footer wrap"><span>UN BONUS DI <strong>EINSTEIN, QUESTA TE LA SEI PERSA!</strong> · Clara Musicco · 2026</span><span>Le meraviglie sono vere. I disegni servono a comprenderle.</span></footer>
+</body>
+</html>

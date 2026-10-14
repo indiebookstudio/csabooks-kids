@@ -5,7 +5,8 @@
   "description": "CSA Books 4 Kids - Official Website & Catalog",
   "scripts": {
     "generate-banners": "node scripts/generate-banners.js",
-    "test": "node test-qr-routes.js && node test-endpoint.js"
+    "build": "node scripts/generate-banners.js && node scripts/sync-einstein-route.js",
+    "test": "node test-qr-routes.js && node test-endpoint.js && node scripts/verify-all-tests.js"
   },
   "keywords": [
     "childrens-books",

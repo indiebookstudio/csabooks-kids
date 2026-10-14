@@ -1,0 +1,21 @@
+EINSTEIN_PORTALE_QR/
+├── index.html                           Pagina principale
+├── assets/css/site.css                  Stile grafico
+├── assets/js/app.js                     Motore lingua, fonti e navigazione
+├── config/site.json                     Lingue abilitate, impostazioni
+├── i18n/it.json                         Testi del sito (ITALIANO)
+├── i18n/en.json                         Interfaccia inglese PRONTA
+├── i18n/fr.json                         Interfaccia francese PRONTA
+├── i18n/es.json                         Interfaccia spagnola PRONTA
+├── content/fonti_it.csv                 Le 56 citazioni (EDITABILE)
+├── content/fonti_*_MODELLO...csv        Modelli per traduzione
+├── media/copertina.webp                 CAMBIA QUESTO FILE per la copertina
+├── media/otto.webp                      CAMBIA QUESTO FILE per Otto
+├── media/bonus/*.webp                   Anteprime dei cinque bonus
+├── media/fonti/SC-00.webp...SC-55.webp Anteprime delle fonti
+├── downloads/fonti/SC-XX.pdf           AGGIUNGI QUI i PDF ORIGINALI
+├── bonus/it/missioni/missioni.pdf     Bonus missioni PDF
+├── bonus/it/museo/index.html           Museo interattivo completo
+├── bonus/it/film/index.html            Video con 8 MP4
+├── bonus/it/colora/colora.pdf          10 disegni PDF
+└── bonus/it/carte/index.html           Gioco carte + PDF stampabili

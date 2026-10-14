@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#09192a">
+  <meta name="description" content="Il Museo delle Scoperte Impossibili: sette sale interattive, Otto e i misteri scientifici di Einstein, questa te la sei persa!">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Il Museo delle Scoperte Impossibili">
+  <meta property="og:description" content="Esplora sette sale della scienza con Otto: esperimenti, misteri e passaporto da completare.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="museo-anteprima.jpg">
+  <title>Il Museo delle Scoperte Impossibili · Otto</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Salta al contenuto</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#atrio" aria-label="Torna all'atrio del museo">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-text">IL MUSEO <small>DELLE SCOPERTE IMPOSSIBILI</small></span>
+      </a>
+      <nav class="top-nav" aria-label="Navigazione principale">
+        <a href="#atrio" class="nav-atrium">Le sette sale</a>
+        <button type="button" id="passportButton" class="passport-button"><span aria-hidden="true">✧</span> Passaporto <strong id="headerProgress">0/7</strong></button>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" aria-live="polite"></main>
+    <footer class="site-footer">
+      <span>Un'esperienza extra di <strong>EINSTEIN, QUESTA TE LA SEI PERSA!</strong></span>
+      <span>Clara Musicco · © 2026</span>
+      <span>Illustrazioni narrative: non sono fotografie né riproduzioni dei dati sperimentali.</span>
+    </footer>
+  </div>
+  <div id="modal" class="modal-root" hidden></div>
+  <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
+  <noscript><p class="nojs">Per esplorare il museo interattivo, attiva JavaScript nel browser. Il sito non usa account né connessioni obbligatorie.</p></noscript>
+</body>
+</html>

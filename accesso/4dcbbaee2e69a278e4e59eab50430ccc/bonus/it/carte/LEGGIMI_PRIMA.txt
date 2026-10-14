@@ -1,0 +1,6 @@
+LE CARTE DI OTTO - BONUS 10
+
+Contenuto: index.html, assets/, PDF fronte/retro, PDF fronte, guida, CSV fonti.
+PUBBLICAZIONE WEB: carica TUTTI i file e la cartella assets nella medesima cartella del tuo hosting. Apri /index.html. Funziona senza backend; Google Fonts opzionale (se non è disponibile saranno usati i font di sistema).
+STAMPA: A4 100% scala, nessun adattamento alla pagina, ribaltamento sul lato lungo, prova 1 foglio fronte/retro; piccole variazioni delle stampanti domestiche richiedono eventuale rifilatura.
+NOTA SCIENTIFICA: alcune risposte sono sintesi divulgative di studi che richiedono controllo delle fonti prima della distribuzione pubblica; codici e URL nel CSV.

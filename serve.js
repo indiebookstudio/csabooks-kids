@@ -18,7 +18,8 @@ const mimeTypes = {
   '.pdf': 'application/pdf',
   '.mp4': 'video/mp4',
   '.wav': 'audio/wav',
-  '.mp3': 'audio/mpeg'
+  '.mp3': 'audio/mpeg',
+  '.csv': 'text/csv; charset=utf-8'
 };
 
 const server = http.createServer((req, res) => {

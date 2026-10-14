@@ -129,6 +129,27 @@ const REQUIRED_QR_ROUTES = [
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '04.Audio.wav'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.2', 'IT', 'Bonus', '04.Video.mp4')
     ]
+  },
+  {
+    id: 'Einstein, questa te la sei persa! - QR Portal',
+    htmlFile: path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc.html'),
+    slug: '4dcbbaee2e69a278e4e59eab50430ccc',
+    dirFallback: path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'index.html'),
+    assetFiles: [
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'assets', 'css', 'site.css'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'assets', 'js', 'app.js'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'config', 'site.json'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'i18n', 'it.json'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'content', 'fonti_it.csv'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'media', 'copertina.webp'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'media', 'otto.webp'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'missioni', 'missioni.pdf'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'museo', 'index.html'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'film', 'index.html'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'colora', 'colora.pdf'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'carte', 'index.html'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf')
+    ]
   }
 ];
 

@@ -32,6 +32,12 @@ jobs:
       - name: Generate Banner Manifest
         run: node scripts/generate-banners.js
 
+      - name: Sync Einstein Permanent Route
+        run: node scripts/sync-einstein-route.js
+
+      - name: Run QR Routes & API Integrity Tests
+        run: npm test
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

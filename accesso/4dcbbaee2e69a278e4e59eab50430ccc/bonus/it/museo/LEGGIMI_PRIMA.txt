@@ -1,0 +1,51 @@
+IL MUSEO DELLE SCOPERTE IMPOSSIBILI — Bonus 2 del libro
+EINSTEIN, QUESTA TE LA SEI PERSA! — Clara Musicco
+Versione di consegna: 13 ottobre 2026
+
+CONTENUTO
+- index.html: pagina iniziale e tutte e sette le sale
+- style.css: grafica responsive
+- app.js: gioco, passaporto, attestato e interazioni
+- assets/: immagini locali ottimizzate WebP
+- museo-anteprima.jpg: immagine anteprima per la landing page
+- FONTI_DEL_MUSEO.csv: catalogo 14 reperti, con codici SC e link
+- favicon.svg: icona del museo
+
+COME PUBBLICARLO
+1. Estrai TUTTO lo ZIP. Non caricare soltanto index.html.
+2. Metti la cartella completa sul tuo hosting in una sottocartella, ad esempio:
+   https://tuodominio.it/museo-otto/
+3. Verifica che il link .../museo-otto/ apra index.html e che le immagini siano visibili.
+4. Prova le sette sale da telefono, stampa il diploma e controlla i link alle fonti.
+5. Solo DOPO la pubblicazione genera il QR code definitivo con l'URL pubblico.
+
+COMPATIBILITA'
+Sito statico HTML/CSS/JavaScript, senza framework, database, API o costi di backend.
+Pensato per hosting statico e mobile. Tutte le immagini del museo sono incluse.
+Il passaporto è salvato in localStorage nel browser; NON viene trasmesso a server.
+Il nome inserito sul diploma non viene inviato online né salvato nel sito.
+Per aprire le fonti originali è richiesta una connessione Internet.
+
+DIPLOMA
+Si sblocca automaticamente completando tutte le sette sale. Nel passaporto inserisci
+un nome e seleziona 'Stampa il diploma'. In fase di stampa scegli anche 'Salva come PDF'
+se il browser lo consente.
+
+AVVERTENZE EDITORIALI
+I giochi sono semplificazioni dichiarate: non sono copie degli esperimenti e i numeri
+immaginari della pinza non corrispondono a dati di laboratorio. I disegni sono ricostruzioni
+artistiche, non riproduzioni delle fotografie o dei dati degli studi citati.
+I link riportano alle fonti indicate nel catalogo del manoscritto: se le fonti vengono
+aggiornate, aggiornare anche il sito.
+Questo sito NON contiene video scientifici né una galleria di fotografie reali protette:
+le immagini sono illustrazioni. L'archivio PDF delle fonti è un bonus separato.
+
+PER PERSONALIZZARE
+- Nome/autrice: index.html, app.js
+- Testi delle sette sale: array ROOMS in app.js
+- Immagini: directory assets/
+- Colori e layout: style.css
+- Codici e URL fonti: fonte delle schede in app.js
+
+NOTA: i metadati della pagina indicano noindex: elimina questa impostazione se vuoi
+rendere indicizzabile la pagina web dai motori di ricerca.

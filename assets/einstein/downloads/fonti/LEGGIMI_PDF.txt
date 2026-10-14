@@ -1,0 +1,3 @@
+Inserisci qui i PDF autorizzati, uno per codice esatto: SC-00.pdf, SC-01.pdf ... SC-55.pdf.
+Il portale rileva automaticamente i PDF presenti quando apre una scheda.
+Nessun PDF originale e stato incluso automaticamente: controlla sempre le licenze di redistribuzione.

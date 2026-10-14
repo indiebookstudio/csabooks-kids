@@ -1,0 +1,43 @@
+BONUS 3 — LA SCIENZA PRENDE VITA!  /  EINSTEIN, QUESTA TE LA SEI PERSA!
+===============================================================================
+
+CONTENUTO
+- index.html: la pagina web di Otto, con gli 8 filmati selezionabili.
+- style.css, app.js, favicon.svg: grafica e interazioni.
+- assets/: illustrazione di Otto e locandine JPEG dei filmati.
+- video/: 8 VIDEO MP4 (1280 x 720 px, H.264, 15 fotogrammi/s, circa 11,4 secondi ciascuno, senza audio).
+- FONTI_E_NOTE_SCIENTIFICHE.csv: fonti, DOI/link e codici SC esatti nel libro.
+
+PUBBLICAZIONE
+1. Estrai TUTTI i file dello ZIP, mantenendo la struttura delle cartelle.
+2. Carica l'intera cartella su un hosting per siti statici o sul tuo sito.
+3. L'URL da aprire è quello del file index.html.
+4. Usa quell'URL nella landing page dei bonus. Il codice QR può puntare
+   alla landing page principale, da cui il genitore sceglie il bonus 3.
+5. Non serve nessun backend, database, account o API. Il salvataggio dei film
+   visti è locale nel browser del singolo dispositivo (localStorage).
+6. Non caricare SOLO index.html: servono anche assets e video.
+7. I filmati MP4 possono essere scaricati direttamente dalla pagina web.
+
+NOTA SCIENTIFICA
+Le animazioni sono RICOSTRUZIONI ILLUSTRATIVE SCHEMATICHE: non filmati originali
+registrati dai ricercatori, non dati di laboratorio reali e non simulazioni in scala.
+Sono stati scelti dettagli scientifici fondati sulle fonti elencate nel CSV.
+I link portano a fonti originali o istituzionali, non a PDF creati appositamente.
+
+RISOLUZIONE E RIPRODUZIONE
+I filmati funzionano con i comandi video del browser: play, pausa, avanzamento,
+audio disattivato. I testi esplicativi sono già incorporati nel video.
+Su smartphone i download sono disponibili toccando 'Scarica MP4'.
+I video richiedono banda di rete solo al primo caricamento, se ospitati online.
+
+© 2026 Clara Musicco. Bonus del libro EINSTEIN, QUESTA TE LA SEI PERSA!
+
+
+AGGIORNAMENTO PREMIUM V2 (14/10/2026)
+- Otto film MP4 completamente riesportati, con composizioni cinematiche a tre sequenze.
+- Sovrapposizioni animate per evidenziare bolle, traiettorie o segnali, senza deformare anatomie e oggetti.
+- Ogni film: 1280×720, 18 fps, ~10,5 secondi, H.264.
+- Le scene sono RICOSTRUZIONI ILLUSTRATIVE, non riprese di laboratorio e non simulazioni fisiche esatte.
+- I movimenti della megattera non sono una simulazione 3D articolata: la spiegazione visiva anima le bolle sopra illustrazioni integre.
+- Il sito è statico: pubblicare TUTTA la cartella senza modificarne la struttura.

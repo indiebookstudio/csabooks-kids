@@ -1,0 +1,148 @@
+{
+  "code": "es",
+  "localeName": "Español",
+  "nav": {
+    "home": "Inicio",
+    "bonus": "Extras",
+    "sources": "Biblioteca de fuentes",
+    "book": "El libro"
+  },
+  "brand": {
+    "eyebrow": "EL PORTAL EXCLUSIVO DEL LIBRO",
+    "title": "EL MUNDO SECRETO",
+    "titleEm": "DE OTTO",
+    "intro": "El libro termina. Los descubrimientos no.",
+    "subtitle": "Entra en un universo de misiones, juegos, vídeos y maravillas científicas. ¡Otto te espera!",
+    "age": "PARA EXPLORADORES DE 7 A 12 AÑOS",
+    "bookEyebrow": "DEL LIBRO ILUSTRADO",
+    "bookDescription": "Dinosaurs, extraordinary animals, space and unbelievable inventions. Real stories for curious minds.",
+    "ctaExplore": "Explora los extras",
+    "ctaSources": "Las fuentes científicas",
+    "welcome": "¡HOLA, EXPLORADOR!",
+    "welcomeText": "Elige una puerta: ¡te espera una aventura!"
+  },
+  "sections": {
+    "bonusEyebrow": "LAS PUERTAS DEL DESCUBRIMIENTO",
+    "bonusTitle": "Elige tu próxima aventura",
+    "bonusSubtitle": "Cinco experiencias para explorar, imprimir, jugar y mirar en familia.",
+    "sourceEyebrow": "DETRÁS DE CADA MARAVILLA HAY PRUEBAS",
+    "sourceTitle": "Las fuentes, descubrimiento a descubrimiento",
+    "sourceSubtitle": "Busca el código SC-XX del libro, consulta la referencia y abre la fuente original. Si se ha añadido el PDF, podrás descargarlo.",
+    "sourceWhyTitle": "Historias increíbles. Fuentes reales.",
+    "sourceWhyText": "El libro distingue los hechos observados de las hipótesis. Consulta las investigaciones originales.",
+    "sourcesCount": "56 referencias científicas e históricas",
+    "bundleTitle": "One book. Many adventures.",
+    "bundleText": "Come back anytime: this portal will grow with new content and more book languages.",
+    "enter": "Entrar",
+    "viewAllSources": "Explorar las 56 fuentes",
+    "readMore": "Discover more",
+    "back": "Volver"
+  },
+  "bonus": {
+    "missioni": {
+      "tag": "PDF · AVENTURA ILUSTRADA",
+      "title": "Las 7 misiones secretas de Otto",
+      "subtitle": "El misterio del Atlas de las Maravillas",
+      "description": "Siete enigmas científicos, pistas que reunir y un secreto que revelar.",
+      "detail": "Una aventura ilustrada, retos variados, soluciones y diploma final."
+    },
+    "museo": {
+      "tag": "WEB · INTERACTIVA",
+      "title": "Museo de los Descubrimientos Imposibles",
+      "subtitle": "Siete salas para explorar",
+      "description": "Visita siete salas y completa tu pasaporte con Otto.",
+      "detail": "Observa, resuelve desafíos y consigue siete sellos."
+    },
+    "film": {
+      "tag": "VÍDEO · 8 ANIMACIONES",
+      "title": "¡La ciencia cobra vida!",
+      "subtitle": "Mira cómo funcionan las maravillas",
+      "description": "Ocho cortos ilustrados muestran fenómenos científicos sorprendentes.",
+      "detail": "Las animaciones son reconstrucciones educativas."
+    },
+    "colora": {
+      "tag": "PDF · 10 PÁGINAS A4",
+      "title": "Colorea la ciencia con Otto",
+      "subtitle": "Diez aventuras para colorear",
+      "description": "Ballenas, dinosaurios, robots y espacio: diez dibujos para imprimir.",
+      "detail": "Diez láminas A4 en blanco y negro."
+    },
+    "carte": {
+      "tag": "JUEGO · 36 CARTAS",
+      "title": "¿Verdadero, falso o aún no lo sabemos?",
+      "subtitle": "La respuesta no siempre es sí o no",
+      "description": "Treinta y seis cartas ilustradas para jugar en familia.",
+      "detail": "Juega en el móvil o imprime la baraja a doble cara."
+    }
+  },
+  "actions": {
+    "openExperience": "Abrir experiencia",
+    "downloadPdf": "Descargar PDF",
+    "downloadCards": "Descargar cartas a doble cara",
+    "downloadRules": "Descargar reglas",
+    "playOnline": "Jugar online",
+    "watchFilms": "Ver los 8 vídeos",
+    "openMuseum": "Entrar en el museo",
+    "downloadColor": "Descargar dibujos",
+    "downloadMissions": "Descargar misiones",
+    "goToSources": "Abrir biblioteca",
+    "openOfficial": "Abrir fuente original",
+    "downloadSource": "Descargar PDF de la fuente",
+    "sourceNotYet": "PDF aún no disponible",
+    "sourceChecking": "Buscando el PDF…",
+    "sourceAvailable": "PDF disponible",
+    "sourceUnavailable": "Todavía no se ha añadido el PDF. Puedes consultar la fuente original.",
+    "download": "Descargar",
+    "learnMore": "Descubrir",
+    "goBack": "Volver a los extras",
+    "backSources": "Volver a las fuentes",
+    "sourcePdfHelp": "Para activar la descarga, añade un PDF con el nombre:",
+    "correction": "Correcciones y notas",
+    "linkUnavailable": "Enlace no disponible",
+    "sourceIllustration": "Ilustración temática, no imagen del artículo científico",
+    "comingSoon": "Versión en preparación",
+    "returnHome": "Volver al inicio"
+  },
+  "sourceUi": {
+    "searchPlaceholder": "Busca por código, tema o palabra clave…",
+    "searchLabel": "Buscar una fuente",
+    "all": "Todas",
+    "results": "resultados",
+    "showMore": "Ver más fuentes",
+    "citation": "Cita / referencia",
+    "sourceCode": "Código en el libro",
+    "category": "Tema",
+    "external": "Fuente original",
+    "choose": "Explorar fuentes",
+    "none": "No se han encontrado fuentes.",
+    "smallHelp": "Edita content/fonti_es.csv. Los PDF se detectan automáticamente."
+  },
+  "categories": {
+    "all": "Todas",
+    "introduzione": "Introducción",
+    "animali": "Animales",
+    "piante": "Plantas y naturaleza",
+    "esperimenti": "Experimentos",
+    "tecnologia": "Inventos y robots",
+    "dinosauri": "Dinosaurios y ADN",
+    "corpo": "Cuerpo y tecnología",
+    "spazio": "Espacio"
+  },
+  "footer": {
+    "tag": "LA CURIOSIDAD NUNCA TERMINA.",
+    "text": "A companion to EINSTEIN, YOU MISSED THIS!",
+    "official": "Visita CSA Books Kids",
+    "legal": "Illustrations do not replace original scientific publications.",
+    "privacy": "No se necesita cuenta. Los juegos pueden guardar el progreso en el dispositivo.",
+    "lang": "Idioma",
+    "sources": "Fuentes",
+    "home": "Inicio"
+  },
+  "errors": {
+    "title": "No se pudo cargar un elemento",
+    "body": "Actualiza la página o comprueba los archivos publicados.",
+    "retry": "Reintentar",
+    "notFound": "Página no encontrada",
+    "nosources": "No se puede cargar el índice de fuentes."
+  }
+}

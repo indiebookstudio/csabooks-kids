@@ -1,0 +1,108 @@
+EINSTEIN, QUESTA TE LA SEI PERSA! — PORTALE QR / CSA BOOKS KIDS
+================================================================
+Questa e la RADICE del sito web statico. index.html deve essere nella radice dell'hosting.
+Il portale e interamente contenuto nella cartella; non richiede un database,
+WordPress, account per i bambini o una build JavaScript.
+
+CHE COSA TROVI
+ - La landing page con copertina e mascotte Otto.
+ - 5 bonus: 7 missioni (PDF), museo interattivo, 8 animazioni,
+   10 disegni (PDF), 36 carte e gioco interattivo.
+ - Biblioteca di 56 fonti SC-00 ... SC-55, ricerca, filtri, scheda
+   immagine + citazione + link originale + pulsante PDF.
+ - Struttura per IT/EN/FR/ES (solo IT e attivo al momento).
+
+AGGIORNAMENTO A PROVA DI ERRORE
+ 1) Cambiare copertina: SOSTITUISCI media/copertina.webp con un'altra
+    immagine WEBP dello stesso nome.
+ 2) Cambiare Otto: SOSTITUISCI media/otto.webp.
+ 3) Cambiare immagine di un bonus: SOSTITUISCI media/bonus/museo.webp
+    (o missioni.webp, film.webp, colora.webp, carte.webp).
+ 4) Aggiungere PDF di una fonte: COPIA downloads/fonti/SC-04.pdf.
+    Il nome deve corrispondere esattamente al codice SC-XX. Non serve
+    modificare il CSV, il sito controlla il file in automatico.
+ 5) Cambiare immagine di una fonte: SOSTITUISCI media/fonti/SC-04.webp.
+    Le immagini attuali sono illustrazioni tematiche, non fotografie tratte
+    dagli studi. Verifica i diritti delle immagini scientifiche che aggiungi.
+ 6) Cambiare la bibliografia: apri content/fonti_it.csv in Excel/Google Fogli.
+    Una riga per codice SC-XX. Conserva la prima riga e i codici. Esporta CSV UTF-8.
+ 7) Cambiare titoli/testi pulsanti/descrizioni: i18n/it.json.
+    Non cambiare le CHIAVI JSON (es. bonus.museo.title): soltanto i valori.
+ 8) Cambiare una pagina bonus: sostituisci i file nella cartella
+    bonus/it/museo oppure bonus/it/film o bonus/it/carte.
+    Per cambiare i PDF: bonus/it/missioni/missioni.pdf e
+    bonus/it/colora/colora.pdf. Mantieni i nomi dei file.
+ 9) Dopo le modifiche devi CARICARE DI NUOVO i file aggiornati sul tuo hosting.
+    Il portale NON scrive automaticamente nei server o in Google Drive.
+
+TRADUZIONI
+ - Interfacce IT/EN/FR/ES gia presenti in i18n/*.json.
+ - Sono attivate SOLO le lingue elencate in config/site.json > enabledLocales.
+ - Non abilitare EN/FR/ES prima di avere completato content/fonti_en.csv,
+   content/fonti_fr.csv o content/fonti_es.csv e sostituito ciascun bonus
+   nella rispettiva cartella bonus/en, bonus/fr, bonus/es.
+ - Trovi modelli in content/*_MODELLO_NON_PUBBLICARE.csv.
+ - Dopo aver terminato una lingua, aggiungi ad esempio "en" in enabledLocales.
+ - I PDF scientifici sono comuni alle lingue; si trovano tutti in
+   downloads/fonti e restano nominati SC-XX.pdf.
+ - Ogni pagina ha link condivisibili con ?lang=it&pagina=fonte&sc=SC-04.
+ - QR code: genera il codice SOLO DOPO aver fissato dominio/URL pubblico.
+
+PUBBLICAZIONE SEMPLICE SU CLOUDFLARE PAGES
+ 1) Apri https://dash.cloudflare.com/ e scegli Workers & Pages > Create.
+ 2) Scegli Pages > Direct Upload / Upload assets.
+ 3) Trascina l'intera cartella EINSTEIN_PORTALE_QR o lo ZIP della cartella
+    (senza una cartella aggiuntiva sopra index.html).
+ 4) Pubblica, visita l'indirizzo .pages.dev e testa bonus e fonti.
+ 5) Imposta come dominio personalizzato bonus.csabookskids.com (DNS).
+    Non inserire il QR nel libro finche il dominio non risponde.
+ ATTENZIONE: Cloudflare Pages ha un limite di 25 MiB PER SINGOLO FILE
+    per i siti statici. PDF piu grandi vanno ospitati su R2 o altra
+    destinazione compatibile, con sviluppo aggiuntivo del download.
+
+ALTERNATIVA VERCEL
+ https://vercel.com/drop permette di caricare una cartella o ZIP.
+ Con un progetto indipendente puoi aggiungere bonus.csabookskids.com.
+ Con Vercel Hobby, i caricamenti statici da CLI sono soggetti a un
+ limite di 100 MB di file sorgente: attenzione quando aggiungerai 56 PDF.
+
+COME PUBBLICARE SOTTO csabookskids.com/einstein/
+ Non basta rinominare la cartella: il sito CSA attuale deve SERVIRE
+ quei file come directory statica /einstein/; su framework come Next.js
+ in genere si copia la cartella nella directory public/einstein del progetto
+ CSA e si pubblica nuovamente il progetto principale. Se non hai accesso
+ al progetto CSA, preferisci bonus.csabookskids.com.
+
+GOOGLE SITES
+ Non consigliato: non e progettato per caricare direttamente
+ e gestire una directory di file HTML/CSS/JS con 3 mini-siti e PDF.
+ Potresti incorporare il portale da un hosting esterno, ma a quel punto
+ il sito autonomo sarebbe comunque necessario.
+
+IMPORTANTE SU 'PAGINA NASCOSTA'
+ Il sito e configurato noindex,nofollow. Questo scoraggia i motori di
+ ricerca, NON limita l'accesso. Chi conosce il link puo entrare e
+ scaricare i PDF. Se vuoi un accesso riservato agli acquirenti serve
+ autenticazione o un controllo server (non compreso).
+
+ANTEPRIMA LOCALE
+ Non aprire index.html con doppio clic: i browser bloccano l'accesso a
+ JSON e CSV quando l'indirizzo e file://. Invece:
+ - Apri terminale in questa cartella
+ - Esegui: python -m http.server 8000
+ - Apri http://localhost:8000/
+
+DIRITTI DELLE FONTI
+ I PDF di articoli scientifici NON sono inclusi. Carica solo PDF che
+ hai il diritto di redistribuire; in caso contrario lascia il pulsante
+ inattivo e mantieni il link all'editore o alla fonte istituzionale.
+ Le 56 citazioni presenti sono quelle disponibili dall'indice
+ bibliografico del progetto e includono DOI dove noti: non sono
+ bibliografie complete con tutti gli autori. Integra dove necessario.
+
+SICUREZZA E PRIVACY
+ Il portale non richiede cookie o account. I mini-siti bonus inclusi
+ possono usare la memoria locale per ricordare i progressi.
+ Non aggiungere servizi analytics senza aggiornare informative e consenso.
+
+SUPPORTO: il sito e interamente statico e non richiede installazioni.

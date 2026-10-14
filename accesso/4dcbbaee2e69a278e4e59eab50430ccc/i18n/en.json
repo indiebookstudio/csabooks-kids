@@ -1,0 +1,148 @@
+{
+  "code": "en",
+  "localeName": "English",
+  "nav": {
+    "home": "Home",
+    "bonus": "Bonuses",
+    "sources": "Source library",
+    "book": "The book"
+  },
+  "brand": {
+    "eyebrow": "EXCLUSIVE BOOK COMPANION",
+    "title": "OTTO’S SECRET",
+    "titleEm": "WORLD",
+    "intro": "The book ends. Discovery doesn’t.",
+    "subtitle": "Step into a universe of missions, games, short films and scientific wonders. Otto has prepared it all for you.",
+    "age": "FOR EXPLORERS AGED 7–12",
+    "bookEyebrow": "FROM THE ILLUSTRATED BOOK",
+    "bookDescription": "Dinosaurs, extraordinary animals, space and unbelievable inventions. Real stories for curious minds.",
+    "ctaExplore": "Explore the bonuses",
+    "ctaSources": "Scientific sources",
+    "welcome": "HELLO, EXPLORER!",
+    "welcomeText": "Choose a door. A new adventure awaits behind each one!"
+  },
+  "sections": {
+    "bonusEyebrow": "DOORS TO DISCOVERY",
+    "bonusTitle": "Choose your next adventure",
+    "bonusSubtitle": "Five experiences to explore, print, play and watch together.",
+    "sourceEyebrow": "BEHIND EVERY WONDER, THERE IS EVIDENCE",
+    "sourceTitle": "Sources, one discovery at a time",
+    "sourceSubtitle": "Find the SC-XX code printed in the book, read the citation and visit the original source. If a PDF has been uploaded, you can download it.",
+    "sourceWhyTitle": "Unbelievable stories. Real sources.",
+    "sourceWhyText": "The book separates what researchers observed from what remains a hypothesis. Follow the original research here.",
+    "sourcesCount": "56 scientific and historical records",
+    "bundleTitle": "One book. Many adventures.",
+    "bundleText": "Come back anytime: this portal will grow with new content and more book languages.",
+    "enter": "Enter bonus",
+    "viewAllSources": "Explore 56 sources",
+    "readMore": "Discover more",
+    "back": "Go back"
+  },
+  "bonus": {
+    "missioni": {
+      "tag": "PDF · ILLUSTRATED ADVENTURE",
+      "title": "Otto’s Seven Secret Missions",
+      "subtitle": "The mystery of the Atlas of Wonders",
+      "description": "Seven scientific mysteries, clues to collect and a secret to reveal.",
+      "detail": "An illustrated adventure with varied puzzles, explained solutions and a final certificate."
+    },
+    "museo": {
+      "tag": "INTERACTIVE WEBSITE",
+      "title": "Museum of Impossible Discoveries",
+      "subtitle": "Seven rooms. A whole museum to explore.",
+      "description": "Visit seven themed galleries, solve challenges and complete your explorer passport.",
+      "detail": "Explore exhibits, study illustrations, solve puzzles and earn seven stamps."
+    },
+    "film": {
+      "tag": "VIDEO · 8 ANIMATIONS",
+      "title": "Science Comes Alive!",
+      "subtitle": "Watch amazing science in motion.",
+      "description": "Eight short illustrated films reveal how surprising scientific phenomena work.",
+      "detail": "The animations are educational reconstructions, not original footage."
+    },
+    "colora": {
+      "tag": "PDF · 10 A4 PAGES",
+      "title": "Color Science with Otto",
+      "subtitle": "Ten adventures to bring to life.",
+      "description": "Whales, dinosaurs, robots and space: ten printable coloring sheets.",
+      "detail": "Ten black-and-white A4 coloring pages."
+    },
+    "carte": {
+      "tag": "GAME · 36 CARDS",
+      "title": "True, False, or We Don’t Know Yet?",
+      "subtitle": "The smartest answer is not always yes or no.",
+      "description": "Thirty-six illustrated cards for challenging friends and family.",
+      "detail": "Play on your phone or print a double-sided deck with explanations."
+    }
+  },
+  "actions": {
+    "openExperience": "Open experience",
+    "downloadPdf": "Download PDF",
+    "downloadCards": "Download double-sided cards",
+    "downloadRules": "Download rules",
+    "playOnline": "Play online",
+    "watchFilms": "Watch 8 films",
+    "openMuseum": "Enter museum",
+    "downloadColor": "Download 10 pages",
+    "downloadMissions": "Download 7 missions",
+    "goToSources": "Open library",
+    "openOfficial": "Visit original source",
+    "downloadSource": "Download source PDF",
+    "sourceNotYet": "PDF not uploaded yet",
+    "sourceChecking": "Checking PDF availability…",
+    "sourceAvailable": "PDF available",
+    "sourceUnavailable": "No PDF has been uploaded for this source. You can still visit the original publication.",
+    "download": "Download",
+    "learnMore": "Explore",
+    "goBack": "Back to bonuses",
+    "backSources": "Back to sources",
+    "sourcePdfHelp": "To enable downloading, upload a PDF using this exact filename:",
+    "correction": "Corrections and additional notes",
+    "linkUnavailable": "No original source URL is available",
+    "sourceIllustration": "Thematic illustration, not an image from the original paper",
+    "comingSoon": "This language version is being prepared",
+    "returnHome": "Return home"
+  },
+  "sourceUi": {
+    "searchPlaceholder": "Search by code, topic or keyword…",
+    "searchLabel": "Find a source",
+    "all": "All",
+    "results": "results",
+    "showMore": "Show more sources",
+    "citation": "Citation / reference",
+    "sourceCode": "Book code",
+    "category": "Topic",
+    "external": "Original source",
+    "choose": "Explore sources",
+    "none": "No sources match this search.",
+    "smallHelp": "Edit bibliographic details in content/fonti_en.csv. PDF links activate automatically."
+  },
+  "categories": {
+    "all": "All",
+    "introduzione": "Introduction",
+    "animali": "Animals",
+    "piante": "Plants and nature",
+    "esperimenti": "Experiments",
+    "tecnologia": "Inventions and robots",
+    "dinosauri": "Dinosaurs and DNA",
+    "corpo": "Body and technology",
+    "spazio": "Space"
+  },
+  "footer": {
+    "tag": "CURIOSITY NEVER ENDS.",
+    "text": "A companion to EINSTEIN, YOU MISSED THIS!",
+    "official": "Visit CSA Books Kids",
+    "legal": "Illustrations do not replace original scientific publications.",
+    "privacy": "No account required. Interactive bonuses may store progress on this device.",
+    "lang": "Language",
+    "sources": "Sources",
+    "home": "Home"
+  },
+  "errors": {
+    "title": "Something did not load",
+    "body": "Refresh the page or check the deployed files.",
+    "retry": "Retry",
+    "notFound": "Page not found",
+    "nosources": "The source index could not be loaded."
+  }
+}

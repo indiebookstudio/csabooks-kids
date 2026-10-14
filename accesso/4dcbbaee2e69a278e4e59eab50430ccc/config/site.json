@@ -1,0 +1,30 @@
+{
+  "siteTitle": "Il mondo segreto di Otto",
+  "bookTitle": "EINSTEIN, QUESTA TE LA SEI PERSA!",
+  "defaultLocale": "it",
+  "enabledLocales": [
+    "it"
+  ],
+  "supportedLocales": [
+    "it",
+    "en",
+    "fr",
+    "es"
+  ],
+  "noindex": true,
+  "publicBaseUrl": "",
+  "bookCover": "media/copertina.webp",
+  "mascot": "media/otto.webp",
+  "sourcePdfDirectory": "downloads/fonti/",
+  "sourceImageDirectory": "media/fonti/",
+  "showSourceExternalPdfLink": false,
+  "bonus": [
+    "missioni",
+    "museo",
+    "film",
+    "colora",
+    "carte"
+  ],
+  "contactUrl": "",
+  "editHelp": "Gestisci copertina e PDF sostituendo i file nelle cartelle. Modifica descrizioni in i18n/it.json e bibliografia in content/fonti_it.csv."
+}

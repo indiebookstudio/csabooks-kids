@@ -1,0 +1,148 @@
+{
+  "code": "it",
+  "localeName": "Italiano",
+  "nav": {
+    "home": "Inizio",
+    "bonus": "I bonus",
+    "sources": "Biblioteca delle fonti",
+    "book": "Il libro"
+  },
+  "brand": {
+    "eyebrow": "IL PORTALE ESCLUSIVO DEL LIBRO",
+    "title": "IL MONDO SEGRETO",
+    "titleEm": "DI OTTO",
+    "intro": "Il libro è finito. Le scoperte no.",
+    "subtitle": "Entra in un universo di missioni, giochi, filmati e meraviglie scientifiche. Otto ha preparato tutto per te.",
+    "age": "PER ESPLORATORI DAI 7 AI 12 ANNI",
+    "bookEyebrow": "DAL LIBRO ILLUSTRATO",
+    "bookDescription": "Dinosauri, animali straordinari, spazio e invenzioni incredibili. Storie vere per menti curiose.",
+    "ctaExplore": "Esplora i bonus",
+    "ctaSources": "Le fonti scientifiche",
+    "welcome": "CIAO, ESPLORATORE!",
+    "welcomeText": "Scegli una porta. Dietro ognuna ti aspetta una nuova avventura!"
+  },
+  "sections": {
+    "bonusEyebrow": "LE PORTE DELLE MERAVIGLIE",
+    "bonusTitle": "Scegli la tua prossima avventura",
+    "bonusSubtitle": "Cinque esperienze da esplorare: da stampare, giocare e guardare insieme.",
+    "sourceEyebrow": "DIETRO OGNI MERAVIGLIA, UNA PROVA",
+    "sourceTitle": "Le fonti, una scoperta alla volta",
+    "sourceSubtitle": "Trova il codice SC-XX indicato nel libro, leggi il riferimento e apri la fonte originale. Se il PDF è stato aggiunto all’archivio, puoi scaricarlo subito.",
+    "sourceWhyTitle": "Storie incredibili. Fonti reali.",
+    "sourceWhyText": "Questo libro distingue ciò che gli scienziati hanno osservato dalle ipotesi ancora aperte. Qui puoi seguire le tracce delle ricerche originali.",
+    "sourcesCount": "56 schede scientifiche e storiche",
+    "bundleTitle": "Un libro. Tante avventure.",
+    "bundleText": "Torna quando vuoi: questo portale può crescere con nuovi materiali e con altre lingue del libro.",
+    "enter": "Entra nel bonus",
+    "viewAllSources": "Esplora le 56 fonti",
+    "readMore": "Scopri il contenuto",
+    "back": "Torna indietro"
+  },
+  "bonus": {
+    "missioni": {
+      "tag": "PDF · AVVENTURA ILLUSTRATA",
+      "title": "Le 7 missioni segrete di Otto",
+      "subtitle": "Il mistero dell’Atlante delle Meraviglie",
+      "description": "Sette enigmi scientifici, indizi da raccogliere e un segreto da svelare. Una piccola avventura illustrata da leggere e completare su carta.",
+      "detail": "24 pagine illustrate, prove diverse, soluzioni spiegate e diploma finale. Scarica e stampa oppure leggilo sullo schermo."
+    },
+    "museo": {
+      "tag": "SITO · INTERATTIVO",
+      "title": "Il Museo delle Scoperte Impossibili",
+      "subtitle": "Sette sale. Un museo tutto da esplorare.",
+      "description": "Visita sette sale tematiche con reperti, domande, sfide e un passaporto da completare con Otto.",
+      "detail": "Una vera esperienza web: visita le sale, osserva le immagini, risolvi gli enigmi e conquista tutti i sigilli."
+    },
+    "film": {
+      "tag": "VIDEO · 8 ANIMAZIONI",
+      "title": "La scienza prende vita!",
+      "subtitle": "Guarda come funzionano le meraviglie.",
+      "description": "Otto ti accompagna in otto brevi filmati per vedere in movimento i fenomeni più sorprendenti del libro.",
+      "detail": "Otto apre una videoteca dedicata a otto fenomeni scientifici. Le animazioni sono ricostruzioni didattiche, non filmati delle ricerche originali."
+    },
+    "colora": {
+      "tag": "PDF · 10 TAVOLE A4",
+      "title": "Colora la scienza con Otto",
+      "subtitle": "Dieci avventure da riempire di colore.",
+      "description": "Orche, dinosauri, robot e spazio: dieci pagine di line art dedicate alle scoperte del libro.",
+      "detail": "Dieci tavole in bianco e nero da stampare su A4. Usa matite, pennarelli o pastelli: la scienza può essere coloratissima."
+    },
+    "carte": {
+      "tag": "GIOCO · 36 CARTE",
+      "title": "Vero, falso o non lo sappiamo?",
+      "subtitle": "La risposta più intelligente non è sempre sì o no.",
+      "description": "Trentasei carte illustrate con tre possibilità: Vero, Falso oppure Non lo sappiamo ancora. Sfida la famiglia!",
+      "detail": "Gioca sul telefono oppure stampa un mazzo fronte-retro. Ogni carta contiene una risposta spiegata."
+    }
+  },
+  "actions": {
+    "openExperience": "Apri l’esperienza",
+    "downloadPdf": "Scarica il PDF",
+    "downloadCards": "Scarica le carte fronte/retro",
+    "downloadRules": "Scarica le regole",
+    "playOnline": "Gioca online",
+    "watchFilms": "Guarda gli 8 film",
+    "openMuseum": "Entra nel museo",
+    "downloadColor": "Scarica le 10 pagine",
+    "downloadMissions": "Scarica le 7 missioni",
+    "goToSources": "Apri la biblioteca",
+    "openOfficial": "Apri la fonte originale",
+    "downloadSource": "Scarica il PDF della fonte",
+    "sourceNotYet": "PDF non ancora caricato",
+    "sourceChecking": "Controllo se il PDF è disponibile…",
+    "sourceAvailable": "PDF disponibile",
+    "sourceUnavailable": "Il PDF non è ancora disponibile in questo archivio. Puoi comunque leggere la fonte originale.",
+    "download": "Scarica",
+    "learnMore": "Scopri",
+    "goBack": "Torna ai bonus",
+    "backSources": "Torna alle fonti",
+    "sourcePdfHelp": "Per rendere disponibile il download, inserisci il documento nella cartella downloads/fonti con questo nome:",
+    "correction": "Correzioni o note aggiuntive",
+    "linkUnavailable": "Link ufficiale non ancora presente nell’indice",
+    "sourceIllustration": "Illustrazione tematica del libro, non immagine della pubblicazione scientifica",
+    "comingSoon": "Contenuto in preparazione per questa lingua",
+    "returnHome": "Torna alla pagina iniziale"
+  },
+  "sourceUi": {
+    "searchPlaceholder": "Cerca per codice, argomento o parola chiave…",
+    "searchLabel": "Cerca una fonte",
+    "all": "Tutte",
+    "results": "risultati",
+    "showMore": "Mostra altre fonti",
+    "citation": "Citazione / riferimento",
+    "sourceCode": "Codice nel libro",
+    "category": "Argomento",
+    "external": "Link ufficiale",
+    "choose": "Esplora le fonti",
+    "none": "Nessuna fonte corrisponde alla ricerca.",
+    "smallHelp": "Puoi aggiornare titoli e link dal file content/fonti_it.csv. I documenti PDF si attivano automaticamente."
+  },
+  "categories": {
+    "all": "Tutte",
+    "introduzione": "Introduzione e curiosità",
+    "animali": "Animali",
+    "piante": "Piante e natura",
+    "esperimenti": "Esperimenti",
+    "tecnologia": "Invenzioni e robot",
+    "dinosauri": "Dinosauri e DNA",
+    "corpo": "Corpo e supertecnologie",
+    "spazio": "Spazio"
+  },
+  "footer": {
+    "tag": "LA CURIOSITÀ NON FINISCE QUI.",
+    "text": "Un progetto editoriale collegato a EINSTEIN, QUESTA TE LA SEI PERSA!",
+    "official": "Visita CSA Books Kids",
+    "legal": "Le immagini illustrative non sostituiscono le pubblicazioni scientifiche. Le fonti esterne appartengono ai rispettivi autori e siti.",
+    "privacy": "Non richiede account. Il portale non raccoglie dati personali. I bonus interattivi possono salvare i progressi sul dispositivo.",
+    "lang": "Lingua",
+    "sources": "Fonti",
+    "home": "Inizio"
+  },
+  "errors": {
+    "title": "Qualcosa non è stato caricato",
+    "body": "Aggiorna la pagina. Se il problema continua, controlla i file di configurazione e i percorsi sul server.",
+    "retry": "Riprova",
+    "notFound": "Pagina non trovata",
+    "nosources": "Non riesco a caricare l’elenco delle fonti."
+  }
+}
