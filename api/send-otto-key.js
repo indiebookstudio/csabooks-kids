@@ -76,7 +76,13 @@ const EMAIL_I18N = {
     author: "Otto",
     authorTitle: "Il piccolo esploratore delle grandi scoperte",
     footerDisclaimer: "Ricevi questa email perché hai richiesto la chiave segreta di Otto per il libro «EINSTEIN, QUESTA TE LA SEI PERSA!».",
-    copyright: "Tutti i diritti riservati."
+    copyright: "Tutti i diritti riservati.",
+    helpTitle: "Hai bisogno di assistenza o non riesci a entrare?",
+    helpText: "Se hai difficoltà con la chiave o ad accedere al portale, puoi scriverci in qualsiasi momento:",
+    helpEmailSubject: "Richiesta assistenza accesso portale Otto",
+    marketingActiveTitle: "✓ Iscrizione novità editoriali: CONFERMATA",
+    marketingActiveText: "Hai scelto di ricevere novità sui libri, nuove attività gratuite e iniziative editoriali. Puoi revocare il consenso in qualsiasi momento scrivendo a csabooks.kids@gmail.com.",
+    marketingInactiveText: "Iscrizione novità editoriali: Non attiva per questa richiesta."
   },
   en: {
     langHtml: "en",
@@ -91,7 +97,13 @@ const EMAIL_I18N = {
     author: "Otto",
     authorTitle: "The little explorer of big discoveries",
     footerDisclaimer: "You are receiving this email because you requested Otto's secret key for the book 'EINSTEIN, YOU MISSED THIS ONE!'.",
-    copyright: "All rights reserved."
+    copyright: "All rights reserved.",
+    helpTitle: "Need help or trouble accessing?",
+    helpText: "If you have any difficulty with the secret key or accessing the portal, email us anytime:",
+    helpEmailSubject: "Assistance request for Otto portal access",
+    marketingActiveTitle: "✓ Newsletter subscription: CONFIRMED",
+    marketingActiveText: "You chose to receive book updates and free activities. You can unsubscribe anytime by emailing csabooks.kids@gmail.com.",
+    marketingInactiveText: "Newsletter subscription: Not active for this request."
   },
   fr: {
     langHtml: "fr",
@@ -106,7 +118,13 @@ const EMAIL_I18N = {
     author: "Otto",
     authorTitle: "Le petit explorateur des grandes découvertes",
     footerDisclaimer: "Vous recevez cet e-mail car vous avez demandé la clé secrète d'Otto pour le livre « EINSTEIN, TU AS MANQUÉ CELLE-LÀ ! ».",
-    copyright: "Tous droits réservés."
+    copyright: "Tous droits réservés.",
+    helpTitle: "Besoin d'aide ou problème d'accès ?",
+    helpText: "Si vous rencontrez des difficultés avec la clé secrète ou l'accès au portail, écrivez-nous à :",
+    helpEmailSubject: "Demande d'assistance accès portail Otto",
+    marketingActiveTitle: "✓ Inscription aux nouveautés : CONFIRMÉE",
+    marketingActiveText: "Vous avez choisi de recevoir les actualités des livres et les activités gratuites. Révocation possible à tout moment.",
+    marketingInactiveText: "Inscription aux nouveautés : Non active pour cette demande."
   },
   es: {
     langHtml: "es",
@@ -121,7 +139,13 @@ const EMAIL_I18N = {
     author: "Otto",
     authorTitle: "El pequeño explorador de los grandes descubrimientos",
     footerDisclaimer: "Recibes este correo porque solicitaste la llave secreta de Otto para el libro «¡EINSTEIN, ESTA TE LA PERDISTE!».",
-    copyright: "Todos los derechos reservados."
+    copyright: "Todos los derechos reservados.",
+    helpTitle: "¿Necesitas ayuda o problemas para entrar?",
+    helpText: "Si tienes alguna dificultad con la llave secreta o para acceder al portal, escríbenos:",
+    helpEmailSubject: "Solicitud de asistencia acceso portal Otto",
+    marketingActiveTitle: "✓ Suscripción a novedades: CONFIRMADA",
+    marketingActiveText: "Has elegido recibir novedades sobre libros y actividades gratuitas. Puedes revocar el consentimiento cuando quieras.",
+    marketingInactiveText: "Suscripción a novedades: No activa para esta solicitud."
   }
 };
 
@@ -135,10 +159,11 @@ function escapeHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
-function buildEmailHtml({ lang }) {
+function buildEmailHtml({ lang, marketingConsent = false }) {
   const langKey = (lang && EMAIL_I18N[lang.toLowerCase()]) ? lang.toLowerCase() : 'it';
   const t = EMAIL_I18N[langKey] || EMAIL_I18N.it;
   const currentYear = new Date().getFullYear();
+  const isMarketingActive = Boolean(marketingConsent);
 
   return `
 <!DOCTYPE html>
@@ -222,6 +247,41 @@ function buildEmailHtml({ lang }) {
             ${escapeHtml(t.authorTitle)}
           </p>
         </div>
+
+        <!-- Box Assistenza con link email cliccabile -->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="background: rgba(245, 208, 138, 0.08); border: 1px solid rgba(245, 208, 138, 0.28); border-radius: 14px; margin: 28px 0 0 0;">
+          <tr>
+            <td style="padding: 18px 20px; text-align: center;">
+              <p style="font-size: 13.5px; font-weight: 700; color: #FFE4AC; margin: 0 0 6px 0;">
+                💡 ${escapeHtml(t.helpTitle)}
+              </p>
+              <p style="font-size: 12.5px; line-height: 1.55; color: #B2C5D6; margin: 0 0 12px 0;">
+                ${escapeHtml(t.helpText)}
+              </p>
+              <a href="mailto:${CONFIG.replyToEmail}?subject=${encodeURIComponent(t.helpEmailSubject)}" style="display: inline-block; padding: 10px 22px; background: rgba(245, 208, 138, 0.16); border: 1px solid #f5d08a; border-radius: 50px; font-size: 12.5px; font-weight: 700; color: #F5D08A !important; text-decoration: none;">
+                ✉ ${escapeHtml(CONFIG.replyToEmail)}
+              </a>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Box Consenso Marketing (Spunta Opzionale) -->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 18px 0 0 0; border-radius: 12px; ${isMarketingActive ? 'background: rgba(16, 185, 129, 0.12); border: 1px solid #10B981;' : 'background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12);'}">
+          <tr>
+            <td style="padding: 12px 16px; text-align: left;">
+              ${isMarketingActive ? `
+                <p style="font-size: 12px; color: #A7F3D0; margin: 0; line-height: 1.55;">
+                  <strong style="color: #FFFFFF;">${escapeHtml(t.marketingActiveTitle)}</strong><br>
+                  ${escapeHtml(t.marketingActiveText)}
+                </p>
+              ` : `
+                <p style="font-size: 11.5px; color: #8BA4B8; margin: 0; line-height: 1.5;">
+                  ${escapeHtml(t.marketingInactiveText)}
+                </p>
+              `}
+            </td>
+          </tr>
+        </table>
       </td>
     </tr>
 
@@ -375,7 +435,7 @@ export default async function handler(req) {
     }
 
     // 10. Costruzione Template Email
-    const emailHtml = buildEmailHtml({ lang });
+    const emailHtml = buildEmailHtml({ lang, marketingConsent: Boolean(marketingConsent) });
     const t = EMAIL_I18N[lang] || EMAIL_I18N.it;
     const emailSubject = t.subject;
 

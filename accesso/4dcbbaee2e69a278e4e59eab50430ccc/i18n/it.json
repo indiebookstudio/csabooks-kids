@@ -164,7 +164,9 @@
     "enterPortal": "ENTRA NEL MONDO DI OTTO",
     "relockBtn": "Blocca questo dispositivo",
     "requestAgainBtn": "Richiedi nuovamente la chiave via email",
-    "headerKeyBtn": "🔑 Chiave"
+    "headerKeyBtn": "Chiave",
+    "helpTitle": "Hai bisogno di assistenza?",
+    "helpText": "Non ricevi la chiave o hai difficoltà ad accedere? Scrivici direttamente a"
   },
   "keyEmail": {
     "subject": "La chiave segreta di Otto è arrivata! 🔑",

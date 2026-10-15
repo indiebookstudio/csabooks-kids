@@ -171,7 +171,9 @@
     "enterPortal": "ENTER OTTO'S WORLD",
     "relockBtn": "Lock this device",
     "requestAgainBtn": "Request key again via email",
-    "headerKeyBtn": "🔑 Key"
+    "headerKeyBtn": "Key",
+    "helpTitle": "Need assistance?",
+    "helpText": "Didn't receive the key or trouble accessing? Email us directly at"
   },
   "keyEmail": {
     "subject": "Otto's secret key has arrived! 🔑",

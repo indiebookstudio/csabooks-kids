@@ -171,7 +171,9 @@
     "enterPortal": "ENTRER DANS LE MONDE D'OTTO",
     "relockBtn": "Verrouiller cet appareil",
     "requestAgainBtn": "Demander à nouveau la clé par e-mail",
-    "headerKeyBtn": "🔑 Clé"
+    "headerKeyBtn": "Clé",
+    "helpTitle": "Besoin d'aide ?",
+    "helpText": "Vous n'avez pas reçu la clé ou avez des difficultés à accéder ? Écrivez-nous à"
   },
   "keyEmail": {
     "subject": "La clé secrète d'Otto est arrivée ! 🔑",

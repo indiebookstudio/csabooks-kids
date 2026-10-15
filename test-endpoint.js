@@ -297,6 +297,8 @@ async function runTests() {
       assert(interceptedBody.htmlContent.includes('OTTO'), 'HTML email must contain the universal key OTTO');
       assert(interceptedBody.htmlContent.includes('https://csabookskids.com/accesso/4dcbbaee2e69a278e4e59eab50430ccc/'), 'HTML email must contain permanent QR URL');
       assert(interceptedBody.htmlContent.includes('polpo_esploratore_con_chiave_dorata.png'), 'HTML must include Otto with golden key image');
+      assert(interceptedBody.htmlContent.includes('mailto:csabooks.kids@gmail.com'), 'HTML email must contain assistance mailto link');
+      assert(interceptedBody.htmlContent.includes('Non attiva'), 'HTML email must indicate marketing inactive when false');
     } finally {
       globalThis.fetch = originalFetch;
     }

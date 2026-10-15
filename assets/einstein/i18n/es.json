@@ -171,7 +171,9 @@
     "enterPortal": "ENTRA EN EL MUNDO DE OTTO",
     "relockBtn": "Bloquear este dispositivo",
     "requestAgainBtn": "Solicitar la llave de nuevo por correo",
-    "headerKeyBtn": "🔑 Llave"
+    "headerKeyBtn": "Llave",
+    "helpTitle": "¿Necesitas ayuda?",
+    "helpText": "¿No recibes la llave o tienes problemas para entrar? Escríbenos directamente a"
   },
   "keyEmail": {
     "subject": "¡La llave secreta de Otto ha llegado! 🔑",

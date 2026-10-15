@@ -199,7 +199,7 @@
                 </div>
                 <input type="text" name="website" id="honeypot-otto" style="position:absolute;left:-9999px;opacity:0" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <label class="access-consent" for="chk-marketing">
-                  <input type="checkbox" id="chk-marketing">
+                  <input type="checkbox" id="chk-marketing" checked>
                   <span>${esc(L('access.marketingConsent'))} <a href="#privacy-modal" class="privacy-link" id="trigger-privacy-modal">${esc(L('access.privacyLink'))}</a></span>
                 </label>
                 <div id="email-feedback" class="access-feedback" role="alert"></div>
@@ -208,6 +208,15 @@
                 </button>
               </form>
             </article>
+          </div>
+
+          <!-- Riquadro Assistenza e Supporto Accesso -->
+          <div class="access-help-card">
+            <div class="access-help-icon" aria-hidden="true">💡</div>
+            <div class="access-help-content">
+              <h3>${esc(L('access.helpTitle'))}</h3>
+              <p>${esc(L('access.helpText'))} <a href="mailto:csabooks.kids@gmail.com?subject=Richiesta%20assistenza%20accesso%20chiave%20Otto" class="access-help-mail"><strong>csabooks.kids@gmail.com</strong></a>. Ti aiuteremo subito!</p>
+            </div>
           </div>
 
           <!-- Modale Informativa Privacy -->
@@ -348,13 +357,9 @@
         if(sent){
           emailFeedback.className = 'access-feedback show success';
           emailFeedback.innerHTML = `✉ <strong>${esc(L('access.path2Sent'))}</strong>`;
-          if(inputKey){
-            inputKey.value = 'OTTO';
-            inputKey.focus();
-          }
         } else {
           emailFeedback.className = 'access-feedback show error';
-          emailFeedback.textContent = lastErr ? `Non è stato possibile inviare la chiave (${lastErr}). Riprova tra poco.` : 'Non è stato possibile inviare la chiave. Riprova più tardi.';
+          emailFeedback.innerHTML = `Non è stato possibile inviare la chiave. Scrivici direttamente a <a href="mailto:csabooks.kids@gmail.com?subject=Assistenza%20invio%20chiave%20Otto" style="color:#ffe4ac;text-decoration:underline">csabooks.kids@gmail.com</a> e te la invieremo subito!`;
         }
       });
     }
