@@ -159,10 +159,77 @@ function getSpotifySeriesUrl(lang) {
 // ==========================================================================
 const BOOKS = [
   {
+    "id": "raccolta-vol1-it",
+    "volume": 1,
+    "collection": "bundle",
+    "format": "rectangular",
+    "isRectangular": true,
+    "isNew": true,
+    "title": "Le Avventure del Cantiere — Raccolta Vol. 1",
+    "subtitle": "Edizione speciale in grande formato (21,5 × 28 cm)",
+    "author": "Marco Salucci",
+    "language": "Italiano",
+    "languageCode": "it",
+    "age": "2–5 anni",
+    "badge": "Raccolta Vol. 1",
+    "cover": "assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png",
+    "storiesIncluded": [
+      "Benny l'escavatore e la collina che cambiava forma",
+      "Rudy la ruspa e la spiaggia che scompariva",
+      "Leo la gru e le gemme della montagna",
+      "Bruno il camion e lo stagno delle papere"
+    ],
+    "preview": [
+      "assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png",
+      "assets/construction-site-adventures/Bundle.Volume.1/IT/2.png",
+      "assets/construction-site-adventures/Bundle.Volume.1/IT/3.png",
+      "assets/construction-site-adventures/Bundle.Volume.1/IT/4.png",
+      "assets/construction-site-adventures/Bundle.Volume.1/IT/6.png",
+      "assets/construction-site-adventures/Bundle.Volume.1/IT/7.png",
+      "assets/construction-site-adventures/Bundle.Volume.1/IT/8.png",
+      "assets/construction-site-adventures/Bundle.Volume.1/IT/9.png",
+      "assets/construction-site-adventures/Bundle.Volume.1/IT/10.png",
+      "assets/construction-site-adventures/Bundle.Volume.1/IT/11.png",
+      "assets/construction-site-adventures/Bundle.Volume.1/IT/12.png",
+      "assets/construction-site-adventures/Bundle.Volume.1/IT/Back.Cover.png"
+    ],
+    "asin": "B0HN4QMLV1",
+    "amazon": {
+      "it": "B0HN4QMLV1",
+      "com": "B0HN4QMLV1"
+    }
+  },
+  {
+    "id": "raccolta-vol2-it",
+    "volume": 2,
+    "collection": "bundle",
+    "format": "rectangular",
+    "isRectangular": true,
+    "comingSoon": true,
+    "title": "Le Avventure del Cantiere — Raccolta Vol. 2",
+    "subtitle": "Edizione speciale in grande formato (21,5 × 28 cm)",
+    "author": "Marco Salucci",
+    "language": "Italiano",
+    "languageCode": "it",
+    "age": "2–5 anni",
+    "badge": "Raccolta Vol. 2",
+    "cover": "assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png?v=20261015",
+    "storiesIncluded": [
+      "Benny l'escavatore e le monete dell'antica Roma",
+      "Nina la betoniera e il ponte dei coniglietti",
+      "Rino il rullo e i ladri del cantiere",
+      "Leo la gru e il nido della cinciallegra"
+    ],
+    "preview": [
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png?v=20261015",
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/Back.Cover.png"
+    ],
+    "amazon": {}
+  },
+  {
     "id": "leo-rudy-savana-it",
     "volume": 9,
     "collection": "construction-site",
-    "isNew": true,
     "title": "Leo la gru & Rudy la ruspa in Missione Savana",
     "subtitle": "Libro illustrato per bambini 2-5 anni",
     "author": "Marco Salucci",

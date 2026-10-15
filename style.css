@@ -1578,6 +1578,12 @@ button {
   transition: transform 0.35s ease;
 }
 
+/* Cover Wrapper per Raccolte e Grandi Volumi in Formato Rettangolare (1555 x 2000) */
+.book-card.book-card-rectangular .book-cover-wrap,
+.book-card[data-format="rectangular"] .book-cover-wrap {
+  aspect-ratio: 1555 / 2000;
+}
+
 .book-card:hover .book-cover-wrap img {
   transform: scale(1.04);
 }
@@ -2244,6 +2250,11 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.sample-img-container.is-rectangular {
+  aspect-ratio: 1555 / 2000;
+  max-width: 380px;
 }
 
 .sample-page-img {
@@ -5764,5 +5775,358 @@ button {
     padding: 1.15rem;
   }
 }
+
+/* ==========================================================================
+   SEZIONE RACCOLTE (LE GRANDI RACCOLTE IN FORMATO RETTANGOLARE)
+   ========================================================================== */
+.collections-section {
+  padding: 5rem 0 5.5rem 0;
+  background: linear-gradient(180deg, #FAF6EE 0%, #FFFDF9 100%);
+  border-top: 1px solid rgba(226, 214, 197, 0.6);
+  border-bottom: 1px solid rgba(226, 214, 197, 0.6);
+  position: relative;
+}
+
+.collections-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.collections-title {
+  font-family: var(--font-heading, 'Fredoka', sans-serif);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  color: #151D2A;
+  margin: 0 0 0.85rem 0;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.collections-subtitle {
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-size: 1.12rem;
+  color: #5A6A80;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Griglia Raccolte: Schede showcase eleganti a larghezza piena */
+.collections-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.collection-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 214, 197, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  overflow: visible;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.collection-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 42px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(240, 90, 40, 0.2);
+  border-color: rgba(240, 90, 40, 0.35);
+}
+
+.collection-card.has-dropdown-open {
+  z-index: 50;
+}
+
+.collection-card-inner {
+  padding: 2.25rem 2.5rem;
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Colonna Copertina */
+.collection-cover-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.collection-cover-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 290px;
+  aspect-ratio: 1555 / 2000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16), 0 2px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  background-color: #FAF6EF;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.collection-cover-wrap:hover {
+  transform: scale(1.025);
+  box-shadow: 0 18px 40px rgba(240, 90, 40, 0.28);
+}
+
+.collection-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.collection-cover-zoom-hint {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(21, 29, 42, 0.88);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  pointer-events: none;
+}
+
+/* Colonna Contenuto: occupa esattamente l'altezza della copertina */
+.collection-content-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.collection-content-header {
+  margin-bottom: 0.75rem;
+}
+
+.collection-card-title {
+  font-family: var(--font-heading, 'Fredoka', sans-serif);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #151D2A;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+}
+
+.collection-card-subtitle {
+  font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
+  font-size: 0.98rem;
+  color: #5A6A80;
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Storie Incluse: box pulito ed elegante con numerazione chiara */
+.collection-stories-block {
+  background: #FAF8F5;
+  border: 1px solid rgba(226, 214, 197, 0.75);
+  border-radius: 16px;
+  padding: 1.05rem 1.35rem;
+  margin: 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.collection-stories-header {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #D94818;
+  margin-bottom: 0.65rem;
+}
+
+.collection-stories-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.collection-story-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: #1E293B;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.collection-story-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #F05A28;
+  color: #FFFFFF;
+  font-family: var(--font-heading, 'Fredoka', sans-serif);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.collection-story-name {
+  flex: 1;
+}
+
+/* Azioni a fondo colonna */
+.collection-actions-row {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.collection-market-buy-bar {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 0.65rem;
+  align-items: center;
+  width: 100%;
+}
+
+.collection-market-buy-bar .btn-buy {
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+}
+
+.collection-btn-coming-wrap {
+  width: 100%;
+}
+
+.collection-btn-coming-wrap .btn-buy-coming-soon {
+  width: 100%;
+  height: 44px;
+  padding: 0 1.25rem;
+  border-radius: 14px;
+  background: #EDE8E1;
+  color: #78716C;
+  border: 1px dashed #C7BEB3;
+  cursor: not-allowed;
+  font-family: var(--font-heading, 'Fredoka', sans-serif);
+  font-size: 0.92rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-sizing: border-box;
+}
+
+.collection-sample-btn {
+  width: 100%;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 1.25rem;
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(226, 214, 197, 0.95);
+  color: #151D2A;
+  font-family: var(--font-heading, 'Fredoka', sans-serif);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.collection-sample-btn:hover {
+  background: #FAF6EF;
+  border-color: #F05A28;
+  color: #F05A28;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .collection-card-inner {
+    grid-template-columns: 240px 1fr;
+    gap: 1.75rem;
+    padding: 1.75rem;
+  }
+
+  .collection-cover-wrap {
+    max-width: 240px;
+  }
+
+  .collection-market-buy-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-card-title {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .collection-card-inner {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .collection-cover-wrap {
+    max-width: 210px;
+    margin: 0 auto;
+  }
+
+  .collection-content-header {
+    text-align: center;
+  }
+
+  .collection-card-title {
+    font-size: 1.35rem;
+  }
+
+  .collection-card-subtitle {
+    font-size: 0.92rem;
+  }
+
+  .collection-stories-block {
+    padding: 0.9rem 1.1rem;
+  }
+
+  .collection-story-item {
+    font-size: 0.88rem;
+  }
+}
+
 
 

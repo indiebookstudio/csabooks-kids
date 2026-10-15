@@ -3033,6 +3033,7 @@ window.setBookLanguageFilter = function(filterCode) {
 
   updateBookFilterButtons();
   renderBookCatalog(currentLanguage);
+  renderCollectionsCatalog(currentLanguage);
 };
 
 /* ==========================================================================
@@ -3495,6 +3496,7 @@ function applyLanguage(lang) {
   }
 
   renderBookCatalog(lang);
+  renderCollectionsCatalog(lang);
 }
 
 function updateBookFilterButtons() {
@@ -4132,9 +4134,10 @@ function renderBookCatalog(lang) {
     const isNew = Boolean(book.isNew);
     const newBadgeText = strings.bookBadgeNew || (lang === 'fr' ? 'NOUVEAU' : (lang === 'en' ? 'NEW' : (lang === 'de' ? 'NEU' : (lang === 'es' ? 'NUEVO' : 'NUOVO'))));
     const newBadgeHtml = isNew ? `<span class="book-badge-new">${escapeHtml(newBadgeText)}</span>` : '';
+    const isRectangular = book.format === 'rectangular' || Boolean(book.isRectangular);
 
     return `
-      <article class="book-card ${isComingSoon ? 'book-card-coming-soon' : ''} ${isNew ? 'book-card-new' : ''}" id="card-${escapeHtml(book.id)}">
+      <article class="book-card ${isComingSoon ? 'book-card-coming-soon' : ''} ${isNew ? 'book-card-new' : ''} ${isRectangular ? 'book-card-rectangular' : ''}" id="card-${escapeHtml(book.id)}" ${isRectangular ? 'data-format="rectangular"' : ''}>
         <div class="book-cover-wrap" onclick="openSampleModal('${escapeJs(book.id)}')" role="button" tabindex="0" title="${escapeHtml(strings.readSampleBtn)} - ${escapeHtml(book.title)}">
           <img 
             src="${escapeHtml(book.cover)}" 
@@ -4169,6 +4172,196 @@ function renderBookCatalog(lang) {
 }
 
 /* ==========================================================================
+   4.5 RENDERING SEZIONE RACCOLTE (VISIBILE ESCLUSIVAMENTE IN ITALIANO)
+   ========================================================================== */
+
+function renderCollectionsCatalog(lang) {
+  const section = document.getElementById('raccolte');
+  const navLink = document.getElementById('nav-link-raccolte');
+  const footerLink = document.getElementById('footer-link-raccolte');
+  const grid = document.getElementById('collections-catalog-grid');
+
+  const isItalian = (lang === 'it');
+
+  if (section) {
+    section.style.display = isItalian ? '' : 'none';
+  }
+  if (navLink) {
+    navLink.style.display = isItalian ? '' : 'none';
+  }
+  if (footerLink) {
+    footerLink.style.display = isItalian ? '' : 'none';
+  }
+
+  if (!isItalian || !grid) return;
+
+  const bundleBooks = (typeof BOOKS !== 'undefined' && Array.isArray(BOOKS))
+    ? BOOKS.filter(b => b.collection === 'bundle' && b.languageCode === 'it')
+    : [];
+
+  if (bundleBooks.length === 0) {
+    grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; padding: 2rem;">Nessuna raccolta disponibile al momento.</p>`;
+    return;
+  }
+
+  const strings = I18N[lang] || I18N.it;
+
+  const cardsHtml = bundleBooks.map(book => {
+    const isComingSoon = Boolean(book.comingSoon) || !getBookAsin(book);
+    const hasPreview = Array.isArray(book.preview) && book.preview.length > 0;
+
+    let storiesHtml = '';
+    if (Array.isArray(book.storiesIncluded) && book.storiesIncluded.length > 0) {
+      storiesHtml = `
+        <div class="collection-stories-block">
+          <span class="collection-stories-header">4 storie complete nel volume:</span>
+          <ol class="collection-stories-list">
+            ${book.storiesIncluded.map((st, idx) => `
+              <li class="collection-story-item">
+                <span class="collection-story-num">${idx + 1}</span>
+                <span class="collection-story-name">${escapeHtml(st)}</span>
+              </li>
+            `).join('')}
+          </ol>
+        </div>
+      `;
+    }
+
+    let actionAreaHtml = '';
+    if (isComingSoon) {
+      actionAreaHtml = `
+        <div class="collection-actions-row">
+          <div class="collection-btn-coming-wrap">
+            <button type="button" class="btn-buy btn-buy-coming-soon is-disabled" disabled aria-disabled="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              <span class="btn-buy-text">In arrivo prossimamente</span>
+            </button>
+          </div>
+          ${hasPreview ? `
+            <button type="button" class="btn-sample collection-sample-btn" onclick="openSampleModal('${escapeJs(book.id)}')" aria-label="Estratto - ${escapeHtml(book.title)}">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+              <span>${escapeHtml(strings.readSampleBtn || 'Estratto')}</span>
+            </button>
+          ` : ''}
+        </div>
+      `;
+    } else {
+      const marketKey = getBookInitialMarket(book.id);
+      selectedMarketState[book.id] = marketKey;
+      const marketInfo = AMAZON_MARKETS[marketKey] || AMAZON_MARKETS.it;
+      const targetUrl = getBookUrlForMarket(book, marketKey);
+      const buyText = (typeof strings.viewOn === 'function')
+        ? strings.viewOn(marketInfo.buttonLabel)
+        : `ACQUISTA SU ${marketInfo.buttonLabel.toUpperCase()}`;
+
+      const marketOptionsHtml = Object.entries(AMAZON_MARKETS).map(([key, info]) => {
+        const isSelected = (key === marketKey);
+        return `
+          <div class="market-option ${isSelected ? 'selected' : ''}" data-market-key="${key}" role="option" aria-selected="${isSelected ? 'true' : 'false'}" onclick="selectBookMarket('${escapeJs(book.id)}', '${key}')">
+            <img src="https://flagcdn.com/24x18/${info.flagCode}.png" srcset="https://flagcdn.com/48x36/${info.flagCode}.png 2x" alt="" width="20" height="15" class="market-flag-img" loading="eager">
+            <span class="market-option-name">${escapeHtml(info.name)}</span>
+            ${isSelected ? '<span class="market-option-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></span>' : ''}
+          </div>
+        `;
+      }).join('');
+
+      actionAreaHtml = `
+        <div class="collection-actions-row">
+          <div class="collection-market-buy-bar">
+            <div class="custom-market-select" id="custom-market-select-${escapeHtml(book.id)}">
+              <button 
+                type="button" 
+                class="market-trigger" 
+                onclick="toggleMarketDropdown('${escapeJs(book.id)}', event)"
+                aria-haspopup="listbox" 
+                aria-expanded="false" 
+                aria-label="${escapeHtml(strings.selectStore)}: ${escapeHtml(marketInfo.name)}"
+              >
+                <span class="market-trigger-content">
+                  <img src="https://flagcdn.com/24x18/${marketInfo.flagCode}.png" srcset="https://flagcdn.com/48x36/${marketInfo.flagCode}.png 2x" alt="" width="20" height="15" class="market-flag-img" loading="eager">
+                  <span class="market-selected-name">${escapeHtml(marketInfo.name)}</span>
+                </span>
+                <svg class="market-chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="market-dropdown-menu" id="market-dropdown-${escapeHtml(book.id)}" role="listbox" style="display: none;">
+                ${marketOptionsHtml}
+              </div>
+            </div>
+
+            <a 
+              href="${targetUrl}" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn-buy"
+              id="buy-btn-${escapeHtml(book.id)}"
+              aria-label="${buyText} - ${escapeHtml(book.title)}"
+            >
+              <span class="btn-buy-text">${buyText}</span>
+              <svg class="btn-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          ${hasPreview ? `
+            <button type="button" class="btn-sample collection-sample-btn" onclick="openSampleModal('${escapeJs(book.id)}')" aria-label="Estratto - ${escapeHtml(book.title)}">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+              <span>${escapeHtml(strings.readSampleBtn || 'Estratto')}</span>
+            </button>
+          ` : ''}
+        </div>
+      `;
+    }
+
+    return `
+      <article class="collection-card ${isComingSoon ? 'is-coming-soon' : 'is-available'}" id="card-${escapeHtml(book.id)}">
+        <div class="collection-card-inner">
+          <div class="collection-cover-column">
+            <div class="collection-cover-wrap" onclick="openSampleModal('${escapeJs(book.id)}')" role="button" tabindex="0" title="${escapeHtml(strings.readSampleBtn)} - ${escapeHtml(book.title)}">
+              <img 
+                src="${escapeHtml(book.cover)}" 
+                alt="${escapeHtml(book.title)}" 
+                class="collection-cover-img"
+                loading="lazy"
+              />
+              <span class="collection-cover-zoom-hint">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>Sfoglia</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="collection-content-column">
+            <div class="collection-content-header">
+              <h3 class="collection-card-title">${escapeHtml(book.title)}</h3>
+              <p class="collection-card-subtitle">${escapeHtml(book.subtitle)}</p>
+            </div>
+
+            ${storiesHtml}
+
+            ${actionAreaHtml}
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+
+  grid.innerHTML = cardsHtml;
+}
+
+/* ==========================================================================
    5. CONTROLLO DROPDOWN MARKETPLACE SULLE CARD E NEL MODAL
    ========================================================================== */
 
@@ -4176,7 +4369,7 @@ function closeAllMarketDropdowns() {
   document.querySelectorAll('.market-dropdown-menu').forEach(m => m.style.display = 'none');
   document.querySelectorAll('.custom-market-select').forEach(s => s.classList.remove('open'));
   document.querySelectorAll('.market-trigger').forEach(t => t.setAttribute('aria-expanded', 'false'));
-  document.querySelectorAll('.book-card').forEach(c => c.classList.remove('has-dropdown-open'));
+  document.querySelectorAll('.book-card, .collection-card').forEach(c => c.classList.remove('has-dropdown-open'));
 }
 
 window.toggleMarketDropdown = function(bookId, event) {
@@ -4196,7 +4389,7 @@ window.toggleMarketDropdown = function(bookId, event) {
   if (!isOpen) {
     menuEl.style.display = 'block';
     selectEl.classList.add('open');
-    const parentCard = selectEl.closest('.book-card');
+    const parentCard = selectEl.closest('.book-card, .collection-card');
     if (parentCard) {
       parentCard.classList.add('has-dropdown-open');
     }
@@ -4562,6 +4755,15 @@ window.openSampleModal = function(bookId) {
     footerEl.innerHTML = buildModalAmazonAction(book, marketKey, currentLanguage);
   }
 
+  const viewerContainer = document.querySelector('.sample-img-container');
+  if (viewerContainer) {
+    if (book.format === 'rectangular' || book.isRectangular) {
+      viewerContainer.classList.add('is-rectangular');
+    } else {
+      viewerContainer.classList.remove('is-rectangular');
+    }
+  }
+
   updateSampleViewer();
 
   if (modal) {
@@ -4579,6 +4781,10 @@ window.closeSampleModal = function() {
     modal.style.display = 'none';
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+  }
+  const viewerContainer = document.querySelector('.sample-img-container');
+  if (viewerContainer) {
+    viewerContainer.classList.remove('is-rectangular');
   }
   activePreviewBook = null;
 };
