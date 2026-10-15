@@ -66,15 +66,19 @@
     const menu=q('#nav-links');if(menu) menu.classList.remove('open');
     const toggle=q('#menu-toggle');if(toggle)toggle.setAttribute('aria-expanded','false');
   }
+  function isUnlocked(){try{return localStorage.getItem('otto_unlocked')==='true';}catch(_){return false;}}
+  function setUnlocked(v){try{if(v)localStorage.setItem('otto_unlocked','true');else localStorage.removeItem('otto_unlocked');}catch(_){}}
   function setNav(){
     const current=page();
     const items=[['inizio',L('nav.home')],['bonus',L('nav.bonus')],['fonti',L('nav.sources')]];
-    q('#nav-links').innerHTML=items.map(([p,label])=>`<a class="nav-link ${current===p||(current==='bonus-dettaglio'&&p==='bonus')||(current==='fonte'&&p==='fonti')?'active':''}" href="${url(p)}" data-internal="${p}" ${current===p?'aria-current="page"':''}>${esc(label)}</a>`).join('');
+    let links=items.map(([p,label])=>`<a class="nav-link ${current===p||(current==='bonus-dettaglio'&&p==='bonus')||(current==='fonte'&&p==='fonti')?'active':''}" href="${url(p)}" data-internal="${p}" ${current===p?'aria-current="page"':''}>${esc(label)}</a>`).join('');
+    links+=`<a class="nav-link nav-key-badge ${current==='accesso'?'active':''}" href="${url('accesso')}" data-internal="accesso" title="${esc(L('access.headerKeyBtn'))}"><span>🔑</span> <span>${esc(L('access.headerKeyBtn'))}</span></a>`;
+    q('#nav-links').innerHTML=links;
     const allowed=config.enabledLocales||['it'];
     q('#language-select').innerHTML=allowed.length>1?`<label for="language" class="visually-hidden">${esc(L('footer.lang'))}</label><select class="locale-select" id="language" aria-label="${esc(L('footer.lang'))}">${allowed.map(l=>`<option value="${esc(l)}" ${language===l?'selected':''}>${esc(localeLabels[l]||l.toUpperCase())}</option>`).join('')}</select>`:`<span class="locale-select" aria-label="${esc(L('footer.lang'))}">${esc(localeLabels[language]||language.toUpperCase())}</span>`;
   }
   function footer(){
-    q('#site-footer').innerHTML=`<div class="wrap"><div class="footer-grid"><div><div class="footer-tag">${esc(L('footer.tag'))}</div><p>${esc(L('footer.text'))}</p><p>${esc(L('footer.privacy'))}</p></div><div class="footer-links"><a href="${url('inizio')}" data-internal="inizio">${esc(L('nav.home'))}</a><a href="${url('fonti')}" data-internal="fonti">${esc(L('nav.sources'))}</a>${linkOK(config.contactUrl)?`<a href="${esc(config.contactUrl)}" target="_blank" rel="noopener noreferrer">${esc(L('footer.official'))} ↗</a>`:''}</div></div><div class="footer-bottom">${esc(L('footer.legal'))}</div></div>`;
+    q('#site-footer').innerHTML=`<div class="wrap"><div class="footer-grid"><div><div class="footer-tag">${esc(L('footer.tag'))}</div><p>${esc(L('footer.text'))}</p><p>${esc(L('footer.privacy'))}</p></div><div class="footer-links"><a href="${url('inizio')}" data-internal="inizio">${esc(L('nav.home'))}</a><a href="${url('fonti')}" data-internal="fonti">${esc(L('nav.sources'))}</a><a href="${url('accesso')}" data-internal="accesso">${esc(L('access.headerKeyBtn'))}</a>${linkOK(config.contactUrl)?`<a href="${esc(config.contactUrl)}" target="_blank" rel="noopener noreferrer">${esc(L('footer.official'))} ↗</a>`:''}</div></div><div class="footer-bottom">${esc(L('footer.legal'))}</div></div>`;
   }
   function card(id,i){
     const b=t.bonus[id];return `<article class="bonus-card ${i===0?'feature':''}"><a href="${url('bonus-dettaglio',{id})}" data-bonus="${id}" aria-label="${esc(b.title)}"><div class="bonus-art"><img src="media/bonus/${id}.webp" loading="lazy" alt="" width="1100" height="700"><span class="bonus-number">0${i+1}</span></div><div class="bonus-body"><div class="bonus-tag">${esc(b.tag)}</div><h3>${esc(b.title)}</h3><p class="bonus-desc">${esc(b.description)}</p><div class="bonus-foot"><span>${esc(L('sections.enter'))}</span><span class="icon-arrow" aria-hidden="true">↗</span></div></div></a></article>`;
@@ -131,10 +135,276 @@
       else{el.removeAttribute('href');el.className='btn btn-plain';el.setAttribute('aria-disabled','true');el.setAttribute('tabindex','-1');status.textContent=L('actions.sourceUnavailable');}
     }catch(_){if(status&&page()==='fonte'&&pageId('sc')===code)status.textContent=L('actions.sourceUnavailable');}
   }
+  function renderAccess(alreadyUnlocked){
+    const ottoWebp = 'media/polpo_esploratore_con_chiave_dorata.webp';
+    const ottoPng = 'media/polpo_esploratore_con_chiave_dorata.png';
+    const unlockedBox = alreadyUnlocked ? `
+      <div class="access-unlocked-box">
+        <p>✦ ${esc(L('access.unlockedNotice'))}</p>
+        <div class="access-unlocked-actions">
+          <a class="btn btn-primary" href="${url('inizio')}" data-internal="inizio">${esc(L('access.enterPortal'))} →</a>
+          <button type="button" class="btn btn-outline" id="btn-relock">${esc(L('access.relockBtn'))}</button>
+        </div>
+      </div>
+    ` : '';
+
+    return `
+      <section class="access-section">
+        <div class="wrap">
+          <div class="access-hero">
+            <div class="access-otto-wrap">
+              <div class="access-otto-glow"></div>
+              <picture>
+                <source srcset="${ottoWebp}" type="image/webp">
+                <img src="${ottoPng}" alt="Otto con la chiave dorata" class="access-otto-img" width="260" height="325" loading="eager">
+              </picture>
+            </div>
+            <span class="access-badge">${esc(L('access.badge'))}</span>
+            <h1 class="access-title">${esc(L('access.title'))}</h1>
+            <p class="access-subtitle">${esc(L('access.subtitle'))}</p>
+          </div>
+
+          ${unlockedBox}
+
+          <div class="access-grid">
+            <!-- Percorso 1: Hai già la chiave? -->
+            <article class="access-card access-card-primary">
+              <span class="access-card-tag">🔑 ${esc(L('access.path1Title'))}</span>
+              <h2>${esc(L('access.path1Title'))}</h2>
+              <p class="access-card-text">Inserisci la parola segreta per sbloccare immediatamente l'accesso a tutti i bonus del libro.</p>
+              <form class="access-form" id="form-enter-key" novalidate>
+                <div class="access-field">
+                  <label class="access-label" for="input-secret-key">${esc(L('access.path1Label'))}</label>
+                  <div class="access-input-wrap">
+                    <input type="text" id="input-secret-key" class="access-input access-input-key" placeholder="${esc(L('access.path1Placeholder'))}" autocomplete="off" autocapitalize="characters" spellcheck="false" required maxlength="12">
+                  </div>
+                </div>
+                <div id="key-feedback" class="access-feedback" role="alert"></div>
+                <button type="submit" class="btn btn-primary access-btn" id="btn-submit-key">
+                  <span>${esc(L('access.path1Btn'))}</span> <span aria-hidden="true">&rarr;</span>
+                </button>
+              </form>
+            </article>
+
+            <!-- Percorso 2: Non conosci ancora la chiave? -->
+            <article class="access-card">
+              <span class="access-card-tag">✉ ${esc(L('access.path2Title'))}</span>
+              <h2>${esc(L('access.path2Title'))}</h2>
+              <p class="access-card-text">${esc(L('access.path2Text'))}</p>
+              <form class="access-form" id="form-request-key" novalidate>
+                <div class="access-field">
+                  <label class="access-label" for="input-parent-email">${esc(L('access.path2Label'))}</label>
+                  <div class="access-input-wrap">
+                    <input type="email" id="input-parent-email" class="access-input" placeholder="${esc(L('access.path2Placeholder'))}" autocomplete="email" required>
+                  </div>
+                </div>
+                <input type="text" name="website" id="honeypot-otto" style="position:absolute;left:-9999px;opacity:0" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <label class="access-consent" for="chk-marketing">
+                  <input type="checkbox" id="chk-marketing">
+                  <span>${esc(L('access.marketingConsent'))} <a href="#privacy-modal" class="privacy-link" id="trigger-privacy-modal">${esc(L('access.privacyLink'))}</a></span>
+                </label>
+                <div id="email-feedback" class="access-feedback" role="alert"></div>
+                <button type="submit" class="btn btn-outline access-btn" id="btn-request-key">
+                  <span id="btn-request-key-text">${esc(L('access.path2Btn'))}</span>
+                </button>
+              </form>
+            </article>
+          </div>
+
+          <!-- Modale Informativa Privacy -->
+          <div class="privacy-modal-overlay" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title">
+            <div class="privacy-modal-card">
+              <div class="privacy-modal-header">
+                <h2 id="privacy-modal-title">${esc(L('access.privacyModalTitle'))}</h2>
+                <button type="button" class="privacy-modal-close" id="btn-close-privacy" aria-label="${esc(L('access.privacyModalClose'))}">&times;</button>
+              </div>
+              <div class="privacy-modal-body">
+                <p><strong>Informativa per gli adulti / genitori ex Regolamento UE 2016/679 (GDPR)</strong></p>
+                <h3>1. Finalità del Servizio (Invio Chiave Segreta)</h3>
+                <p>L'indirizzo email inserito viene utilizzato unicamente per inviare la chiave universale richiesta («OTTO») per accedere alle risorse didattiche del libro <em>Einstein, questa te la sei persa!</em>. La base giuridica è l'esecuzione di una misura richiesta dall'interessato (art. 6, par. 1, lett. b, GDPR).</p>
+                <h3>2. Iscrizione Facoltativa alle Novità Editoriali</h3>
+                <p>La casella di consenso promozionale è completamente facoltativa e non vincolante. Se selezionata, consente l'invio di aggiornamenti su nuovi libri, attività didattiche e iniziative editoriali gratuite (art. 6, par. 1, lett. a, GDPR). Il consenso può essere revocato in ogni momento scrivendo a <a href="mailto:csabooks.kids@gmail.com" class="privacy-link">csabooks.kids@gmail.com</a>.</p>
+                <h3>3. Protezione dei Minori</h3>
+                <p>La richiesta della chiave è rivolta esclusivamente a genitori e adulti. Nessun dato di minori viene raccolto, conservato o profilato per scopi commerciali.</p>
+                <h3>4. Fornitore Tecnico e Trattamento Dati</h3>
+                <p>I messaggi email sono recapitati tramite la piattaforma sicura Brevo (Sendinblue SAS, con server situati nell'Unione Europea conformi al GDPR). Nessun dato viene ceduto a terzi.</p>
+                <h3>5. Diritti dell'Interessato</h3>
+                <p>È sempre possibile richiedere l'accesso, la rettifica, la cancellazione o l'opposizione al trattamento dei propri dati inviando una comunicazione a <strong>csabooks.kids@gmail.com</strong>.</p>
+              </div>
+              <div class="privacy-modal-footer">
+                <button type="button" class="btn btn-outline" id="btn-close-privacy-footer">${esc(L('access.privacyModalClose'))}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  function attachAccessEvents(){
+    const formKey = q('#form-enter-key');
+    const inputKey = q('#input-secret-key');
+    const keyFeedback = q('#key-feedback');
+
+    if(formKey && inputKey){
+      formKey.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const entered = (inputKey.value || '').trim().toUpperCase();
+        if(entered === 'OTTO'){
+          keyFeedback.className = 'access-feedback show success';
+          keyFeedback.innerHTML = `✦ <strong>${esc(L('access.path1Success'))}</strong>`;
+          setUnlocked(true);
+          setTimeout(() => {
+            route('inizio');
+          }, 400);
+        } else {
+          inputKey.classList.add('shake');
+          keyFeedback.className = 'access-feedback show error';
+          keyFeedback.innerHTML = `✗ ${esc(L('access.path1Error'))}`;
+          setTimeout(() => inputKey.classList.remove('shake'), 450);
+        }
+      });
+    }
+
+    const formReq = q('#form-request-key');
+    const inputEmail = q('#input-parent-email');
+    const chkMarketing = q('#chk-marketing');
+    const honeypot = q('#honeypot-otto');
+    const emailFeedback = q('#email-feedback');
+    const btnReq = q('#btn-request-key');
+    const btnReqText = q('#btn-request-key-text');
+
+    if(formReq && inputEmail){
+      formReq.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = (inputEmail.value || '').trim().toLowerCase();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        if(!email || !emailRegex.test(email)){
+          emailFeedback.className = 'access-feedback show error';
+          emailFeedback.textContent = 'Inserisci un indirizzo email valido.';
+          inputEmail.focus();
+          return;
+        }
+
+        btnReq.disabled = true;
+        const originalText = btnReqText ? btnReqText.textContent : 'RICEVI LA CHIAVE SEGRETA';
+        if(btnReqText) btnReqText.textContent = L('access.path2Sending');
+        emailFeedback.className = 'access-feedback show loading';
+        emailFeedback.innerHTML = `<span class="spinner" style="width:16px;height:16px;border-width:2px;display:inline-block;vertical-align:middle;margin-right:6px"></span> ${esc(L('access.path2Sending'))}`;
+
+        const candidateUrls = window.CSA_BACKEND_URL
+          ? [window.CSA_BACKEND_URL]
+          : (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+            ? ['/api/send-otto-key', 'https://csabooks-kids.vercel.app/api/send-otto-key', '/api/send-bonus']
+            : [
+                'https://csabooks-kids.vercel.app/api/send-otto-key',
+                'https://csabooks-kids-saluccimarco-3318s-projects.vercel.app/api/send-otto-key',
+                '/api/send-otto-key',
+                '/api/send-bonus'
+              ];
+
+        let sent = false;
+        let lastErr = null;
+
+        for(const ep of candidateUrls){
+          try{
+            const isSendBonus = ep.endsWith('/api/send-bonus');
+            const payload = {
+              email: email,
+              marketingConsent: chkMarketing ? chkMarketing.checked : false,
+              website: honeypot ? honeypot.value : '',
+              lang: language
+            };
+            if(isSendBonus){
+              payload.action = 'otto-key';
+            }
+
+            const res = await fetch(ep, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(payload)
+            });
+
+            if(res.ok){
+              const data = await res.json().catch(() => ({}));
+              if(data.success !== false){
+                sent = true;
+                break;
+              }
+            } else {
+              const errData = await res.json().catch(() => ({}));
+              lastErr = errData.error || `HTTP ${res.status}`;
+            }
+          } catch(err){
+            lastErr = err.message;
+          }
+        }
+
+        btnReq.disabled = false;
+        if(btnReqText) btnReqText.textContent = originalText;
+
+        if(sent){
+          emailFeedback.className = 'access-feedback show success';
+          emailFeedback.innerHTML = `✉ <strong>${esc(L('access.path2Sent'))}</strong>`;
+          if(inputKey){
+            inputKey.value = 'OTTO';
+            inputKey.focus();
+          }
+        } else {
+          emailFeedback.className = 'access-feedback show error';
+          emailFeedback.textContent = lastErr ? `Non è stato possibile inviare la chiave (${lastErr}). Riprova tra poco.` : 'Non è stato possibile inviare la chiave. Riprova più tardi.';
+        }
+      });
+    }
+
+    const btnRelock = q('#btn-relock');
+    if(btnRelock){
+      btnRelock.addEventListener('click', () => {
+        setUnlocked(false);
+        draw();
+      });
+    }
+
+    const modal = q('#privacy-modal');
+    const triggerModal = q('#trigger-privacy-modal');
+    const btnClose1 = q('#btn-close-privacy');
+    const btnClose2 = q('#btn-close-privacy-footer');
+
+    const openModal = (e) => {
+      if(e) e.preventDefault();
+      if(modal) modal.classList.add('open');
+    };
+    const closeModal = () => {
+      if(modal) modal.classList.remove('open');
+    };
+
+    if(triggerModal) triggerModal.addEventListener('click', openModal);
+    if(btnClose1) btnClose1.addEventListener('click', closeModal);
+    if(btnClose2) btnClose2.addEventListener('click', closeModal);
+    if(modal){
+      modal.addEventListener('click', (e) => {
+        if(e.target === modal) closeModal();
+      });
+    }
+  }
+
   function notFound(){return `<div class="wrap error-card"><h2>${esc(L('errors.notFound'))}</h2>${btn(L('actions.returnHome'),url('inizio'))}</div>`;}
   function draw(){
     setNav(); footer();
     const p=page();const sc=pageId('sc');const id=pageId('id');
+    const unlocked = isUnlocked();
+
+    if(!unlocked || p==='accesso'){
+      app.innerHTML = renderAccess(unlocked);
+      attachAccessEvents();
+      document.title = esc(L('access.title')) + ' | ' + config.bookTitle;
+      document.documentElement.lang = language;
+      return;
+    }
+
     if(p==='inizio')app.innerHTML=renderHome();
     else if(p==='bonus')app.innerHTML=renderBonusGrid();
     else if(p==='bonus-dettaglio')app.innerHTML=renderBonus(id);
@@ -168,6 +438,12 @@
     const a=e.target.closest('a[href^="?pagina="]');if(a){e.preventDefault();const u=new URL(a.href);const p=u.searchParams.get('pagina')||'inizio';route(p,{id:u.searchParams.get('id'),sc:u.searchParams.get('sc')});}
   });
   document.addEventListener('input',e=>{if(e.target.id==='search-sources'){state.query=e.target.value;state.limit=12;drawSourceCards();}});
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'){
+      const m=q('#privacy-modal');
+      if(m&&m.classList.contains('open'))m.classList.remove('open');
+    }
+  });
   document.addEventListener('change',async e=>{
     if(e.target.id!=='language')return;
     const next=e.target.value;if(!(config.enabledLocales||[]).includes(next))return;

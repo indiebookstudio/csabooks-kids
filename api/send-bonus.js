@@ -311,7 +311,12 @@ export default async function handler(req) {
       return jsonResponse({ success: false, error: "Invalid JSON format." }, 400);
     }
 
-    const { firstName: rawFirst, lastName: rawLast, email: rawEmail, website: honeypot, lang: rawLang, consent: rawConsent, volume: rawVolume } = body || {};
+    const { firstName: rawFirst, lastName: rawLast, email: rawEmail, website: honeypot, lang: rawLang, consent: rawConsent, volume: rawVolume, action: rawAction } = body || {};
+
+    if (rawAction === 'otto-key') {
+      const ottoHandler = (await import('./send-otto-key.js')).default;
+      return ottoHandler(req);
+    }
 
     // 6. Anti-Spam Honeypot: Silent acceptance if filled by a bot
     if (honeypot && String(honeypot).trim().length > 0) {

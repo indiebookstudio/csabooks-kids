@@ -193,23 +193,144 @@ Nel caso in cui il sito CSA Books Kids venga riprogettato o migrato su una nuova
 
 ---
 
-## 📋 ELENCO FILE MODIFICATI E CREATI PER L'INTEGRAZIONE
+## 11. LA CHIAVE SEGRETA DI OTTO — COME FUNZIONA L'ACCESSO
 
-### Nuovi File di Configurazione e Script:
-1. `config/permanent-einstein-route.json`: Configurazione centralizzata con token crittografico, URL pubblico e percorsi.
-2. `scripts/sync-einstein-route.js`: Script Node.js di sincronizzazione automatica e controllo integrità file critici.
-3. `accesso/4dcbbaee2e69a278e4e59eab50430ccc/`: Directory pubblica permanente sincronizzata con tutti i file del microsito.
-4. `accesso/4dcbbaee2e69a278e4e59eab50430ccc.html`: Fallback di reindirizzamento immediato per richieste senza trailing slash.
-5. `accesso/index.html`: Pagina di protezione per richieste generiche a `/accesso/`.
-6. `PERMANENT_QR_URL_DO_NOT_CHANGE.md`: Documento di salvaguardia e registro ufficiale della rotta permanente.
-7. `COME_GESTIRE_MICROSITO_EINSTEIN.md`: Questa guida completa alla manutenzione in italiano.
+Il microsito accoglie i lettori con la schermata d'accesso **«La chiave segreta di Otto»**:
 
-### File Esistenti Aggiornati:
-1. `package.json`: Aggiunto script `"build": "node scripts/generate-banners.js && node scripts/sync-einstein-route.js"`.
-2. `.github/workflows/deploy.yml`: Aggiunti passaggi di sincronizzazione e test automatici prima del deployment su GitHub Pages.
-3. `vercel.json`: Aggiunte in cima all'elenco delle rewrites le regole per `/accesso/4dcbbaee2e69a278e4e59eab50430ccc*`.
-4. `404.html`: Aggiunto il token `4dcbbaee2e69a278e4e59eab50430ccc` nel dispatcher immutabile `QR_REGISTRY`.
-5. `serve.js`: Aggiunto supporto MIME per file `.csv` usati dalla biblioteca delle fonti.
-6. `test-qr-routes.js`: Aggiunto il controllo permanente per tutti i file e percorsi del microsito Einstein.
-7. `PERMANENT_QR_ROUTES.md`: Aggiunta la scheda del libro *Einstein, questa te la sei persa!* nel registro ufficiale rotte QR.
-8. `assets/einstein/config/site.json`: Rimosso `contactUrl` per garantire l'isolamento grafico e strutturale assoluto da CSA.
+1. **Chiave Universale Immutabile:**
+   La chiave d'accesso è:
+   ```text
+   OTTO
+   ```
+   - È universale, permanente, non scade e non cambia tra edizioni o traduzioni future.
+   - Il sistema accetta `OTTO`, `otto`, `Otto` e qualsiasi combinazione con spazi iniziali/finali rimossi in automatico.
+
+2. **Percorsi del Visitatore:**
+   - **Chi conosce già la chiave:** La digita nel primo campo ed entra istantaneamente nel portale con un'animazione celebrativa dorata.
+   - **Chi non la conosce ancora:** Un adulto inserisce la propria email per riceverla gratuitamente via posta elettronica. Sotto al campo email è presente la casella facoltativa per ricevere aggiornamenti editoriali e il link all'informativa privacy.
+
+3. **Memorizzazione sul Dispositivo:**
+   - Dopo l'accesso, lo stato di sblocco viene salvato nel `localStorage` del browser (`otto_unlocked = 'true'`).
+   - Nelle visite successive dallo stesso dispositivo, il visitatore entra direttamente nel portale senza dover digitare di nuovo la chiave.
+   - Nella barra di navigazione e nel footer è sempre presente il pulsante **«🔑 Chiave»** che consente in qualunque momento di tornare alla schermata d'accesso per richiedere nuovamente la chiave via email o per bloccare di nuovo il dispositivo.
+
+4. **Natura della Protezione (Distribuzione Statica):**
+   - La chiave universale non costituisce autenticazione crittografica forte né DRM: il suo scopo è offrire un'esperienza d'accesso giocosa e coinvolgente pensata per bambini ed esploratori.
+   - Trattandosi di un sito statico distribuito su CDN (GitHub Pages / Vercel), chi conosce l'URL diretto dei file PDF o video può comunque aprirli. Questo è il comportamento corretto e desiderato per non introdurre infrastrutture server pesanti o account a pagamento per materiale gratuito.
+
+---
+
+## 12. COME MODIFICARE I TESTI DELL'ACCESSO E DELL'EMAIL
+
+Tutti i testi sono centralizzati nei file dizionario i18n e non sono hardcoded nel codice sorgente:
+
+### Testi della Schermata d'Accesso Web:
+Apri `assets/einstein/i18n/it.json` e modifica le proprietà dentro la sezione `"access"`:
+- `"title"`: Titolo principale (default: *LA CHIAVE SEGRETA DI OTTO*)
+- `"subtitle"`: Sottotitolo introduttivo
+- `"path1Title"`, `"path1Label"`, `"path1Btn"`: Primo percorso (chi ha la chiave)
+- `"path2Title"`, `"path2Text"`, `"path2Label"`, `"path2Btn"`: Secondo percorso (richiesta email)
+- `"path2Sent"`: Messaggio di conferma invio email
+- `"marketingConsent"`: Testo della checkbox facoltativa newsletter
+
+### Testi dell'Email Transazionale inviata ai genitori:
+Apri `assets/einstein/i18n/it.json` e modifica la sezione `"keyEmail"`:
+- `"subject"`: Oggetto dell'email (default: *La chiave segreta di Otto è arrivata! 🔑*)
+- `"greeting"`: Saluto iniziale (*Ciao, esploratore!*)
+- `"intro"`: Introduzione di Otto
+- `"instruction"`: Spiegazione su come tornare e inserire la chiave
+- `"ctaBtn"`: Testo del pulsante dorato che riporta al microsito
+
+*Nota:* I file `en.json`, `fr.json` ed `es.json` contengono le corrispondenti chiavi già tradotte per le future espansioni linguistiche del libro.
+
+---
+
+## 13. COME MODIFICARE L'IMMAGINE DI OTTO CON LA CHIAVE DORATA
+
+L'illustrazione ufficiale di Otto che tiene la grande chiave dorata si trova in:
+
+📁 `assets/einstein/media/polpo_esploratore_con_chiave_dorata.png` (PNG trasparente)
+📁 `assets/einstein/media/polpo_esploratore_con_chiave_dorata.webp` (WebP compresso per il web)
+
+### Per aggiornare o sostituire l'immagine:
+1. Prepara l'immagine ritagliata con **sfondo trasparente (alpha channel)**.
+2. Salva la versione ad alta qualità come `polpo_esploratore_con_chiave_dorata.png` in `assets/einstein/media/`.
+3. Esporta anche la versione compressa `polpo_esploratore_con_chiave_dorata.webp`.
+4. Esegui la sincronizzazione con:
+   ```bash
+   node scripts/sync-einstein-route.js
+   ```
+5. L'immagine verrà sincronizzata automaticamente nella cartella pubblica permanente e utilizzata sia sulla schermata web che come intestazione visuale delle email inviate ai genitori.
+
+---
+
+## 14. COME CONFIGURARE IL MITTENTE E L'ALIAS EMAIL SU BREVO
+
+Il sistema riutilizza l'infrastruttura **Brevo (Sendinblue)** già configurata per l'invio dei bonus di *Le Avventure del Cantiere*, tramite l'endpoint serverless Edge:
+
+📁 `api/send-otto-key.js`
+
+### Differenza tra Invio Messaggi e Ricezione Risposte:
+
+1. **Invio (Mittente visualizzato):**
+   - Indirizzo desiderato: `otto@csabookskids.com`
+   - Nome mittente: **Otto | Il mondo delle scoperte**
+   - Poiché le email partono tramite le API di Brevo, **non è necessario acquistare una nuova casella di posta**.
+   - **Opzione A (Consigliata — Autenticazione Dominio):** Nel pannello Brevo > **Mittenti e IP** > **Domini**, aggiungi `csabookskids.com`. Brevo fornirà i record DNS (DKIM TXT `mail._domainkey`, Brevo-code TXT, DMARC TXT). Una volta verificato il dominio, **qualsiasi indirizzo `@csabookskids.com` può inviare immediatamente** senza costi.
+   - **Opzione B (Verifica singolo mittente):** Nel pannello Brevo > **Mittenti e IP** > **Mittenti**, aggiungi `otto@csabookskids.com`. Brevo invierà un'email di conferma con link di attivazione.
+
+2. **Ricezione Risposte (Reply-To e Alias):**
+   - L'endpoint configura l'header `replyTo: "csabooks.kids@gmail.com"`. Se un genitore clicca "Rispondi" nel suo client (Gmail, Outlook, Apple Mail), il messaggio arriva direttamente nella casella Gmail esistente di CSA.
+   - Se desideri anche ricevere email inviate spontaneamente a `otto@csabookskids.com`, attiva un **inoltro email gratuito (Email Forwarding)** presso il gestore del tuo dominio (es. Cloudflare Email Routing o cPanel):
+     - Regola: `otto@csabookskids.com` &rarr; inoltra a `csabooks.kids@gmail.com`.
+
+3. **Variabili d'Ambiente su Vercel:**
+   Se prima della verifica DNS su Brevo desideri testare l'invio o usare un indirizzo alternativo, imposta in Vercel:
+   - `OTTO_SENDER_EMAIL`: Indirizzo mittente (default: `otto@csabookskids.com`)
+   - `OTTO_SENDER_NAME`: Nome visualizzato (default: `Otto | Il mondo delle scoperte`)
+   - `OTTO_REPLY_TO`: Indirizzo di risposta (default: `csabooks.kids@gmail.com`)
+   - `BREVO_FALLBACK_SENDER`: Mittente di emergenza verificato (default: `csabooks.kids@gmail.com`)
+   - Se Brevo dovesse rifiutare `otto@csabookskids.com` perché non ancora convalidato nel pannello, il sistema **esegue un fallback trasparente su `csabooks.kids@gmail.com`**, garantendo che nessun genitore rimanga senza la chiave!
+
+---
+
+## 15. PRIVACY POLICY & CONSENSI: ELEMENTI DA APPROVARE
+
+In conformità al Regolamento Generale sulla Protezione dei Dati (GDPR — Regolamento UE 2016/679):
+
+### Distinzione Netta dei Trattamenti:
+1. **Invio della Chiave Segreta (Base Giuridica: Esecuzione di servizio contrattuale / richiesta, art. 6.1.b):**
+   - Il genitore inserisce l'email unicamente per ricevere il codice universale `OTTO`.
+   - Questa richiesta **non comporta alcuna iscrizione automatica alla newsletter**.
+   - L'email non viene aggiunta a mailing list commerciali.
+2. **Iscrizione Facoltativa alle Novità Editoriali (Base Giuridica: Consenso esplicito, art. 6.1.a):**
+   - Checkbox **non preselezionata**.
+   - Solo se spuntata dall'utente, il contatto viene registrato nella lista marketing di Brevo con data, lingua, versione del consenso e provenienza.
+
+### ⚠️ Elementi da Approvare / Integrare prima del Lancio Pubblico:
+- **Titolare del Trattamento:** Indicare la denominazione legale/societaria definitiva di CSA Books Kids o del titolare.
+- **DPO / Contatto Privacy:** Verificare che l'email `csabooks.kids@gmail.com` sia la casella designata per la ricezione di richieste di cancellazione/revoca.
+- **Periodo di Conservazione:** Confermare la policy di cancellazione dei log di servizio per le richieste non iscritte alla newsletter (consigliato: 30-90 giorni nei log tecnici Brevo).
+- **ID Lista Marketing Brevo:** Se si desidera popolare una lista Brevo specifica per chi acconsente alla newsletter, impostare su Vercel la variabile `BREVO_MARKETING_LIST_ID` con l'ID numerico della lista.
+
+---
+
+## 📋 ELENCO FILE MODIFICATI E CREATI PER L'INTEGRAZIONE DELLA CHIAVE
+
+### Nuovi File:
+1. `api/send-otto-key.js`: Serverless Edge handler Brevo v3 per la consegna della chiave segreta di Otto, con rate-limiting, honeypot, gestione consensi e fallback automatico.
+2. `assets/einstein/media/polpo_esploratore_con_chiave_dorata.png`: Illustrazione ad alta risoluzione con canale alpha trasparente di Otto con chiave dorata.
+3. `assets/einstein/media/polpo_esploratore_con_chiave_dorata.webp`: Versione WebP compressa e ottimizzata per le massime prestazioni su mobile.
+4. `scripts/test-access-flow.js`: Suite di test automatizzati per verificare validazione chiave, localStorage, template email, integrità asset e testi i18n.
+
+### File Aggiornati:
+1. `assets/einstein/assets/js/app.js`: Implementazione della schermata d'accesso, logica di sblocco con `OTTO`, persistenza `localStorage`, gestione modale privacy e badge chiave in navigazione.
+2. `assets/einstein/assets/css/site.css`: Stili premium coordinati, tema blu notte e oro, animazione fluttuante di Otto, responsive design e modale privacy.
+3. `assets/einstein/i18n/it.json`: Aggiunte stringhe ufficiali per l'accesso e per il template email.
+4. `assets/einstein/i18n/en.json`, `fr.json`, `es.json`: Predisposizione traduzioni multilingua per future attivazioni.
+5. `api/send-bonus.js`: Aggiunta delegazione trasparente per `action === 'otto-key'` senza alcuna modifica o regressione sui volumi 1 e 2.
+6. `test-endpoint.js`: Espansione con 8 nuovi test per Brevo Otto, rate-limiting, validazione email, honeypot e marketing consent (60 test totali superati).
+7. `test-qr-routes.js`: Inclusione degli asset della chiave dorata nei controlli di integrità permanenti.
+8. `scripts/sync-einstein-route.js`: Inclusione automatica dei nuovi file grafici nella sincronizzazione permanente.
+9. `.env.example`: Documentazione dettagliata di tutte le variabili d'ambiente per Brevo e per l'alias di Otto.
+10. `package.json`: Aggiunto `test-access-flow.js` nella pipeline di test principale.
