@@ -213,7 +213,7 @@ const BOOKS = [
     "languageCode": "it",
     "age": "2–5 anni",
     "badge": "Raccolta Vol. 2",
-    "cover": "assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png?v=20261015",
+    "cover": "assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png?v=20261017",
     "storiesIncluded": [
       "Benny l'escavatore e le monete dell'antica Roma",
       "Nina la betoniera e il ponte dei coniglietti",
@@ -221,7 +221,7 @@ const BOOKS = [
       "Leo la gru e il nido della cinciallegra"
     ],
     "preview": [
-      "assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png?v=20261015",
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png?v=20261017",
       "assets/construction-site-adventures/Bundle.Volume.2/IT/Back.Cover.png"
     ],
     "amazon": {}

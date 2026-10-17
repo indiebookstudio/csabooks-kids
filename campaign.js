@@ -28,7 +28,7 @@ const CSA_CAMPAIGN = {
     bookId: "raccolta-vol2-it",
     volume: 2,
     title: "Le Avventure del Cantiere — Raccolta Vol. 2",
-    coverImage: "assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png?v=20261015",
+    coverImage: "assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png?v=20261017",
     amazonUrl: null,
     stories: [
       "Benny l'escavatore e le monete dell'antica Roma",
