@@ -127,19 +127,29 @@
   }
   function formatCitation(text){
     if(!text) return '';
-    let res = esc(text);
-    // Link DOI: doi: 10.xxxx/...
-    res = res.replace(/doi:\s*(10\.\d{4,9}\/[-._;()/:A-Za-z0-9]+)/gi, (m, doi) => {
-      const cleanDoi = doi.replace(/[.,;]+$/, '');
-      const trailing = doi.slice(cleanDoi.length);
-      return `doi: <a href="https://doi.org/${cleanDoi}" target="_blank" rel="noopener noreferrer">${cleanDoi}</a>${trailing}`;
+    const links = [];
+    // 1. Extract DOIs into safe placeholders
+    let str = String(text).replace(/doi:\s*(10\.\d{4,9}\/[^\s",;()]+)/gi, (m, rawDoi) => {
+      const cleanDoi = rawDoi.replace(/[.,;]+$/, '');
+      const trailing = rawDoi.slice(cleanDoi.length);
+      const id = links.length;
+      links.push(`doi: <a href="https://doi.org/${cleanDoi}" target="_blank" rel="noopener noreferrer">${cleanDoi}</a>${trailing}`);
+      return `___CITE_LINK_${id}___`;
     });
-    // Link raw URLs
-    res = res.replace(/(https?:\/\/[^\s<]+)/g, (m, url) => {
-      const cleanUrl = url.replace(/[.,;]+$/, '');
-      const trailing = url.slice(cleanUrl.length);
-      return `<a href="${cleanUrl}" target="_blank" rel="noopener noreferrer">${cleanUrl}</a>${trailing}`;
+    // 2. Extract standalone URLs into safe placeholders
+    str = str.replace(/(https?:\/\/[^\s",;()]+)/gi, (m, rawUrl) => {
+      const cleanUrl = rawUrl.replace(/[.,;]+$/, '');
+      const trailing = rawUrl.slice(cleanUrl.length);
+      const id = links.length;
+      links.push(`<a href="${cleanUrl}" target="_blank" rel="noopener noreferrer">${cleanUrl}</a>${trailing}`);
+      return `___CITE_LINK_${id}___`;
     });
+    // 3. Escape surrounding text
+    let res = esc(str);
+    // 4. Restore safe HTML links
+    for (let i = 0; i < links.length; i++) {
+      res = res.replace(`___CITE_LINK_${i}___`, links[i]);
+    }
     return res;
   }
   function linkedCorrections(s){
@@ -181,22 +191,27 @@
     `;
   }
   function renderSource(s){
-    const official=linkOK(s.url)?btn(L('actions.openOfficial'),s.url,'outline','target="_blank" rel="noopener noreferrer"'):`<span class="source-pdf-status">${esc(L('actions.linkUnavailable'))}</span>`;
+    const dir = config?.sourcePdfDirectory || 'downloads/fonti/';
+    const official = linkOK(s.url) ? btn(L('actions.openOfficial'), s.url, 'outline', 'target="_blank" rel="noopener noreferrer"') : '';
     const imageCredit = s.codice === 'SC-55' ? 'Credito immagine: EHT Collaboration / ESO (2019), CC BY 4.0' : esc(L('actions.sourceIllustration'));
-    return `<section class="page-top"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.sources'),s.codice])}</div></section><section class="wrap source-detail"><div class="source-image"><img src="media/fonti/${esc(s.codice)}.webp" alt="${esc(s.titolo)}" width="660" height="440" onerror="this.onerror=null;this.src='media/temi/${esc(s.categoria)}.webp'"><div class="source-caption">${imageCredit}</div></div><div class="source-detail-info"><span class="source-badge">${esc(s.codice)}</span><h1>${esc(s.titolo)}</h1><p class="detail-meta">${esc(L('categories.'+s.categoria))}</p><div class="citation-card"><h3>${esc(L('sourceUi.citation'))}</h3><p>${formatCitation(s.citazione)}</p></div>${linkedCorrections(s)}<div class="source-buttons">${official}<a id="source-pdf-link" class="btn btn-plain" role="button" aria-disabled="true" tabindex="-1">${esc(L('actions.downloadSource'))} ↓</a></div><p class="source-pdf-status" id="source-pdf-status" role="status">${esc(L('actions.sourceChecking'))}</p><p class="source-pdf-help">${esc(L('actions.sourcePdfHelp'))} <code>${esc(s.codice)}.pdf</code></p>${renderIntegrativeSection(s.codice)}<div class="minor-links">${btn(L('actions.backSources'),url('fonti'),'outline')}</div></div></section>`;
+    return `<section class="page-top"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.sources'),s.codice])}</div></section><section class="wrap source-detail"><div class="source-image"><img src="media/fonti/${esc(s.codice)}.webp" alt="${esc(s.titolo)}" width="660" height="440" onerror="this.onerror=null;this.src='media/temi/${esc(s.categoria)}.webp'"><div class="source-caption">${imageCredit}</div></div><div class="source-detail-info"><span class="source-badge">${esc(s.codice)}</span><h1>${esc(s.titolo)}</h1><p class="detail-meta">${esc(L('categories.'+s.categoria))}</p><div class="citation-card"><h3>${esc(L('sourceUi.citation'))}</h3><p>${formatCitation(s.citazione)}</p></div>${linkedCorrections(s)}<div class="source-buttons">${official}<a id="source-pdf-link" class="btn btn-primary" href="${esc(dir + s.codice)}.pdf" download="${esc(s.codice)}.pdf">${esc(L('actions.downloadSource'))} ↓</a></div>${renderIntegrativeSection(s.codice)}<div class="minor-links">${btn(L('actions.backSources'),url('fonti'),'outline')}</div></div></section>`;
   }
   async function checkSourcePDF(code){
-    const el=q('#source-pdf-link'),status=q('#source-pdf-status');if(!el||!status)return;
-    const file=(config.sourcePdfDirectory||'downloads/fonti/')+code+'.pdf';
-    try{
-      const res=await fetch(file,{method:'HEAD',cache:'no-store'});
-      const mime=(res.headers.get('content-type')||'').toLowerCase();
-      // Some static hosts serve PDFs as octet-stream. HTML or 404 is not a source PDF.
-      const valid=res.ok&&(mime.includes('pdf')||mime.includes('octet-stream'));
-      if(page()!=='fonte'||pageId('sc')!==code)return;
-      if(valid){el.href=file;el.setAttribute('download',code+'.pdf');el.className='btn btn-primary';el.removeAttribute('aria-disabled');el.removeAttribute('tabindex');status.textContent=L('actions.sourceAvailable');}
-      else{el.removeAttribute('href');el.className='btn btn-plain';el.setAttribute('aria-disabled','true');el.setAttribute('tabindex','-1');status.textContent=L('actions.sourceUnavailable');}
-    }catch(_){if(status&&page()==='fonte'&&pageId('sc')===code)status.textContent=L('actions.sourceUnavailable');}
+    const el = q('#source-pdf-link');
+    if (!el) return;
+    const file = (config.sourcePdfDirectory || 'downloads/fonti/') + code + '.pdf';
+    try {
+      const res = await fetch(file, { method: 'HEAD', cache: 'no-store' });
+      const mime = (res.headers.get('content-type') || '').toLowerCase();
+      const valid = res.ok && (mime.includes('pdf') || mime.includes('octet-stream'));
+      if (page() !== 'fonte' || pageId('sc') !== code) return;
+      if (!valid) {
+        el.removeAttribute('href');
+        el.className = 'btn btn-plain';
+        el.setAttribute('aria-disabled', 'true');
+        el.setAttribute('tabindex', '-1');
+      }
+    } catch (_) {}
   }
   function renderAccess(alreadyUnlocked){
     const ottoWebp = 'media/polpo_esploratore_con_chiave_dorata.webp';
