@@ -60,8 +60,8 @@
     if(id==='colora')extras.push(btn(L('actions.downloadColor'),currentBonusURL(id),'primary','download="Disegni.Da.Colorare.pdf"'));
     if(id==='carte'){
       extras.push(btn(L('actions.playOnline'),currentBonusURL(id),'primary'));
-      extras.push(btn(L('actions.downloadCards'),`bonus/${loc}/carte/OTTO_CARTE_36_FRONTE_RETRO_A4.pdf`,'outline','download'));
-      extras.push(btn(L('actions.downloadRules'),`bonus/${loc}/carte/OTTO_GUIDA_REGOLE_E_SOLUZIONI.pdf`,'outline','download'));
+      extras.push(btn(L('actions.downloadCards'),`bonus/${loc}/carte/OTTO_CARTE_36_FRONTE_RETRO_A4.pdf`,'outline','download="OTTO_CARTE_36_FRONTE_RETRO_A4.pdf"'));
+      extras.push(btn(L('actions.downloadRules'),`bonus/${loc}/carte/OTTO_GUIDA_PREMIUM.pdf`,'outline','download="OTTO_GUIDA_PREMIUM.pdf"'));
     }
     return extras.join('');
   }

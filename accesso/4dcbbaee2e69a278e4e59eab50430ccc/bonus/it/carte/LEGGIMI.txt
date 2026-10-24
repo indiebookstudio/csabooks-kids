@@ -1,0 +1,44 @@
+CARTE DI OTTO - EDIZIONE PREMIUM
+24 ottobre 2026
+
+FILE DA STAMPARE
+OTTO_CARTE_36_FRONTE_RETRO_A4.pdf
+36 carte su 9 fogli A4, 18 pagine alternate fronte/retro.
+Stampa A4 verticale, dimensioni effettive / 100%, fronte-retro sul lato lungo.
+Non specchiare e non adattare alla pagina.
+Prima prova le sole pagine 1 e 2: verifica controluce numeri e riferimenti.
+
+OTTO_CARTE_36_SOLO_FRONTE_A4.pdf
+Le 36 domande su 9 pagine. Risposte nella guida.
+
+OTTO_GUIDA_PREMIUM.pdf
+Regole, istruzioni di stampa, tutte le soluzioni e credito dell'immagine M87*.
+
+NUOVO FORMATO
+4 carte per A4. Ogni carta misura 82 x 118 mm.
+Margini della griglia: 18 mm ai lati e 24,5 mm sopra/sotto.
+Spazio fra le carte: 10 mm in orizzontale e 12 mm in verticale.
+Riferimenti di taglio esterni, distanti almeno 14 mm dai bordi del foglio.
+Testi e immagini arretrati di almeno 6 mm rispetto al taglio.
+Immagini complete, proporzioni conservate, nessuna maschera che tagli i soggetti.
+
+I retri scambiano le colonne per il fronte-retro sul lato lungo.
+Il numero della carta compare su entrambi i lati per verificare l'abbinamento.
+La precisione finale del fronte-retro dipende dal trascinamento della stampante:
+la prova di un foglio permette di verificarla prima di stampare tutto il mazzo.
+
+CONTENUTI
+Conservate le 36 domande e spiegazioni originali (12 vere, 12 false, 12 aperte).
+Codici e immagini aggiornati alla numerazione V6 del libro e dei PDF FONTI_PDF.
+Le risposte non sono indicate dal colore delle carte: il colore identifica il tema.
+
+SORGENTI
+carte.json e ABBINAMENTI.csv: testi, immagini, codici precedenti e aggiornati.
+immagini/: 29 immagini originali selezionate per le 36 carte.
+genera_carte.py: impaginazione riproducibile con Python, ReportLab, Pillow, pypdf
+e i font Windows Georgia e Calibri. Non servono risorse online.
+VERIFICA.json: dimensioni, font, capienza dei testi, immagini e controlli PDF.
+ORIGINALE_SOLO_RIFERIMENTO.pdf: copia del vecchio mazzo per confronto.
+
+Le illustrazioni sono ricostruzioni dai materiali del libro.
+M87*: EHT Collaboration / ESO (2019), CC BY 4.0.
