@@ -93,10 +93,31 @@
 .access-help-mail{color:#f5d08a;font-weight:700;text-decoration:underline;transition:color .15s}
 .access-help-mail:hover{color:#ffe4ac}
 
+.btn-sm{min-height:34px;padding:6px 14px;font-size:12px;border-radius:10px}
+.source-card-integ{font-size:10px;font-weight:750;background:rgba(245,208,138,.16);border:1px solid #f5d08a;color:#f5d08a;padding:2px 7px;border-radius:6px;margin-left:6px}
+.sources-registry-banner{background:linear-gradient(135deg,rgba(16,43,70,.7),rgba(6,19,36,.8));border:1px solid rgba(247,209,132,.35);border-radius:16px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
+.sources-registry-copy strong{color:#f5d08a;font-size:14px;display:block;margin-bottom:3px}
+.sources-registry-copy p{color:#b2c5d6;font-size:12.5px;margin:0}
+.sources-registry-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+.integrative-card{margin-top:22px;background:rgba(16,43,70,.45);border:1px solid rgba(247,209,132,.3);border-radius:18px;padding:24px}
+.integrative-header h3{color:#f5d08a;font-size:16px;margin:0 0 6px 0;font-family:Georgia,serif}
+.integrative-intro{font-size:13px;color:#b2c5d6;margin:0 0 16px 0}
+.integrative-list{display:flex;flex-direction:column;gap:14px}
+.integrative-item{background:rgba(5,13,26,.65);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.integrative-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.integrative-code{font-family:monospace;font-size:11px;font-weight:800;background:rgba(245,208,138,.15);border:1px solid #f5d08a;color:#f5d08a;padding:2px 8px;border-radius:6px}
+.integrative-title{font-size:13px;font-weight:700;color:#fff}
+.integrative-pages{font-size:12px;color:#8fa5b4;margin-left:auto}
+.integrative-author,.integrative-doi,.integrative-note{font-size:12px;color:#c0d0de;margin:0;line-height:1.5}
+.integrative-doi a{color:#f5d08a;text-decoration:underline}
+.integrative-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+
 @media(max-width:860px){
   .access-grid{grid-template-columns:1fr;gap:22px}
   .access-card{padding:28px 22px}
   .access-section{padding:30px 0 50px}
   .access-help-card{flex-direction:column;text-align:center;gap:10px}
+  .sources-registry-banner{flex-direction:column;align-items:flex-start}
 }
 

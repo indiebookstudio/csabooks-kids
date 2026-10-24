@@ -29,7 +29,7 @@ const CSA_CAMPAIGN = {
     volume: 2,
     title: "Le Avventure del Cantiere — Raccolta Vol. 2",
     coverImage: "assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png?v=20261017",
-    amazonUrl: null,
+    amazonUrl: "https://www.amazon.it/dp/B0HN9G1V81",
     stories: [
       "Benny l'escavatore e le monete dell'antica Roma",
       "Nina la betoniera e il ponte dei coniglietti",
@@ -233,6 +233,23 @@ function mountCampaignPopup() {
               </div>
 
               <div class="campaign-split-actions">
+                ${c.vol2.amazonUrl ? `
+                <a 
+                  href="${c.vol2.amazonUrl}" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="campaign-btn-buy"
+                  id="campaign-buy-button-vol2"
+                  aria-label="Acquista la Raccolta Volume 2 su Amazon.it"
+                >
+                  <img src="https://flagcdn.com/20x15/it.png" alt="IT" width="16" height="12" class="campaign-flag-img">
+                  <span>ACQUISTA SU AMAZON.IT</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                ` : `
                 <button 
                   type="button" 
                   class="campaign-btn-buy is-disabled" 
@@ -245,6 +262,7 @@ function mountCampaignPopup() {
                   </svg>
                   <span>IN ARRIVO PROSSIMAMENTE</span>
                 </button>
+                `}
 
                 <button 
                   type="button" 

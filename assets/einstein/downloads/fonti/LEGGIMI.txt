@@ -1,0 +1,34 @@
+FONTI PDF - EINSTEIN, QUESTA TE LA SEI PERSA
+Acquisizione e verifica: 23 ottobre 2026
+
+COPERTURA
+Tutti i 57 codici delle due pagine fornite: SC-00.pdf - SC-55.pdf, più EX-01.pdf.
+Nessun codice principale mancante.
+27 PDF integrali (incluse versioni d’autore) e 30 stampe delle fonti.
+23 PDF integrativi nella cartella INTEGRATIVE.
+
+COME CONSULTARE
+Apri INDICE.html per cercare per codice, titolo o DOI e aprire i PDF.
+REGISTRO_FONTI.csv contiene le provenienze, i collegamenti e il tipo di documento.
+VERIFICA_FILE.json riporta pagine, dimensioni e impronte dei file verificati.
+
+TIPI DI FILE
+Gli articoli disponibili sono conservati nei PDF originali o nelle versioni integrali d’autore indicate nel registro.
+Gli altri articoli sono documentati da stampe con titolo completo, autori, DOI e abstract originale, senza riassunto o traduzione.
+Le stampe dei record PubMed utilizzano i dati pubblici originali acquisiti tramite Europe PMC.
+Le pagine istituzionali sono stampate in una versione testuale leggibile, senza immagini, navigazione e finestre cookie quando possibile.
+I preprint di SC-20, SC-28 e SC-39 sono separati: i file principali documentano le pubblicazioni effettivamente citate.
+
+FONTI INTEGRATIVE
+Sono incluse le correzioni di SC-03 (2025) e SC-50 (2024), le linee guida ISSCR complete (agosto 2025, versione 1.2, 75 pagine), le fonti dei calcoli EX-01, i riferimenti aggiuntivi del registro bibliografico del libro e i tre preprint recuperati.
+I due riferimenti integrativi che conducono allo stesso PDF principale sono indicati nel registro.
+
+NOTE SULLE MODALITÀ DI ACQUISIZIONE
+Il sito Forbes blocca l’acquisizione integrale automatica: il PDF conserva titolo, firma, data e apertura del comunicato recuperati dall’indice web pubblico. Non è un articolo scientifico e non ha un abstract. Le fonti dei calcoli sono nei quattro PDF integrativi EX-01.
+Estratto introduttivo della pagina Smithsonian attuale sui forni a microonde. Il precedente URL del registro non è acquisibile.
+Estratto editoriale di The Expanded Quotable Einstein, utile per la provenienza della citazione Einstein/Seelig; non è la scansione della lettera originale del 1952.
+
+CONTROLLI
+Verificati presenza di tutti i codici, apertura di tutti gli 80 PDF, numero di pagine e contenuto identificativo.
+Controllati gli abstract delle stampe degli articoli e la corrispondenza ai DOI citati.
+Ispezionate le prime pagine dei documenti scaricati e le pagine delle stampe prodotte; corretti i file non pertinenti e i problemi di impaginazione rilevati.

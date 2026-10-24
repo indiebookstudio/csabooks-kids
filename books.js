@@ -205,7 +205,7 @@ const BOOKS = [
     "collection": "bundle",
     "format": "rectangular",
     "isRectangular": true,
-    "comingSoon": true,
+    "isNew": true,
     "title": "Le Avventure del Cantiere — Raccolta Vol. 2",
     "subtitle": "Edizione speciale in grande formato (21,5 × 28 cm)",
     "author": "Marco Salucci",
@@ -222,9 +222,23 @@ const BOOKS = [
     ],
     "preview": [
       "assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png?v=20261017",
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/2.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/3.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/4.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/6.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/7.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/8.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/9.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/10.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/11.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/IT/12.png",
       "assets/construction-site-adventures/Bundle.Volume.2/IT/Back.Cover.png"
     ],
-    "amazon": {}
+    "asin": "B0HN9G1V81",
+    "amazon": {
+      "it": "B0HN9G1V81",
+      "com": "B0HN9G1V81"
+    }
   },
   {
     "id": "leo-rudy-savana-it",

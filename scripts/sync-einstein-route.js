@@ -103,6 +103,7 @@ const CRITICAL_FILES = [
   path.join('config', 'site.json'),
   path.join('i18n', 'it.json'),
   path.join('content', 'fonti_it.csv'),
+  path.join('content', 'fonti_integrative.json'),
   path.join('media', 'copertina.webp'),
   path.join('media', 'otto.webp'),
   path.join('media', 'polpo_esploratore_con_chiave_dorata.png'),

@@ -8,7 +8,7 @@
   const localeLabels = {it:'IT · Italiano',en:'EN · English',fr:'FR · Français',es:'ES · Español'};
   const categories = ['all','animali','piante','esperimenti','dinosauri','tecnologia','corpo','spazio','introduzione'];
   const cards = ['missioni','museo','film','colora','carte'];
-  let config, t, sources = [], language = 'it';
+  let config, t, sources = [], integrativeSources = [], language = 'it';
   const state = {query:'',filter:'all',limit:12};
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const linkOK = s => /^https:\/\//i.test(String(s??'')) || /^http:\/\//i.test(String(s??''));
@@ -97,7 +97,9 @@
   }
   function sourceCard(s){
     const code=esc(s.codice),title=esc(s.titolo);
-    return `<article class="source-card"><a href="${url('fonte',{sc:s.codice})}" data-source="${code}" aria-label="${code}: ${title}"><div class="source-card-art"><img src="media/fonti/${code}.webp" alt="" width="660" height="440" loading="lazy" onerror="this.onerror=null;this.src='media/temi/${esc(s.categoria)}.webp'"><span class="source-code">${code}</span></div><div class="source-card-body"><h3>${title}</h3><p>${esc(s.citazione)}</p><div class="source-card-footer"><span class="source-card-category">${esc(L('categories.'+s.categoria))}</span><span>${esc(L('actions.learnMore'))} ↗</span></div></div></a></article>`;
+    const integCount = integrativeSources.filter(x => x.parent === s.codice).length;
+    const integBadge = integCount > 0 ? `<span class="source-card-integ">+${integCount} ${integCount===1?'correlata':'correlate'}</span>` : '';
+    return `<article class="source-card"><a href="${url('fonte',{sc:s.codice})}" data-source="${code}" aria-label="${code}: ${title}"><div class="source-card-art"><img src="media/fonti/${code}.webp" alt="" width="660" height="440" loading="lazy" onerror="this.onerror=null;this.src='media/temi/${esc(s.categoria)}.webp'"><span class="source-code">${code}</span></div><div class="source-card-body"><h3>${title}</h3><p>${esc(s.citazione)}</p><div class="source-card-footer"><span class="source-card-category">${esc(L('categories.'+s.categoria))}</span>${integBadge}<span>${esc(L('actions.learnMore'))} ↗</span></div></div></a></article>`;
   }
   function filteredSources(){let q0=state.query.trim().toLocaleLowerCase(language);return sources.filter(s=>(state.filter==='all'||s.categoria===state.filter)&&(!q0||[s.codice,s.titolo,s.citazione,s.categoria,s.url].join(' ').toLocaleLowerCase(language).includes(q0)));}
   function drawSourceCards(){
@@ -108,7 +110,20 @@
     const more=q('#more-sources');if(more){more.hidden=items.length<=state.limit;more.disabled=items.length<=state.limit;}
   }
   function renderSources(){
-    return `<section class="sources-intro"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.sources')])}${stamp(L('sections.sourceEyebrow'))}<h1>${esc(L('sections.sourceTitle'))}</h1><p class="page-description">${esc(L('sections.sourceSubtitle'))}</p><div class="source-toolbar"><label class="search-wrap" for="search-sources"><span class="search-icon" aria-hidden="true">⌕</span><input class="search-input" id="search-sources" type="search" autocomplete="off" placeholder="${esc(L('sourceUi.searchPlaceholder'))}" aria-label="${esc(L('sourceUi.searchLabel'))}" value="${esc(state.query)}"></label><div class="filter-row" aria-label="${esc(L('sourceUi.category'))}">${categories.map(k=>`<button class="chip" type="button" data-filter="${k}" aria-pressed="${state.filter===k?'true':'false'}">${esc(L('categories.'+k))}</button>`).join('')}</div></div><p class="results-line" id="source-count" aria-live="polite"></p><div class="sources-grid" id="source-results"></div><div class="show-more"><button id="more-sources" class="btn btn-outline" type="button">${esc(L('sourceUi.showMore'))} ↓</button></div><div class="wide-info"><h3>${esc(L('sections.sourceWhyTitle'))}</h3><p>${esc(L('sections.sourceWhyText'))}</p></div></div></section>`;
+    const dir = config?.sourcePdfDirectory || 'downloads/fonti/';
+    const registryBanner = `
+      <div class="sources-registry-banner">
+        <div class="sources-registry-copy">
+          <strong>📋 Archivio Completo delle Fonti (57 schede e 80 documenti)</strong>
+          <p>Tutti i PDF originali e le stampe sono archiviati per la consultazione e il download.</p>
+        </div>
+        <div class="sources-registry-actions">
+          <a href="${esc(dir)}INDICE.html" target="_blank" class="btn btn-outline btn-sm">Indice generale PDF ↗</a>
+          <a href="${esc(dir)}REGISTRO_FONTI.csv" download class="btn btn-plain btn-sm">Registro CSV ↓</a>
+        </div>
+      </div>
+    `;
+    return `<section class="sources-intro"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.sources')])}${stamp(L('sections.sourceEyebrow'))}<h1>${esc(L('sections.sourceTitle'))}</h1><p class="page-description">${esc(L('sections.sourceSubtitle'))}</p>${registryBanner}<div class="source-toolbar"><label class="search-wrap" for="search-sources"><span class="search-icon" aria-hidden="true">⌕</span><input class="search-input" id="search-sources" type="search" autocomplete="off" placeholder="${esc(L('sourceUi.searchPlaceholder'))}" aria-label="${esc(L('sourceUi.searchLabel'))}" value="${esc(state.query)}"></label><div class="filter-row" aria-label="${esc(L('sourceUi.category'))}">${categories.map(k=>`<button class="chip" type="button" data-filter="${k}" aria-pressed="${state.filter===k?'true':'false'}">${esc(L('categories.'+k))}</button>`).join('')}</div></div><p class="results-line" id="source-count" aria-live="polite"></p><div class="sources-grid" id="source-results"></div><div class="show-more"><button id="more-sources" class="btn btn-outline" type="button">${esc(L('sourceUi.showMore'))} ↓</button></div><div class="wide-info"><h3>${esc(L('sections.sourceWhyTitle'))}</h3><p>${esc(L('sections.sourceWhyText'))}</p></div></div></section>`;
   }
   function linkedCorrections(s){
     const raw=String(s.correzioni||'');if(!raw)return '';
@@ -117,9 +132,40 @@
     const result=parts.map(x=>linkOK(x)?`<a href="${esc(x)}" rel="noopener noreferrer" target="_blank">${esc(x)}</a>`:esc(x)).join('');
     return `<div class="citation-card"><h3>${esc(L('actions.correction'))}</h3><p>${result}</p></div>`;
   }
+  function renderIntegrativeSection(code){
+    const items = integrativeSources.filter(x => x.parent === code);
+    if(!items.length) return '';
+    const dir = config?.sourcePdfDirectory || 'downloads/fonti/';
+    return `
+      <div class="citation-card integrative-card">
+        <div class="integrative-header">
+          <h3>📚 Fonti integrative e materiali correlati (${items.length})</h3>
+          <p class="integrative-intro">Approfondimenti, studi scientifici collegati, preprints o note degli autori archiviati:</p>
+        </div>
+        <div class="integrative-list">
+          ${items.map(it => `
+            <div class="integrative-item">
+              <div class="integrative-meta">
+                <span class="integrative-code">${esc(it.code)}</span>
+                <span class="integrative-title">${esc(it.tipo || it.scheda)}</span>
+                <span class="integrative-pages">${it.pagine ? esc(it.pagine) + ' pag.' : ''}</span>
+              </div>
+              ${it.autore ? `<p class="integrative-author"><strong>Autori/Origine:</strong> ${esc(it.autore)}</p>` : ''}
+              ${it.doi ? `<p class="integrative-doi"><strong>DOI:</strong> <a href="https://doi.org/${esc(it.doi)}" target="_blank" rel="noopener noreferrer">${esc(it.doi)}</a></p>` : ''}
+              ${it.nota ? `<p class="integrative-note">${esc(it.nota)}</p>` : ''}
+              <div class="integrative-actions">
+                <a href="${esc(dir + it.file)}" download="${esc(it.file.split('/').pop())}" class="btn btn-primary btn-sm">Scarica PDF (${esc(it.pagine)} pag.) ↓</a>
+                ${linkOK(it.url) ? `<a href="${esc(it.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Consulta online ↗</a>` : ''}
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
   function renderSource(s){
     const official=linkOK(s.url)?btn(L('actions.openOfficial'),s.url,'outline','target="_blank" rel="noopener noreferrer"'):`<span class="source-pdf-status">${esc(L('actions.linkUnavailable'))}</span>`;
-    return `<section class="page-top"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.sources'),s.codice])}</div></section><section class="wrap source-detail"><div class="source-image"><img src="media/fonti/${esc(s.codice)}.webp" alt="${esc(L('actions.sourceIllustration'))}" width="660" height="440" onerror="this.onerror=null;this.src='media/temi/${esc(s.categoria)}.webp'"><div class="source-caption">${esc(L('actions.sourceIllustration'))}</div></div><div class="source-detail-info"><span class="source-badge">${esc(s.codice)}</span><h1>${esc(s.titolo)}</h1><p class="detail-meta">${esc(L('categories.'+s.categoria))}</p><div class="citation-card"><h3>${esc(L('sourceUi.citation'))}</h3><p>${esc(s.citazione)}</p></div>${linkedCorrections(s)}<div class="source-buttons">${official}<a id="source-pdf-link" class="btn btn-plain" role="button" aria-disabled="true" tabindex="-1">${esc(L('actions.downloadSource'))} ↓</a></div><p class="source-pdf-status" id="source-pdf-status" role="status">${esc(L('actions.sourceChecking'))}</p><p class="source-pdf-help">${esc(L('actions.sourcePdfHelp'))} <code>${esc(s.codice)}.pdf</code></p><div class="minor-links">${btn(L('actions.backSources'),url('fonti'),'outline')}</div></div></section>`;
+    return `<section class="page-top"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.sources'),s.codice])}</div></section><section class="wrap source-detail"><div class="source-image"><img src="media/fonti/${esc(s.codice)}.webp" alt="${esc(L('actions.sourceIllustration'))}" width="660" height="440" onerror="this.onerror=null;this.src='media/temi/${esc(s.categoria)}.webp'"><div class="source-caption">${esc(L('actions.sourceIllustration'))}</div></div><div class="source-detail-info"><span class="source-badge">${esc(s.codice)}</span><h1>${esc(s.titolo)}</h1><p class="detail-meta">${esc(L('categories.'+s.categoria))}</p><div class="citation-card"><h3>${esc(L('sourceUi.citation'))}</h3><p>${esc(s.citazione)}</p></div>${linkedCorrections(s)}<div class="source-buttons">${official}<a id="source-pdf-link" class="btn btn-plain" role="button" aria-disabled="true" tabindex="-1">${esc(L('actions.downloadSource'))} ↓</a></div><p class="source-pdf-status" id="source-pdf-status" role="status">${esc(L('actions.sourceChecking'))}</p><p class="source-pdf-help">${esc(L('actions.sourcePdfHelp'))} <code>${esc(s.codice)}.pdf</code></p>${renderIntegrativeSection(s.codice)}<div class="minor-links">${btn(L('actions.backSources'),url('fonti'),'outline')}</div></div></section>`;
   }
   async function checkSourcePDF(code){
     const el=q('#source-pdf-link'),status=q('#source-pdf-status');if(!el||!status)return;
@@ -419,8 +465,15 @@
     document.documentElement.lang=language;
   }
   async function loadLocale(l){
-    const [pack,rows]=await Promise.all([loadJSON('i18n/'+l+'.json'),loadCSV('content/fonti_'+l+'.csv')]);
-    t=pack;sources=rows.map(x=>({codice:x.codice?.trim(),titolo:x.titolo?.trim(),categoria:x.categoria?.trim()||'introduzione',citazione:x.citazione?.trim(),url:x.url?.trim(),correzioni:x.correzioni?.trim()})).filter(x=>/^SC-\d{2}$/.test(x.codice));language=l;
+    const [pack,rows,integ]=await Promise.all([
+      loadJSON('i18n/'+l+'.json'),
+      loadCSV('content/fonti_'+l+'.csv'),
+      loadJSON('content/fonti_integrative.json').catch(()=>[])
+    ]);
+    t=pack;
+    integrativeSources=Array.isArray(integ)?integ:[];
+    sources=rows.map(x=>({codice:x.codice?.trim(),titolo:x.titolo?.trim(),categoria:x.categoria?.trim()||'introduzione',citazione:x.citazione?.trim(),url:x.url?.trim(),correzioni:x.correzioni?.trim()})).filter(x=>/^(SC-\d{2}|EX-\d{2})$/.test(x.codice));
+    language=l;
   }
   async function init(){
     try{

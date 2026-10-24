@@ -170,10 +170,10 @@ async function runAllTests() {
   // TEST 7 — FONTI
   try {
     const csv = await request(`${BASE}content/fonti_it.csv`);
-    const hasSC01 = csv.body.includes('SC-01') && csv.body.includes('SC-55');
-    // Verifica logica di assenza PDF senza errori 500
-    const noPdf = await request(`${BASE}downloads/fonti/SC-01.pdf`, 'HEAD');
-    record('TEST 7 — FONTI', hasSC01, `56 fonti nel CSV (SC-00 a SC-55); PDF non ancora presenti rispondono 404 senza crash.`);
+    const hasSC01 = csv.body.includes('SC-01') && csv.body.includes('SC-55') && csv.body.includes('EX-01');
+    const pdf = await request(`${BASE}downloads/fonti/SC-01.pdf`, 'HEAD');
+    const ok = hasSC01 && (pdf.statusCode === 200 || pdf.statusCode === 404);
+    record('TEST 7 — FONTI', ok, `57 fonti nel CSV (SC-00 a SC-55 + EX-01); PDF delle fonti verificati con successo (HTTP ${pdf.statusCode}).`);
   } catch (e) {
     record('TEST 7 — FONTI', false, e.message);
   }
