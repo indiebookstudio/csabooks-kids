@@ -14,6 +14,12 @@
   "noindex": true,
   "publicBaseUrl": "",
   "bookCover": "media/copertina.webp",
+  "bookCovers": {
+    "it": "media/copertine/it/copertina.webp",
+    "en": "media/copertine/en/copertina.webp",
+    "fr": "media/copertine/fr/copertina.webp",
+    "es": "media/copertine/es/copertina.webp"
+  },
   "mascot": "media/otto.webp",
   "sourcePdfDirectory": "downloads/fonti/",
   "sourceImageDirectory": "media/fonti/",
