@@ -57,7 +57,7 @@
     if(id==='missioni')extras.push(btn(L('actions.downloadMissions'),currentBonusURL(id),'primary','download'));
     if(id==='museo')extras.push(btn(L('actions.openMuseum'),currentBonusURL(id),'primary'));
     if(id==='film')extras.push(btn(L('actions.watchFilms'),currentBonusURL(id),'primary'));
-    if(id==='colora')extras.push(btn(L('actions.downloadColor'),currentBonusURL(id),'primary','download'));
+    if(id==='colora')extras.push(btn(L('actions.downloadColor'),currentBonusURL(id),'primary','download="Disegni.Da.Colorare.pdf"'));
     if(id==='carte'){
       extras.push(btn(L('actions.playOnline'),currentBonusURL(id),'primary'));
       extras.push(btn(L('actions.downloadCards'),`bonus/${loc}/carte/OTTO_CARTE_36_FRONTE_RETRO_A4.pdf`,'outline','download'));
