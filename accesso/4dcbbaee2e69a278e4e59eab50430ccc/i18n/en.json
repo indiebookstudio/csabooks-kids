@@ -47,11 +47,11 @@
       "detail": "Explore exhibits, study illustrations, solve puzzles and earn seven stamps."
     },
     "film": {
-      "tag": "VIDEO · 8 ANIMATIONS",
-      "title": "Science Comes Alive!",
-      "subtitle": "Watch amazing science in motion.",
-      "description": "Eight short illustrated films reveal how surprising scientific phenomena work.",
-      "detail": "The animations are educational reconstructions, not original footage."
+      "tag": "3D LAB · 7 SIMULATIONS",
+      "title": "Science in 3D Motion!",
+      "subtitle": "Interact with the wonders of science in three dimensions.",
+      "description": "Otto takes you on an interactive journey through seven 3D simulations exploring the most astonishing scientific discoveries in the book.",
+      "detail": "Otto opens his interactive laboratory: explore the 7 interactive 3D simulations created for the book's greatest discoveries."
     },
     "colora": {
       "tag": "PDF · 10 A4 PAGES",
@@ -74,7 +74,7 @@
     "downloadCards": "Download double-sided cards",
     "downloadRules": "Download rules",
     "playOnline": "Play online",
-    "watchFilms": "Watch 8 films",
+    "watchFilms": "Explore 7 3D simulations",
     "openMuseum": "Enter museum",
     "downloadColor": "Download 10 pages",
     "goToSources": "Open library",
@@ -93,7 +93,6 @@
     "linkUnavailable": "No original source URL is available",
     "sourceIllustration": "Thematic illustration, not an image from the original paper",
     "openAnimations": "Explore 3D Animations",
-    "videoArchive": "MP4 Video Archive",
     "comingSoon": "This language version is being prepared",
     "returnHome": "Return home"
   },

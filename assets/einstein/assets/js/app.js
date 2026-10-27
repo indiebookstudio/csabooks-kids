@@ -78,7 +78,6 @@
     if(id === 'museo') extras.push(btn(L('actions.openMuseum'), currentBonusURL(id), 'primary'));
     if(id === 'film'){
       extras.push(btn(L('actions.openAnimations') || (loc === 'en' ? 'Explore 3D Animations' : 'Esplora le Animazioni 3D'), currentBonusURL(id), 'primary'));
-      extras.push(btn(L('actions.videoArchive') || (loc === 'en' ? 'MP4 Video Archive' : 'Archivio Video MP4'), `bonus/${loc}/film/index.html`, 'outline'));
     }
     if(id === 'colora') extras.push(btn(L('actions.downloadColor'), currentBonusURL(id), 'primary', 'download="Disegni.Da.Colorare.pdf"'));
     if(id === 'carte'){

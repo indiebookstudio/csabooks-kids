@@ -47,11 +47,11 @@
       "detail": "Una vera esperienza web: visita le sale, osserva le immagini, risolvi gli enigmi e conquista tutti i sigilli."
     },
     "film": {
-      "tag": "3D & VIDEO · 8 ANIMAZIONI",
-      "title": "La scienza prende vita!",
-      "subtitle": "Guarda e interagisci con le meraviglie della scienza.",
-      "description": "Otto ti accompagna in otto animazioni e simulazioni 3D interattive per esplorare i fenomeni più sorprendenti del libro.",
-      "detail": "Otto apre il suo laboratorio interattivo: esplora le simulazioni 3D e i filmati didattici dedicati alle grandi scoperte del libro."
+      "tag": "LABORATORIO 3D · 7 SIMULAZIONI",
+      "title": "La scienza in 3D!",
+      "subtitle": "Interagisci con le meraviglie della scienza in tre dimensioni.",
+      "description": "Otto ti accompagna in sette simulazioni 3D interattive per esplorare i fenomeni più sorprendenti del libro.",
+      "detail": "Otto apre il suo laboratorio interattivo: esplora le 7 simulazioni 3D realizzate per le grandi scoperte del libro."
     },
     "colora": {
       "tag": "PDF · 10 TAVOLE A4",
@@ -74,7 +74,7 @@
     "downloadCards": "Scarica le carte fronte/retro",
     "downloadRules": "Scarica le regole",
     "playOnline": "Gioca online",
-    "watchFilms": "Guarda gli 8 film",
+    "watchFilms": "Esplora le 7 simulazioni 3D",
     "openMuseum": "Entra nel museo",
     "downloadColor": "Scarica le 10 pagine",
     "goToSources": "Apri la biblioteca",
@@ -93,7 +93,6 @@
     "linkUnavailable": "Link ufficiale non ancora presente nell’indice",
     "sourceIllustration": "Illustrazione tematica del libro, non immagine della pubblicazione scientifica",
     "openAnimations": "Esplora le Animazioni 3D",
-    "videoArchive": "Archivio Video MP4",
     "comingSoon": "Contenuto in preparazione per questa lingua",
     "returnHome": "Torna alla pagina iniziale"
   },

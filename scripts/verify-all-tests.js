@@ -148,12 +148,12 @@ async function runAllTests() {
   // TEST 5 — BONUS
   try {
     const museo = await request(`${BASE}bonus/it/museo/index.html`);
-    const film = await request(`${BASE}bonus/it/film/index.html`);
     const animazioni = await request(`${BASE}bonus/it/animazioni/index.html`);
-    const video = await request(`${BASE}bonus/it/film/video/OTTO_FILM_01_balena.mp4`);
+    const sim01 = await request(`${BASE}bonus/it/animazioni/01.Megattere/la_rete_invisibile_delle_megattere.html`);
+    const animazioniEn = await request(`${BASE}bonus/en/animazioni/index.html`);
     const carte = await request(`${BASE}bonus/it/carte/index.html`);
-    const ok = museo.statusCode === 200 && film.statusCode === 200 && animazioni.statusCode === 200 && video.statusCode === 200 && carte.statusCode === 200;
-    record('TEST 5 — BONUS', ok, `Museo (200), Filmati (200), Animazioni 3D (200), Video MP4 (200), Carte (200) accessibili.`);
+    const ok = museo.statusCode === 200 && animazioni.statusCode === 200 && sim01.statusCode === 200 && animazioniEn.statusCode === 200 && carte.statusCode === 200;
+    record('TEST 5 — BONUS', ok, `Museo (200), Laboratorio 3D IT (${animazioni.statusCode}), Simulazione 01 (${sim01.statusCode}), Laboratorio 3D EN (${animazioniEn.statusCode}), Carte (200) accessibili.`);
   } catch (e) {
     record('TEST 5 — BONUS', false, e.message);
   }
