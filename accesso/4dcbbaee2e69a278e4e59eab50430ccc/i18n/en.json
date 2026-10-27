@@ -24,7 +24,7 @@
   "sections": {
     "bonusEyebrow": "DOORS TO DISCOVERY",
     "bonusTitle": "Choose your next adventure",
-    "bonusSubtitle": "Five experiences to explore, print, play and watch together.",
+    "bonusSubtitle": "Four experiences to explore, print, play and watch together.",
     "sourceEyebrow": "BEHIND EVERY WONDER, THERE IS EVIDENCE",
     "sourceTitle": "Sources, one discovery at a time",
     "sourceSubtitle": "Find the SC-XX code printed in the book, read the citation and visit the original source. If a PDF has been uploaded, you can download it.",
@@ -39,13 +39,6 @@
     "back": "Go back"
   },
   "bonus": {
-    "missioni": {
-      "tag": "PDF · ILLUSTRATED ADVENTURE",
-      "title": "Otto’s Seven Secret Missions",
-      "subtitle": "The mystery of the Atlas of Wonders",
-      "description": "Seven scientific mysteries, clues to collect and a secret to reveal.",
-      "detail": "An illustrated adventure with varied puzzles, explained solutions and a final certificate."
-    },
     "museo": {
       "tag": "INTERACTIVE WEBSITE",
       "title": "Museum of Impossible Discoveries",
@@ -84,7 +77,6 @@
     "watchFilms": "Watch 8 films",
     "openMuseum": "Enter museum",
     "downloadColor": "Download 10 pages",
-    "downloadMissions": "Download 7 missions",
     "goToSources": "Open library",
     "openOfficial": "Visit original source",
     "downloadSource": "Download source PDF",

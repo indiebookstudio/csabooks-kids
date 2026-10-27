@@ -24,7 +24,7 @@
   "sections": {
     "bonusEyebrow": "LAS PUERTAS DEL DESCUBRIMIENTO",
     "bonusTitle": "Elige tu próxima aventura",
-    "bonusSubtitle": "Cinco experiencias para explorar, imprimir, jugar y mirar en familia.",
+    "bonusSubtitle": "Cuatro experiencias para explorar, imprimir, jugar y mirar en familia.",
     "sourceEyebrow": "DETRÁS DE CADA MARAVILLA HAY PRUEBAS",
     "sourceTitle": "Las fuentes, descubrimiento a descubrimiento",
     "sourceSubtitle": "Busca el código SC-XX del libro, consulta la referencia y abre la fuente original. Si se ha añadido el PDF, podrás descargarlo.",
@@ -39,13 +39,6 @@
     "back": "Volver"
   },
   "bonus": {
-    "missioni": {
-      "tag": "PDF · AVENTURA ILUSTRADA",
-      "title": "Las 7 misiones secretas de Otto",
-      "subtitle": "El misterio del Atlas de las Maravillas",
-      "description": "Siete enigmas científicos, pistas que reunir y un secreto que revelar.",
-      "detail": "Una aventura ilustrada, retos variados, soluciones y diploma final."
-    },
     "museo": {
       "tag": "WEB · INTERACTIVA",
       "title": "Museo de los Descubrimientos Imposibles",
@@ -84,7 +77,6 @@
     "watchFilms": "Ver los 8 vídeos",
     "openMuseum": "Entrar en el museo",
     "downloadColor": "Descargar dibujos",
-    "downloadMissions": "Descargar misiones",
     "goToSources": "Abrir biblioteca",
     "openOfficial": "Abrir fuente original",
     "downloadSource": "Descargar PDF de la fuente",

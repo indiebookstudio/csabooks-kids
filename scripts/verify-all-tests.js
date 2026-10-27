@@ -160,10 +160,10 @@ async function runAllTests() {
 
   // TEST 6 — DOWNLOAD
   try {
-    const pdfMissioni = await request(`${BASE}bonus/it/missioni/missioni.pdf`);
-    const isPdf = pdfMissioni.statusCode === 200 && pdfMissioni.buffer.slice(0, 4).toString('utf-8') === '%PDF';
-    const sizeMb = (pdfMissioni.buffer.length / (1024 * 1024)).toFixed(2);
-    record('TEST 6 — DOWNLOAD', isPdf, `Scaricato missioni.pdf (${sizeMb} MB) con intestazione %PDF valida e integra.`);
+    const pdfColora = await request(`${BASE}bonus/it/colora/colora.pdf`);
+    const isPdf = pdfColora.statusCode === 200 && pdfColora.buffer.slice(0, 4).toString('utf-8') === '%PDF';
+    const sizeMb = (pdfColora.buffer.length / (1024 * 1024)).toFixed(2);
+    record('TEST 6 — DOWNLOAD', isPdf, `Scaricato colora.pdf (${sizeMb} MB) con intestazione %PDF valida e integra.`);
   } catch (e) {
     record('TEST 6 — DOWNLOAD', false, e.message);
   }

@@ -24,7 +24,7 @@
   "sections": {
     "bonusEyebrow": "LE PORTE DELLE MERAVIGLIE",
     "bonusTitle": "Scegli la tua prossima avventura",
-    "bonusSubtitle": "Cinque esperienze da esplorare: da stampare, giocare e guardare insieme.",
+    "bonusSubtitle": "Quattro esperienze da esplorare: da stampare, giocare e guardare insieme.",
     "sourceEyebrow": "DIETRO OGNI MERAVIGLIA, UNA PROVA",
     "sourceTitle": "Le fonti, una scoperta alla volta",
     "sourceSubtitle": "Trova il codice SC-XX indicato nel libro, leggi il riferimento e apri la fonte originale. Se il PDF è stato aggiunto all’archivio, puoi scaricarlo subito.",
@@ -39,13 +39,6 @@
     "back": "Torna indietro"
   },
   "bonus": {
-    "missioni": {
-      "tag": "PDF · AVVENTURA ILLUSTRATA",
-      "title": "Le 7 missioni segrete di Otto",
-      "subtitle": "Il mistero dell’Atlante delle Meraviglie",
-      "description": "Sette enigmi scientifici, indizi da raccogliere e un segreto da svelare. Una piccola avventura illustrata da leggere e completare su carta.",
-      "detail": "24 pagine illustrate, prove diverse, soluzioni spiegate e diploma finale. Scarica e stampa oppure leggilo sullo schermo."
-    },
     "museo": {
       "tag": "SITO · INTERATTIVO",
       "title": "Il Museo delle Scoperte Impossibili",
@@ -84,7 +77,6 @@
     "watchFilms": "Guarda gli 8 film",
     "openMuseum": "Entra nel museo",
     "downloadColor": "Scarica le 10 pagine",
-    "downloadMissions": "Scarica le 7 missioni",
     "goToSources": "Apri la biblioteca",
     "openOfficial": "Apri la fonte originale",
     "downloadSource": "Scarica il PDF della fonte",

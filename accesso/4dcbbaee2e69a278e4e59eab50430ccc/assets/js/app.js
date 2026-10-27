@@ -7,7 +7,7 @@
   const app = q('#app');
   const localeLabels = {it:'IT · Italiano',en:'EN · English',fr:'FR · Français',es:'ES · Español'};
   const categories = ['all','animali','piante','esperimenti','dinosauri','tecnologia','corpo','spazio','introduzione'];
-  const cards = ['missioni','museo','film','colora','carte'];
+  const cards = ['museo','film','colora','carte'];
   let config, t, sources = [], integrativeSources = [], language = 'it';
   const state = {query:'',filter:'all',limit:12};
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -42,7 +42,7 @@
   }
   function currentBonusURL(id,locale=language){
     const base=`bonus/${locale}/`;
-    return ({missioni:base+'missioni/missioni.pdf',museo:base+'museo/index.html',film:base+'animazioni/index.html',colora:base+'colora/colora.pdf',carte:base+'carte/index.html'})[id];
+    return ({museo:base+'museo/index.html',film:base+'animazioni/index.html',colora:base+'colora/colora.pdf',carte:base+'carte/index.html'})[id];
   }
   function currentBookCover(locale=language){
     if(config?.bookCovers && config.bookCovers[locale]) return config.bookCovers[locale];
@@ -54,7 +54,6 @@
     const avail = loc==='it';
     if(!avail)return `<p class="source-pdf-status">${esc(L('actions.comingSoon'))}</p>`;
     const extras=[];
-    if(id==='missioni')extras.push(btn(L('actions.downloadMissions'),currentBonusURL(id),'primary','download'));
     if(id==='museo')extras.push(btn(L('actions.openMuseum'),currentBonusURL(id),'primary'));
     if(id==='film'){
       extras.push(btn('Esplora le Animazioni 3D',currentBonusURL(id),'primary'));
@@ -87,7 +86,7 @@
     q('#site-footer').innerHTML=`<div class="wrap"><div class="footer-grid"><div><div class="footer-tag">${esc(L('footer.tag'))}</div><p>${esc(L('footer.text'))}</p><p>${esc(L('footer.privacy'))}</p></div><div class="footer-links"><a href="${url('inizio')}" data-internal="inizio">${esc(L('nav.home'))}</a><a href="${url('fonti')}" data-internal="fonti">${esc(L('nav.sources'))}</a>${linkOK(config.contactUrl)?`<a href="${esc(config.contactUrl)}" target="_blank" rel="noopener noreferrer">${esc(L('footer.official'))} ↗</a>`:''}</div></div><div class="footer-bottom">${esc(L('footer.legal'))}</div></div>`;
   }
   function card(id,i){
-    const b=t.bonus[id];return `<article class="bonus-card ${i===0?'feature':''}"><a href="${url('bonus-dettaglio',{id})}" data-bonus="${id}" aria-label="${esc(b.title)}"><div class="bonus-art"><img src="media/bonus/${id}.webp" loading="lazy" alt="" width="1100" height="700"><span class="bonus-number">0${i+1}</span></div><div class="bonus-body"><div class="bonus-tag">${esc(b.tag)}</div><h3>${esc(b.title)}</h3><p class="bonus-desc">${esc(b.description)}</p><div class="bonus-foot"><span>${esc(L('sections.enter'))}</span><span class="icon-arrow" aria-hidden="true">↗</span></div></div></a></article>`;
+    const b=t.bonus[id];return `<article class="bonus-card"><a href="${url('bonus-dettaglio',{id})}" data-bonus="${id}" aria-label="${esc(b.title)}"><div class="bonus-art"><img src="media/bonus/${id}.webp" loading="lazy" alt="" width="1100" height="700"><span class="bonus-number">0${i+1}</span></div><div class="bonus-body"><div class="bonus-tag">${esc(b.tag)}</div><h3>${esc(b.title)}</h3><p class="bonus-desc">${esc(b.description)}</p><div class="bonus-foot"><span>${esc(L('sections.enter'))}</span><span class="icon-arrow" aria-hidden="true">↗</span></div></div></a></article>`;
   }
   function renderHome(){
     return `<section class="hero"><div class="wrap hero-inner"><div class="hero-copy">${stamp(L('brand.eyebrow'))}<h1><span>${esc(L('brand.title'))}</span><span class="gold-text">${esc(L('brand.titleEm'))}</span></h1><p class="hero-intro">${esc(L('brand.intro'))}</p><p class="hero-description">${esc(L('brand.subtitle'))}</p><div class="hero-actions">${btn(L('brand.ctaExplore'),url('bonus'))}${btn(L('brand.ctaSources'),url('fonti'),'outline')}</div><p class="hero-beneath"><span class="dot"></span>${esc(L('brand.age'))}</p></div><div class="hero-visual" aria-hidden="true"><div class="hero-halo"></div><img class="book-cover" src="${esc(currentBookCover())}" alt="${esc(config.bookTitle)}" onerror="this.onerror=null;this.src='media/copertina.webp'"><img class="hero-otto" src="${esc(config.mascot)}" alt=""><span class="hero-stamp">OTTO · DISCOVERY CLUB</span></div></div></section>
@@ -117,20 +116,7 @@
     const more=q('#more-sources');if(more){more.hidden=items.length<=state.limit;more.disabled=items.length<=state.limit;}
   }
   function renderSources(){
-    const dir = config?.sourcePdfDirectory || 'downloads/fonti/';
-    const registryBanner = `
-      <div class="sources-registry-banner">
-        <div class="sources-registry-copy">
-          <strong>📋 Archivio Completo delle Fonti (57 schede e 80 documenti)</strong>
-          <p>Tutti i PDF originali e le stampe sono archiviati per la consultazione e il download.</p>
-        </div>
-        <div class="sources-registry-actions">
-          <a href="${esc(dir)}INDICE.html" target="_blank" class="btn btn-outline btn-sm">Indice generale PDF ↗</a>
-          <a href="${esc(dir)}REGISTRO_FONTI.csv" download class="btn btn-plain btn-sm">Registro CSV ↓</a>
-        </div>
-      </div>
-    `;
-    return `<section class="sources-intro"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.sources')])}${stamp(L('sections.sourceEyebrow'))}<h1>${esc(L('sections.sourceTitle'))}</h1><p class="page-description">${esc(L('sections.sourceSubtitle'))}</p>${registryBanner}<div class="source-toolbar"><label class="search-wrap" for="search-sources"><span class="search-icon" aria-hidden="true">⌕</span><input class="search-input" id="search-sources" type="search" autocomplete="off" placeholder="${esc(L('sourceUi.searchPlaceholder'))}" aria-label="${esc(L('sourceUi.searchLabel'))}" value="${esc(state.query)}"></label><div class="filter-row" aria-label="${esc(L('sourceUi.category'))}">${categories.map(k=>`<button class="chip" type="button" data-filter="${k}" aria-pressed="${state.filter===k?'true':'false'}">${esc(L('categories.'+k))}</button>`).join('')}</div></div><p class="results-line" id="source-count" aria-live="polite"></p><div class="sources-grid" id="source-results"></div><div class="show-more"><button id="more-sources" class="btn btn-outline" type="button">${esc(L('sourceUi.showMore'))} ↓</button></div><div class="wide-info"><h3>${esc(L('sections.sourceWhyTitle'))}</h3><p>${esc(L('sections.sourceWhyText'))}</p></div></div></section>`;
+    return `<section class="sources-intro"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.sources')])}${stamp(L('sections.sourceEyebrow'))}<h1>${esc(L('sections.sourceTitle'))}</h1><p class="page-description">${esc(L('sections.sourceSubtitle'))}</p><div class="source-toolbar"><label class="search-wrap" for="search-sources"><span class="search-icon" aria-hidden="true">⌕</span><input class="search-input" id="search-sources" type="search" autocomplete="off" placeholder="${esc(L('sourceUi.searchPlaceholder'))}" aria-label="${esc(L('sourceUi.searchLabel'))}" value="${esc(state.query)}"></label><div class="filter-row" aria-label="${esc(L('sourceUi.category'))}">${categories.map(k=>`<button class="chip" type="button" data-filter="${k}" aria-pressed="${state.filter===k?'true':'false'}">${esc(L('categories.'+k))}</button>`).join('')}</div></div><p class="results-line" id="source-count" aria-live="polite"></p><div class="sources-grid" id="source-results"></div><div class="show-more"><button id="more-sources" class="btn btn-outline" type="button">${esc(L('sourceUi.showMore'))} ↓</button></div><div class="wide-info"><h3>${esc(L('sections.sourceWhyTitle'))}</h3><p>${esc(L('sections.sourceWhyText'))}</p></div></div></section>`;
   }
   function formatCitation(text){
     if(!text) return '';

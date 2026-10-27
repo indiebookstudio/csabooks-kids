@@ -145,7 +145,6 @@ const REQUIRED_QR_ROUTES = [
       path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'media', 'otto.webp'),
       path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'media', 'polpo_esploratore_con_chiave_dorata.png'),
       path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'media', 'polpo_esploratore_con_chiave_dorata.webp'),
-      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'missioni', 'missioni.pdf'),
       path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'museo', 'index.html'),
       path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'film', 'index.html'),
       path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'animazioni', 'index.html'),

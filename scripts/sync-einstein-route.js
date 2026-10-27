@@ -108,7 +108,6 @@ const CRITICAL_FILES = [
   path.join('media', 'otto.webp'),
   path.join('media', 'polpo_esploratore_con_chiave_dorata.png'),
   path.join('media', 'polpo_esploratore_con_chiave_dorata.webp'),
-  path.join('bonus', 'it', 'missioni', 'missioni.pdf'),
   path.join('bonus', 'it', 'museo', 'index.html'),
   path.join('bonus', 'it', 'film', 'index.html'),
   path.join('bonus', 'it', 'animazioni', 'index.html'),

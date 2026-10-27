@@ -70,7 +70,7 @@ const EMAIL_I18N = {
     intro: "Otto ti dà il benvenuto nel suo mondo delle scoperte impossibili.",
     keyLabel: "La tua chiave segreta è:",
     key: "OTTO",
-    instruction: "Torna alla pagina del libro, inserisci la chiave e preparati a esplorare missioni, esperimenti, giochi, animazioni e tante meraviglie scientifiche.",
+    instruction: "Torna alla pagina del libro, inserisci la chiave e preparati a esplorare esperimenti, giochi, animazioni e tante meraviglie scientifiche.",
     ctaBtn: "ENTRA NEL MONDO DI OTTO",
     signoff: "Buona esplorazione!",
     author: "Otto",

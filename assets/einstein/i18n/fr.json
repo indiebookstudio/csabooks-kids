@@ -24,7 +24,7 @@
   "sections": {
     "bonusEyebrow": "LES PORTES DE LA DÉCOUVERTE",
     "bonusTitle": "Choisis ta prochaine aventure",
-    "bonusSubtitle": "Cinq expériences à explorer, imprimer, jouer et regarder ensemble.",
+    "bonusSubtitle": "Quatre expériences à explorer, imprimer, jouer et regarder ensemble.",
     "sourceEyebrow": "DERRIÈRE CHAQUE MERVEILLE, UNE PREUVE",
     "sourceTitle": "Les sources, découverte par découverte",
     "sourceSubtitle": "Cherche le code SC-XX du livre, consulte la référence et ouvre la source originale. Si le PDF a été ajouté, tu peux le télécharger.",
@@ -39,13 +39,6 @@
     "back": "Retour"
   },
   "bonus": {
-    "missioni": {
-      "tag": "PDF · AVENTURE ILLUSTRÉE",
-      "title": "Les 7 missions secrètes d’Otto",
-      "subtitle": "Le mystère de l’Atlas des Merveilles",
-      "description": "Sept énigmes scientifiques, des indices à recueillir et un secret à découvrir.",
-      "detail": "Une aventure illustrée, des défis variés, des solutions expliquées et un diplôme."
-    },
     "museo": {
       "tag": "SITE · INTERACTIF",
       "title": "Le Musée des Découvertes Impossibles",
@@ -84,7 +77,6 @@
     "watchFilms": "Voir les 8 films",
     "openMuseum": "Entrer dans le musée",
     "downloadColor": "Télécharger les coloriages",
-    "downloadMissions": "Télécharger les missions",
     "goToSources": "Ouvrir la bibliothèque",
     "openOfficial": "Voir la source originale",
     "downloadSource": "Télécharger le PDF de la source",
