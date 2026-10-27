@@ -113,7 +113,11 @@
     q('#site-footer').innerHTML=`<div class="wrap"><div class="footer-grid"><div><div class="footer-tag">${esc(L('footer.tag'))}</div><p>${esc(L('footer.text'))}</p><p>${esc(L('footer.privacy'))}</p></div><div class="footer-links"><a href="${url('inizio')}" data-internal="inizio">${esc(L('nav.home'))}</a><a href="${url('fonti')}" data-internal="fonti">${esc(L('nav.sources'))}</a>${linkOK(config.contactUrl)?`<a href="${esc(config.contactUrl)}" target="_blank" rel="noopener noreferrer">${esc(L('footer.official'))} ↗</a>`:''}</div></div><div class="footer-bottom">${esc(L('footer.legal'))}</div></div>`;
   }
   function card(id,i){
-    const b=t.bonus[id];return `<article class="bonus-card"><a href="${url('bonus-dettaglio',{id})}" data-bonus="${id}" aria-label="${esc(b.title)}"><div class="bonus-art"><img src="media/bonus/${id}.webp" loading="lazy" alt="" width="1100" height="700"><span class="bonus-number">0${i+1}</span></div><div class="bonus-body"><div class="bonus-tag">${esc(b.tag)}</div><h3>${esc(b.title)}</h3><p class="bonus-desc">${esc(b.description)}</p><div class="bonus-foot"><span>${esc(L('sections.enter'))}</span><span class="icon-arrow" aria-hidden="true">↗</span></div></div></a></article>`;
+    const b=t.bonus[id];
+    if(id === 'film'){
+      return `<article class="bonus-card"><a href="${currentBonusURL(id)}" aria-label="${esc(b.title)}"><div class="bonus-art"><img src="media/bonus/${id}.webp" loading="lazy" alt="" width="1100" height="700"><span class="bonus-number">0${i+1}</span></div><div class="bonus-body"><div class="bonus-tag">${esc(b.tag)}</div><h3>${esc(b.title)}</h3><p class="bonus-desc">${esc(b.description)}</p><div class="bonus-foot"><span>${esc(L('sections.enter'))}</span><span class="icon-arrow" aria-hidden="true">↗</span></div></div></a></article>`;
+    }
+    return `<article class="bonus-card"><a href="${url('bonus-dettaglio',{id})}" data-bonus="${id}" aria-label="${esc(b.title)}"><div class="bonus-art"><img src="media/bonus/${id}.webp" loading="lazy" alt="" width="1100" height="700"><span class="bonus-number">0${i+1}</span></div><div class="bonus-body"><div class="bonus-tag">${esc(b.tag)}</div><h3>${esc(b.title)}</h3><p class="bonus-desc">${esc(b.description)}</p><div class="bonus-foot"><span>${esc(L('sections.enter'))}</span><span class="icon-arrow" aria-hidden="true">↗</span></div></div></a></article>`;
   }
   function renderHome(){
     return `<section class="hero"><div class="wrap hero-inner"><div class="hero-copy">${stamp(L('brand.eyebrow'))}<h1><span>${esc(L('brand.title'))}</span><span class="gold-text">${esc(L('brand.titleEm'))}</span></h1><p class="hero-intro">${esc(L('brand.intro'))}</p><p class="hero-description">${esc(L('brand.subtitle'))}</p><div class="hero-actions">${btn(L('brand.ctaExplore'),url('bonus'))}${btn(L('brand.ctaSources'),url('fonti'),'outline')}</div><p class="hero-beneath"><span class="dot"></span>${esc(L('brand.age'))}</p></div><div class="hero-visual" aria-hidden="true"><div class="hero-halo"></div><img class="book-cover" src="${esc(currentBookCover())}" alt="${esc(config.bookTitle)}" onerror="this.onerror=null;this.src='media/copertina.webp'"><img class="hero-otto" src="${esc(config.mascot)}" alt=""><span class="hero-stamp">OTTO · DISCOVERY CLUB</span></div></div></section>
@@ -124,6 +128,10 @@
   function renderBonusGrid(){return `<section class="page-top"><div class="wrap page-header">${breadcrumb([L('nav.home'),L('nav.bonus')])}${stamp(L('sections.bonusEyebrow'))}<h1>${esc(L('sections.bonusTitle'))}</h1><p class="page-description">${esc(L('sections.bonusSubtitle'))}</p></div></section><section class="section"><div class="wrap"><div class="cards">${cards.map(card).join('')}</div></div></section>`;}
   function breadcrumb(parts){return `<div class="breadcrumb"><a href="${url('inizio')}" data-internal="inizio">${esc(parts[0]||L('nav.home'))}</a> <span aria-hidden="true">/</span> <span>${esc(parts.slice(1).join(' / '))}</span></div>`;}
   function renderBonus(id){
+    if(id === 'film'){
+      location.replace(currentBonusURL('film'));
+      return `<div class="initial-loader"><div class="spinner"></div><p>${esc(L('sections.enter'))}…</p></div>`;
+    }
     const b=t.bonus[id];if(!b)return notFound();
     const img=`media/bonus/${id}.webp`;
     return `<section class="page-top"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.bonus'),b.title])}</div></section><section class="wrap detail-hero"><div class="detail-art"><img src="${img}" alt="" width="1100" height="700"></div><div class="detail-content">${stamp(b.tag)}<h1>${esc(b.title)}</h1><p class="detail-subtitle">${esc(b.subtitle)}</p><p class="detail-text">${esc(b.detail)}</p><div class="detail-actions">${bonusButtons(id)}</div><div class="minor-links">${btn(L('actions.goBack'),url('bonus'),'outline')}</div></div></section>`;
@@ -597,7 +605,7 @@
     const menu=e.target.closest('#menu-toggle');if(menu){let nav=q('#nav-links');const open=!nav.classList.contains('open');nav.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));return;}
     const filter=e.target.closest('[data-filter]');if(filter){state.filter=filter.dataset.filter;state.limit=12;q('.filter-row').querySelectorAll('[data-filter]').forEach(el=>el.setAttribute('aria-pressed',String(el===filter)));drawSourceCards();return;}
     const more=e.target.closest('#more-sources');if(more){state.limit+=12;drawSourceCards();return;}
-    const b=e.target.closest('a[data-bonus]');if(b){e.preventDefault();route('bonus-dettaglio',{id:b.dataset.bonus});return;}
+    const b=e.target.closest('a[data-bonus]');if(b){e.preventDefault();if(b.dataset.bonus==='film'){location.href=currentBonusURL('film');return;}route('bonus-dettaglio',{id:b.dataset.bonus});return;}
     const s=e.target.closest('a[data-source]');if(s){e.preventDefault();route('fonte',{sc:s.dataset.source});return;}
     const n=e.target.closest('a[data-internal]');if(n){e.preventDefault();route(n.dataset.internal);return;}
     const a=e.target.closest('a[href^="?pagina="]');if(a){e.preventDefault();const u=new URL(a.href);const p=u.searchParams.get('pagina')||'inizio';route(p,{id:u.searchParams.get('id'),sc:u.searchParams.get('sc')});}
