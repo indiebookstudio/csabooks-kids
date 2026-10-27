@@ -148,6 +148,7 @@ const REQUIRED_QR_ROUTES = [
       path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'missioni', 'missioni.pdf'),
       path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'museo', 'index.html'),
       path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'film', 'index.html'),
+      path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'animazioni', 'index.html'),
       path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'colora', 'colora.pdf'),
       path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'carte', 'index.html'),
       path.join('accesso', '4dcbbaee2e69a278e4e59eab50430ccc', 'bonus', 'it', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf')

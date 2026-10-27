@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071726">
+  <meta name="description" content="Simulazioni scientifiche 3D interattive di Otto per il libro Einstein, questa te la sei persa!">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:title" content="Animazioni 3D e Simulazioni Scientifiche · Il Laboratorio di Otto">
+  <meta property="og:description" content="Esplora in 3D le grandi scoperte della scienza con Otto: megattere, DNA, robot micotici e buchi neri.">
+  <meta property="og:image" content="../film/anteprima.jpg">
+  <title>Animazioni 3D Interattive · Otto</title>
+  <link rel="icon" href="../film/favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --navy: #071726;
+      --navy2: #0e2739;
+      --glass: #102d3d;
+      --glass-hover: #153a4f;
+      --line: rgba(181, 216, 232, 0.18);
+      --gold: #f0c578;
+      --gold-hover: #ffd78a;
+      --ivory: #fff4dd;
+      --mist: #a8c3cc;
+      --sky: #38bdf8;
+      --sky-light: #7dd3fc;
+      --teal: #42d3d0;
+      --sans: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ivory);
+      font-family: var(--sans);
+      background: radial-gradient(ellipse at 77% -9%, #183b58 0%, transparent 40%),
+                  radial-gradient(ellipse at 15% 17%, #15344b 0%, transparent 30%),
+                  var(--navy);
+      min-height: 100vh;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    body::after {
+      content: "";
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      opacity: 0.25;
+      background-image: radial-gradient(circle at 12% 15%, #fff 0 1px, transparent 1.8px),
+                        radial-gradient(circle at 85% 35%, #fff 0 1px, transparent 1.8px),
+                        radial-gradient(circle at 32% 79%, #fff 0 1px, transparent 1.8px);
+      background-size: 410px 470px, 680px 430px, 590px 520px;
+      z-index: -1;
+    }
+    .wrap {
+      max-width: 1360px;
+      width: calc(100% - 48px);
+      margin: 0 auto;
+    }
+    a { color: inherit; text-decoration: none; }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 88px;
+      border-bottom: 1px solid var(--line);
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+    .logostar {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1c4b70, #0a1b2a);
+      border: 1px solid var(--line);
+      color: var(--gold);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .logo small {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--mist);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .top-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--line);
+      color: var(--ivory);
+      transition: all 0.2s ease;
+    }
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--sky);
+      color: #fff;
+    }
+    .hero {
+      padding: 56px 0 40px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: clamp(32px, 4.5vw, 54px);
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--gold), #ffeed0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+    }
+    .hero p {
+      margin: 0 0 24px;
+      color: var(--mist);
+      font-size: 17px;
+      max-width: 620px;
+      line-height: 1.6;
+    }
+    .hero-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .hero-meta span {
+      background: rgba(16, 45, 61, 0.7);
+      border: 1px solid var(--line);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--sky-light);
+    }
+    .hero-art {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .hero-art img {
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
+      animation: float 5s ease-in-out infinite alternate;
+    }
+    @keyframes float {
+      from { transform: translateY(0px); }
+      to { transform: translateY(-12px); }
+    }
+    .section-title-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+      flex-wrap: wrap;
+    }
+    .section-title-wrap h2 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+    .section-sub {
+      color: var(--mist);
+      font-size: 14px;
+      margin-top: 4px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+    .anim-card {
+      background: var(--navy2);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .anim-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(56, 189, 248, 0.5);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 20px rgba(56, 189, 248, 0.15);
+    }
+    .thumb-wrap {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      background: #040d16;
+      overflow: hidden;
+    }
+    .thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .anim-card:hover .thumb-wrap img {
+      transform: scale(1.05);
+    }
+    .badge-3d {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: linear-gradient(135deg, #0284c7, #0369a1);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .badge-video {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(16, 45, 61, 0.9);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.05em;
+    }
+    .card-code {
+      position: absolute;
+      bottom: 10px;
+      left: 12px;
+      background: rgba(7, 23, 38, 0.85);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--ivory);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .card-cat {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .card-body h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #fff;
+    }
+    .card-lead {
+      color: var(--sky-light);
+      font-size: 13.5px;
+      font-weight: 600;
+      margin: 0 0 10px;
+      line-height: 1.45;
+    }
+    .card-desc {
+      color: var(--mist);
+      font-size: 13.5px;
+      line-height: 1.55;
+      margin: 0 0 20px;
+      flex-grow: 1;
+    }
+    .card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: auto;
+    }
+    .btn-play {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      background: linear-gradient(135deg, var(--gold), #d89e43);
+      color: #071726;
+      border: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-play:hover {
+      background: linear-gradient(135deg, var(--gold-hover), #e6ae55);
+      box-shadow: 0 6px 18px rgba(240, 197, 120, 0.35);
+      transform: translateY(-1px);
+    }
+    .card-minor-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      padding-top: 6px;
+    }
+    .minor-link {
+      color: var(--mist);
+      transition: color 0.2s ease;
+    }
+    .minor-link:hover {
+      color: var(--sky-light);
+    }
+    .info-box {
+      background: rgba(16, 45, 61, 0.6);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      margin-bottom: 60px;
+    }
+    .info-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      display: grid;
+      place-items: center;
+      color: var(--sky);
+      font-weight: 800;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .info-content strong {
+      display: block;
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+    .info-content p {
+      margin: 0;
+      color: var(--mist);
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 32px 0 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--mist);
+      font-size: 13px;
+    }
+    .footer strong { color: var(--gold); }
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; gap: 24px; }
+      .hero-art { order: -1; }
+      .hero-art img { max-width: 180px; }
+      .wrap { width: calc(100% - 32px); }
+    }
+  </style>
+</head>
+<body>
+
+<header class="topbar wrap">
+  <div class="logo">
+    <div class="logostar">✦</div>
+    <div>
+      <div>OTTO <small>LABORATORIO 3D</small></div>
+    </div>
+  </div>
+  <nav class="top-nav" aria-label="Navigazione rapida">
+    <a class="nav-btn" href="../../../?lang=it&pagina=bonus">← Torna al portale</a>
+    <a class="nav-btn" href="../film/index.html">🎬 Mini-film MP4</a>
+    <a class="nav-btn" href="../../../?lang=it&pagina=fonti">📚 Biblioteca fonti</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">BONUS ESCLUSIVO · EINSTEIN, QUESTA TE LA SEI PERSA!</span>
+      <h1>LA SCIENZA<br><em>IN MOVIMENTO 3D</em></h1>
+      <p>Otto ha aperto il laboratorio interattivo. Guarda cosa succede quando le meraviglie escono dal libro: ruota nello spazio 3D, attiva i meccanismi, osserva le traiettorie e sperimenta con la fisica e la biologia reale.</p>
+      <div class="hero-meta">
+        <span>7 SIMULAZIONI 3D INTERATTIVE</span>
+        <span>WEBGL / THREE.JS</span>
+        <span>7–12 ANNI</span>
+        <span>FONTI SCIENTIFICHE UFFICIALI</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="../film/assets/otto.webp" alt="Otto il polpo scienziato">
+    </div>
+  </section>
+
+  <section id="animazioni">
+    <div class="section-title-wrap">
+      <div>
+        <span class="eyebrow">LE SIMULAZIONI INTERATTIVE</span>
+        <h2>Esplora le meraviglie della scienza in 3D</h2>
+      </div>
+      <div class="section-sub">Tocca o fai clic per entrare in ciascuna simulazione tridimensionale</div>
+    </div>
+
+    <div class="grid">
+
+      <!-- 01 Megattere -->
+      <article class="anim-card">
+        <div class="thumb-wrap">
+          <img src="../film/assets/film_01.jpg" alt="Rete di bolle delle megattere" loading="lazy">
+          <span class="badge-3d">✨ 3D INTERATTIVO</span>
+          <span class="card-code">SC-05</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">ANIMALI STRAORDINARI</div>
+          <h3>La rete invisibile delle megattere</h3>
+          <p class="card-lead">Come possono delle bolle d’aria diventare una rete?</p>
+          <p class="card-desc">Simulazione tridimensionale sottomarina: osserva il banco di pesci, cambia prospettiva dall'alto o di lato e attiva la spirale di bolle concentriche creata dalla megattera.</p>
+          <div class="card-actions">
+            <a class="btn-play" href="01.Megattere/la_rete_invisibile_delle_megattere.html">✦ Apri simulazione 3D</a>
+            <div class="card-minor-links">
+              <a class="minor-link" href="../film/video/OTTO_FILM_01_balena.mp4" download>Scarica video MP4 ↓</a>
+              <a class="minor-link" href="https://doi.org/10.1098/rsos.240328" target="_blank" rel="noopener noreferrer">Fonte DOI ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 Felce DNA -->
+      <article class="anim-card">
+        <div class="thumb-wrap">
+          <img src="../film/assets/film_02.jpg" alt="La felce con DNA gigantesco" loading="lazy">
+          <span class="badge-3d">✨ 3D INTERATTIVO</span>
+          <span class="card-code">SC-13</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">PIANTE E PICCOLI MONDI</div>
+          <h3>La felce con un DNA gigantesco</h3>
+          <p class="card-lead">Una felce minuscola può custodire più DNA di noi?</p>
+          <p class="card-desc">Viaggia all’interno della cellula vegetale di <em>Tmesipteris oblanceolata</em>: esplora in 3D la doppia elica con oltre 160 miliardi di coppie di basi, oltre 50 volte il genoma umano.</p>
+          <div class="card-actions">
+            <a class="btn-play" href="02.Felce.DNA/la_felce_con_un_dna_gigantesco.html">✦ Apri simulazione 3D</a>
+            <div class="card-minor-links">
+              <a class="minor-link" href="../film/video/OTTO_FILM_02_felce.mp4" download>Scarica video MP4 ↓</a>
+              <a class="minor-link" href="https://doi.org/10.1016/j.isci.2024.109889" target="_blank" rel="noopener noreferrer">Fonte DOI ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 Pesce Veicolo -->
+      <article class="anim-card">
+        <div class="thumb-wrap">
+          <img src="../film/assets/film_03.jpg" alt="Pesce che muove un veicolo" loading="lazy">
+          <span class="badge-3d">✨ 3D INTERATTIVO</span>
+          <span class="card-code">SC-15</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">ESPERIMENTI SORPRENDENTI</div>
+          <h3>Un pesce può muovere un veicolo?</h3>
+          <p class="card-lead">Come fa una vasca su ruote a seguire il pesce che nuota?</p>
+          <p class="card-desc">Scopri l'apparato sperimentale con telecamera dall'alto e computer vision: il computer calcola la posizione del pesce rosso e comanda le ruote robotiche nello spazio circostante.</p>
+          <div class="card-actions">
+            <a class="btn-play" href="03.Pesce.Veicolo/il_pesce_che_muove_un_veicolo.html">✦ Apri simulazione 3D</a>
+            <div class="card-minor-links">
+              <a class="minor-link" href="../film/video/OTTO_FILM_03_pesce.mp4" download>Scarica video MP4 ↓</a>
+              <a class="minor-link" href="https://doi.org/10.1016/j.bbr.2021.113711" target="_blank" rel="noopener noreferrer">Fonte DOI ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 Uccelli Dinosauri -->
+      <article class="anim-card">
+        <div class="thumb-wrap">
+          <img src="../film/assets/film_04.jpg" alt="Dinosauri teropodi e uccelli" loading="lazy">
+          <span class="badge-3d">✨ 3D INTERATTIVO</span>
+          <span class="card-code">SC-38</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">DINOSAURI E DNA</div>
+          <h3>Gli uccelli sono dinosauri vivi</h3>
+          <p class="card-lead">Il T. rex è davvero il nonno della gallina?</p>
+          <p class="card-desc">Esplora l'evoluzione dei dinosauri teropodi: ruota scheletri, penne fossili e scopri la parentela profonda che lega i grandi predatori del Cretaceo ai volatili che vediamo ogni giorno.</p>
+          <div class="card-actions">
+            <a class="btn-play" href="04.Uccelli.Dinosauri/gli_uccelli_sono_dinosauri_vivi.html">✦ Apri simulazione 3D</a>
+            <div class="card-minor-links">
+              <a class="minor-link" href="../film/video/OTTO_FILM_04_dinosauri.mp4" download>Scarica video MP4 ↓</a>
+              <a class="minor-link" href="https://www.nhm.ac.uk/discover/how-dinosaurs-evolved-into-birds.html" target="_blank" rel="noopener noreferrer">Museo NHM ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 Fungo Robot -->
+      <article class="anim-card">
+        <div class="thumb-wrap">
+          <img src="../film/assets/film_05.jpg" alt="Fungo collegato a un robot" loading="lazy">
+          <span class="badge-3d">✨ 3D INTERATTIVO</span>
+          <span class="card-code">SC-25</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">LABORATORIO DEL FUTURO</div>
+          <h3>Il fungo collegato a un robot</h3>
+          <p class="card-lead">Un fungo può davvero aiutare a controllare una macchina?</p>
+          <p class="card-desc">Simula l'interfaccia bioibrida tra micelio fungino e circuito elettronico: gli impulsi elettrici naturali guidano le risposte motorie del piccolo robot sperimentale.</p>
+          <div class="card-actions">
+            <a class="btn-play" href="05.Fungo.Robot/il_fungo_collegato_a_un_robot.html">✦ Apri simulazione 3D</a>
+            <div class="card-minor-links">
+              <a class="minor-link" href="../film/video/OTTO_FILM_05_micelio.mp4" download>Scarica video MP4 ↓</a>
+              <a class="minor-link" href="https://doi.org/10.1126/scirobotics.adk8019" target="_blank" rel="noopener noreferrer">Fonte Science ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06 Ginocchio Bionico -->
+      <article class="anim-card">
+        <div class="thumb-wrap">
+          <img src="../film/assets/film_06.jpg" alt="Ginocchio bionico" loading="lazy">
+          <span class="badge-3d">✨ 3D INTERATTIVO</span>
+          <span class="card-code">SC-50</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">CORPO E SUPERTECNOLOGIE</div>
+          <h3>Il ginocchio bionico</h3>
+          <p class="card-lead">Come può una protesi rispondere ai segnali del corpo?</p>
+          <p class="card-desc">Guarda in 3D l'articolazione bionica integrata nei tessuti sviluppata al MIT: i segnali neuromuscolari vengono decodificati per restituire un cammino fluido e naturale.</p>
+          <div class="card-actions">
+            <a class="btn-play" href="06.Ginocchio.Bionico/il_ginocchio_bionico.html">✦ Apri simulazione 3D</a>
+            <div class="card-minor-links">
+              <a class="minor-link" href="../film/video/OTTO_FILM_06_ginocchio.mp4" download>Scarica video MP4 ↓</a>
+              <a class="minor-link" href="https://news.mit.edu/2025/bionic-knee-integrated-into-tissue-can-restore-natural-movement-0710" target="_blank" rel="noopener noreferrer">Articolo MIT ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 07 Buco Nero -->
+      <article class="anim-card">
+        <div class="thumb-wrap">
+          <img src="../film/assets/film_07.jpg" alt="Immagine del buco nero M87" loading="lazy">
+          <span class="badge-3d">✨ 3D INTERATTIVO</span>
+          <span class="card-code">SC-48</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">SPAZIO E UNIVERSO</div>
+          <h3>Come nasce l’immagine di un buco nero</h3>
+          <p class="card-lead">Quante telecamere sono servite per fotografare M87*?</p>
+          <p class="card-desc">Esplora la rete su scala terrestre dell'Event Horizon Telescope: scopri come i radiotelescopi di tutto il pianeta hanno sincronizzato i dati per ricostruire l'anello di luce attorno all'orizzonte degli eventi.</p>
+          <div class="card-actions">
+            <a class="btn-play" href="07.Buco.Nero/come_nasce_l_immagine_di_un_buco_nero.html">✦ Apri simulazione 3D</a>
+            <div class="card-minor-links">
+              <a class="minor-link" href="../film/video/OTTO_FILM_07_buco_nero.mp4" download>Scarica video MP4 ↓</a>
+              <a class="minor-link" href="https://www.eso.org/public/italy/news/eso1907/" target="_blank" rel="noopener noreferrer">Comunicato ESO ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 08 3I/ATLAS -->
+      <article class="anim-card">
+        <div class="thumb-wrap">
+          <img src="../film/assets/film_08.jpg" alt="Cometa 3I/ATLAS" loading="lazy">
+          <span class="badge-video">🎬 FILM HD</span>
+          <span class="card-code">SC-36</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">SPAZIO E UNIVERSO</div>
+          <h3>3I/ATLAS: una cometa di passaggio</h3>
+          <p class="card-lead">Perché questa cometa non tornerà dopo un giro attorno al Sole?</p>
+          <p class="card-desc">3I/ATLAS proviene dallo spazio interstellare: la sua orbita iperbolica non è legata gravitazionalmente al Sole. Guarda la spiegazione animata della sua traiettoria aperta.</p>
+          <div class="card-actions">
+            <a class="btn-play" href="../film/index.html">▶ Guarda il filmato HD</a>
+            <div class="card-minor-links">
+              <a class="minor-link" href="../film/video/OTTO_FILM_08_3I_ATLAS.mp4" download>Scarica video MP4 ↓</a>
+              <a class="minor-link" href="https://science.nasa.gov/solar-system/comets/3i-atlas/" target="_blank" rel="noopener noreferrer">Scheda NASA ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="info-box">
+      <div class="info-icon">i</div>
+      <div class="info-content">
+        <strong>Come leggere queste simulazioni scientifiche</strong>
+        <p>Tutte le simulazioni 3D e i filmati didattici sono ricostruzioni illustrative semplificate, create appositamente per spiegare ai ragazzi i principi e i meccanismi descritti negli articoli scientifici originali. Le informazioni sono verificate e tracciate con link diretti e DOI ufficiali.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap footer">
+  <div>UN BONUS DI <strong>EINSTEIN, QUESTA TE LA SEI PERSA!</strong> · Clara Musicco · 2026</div>
+  <div>Le meraviglie sono vere. La tecnologia serve a esplorarle.</div>
+</footer>
+
+</body>
+</html>

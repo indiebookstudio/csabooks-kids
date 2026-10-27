@@ -111,6 +111,8 @@ const CRITICAL_FILES = [
   path.join('bonus', 'it', 'missioni', 'missioni.pdf'),
   path.join('bonus', 'it', 'museo', 'index.html'),
   path.join('bonus', 'it', 'film', 'index.html'),
+  path.join('bonus', 'it', 'animazioni', 'index.html'),
+  path.join('bonus', 'it', 'animazioni', '01.Megattere', 'la_rete_invisibile_delle_megattere.html'),
   path.join('bonus', 'it', 'colora', 'colora.pdf'),
   path.join('bonus', 'it', 'carte', 'index.html'),
   path.join('bonus', 'it', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf')

@@ -42,7 +42,7 @@
   }
   function currentBonusURL(id,locale=language){
     const base=`bonus/${locale}/`;
-    return ({missioni:base+'missioni/missioni.pdf',museo:base+'museo/index.html',film:base+'film/index.html',colora:base+'colora/colora.pdf',carte:base+'carte/index.html'})[id];
+    return ({missioni:base+'missioni/missioni.pdf',museo:base+'museo/index.html',film:base+'animazioni/index.html',colora:base+'colora/colora.pdf',carte:base+'carte/index.html'})[id];
   }
   function currentBookCover(locale=language){
     if(config?.bookCovers && config.bookCovers[locale]) return config.bookCovers[locale];
@@ -56,7 +56,10 @@
     const extras=[];
     if(id==='missioni')extras.push(btn(L('actions.downloadMissions'),currentBonusURL(id),'primary','download'));
     if(id==='museo')extras.push(btn(L('actions.openMuseum'),currentBonusURL(id),'primary'));
-    if(id==='film')extras.push(btn(L('actions.watchFilms'),currentBonusURL(id),'primary'));
+    if(id==='film'){
+      extras.push(btn('Esplora le Animazioni 3D',currentBonusURL(id),'primary'));
+      extras.push(btn('Archivio Video MP4',`bonus/${loc}/film/index.html`,'outline'));
+    }
     if(id==='colora')extras.push(btn(L('actions.downloadColor'),currentBonusURL(id),'primary','download="Disegni.Da.Colorare.pdf"'));
     if(id==='carte'){
       extras.push(btn(L('actions.playOnline'),currentBonusURL(id),'primary'));
