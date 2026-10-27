@@ -102,9 +102,12 @@ const CRITICAL_FILES = [
   path.join('assets', 'js', 'app.js'),
   path.join('config', 'site.json'),
   path.join('i18n', 'it.json'),
+  path.join('i18n', 'en.json'),
   path.join('content', 'fonti_it.csv'),
+  path.join('content', 'fonti_en.csv'),
   path.join('content', 'fonti_integrative.json'),
   path.join('media', 'copertina.webp'),
+  path.join('media', 'copertine', 'en', 'copertina.webp'),
   path.join('media', 'otto.webp'),
   path.join('media', 'polpo_esploratore_con_chiave_dorata.png'),
   path.join('media', 'polpo_esploratore_con_chiave_dorata.webp'),
@@ -114,7 +117,14 @@ const CRITICAL_FILES = [
   path.join('bonus', 'it', 'animazioni', '01.Megattere', 'la_rete_invisibile_delle_megattere.html'),
   path.join('bonus', 'it', 'colora', 'colora.pdf'),
   path.join('bonus', 'it', 'carte', 'index.html'),
-  path.join('bonus', 'it', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf')
+  path.join('bonus', 'it', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf'),
+  path.join('bonus', 'en', 'museo', 'index.html'),
+  path.join('bonus', 'en', 'film', 'index.html'),
+  path.join('bonus', 'en', 'animazioni', 'index.html'),
+  path.join('bonus', 'en', 'animazioni', '01.Megattere', 'la_rete_invisibile_delle_megattere.html'),
+  path.join('bonus', 'en', 'colora', 'colora.pdf'),
+  path.join('bonus', 'en', 'carte', 'index.html'),
+  path.join('bonus', 'en', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf')
 ];
 
 let errors = [];

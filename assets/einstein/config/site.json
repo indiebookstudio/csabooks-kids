@@ -1,13 +1,29 @@
 {
   "siteTitle": "Il mondo segreto di Otto",
+  "siteTitles": {
+    "it": "Il mondo segreto di Otto",
+    "en": "Otto's Secret World",
+    "de": "Ottos geheime Welt",
+    "fr": "Le monde secret d'Otto",
+    "es": "El mundo secreto de Otto"
+  },
   "bookTitle": "EINSTEIN, QUESTA TE LA SEI PERSA!",
+  "bookTitles": {
+    "it": "EINSTEIN, QUESTA TE LA SEI PERSA!",
+    "en": "EINSTEIN, YOU MISSED THIS!",
+    "de": "EINSTEIN, DAS HAST DU VERPASST!",
+    "fr": "EINSTEIN, TU AS MANQUÉ ÇA !",
+    "es": "¡EINSTEIN, ESTA TE LA PERDISTE!"
+  },
   "defaultLocale": "it",
   "enabledLocales": [
-    "it"
+    "it",
+    "en"
   ],
   "supportedLocales": [
     "it",
     "en",
+    "de",
     "fr",
     "es"
   ],
@@ -17,6 +33,7 @@
   "bookCovers": {
     "it": "media/copertine/it/copertina.webp",
     "en": "media/copertine/en/copertina.webp",
+    "de": "media/copertine/de/copertina.webp",
     "fr": "media/copertine/fr/copertina.webp",
     "es": "media/copertine/es/copertina.webp"
   },

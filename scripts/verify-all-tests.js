@@ -183,12 +183,12 @@ async function runAllTests() {
   try {
     const it = await request(`${BASE}i18n/it.json`);
     const en = await request(`${BASE}i18n/en.json`);
-    const fr = await request(`${BASE}i18n/fr.json`);
-    const es = await request(`${BASE}i18n/es.json`);
+    const fontiEn = await request(`${BASE}content/fonti_en.csv`);
     const cfg = await request(`${BASE}config/site.json`);
     const siteJson = JSON.parse(cfg.body);
-    const ok = it.statusCode === 200 && en.statusCode === 200 && fr.statusCode === 200 && es.statusCode === 200 && siteJson.enabledLocales.includes('it');
-    record('TEST 8 — MULTILINGUA', ok, `i18n IT/EN/FR/ES presenti; solo IT abilitato in config per evitare pagine incomplete.`);
+    const ok = it.statusCode === 200 && en.statusCode === 200 && fontiEn.statusCode === 200 &&
+               siteJson.enabledLocales.includes('it') && siteJson.enabledLocales.includes('en');
+    record('TEST 8 — MULTILINGUA', ok, `i18n IT/EN e fonti_en.csv presenti; lingue 'it' ed 'en' abilitate con successo.`);
   } catch (e) {
     record('TEST 8 — MULTILINGUA', false, e.message);
   }

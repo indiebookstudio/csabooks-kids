@@ -5,7 +5,14 @@
 (() => {
   const q = sel => document.querySelector(sel);
   const app = q('#app');
-  const localeLabels = {it:'IT · Italiano',en:'EN · English',fr:'FR · Français',es:'ES · Español'};
+  const allLanguages = [
+    { code: 'en', flag: '🇬🇧', label: 'English', available: true },
+    { code: 'it', flag: '🇮🇹', label: 'Italiano', available: true },
+    { code: 'de', flag: '🇩🇪', label: 'Deutsch', available: false },
+    { code: 'fr', flag: '🇫🇷', label: 'Français', available: false },
+    { code: 'es', flag: '🇪🇸', label: 'Español', available: false }
+  ];
+  const localeLabels = {it:'IT · Italiano',en:'EN · English',de:'DE · Deutsch',fr:'FR · Français',es:'ES · Español'};
   const categories = ['all','animali','piante','esperimenti','dinosauri','tecnologia','corpo','spazio','introduzione'];
   const cards = ['museo','film','colora','carte'];
   let config, t, sources = [], integrativeSources = [], language = 'it';
@@ -48,22 +55,36 @@
     if(config?.bookCovers && config.bookCovers[locale]) return config.bookCovers[locale];
     return config?.bookCover || 'media/copertina.webp';
   }
+  function showToast(msg){
+    let tEl = q('#site-toast');
+    if(!tEl){
+      tEl = document.createElement('div');
+      tEl.id = 'site-toast';
+      tEl.className = 'site-toast';
+      tEl.setAttribute('role', 'alert');
+      tEl.setAttribute('aria-live', 'polite');
+      document.body.appendChild(tEl);
+    }
+    tEl.textContent = msg;
+    tEl.classList.add('show');
+    clearTimeout(tEl._timer);
+    tEl._timer = setTimeout(() => tEl.classList.remove('show'), 3200);
+  }
   function bonusButtons(id){
     const loc = language;
-    // Bonus in other languages should be added under bonus/{locale}/ before enabling that locale.
-    const avail = loc==='it';
-    if(!avail)return `<p class="source-pdf-status">${esc(L('actions.comingSoon'))}</p>`;
-    const extras=[];
-    if(id==='museo')extras.push(btn(L('actions.openMuseum'),currentBonusURL(id),'primary'));
-    if(id==='film'){
-      extras.push(btn('Esplora le Animazioni 3D',currentBonusURL(id),'primary'));
-      extras.push(btn('Archivio Video MP4',`bonus/${loc}/film/index.html`,'outline'));
+    const avail = loc === 'it' || loc === 'en';
+    if(!avail) return `<p class="source-pdf-status">${esc(L('actions.comingSoon'))}</p>`;
+    const extras = [];
+    if(id === 'museo') extras.push(btn(L('actions.openMuseum'), currentBonusURL(id), 'primary'));
+    if(id === 'film'){
+      extras.push(btn(L('actions.openAnimations') || (loc === 'en' ? 'Explore 3D Animations' : 'Esplora le Animazioni 3D'), currentBonusURL(id), 'primary'));
+      extras.push(btn(L('actions.videoArchive') || (loc === 'en' ? 'MP4 Video Archive' : 'Archivio Video MP4'), `bonus/${loc}/film/index.html`, 'outline'));
     }
-    if(id==='colora')extras.push(btn(L('actions.downloadColor'),currentBonusURL(id),'primary','download="Disegni.Da.Colorare.pdf"'));
-    if(id==='carte'){
-      extras.push(btn(L('actions.playOnline'),currentBonusURL(id),'primary'));
-      extras.push(btn(L('actions.downloadCards'),`bonus/${loc}/carte/OTTO_CARTE_36_FRONTE_RETRO_A4.pdf`,'outline','download="OTTO_CARTE_36_FRONTE_RETRO_A4.pdf"'));
-      extras.push(btn(L('actions.downloadRules'),`bonus/${loc}/carte/OTTO_GUIDA_PREMIUM.pdf`,'outline','download="OTTO_GUIDA_PREMIUM.pdf"'));
+    if(id === 'colora') extras.push(btn(L('actions.downloadColor'), currentBonusURL(id), 'primary', 'download="Disegni.Da.Colorare.pdf"'));
+    if(id === 'carte'){
+      extras.push(btn(L('actions.playOnline'), currentBonusURL(id), 'primary'));
+      extras.push(btn(L('actions.downloadCards'), `bonus/${loc}/carte/OTTO_CARTE_36_FRONTE_RETRO_A4.pdf`, 'outline', 'download="OTTO_CARTE_36_FRONTE_RETRO_A4.pdf"'));
+      extras.push(btn(L('actions.downloadRules'), `bonus/${loc}/carte/OTTO_GUIDA_PREMIUM.pdf`, 'outline', 'download="OTTO_GUIDA_PREMIUM.pdf"'));
     }
     return extras.join('');
   }
@@ -75,12 +96,20 @@
   function isUnlocked(){try{return localStorage.getItem('otto_unlocked')==='true';}catch(_){return false;}}
   function setUnlocked(v){try{if(v)localStorage.setItem('otto_unlocked','true');else localStorage.removeItem('otto_unlocked');}catch(_){}}
   function setNav(){
-    const current=page();
-    const items=[['inizio',L('nav.home')],['bonus',L('nav.bonus')],['fonti',L('nav.sources')]];
-    let links=items.map(([p,label])=>`<a class="nav-link ${current===p||(current==='bonus-dettaglio'&&p==='bonus')||(current==='fonte'&&p==='fonti')?'active':''}" href="${url(p)}" data-internal="${p}" ${current===p?'aria-current="page"':''}>${esc(label)}</a>`).join('');
-    q('#nav-links').innerHTML=links;
-    const allowed=config.enabledLocales||['it'];
-    q('#language-select').innerHTML=allowed.length>1?`<label for="language" class="visually-hidden">${esc(L('footer.lang'))}</label><select class="locale-select" id="language" aria-label="${esc(L('footer.lang'))}">${allowed.map(l=>`<option value="${esc(l)}" ${language===l?'selected':''}>${esc(localeLabels[l]||l.toUpperCase())}</option>`).join('')}</select>`:`<span class="locale-select" aria-label="${esc(L('footer.lang'))}">${esc(localeLabels[language]||language.toUpperCase())}</span>`;
+    const current = page();
+    const items = [['inizio', L('nav.home')], ['bonus', L('nav.bonus')], ['fonti', L('nav.sources')]];
+    let links = items.map(([p, label]) => `<a class="nav-link ${current === p || (current === 'bonus-dettaglio' && p === 'bonus') || (current === 'fonte' && p === 'fonti') ? 'active' : ''}" href="${url(p)}" data-internal="${p}" ${current === p ? 'aria-current="page"' : ''}>${esc(label)}</a>`).join('');
+    q('#nav-links').innerHTML = links;
+
+    const bar = `<div class="locale-pill-bar" role="group" aria-label="${esc(L('footer.lang'))}">
+      ${allLanguages.map(l => `
+        <button type="button" class="locale-flag-item ${language === l.code ? 'active' : ''}" data-switch-lang="${l.code}" aria-pressed="${language === l.code ? 'true' : 'false'}" title="${esc(l.label)}">
+          <span class="flag-icon" aria-hidden="true">${l.flag}</span>
+          <span class="flag-code">${l.code.toUpperCase()}</span>
+        </button>
+      `).join('')}
+    </div>`;
+    q('#language-select').innerHTML = bar;
   }
   function footer(){
     q('#site-footer').innerHTML=`<div class="wrap"><div class="footer-grid"><div><div class="footer-tag">${esc(L('footer.tag'))}</div><p>${esc(L('footer.text'))}</p><p>${esc(L('footer.privacy'))}</p></div><div class="footer-links"><a href="${url('inizio')}" data-internal="inizio">${esc(L('nav.home'))}</a><a href="${url('fonti')}" data-internal="fonti">${esc(L('nav.sources'))}</a>${linkOK(config.contactUrl)?`<a href="${esc(config.contactUrl)}" target="_blank" rel="noopener noreferrer">${esc(L('footer.official'))} ↗</a>`:''}</div></div><div class="footer-bottom">${esc(L('footer.legal'))}</div></div>`;
@@ -156,11 +185,17 @@
     const items = integrativeSources.filter(x => x.parent === code);
     if(!items.length) return '';
     const dir = config?.sourcePdfDirectory || 'downloads/fonti/';
+    const isEn = language === 'en';
+    const headerTitle = isEn ? `📚 Supplementary sources and related materials (${items.length})` : `📚 Fonti integrative e materiali correlati (${items.length})`;
+    const headerIntro = isEn ? 'In-depth analyses, connected scientific studies, preprints, or archived author notes:' : 'Approfondimenti, studi scientifici collegati, preprints o note degli autori archiviati:';
+    const authLabel = isEn ? 'Authors/Source:' : 'Autori/Origine:';
+    const dlText = pages => isEn ? `Download PDF (${esc(pages)} p.) ↓` : `Scarica PDF (${esc(pages)} pag.) ↓`;
+    const readOnline = isEn ? 'Read online ↗' : 'Consulta online ↗';
     return `
       <div class="citation-card integrative-card">
         <div class="integrative-header">
-          <h3>📚 Fonti integrative e materiali correlati (${items.length})</h3>
-          <p class="integrative-intro">Approfondimenti, studi scientifici collegati, preprints o note degli autori archiviati:</p>
+          <h3>${headerTitle}</h3>
+          <p class="integrative-intro">${headerIntro}</p>
         </div>
         <div class="integrative-list">
           ${items.map(it => `
@@ -168,14 +203,14 @@
               <div class="integrative-meta">
                 <span class="integrative-code">${esc(it.code)}</span>
                 <span class="integrative-title">${esc(it.tipo || it.scheda)}</span>
-                <span class="integrative-pages">${it.pagine ? esc(it.pagine) + ' pag.' : ''}</span>
+                <span class="integrative-pages">${it.pagine ? esc(it.pagine) + (isEn ? ' p.' : ' pag.') : ''}</span>
               </div>
-              ${it.autore ? `<p class="integrative-author"><strong>Autori/Origine:</strong> ${esc(it.autore)}</p>` : ''}
+              ${it.autore ? `<p class="integrative-author"><strong>${authLabel}</strong> ${esc(it.autore)}</p>` : ''}
               ${it.doi ? `<p class="integrative-doi"><strong>DOI:</strong> <a href="https://doi.org/${esc(it.doi)}" target="_blank" rel="noopener noreferrer">${esc(it.doi)}</a></p>` : ''}
               ${it.nota ? `<p class="integrative-note">${esc(it.nota)}</p>` : ''}
               <div class="integrative-actions">
-                <a href="${esc(dir + it.file)}" download="${esc(it.file.split('/').pop())}" class="btn btn-primary btn-sm">Scarica PDF (${esc(it.pagine)} pag.) ↓</a>
-                ${linkOK(it.url) ? `<a href="${esc(it.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Consulta online ↗</a>` : ''}
+                <a href="${esc(dir + it.file)}" download="${esc(it.file.split('/').pop())}" class="btn btn-primary btn-sm">${dlText(it.pagine)}</a>
+                ${linkOK(it.url) ? `<a href="${esc(it.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">${readOnline}</a>` : ''}
               </div>
             </div>
           `).join('')}
@@ -186,7 +221,7 @@
   function renderSource(s){
     const dir = config?.sourcePdfDirectory || 'downloads/fonti/';
     const official = linkOK(s.url) ? btn(L('actions.openOfficial'), s.url, 'outline', 'target="_blank" rel="noopener noreferrer"') : '';
-    const imageCredit = s.codice === 'SC-55' ? 'Credito immagine: EHT Collaboration / ESO (2019), CC BY 4.0' : esc(L('actions.sourceIllustration'));
+    const imageCredit = s.codice === 'SC-55' ? (language === 'en' ? 'Image credit: EHT Collaboration / ESO (2019), CC BY 4.0' : 'Credito immagine: EHT Collaboration / ESO (2019), CC BY 4.0') : esc(L('actions.sourceIllustration'));
     return `<section class="page-top"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.sources'),s.codice])}</div></section><section class="wrap source-detail"><div class="source-image"><img src="media/fonti/${esc(s.codice)}.webp" alt="${esc(s.titolo)}" width="660" height="440" onerror="this.onerror=null;this.src='media/temi/${esc(s.categoria)}.webp'"><div class="source-caption">${imageCredit}</div></div><div class="source-detail-info"><span class="source-badge">${esc(s.codice)}</span><h1>${esc(s.titolo)}</h1><p class="detail-meta">${esc(L('categories.'+s.categoria))}</p><div class="citation-card"><h3>${esc(L('sourceUi.citation'))}</h3><p>${formatCitation(s.citazione)}</p></div>${linkedCorrections(s)}<div class="source-buttons">${official}<a id="source-pdf-link" class="btn btn-primary" href="${esc(dir + s.codice)}.pdf" download="${esc(s.codice)}.pdf">${esc(L('actions.downloadSource'))} ↓</a></div>${renderIntegrativeSection(s.codice)}<div class="minor-links">${btn(L('actions.backSources'),url('fonti'),'outline')}</div></div></section>`;
   }
   async function checkSourcePDF(code){
@@ -219,6 +254,33 @@
       </div>
     ` : '';
 
+    const isEn = language === 'en';
+    const privacyBody = isEn ? `
+      <p><strong>Information for adults / parents under EU Regulation 2016/679 (GDPR)</strong></p>
+      <h3>1. Purpose of the Service (Secret Key Delivery)</h3>
+      <p>The email address entered is used solely to deliver the requested universal key («OTTO») to access educational resources for the book <em>Einstein, You Missed This!</em>. Legal basis: performance of a requested measure (art. 6, para. 1, letter b, GDPR).</p>
+      <h3>2. Optional Newsletter Subscription</h3>
+      <p>The promotional consent box is optional and non-binding. If checked, it allows updates about new books, free educational activities, and editorial news (art. 6, para. 1, letter a, GDPR). Consent can be withdrawn at any time by writing to <a href="mailto:csabooks.kids@gmail.com" class="privacy-link">csabooks.kids@gmail.com</a>.</p>
+      <h3>3. Protection of Minors</h3>
+      <p>The key request is strictly intended for parents and adults. No minors' personal data is collected, stored, or profiled for commercial purposes.</p>
+      <h3>4. Technical Provider & Data Processing</h3>
+      <p>Emails are delivered via the secure Brevo platform (Sendinblue SAS, with EU-based GDPR-compliant servers). No data is transferred to third parties.</p>
+      <h3>5. Data Subject Rights</h3>
+      <p>You can request access, rectification, or deletion of your data at any time by emailing <strong>csabooks.kids@gmail.com</strong>.</p>
+    ` : `
+      <p><strong>Informativa per gli adulti / genitori ex Regolamento UE 2016/679 (GDPR)</strong></p>
+      <h3>1. Finalità del Servizio (Invio Chiave Segreta)</h3>
+      <p>L'indirizzo email inserito viene utilizzato unicamente per inviare la chiave universale richiesta («OTTO») per accedere alle risorse didattiche del libro <em>Einstein, questa te la sei persa!</em>. La base giuridica è l'esecuzione di una misura richiesta dall'interessato (art. 6, par. 1, lett. b, GDPR).</p>
+      <h3>2. Iscrizione Facoltativa alle Novità Editoriali</h3>
+      <p>La casella di consenso promozionale è completamente facoltativa e non vincolante. Se selezionata, consente l'invio di aggiornamenti su nuovi libri, attività didattiche e iniziative editoriali gratuite (art. 6, par. 1, lett. a, GDPR). Il consenso può essere revocato in ogni momento scrivendo a <a href="mailto:csabooks.kids@gmail.com" class="privacy-link">csabooks.kids@gmail.com</a>.</p>
+      <h3>3. Protezione dei Minori</h3>
+      <p>La richiesta della chiave è rivolta esclusivamente a genitori e adulti. Nessun dato di minori viene raccolto, conservato o profilato per scopi commerciali.</p>
+      <h3>4. Fornitore Tecnico e Trattamento Dati</h3>
+      <p>I messaggi email sono recapitati tramite la piattaforma sicura Brevo (Sendinblue SAS, con server situati nell'Unione Europea conformi al GDPR). Nessun dato viene ceduto a terzi.</p>
+      <h3>5. Diritti dell'Interessato</h3>
+      <p>È sempre possibile richiedere l'accesso, la rettifica, la cancellazione o l'opposizione al trattamento dei propri dati inviando una comunicazione a <strong>csabooks.kids@gmail.com</strong>.</p>
+    `;
+
     return `
       <section class="access-section">
         <div class="wrap">
@@ -242,12 +304,12 @@
             <article class="access-card access-card-primary">
               <span class="access-card-tag">🔑 ${esc(L('access.path1Title'))}</span>
               <h2>${esc(L('access.path1Title'))}</h2>
-              <p class="access-card-text">Inserisci la parola segreta per sbloccare immediatamente l'accesso a tutti i bonus del libro.</p>
+              <p class="access-card-text">${esc(L('access.path1Text'))}</p>
               <form class="access-form" id="form-enter-key" novalidate>
                 <div class="access-field">
                   <label class="access-label" for="input-secret-key">${esc(L('access.path1Label'))}</label>
                   <div class="access-input-wrap">
-                    <input type="text" id="input-secret-key" class="access-input access-input-key" placeholder="${esc(L('access.path1Placeholder'))}" autocomplete="off" autocapitalize="characters" spellcheck="false" required maxlength="12">
+                    <input type="text" id="input-secret-key" class="access-input access-input-key" placeholder="${esc(L('access.path1Placeholder'))}" autocomplete="off" spellcheck="false" required maxlength="12">
                   </div>
                 </div>
                 <div id="key-feedback" class="access-feedback" role="alert"></div>
@@ -287,7 +349,7 @@
             <div class="access-help-icon" aria-hidden="true">💡</div>
             <div class="access-help-content">
               <h3>${esc(L('access.helpTitle'))}</h3>
-              <p>${esc(L('access.helpText'))} <a href="mailto:csabooks.kids@gmail.com?subject=Richiesta%20assistenza%20accesso%20chiave%20Otto" class="access-help-mail"><strong>csabooks.kids@gmail.com</strong></a>. Ti aiuteremo subito!</p>
+              <p>${esc(L('access.helpText'))} <a href="mailto:csabooks.kids@gmail.com?subject=Richiesta%20assistenza%20accesso%20chiave%20Otto" class="access-help-mail"><strong>csabooks.kids@gmail.com</strong></a>. ${esc(L('access.helpImmediate'))}</p>
             </div>
           </div>
 
@@ -299,17 +361,7 @@
                 <button type="button" class="privacy-modal-close" id="btn-close-privacy" aria-label="${esc(L('access.privacyModalClose'))}">&times;</button>
               </div>
               <div class="privacy-modal-body">
-                <p><strong>Informativa per gli adulti / genitori ex Regolamento UE 2016/679 (GDPR)</strong></p>
-                <h3>1. Finalità del Servizio (Invio Chiave Segreta)</h3>
-                <p>L'indirizzo email inserito viene utilizzato unicamente per inviare la chiave universale richiesta («OTTO») per accedere alle risorse didattiche del libro <em>Einstein, questa te la sei persa!</em>. La base giuridica è l'esecuzione di una misura richiesta dall'interessato (art. 6, par. 1, lett. b, GDPR).</p>
-                <h3>2. Iscrizione Facoltativa alle Novità Editoriali</h3>
-                <p>La casella di consenso promozionale è completamente facoltativa e non vincolante. Se selezionata, consente l'invio di aggiornamenti su nuovi libri, attività didattiche e iniziative editoriali gratuite (art. 6, par. 1, lett. a, GDPR). Il consenso può essere revocato in ogni momento scrivendo a <a href="mailto:csabooks.kids@gmail.com" class="privacy-link">csabooks.kids@gmail.com</a>.</p>
-                <h3>3. Protezione dei Minori</h3>
-                <p>La richiesta della chiave è rivolta esclusivamente a genitori e adulti. Nessun dato di minori viene raccolto, conservato o profilato per scopi commerciali.</p>
-                <h3>4. Fornitore Tecnico e Trattamento Dati</h3>
-                <p>I messaggi email sono recapitati tramite la piattaforma sicura Brevo (Sendinblue SAS, con server situati nell'Unione Europea conformi al GDPR). Nessun dato viene ceduto a terzi.</p>
-                <h3>5. Diritti dell'Interessato</h3>
-                <p>È sempre possibile richiedere l'accesso, la rettifica, la cancellazione o l'opposizione al trattamento dei propri dati inviando una comunicazione a <strong>csabooks.kids@gmail.com</strong>.</p>
+                ${privacyBody}
               </div>
               <div class="privacy-modal-footer">
                 <button type="button" class="btn btn-outline" id="btn-close-privacy-footer">${esc(L('access.privacyModalClose'))}</button>
@@ -361,7 +413,7 @@
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
         if(!email || !emailRegex.test(email)){
           emailFeedback.className = 'access-feedback show error';
-          emailFeedback.textContent = 'Inserisci un indirizzo email valido.';
+          emailFeedback.textContent = L('access.invalidEmail') || 'Inserisci un indirizzo email valido.';
           inputEmail.focus();
           return;
         }
@@ -431,7 +483,7 @@
           emailFeedback.innerHTML = `✉ <strong>${esc(L('access.path2Sent'))}</strong>`;
         } else {
           emailFeedback.className = 'access-feedback show error';
-          emailFeedback.innerHTML = `Non è stato possibile inviare la chiave. Scrivici direttamente a <a href="mailto:csabooks.kids@gmail.com?subject=Assistenza%20invio%20chiave%20Otto" style="color:#ffe4ac;text-decoration:underline">csabooks.kids@gmail.com</a> e te la invieremo subito!`;
+          emailFeedback.innerHTML = `${esc(L('access.sendFail'))} <a href="mailto:csabooks.kids@gmail.com?subject=Assistenza%20invio%20chiave%20Otto" style="color:#ffe4ac;text-decoration:underline">csabooks.kids@gmail.com</a>. ${esc(L('access.helpImmediate'))}`;
         }
       });
     }
@@ -501,17 +553,49 @@
     sources=rows.map(x=>({codice:x.codice?.trim(),titolo:x.titolo?.trim(),categoria:x.categoria?.trim()||'introduzione',citazione:x.citazione?.trim(),url:x.url?.trim(),correzioni:x.correzioni?.trim()})).filter(x=>/^(SC-\d{2}|EX-\d{2})$/.test(x.codice));
     language=l;
   }
+  function detectLocale(enabled){
+    const urlLang = new URL(location.href).searchParams.get('lang');
+    if(urlLang && enabled.includes(urlLang)) return urlLang;
+    try {
+      const stored = localStorage.getItem('otto_lang');
+      if(stored && enabled.includes(stored)) return stored;
+    } catch(_) {}
+    const navLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    if(navLang.startsWith('en') && enabled.includes('en')) return 'en';
+    if(navLang.startsWith('it') && enabled.includes('it')) return 'it';
+    return config?.defaultLocale || 'it';
+  }
   async function init(){
     try{
       config=await loadJSON('config/site.json');
-      const requested=pageId('lang')||new URL(location.href).searchParams.get('lang')||config.defaultLocale||'it';
-      const locale=(config.enabledLocales||['it']).includes(requested)?requested:(config.defaultLocale||'it');
+      const enabled = config.enabledLocales || ['it', 'en'];
+      const locale = detectLocale(enabled);
       await loadLocale(locale);
-      if(!(config.enabledLocales||[]).includes(requested)&&requested!==locale){history.replaceState({},'',url(page(),{id:pageId('id'),sc:pageId('sc')}));}
+      try { localStorage.setItem('otto_lang', locale); } catch(_) {}
+      const urlLang = new URL(location.href).searchParams.get('lang');
+      if(!urlLang || urlLang !== locale){
+        history.replaceState({}, '', url(page(), { id: pageId('id'), sc: pageId('sc') }));
+      }
       draw();
     }catch(err){console.error(err);app.innerHTML=`<section class="error-card"><h2>Impossibile caricare il portale</h2><p>Controlla che il sito sia aperto tramite un server web e che siano presenti config/site.json, i18n/it.json e content/fonti_it.csv. Aprire index.html direttamente dal disco (file://) non funziona.</p><p style="font-size:11px;color:#ffdc93">${esc(err.message)}</p><button class="btn btn-primary" type="button" onclick="location.reload()">Riprova</button></section>`;}
   }
-  document.addEventListener('click',e=>{
+  document.addEventListener('click', async e=>{
+    const flagBtn = e.target.closest('[data-switch-lang]');
+    if(flagBtn){
+      const targetCode = flagBtn.dataset.switchLang;
+      if(targetCode === language) return;
+      const enabled = config?.enabledLocales || ['it', 'en'];
+      if(enabled.includes(targetCode)){
+        try { localStorage.setItem('otto_lang', targetCode); } catch(_) {}
+        await loadLocale(targetCode);
+        state.filter = 'all'; state.limit = 12; state.query = '';
+        history.pushState({}, '', url(page(), { id: pageId('id'), sc: pageId('sc') }));
+        draw();
+      } else {
+        showToast(L('notices.langInPrep') || (language === 'en' ? 'The book edition in this language is in preparation!' : 'L’edizione in questa lingua è in preparazione!'));
+      }
+      return;
+    }
     const menu=e.target.closest('#menu-toggle');if(menu){let nav=q('#nav-links');const open=!nav.classList.contains('open');nav.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));return;}
     const filter=e.target.closest('[data-filter]');if(filter){state.filter=filter.dataset.filter;state.limit=12;q('.filter-row').querySelectorAll('[data-filter]').forEach(el=>el.setAttribute('aria-pressed',String(el===filter)));drawSourceCards();return;}
     const more=e.target.closest('#more-sources');if(more){state.limit+=12;drawSourceCards();return;}

@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#081528">
+  <meta name="description" content="36 illustrated cards with Otto: can you tell true, false, and what science doesn't know yet?">
+  <title>True, False, or We Don't Know Yet? · Otto's Cards</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@500;700;800;900&display=swap');
+    :root{color-scheme:dark;--navy:#071429;--panel:#132840;--panel2:#18334b;--gold:#ffd46f;--white:#f7f4e9;--muted:#b6c9d9;--aqua:#46ddc5;--rose:#ff8b87;--ring:#ffdc81}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}
+    body{margin:0;color:var(--white);font-family:'DM Sans',system-ui,sans-serif;background:radial-gradient(circle at 75% -10%,#193d62 0%,transparent 44%),radial-gradient(circle at 0% 34%,#14364c 0%,transparent 25%),linear-gradient(145deg,#061227,#0d1b2b 75%,#091421);min-height:100vh}
+    a{color:#96f7e8}button,select{font-family:inherit}
+    button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    button{cursor:pointer}
+
+    /* GLOBAL PERSISTENT HEADER */
+    .site-nav-bar{position:sticky;top:0;z-index:1000;background:rgba(7,19,37,0.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(247,209,132,0.22);padding:12px 24px}
+    .site-nav-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .brand-link{display:inline-flex;align-items:center;gap:11px;text-decoration:none;color:inherit}
+    .brand-mark{width:42px;height:42px;border-radius:12px;border:1px solid rgba(247,209,132,0.4);background:linear-gradient(150deg,#2b4360,#122b42);display:grid;place-items:center;overflow:hidden;flex-shrink:0}
+    .brand-mark img{width:100%;height:100%;object-fit:cover}
+    .brand-lines{display:flex;flex-direction:column;line-height:1.15}
+    .brand-lines strong{font-family:Georgia,serif;font-size:18px;letter-spacing:.05em;color:#fff2d4}
+    .brand-lines strong span{color:var(--gold)}
+    .brand-lines small{font-size:8.5px;letter-spacing:.22em;font-weight:800;color:#8bbdc7}
+    .nav-menu{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .nav-item{padding:7px 12px;border-radius:10px;font-size:13px;font-weight:750;color:#d0d9e4;text-decoration:none;transition:background .15s,color .15s}
+    .nav-item:hover,.nav-item.active{background:rgba(251,212,138,.12);color:#ffe4ac}
+    
+    /* FLAG SELECTOR PILL */
+    .locale-pill-bar{display:inline-flex;align-items:center;gap:3px;background:rgba(255,255,255,0.96);border:1px solid rgba(226,201,160,0.6);border-radius:999px;padding:3px 5px;box-shadow:0 3px 12px rgba(0,0,0,0.12)}
+    .locale-flag-item{display:inline-flex;align-items:center;gap:4px;padding:5px 9px;border-radius:999px;font-size:12.5px;font-weight:800;color:#4b657e;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:all .15s ease;white-space:nowrap;user-select:none}
+    .locale-flag-item:hover{background:rgba(240,244,248,0.9);color:#1e3a5f}
+    .locale-flag-item.active{background:#ffefe5;border-color:#fca783;color:#e65612;box-shadow:0 1px 4px rgba(230,86,18,0.18)}
+
+    .hero{max-width:1180px;margin:auto;min-height:260px;display:flex;align-items:center;gap:32px;padding:32px 24px}
+    .hero h1{font-family:Nunito,system-ui;font-size:clamp(34px,5vw,68px);line-height:1.03;margin:15px 0 14px;max-width:800px;text-shadow:0 3px 22px #0009}
+    .hero h1 span{color:var(--gold)}
+    .hero p{line-height:1.6;font-size:clamp(15px,1.7vw,19px);color:#cbdce6;max-width:640px}
+    .eyebrow{font-weight:800;letter-spacing:.16em;color:var(--aqua);text-transform:uppercase;font-size:12px}
+    .otto{width:clamp(155px,24vw,250px);flex:none;align-self:end;filter:drop-shadow(0 18px 20px #0008)}
+    main{max-width:1130px;margin:0 auto;padding:0 24px 80px}
+    .shell{background:#0e2338dd;border:1px solid #31506b;border-radius:25px;padding:clamp(18px,3vw,35px);box-shadow:0 18px 55px #0006;position:relative;overflow:hidden}
+    .shell:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 95% 15%,#ffcf6519,transparent 35%)}
+    .topline{display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:22px;position:relative}
+    .chips{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .chip{border:1px solid #49718b;border-radius:100px;color:#daebf1;padding:8px 12px;font-weight:700;font-size:13px;background:#173951}
+    .bar{width:160px;height:10px;background:#274159;border-radius:15px;overflow:hidden}
+    .bar>span{display:block;height:100%;width:0;background:linear-gradient(90deg,#19c7af,var(--gold));transition:width .3s}
+    .topright{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .reset{border:1px solid #5a7186;border-radius:12px;color:#d8e7e9;background:transparent;padding:8px 12px;font-weight:700}
+    .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+    .filters button{color:#cad7e0;background:#112e46;border:1px solid #36516c;border-radius:100px;padding:9px 14px;font-weight:700;transition:.2s}
+    .filters button.on{background:var(--gold);border-color:var(--gold);color:#102238;box-shadow:0 4px 18px #ffd46f22}
+    .playing{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:25px;align-items:stretch;position:relative}
+    .gamecard{border:1px solid #936f35;background:linear-gradient(160deg,#fff0ce,#f6dfb4);border-radius:23px;color:#162e3c;min-height:460px;padding:25px 26px;box-shadow:inset 0 0 0 6px #ffffff80,0 10px 30px #0007;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+    .gamecard::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 95% 0,#fff6dd,transparent 30%),repeating-linear-gradient(45deg,transparent 0 9px,#7f542005 10px 11px);pointer-events:none}
+    .gamecard>*{position:relative}
+    .cardtop{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;font-weight:900;letter-spacing:.06em;color:#776037}
+    .cardnum{background:#12324d;color:white;border-radius:30px;padding:7px 12px;font-size:13px}
+    .theme{font-weight:900;color:#b27921;font-size:12px;letter-spacing:.14em}
+    .question{font-family:Nunito,system-ui;font-weight:900;font-size:clamp(24px,3.1vw,36px);line-height:1.2;margin:14px 0;max-width:640px}
+    .cardfoot{display:flex;justify-content:space-between;gap:8px;align-items:center;color:#685b4b;font-size:12px;font-weight:800}
+    .side{display:flex;flex-direction:column;gap:14px}
+    .side h2{font-family:Nunito,system-ui;margin:0;color:#fff0b4;font-size:24px}
+    .side p{margin:0;font-size:14px;line-height:1.6;color:#c7d7e3}
+    .options{display:grid;grid-template-columns:1fr;gap:10px}
+    .answer{min-height:67px;border:1px solid #436a80;border-radius:13px;background:#17344b;color:white;text-align:left;padding:13px 15px;font-size:16px;font-weight:900;transition:.18s}
+    .answer:hover:enabled{transform:translateY(-2px);background:#23516b}
+    .answer:disabled{opacity:.82;cursor:default}
+    .answer.active{border-width:2px;border-color:var(--gold);background:#2d5771}
+    .answer.good{border-color:#77f7cf;background:#174e4e;color:#bdfff0}
+    .answer.bad{border-color:#ffa29a;background:#6a2a35;color:#fff}
+    .answer .dot{display:inline-block;width:13px;height:13px;border:2px solid #d8eef2;border-radius:50%;margin-right:9px}
+    .answer.good .dot{background:#9cffe4;border-color:#9cffe4}
+    .answer.bad .dot{background:#ffc1b7;border-color:#ffc1b7}
+    .feedback{display:none;border:1px solid #52728b;background:#123047;border-radius:16px;padding:15px;line-height:1.55;animation:reveal .25s ease}
+    .feedback.visible{display:block}
+    .feedback strong{display:block;color:#ffda84;margin-bottom:5px;font-size:16px}
+    .feedback a{display:inline-block;margin-top:8px;font-size:13px;font-weight:800;color:var(--aqua)}
+    .feedback .src{display:block;font-size:11px;color:#abc4d3;margin-top:8px}
+    @keyframes reveal{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+    .navrow{display:flex;gap:10px;margin-top:auto}
+    .btn{border-radius:12px;font-size:15px;font-weight:900;padding:13px 18px;border:1px solid #58748a;background:transparent;color:#e7f8fa}
+    .btn.primary{background:linear-gradient(100deg,#f6c86b,#ffe5a6);color:#182a36;border:0;flex:1}
+    .btn:disabled{opacity:.35;cursor:not-allowed}
+    .notice{color:#aac2d2;font-size:12px;line-height:1.55;margin-top:14px}
+    .extras{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:20px}
+    .mini{background:#122941;border:1px solid #30516c;border-radius:17px;padding:17px;min-height:160px}
+    .mini h3{font-family:Nunito,system-ui;font-size:19px;margin:0 0 8px;color:#ffdfa1}
+    .mini p{font-size:13px;color:#c5dbe3;line-height:1.6}
+    .mini a{font-size:13px;font-weight:800;color:var(--aqua)}
+    .footer{font-size:12px;line-height:1.6;color:#9bb6c9;max-width:1130px;margin:0 auto;padding:10px 24px 30px}
+    .footer a{color:#e2c47e}
+
+    @media(max-width:860px){
+      .hero{gap:12px;min-height:auto;padding-top:20px}
+      .otto{width:130px}
+      .hero h1{font-size:clamp(30px,7vw,46px)}
+      .playing{grid-template-columns:1fr}
+      .gamecard{min-height:340px;padding:22px}
+      .options{grid-template-columns:repeat(3,1fr)}
+      .answer{text-align:center;min-height:70px;padding:8px 5px;font-size:13px}
+      .answer .dot{display:none}
+      .extras{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:600px){
+      .site-nav-inner{gap:10px}
+      .brand-lines strong{font-size:16px}
+      .nav-menu{gap:6px}
+      .nav-item{padding:6px 9px;font-size:12px}
+      .locale-flag-item{padding:4px 7px;font-size:11px}
+      .options{grid-template-columns:1fr}
+      .answer{text-align:left;font-size:15px;min-height:54px;padding:10px 12px}
+      .answer .dot{display:inline-block}
+      .extras{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- PERSISTENT TOP NAVIGATION -->
+  <header class="site-nav-bar">
+    <div class="site-nav-inner">
+      <a class="brand-link" href="../../../?lang=en&pagina=inizio" aria-label="Go to Home">
+        <span class="brand-mark"><img src="assets/otto.webp" alt="Otto"></span>
+        <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
+      </a>
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a class="nav-item" href="../../../?lang=en&pagina=inizio">Home</a>
+        <a class="nav-item active" href="../../../?lang=en&pagina=bonus">Bonuses</a>
+        <a class="nav-item" href="../../../?lang=en&pagina=fonti">Source Library</a>
+      </nav>
+      <!-- FLAG SELECTOR MATCHING MOCKUP -->
+      <div class="locale-pill-bar" role="group" aria-label="Language selection">
+        <a class="locale-flag-item active" href="#" aria-current="true" title="English">🇬🇧 EN</a>
+        <a class="locale-flag-item" href="../../it/carte/index.html" title="Italiano">🇮🇹 IT</a>
+        <button type="button" class="locale-flag-item" onclick="alert('🇩🇪 German edition coming soon!')" title="Deutsch">🇩🇪 DE</button>
+        <button type="button" class="locale-flag-item" onclick="alert('🇫🇷 Édition française bientôt disponible !')" title="Français">🇫🇷 FR</button>
+        <button type="button" class="locale-flag-item" onclick="alert('🇪🇸 ¡Edición en español próximamente!')" title="Español">🇪🇸 ES</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">A bonus companion to Einstein, You Missed This!</div>
+      <h1>TRUE, FALSE <span>OR WE DON'T KNOW YET?</span></h1>
+      <p>36 unbelievable discoveries. Otto challenges you to distinguish what scientists have discovered, what they have disproved, and what remains an open mystery.</p>
+    </div>
+    <img class="otto" src="assets/otto.webp" alt="Otto the explorer octopus with a magnifying glass">
+  </section>
+
+  <main id="gioca">
+    <section class="shell">
+      <div class="topline">
+        <div class="chips">
+          <span class="chip" id="counter">Card 1 of 36</span>
+          <span class="chip" id="points">0 points</span>
+        </div>
+        <div class="topright">
+          <div class="bar" aria-label="Progress"><span id="progress"></span></div>
+          <button class="reset" id="restart">Restart</button>
+        </div>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="playing">
+        <article class="gamecard" aria-live="polite">
+          <div class="cardtop">
+            <span class="cardnum" id="number">#01</span>
+            <span class="theme" id="theme">ANIMALS</span>
+          </div>
+          <div class="question" id="question"></div>
+          <div class="cardfoot">
+            <span>OBSERVE · REASON · CHOOSE</span>
+            <span id="code">SC-01</span>
+          </div>
+        </article>
+        <section class="side">
+          <h2>What is your answer?</h2>
+          <p>No need to guess: the key is understanding why. In science, saying "we don't know yet" is often the smartest answer.</p>
+          <div class="options">
+            <button class="answer" data-choice="TRUE"><span class="dot"></span>True</button>
+            <button class="answer" data-choice="FALSE"><span class="dot"></span>False</button>
+            <button class="answer" data-choice="WE DON'T KNOW YET"><span class="dot"></span>We don't know yet</button>
+          </div>
+          <div class="feedback" id="feedback" aria-live="polite"></div>
+          <div class="navrow">
+            <button class="btn" id="prev">← Back</button>
+            <button class="btn primary" id="next">Next card →</button>
+          </div>
+        </section>
+      </div>
+      <div class="notice">Progress is saved only in your device's browser. Some cards describe preliminary research: the explanation clarifies current evidence.</div>
+    </section>
+
+    <section class="extras" id="stampa">
+      <div class="mini">
+        <h3>🃏 Print & Play</h3>
+        <p>All 36 cards with scientific explanations on the back. A4 format, 4 cards per sheet (82 × 118 mm).</p>
+        <a href="OTTO_CARTE_36_FRONTE_RETRO_A4.pdf" download="OTTO_CARTE_36_FRONTE_RETRO_A4.pdf">Double-sided PDF ↗</a>
+        <a href="OTTO_CARTE_36_SOLO_FRONTE_A4.pdf" download="OTTO_CARTE_36_SOLO_FRONTE_A4.pdf" style="margin-left:8px">Single-sided ↗</a>
+      </div>
+      <div class="mini">
+        <h3>📚 Guide & Rules</h3>
+        <p>Simple rules for family game night, explanations, and links to real science.</p>
+        <a href="OTTO_GUIDA_PREMIUM.pdf" download="OTTO_GUIDA_PREMIUM.pdf">Download premium guide ↗</a>
+      </div>
+      <div class="mini" id="fonti">
+        <h3>🔬 Behind Every Discovery</h3>
+        <p>Every card links to original peer-reviewed research or institutional scientific records.</p>
+        <a href="CARTE_36_DATI.csv" download="CARTE_36_DATI.csv">Source data catalog ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer">
+    © 2026 · Exclusive bonus companion to <i>Einstein, You Missed This!</i> · Illustrative reconstructions for educational purposes.
+  </div>
+
+  <script id="DATA" type="application/json">
+  <!-- CARDS_JSON_PLACEHOLDER -->
+  </script>
+
+  <script>
+    'use strict';
+    fetch('carte_en.json')
+      .then(r => r.json())
+      .then(initGame)
+      .catch(() => {
+        const fallback = JSON.parse(document.getElementById('DATA').textContent);
+        initGame(fallback);
+      });
+
+    function initGame(cards) {
+      const letters = ['All','Animals','Plants','Experiments','Dinosaurs','Inventions','Body','Space'];
+      const groups = ['ALL','A','B','C','D','E','F','G'];
+      let filter = 'ALL', sequence = [], ix = 0, answers = {};
+      const el = id => document.getElementById(id);
+      const storage = 'otto_true_false_v1_en';
+
+      try {
+        let saved = JSON.parse(localStorage.getItem(storage) || '{}');
+        if (saved.answers && typeof saved.answers === 'object') answers = saved.answers;
+      } catch(e) {}
+
+      const save = () => { try { localStorage.setItem(storage, JSON.stringify({answers})); } catch(e) {} };
+
+      function updateSequence() {
+        sequence = cards.filter(c => filter === 'ALL' || c.group === filter);
+        ix = Math.max(0, Math.min(ix, sequence.length - 1));
+        render();
+      }
+
+      function setFilter(f) {
+        filter = f; ix = 0;
+        document.querySelectorAll('.filters button').forEach(b => {
+          let on = b.dataset.filter === f;
+          b.classList.toggle('on', on);
+          b.setAttribute('aria-pressed', String(on));
+        });
+        updateSequence();
+      }
+
+      const nav = () => {
+        el('prev').disabled = ix === 0;
+        el('next').disabled = ix === sequence.length - 1;
+        el('next').textContent = ix === sequence.length - 1 ? 'You completed the deck!' : 'Next card →';
+      };
+
+      function render() {
+        let c = sequence[ix];
+        if (!c) return;
+        const a = answers[c.id];
+        const did = Boolean(a);
+        el('number').textContent = '#' + String(c.id).padStart(2, '0');
+        el('theme').textContent = c.theme;
+        el('question').textContent = c.question;
+        el('code').textContent = c.code;
+
+        const done = cards.filter(k => Boolean(answers[k.id]));
+        let correct = done.filter(k => answers[k.id] === k.answer);
+        el('counter').textContent = 'Card ' + (ix + 1) + ' of ' + sequence.length + ' · ' + done.length + '/36 explored';
+        el('points').textContent = correct.length + ' points';
+        el('progress').style.width = (done.length / 36 * 100) + '%';
+
+        for (const b of document.querySelectorAll('button.answer')) {
+          b.disabled = did;
+          b.classList.remove('good', 'bad', 'active');
+          let choice = b.dataset.choice;
+          if (did) {
+            if (choice === c.answer) b.classList.add('good');
+            else if (choice === a) b.classList.add('bad');
+          }
+        }
+
+        let box = el('feedback');
+        box.replaceChildren();
+        box.classList.toggle('visible', did);
+        if (did) {
+          let head = document.createElement('strong');
+          let ansText = c.answer === 'TRUE' ? 'true' : c.answer === 'FALSE' ? 'false' : "we don't know yet";
+          head.textContent = (a === c.answer ? "You're right! " : "Good try! ") + 'Answer: ' + ansText + '.';
+          box.appendChild(head);
+          let text = document.createElement('span');
+          text.textContent = c.explanation;
+          box.appendChild(text);
+          if (c.source) {
+            let l = document.createElement('a');
+            l.href = c.source;
+            l.target = '_blank';
+            l.rel = 'noopener noreferrer';
+            l.textContent = 'Open scientific publication ↗';
+            box.appendChild(document.createElement('br'));
+            box.appendChild(l);
+          } else {
+            let s = document.createElement('span');
+            s.className = 'src';
+            s.textContent = 'Book chapter reference · ' + c.code;
+            box.appendChild(s);
+          }
+        }
+        nav();
+      }
+
+      const filtersBox = el('filters');
+      filtersBox.replaceChildren();
+      for (let n = 0; n < letters.length; n++) {
+        let b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = letters[n];
+        b.dataset.filter = groups[n];
+        b.onclick = () => setFilter(groups[n]);
+        filtersBox.append(b);
+      }
+
+      for (const b of document.querySelectorAll('button.answer')) {
+        b.onclick = () => {
+          let c = sequence[ix];
+          if (answers[c.id]) return;
+          answers[c.id] = b.dataset.choice;
+          save();
+          render();
+        };
+      }
+
+      el('prev').onclick = () => { ix = Math.max(0, ix - 1); render(); };
+      el('next').onclick = () => { if (ix >= sequence.length - 1) return; ix++; render(); };
+      el('restart').onclick = () => {
+        if (window.confirm('Do you really want to clear your progress and start over?')) {
+          answers = {}; ix = 0; save(); render();
+        }
+      };
+
+      setFilter('ALL');
+    }
+  </script>
+</body>
+</html>

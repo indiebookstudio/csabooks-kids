@@ -92,6 +92,8 @@
     "correction": "Correzioni o note aggiuntive",
     "linkUnavailable": "Link ufficiale non ancora presente nell’indice",
     "sourceIllustration": "Illustrazione tematica del libro, non immagine della pubblicazione scientifica",
+    "openAnimations": "Esplora le Animazioni 3D",
+    "videoArchive": "Archivio Video MP4",
     "comingSoon": "Contenuto in preparazione per questa lingua",
     "returnHome": "Torna alla pagina iniziale"
   },
@@ -135,6 +137,7 @@
     "title": "LA CHIAVE SEGRETA DI OTTO",
     "subtitle": "Un mondo di scoperte ti aspetta. Hai la chiave per entrare?",
     "path1Title": "HAI GIÀ LA CHIAVE?",
+    "path1Text": "Inserisci la parola segreta per sbloccare immediatamente l'accesso a tutti i bonus del libro.",
     "path1Label": "La tua chiave segreta",
     "path1Placeholder": "Inserisci la chiave...",
     "path1Btn": "ENTRA NEL MONDO DI OTTO",
@@ -158,7 +161,13 @@
     "requestAgainBtn": "Richiedi nuovamente la chiave via email",
     "headerKeyBtn": "Chiave",
     "helpTitle": "Hai bisogno di assistenza?",
-    "helpText": "Non ricevi la chiave o hai difficoltà ad accedere? Scrivici direttamente a"
+    "helpText": "Non ricevi la chiave o hai difficoltà ad accedere? Scrivici direttamente a",
+    "helpImmediate": "Ti aiuteremo subito!",
+    "invalidEmail": "Inserisci un indirizzo email valido.",
+    "sendFail": "Non è stato possibile inviare la chiave. Scrivici direttamente a"
+  },
+  "notices": {
+    "langInPrep": "L'edizione in questa lingua è in preparazione! Continua a esplorare in italiano o in inglese."
   },
   "keyEmail": {
     "subject": "La chiave segreta di Otto è arrivata! 🔑",
