@@ -33,13 +33,17 @@ main{max-width:1130px;margin:0 auto;padding:0 24px 80px}.shell{background:#0e233
 @media(max-width:780px){.hero{gap:3px;min-height:auto;padding-top:12px}.otto{width:125px}.hero h1{font-size:clamp(31px,7vw,48px)}.hero p{font-size:14px}.playing{grid-template-columns:1fr}.gamecard{min-height:340px;padding:22px}.question{font-size:clamp(25px,6vw,33px)}.side{gap:13px}.options{grid-template-columns:repeat(3,1fr)}.answer{text-align:center;min-height:70px;padding:8px 5px;font-size:13px}.answer .dot{display:none}.extras{grid-template-columns:1fr 1fr}}
 @media(max-width:490px){.hdr{padding:14px 15px}.brand{font-size:14px}.hdr nav{gap:10px}.hdr a{font-size:11px}.hero{padding:20px 17px}.otto{width:105px;margin-right:-13px}.hero h1{font-size:34px}.hero p{margin-bottom:0}.eyebrow{font-size:10px}main{padding:0 12px 35px}.shell{border-radius:18px;padding:15px}.topline{gap:8px;margin-bottom:16px}.chips{gap:6px}.chip{font-size:11px;padding:7px 9px}.bar{width:95px}.filters button{font-size:11px;padding:8px 10px}.gamecard{min-height:300px;padding:21px}.question{font-size:28px}.cardfoot{font-size:10px}.options{grid-template-columns:1fr}.answer{text-align:left;font-size:15px;min-height:54px;padding:10px 12px}.answer .dot{display:inline-block}.extras{grid-template-columns:1fr}.navrow{flex-wrap:wrap}.btn{flex:1}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-</style></head>
+
+    .flag-svg { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+    .flag-code { font-size: 11.5px; font-weight: 800; letter-spacing: .02em; }
+    
+  </style></head>
 <body>
   <!-- PERSISTENT TOP NAVIGATION -->
   <header class="site-nav-bar">
     <div class="site-nav-inner">
       <a class="brand-link" href="../../../?lang=it&pagina=inizio" aria-label="Torna all'inizio">
-        <span class="brand-mark"><img src="assets/otto.webp" alt="Otto"></span>
+        <span class="brand-mark-otto"><img src="assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../media/otto.webp';"></span>
         <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
       </a>
       <nav class="nav-menu" aria-label="Navigazione principale">
@@ -49,11 +53,14 @@ main{max-width:1130px;margin:0 auto;padding:0 24px 80px}.shell{background:#0e233
       </nav>
       <!-- FLAG SELECTOR MATCHING MOCKUP -->
       <div class="locale-pill-bar" role="group" aria-label="Selezione lingua">
-        <a class="locale-flag-item" href="../../en/carte/index.html" title="English">🇬🇧 EN</a>
-        <a class="locale-flag-item active" href="#" aria-current="true" title="Italiano">🇮🇹 IT</a>
-        <button type="button" class="locale-flag-item" onclick="alert('🇩🇪 Edizione in lingua tedesca in arrivo!')" title="Deutsch">🇩🇪 DE</button>
-        <button type="button" class="locale-flag-item" onclick="alert('🇫🇷 Édition française bientôt disponible !')" title="Français">🇫🇷 FR</button>
-        <button type="button" class="locale-flag-item" onclick="alert('🇪🇸 ¡Edición en español próximamente!')" title="Español">🇪🇸 ES</button>
+        <a class="locale-flag-item " href="../../en/carte/index.html"  title="English">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><path d="M0 0h60v30H0z" fill="#012169"/><path d="m0 0 60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="m0 0 60 30m0-30L0 30" stroke="#c8102e" stroke-width="3"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg>
+          <span class="flag-code">EN</span>
+        </a>
+        <a class="locale-flag-item active" href="#" aria-current="true" title="Italiano">
+          <svg class="flag-svg" viewBox="0 0 3 2" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="1" height="2" fill="#009246"/><rect width="1" height="2" x="1" fill="#fff"/><rect width="1" height="2" x="2" fill="#ce2b37"/></svg>
+          <span class="flag-code">IT</span>
+        </a>
       </div>
     </div>
   </header>

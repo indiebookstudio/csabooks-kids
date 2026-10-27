@@ -5,14 +5,13 @@
 (() => {
   const q = sel => document.querySelector(sel);
   const app = q('#app');
+  const UK_FLAG_SVG = `<svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><path d="M0 0h60v30H0z" fill="#012169"/><path d="m0 0 60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="m0 0 60 30m0-30L0 30" stroke="#c8102e" stroke-width="3"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg>`;
+  const IT_FLAG_SVG = `<svg class="flag-svg" viewBox="0 0 3 2" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="1" height="2" fill="#009246"/><rect width="1" height="2" x="1" fill="#fff"/><rect width="1" height="2" x="2" fill="#ce2b37"/></svg>`;
   const allLanguages = [
-    { code: 'en', flag: '🇬🇧', label: 'English', available: true },
-    { code: 'it', flag: '🇮🇹', label: 'Italiano', available: true },
-    { code: 'de', flag: '🇩🇪', label: 'Deutsch', available: false },
-    { code: 'fr', flag: '🇫🇷', label: 'Français', available: false },
-    { code: 'es', flag: '🇪🇸', label: 'Español', available: false }
+    { code: 'en', flag: UK_FLAG_SVG, label: 'English', available: true },
+    { code: 'it', flag: IT_FLAG_SVG, label: 'Italiano', available: true }
   ];
-  const localeLabels = {it:'IT · Italiano',en:'EN · English',de:'DE · Deutsch',fr:'FR · Français',es:'ES · Español'};
+  const localeLabels = {it:'IT · Italiano',en:'EN · English'};
   const categories = ['all','animali','piante','esperimenti','dinosauri','tecnologia','corpo','spazio','introduzione'];
   const cards = ['museo','film','colora','carte'];
   let config, t, sources = [], integrativeSources = [], language = 'it';

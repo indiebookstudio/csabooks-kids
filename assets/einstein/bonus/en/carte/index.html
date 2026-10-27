@@ -117,6 +117,10 @@
       .answer .dot{display:inline-block}
       .extras{grid-template-columns:1fr}
     }
+  
+    .flag-svg { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+    .flag-code { font-size: 11.5px; font-weight: 800; letter-spacing: .02em; }
+    
   </style>
 </head>
 <body>
@@ -124,7 +128,7 @@
   <header class="site-nav-bar">
     <div class="site-nav-inner">
       <a class="brand-link" href="../../../?lang=en&pagina=inizio" aria-label="Go to Home">
-        <span class="brand-mark"><img src="assets/otto.webp" alt="Otto"></span>
+        <span class="brand-mark-otto"><img src="assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../media/otto.webp';"></span>
         <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
       </a>
       <nav class="nav-menu" aria-label="Main Navigation">
@@ -134,11 +138,14 @@
       </nav>
       <!-- FLAG SELECTOR MATCHING MOCKUP -->
       <div class="locale-pill-bar" role="group" aria-label="Language selection">
-        <a class="locale-flag-item active" href="#" aria-current="true" title="English">🇬🇧 EN</a>
-        <a class="locale-flag-item" href="../../it/carte/index.html" title="Italiano">🇮🇹 IT</a>
-        <button type="button" class="locale-flag-item" onclick="alert('🇩🇪 German edition coming soon!')" title="Deutsch">🇩🇪 DE</button>
-        <button type="button" class="locale-flag-item" onclick="alert('🇫🇷 Édition française bientôt disponible !')" title="Français">🇫🇷 FR</button>
-        <button type="button" class="locale-flag-item" onclick="alert('🇪🇸 ¡Edición en español próximamente!')" title="Español">🇪🇸 ES</button>
+        <a class="locale-flag-item active" href="#" aria-current="true" title="English">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><path d="M0 0h60v30H0z" fill="#012169"/><path d="m0 0 60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="m0 0 60 30m0-30L0 30" stroke="#c8102e" stroke-width="3"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg>
+          <span class="flag-code">EN</span>
+        </a>
+        <a class="locale-flag-item " href="../../it/carte/index.html"  title="Italiano">
+          <svg class="flag-svg" viewBox="0 0 3 2" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="1" height="2" fill="#009246"/><rect width="1" height="2" x="1" fill="#fff"/><rect width="1" height="2" x="2" fill="#ce2b37"/></svg>
+          <span class="flag-code">IT</span>
+        </a>
       </div>
     </div>
   </header>
