@@ -152,11 +152,22 @@ function navigateHome() { location.hash = 'atrio'; }
 function roomForHash() { const match = (location.hash || '').match(/^#sala-([1-7])$/); return match ? Number(match[1]) : 0; }
 function img(src, alt = '', cl = '') { return `<img src="${A(src)}" alt="${esc(alt)}" ${cl ? `class="${cl}"` : ''} loading="lazy">`; }
 
+function syncLanguageLinks() {
+  const h = location.hash || '#atrio';
+  document.querySelectorAll('.locale-flag-item').forEach(el => {
+    const href = el.getAttribute('href');
+    if (href && href !== '#' && !href.startsWith('javascript:')) {
+      el.setAttribute('href', href.split('#')[0] + h);
+    }
+  });
+}
+
 function updateView(scroll = true) {
   const next = roomForHash();
   if (next !== currentId) { game = {}; feedback = ''; feedbackKind = ''; currentId = next; }
   persist();
   main.innerHTML = next ? renderRoom(ROOMS[next - 1]) : renderAtrium();
+  syncLanguageLinks();
   if (scroll) window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
@@ -659,6 +670,13 @@ main.addEventListener('input', e => {
     const v = game.grip;
     if (p) p.innerHTML = `<strong>${v < 35 ? 'The grip is too weak.' : v > 65 ? 'Too tight!' : 'Balanced and delicate hold.'}</strong>`;
     main.querySelector('.gripper-scene')?.setAttribute('data-level', v < 35 ? 'soft' : v > 65 ? 'hard' : 'good');
+  }
+});
+document.addEventListener('click', e => {
+  const flagLink = e.target.closest('.locale-flag-item');
+  if (flagLink && flagLink.getAttribute('href') && flagLink.getAttribute('href') !== '#') {
+    const isEn = flagLink.getAttribute('href').includes('/en/');
+    try { localStorage.setItem('otto_lang', isEn ? 'en' : 'it'); } catch(_) {}
   }
 });
 window.addEventListener('hashchange', () => updateView());

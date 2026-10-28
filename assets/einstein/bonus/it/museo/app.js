@@ -113,7 +113,8 @@ function persist(){try{localStorage.setItem(storeKey,JSON.stringify([...complete
 function navigateHome(){location.hash='atrio';}
 function roomForHash(){const match=(location.hash||'').match(/^#sala-([1-7])$/);return match?Number(match[1]):0;}
 function img(src,alt='',cl=''){return `<img src="${A(src)}" alt="${esc(alt)}" ${cl?`class="${cl}"`:''} loading="lazy">`;}
-function updateView(scroll=true){ const next = roomForHash(); if(next!==currentId){game={};feedback='';feedbackKind='';currentId=next;} persist();main.innerHTML = next?renderRoom(ROOMS[next-1]):renderAtrium();if(scroll)window.scrollTo({top:0,behavior:'instant'});}
+function syncLanguageLinks(){const h=location.hash||'#atrio';document.querySelectorAll('.locale-flag-item').forEach(el=>{const href=el.getAttribute('href');if(href&&href!=='#'&&!href.startsWith('javascript:')){el.setAttribute('href',href.split('#')[0]+h);}});}
+function updateView(scroll=true){ const next = roomForHash(); if(next!==currentId){game={};feedback='';feedbackKind='';currentId=next;} persist();main.innerHTML = next?renderRoom(ROOMS[next-1]):renderAtrium();syncLanguageLinks();if(scroll)window.scrollTo({top:0,behavior:'instant'});}
 function renderAtrium(){
  const next=ROOMS.find(r=>!completed.has(r.id))||ROOMS[0];
  return `<section class="hero"><div class="hero-inner"><div class="hero-copy"><div class="eyebrow">IL BONUS INTERATTIVO DEL LIBRO</div><h1 class="display">IL MUSEO DELLE<br><em>SCOPERTE</em><br>IMPOSSIBILI</h1><p class="lead">Sette sale. Sette misteri della scienza. Un piccolo polpo esploratore che ti aspetta. Entra, osserva, scopri gli indizi e colleziona i sigilli di Otto.</p><div class="hero-buttons"><a class="primary-button" href="#sala-${next.id}">${completed.size?'Continua l’esplorazione':'Inizia l’esplorazione'} →</a><button class="quiet-button" data-act="passport">Apri il passaporto</button></div><p class="hint">Per bambini e ragazzi 7–12 anni · Gratis con il libro · Nessun account necessario</p></div>${img('otto-mondo','Otto, il polpo esploratore, abbraccia la Terra','hero-otto')}</div></section>
@@ -194,6 +195,13 @@ modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)closeModal();});
 modal.addEventListener('input',e=>{if(e.target.id==='childName'){diplomaName=e.target.value;const el=modal.querySelector('#diplomaChild');if(el)el.textContent=diplomaName||'________________';}});
 main.addEventListener('input',e=>{if(e.target.id==='gripSlider'){game.grip=Number(e.target.value);const p=main.querySelector('#gripFeedback');const v=game.grip;p.innerHTML=`<strong>${v<35?'La presa è troppo debole.':v>65?'Stai stringendo più del necessario.':'La presa è controllata e delicata.'}</strong>`;main.querySelector('.gripper-scene')?.setAttribute('data-level',v<35?'soft':v>65?'hard':'good');}});
+document.addEventListener('click', e => {
+  const flagLink = e.target.closest('.locale-flag-item');
+  if (flagLink && flagLink.getAttribute('href') && flagLink.getAttribute('href') !== '#') {
+    const isEn = flagLink.getAttribute('href').includes('/en/');
+    try { localStorage.setItem('otto_lang', isEn ? 'en' : 'it'); } catch(_) {}
+  }
+});
 window.addEventListener('hashchange',()=>updateView());
 if(!location.hash)location.hash='atrio';
 updateView(false);

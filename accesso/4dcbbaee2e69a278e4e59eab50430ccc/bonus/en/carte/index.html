@@ -204,14 +204,14 @@
 
     <section class="extras" id="stampa">
       <div class="mini">
-        <h3>🃏 Print & Play</h3>
-        <p>All 36 cards with scientific explanations on the back. A4 format, 4 cards per sheet (82 × 118 mm).</p>
+        <h3>🃏 Double-Sided Printing</h3>
+        <p>All 36 cards. <strong>Printing guide:</strong> select «Double-sided (Duplex)» with «Flip on long edge» so questions and explanations match up. 160–250 gsm cardstock recommended.</p>
         <a href="OTTO_CARTE_36_FRONTE_RETRO_A4.pdf" download="OTTO_CARTE_36_FRONTE_RETRO_A4.pdf">Double-sided PDF ↗</a>
         <a href="OTTO_CARTE_36_SOLO_FRONTE_A4.pdf" download="OTTO_CARTE_36_SOLO_FRONTE_A4.pdf" style="margin-left:8px">Single-sided ↗</a>
       </div>
       <div class="mini">
-        <h3>📚 Guide & Rules</h3>
-        <p>Simple rules for family game night, explanations, and links to real science.</p>
+        <h3>📚 Rules & Family Play</h3>
+        <p>1–6 players. Draw a card, read the question aloud, and guess: True, False, or We Don't Know Yet. 1 point for each correct answer!</p>
         <a href="OTTO_GUIDA_PREMIUM.pdf" download="OTTO_GUIDA_PREMIUM.pdf">Download premium guide ↗</a>
       </div>
       <div class="mini" id="fonti">
@@ -289,7 +289,7 @@
         const done = cards.filter(k => Boolean(answers[k.id]));
         let correct = done.filter(k => answers[k.id] === k.answer);
         el('counter').textContent = 'Card ' + (ix + 1) + ' of ' + sequence.length + ' · ' + done.length + '/36 explored';
-        el('points').textContent = correct.length + ' points';
+        el('points').textContent = correct.length === 1 ? '1 point' : correct.length + ' points';
         el('progress').style.width = (done.length / 36 * 100) + '%';
 
         for (const b of document.querySelectorAll('button.answer')) {

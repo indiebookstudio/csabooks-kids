@@ -5,7 +5,13 @@
     "home": "Inizio",
     "bonus": "I bonus",
     "sources": "Biblioteca delle fonti",
-    "book": "Il libro"
+    "book": "Il libro",
+    "skipToContent": "Vai al contenuto",
+    "goHome": "Vai all'inizio",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "mainNav": "Navigazione principale",
+    "loading": "Prepariamo le meraviglie…"
   },
   "brand": {
     "eyebrow": "IL PORTALE ESCLUSIVO DEL LIBRO",
@@ -58,14 +64,24 @@
       "title": "Colora la scienza con Otto",
       "subtitle": "Dieci avventure da riempire di colore.",
       "description": "Orche, dinosauri, robot e spazio: dieci pagine di line art dedicate alle scoperte del libro.",
-      "detail": "Dieci tavole in bianco e nero da stampare su A4. Usa matite, pennarelli o pastelli: la scienza può essere coloratissima."
+      "detail": "Dieci tavole in bianco e nero da stampare su A4. Usa matite, pennarelli o pastelli: la scienza può essere coloratissima.",
+      "printTitle": "Indicazioni di stampa",
+      "printFormat": "Formato: A4 (210 × 297 mm) · Scala: Adatta alla pagina",
+      "printColor": "Modalità: Bianco e nero / Scala di grigi",
+      "printPaper": "Carta consigliata: 100–120 g/m² per pennarelli o matite senza trasparenza",
+      "previewTitle": "Anteprima delle 10 tavole da stampare",
+      "sheet": "Tavola"
     },
     "carte": {
       "tag": "GIOCO · 36 CARTE",
       "title": "Vero, falso o non lo sappiamo?",
       "subtitle": "La risposta più intelligente non è sempre sì o no.",
       "description": "Trentasei carte illustrate con tre possibilità: Vero, Falso oppure Non lo sappiamo ancora. Sfida la famiglia!",
-      "detail": "Gioca sul telefono oppure stampa un mazzo fronte-retro. Ogni carta contiene una risposta spiegata."
+      "detail": "Gioca sul telefono oppure stampa un mazzo fronte-retro. Ogni carta contiene una risposta spiegata.",
+      "rulesTitle": "Regole rapide del gioco",
+      "rulesText": "Da 1 a 6 giocatori. A turno un giocatore pesca una carta, legge la domanda e ognuno decide: è VERO, FALSO o NON LO SAPPIAMO ancora? Assegna 1 punto per ogni risposta esatta. In scienza, ammettere ciò che ancora non sappiamo è la risposta più saggia!",
+      "printTitle": "Istruzioni di stampa fronte/retro",
+      "printText": "Nelle opzioni della stampante seleziona «Stampa fronte/retro» con «Capovolgi sul lato lungo» (flip on long edge) per allineare perfettamente fronti e retri delle 36 carte. Consigliato cartoncino da 160–250 g/m²."
     }
   },
   "actions": {
@@ -100,6 +116,7 @@
     "searchPlaceholder": "Cerca per codice, argomento o parola chiave…",
     "searchLabel": "Cerca una fonte",
     "all": "Tutte",
+    "result": "risultato",
     "results": "risultati",
     "showMore": "Mostra altre fonti",
     "citation": "Citazione / riferimento",
@@ -126,7 +143,7 @@
     "text": "Un progetto editoriale collegato a EINSTEIN, QUESTA TE LA SEI PERSA!",
     "official": "Visita CSA Books Kids",
     "legal": "Le immagini illustrative non sostituiscono le pubblicazioni scientifiche. Le fonti esterne appartengono ai rispettivi autori e siti.",
-    "privacy": "Non richiede account. Il portale non raccoglie dati personali. I bonus interattivi possono salvare i progressi sul dispositivo.",
+    "privacy": "Non richiede account. L'indirizzo email fornito per ricevere la chiave è protetto secondo il GDPR e non vengono profilati minori. I bonus interattivi salvano i progressi solo in locale sul dispositivo.",
     "lang": "Lingua",
     "sources": "Fonti",
     "home": "Inizio"

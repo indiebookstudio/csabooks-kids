@@ -54,6 +54,8 @@
     if(config?.bookCovers && config.bookCovers[locale]) return config.bookCovers[locale];
     return config?.bookCover || 'media/copertina.webp';
   }
+  const currentSiteTitle = () => config?.siteTitles?.[language] || config?.siteTitle || 'Il mondo segreto di Otto';
+  const currentBookTitle = () => config?.bookTitles?.[language] || config?.bookTitle || 'EINSTEIN, QUESTA TE LA SEI PERSA!';
   function showToast(msg){
     let tEl = q('#site-toast');
     if(!tEl){
@@ -89,11 +91,16 @@
   function route(name, data={}){
     history.pushState({},'',url(name,data));draw();window.scrollTo({top:0,behavior:'instant'});
     const menu=q('#nav-links');if(menu) menu.classList.remove('open');
-    const toggle=q('#menu-toggle');if(toggle)toggle.setAttribute('aria-expanded','false');
+    const toggle=q('#menu-toggle');if(toggle){toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label',L('nav.openMenu'));}
   }
   function isUnlocked(){try{return localStorage.getItem('otto_unlocked')==='true';}catch(_){return false;}}
   function setUnlocked(v){try{if(v)localStorage.setItem('otto_unlocked','true');else localStorage.removeItem('otto_unlocked');}catch(_){}}
   function setNav(){
+    const skip = q('.skip-link'); if(skip) skip.textContent = L('nav.skipToContent');
+    const brand = q('.brand-link'); if(brand) brand.setAttribute('aria-label', L('nav.goHome'));
+    const toggle = q('#menu-toggle'); if(toggle) toggle.setAttribute('aria-label', toggle.getAttribute('aria-expanded') === 'true' ? L('nav.closeMenu') : L('nav.openMenu'));
+    const navEl = q('#nav-links'); if(navEl) navEl.setAttribute('aria-label', L('nav.mainNav'));
+
     const current = page();
     const items = [['inizio', L('nav.home')], ['bonus', L('nav.bonus')], ['fonti', L('nav.sources')]];
     let links = items.map(([p, label]) => `<a class="nav-link ${current === p || (current === 'bonus-dettaglio' && p === 'bonus') || (current === 'fonte' && p === 'fonti') ? 'active' : ''}" href="${url(p)}" data-internal="${p}" ${current === p ? 'aria-current="page"' : ''}>${esc(label)}</a>`).join('');
@@ -120,7 +127,7 @@
     return `<article class="bonus-card"><a href="${url('bonus-dettaglio',{id})}" data-bonus="${id}" aria-label="${esc(b.title)}"><div class="bonus-art"><img src="media/bonus/${id}.webp" loading="lazy" alt="" width="1536" height="1024"><span class="bonus-number">0${i+1}</span></div><div class="bonus-body"><div class="bonus-tag">${esc(b.tag)}</div><h3>${esc(b.title)}</h3><p class="bonus-desc">${esc(b.description)}</p><div class="bonus-foot"><span>${esc(L('sections.enter'))}</span><span class="icon-arrow" aria-hidden="true">↗</span></div></div></a></article>`;
   }
   function renderHome(){
-    return `<section class="hero"><div class="wrap hero-inner"><div class="hero-copy">${stamp(L('brand.eyebrow'))}<h1><span>${esc(L('brand.title'))}</span><span class="gold-text">${esc(L('brand.titleEm'))}</span></h1><p class="hero-intro">${esc(L('brand.intro'))}</p><p class="hero-description">${esc(L('brand.subtitle'))}</p><div class="hero-actions">${btn(L('brand.ctaExplore'),url('bonus'))}${btn(L('brand.ctaSources'),url('fonti'),'outline')}</div><p class="hero-beneath"><span class="dot"></span>${esc(L('brand.age'))}</p></div><div class="hero-visual" aria-hidden="true"><div class="hero-halo"></div><img class="book-cover" src="${esc(currentBookCover())}" alt="${esc(config.bookTitle)}" onerror="this.onerror=null;this.src='media/copertina.webp'"><img class="hero-otto" src="${esc(config.mascot)}" alt=""><span class="hero-stamp">OTTO · DISCOVERY CLUB</span></div></div></section>
+    return `<section class="hero"><div class="wrap hero-inner"><div class="hero-copy">${stamp(L('brand.eyebrow'))}<h1><span>${esc(L('brand.title'))}</span><span class="gold-text">${esc(L('brand.titleEm'))}</span></h1><p class="hero-intro">${esc(L('brand.intro'))}</p><p class="hero-description">${esc(L('brand.subtitle'))}</p><div class="hero-actions">${btn(L('brand.ctaExplore'),url('bonus'))}${btn(L('brand.ctaSources'),url('fonti'),'outline')}</div><p class="hero-beneath"><span class="dot"></span>${esc(L('brand.age'))}</p></div><div class="hero-visual" aria-hidden="true"><div class="hero-halo"></div><img class="book-cover" src="${esc(currentBookCover())}" alt="${esc(currentBookTitle())}" onerror="this.onerror=null;this.src='media/copertina.webp'"><img class="hero-otto" src="${esc(config.mascot)}" alt=""><span class="hero-stamp">OTTO · DISCOVERY CLUB</span></div></div></section>
       <section class="section ornate-rule" id="bonus"><div class="wrap"><div class="section-top"><div class="section-heading">${stamp(L('sections.bonusEyebrow'))}<h2>${esc(L('sections.bonusTitle'))}</h2><p class="section-subtitle">${esc(L('sections.bonusSubtitle'))}</p></div></div><div class="cards">${cards.map(card).join('')}</div></div></section>
       <section class="section section-quiet" id="biblioteca"><div class="wrap"><div class="sources-teaser"><div>${stamp(L('sections.sourceEyebrow'))}<h2>${esc(L('sections.sourceWhyTitle'))}</h2><p>${esc(L('sections.sourceWhyText'))}</p><p>${esc(L('sections.sourcesCount'))}</p>${btn(L('sections.viewAllSources'),url('fonti'))}</div><img loading="lazy" src="media/bonus/fonti.webp" alt="" width="660" height="440"></div></div></section>
       <section class="section"><div class="wrap"><div class="mission-preview"><img src="media/otto-mondo.webp" loading="lazy" alt="" width="140" height="140"><div>${stamp(L('brand.welcome'))}<h3>${esc(L('sections.bundleTitle'))}</h3><p>${esc(L('sections.bundleText'))}</p></div></div></div></section>`;
@@ -130,11 +137,77 @@
   function renderBonus(id){
     if(id === 'film'){
       location.replace(currentBonusURL('film'));
-      return `<div class="initial-loader"><div class="spinner"></div><p>${esc(L('sections.enter'))}…</p></div>`;
+      return `<div class="initial-loader"><div class="spinner"></div><p>${esc(L('nav.loading') || L('sections.enter'))}…</p></div>`;
     }
     const b=t.bonus[id];if(!b)return notFound();
     const img=`media/bonus/${id}.webp`;
-    return `<section class="page-top"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.bonus'),b.title])}</div></section><section class="wrap detail-hero"><div class="detail-art"><img src="${img}" alt="" width="1536" height="1024"></div><div class="detail-content">${stamp(b.tag)}<h1>${esc(b.title)}</h1><p class="detail-subtitle">${esc(b.subtitle)}</p><p class="detail-text">${esc(b.detail)}</p><div class="detail-actions">${bonusButtons(id)}</div><div class="minor-links">${btn(L('actions.goBack'),url('bonus'),'outline')}</div></div></section>`;
+
+    let extraSection = '';
+    if(id === 'colora'){
+      const sheets = Array.from({length: 10}, (_, i) => {
+        const num = String(i + 1).padStart(2, '0');
+        const sheetLabel = esc(L('bonus.colora.sheet') || 'Tavola');
+        return `
+          <div class="colora-card">
+            <img src="media/colora/tavola_${num}.webp" alt="${sheetLabel} ${num}" loading="lazy" width="400" height="566">
+            <div class="colora-card-footer">
+              <span>${sheetLabel} ${num}</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      extraSection = `
+        <div class="bonus-info-grid">
+          <div class="bonus-info-card">
+            <h3>🖨️ ${esc(L('bonus.colora.printTitle') || 'Indicazioni di stampa')}</h3>
+            <ul>
+              <li><strong>${esc(L('bonus.colora.printFormat') || 'Formato: A4 · Scala: Adatta alla pagina')}</strong></li>
+              <li>${esc(L('bonus.colora.printColor') || 'Modalità: Bianco e nero / Scala di grigi')}</li>
+              <li>${esc(L('bonus.colora.printPaper') || 'Carta consigliata: 100–120 g/m²')}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="colora-gallery-section">
+          <div class="colora-gallery-header">
+            <h3>🎨 ${esc(L('bonus.colora.previewTitle') || 'Anteprima delle 10 tavole')}</h3>
+            <p>${esc(b.description)}</p>
+          </div>
+          <div class="colora-grid">
+            ${sheets}
+          </div>
+        </div>
+      `;
+    } else if(id === 'carte'){
+      extraSection = `
+        <div class="bonus-info-grid">
+          <div class="bonus-info-card">
+            <h3>📖 ${esc(L('bonus.carte.rulesTitle') || 'Regole rapide')}</h3>
+            <p>${esc(L('bonus.carte.rulesText') || '')}</p>
+          </div>
+          <div class="bonus-info-card">
+            <h3>🖨️ ${esc(L('bonus.carte.printTitle') || 'Istruzioni stampa')}</h3>
+            <p>${esc(L('bonus.carte.printText') || '')}</p>
+          </div>
+        </div>
+      `;
+    }
+
+    return `
+      <section class="page-top"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.bonus'),b.title])}</div></section>
+      <section class="wrap detail-hero">
+        <div class="detail-art"><img src="${img}" alt="" width="1536" height="1024"></div>
+        <div class="detail-content">
+          ${stamp(b.tag)}
+          <h1>${esc(b.title)}</h1>
+          <p class="detail-subtitle">${esc(b.subtitle)}</p>
+          <p class="detail-text">${esc(b.detail)}</p>
+          <div class="detail-actions">${bonusButtons(id)}</div>
+          <div class="minor-links">${btn(L('actions.goBack'),url('bonus'),'outline')}</div>
+        </div>
+      </section>
+      ${extraSection ? `<section class="wrap" style="padding-bottom:50px">${extraSection}</section>` : ''}
+    `;
   }
   function sourceCard(s){
     const code=esc(s.codice),title=esc(s.titolo);
@@ -146,7 +219,7 @@
   function drawSourceCards(){
     let items=filteredSources(), visible=items.slice(0,state.limit);
     const el=q('#source-results');if(!el)return;
-    q('#source-count').textContent=`${items.length} ${L('sourceUi.results')}`;
+    q('#source-count').textContent = `${items.length} ${items.length === 1 ? L('sourceUi.result') : L('sourceUi.results')}`;
     el.innerHTML=visible.length?visible.map(sourceCard).join(''):`<div class="empty-state">${esc(L('sourceUi.none'))}</div>`;
     const more=q('#more-sources');if(more){more.hidden=items.length<=state.limit;more.disabled=items.length<=state.limit;}
   }
@@ -534,7 +607,7 @@
     if(!unlocked || p==='accesso'){
       app.innerHTML = renderAccess(unlocked);
       attachAccessEvents();
-      document.title = esc(L('access.title')) + ' | ' + config.bookTitle;
+      document.title = esc(L('access.title')) + ' | ' + currentBookTitle();
       document.documentElement.lang = language;
       return;
     }
@@ -545,7 +618,7 @@
     else if(p==='fonti'){app.innerHTML=renderSources();drawSourceCards();}
     else if(p==='fonte'){const source=sources.find(x=>x.codice===sc);app.innerHTML=source?renderSource(source):notFound();if(source)checkSourcePDF(source.codice);}
     else app.innerHTML=notFound();
-    document.title=(p==='fonte'?sc+' — ':p==='bonus-dettaglio'&&t.bonus[id]?t.bonus[id].title+' — ':'')+config.siteTitle+' | '+config.bookTitle;
+    document.title=(p==='fonte'?sc+' — ':p==='bonus-dettaglio'&&t.bonus[id]?t.bonus[id].title+' — ':'')+currentSiteTitle()+' | '+currentBookTitle();
     document.documentElement.lang=language;
   }
   async function loadLocale(l){
@@ -602,7 +675,7 @@
       }
       return;
     }
-    const menu=e.target.closest('#menu-toggle');if(menu){let nav=q('#nav-links');const open=!nav.classList.contains('open');nav.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));return;}
+    const menu=e.target.closest('#menu-toggle');if(menu){let nav=q('#nav-links');const open=!nav.classList.contains('open');nav.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?L('nav.closeMenu'):L('nav.openMenu'));return;}
     const filter=e.target.closest('[data-filter]');if(filter){state.filter=filter.dataset.filter;state.limit=12;q('.filter-row').querySelectorAll('[data-filter]').forEach(el=>el.setAttribute('aria-pressed',String(el===filter)));drawSourceCards();return;}
     const more=e.target.closest('#more-sources');if(more){state.limit+=12;drawSourceCards();return;}
     const b=e.target.closest('a[data-bonus]');if(b){e.preventDefault();if(b.dataset.bonus==='film'){location.href=currentBonusURL('film');return;}route('bonus-dettaglio',{id:b.dataset.bonus});return;}

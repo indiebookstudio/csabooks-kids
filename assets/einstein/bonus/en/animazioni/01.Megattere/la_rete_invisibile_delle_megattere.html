@@ -365,7 +365,7 @@
           <span>Explore</span>
         </button>
 
-        <!-- Pulsante 2: Prova tu (Costruisci la rete) -->
+        <!-- Button 2: Try it (Build the net) -->
         <button id="btn-mode-build" class="glass-pill px-3 sm:px-4 py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5" title="Create a bubble net with three taps">
           <svg class="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
@@ -464,7 +464,7 @@
           <div id="action-buttons" class="flex flex-wrap items-center justify-center gap-2.5 shrink-0">
             <!-- Pulsante principale dinamico -->
             <button id="btn-main-action" class="hidden btn-primary px-5 py-2.5 rounded-2xl font-display font-bold text-sm sm:text-base text-slate-950 flex items-center gap-2 cursor-pointer">
-              <span id="btn-main-action-text">Prova tu!</span>
+              <span id="btn-main-action-text">Try it!</span>
               <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
@@ -472,15 +472,15 @@
 
             <!-- Pulsante secondario dinamico (es. Ridisegna / Scopri di più) -->
             <button id="btn-secondary-action" class="hidden glass-pill px-4 py-2.5 rounded-2xl font-display font-semibold text-xs sm:text-sm text-sky-100 flex items-center gap-1.5 cursor-pointer">
-              <span id="btn-secondary-action-text">Ridisegna</span>
+              <span id="btn-secondary-action-text">Redraw</span>
             </button>
 
-            <!-- Pulsante "Lo sapevi?" dal libro -->
-            <button id="btn-book-info" class="glass-pill px-3.5 py-2.5 rounded-2xl font-display font-semibold text-xs sm:text-sm text-amber-200 flex items-center gap-1.5 cursor-pointer" title="Leggi le scoperte scientifiche del libro">
+            <!-- "Did you know?" button from the book -->
+            <button id="btn-book-info" class="glass-pill px-3.5 py-2.5 rounded-2xl font-display font-semibold text-xs sm:text-sm text-amber-200 flex items-center gap-1.5 cursor-pointer" title="Read science discoveries from the book">
               <svg class="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
               </svg>
-              <span>Dal Libro</span>
+              <span>From the Book</span>
             </button>
           </div>
         </div>
@@ -496,10 +496,10 @@
       <!-- Header Modale -->
       <div class="px-6 py-4 bg-gradient-to-r from-sky-900/80 to-blue-950/80 border-b border-sky-400/25 flex items-center justify-between">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-amber-300">Capitolo 1 • Animali fuori dal comune • Discovery 05</span>
-          <h2 id="book-title" class="text-xl sm:text-2xl font-bold text-white">The Whale and the Bubbles: How does it really work?</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-300">Chapter 1 • Extraordinary Animals • Discovery 05</span>
+          <h2 id="book-title" class="text-xl sm:text-2xl font-bold text-white">The Whale and the Bubbles: How Does It Really Work?</h2>
         </div>
-        <button id="btn-close-modal" aria-label="Chiudi le curiosità scientifiche" class="glass-pill p-2 rounded-xl text-sky-200 hover:text-white">
+        <button id="btn-close-modal" aria-label="Close science notes" class="glass-pill p-2 rounded-xl text-sky-200 hover:text-white">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
           </svg>
@@ -509,35 +509,35 @@
       <!-- Contenuto Modale -->
       <div class="p-6 overflow-y-auto custom-scroll space-y-4 text-sm sm:text-base text-sky-100 leading-relaxed">
         <div class="p-4 rounded-2xl bg-sky-500/15 border border-sky-400/30">
-          <h3 class="font-display font-bold text-lg text-amber-300 mb-1">Una rete d'aria costruita su misura!</h3>
+          <h3 class="font-display font-bold text-lg text-amber-300 mb-1">A custom-built net of air!</h3>
           <p>
-            Come radunare tanti pesci in un solo boccone? Alcune megattere soffiano bolle in cerchio o a spirale attorno alle prede. Le balene osservate dagli scienziati in <strong>Alaska</strong> modificavano persino gli anelli e la distanza fra le bolle per creare una trappola precisa!
+            How do whales corral hundreds of fish into a single mouthful? Some humpbacks blow bubbles in circles or spirals around their prey. Whales observed by scientists in <strong>Alaska</strong> even adjust ring diameter and bubble spacing to craft a precision trap!
           </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div class="p-4 rounded-2xl bg-slate-900/60 border border-sky-400/20">
-            <h3 class="font-display font-bold text-base text-sky-300 mb-1">Non è un muro solido!</h3>
+            <h3 class="font-display font-bold text-base text-sky-300 mb-1">Not a solid wall!</h3>
             <p class="text-xs sm:text-sm">
-              Le riprese dei <strong>droni</strong> e i <strong>sensori</strong> applicati per poco tempo alle balene hanno mostrato che le bolle non formano una parete fisicamente impenetrabile: il loro movimento e il suono disorientano i pesci e li aiutano a concentrarsi al centro.
+              Footage from <strong>drones</strong> and non-invasive <strong>sensors</strong> temporarily attached to humpbacks show that bubble nets are not physically solid walls: their rising motion and roaring sound disorient the fish, encouraging them to cluster tightly in the center.
             </p>
           </div>
 
           <div class="p-4 rounded-2xl bg-slate-900/60 border border-sky-400/20">
-            <h3 class="font-display font-bold text-base text-sky-300 mb-1">Da sole o in gruppo?</h3>
+            <h3 class="font-display font-bold text-base text-sky-300 mb-1">Solo or in groups?</h3>
             <p class="text-xs sm:text-sm">
-              Non tutte le megattere usano sempre questa tecnica. Alcune cacciano da sole costruendo una spirale di bolle, mentre in altre occasioni più megattere collaborano insieme!
+              Not all humpback whales use this technique all the time. Some hunt alone by creating a spiral of bubbles, while in other regions multiple whales coordinate together!
             </p>
           </div>
         </div>
 
         <div class="p-4 rounded-2xl bg-amber-500/15 border border-amber-400/30 flex flex-col sm:flex-row gap-4 items-center">
           <div class="flex-1">
-            <h3 class="font-display font-bold text-base text-amber-300 mb-1">Cosa e quanto mangiano le megattere?</h3>
+            <h3 class="font-display font-bold text-base text-amber-300 mb-1">What and how much do humpbacks eat?</h3>
             <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm">
-              <li><strong>Krill:</strong> minuscoli crostacei simili a gamberetti, importanti soprattutto nelle acque fredde.</li>
-              <li><strong>Piccoli pesci:</strong> banchi di aringhe, sardine, acciughe e sgombri.</li>
-              <li><strong>Fino a 1.000 - 1.500 kg al giorno</strong> di cibo per accumulare le riserve di grasso necessarie!</li>
+              <li><strong>Krill:</strong> tiny shrimp-like crustaceans, essential especially in cold polar waters.</li>
+              <li><strong>Small schooling fish:</strong> schools of herring, sardines, anchovies, and capelin.</li>
+              <li><strong>Up to 1,000–1,500 kg per day</strong> of food to build up vital blubber reserves!</li>
             </ul>
           </div>
         </div>
@@ -546,7 +546,7 @@
       <!-- Footer Modale -->
       <div class="px-6 py-3.5 bg-slate-950/60 border-t border-sky-400/20 flex justify-end">
         <button id="btn-modal-ok" class="btn-cyan px-6 py-2 rounded-xl font-display font-bold text-white text-sm sm:text-base">
-          Tuffati nell'esperimento!
+          Dive into the simulation!
         </button>
       </div>
     </div>
@@ -1763,19 +1763,19 @@
         SimState.netQuality = SimState.completedSegments === 3 && SimState.coverageRatio >= 0.94 ? 'GOOD' :
           SimState.drawnPoints.length ? 'INCOMPLETE' : 'NONE';
         let status;
-        if (SimState.paused) status = 'In pausa. Tocca Riprendi per continuare.';
-        else if (SimState.netQuality === 'GOOD') status = '3 di 3 · Rete chiusa! I pesci si radunano al centro.';
-        else if (SimState.netBusy) status = `Bolle in arrivo · tratto ${SimState.completedSegments + 1} di 3`;
-        else if (building) status = `${SimState.completedSegments}/3 · Tocca «${netLabels[SimState.completedSegments].split(' · ')[1]}»`;
-        else status = 'Rete aperta: alcuni pesci escono dal varco.';
+        if (SimState.paused) status = 'Paused. Tap Resume to continue.';
+        else if (SimState.netQuality === 'GOOD') status = '3 of 3 · Net closed! Fish cluster in the center.';
+        else if (SimState.netBusy) status = `Blowing bubbles · section ${SimState.completedSegments + 1} of 3`;
+        else if (building) status = `${SimState.completedSegments}/3 · Tap "${netLabels[SimState.completedSegments].split(' · ')[1]}"`;
+        else status = 'Open net: some fish escape through the gap.';
         if (netStatusLabel.textContent !== status) netStatusLabel.textContent = status;
         netStatusDot.className = 'w-3 h-3 rounded-full ' + (SimState.netQuality === 'GOOD' ? 'bg-emerald-400' : 'bg-amber-400');
         netButtons.forEach((button, i) => {
           const done = i < SimState.completedSegments;
           button.disabled = !building || i !== SimState.completedSegments || SimState.netBusy || SimState.paused;
           button.dataset.done = String(done);
-          button.textContent = done ? `${i + 1} · Fatto ✓` : netLabels[i];
-          button.setAttribute('aria-label', done ? `Tratto ${i + 1} completato` : netLabels[i]);
+          button.textContent = done ? `${i + 1} · Done ✓` : netLabels[i];
+          button.setAttribute('aria-label', done ? `Section ${i + 1} completed` : netLabels[i]);
         });
         if (building) {
           btnMainAction.classList.toggle('hidden', SimState.completedSegments === 0 || SimState.netBusy);
@@ -1822,10 +1822,10 @@
           setViewPerspective('SIDE');
 
           stepBadge.textContent = '1';
-          storySubtitle.textContent = 'Interazione 1 • Esplora l\'oceano';
+          storySubtitle.textContent = 'Interaction 1 • Explore the ocean';
           storyText.innerHTML = 'The humpback whales found fish. <strong class="text-amber-300">Tap the school</strong> to see how they corral them!';
           btnMainAction.classList.remove('hidden');
-          btnMainActionText.textContent = 'Scopri il banco';
+          btnMainActionText.textContent = 'Discover the school';
           btnMainAction.onclick = () => enterPhase('FOUND');
           btnSecondaryAction.classList.add('hidden');
         }
@@ -1837,11 +1837,11 @@
           setViewPerspective(SimState.viewMode);
 
           stepBadge.textContent = '1';
-          storySubtitle.textContent = 'Pranzo individuato!';
+          storySubtitle.textContent = 'School spotted!';
           storyText.innerHTML = '<strong>"The humpback whales found their lunch! But how will they catch so many fish together?"</strong>';
 
           btnMainAction.classList.remove('hidden');
-          btnMainActionText.textContent = 'Prova tu';
+          btnMainActionText.textContent = 'Try it yourself';
           btnMainAction.onclick = () => enterPhase('BUILD_NET');
           btnSecondaryAction.classList.add('hidden');
         }
@@ -1862,10 +1862,10 @@
           updateNetStatusUI();
 
           stepBadge.textContent = '2';
-          storySubtitle.textContent = '2 • Costruisci la rete di bolle';
+          storySubtitle.textContent = '2 • Build the bubble net';
           storyText.innerHTML = 'Tap the <strong class="text-amber-300">three buttons in order</strong>: the whale blows a spiral ring of bubbles.';
 
-          btnMainActionText.textContent = 'Osserva la rete aperta';
+          btnMainActionText.textContent = 'Observe the open net';
           btnMainAction.onclick = () => enterPhase('EVALUATE');
           btnMainAction.classList.add('hidden');
           btnSecondaryAction.classList.add('hidden');
@@ -1877,19 +1877,19 @@
 
           stepBadge.textContent = '3';
           if (SimState.netQuality === 'GOOD') {
-            storySubtitle.textContent = '3 • Una rete d’aria!';
+            storySubtitle.textContent = '3 • A net of bubbles!';
             storyText.innerHTML = 'The shimmering bubbles frighten the fish, making them <strong class="text-emerald-300">cluster tightly at the center</strong>.';
           } else {
-            storySubtitle.textContent = '3 • Una rete ancora aperta';
+            storySubtitle.textContent = '3 • An open net';
             storyText.innerHTML = 'The bubble net has an <strong class="text-amber-300">opening</strong>: see how some fish escape through the gap!';
           }
 
           btnMainAction.classList.remove('hidden');
-          btnMainActionText.textContent = 'Guarda la risalita';
+          btnMainActionText.textContent = 'Watch the ascent';
           btnMainAction.onclick = () => enterPhase('ASCENT');
 
           btnSecondaryAction.classList.remove('hidden');
-          btnSecondaryActionText.textContent = 'Riprova la rete';
+          btnSecondaryActionText.textContent = 'Retry the net';
           btnSecondaryAction.onclick = () => enterPhase('BUILD_NET');
         }
 
@@ -1904,7 +1904,7 @@
           soundEngine.playLungeSwoosh();
 
           stepBadge.textContent = '4';
-          storySubtitle.textContent = 'Interazione 4 • La risalita della megattera';
+          storySubtitle.textContent = 'Interaction 4 • The whale lunges';
           storyText.innerHTML = 'Watch from the deep! The whale lunges upward through the bubble column, <strong class="text-amber-300">opening its jaws wide and expanding its throat pleats</strong>!';
 
           btnMainAction.classList.add('hidden');
@@ -1913,15 +1913,15 @@
 
         else if (newPhase === 'CONCLUSION') {
           stepBadge.textContent = '★';
-          storySubtitle.textContent = 'Esperimento completato!';
+          storySubtitle.textContent = 'Simulation complete!';
           storyText.innerHTML = 'The bubbles corral the fish. Then the humpback whales <strong class="text-amber-300">lunge upward with gaping mouths</strong>, catching hundreds of prey at once!';
 
           btnMainAction.classList.remove('hidden');
-          btnMainActionText.textContent = 'Riprova!';
+          btnMainActionText.textContent = 'Try again!';
           btnMainAction.onclick = () => enterPhase('BUILD_NET');
 
           btnSecondaryAction.classList.remove('hidden');
-          btnSecondaryActionText.textContent = 'Rivedi la risalita';
+          btnSecondaryActionText.textContent = 'Replay ascent';
           btnSecondaryAction.onclick = () => enterPhase('ASCENT');
         }
         requestAnimationFrame(layoutScene);
@@ -1970,7 +1970,7 @@
         SimState.paused = paused;
         iconPause.classList.toggle('hidden', paused);
         iconPlay.classList.toggle('hidden', !paused);
-        btnPause.setAttribute('aria-label', paused ? 'Riprendi' : 'Metti in pausa');
+        btnPause.setAttribute('aria-label', paused ? 'Resume' : 'Pause');
         btnPause.setAttribute('aria-pressed', String(paused));
         updateNetStatusUI();
       }
@@ -1983,7 +1983,7 @@
       btnAudio.addEventListener('click', () => {
         const active = soundEngine.toggle();
         btnAudio.setAttribute('aria-pressed', String(active));
-        btnAudio.setAttribute('aria-label', active ? 'Disattiva i suoni dell’oceano' : 'Attiva i suoni dell’oceano');
+        btnAudio.setAttribute('aria-label', active ? 'Mute ocean sounds' : 'Enable ocean sounds');
         iconSoundOff.classList.toggle('hidden', active);
         iconSoundOn.classList.toggle('hidden', !active);
       });

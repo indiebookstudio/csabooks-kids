@@ -5,7 +5,13 @@
     "home": "Home",
     "bonus": "Bonuses",
     "sources": "Source library",
-    "book": "The book"
+    "book": "The book",
+    "skipToContent": "Skip to content",
+    "goHome": "Go to home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mainNav": "Main navigation",
+    "loading": "Preparing the wonders…"
   },
   "brand": {
     "eyebrow": "EXCLUSIVE BOOK COMPANION",
@@ -58,14 +64,24 @@
       "title": "Color Science with Otto",
       "subtitle": "Ten adventures to bring to life.",
       "description": "Whales, dinosaurs, robots and space: ten printable coloring sheets.",
-      "detail": "Ten black-and-white A4 coloring pages."
+      "detail": "Ten black-and-white A4 coloring pages. Use pencils, crayons, or markers: science can be full of color!",
+      "printTitle": "Printing Instructions",
+      "printFormat": "Format: A4 (210 × 297 mm) or US Letter · Scale: Fit to page",
+      "printColor": "Color mode: Black & white / Grayscale",
+      "printPaper": "Recommended paper: 100–120 gsm to prevent bleed-through with markers and pencils",
+      "previewTitle": "Preview of all 10 printable sheets",
+      "sheet": "Sheet"
     },
     "carte": {
       "tag": "GAME · 36 CARDS",
       "title": "True, False, or We Don’t Know Yet?",
       "subtitle": "The smartest answer is not always yes or no.",
       "description": "Thirty-six illustrated cards for challenging friends and family.",
-      "detail": "Play on your phone or print a double-sided deck with explanations."
+      "detail": "Play on your phone or print a double-sided deck with explanations.",
+      "rulesTitle": "Quick Game Rules",
+      "rulesText": "1 to 6 players. Take turns drawing a card, read the question aloud, and decide: is it TRUE, FALSE, or WE DON'T KNOW YET? Award 1 point for each correct answer. In science, recognizing what we don't know yet is the smartest discovery!",
+      "printTitle": "Double-Sided Printing Instructions",
+      "printText": "In printer settings, choose «Double-sided (Duplex)» with «Flip on long edge» so card fronts align with backs. 160–250 gsm white cardstock is recommended."
     }
   },
   "actions": {
@@ -100,6 +116,7 @@
     "searchPlaceholder": "Search by code, topic or keyword…",
     "searchLabel": "Find a source",
     "all": "All",
+    "result": "result",
     "results": "results",
     "showMore": "Show more sources",
     "citation": "Citation / reference",
@@ -126,7 +143,7 @@
     "text": "A companion to EINSTEIN, YOU MISSED THIS!",
     "official": "Visit CSA Books Kids",
     "legal": "Illustrations do not replace original scientific publications.",
-    "privacy": "No account required. Interactive bonuses may store progress on this device.",
+    "privacy": "No account required. Email addresses provided to receive the key are protected under GDPR with no profiling of minors. Interactive bonuses only store progress locally on this device.",
     "lang": "Language",
     "sources": "Sources",
     "home": "Home"
