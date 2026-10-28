@@ -93,6 +93,23 @@ dialog{width:min(700px,calc(100vw - 28px));max-height:90vh;max-height:90dvh;padd
 @media(max-width:680px){.site-nav-bar{padding:4px 10px}.site-nav-inner{gap:6px}.brand-lines small{display:none}.nav-item{padding:3px 6px;font-size:11px}}
 </style>
 
+
+<script>
+function switchAnimLang(targetLang){
+  try{localStorage.setItem('otto_lang',targetLang);}catch(_){}
+  var p=window.location.pathname;
+  if(targetLang==='it'&&p.indexOf('/bonus/en/')!==-1){
+    window.location.href=p.replace('/bonus/en/','/bonus/it/')+window.location.search+window.location.hash;
+    return false;
+  }
+  if(targetLang==='en'&&p.indexOf('/bonus/it/')!==-1){
+    window.location.href=p.replace('/bonus/it/','/bonus/en/')+window.location.search+window.location.hash;
+    return false;
+  }
+  return true;
+}
+</script>
+
 </head>
 <body>
 <svg class="svg-library" aria-hidden="true"><defs>
@@ -107,10 +124,11 @@ dialog{width:min(700px,calc(100vw - 28px));max-height:90vh;max-height:90dvh;padd
 <symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M5 19 19 5"/></symbol>
 </defs></svg>
 <!-- PERSISTENT GLOBAL TOP BAR -->
+<!-- PERSISTENT GLOBAL TOP BAR -->
 <header class="site-nav-bar">
   <div class="site-nav-inner">
     <a class="brand-link" href="../../../../?lang=it&pagina=inizio" aria-label="Torna all’inizio">
-      <span class="brand-mark-otto"><img src="../../assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../../media/otto.webp';"></span>
+      <span class="brand-mark-otto"><img src="../assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../../media/otto.webp';"></span>
       <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
     </a>
     <nav class="nav-menu" aria-label="Navigazione principale">
@@ -120,7 +138,7 @@ dialog{width:min(700px,calc(100vw - 28px));max-height:90vh;max-height:90dvh;padd
       <a class="nav-item" href="../../../../?lang=it&pagina=fonti">Biblioteca fonti</a>
     </nav>
     <div class="locale-pill-bar" role="group" aria-label="Selezione lingua">
-      <a class="locale-flag-item " href="../../en/animazioni/02.Felce.DNA/index.html" onclick="try{localStorage.setItem('otto_lang','en')}catch(_){}" title="English">
+      <a class="locale-flag-item " href="../../../en/animazioni/02.Felce.DNA/index.html" onclick="return switchAnimLang('en');" title="English">
         <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><path d="M0 0h60v30H0z" fill="#012169" stroke="none"/><path d="m0 0 60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="m0 0 60 30m0-30L0 30" stroke="#c8102e" stroke-width="3"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg>
         <span class="flag-code">EN</span>
       </a>

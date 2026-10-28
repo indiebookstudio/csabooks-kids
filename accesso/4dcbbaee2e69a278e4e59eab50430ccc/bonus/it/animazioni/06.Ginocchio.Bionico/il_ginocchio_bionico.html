@@ -92,13 +92,31 @@ dialog{width:min(700px,calc(100vw - 28px));max-height:90vh;max-height:90dvh;padd
 @media(max-width:680px){.site-nav-bar{padding:4px 10px}.site-nav-inner{gap:6px}.brand-lines small{display:none}.nav-item{padding:3px 6px;font-size:11px}}
 </style>
 
+
+<script>
+function switchAnimLang(targetLang){
+  try{localStorage.setItem('otto_lang',targetLang);}catch(_){}
+  var p=window.location.pathname;
+  if(targetLang==='it'&&p.indexOf('/bonus/en/')!==-1){
+    window.location.href=p.replace('/bonus/en/','/bonus/it/')+window.location.search+window.location.hash;
+    return false;
+  }
+  if(targetLang==='en'&&p.indexOf('/bonus/it/')!==-1){
+    window.location.href=p.replace('/bonus/it/','/bonus/en/')+window.location.search+window.location.hash;
+    return false;
+  }
+  return true;
+}
+</script>
+
 </head><body>
 <svg class="svg-library" aria-hidden="true"><defs><symbol id="i-knee" viewBox="0 0 24 24"><path d="M9 2 7 9l5 4 3 8M15 2l-2 6 5 4 3 8M8 11l-4 8 3 3 5-7"/><circle cx="12" cy="12" r="2.5"/></symbol><symbol id="i-play" viewBox="0 0 24 24"><path d="m7 3 15 9-15 9Z"/></symbol><symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 4v16M17 4v16"/></symbol><symbol id="i-view" viewBox="0 0 24 24"><path d="m3 12 9-7 9 7-9 7ZM3 17l9 6 9-6M3 7l9-6 9 6"/></symbol><symbol id="i-sound" viewBox="0 0 24 24"><path d="M3 9h4l6-5v16l-6-5H3ZM17 8c2 2 2 6 0 8m3-11c4 4 4 10 0 14"/></symbol><symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 2 8M3 3v7h7"/></symbol><symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5c-3-2-7-2-10 0v15c3-2 7-2 10 0 3-2 7-2 10 0V5c-3-2-7-2-10 0Zm0 0v15"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 12h18m-7-7 7 7-7 7"/></symbol><symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M5 19 19 5"/></symbol></defs></svg>
+<!-- PERSISTENT GLOBAL TOP BAR -->
 <!-- PERSISTENT GLOBAL TOP BAR -->
 <header class="site-nav-bar">
   <div class="site-nav-inner">
     <a class="brand-link" href="../../../../?lang=it&pagina=inizio" aria-label="Torna all’inizio">
-      <span class="brand-mark-otto"><img src="../../assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../../media/otto.webp';"></span>
+      <span class="brand-mark-otto"><img src="../assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../../media/otto.webp';"></span>
       <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
     </a>
     <nav class="nav-menu" aria-label="Navigazione principale">
@@ -108,7 +126,7 @@ dialog{width:min(700px,calc(100vw - 28px));max-height:90vh;max-height:90dvh;padd
       <a class="nav-item" href="../../../../?lang=it&pagina=fonti">Biblioteca fonti</a>
     </nav>
     <div class="locale-pill-bar" role="group" aria-label="Selezione lingua">
-      <a class="locale-flag-item " href="../../en/animazioni/06.Ginocchio.Bionico/index.html" onclick="try{localStorage.setItem('otto_lang','en')}catch(_){}" title="English">
+      <a class="locale-flag-item " href="../../../en/animazioni/06.Ginocchio.Bionico/index.html" onclick="return switchAnimLang('en');" title="English">
         <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><path d="M0 0h60v30H0z" fill="#012169" stroke="none"/><path d="m0 0 60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="m0 0 60 30m0-30L0 30" stroke="#c8102e" stroke-width="3"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg>
         <span class="flag-code">EN</span>
       </a>
