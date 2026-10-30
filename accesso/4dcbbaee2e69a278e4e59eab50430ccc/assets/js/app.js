@@ -7,11 +7,15 @@
   const app = q('#app');
   const UK_FLAG_SVG = `<svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><path d="M0 0h60v30H0z" fill="#012169" stroke="none"/><path d="m0 0 60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="m0 0 60 30m0-30L0 30" stroke="#c8102e" stroke-width="3"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg>`;
   const IT_FLAG_SVG = `<svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="20" height="30" fill="#009246" stroke="none"/><rect width="20" height="30" x="20" fill="#ffffff" stroke="none"/><rect width="20" height="30" x="40" fill="#ce2b37" stroke="none"/></svg>`;
+  const FR_FLAG_SVG = `<svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="20" height="30" fill="#002395" stroke="none"/><rect width="20" height="30" x="20" fill="#ffffff" stroke="none"/><rect width="20" height="30" x="40" fill="#ed2939" stroke="none"/></svg>`;
+  const ES_FLAG_SVG = `<svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="60" height="30" fill="#aa151b" stroke="none"/><rect width="60" height="15" y="7.5" fill="#f1bf00" stroke="none"/></svg>`;
   const allLanguages = [
     { code: 'en', flag: UK_FLAG_SVG, label: 'English', available: true },
-    { code: 'it', flag: IT_FLAG_SVG, label: 'Italiano', available: true }
+    { code: 'it', flag: IT_FLAG_SVG, label: 'Italiano', available: true },
+    { code: 'fr', flag: FR_FLAG_SVG, label: 'Français', available: true },
+    { code: 'es', flag: ES_FLAG_SVG, label: 'Español', available: true }
   ];
-  const localeLabels = {it:'IT · Italiano',en:'EN · English'};
+  const localeLabels = {it:'IT · Italiano',en:'EN · English',fr:'FR · Français',es:'ES · Español'};
   const categories = ['all','animali','piante','esperimenti','dinosauri','tecnologia','corpo','spazio','introduzione'];
   const cards = ['museo','film','colora','carte'];
   let config, t, sources = [], integrativeSources = [], language = 'it';
@@ -107,7 +111,7 @@
     q('#nav-links').innerHTML = links;
 
     const bar = `<div class="locale-pill-bar" role="group" aria-label="${esc(L('footer.lang'))}">
-      ${allLanguages.map(l => `
+      ${allLanguages.filter(l => (config?.enabledLocales || ['it', 'en', 'fr', 'es']).includes(l.code)).map(l => `
         <button type="button" class="locale-flag-item ${language === l.code ? 'active' : ''}" data-switch-lang="${l.code}" aria-pressed="${language === l.code ? 'true' : 'false'}" title="${esc(l.label)}">
           <span class="flag-icon" aria-hidden="true">${l.flag}</span>
           <span class="flag-code">${l.code.toUpperCase()}</span>
@@ -642,6 +646,8 @@
     const navLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
     if(navLang.startsWith('en') && enabled.includes('en')) return 'en';
     if(navLang.startsWith('it') && enabled.includes('it')) return 'it';
+    if(navLang.startsWith('fr') && enabled.includes('fr')) return 'fr';
+    if(navLang.startsWith('es') && enabled.includes('es')) return 'es';
     return config?.defaultLocale || 'it';
   }
   async function init(){

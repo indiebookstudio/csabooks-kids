@@ -117,7 +117,7 @@ const EMAIL_I18N = {
     signoff: "Bonne exploration !",
     author: "Otto",
     authorTitle: "Le petit explorateur des grandes découvertes",
-    footerDisclaimer: "Vous recevez cet e-mail car vous avez demandé la clé secrète d'Otto pour le livre « EINSTEIN, TU AS MANQUÉ CELLE-LÀ ! ».",
+    footerDisclaimer: "Vous recevez cet e-mail car vous avez demandé la clé secrète d'Otto pour le livre « EINSTEIN, TU AS MANQUÉ ÇA ! ».",
     copyright: "Tous droits réservés.",
     helpTitle: "Besoin d'aide ou problème d'accès ?",
     helpText: "Si vous rencontrez des difficultés avec la clé secrète ou l'accès au portail, écrivez-nous à :",

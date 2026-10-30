@@ -103,11 +103,17 @@ const CRITICAL_FILES = [
   path.join('config', 'site.json'),
   path.join('i18n', 'it.json'),
   path.join('i18n', 'en.json'),
+  path.join('i18n', 'fr.json'),
+  path.join('i18n', 'es.json'),
   path.join('content', 'fonti_it.csv'),
   path.join('content', 'fonti_en.csv'),
+  path.join('content', 'fonti_fr.csv'),
+  path.join('content', 'fonti_es.csv'),
   path.join('content', 'fonti_integrative.json'),
   path.join('media', 'copertina.webp'),
   path.join('media', 'copertine', 'en', 'copertina.webp'),
+  path.join('media', 'copertine', 'fr', 'copertina.webp'),
+  path.join('media', 'copertine', 'es', 'copertina.webp'),
   path.join('media', 'otto.webp'),
   path.join('media', 'polpo_esploratore_con_chiave_dorata.png'),
   path.join('media', 'polpo_esploratore_con_chiave_dorata.webp'),
@@ -122,7 +128,19 @@ const CRITICAL_FILES = [
   path.join('bonus', 'en', 'animazioni', '01.Megattere', 'la_rete_invisibile_delle_megattere.html'),
   path.join('bonus', 'en', 'colora', 'colora.pdf'),
   path.join('bonus', 'en', 'carte', 'index.html'),
-  path.join('bonus', 'en', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf')
+  path.join('bonus', 'en', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf'),
+  path.join('bonus', 'fr', 'museo', 'index.html'),
+  path.join('bonus', 'fr', 'animazioni', 'index.html'),
+  path.join('bonus', 'fr', 'animazioni', '01.Megattere', 'la_rete_invisibile_delle_megattere.html'),
+  path.join('bonus', 'fr', 'colora', 'colora.pdf'),
+  path.join('bonus', 'fr', 'carte', 'index.html'),
+  path.join('bonus', 'fr', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf'),
+  path.join('bonus', 'es', 'museo', 'index.html'),
+  path.join('bonus', 'es', 'animazioni', 'index.html'),
+  path.join('bonus', 'es', 'animazioni', '01.Megattere', 'la_rete_invisibile_delle_megattere.html'),
+  path.join('bonus', 'es', 'colora', 'colora.pdf'),
+  path.join('bonus', 'es', 'carte', 'index.html'),
+  path.join('bonus', 'es', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf')
 ];
 
 let errors = [];

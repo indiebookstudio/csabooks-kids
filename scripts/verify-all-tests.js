@@ -151,9 +151,18 @@ async function runAllTests() {
     const animazioni = await request(`${BASE}bonus/it/animazioni/index.html`);
     const sim01 = await request(`${BASE}bonus/it/animazioni/01.Megattere/la_rete_invisibile_delle_megattere.html`);
     const animazioniEn = await request(`${BASE}bonus/en/animazioni/index.html`);
+    const animazioniFr = await request(`${BASE}bonus/fr/animazioni/index.html`);
+    const animazioniEs = await request(`${BASE}bonus/es/animazioni/index.html`);
     const carte = await request(`${BASE}bonus/it/carte/index.html`);
-    const ok = museo.statusCode === 200 && animazioni.statusCode === 200 && sim01.statusCode === 200 && animazioniEn.statusCode === 200 && carte.statusCode === 200;
-    record('TEST 5 — BONUS', ok, `Museo (200), Laboratorio 3D IT (${animazioni.statusCode}), Simulazione 01 (${sim01.statusCode}), Laboratorio 3D EN (${animazioniEn.statusCode}), Carte (200) accessibili.`);
+    const carteFr = await request(`${BASE}bonus/fr/carte/index.html`);
+    const carteEs = await request(`${BASE}bonus/es/carte/index.html`);
+    const museoFr = await request(`${BASE}bonus/fr/museo/index.html`);
+    const museoEs = await request(`${BASE}bonus/es/museo/index.html`);
+    const ok = museo.statusCode === 200 && animazioni.statusCode === 200 && sim01.statusCode === 200 &&
+               animazioniEn.statusCode === 200 && animazioniFr.statusCode === 200 && animazioniEs.statusCode === 200 &&
+               carte.statusCode === 200 && carteFr.statusCode === 200 && carteEs.statusCode === 200 &&
+               museoFr.statusCode === 200 && museoEs.statusCode === 200;
+    record('TEST 5 — BONUS', ok, `Museo (IT/FR/ES: 200), Laboratorio 3D (IT/EN/FR/ES: 200), Simulazione 01 (200), Carte (IT/FR/ES: 200) accessibili.`);
   } catch (e) {
     record('TEST 5 — BONUS', false, e.message);
   }
@@ -183,12 +192,17 @@ async function runAllTests() {
   try {
     const it = await request(`${BASE}i18n/it.json`);
     const en = await request(`${BASE}i18n/en.json`);
+    const fr = await request(`${BASE}i18n/fr.json`);
+    const es = await request(`${BASE}i18n/es.json`);
     const fontiEn = await request(`${BASE}content/fonti_en.csv`);
+    const fontiFr = await request(`${BASE}content/fonti_fr.csv`);
+    const fontiEs = await request(`${BASE}content/fonti_es.csv`);
     const cfg = await request(`${BASE}config/site.json`);
     const siteJson = JSON.parse(cfg.body);
-    const ok = it.statusCode === 200 && en.statusCode === 200 && fontiEn.statusCode === 200 &&
-               siteJson.enabledLocales.includes('it') && siteJson.enabledLocales.includes('en');
-    record('TEST 8 — MULTILINGUA', ok, `i18n IT/EN e fonti_en.csv presenti; lingue 'it' ed 'en' abilitate con successo.`);
+    const ok = it.statusCode === 200 && en.statusCode === 200 && fr.statusCode === 200 && es.statusCode === 200 &&
+               fontiEn.statusCode === 200 && fontiFr.statusCode === 200 && fontiEs.statusCode === 200 &&
+               ['it', 'en', 'fr', 'es'].every(loc => siteJson.enabledLocales.includes(loc));
+    record('TEST 8 — MULTILINGUA', ok, `i18n IT/EN/FR/ES e fonti EN/FR/ES presenti; lingue 'it', 'en', 'fr', 'es' abilitate con successo.`);
   } catch (e) {
     record('TEST 8 — MULTILINGUA', false, e.message);
   }

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#09192a">
+  <meta name="description" content="Le Musée des Découvertes Impossibles : sept salles interactives, Otto et de vrais mystères scientifiques tirés d'Einstein, tu as manqué ça !">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Museum of Impossible Discoveries · Otto">
+  <meta property="og:description" content="Explore sept salles de science avec Otto : expériences, énigmes et un passeport d'explorateur à compléter.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="museo-anteprima.jpg">
+  <title>Le Musée des Découvertes Impossibles · Otto</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+  
+  <!-- PERSISTENT TOP NAVIGATION -->
+  <header class="site-nav-bar">
+    <div class="site-nav-inner">
+      <a class="brand-link" href="../../../?lang=fr&pagina=inizio" aria-label="Retour à l'accueil">
+        <span class="brand-mark-otto"><img src="assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../media/otto.webp';"></span>
+        <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
+      </a>
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a class="nav-item" href="../../../?lang=fr&pagina=inizio">Accueil</a>
+        <a class="nav-item active" href="../../../?lang=fr&pagina=bonus">Les bonus</a>
+        <a class="nav-item" href="../../../?lang=fr&pagina=fonti">Bibliothèque des sources</a>
+      </nav>
+      <!-- FLAG SELECTOR MATCHING MOCKUP -->
+      <div class="locale-pill-bar" role="group" aria-label="Language selection">
+        <a class="locale-flag-item " href="../../en/museo/index.html" onclick="try{localStorage.setItem('otto_lang','en');}catch(_){};" title="English">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><path d="M0 0h60v30H0z" fill="#012169" stroke="none"/><path d="m0 0 60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="m0 0 60 30m0-30L0 30" stroke="#c8102e" stroke-width="3"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg>
+          <span class="flag-code">EN</span>
+        </a>
+        <a class="locale-flag-item " href="../../it/museo/index.html" onclick="try{localStorage.setItem('otto_lang','it');}catch(_){};" title="Italiano">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="20" height="30" fill="#009246" stroke="none"/><rect width="20" height="30" x="20" fill="#ffffff" stroke="none"/><rect width="20" height="30" x="40" fill="#ce2b37" stroke="none"/></svg>
+          <span class="flag-code">IT</span>
+        </a>
+        <a class="locale-flag-item active" href="#" aria-current="true" title="Français">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="20" height="30" fill="#002395" stroke="none"/><rect width="20" height="30" x="20" fill="#ffffff" stroke="none"/><rect width="20" height="30" x="40" fill="#ed2939" stroke="none"/></svg>
+          <span class="flag-code">FR</span>
+        </a>
+        <a class="locale-flag-item " href="../../es/museo/index.html" onclick="try{localStorage.setItem('otto_lang','es');}catch(_){};" title="Español">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="60" height="30" fill="#aa151b" stroke="none"/><rect width="60" height="15" y="7.5" fill="#f1bf00" stroke="none"/></svg>
+          <span class="flag-code">ES</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#atrio" aria-label="Return to museum lobby">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-text">LE MUSÉE <small>DES DÉCOUVERTES IMPOSSIBLES</small></span>
+      </a>
+      <nav class="top-nav" aria-label="Museum navigation">
+        <a href="#atrio" class="nav-atrium">Sept Salles</a>
+        <button type="button" id="passportButton" class="passport-button"><span aria-hidden="true">✧</span> Passeport <strong id="headerProgress">0/7</strong></button>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" aria-live="polite"></main>
+    <footer class="site-footer">
+      <span>Compagnon exclusif du livre <strong>EINSTEIN, TU AS MANQUÉ ÇA !</strong></span>
+      <span>Clara Musicco · © 2026</span>
+      <span>Reconstitutions narratives et artistiques à but éducatif ; non contractuelles des publications scientifiques originales.</span>
+    </footer>
+  </div>
+  <div id="modal" class="modal-root" hidden></div>
+  <div id="toast" role="status" aria-live="polite" class="toast" hidden></div>
+  <noscript><p class="nojs">Veuillez activer JavaScript dans votre navigateur pour explorer le musée interactif.</p></noscript>
+</body>
+</html>

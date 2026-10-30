@@ -18,7 +18,9 @@
   "defaultLocale": "it",
   "enabledLocales": [
     "it",
-    "en"
+    "en",
+    "fr",
+    "es"
   ],
   "supportedLocales": [
     "it",

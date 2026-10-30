@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#081528">
+  <meta name="description" content="36 cartas ilustradas con Otto: ¿sabes distinguir verdadero, falso y lo que la ciencia aún no sabe?">
+  <title>¿Verdadero, falso o no lo sabemos? · Las cartas de Otto</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@500;700;800;900&display=swap');
+    :root{color-scheme:dark;--navy:#071429;--panel:#132840;--panel2:#18334b;--gold:#ffd46f;--white:#f7f4e9;--muted:#b6c9d9;--aqua:#46ddc5;--rose:#ff8b87;--ring:#ffdc81}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'DM Sans',system-ui,sans-serif;background:radial-gradient(ellipse at 80% 0,#143555 0%,transparent 60%),radial-gradient(ellipse at 20% 100%,#0e2a44 0%,transparent 50%),var(--navy);color:var(--white);min-height:100vh;display:flex;flex-direction:column}
+    header{padding:18px 24px;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(7,20,41,.85);backdrop-filter:blur(10px);position:sticky;top:0;z-index:20}
+    .head-in{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--white)}
+    .brand img{width:36px;height:36px;border-radius:50%}
+    .brand-title{font-family:'Nunito',sans-serif;font-weight:900;font-size:16px;letter-spacing:.5px;line-height:1}
+    .brand-sub{font-size:11px;color:var(--gold);letter-spacing:1px;font-weight:700}
+    nav{display:flex;gap:12px;align-items:center}
+    .nav-item{color:var(--muted);text-decoration:none;font-size:13px;font-weight:600;padding:6px 12px;border-radius:20px;transition:.2s}
+    .nav-item:hover,.nav-item.active{color:var(--white);background:rgba(255,255,255,.08)}
+    .locale-pill-bar{display:inline-flex;align-items:center;gap:3px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:2px 4px}
+    .locale-flag-item{display:inline-flex;align-items:center;gap:4px;padding:3px 7px;border-radius:14px;text-decoration:none;color:#b6c9d9;font-size:11px;font-weight:700;transition:all 0.15s ease}
+    .locale-flag-item:hover{color:#fff;background:rgba(255,255,255,0.1)}
+    .locale-flag-item.active{color:#ffd46f;background:rgba(255,212,111,0.18)}
+    .flag-svg{display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4)}
+    .hero{max-width:1100px;margin:0 auto;padding:32px 24px 20px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .hero h1{font-family:'Nunito',sans-serif;font-weight:900;font-size:clamp(24px,4vw,34px);line-height:1.1;margin:0 0 8px;letter-spacing:.3px}
+    .hero h1 span{color:var(--gold)}
+    .hero p{margin:0;color:var(--muted);font-size:15px;max-width:540px}
+    .hero .eyebrow{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+    .hero img.otto{width:110px;height:auto;filter:drop-shadow(0 10px 20px rgba(0,0,0,.4))}
+    main{max-width:1100px;margin:0 auto;padding:0 24px 40px;width:100%;flex:1}
+    .shell{background:linear-gradient(180deg,rgba(19,40,64,.85),rgba(15,31,51,.95));border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:24px;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+    .topline{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+    .chips{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:6px 12px;border-radius:20px;font-size:12px;font-weight:700;color:var(--muted)}
+    .topright{display:flex;align-items:center;gap:12px}
+    .bar{width:120px;height:8px;background:rgba(255,255,255,.1);border-radius:4px;overflow:hidden}
+    .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--aqua),var(--gold));width:0%;transition:width .3s}
+    button.reset{background:none;border:none;color:var(--muted);font-size:12px;font-weight:600;cursor:pointer;text-decoration:underline;padding:4px}
+    button.reset:hover{color:var(--rose)}
+    .filters{display:flex;gap:6px;overflow-x:auto;padding-bottom:10px;margin-bottom:20px}
+    .filters button{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:var(--muted);padding:6px 12px;border-radius:16px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap;transition:.15s}
+    .filters button:hover,.filters button.on{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+    .playing{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+    @media(max-width:768px){.playing{grid-template-columns:1fr}.hero{flex-direction:column-reverse;text-align:center}.hero p{margin:0 auto}}
+    .gamecard{background:linear-gradient(135deg,#1c3d61,#132840);border:2px solid var(--gold);border-radius:20px;padding:24px;aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 15px 30px rgba(0,0,0,.5);position:relative;overflow:hidden}
+    .gamecard::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(255,212,111,.15),transparent 60%);pointer-events:none}
+    .cardtop{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;letter-spacing:1px;color:var(--gold)}
+    .cardnum{background:rgba(0,0,0,.3);padding:4px 8px;border-radius:8px}
+    .theme{text-transform:uppercase}
+    .question{font-family:'Nunito',sans-serif;font-weight:800;font-size:clamp(18px,2.4vw,22px);line-height:1.3;color:var(--white);margin:auto 0;text-align:center}
+    .cardfoot{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--muted);font-weight:700;border-top:1px solid rgba(255,255,255,.1);padding-top:12px}
+    .side{display:flex;flex-direction:column;gap:16px}
+    .side h2{font-family:'Nunito',sans-serif;font-weight:900;font-size:20px;margin:0;color:var(--gold)}
+    .side p{margin:0;font-size:14px;color:var(--muted);line-height:1.4}
+    .options{display:grid;grid-template-columns:1fr;gap:10px}
+    .answer{background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.12);color:var(--white);padding:14px 18px;border-radius:14px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:12px;text-align:left;transition:.2s}
+    .answer:hover:not(:disabled){background:rgba(255,255,255,.12);border-color:var(--gold);transform:translateX(4px)}
+    .answer .dot{width:12px;height:12px;border-radius:50%;border:2px solid currentColor;display:inline-block}
+    .answer.good{background:rgba(70,221,197,.15);border-color:var(--aqua);color:var(--aqua)}
+    .answer.good .dot{background:var(--aqua)}
+    .answer.bad{background:rgba(255,139,135,.15);border-color:var(--rose);color:var(--rose);opacity:.6}
+    .answer.bad .dot{background:var(--rose)}
+    .answer:disabled{cursor:default}
+    .feedback{display:none;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.1);padding:16px;border-radius:14px;font-size:14px;line-height:1.45;color:var(--white)}
+    .feedback.visible{display:block;animation:pop .2s ease-out}
+    .feedback strong{display:block;margin-bottom:6px;color:var(--gold);font-family:'Nunito',sans-serif;font-size:15px}
+    .feedback a{color:var(--aqua);font-weight:700;text-decoration:underline;font-size:12px;display:inline-block;margin-top:8px}
+    .feedback .src{font-size:11px;color:var(--muted);display:block;margin-top:6px}
+    @keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+    .navrow{display:flex;gap:12px;margin-top:8px}
+    .btn{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:var(--white);padding:10px 18px;border-radius:12px;font-weight:700;font-size:13px;cursor:pointer;flex:1;text-align:center;transition:.2s}
+    .btn:hover:not(:disabled){background:rgba(255,255,255,.15)}
+    .btn.primary{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+    .btn.primary:hover:not(:disabled){background:#ffe294}
+    .btn:disabled{opacity:.4;cursor:default}
+    .extras{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+    .mini{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
+    .mini h3{margin:0 0 6px;font-size:14px;color:var(--gold);font-family:'Nunito',sans-serif}
+    .mini p{margin:0 0 12px;font-size:12px;color:var(--muted);line-height:1.4}
+    .mini a{display:inline-block;background:rgba(255,255,255,.08);color:var(--white);padding:6px 12px;border-radius:8px;font-size:12px;font-weight:700;text-decoration:none;transition:.2s}
+    .mini a:hover{background:var(--gold);color:var(--navy)}
+    .notice{margin-top:16px;font-size:11px;color:var(--muted);text-align:center}
+    .footer{margin-top:auto;padding:24px;text-align:center;font-size:12px;color:var(--muted);border-top:1px solid rgba(255,255,255,.06)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="head-in">
+      <a class="brand" href="../../../?lang=es&pagina=inizio">
+        <img src="assets/otto.webp" alt="Otto">
+        <div>
+          <div class="brand-title">OTTO ✦ DESCUBRIMIENTOS</div>
+          <div class="brand-sub">CLUB EXCLUSIVO</div>
+        </div>
+      </a>
+      <nav>
+        <a class="nav-item" href="../../../?lang=es&pagina=inizio">Inicio</a>
+        <a class="nav-item active" href="../../../?lang=es&pagina=bonus">Los bonus</a>
+        <a class="nav-item" href="../../../?lang=es&pagina=fonti">Biblioteca de fuentes</a>
+      </nav>
+      <div class="locale-pill-bar" role="group" aria-label="Language selection">
+        <a class="locale-flag-item " href="../../en/carte/index.html" onclick="try{localStorage.setItem('otto_lang','en');}catch(_){};" title="English">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><path d="M0 0h60v30H0z" fill="#012169" stroke="none"/><path d="m0 0 60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="m0 0 60 30m0-30L0 30" stroke="#c8102e" stroke-width="3"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg>
+          <span class="flag-code">EN</span>
+        </a>
+        <a class="locale-flag-item " href="../../it/carte/index.html" onclick="try{localStorage.setItem('otto_lang','it');}catch(_){};" title="Italiano">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="20" height="30" fill="#009246" stroke="none"/><rect width="20" height="30" x="20" fill="#ffffff" stroke="none"/><rect width="20" height="30" x="40" fill="#ce2b37" stroke="none"/></svg>
+          <span class="flag-code">IT</span>
+        </a>
+        <a class="locale-flag-item " href="../../fr/carte/index.html" onclick="try{localStorage.setItem('otto_lang','fr');}catch(_){};" title="Français">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="20" height="30" fill="#002395" stroke="none"/><rect width="20" height="30" x="20" fill="#ffffff" stroke="none"/><rect width="20" height="30" x="40" fill="#ed2939" stroke="none"/></svg>
+          <span class="flag-code">FR</span>
+        </a>
+        <a class="locale-flag-item active" href="#" aria-current="true" title="Español">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="60" height="30" fill="#aa151b" stroke="none"/><rect width="60" height="15" y="7.5" fill="#f1bf00" stroke="none"/></svg>
+          <span class="flag-code">ES</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">El bonus exclusivo de ¡Einstein, esta te la perdiste!</div>
+      <h1>¿VERDADERO, FALSO <span>O NO LO SABEMOS?</span></h1>
+      <p>36 afirmaciones increíbles. Otto te reta a distinguir lo que los científicos han descubierto, lo que han desmentido y lo que aún es un misterio.</p>
+    </div>
+    <img class="otto" src="assets/otto.webp" alt="Otto, el pulpo explorador con una lupa">
+  </section>
+
+  <main id="gioca">
+    <section class="shell">
+      <div class="topline">
+        <div class="chips">
+          <span class="chip" id="counter">Carta 1 de 36</span>
+          <span class="chip" id="points">0 puntos</span>
+        </div>
+        <div class="topright">
+          <div class="bar" aria-label="Progreso"><span id="progress"></span></div>
+          <button class="reset" id="restart">Reiniciar</button>
+        </div>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="playing">
+        <article class="gamecard" aria-live="polite">
+          <div class="cardtop">
+            <span class="cardnum" id="number">#01</span>
+            <span class="theme" id="theme">ANIMALES</span>
+          </div>
+          <div class="question" id="question"></div>
+          <div class="cardfoot">
+            <span>OBSERVA · RAZONA · ELIGE</span>
+            <span id="code">SC-01</span>
+          </div>
+        </article>
+        <section class="side">
+          <h2>¿Cuál es tu respuesta?</h2>
+          <p>No hace falta adivinar: lo importante es entender por qué. En ciencia, decir «no lo sabemos» es muchas veces la respuesta más sabia.</p>
+          <div class="options">
+            <button class="answer" data-choice="VERDADERO"><span class="dot"></span>Verdadero</button>
+            <button class="answer" data-choice="FALSO"><span class="dot"></span>Falso</button>
+            <button class="answer" data-choice="NO LO SABEMOS TODAVÍA"><span class="dot"></span>No lo sabemos</button>
+          </div>
+          <div class="feedback" id="feedback" aria-live="polite"></div>
+          <div class="navrow">
+            <button class="btn" id="prev">← Anterior</button>
+            <button class="btn primary" id="next">Siguiente carta →</button>
+          </div>
+        </section>
+      </div>
+      <div class="notice">Tu progreso se guarda únicamente en el navegador de tu dispositivo. Algunas cartas describen investigaciones preliminares: la explicación aclara la evidencia actual.</div>
+    </section>
+
+    <section class="extras" id="stampa">
+      <div class="mini">
+        <h3>🃏 Impresión a Doble Cara</h3>
+        <p>Las 36 cartas completas. <strong>Instrucciones:</strong> selecciona «Impresión a doble cara» con «Voltear por el borde largo» para alinear anversos y reversos. Cartulina recomendada 160–250 g/m².</p>
+        <a href="OTTO_CARTE_36_FRONTE_RETRO_A4.pdf" download="OTTO_CARTAS_36_DOBLE_CARA_A4.pdf">PDF Doble cara ↗</a>
+        <a href="OTTO_CARTE_36_SOLO_FRONTE_A4.pdf" download="OTTO_CARTAS_36_SOLO_ANVERSO_A4.pdf" style="margin-left:8px">Solo anverso ↗</a>
+      </div>
+      <div class="mini">
+        <h3>📚 Reglas y Juego en Familia</h3>
+        <p>De 1 a 6 jugadores. Roba una carta, lee la pregunta en voz alta y elige: Verdadero, Falso o No lo sabemos. ¡1 punto por acierto!</p>
+        <a href="OTTO_GUIDA_PREMIUM.pdf" download="OTTO_GUIA_REGLAS.pdf">Descargar guía ↗</a>
+      </div>
+      <div class="mini" id="fonti">
+        <h3>🔬 Detrás de Cada Descubrimiento</h3>
+        <p>Cada carta se vincula directamente a publicaciones científicas originales evaluadas por pares.</p>
+        <a href="CARTE_36_DATI.csv" download="CARTE_36_DATOS.csv">Catálogo de fuentes ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer">
+    © 2026 · Bonus exclusivo del libro <i>¡Einstein, esta te la perdiste!</i> · Reconstrucciones ilustradas con fines educativos.
+  </div>
+
+  <script id="DATA" type="application/json">
+  [{"id":1,"group":"A","theme":"ANIMALES","code":"SC-01","question":"¿Puede un pulpo cazar en equipo con peces de diferentes especies?","answer":"VERDADERO","explanation":"¡Sí! Los científicos han documentado grupos mixtos que buscan alimento juntos, repartiéndose diferentes funciones entre el pulpo y los peces.","source":"https://doi.org/10.1038/s41559-024-02525-2","old_code":"SC-01","image":"immagini/SC-01.png","image_title":"El pulpo hace equipo","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":2,"group":"A","theme":"ANIMALES","code":"SC-03","question":"¿Utilizan los elefantes nombres personales exactamente igual que nosotros?","answer":"NO LO SABEMOS TODAVÍA","explanation":"Algunas llamadas vocales parecen dirigidas a elefantes concretos, pero aún no sabemos si funcionan en todo igual que nuestros nombres.","source":"https://doi.org/10.1038/s41559-024-02420-w","old_code":"SC-03","image":"immagini/SC-03.png","image_title":"Los elefantes y sus llamadas","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":3,"group":"A","theme":"ANIMALES","code":"SC-04","question":"¿Utilizan las orcas las algas marinas para pescar almejas en el fondo marino?","answer":"FALSO","explanation":"Eso no es lo que han observado los científicos. Algunas orcas hacen rodar trozos de algas entre sus cuerpos como aseo o juego social.","source":"https://doi.org/10.1016/j.cub.2025.04.021","old_code":"SC-04","image":"immagini/SC-04.png","image_title":"Las orcas y su herramienta de algas","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":4,"group":"A","theme":"ANIMALES","code":"SC-04","question":"¿Sabemos con certeza absoluta por qué las orcas se frotan con algas marinas?","answer":"NO LO SABEMOS TODAVÍA","explanation":"No. El cuidado de la piel, aliviar parásitos y el contacto social son hipótesis muy interesantes, pero su función exacta sigue en estudio.","source":"https://doi.org/10.1016/j.cub.2025.04.021","old_code":"SC-04","image":"immagini/SC-04.png","image_title":"Las orcas y su herramienta de algas","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":5,"group":"A","theme":"ANIMALES","code":"SC-05","question":"¿Pueden las ballenas jorobadas acorralar a sus presas creando redes de burbujas de aire?","answer":"VERDADERO","explanation":"¡Sí! Expulsan espirales de burbujas bajo el agua para concentrar los peces, que no se atreven a cruzar la barrera brillante.","source":"https://doi.org/10.1098/rsos.240328","old_code":"SC-05","image":"immagini/SC-05.png","image_title":"La ballena y su red de burbujas","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":6,"group":"A","theme":"ANIMALES","code":"SC-06","question":"En el experimento científico, ¿contaron los cuervos números hasta el cien?","answer":"FALSO","explanation":"No. Los cuervos emitieron de uno a cuatro sonidos según las señales visuales, demostrando gran control numérico pero no hasta cien.","source":"https://doi.org/10.1126/science.adl0984","old_code":"SC-06","image":"immagini/SC-06.png","image_title":"Los cuervos saben contar","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":7,"group":"A","theme":"ANIMALES","code":"SC-02","question":"¿Puede una cacatúa aprender a abrir una fuente pública para beber agua?","answer":"VERDADERO","explanation":"¡Sí! En Sídney, cacatúas salvajes aprendieron a sujetar y girar los grifos de fuentes públicas con el pico para conseguir agua fresca.","source":"https://doi.org/10.1098/rsbl.2025.0010","old_code":"SC-02","image":"immagini/SC-02.png","image_title":"El truco del cacatúa para beber","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":8,"group":"A","theme":"ANIMALES","code":"SC-16","question":"¿Sienten los abejorros que hacen rodar bolas de madera la misma alegría que los humanos?","answer":"NO LO SABEMOS TODAVÍA","explanation":"Hacen rodar bolas de madera sin recibir comida a cambio, lo que parece puro juego, pero no podemos asegurar que sientan emociones humanas.","source":"https://doi.org/10.1016/j.anbehav.2022.08.013","old_code":"SC-16","image":"immagini/SC-16.png","image_title":"Abejorros jugando a la pelota","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":9,"group":"B","theme":"PLANTAS","code":"SC-09","question":"¿Emiten las plantas estresadas sonidos que los oídos humanos no pueden escuchar?","answer":"VERDADERO","explanation":"¡Sí! Cuando sufren falta de agua o se les cortan tallos, emiten clics ultrasónicos de alta frecuencia a través del aire.","source":"https://doi.org/10.1016/j.cell.2023.03.009","old_code":"SC-09","image":"immagini/SC-09.png","image_title":"La planta que no puedes oír","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":10,"group":"B","theme":"PLANTAS","code":"SC-13","question":"¿Tener cincuenta veces más ADN que un ser humano hace que un helecho sea más inteligente?","answer":"FALSO","explanation":"¡Para nada! El tamaño del genoma no tiene ninguna relación con la inteligencia ni con la superioridad evolutiva.","source":"https://doi.org/10.1016/j.isci.2024.109889","old_code":"SC-13","image":"immagini/SC-13.png","image_title":"El helecho con ADN gigante","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":11,"group":"B","theme":"PLANTAS","code":"SC-09","question":"¿Emiten las plantas ultrasonidos con la intención voluntaria de charlar entre ellas?","answer":"NO LO SABEMOS TODAVÍA","explanation":"Son ruidos físicos causados por diminutas burbujas que estallan en sus conductos internos; no hay pruebas de que sea una conversación consciente.","source":"https://doi.org/10.1016/j.cell.2023.03.009","old_code":"SC-09","image":"immagini/SC-09.png","image_title":"La planta que no puedes oír","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":12,"group":"B","theme":"PLANTAS","code":"SC-12","question":"¿Han germinado alguna vez semillas en auténtica tierra y polvo de la Luna?","answer":"VERDADERO","explanation":"¡Sí! Semillas de Arabidopsis brotaron en muestras de regolito lunar traídas por las misiones Apolo, aunque crecieron con cierto estrés biológico.","source":"https://doi.org/10.1038/s42003-022-03334-8","old_code":"SC-12","image":"immagini/SC-12.png","image_title":"Brotes en polvo lunar","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":13,"group":"B","theme":"PLANTAS","code":"SC-14","question":"¿Existen plantas carnívoras con trampas completamente enterradas bajo el suelo?","answer":"VERDADERO","explanation":"¡Sí! Nepenthes pudica desarrolla sus jarros trampa bajo tierra para cazar pequeños insectos y ácaros subterráneos.","source":"https://doi.org/10.3897/phytokeys.201.82872","old_code":"SC-14","image":"immagini/SC-14.png","image_title":"La trampa bajo tierra","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":14,"group":"B","theme":"PLANTAS","code":"SC-11","question":"¿Pueden todas las esporas de musgos sobrevivir sin límite de tiempo en el vacío espacial?","answer":"FALSO","explanation":"No. Algunas esporas demostraron una resistencia asombrosa en el espacio exterior, pero no todas sobreviven ni pueden hacerlo eternamente.","source":"https://doi.org/10.1016/j.isci.2025.113827","old_code":"SC-11","image":"immagini/SC-11.png","image_title":"Esporas en el espacio","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":15,"group":"C","theme":"EXPERIMENTOS","code":"SC-15","question":"¿Puede un pez de colores conducir un vehículo con ruedas sobre tierra firme?","answer":"VERDADERO","explanation":"¡Sí! Los científicos colocaron una pecera sobre una plataforma robótica con ruedas: una cámara seguía al pez y movía el vehículo hacia donde nadaba.","source":"https://doi.org/10.1016/j.bbr.2021.113711","old_code":"SC-15","image":"immagini/SC-15.png","image_title":"El pez que conduce un vehículo","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":16,"group":"C","theme":"EXPERIMENTOS","code":"SC-15","question":"¿Conducía el pez de colores el vehículo sujetando un volantito diminuto bajo el agua?","answer":"FALSO","explanation":"No. El pez no tocaba ningún mando: un ordenador detectaba su posición y convertía sus desplazamientos en órdenes de giro para las ruedas.","source":"https://doi.org/10.1016/j.bbr.2021.113711","old_code":"SC-15","image":"immagini/SC-15.png","image_title":"El pez que conduce un vehículo","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":17,"group":"C","theme":"EXPERIMENTOS","code":"SC-16","question":"¿Hicieron rodar los abejorros bolas de madera incluso cuando no había comida de premio?","answer":"VERDADERO","explanation":"¡Sí! Los abejorros rodaban las bolitas de forma voluntaria sin recompensa dulce, lo que sugiere un comportamiento de juego espontáneo.","source":"https://doi.org/10.1016/j.anbehav.2022.08.013","old_code":"SC-16","image":"immagini/SC-16.png","image_title":"Abejorros jugando a la pelota","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":18,"group":"C","theme":"EXPERIMENTOS","code":"SC-19","question":"¿Saben los científicos exactamente qué piensa cada gato ante una rendija estrecha?","answer":"NO LO SABEMOS TODAVÍA","explanation":"Los estudios muestran que los gatos calculan el tamaño de las aberturas según su altura y anchura, pero sus pensamientos siguen siendo un enigma felino.","source":"https://doi.org/10.1016/j.isci.2024.110799","old_code":"SC-19","image":"immagini/SC-19.png","image_title":"¿Puede un gato pasar?","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":19,"group":"C","theme":"EXPERIMENTOS","code":"SC-20","question":"¿Es conseguir una salsa cremosa de pasta cacio e pepe una simple cuestión de suerte?","answer":"FALSO","explanation":"¡Es pura física! Investigadores demostraron cómo la temperatura exacta y el almidón del agua de cocción crean una emulsión perfecta y sin grumos.","source":"https://doi.org/10.1063/5.0255841","old_code":"SC-20","image":"immagini/SC-20.png","image_title":"La física en los espaguetis","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":20,"group":"D","theme":"DINOSAURIOS","code":"SC-23","question":"¿Podemos clonar hoy un T. rex vivo a partir de sangre de mosquito atrapado en ámbar?","answer":"FALSO","explanation":"Es solo una genial película de ciencia ficción. El ADN se destruye por completo con el paso de los millones de años; tras 66 millones de años no queda nada.","source":"https://www.nhm.ac.uk/discover/could-scientists-bring-dinosaurs-back.html","old_code":"SC-39","image":"immagini/SC-23.png","image_title":"¿Se puede clonar un dinosaurio?","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":21,"group":"D","theme":"DINOSAURIOS","code":"SC-22","question":"¿Son las aves actuales dinosaurios terópodos vivos que sobrevivieron a la extinción?","answer":"VERDADERO","explanation":"¡Sí! En biología, las aves son dinosaurios aviares vivos, los únicos supervivientes de la gran extinción masiva de hace 66 millones de años.","source":"https://www.nhm.ac.uk/discover/how-dinosaurs-evolved-into-birds.html","old_code":"SC-38","image":"immagini/SC-22.png","image_title":"Dinosaurios con plumas","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":22,"group":"D","theme":"DINOSAURIOS","code":"SC-22","question":"¿Es la gallina doméstica la nieta directa descendiente del T. rex?","answer":"FALSO","explanation":"No. Las aves descienden de pequeños dinosaurios terópodos carnívoros con plumas, no del enorme Tyrannosaurus rex.","source":"https://www.nhm.ac.uk/discover/how-dinosaurs-evolved-into-birds.html","old_code":"SC-38","image":"immagini/SC-22.png","image_title":"Un dinosaurio en el gallinero","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":23,"group":"D","theme":"DINOSAURIOS","code":"SC-21","question":"¿Saben los paleontólogos con total certeza para qué servían las primerísimas plumas?","answer":"NO LO SABEMOS TODAVÍA","explanation":"No. Abrigo térmico, exhibición para cortejo o camuflaje son hipótesis abiertas; las plumas surgieron mucho antes de que ningún dinosaurio volara.","source":"https://www.nhm.ac.uk/discover/dino-directory/yutyrannus.html","old_code":"SC-37","image":"immagini/SC-21.png","image_title":"Dinosaurios con plumas","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":24,"group":"D","theme":"DINOSAURIOS","code":"SC-26","question":"¿Llegaremos a ver algún día un ave viva idéntica en todo al desaparecido dodo?","answer":"NO LO SABEMOS TODAVÍA","explanation":"La edición genética puede crear palomas muy parecidas al dodo, pero recrear exactamente la especie original perdida es un debate científico abierto.","source":"https://colossal.com/colossal-genomorph-ai-dodo-dna-targets/","old_code":"SC-40","image":"immagini/SC-26.png","image_title":"¿Podría volver el dodo?","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":25,"group":"E","theme":"INVENTOS","code":"SC-32","question":"¿Estarán todas las ventanas de las casas hechas obligatoriamente de madera transparente en el futuro?","answer":"NO LO SABEMOS TODAVÍA","explanation":"La madera transparente existe en laboratorios y aísla muy bien, pero su adopción masiva dependerá de costes, producción y durabilidad.","source":"https://doi.org/10.1038/s41467-025-55990-z","old_code":"SC-21","image":"immagini/SC-32.png","image_title":"Madera transparente","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":26,"group":"E","theme":"INVENTOS","code":"SC-36","question":"¿Controla el micelio de un hongo a un biorrobot porque tiene un cerebro consciente?","answer":"FALSO","explanation":"No. Los circuitos recogen las diminutas señales eléctricas naturales del hongo y las traducen en órdenes de movimiento para los motores del robot.","source":"https://doi.org/10.1126/scirobotics.adk8019","old_code":"SC-25","image":"immagini/SC-36.png","image_title":"Un hongo conectado a un robot","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":27,"group":"E","theme":"INVENTOS","code":"SC-39","question":"¿Se retuercen algunas semillas vegetales para enterrarse solas usando únicamente la humedad?","answer":"VERDADERO","explanation":"¡Sí! Las semillas de Erodium tienen forma de sacacorchos y giran cuando cambia la humedad del aire, clavándose en la tierra sin ningún motor.","source":"https://doi.org/10.1038/s41586-022-05656-3","old_code":"SC-28","image":"immagini/SC-39.png","image_title":"Una semilla con sacacorchos","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":28,"group":"E","theme":"INVENTOS","code":"SC-34","question":"¿Será la trompa de elefante siempre el mejor diseño posible para cualquier robot futuro?","answer":"NO LO SABEMOS TODAVÍA","explanation":"Depende de la tarea del robot. Imitar la naturaleza es una gran fuente de inspiración, pero no todas las máquinas necesitan una trompa flexible.","source":"https://doi.org/10.1038/s44182-025-00038-z","old_code":"SC-23","image":"immagini/SC-34.png","image_title":"Una trompa para robots","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":29,"group":"F","theme":"CUERPO","code":"SC-43","question":"¿Existen prótesis experimentales guiadas directamente por señales biológicas del cuerpo?","answer":"VERDADERO","explanation":"¡Sí! Hay prótesis biónicas de rodilla que captan impulsos neuromusculares para reproducir una forma de andar fluida y natural.","source":"https://news.mit.edu/2025/bionic-knee-integrated-into-tissue-can-restore-natural-movement-0710","old_code":"SC-50","image":"immagini/SC-43.png","image_title":"La rodilla biónica","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":30,"group":"F","theme":"CUERPO","code":"SC-44","question":"¿Devuelve un implante de retina experimental una visión 20/20 perfecta a cualquier persona ciega?","answer":"FALSO","explanation":"No. La tecnología actual permite percibir luces, formas y contrastes que ayudan enormemente, pero no devuelve una visión nítida y completa.","source":"https://doi.org/10.1056/NEJMoa2501396","old_code":"SC-51","image":"immagini/SC-44.png","image_title":"Una ayuda para volver a ver","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":31,"group":"F","theme":"CUERPO","code":"SC-46","question":"¿Podrán los implantes cerebrales de voz ayudar pronto a todas las personas que no pueden hablar?","answer":"NO LO SABEMOS TODAVÍA","explanation":"Los dispositivos que traducen actividad cerebral en habla son prometedores, pero aún necesitan años de perfeccionamiento y ensayos clínicos.","source":"https://doi.org/10.1038/s41593-025-01905-6","old_code":"SC-53","image":"immagini/SC-46.png","image_title":"Recuperar la voz","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":32,"group":"G","theme":"ESPACIO","code":"SC-55","question":"¿Nació la imagen del agujero negro M87* combinando datos de radiotelescopios de todo el planeta?","answer":"VERDADERO","explanation":"¡Sí! El Event Horizon Telescope unió observatorios por todo el mundo para crear un telescopio virtual del tamaño de la propia Tierra.","source":"https://www.eso.org/public/images/eso1907a/","old_code":"SC-48","image":"immagini/SC-55.png","image_title":"La primera imagen de un agujero negro","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":33,"group":"G","theme":"ESPACIO","code":"SC-55","question":"¿Se fotografió el primer agujero negro con una cámara digital normal desde el espacio?","answer":"FALSO","explanation":"No. Los agujeros negros no dejan escapar la luz visible: la imagen se reconstruyó mediante superordenadores a partir de ondas de radio invisibles.","source":"https://www.eso.org/public/images/eso1907a/","old_code":"SC-48","image":"immagini/SC-55.png","image_title":"La primera imagen de un agujero negro","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":34,"group":"G","theme":"ESPACIO","code":"SC-52","question":"¿Saben los astrónomos cuántos cometas interestelares cruzarán nuestro Sistema solar la próxima década?","answer":"NO LO SABEMOS TODAVÍA","explanation":"No. Proceden de otras estrellas y sus visitas son impredecibles; descubrirlos depende de la potencia de los telescopios de rastreo.","source":"https://science.nasa.gov/solar-system/comets/3i-atlas/3i-atlas-facts-and-faqs/","old_code":"SC-36","image":"immagini/SC-52.png","image_title":"Un cometa interestelar","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":35,"group":"G","theme":"ESPACIO","code":"SC-52","question":"¿Se quedará el cometa 3I/ATLAS para siempre en una órbita cerrada alrededor del Sol?","answer":"FALSO","explanation":"No. Su trayectoria es abierta e hiperbólica: atraviesa nuestro Sistema solar a gran velocidad y continuará su viaje por el espacio interestelar.","source":"https://science.nasa.gov/solar-system/comets/3i-atlas/3i-atlas-facts-and-faqs/","old_code":"SC-36","image":"immagini/SC-52.png","image_title":"Un cometa interestelar","credit":"Reconstrucción ilustrada a partir de los materiales del libro"},{"id":36,"group":"G","theme":"ESPACIO","code":"SC-54","question":"¿Habrá con total certeza una gran ciudad habitada en Marte antes del año 2040?","answer":"NO LO SABEMOS TODAVÍA","explanation":"Existen planes de misiones tripuladas, pero establecer una ciudad permanente en Marte plantea retos tecnológicos inmensos aún por resolver.","source":"https://www.nasa.gov/moontomarsarchitecture/","old_code":"SC-47","image":"immagini/SC-54.png","image_title":"¿Una ciudad en Marte?","credit":"Reconstrucción ilustrada a partir de los materiales del libro"}]
+  </script>
+
+  <script>
+    'use strict';
+    fetch('carte_es.json')
+      .then(r => r.json())
+      .then(initGame)
+      .catch(() => {
+        const fallback = JSON.parse(document.getElementById('DATA').textContent);
+        initGame(fallback);
+      });
+
+    function initGame(cards) {
+      const letters = ['Todas','Animales','Plantas','Experimentos','Dinosaurios','Inventos','Cuerpo','Espacio'];
+      const groups = ['ALL','A','B','C','D','E','F','G'];
+      let filter = 'ALL', sequence = [], ix = 0, answers = {};
+      const el = id => document.getElementById(id);
+      const storage = 'otto_true_false_v1_es';
+
+      try {
+        let saved = JSON.parse(localStorage.getItem(storage) || '{}');
+        if (saved.answers && typeof saved.answers === 'object') answers = saved.answers;
+      } catch(e) {}
+
+      const save = () => { try { localStorage.setItem(storage, JSON.stringify({answers})); } catch(e) {} };
+
+      function updateSequence() {
+        sequence = cards.filter(c => filter === 'ALL' || c.group === filter);
+        ix = Math.max(0, Math.min(ix, sequence.length - 1));
+        render();
+      }
+
+      function setFilter(f) {
+        filter = f; ix = 0;
+        document.querySelectorAll('.filters button').forEach(b => {
+          let on = b.dataset.filter === f;
+          b.classList.toggle('on', on);
+          b.setAttribute('aria-pressed', String(on));
+        });
+        updateSequence();
+      }
+
+      const nav = () => {
+        el('prev').disabled = ix === 0;
+        el('next').disabled = ix === sequence.length - 1;
+        el('next').textContent = ix === sequence.length - 1 ? '¡Has completado toda la baraja!' : 'Siguiente carta →';
+      };
+
+      function render() {
+        let c = sequence[ix];
+        if (!c) return;
+        const a = answers[c.id];
+        const did = Boolean(a);
+        el('number').textContent = '#' + String(c.id).padStart(2, '0');
+        el('theme').textContent = c.theme;
+        el('question').textContent = c.question;
+        el('code').textContent = c.code;
+
+        const done = cards.filter(k => Boolean(answers[k.id]));
+        let correct = done.filter(k => answers[k.id] === k.answer);
+        el('counter').textContent = 'Carta ' + (ix + 1) + ' de ' + sequence.length + ' · ' + done.length + '/36 exploradas';
+        el('points').textContent = correct.length === 1 ? '1 punto' : correct.length + ' puntos';
+        el('progress').style.width = (done.length / 36 * 100) + '%';
+
+        for (const b of document.querySelectorAll('button.answer')) {
+          b.disabled = did;
+          b.classList.remove('good', 'bad', 'active');
+          let choice = b.dataset.choice;
+          if (did) {
+            if (choice === c.answer) b.classList.add('good');
+            else if (choice === a) b.classList.add('bad');
+          }
+        }
+
+        let box = el('feedback');
+        box.replaceChildren();
+        box.classList.toggle('visible', did);
+        if (did) {
+          let head = document.createElement('strong');
+          let ansText = c.answer === 'VERDADERO' ? 'verdadero' : c.answer === 'FALSO' ? 'falso' : 'no lo sabemos todavía';
+          head.textContent = (a === c.answer ? '¡Correcto! ' : '¡Buen intento! ') + 'Respuesta: ' + ansText + '.';
+          box.appendChild(head);
+          let text = document.createElement('span');
+          text.textContent = c.explanation;
+          box.appendChild(text);
+          if (c.source) {
+            let l = document.createElement('a');
+            l.href = c.source;
+            l.target = '_blank';
+            l.rel = 'noopener noreferrer';
+            l.textContent = 'Ver publicación científica ↗';
+            box.appendChild(document.createElement('br'));
+            box.appendChild(l);
+          } else {
+            let s = document.createElement('span');
+            s.className = 'src';
+            s.textContent = 'Referencia del capítulo · ' + c.code;
+            box.appendChild(s);
+          }
+        }
+        nav();
+      }
+
+      const filtersBox = el('filters');
+      filtersBox.replaceChildren();
+      for (let n = 0; n < letters.length; n++) {
+        let b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = letters[n];
+        b.dataset.filter = groups[n];
+        b.onclick = () => setFilter(groups[n]);
+        filtersBox.append(b);
+      }
+
+      for (const b of document.querySelectorAll('button.answer')) {
+        b.onclick = () => {
+          let c = sequence[ix];
+          if (answers[c.id]) return;
+          answers[c.id] = b.dataset.choice;
+          save();
+          render();
+        };
+      }
+
+      el('prev').onclick = () => { ix = Math.max(0, ix - 1); render(); };
+      el('next').onclick = () => { if (ix >= sequence.length - 1) return; ix++; render(); };
+      el('restart').onclick = () => {
+        if (window.confirm('¿Seguro que quieres borrar tu progreso y volver a empezar?')) {
+          answers = {}; ix = 0; save(); render();
+        }
+      };
+
+      setFilter('ALL');
+    }
+  </script>
+</body>
+</html>

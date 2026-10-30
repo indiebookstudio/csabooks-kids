@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071726">
+  <meta name="description" content="Simulations scientifiques 3D interactives d'Otto pour le livre Einstein, tu as manqué ça !">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:title" content="Animations 3D et simulations scientifiques · Le laboratoire d'Otto">
+  <meta property="og:description" content="Explore la science en 3D avec Otto : baleines à bosse, ADN géant, robotique biohybride fongique et trous noirs.">
+  <meta property="og:image" content="../../media/bonus/film.webp">
+  <title>Simulations 3D Interactives · Otto</title>
+  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --navy: #071726;
+      --navy2: #0e2739;
+      --glass: #102d3d;
+      --glass-hover: #153a4f;
+      --line: rgba(181, 216, 232, 0.18);
+      --gold: #f0c578;
+      --gold-hover: #ffd78a;
+      --ivory: #fff4dd;
+      --mist: #a8c3cc;
+      --sky: #38bdf8;
+      --sky-light: #7dd3fc;
+      --teal: #42d3d0;
+      --sans: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ivory);
+      font-family: var(--sans);
+      background: radial-gradient(ellipse at 77% -9%, #183b58 0%, transparent 40%),
+                  radial-gradient(ellipse at 15% 17%, #15344b 0%, transparent 30%),
+                  var(--navy);
+      min-height: 100vh;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    body::after {
+      content: "";
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      opacity: 0.25;
+      background-image: radial-gradient(circle at 12% 15%, #fff 0 1px, transparent 1.8px),
+                        radial-gradient(circle at 85% 35%, #fff 0 1px, transparent 1.8px),
+                        radial-gradient(circle at 32% 79%, #fff 0 1px, transparent 1.8px);
+      background-size: 410px 470px, 680px 430px, 590px 520px;
+      z-index: -1;
+    }
+    .wrap {
+      max-width: 1360px;
+      width: calc(100% - 48px);
+      margin: 0 auto;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* PERSISTENT TOP NAVIGATION */
+    .site-nav-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7, 23, 38, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(247, 209, 132, 0.22);
+      padding: 10px 24px;
+    }
+    .site-nav-inner {
+      max-width: 1360px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .brand-mark-otto {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      border: 1px solid rgba(247, 209, 132, 0.4);
+      background: linear-gradient(150deg, #2b4360, #122b42);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .brand-mark-otto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .brand-lines {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+    .brand-lines strong {
+      font-family: Georgia, serif;
+      font-size: 17px;
+      letter-spacing: .05em;
+      color: #fff2d4;
+    }
+    .brand-lines strong span {
+      color: var(--gold);
+    }
+    .brand-lines small {
+      font-size: 8.5px;
+      letter-spacing: .22em;
+      font-weight: 800;
+      color: #8bbdc7;
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .nav-item {
+      padding: 6px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 750;
+      color: #d0d9e4;
+      text-decoration: none;
+      transition: background .15s, color .15s;
+    }
+    .nav-item:hover, .nav-item.active {
+      background: rgba(251, 212, 138, .12);
+      color: #ffe4ac;
+    }
+    .locale-pill-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(226, 201, 160, 0.6);
+      border-radius: 999px;
+      padding: 3px 5px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    }
+    .locale-flag-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #4b657e;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all .15s ease;
+      white-space: nowrap;
+      user-select: none;
+    }
+    .locale-flag-item:hover {
+      background: rgba(240, 244, 248, 0.9);
+      color: #1e3a5f;
+    }
+    .locale-flag-item.active {
+      background: #ffefe5;
+      border-color: #fca783;
+      color: #e65612;
+      box-shadow: 0 1px 4px rgba(230, 86, 18, 0.18);
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 80px;
+      border-bottom: 1px solid var(--line);
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 12px 0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+    .logostar {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1c4b70, #0a1b2a);
+      border: 1px solid var(--line);
+      color: var(--gold);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .logo small {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--mist);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .top-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--line);
+      color: var(--ivory);
+      transition: all 0.2s ease;
+    }
+    .nav-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      align-items: center;
+      gap: 40px;
+      padding: 50px 0 45px;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-copy h1 {
+      font-size: clamp(34px, 5.2vw, 64px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 14px 0 18px;
+    }
+    .hero-copy h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--gold), #ffdfa1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .hero p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--mist);
+      max-width: 620px;
+      margin: 0 0 24px;
+    }
+    .hero-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .meta-tag {
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--sky-light);
+      letter-spacing: 0.04em;
+    }
+    .hero-art {
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+    .hero-art img {
+      max-width: 290px;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+    }
+    .section-title-wrap {
+      padding: 45px 0 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .section-title-wrap h2 {
+      font-size: clamp(26px, 3.2vw, 36px);
+      margin: 6px 0 0;
+      font-weight: 800;
+    }
+    .section-sub {
+      color: var(--mist);
+      font-size: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      padding-bottom: 50px;
+    }
+    .anim-card {
+      background: var(--glass);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+    .anim-card:hover {
+      transform: translateY(-4px);
+      background: var(--glass-hover);
+      border-color: rgba(240, 197, 120, 0.45);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+    }
+    .thumb-wrap {
+      position: relative;
+      height: 190px;
+      overflow: hidden;
+      background: #0a1b2a;
+    }
+    .thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+    .anim-card:hover .thumb-wrap img {
+      transform: scale(1.05);
+    }
+    .badge-3d {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(7, 23, 38, 0.88);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      backdrop-filter: blur(8px);
+    }
+    .badge-video {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(7, 23, 38, 0.88);
+      border: 1px solid var(--sky);
+      color: var(--sky);
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      backdrop-filter: blur(8px);
+    }
+    .card-code {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      padding: 4px 9px;
+      border-radius: 8px;
+      background: rgba(7, 23, 38, 0.88);
+      border: 1px solid var(--line);
+      color: var(--mist);
+      font-size: 11px;
+      font-weight: 800;
+      backdrop-filter: blur(8px);
+    }
+    .card-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .card-cat {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .card-body h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #fff;
+    }
+    .card-lead {
+      color: var(--sky-light);
+      font-size: 13.5px;
+      font-weight: 600;
+      margin: 0 0 10px;
+      line-height: 1.45;
+    }
+    .card-desc {
+      color: var(--mist);
+      font-size: 13.5px;
+      line-height: 1.55;
+      margin: 0 0 20px;
+      flex-grow: 1;
+    }
+    .card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: auto;
+    }
+    .btn-play {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      background: linear-gradient(135deg, var(--gold), #d89e43);
+      color: #071726;
+      border: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-play:hover {
+      background: linear-gradient(135deg, var(--gold-hover), #e6ae55);
+      transform: translateY(-2px);
+    }
+    .card-minor-links {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 11.5px;
+      color: var(--mist);
+      padding-top: 4px;
+    }
+    .minor-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      color: var(--mist);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .minor-link:hover {
+      color: var(--ivory);
+    }
+    .info-box {
+      margin: 20px 0 50px;
+      padding: 22px 26px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .info-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--sky);
+      color: var(--sky);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .info-content strong {
+      display: block;
+      color: var(--ivory);
+      margin-bottom: 4px;
+      font-size: 15px;
+    }
+    .info-content p {
+      margin: 0;
+      font-size: 13.5px;
+      color: var(--mist);
+      line-height: 1.55;
+    }
+    .footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0 45px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--mist);
+      font-size: 13px;
+    }
+    .footer strong { color: var(--ivory); }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; gap: 20px; padding: 30px 0; }
+      .hero-art { order: -1; }
+      .hero-art img { max-width: 170px; }
+      .grid { grid-template-columns: 1fr; }
+      .site-nav-inner { gap: 8px; }
+    }
+  
+    .flag-svg { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+    .flag-code { font-size: 11.5px; font-weight: 800; letter-spacing: .02em; }
+    
+  </style>
+</head>
+<body>
+
+  <!-- PERSISTENT TOP NAVIGATION -->
+  <header class="site-nav-bar">
+    <div class="site-nav-inner">
+      <a class="brand-link" href="../../../?lang=en&pagina=inizio" aria-label="Go to Home">
+        <span class="brand-mark-otto"><img src="assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../media/otto.webp';"></span>
+        <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
+      </a>
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a class="nav-item" href="../../../?lang=fr&pagina=inizio">Accueil</a>
+        <a class="nav-item active" href="../../../?lang=fr&pagina=bonus">Les bonus</a>
+        <a class="nav-item" href="../../../?lang=fr&pagina=fonti">Bibliothèque des sources</a>
+      </nav>
+      <!-- FLAG SELECTOR MATCHING MOCKUP -->
+      <div class="locale-pill-bar" role="group" aria-label="Language selection">
+        <a class="locale-flag-item " href="../../en/animazioni/index.html" onclick="try{localStorage.setItem('otto_lang','en');}catch(_){};" title="English">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><path d="M0 0h60v30H0z" fill="#012169" stroke="none"/><path d="m0 0 60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="m0 0 60 30m0-30L0 30" stroke="#c8102e" stroke-width="3"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg>
+          <span class="flag-code">EN</span>
+        </a>
+        <a class="locale-flag-item " href="../../it/animazioni/index.html" onclick="try{localStorage.setItem('otto_lang','it');}catch(_){};" title="Italiano">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="20" height="30" fill="#009246" stroke="none"/><rect width="20" height="30" x="20" fill="#ffffff" stroke="none"/><rect width="20" height="30" x="40" fill="#ce2b37" stroke="none"/></svg>
+          <span class="flag-code">IT</span>
+        </a>
+        <a class="locale-flag-item active" href="#" aria-current="true" title="Français">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="20" height="30" fill="#002395" stroke="none"/><rect width="20" height="30" x="20" fill="#ffffff" stroke="none"/><rect width="20" height="30" x="40" fill="#ed2939" stroke="none"/></svg>
+          <span class="flag-code">FR</span>
+        </a>
+        <a class="locale-flag-item " href="../../es/animazioni/index.html" onclick="try{localStorage.setItem('otto_lang','es');}catch(_){};" title="Español">
+          <svg class="flag-svg" viewBox="0 0 60 30" width="18" height="12" aria-hidden="true" style="border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 1px rgba(0,0,0,0.4);"><rect width="60" height="30" fill="#aa151b" stroke="none"/><rect width="60" height="15" y="7.5" fill="#f1bf00" stroke="none"/></svg>
+          <span class="flag-code">ES</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <header class="topbar wrap">
+    <div class="logo">
+      <div class="logostar">✦</div>
+      <div>
+        <div>OTTO <small>3D LAB</small></div>
+      </div>
+    </div>
+    <nav class="top-nav" aria-label="Quick Navigation">
+      <a class="nav-btn" href="../../../?lang=en&pagina=bonus">← Back to Bonuses</a>
+      
+      <a class="nav-btn" href="../../../?lang=en&pagina=fonti">🔬 Source Library</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">EXCLUSIVE BONUS · EINSTEIN, YOU MISSED THIS!</span>
+        <h1>SCIENCE<br><em>IN 3D MOTION</em></h1>
+        <p>Otto opened the interactive lab. See what happens when wonders step out of the book: rotate in 3D space, activate mechanisms, trace orbital paths, and experiment with real biology and physics.</p>
+        <div class="hero-meta">
+          <span class="meta-tag">7 INTERACTIVE 3D SIMULATIONS</span>
+          <span class="meta-tag">NO APP NEEDED · WORKS IN BROWSER ON PC, TABLET & PHONE</span>
+          <span class="meta-tag">AGES 7–12</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="assets/otto.webp" alt="Otto the explorer scientist octopus">
+      </div>
+    </section>
+
+    <section id="animazioni">
+      <div class="section-title-wrap">
+        <div>
+          <span class="eyebrow">INTERACTIVE SIMULATIONS</span>
+          <h2>Explore the Wonders of Science in 3D</h2>
+        </div>
+        <div class="section-sub">Tap or click to enter each 3D simulation</div>
+      </div>
+
+      <div class="grid">
+
+        <!-- 01 Megattere -->
+        <article class="anim-card">
+          <div class="thumb-wrap">
+            <img src="assets/SC-05.webp" alt="Filet de bulles des baleines à bosse" loading="lazy">
+            <span class="badge-3d">✦ 3D INTERACTIVE</span>
+            <span class="card-code">SC-05</span>
+          </div>
+          <div class="card-body">
+            <div class="card-cat">EXTRAORDINARY ANIMALS</div>
+            <h3>The Whale's Bubble Net</h3>
+            <p class="card-lead">How can rings of air bubbles become a hunting net?</p>
+            <p class="card-desc">Submarine 3D simulation: examine schooling fish, change observation angles from above or the side, and activate the concentric spiral of bubbles blown by the humpback.</p>
+            <div class="card-actions">
+              <a class="btn-play" href="01.Megattere/la_rete_invisibile_delle_megattere.html">✦ Open 3D Simulation</a>
+              <div class="card-minor-links">
+                <a class="minor-link" href="https://doi.org/10.1098/rsos.240328" target="_blank" rel="noopener noreferrer">DOI Source ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02 Felce DNA -->
+        <article class="anim-card">
+          <div class="thumb-wrap">
+            <img src="assets/SC-13.webp" alt="Fork fern with giant genome" loading="lazy">
+            <span class="badge-3d">✦ 3D INTERACTIVE</span>
+            <span class="card-code">SC-13</span>
+          </div>
+          <div class="card-body">
+            <div class="card-cat">PLANTS AND TINY WORLDS</div>
+            <h3>La fougère au super-ADN</h3>
+            <p class="card-lead">Can a tiny fork fern carry more DNA than a human?</p>
+            <p class="card-desc">Travel inside a plant cell of <em>Tmesipteris oblanceolata</em>: explore the 3D double helix carrying over 160 billion base pairs—over 50 times the human genome.</p>
+            <div class="card-actions">
+              <a class="btn-play" href="02.Felce.DNA/la_felce_con_un_dna_gigantesco.html">✦ Open 3D Simulation</a>
+              <div class="card-minor-links">
+                <a class="minor-link" href="https://doi.org/10.1016/j.isci.2024.109889" target="_blank" rel="noopener noreferrer">DOI Source ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 Pesce Veicolo -->
+        <article class="anim-card">
+          <div class="thumb-wrap">
+            <img src="assets/SC-15.webp" alt="Fish steering wheeled vehicle" loading="lazy">
+            <span class="badge-3d">✦ 3D INTERACTIVE</span>
+            <span class="card-code">SC-15</span>
+          </div>
+          <div class="card-body">
+            <div class="card-cat">SURPRISING EXPERIMENTS</div>
+            <h3>A Fish Takes the Wheel</h3>
+            <p class="card-lead">How can a motorized water tank follow where a fish swims?</p>
+            <p class="card-desc">Discover the experiment setup with an overhead camera and computer vision: the system tracks the goldfish and steers robotic wheels across the room.</p>
+            <div class="card-actions">
+              <a class="btn-play" href="03.Pesce.Veicolo/il_pesce_che_muove_un_veicolo.html">✦ Open 3D Simulation</a>
+              <div class="card-minor-links">
+                <a class="minor-link" href="https://doi.org/10.1016/j.bbr.2021.113711" target="_blank" rel="noopener noreferrer">DOI Source ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 04 Uccelli Dinosauri -->
+        <article class="anim-card">
+          <div class="thumb-wrap">
+            <img src="assets/SC-22.webp" alt="Theropod dinosaurs and living birds" loading="lazy">
+            <span class="badge-3d">✦ 3D INTERACTIVE</span>
+            <span class="card-code">SC-22</span>
+          </div>
+          <div class="card-body">
+            <div class="card-cat">DINOSAURS AND DNA</div>
+            <h3>A Dinosaur in the Henhouse</h3>
+            <p class="card-lead">Is T. rex really the direct grandfather of a modern chicken?</p>
+            <p class="card-desc">Interact with the 3D evolutionary tree: see how modern avian birds represent surviving theropods, and trace common ancestors shared with Tyrannosaurus rex.</p>
+            <div class="card-actions">
+              <a class="btn-play" href="04.Uccelli.Dinosauri/gli_uccelli_sono_dinosauri_vivi.html">✦ Open 3D Simulation</a>
+              <div class="card-minor-links">
+                <a class="minor-link" href="https://www.nhm.ac.uk/discover/how-dinosaurs-evolved-into-birds.html" target="_blank" rel="noopener noreferrer">NHM Source ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 05 Fungo Robot -->
+        <article class="anim-card">
+          <div class="thumb-wrap">
+            <img src="assets/SC-36.webp" alt="Fungal mycelium controlling robot" loading="lazy">
+            <span class="badge-3d">✦ 3D INTERACTIVE</span>
+            <span class="card-code">SC-36</span>
+          </div>
+          <div class="card-body">
+            <div class="card-cat">THE FUTURE LAB</div>
+            <h3>A Fungus Wired to a Robot</h3>
+            <p class="card-lead">Can fungal mycelium really help steer a robot rover?</p>
+            <p class="card-desc">Explore bio-hybrid robotics in 3D: see how electrical spikes generated in King Oyster mycelium are detected by electrodes and converted into walking gaits.</p>
+            <div class="card-actions">
+              <a class="btn-play" href="05.Fungo.Robot/il_fungo_collegato_a_un_robot.html">✦ Open 3D Simulation</a>
+              <div class="card-minor-links">
+                <a class="minor-link" href="https://doi.org/10.1126/scirobotics.adk8019" target="_blank" rel="noopener noreferrer">Science Source ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 06 Ginocchio Bionico -->
+        <article class="anim-card">
+          <div class="thumb-wrap">
+            <img src="assets/SC-43.webp" alt="Tissue-integrated bionic knee" loading="lazy">
+            <span class="badge-3d">✦ 3D INTERACTIVE</span>
+            <span class="card-code">SC-43</span>
+          </div>
+          <div class="card-body">
+            <div class="card-cat">BODY AND SUPERTECHNOLOGIES</div>
+            <h3>Le genou bionique</h3>
+            <p class="card-lead">How can an artificial prosthesis respond to natural muscle intent?</p>
+            <p class="card-desc">Inspect the tissue-integrated prosthetic joint developed at MIT in 3D: neuromuscular signals are decoded to restore fluid, natural walking dynamics.</p>
+            <div class="card-actions">
+              <a class="btn-play" href="06.Ginocchio.Bionico/il_ginocchio_bionico.html">✦ Open 3D Simulation</a>
+              <div class="card-minor-links">
+                <a class="minor-link" href="https://news.mit.edu/2025/bionic-knee-integrated-into-tissue-can-restore-natural-movement-0710" target="_blank" rel="noopener noreferrer">MIT Article ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 07 Buco Nero -->
+        <article class="anim-card">
+          <div class="thumb-wrap">
+            <img src="assets/SC-55.webp" alt="M87 black hole event horizon" loading="lazy">
+            <span class="badge-3d">✦ 3D INTERACTIVE</span>
+            <span class="card-code">SC-55</span>
+          </div>
+          <div class="card-body">
+            <div class="card-cat">SPACE AND THE UNIVERSE</div>
+            <h3>The First Image of a Black Hole</h3>
+            <p class="card-lead">How many cameras did it take to capture supermassive black hole M87*?</p>
+            <p class="card-desc">Explore the Earth-sized Event Horizon Telescope array: discover how radio dishes across our planet synchronized data to reconstruct the ring of light around M87*'s event horizon.</p>
+            <div class="card-actions">
+              <a class="btn-play" href="07.Buco.Nero/come_nasce_l_immagine_di_un_buco_nero.html">✦ Open 3D Simulation</a>
+              <div class="card-minor-links">
+                <a class="minor-link" href="https://www.eso.org/public/images/eso1907a/" target="_blank" rel="noopener noreferrer">ESO Release ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        
+
+      </div>
+
+      <div class="info-box">
+        <div class="info-icon">i</div>
+        <div class="info-content">
+          <strong>How to read these scientific simulations</strong>
+          <p>All 7 interactive 3D simulations are educational scientific reconstructions created specifically to explain core principles and mechanics from genuine peer-reviewed research papers. Data is verified with official DOI links.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div>AN EXCLUSIVE BONUS OF <strong>EINSTEIN, YOU MISSED THIS!</strong> · Clara Musicco · 2026</div>
+    <div>The wonders are real. Technology lets us explore them.</div>
+  </footer>
+</body>
+</html>
