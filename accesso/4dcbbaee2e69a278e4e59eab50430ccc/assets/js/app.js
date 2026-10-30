@@ -77,7 +77,7 @@
   }
   function bonusButtons(id){
     const loc = language;
-    const avail = loc === 'it' || loc === 'en';
+    const avail = ['it', 'en', 'fr', 'es'].includes(loc);
     if(!avail) return `<p class="source-pdf-status">${esc(L('actions.comingSoon'))}</p>`;
     const extras = [];
     if(id === 'museo') extras.push(btn(L('actions.openMuseum'), currentBonusURL(id), 'primary'));

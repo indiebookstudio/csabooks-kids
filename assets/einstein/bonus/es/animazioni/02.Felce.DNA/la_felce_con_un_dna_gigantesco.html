@@ -161,50 +161,50 @@ function switchAnimLang(targetLang){
 
 
 <header id="toolbar">
-  <div class="brand glass"><div class="brand-icon"><svg><use href="#i-leaf"/></svg></div><div><div class="eyebrow"><span class="chapter">Descubrimiento 13</span><span class="brand-kicker">Plants & Microscopic Worlds</span></div><h1>The Fern with a Giant Genome</h1></div></div>
-  <nav class="tools" aria-label="Experience controls">
-    <a href="../index.html" class="tool" style="color:#f7d184;font-weight:700" title="Back to 3D Lab"><svg viewBox="0 0 24 24" style="width:18px;height:18px;vertical-align:middle"><path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>3D Lab</span></a>
-    <a href="../../../../?lang=es&pagina=inizio" class="tool" style="color:#7dd3fc;font-weight:700" title="Return to Home"><span>Home ✦</span></a>
+  <div class="brand glass"><div class="brand-icon"><svg><use href="#i-leaf"/></svg></div><div><div class="eyebrow"><span class="chapter">Descubrimiento 13</span><span class="brand-kicker">Piante e piccoli mondi</span></div><h1>El Helecho con un Genoma Gigante</h1></div></div>
+  <nav class="tools" aria-label="Controles de la experiencia">
+    <a href="../index.html" class="tool" style="color:#f7d184;font-weight:700" title="Torna al Laboratorio 3D"><svg viewBox="0 0 24 24" style="width:18px;height:18px;vertical-align:middle"><path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Laboratorio 3D</span></a>
+    <a href="../../../../?lang=es&pagina=inizio" class="tool" style="color:#7dd3fc;font-weight:700" title="Volver al inicio"><span>Inicio ✦</span></a>
 
-    <button id="btn-auto" class="tool" aria-pressed="false"><svg><use href="#i-play"/></svg><span>The Journey</span></button>
-    <button id="btn-view" class="tool" aria-label="Switch to top view" aria-pressed="false"><svg><use href="#i-view"/></svg><span id="view-name">Top view</span></button>
-    <button id="btn-pause" class="tool icon-only" aria-label="Pause" aria-pressed="false"><svg><use id="pause-icon" href="#i-pause"/></svg></button>
-    <button id="btn-audio" class="tool icon-only muted" aria-label="Toggle sound" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
-    <button id="btn-reset" class="tool icon-only" aria-label="Restart from beginning"><svg><use href="#i-reset"/></svg></button>
+    <button id="btn-auto" class="tool" aria-pressed="false"><svg><use href="#i-play"/></svg><span>El Viaje</span></button>
+    <button id="btn-view" class="tool" aria-label="Passa alla vista dall’alto" aria-pressed="false"><svg><use href="#i-view"/></svg><span id="view-name">Dall’alto</span></button>
+    <button id="btn-pause" class="tool icon-only" aria-label="Pausar" aria-pressed="false"><svg><use id="pause-icon" href="#i-pause"/></svg></button>
+    <button id="btn-audio" class="tool icon-only muted" aria-label="Activar sonido" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
+    <button id="btn-reset" class="tool icon-only" aria-label="Ricomincia dall’inizio"><svg><use href="#i-reset"/></svg></button>
   </nav>
 </header>
-<main id="stage" aria-label="3D exploration of the fern and its DNA">
+<main id="stage" aria-label="Exploración 3D del helecho y su ADN">
   <div id="canvas-wrap"></div><div class="vignette" aria-hidden="true"></div>
-  <div class="scene-caption"><span></span><span id="scene-caption">NEW CALEDONIA · FOREST UNDERSTORY</span></div>
-  <div id="scene-label" class="scene-label"><span>A tiny fern</span><em>Tmesipteris oblanceolata</em></div>
-  <button id="hotspot" class="hotspot"><span class="hotspot-dot"></span><span id="hotspot-text">Discover its secret</span><svg><use href="#i-arrow"/></svg></button>
-  <div id="measure-panel" class="measure-panel" hidden><div class="measure-intro">DNA of a single nucleus, stretched flat</div><div class="measure-values"><div class="human-value"><span>Human</span><strong>≈ 2 m</strong></div><div class="fern-value"><span>This fern</span><strong id="fern-length">?</strong></div></div><div id="ratio-note">How long will the fern’s DNA be?</div></div>
-  <div id="stage-note" class="stage-note">3D botanical reconstruction</div>
-  <div id="pause-badge" class="pause-badge glass" hidden>Paused · Tap ▶ to resume</div>
-  <div id="loading" class="loading"><span class="loading-ring"></span><p>Entering the tiny world of the fern…</p></div>
-  <div id="error" class="error glass" hidden><h2>3D Scene Unavailable</h2><p>Open this page in a browser with WebGL enabled.</p><button class="primary" onclick="location.reload()">Retry</button></div>
+  <div class="scene-caption"><span></span><span id="scene-caption">NUOVA CALEDONIA · NEL SOTTOBOSCO</span></div>
+  <div id="scene-label" class="scene-label"><span>Una piccola felce</span><em>Tmesipteris oblanceolata</em></div>
+  <button id="hotspot" class="hotspot"><span class="hotspot-dot"></span><span id="hotspot-text">Scopri il suo segreto</span><svg><use href="#i-arrow"/></svg></button>
+  <div id="measure-panel" class="measure-panel" hidden><div class="measure-intro">Il DNA di un nucleo, disteso</div><div class="measure-values"><div class="human-value"><span>Essere umano</span><strong>≈ 2 m</strong></div><div class="fern-value"><span>Este helecho</span><strong id="fern-length">?</strong></div></div><div id="ratio-note">Quanto sarà lungo quello della felce?</div></div>
+  <div id="stage-note" class="stage-note">Reconstrucción botánica 3D</div>
+  <div id="pause-badge" class="pause-badge glass" hidden>In pausa · tocca ▶ per riprendere</div>
+  <div id="loading" class="loading"><span class="loading-ring"></span><p>Entriamo nel piccolo mondo della felce…</p></div>
+  <div id="error" class="error glass" hidden><h2>La scena 3D non è disponibile</h2><p>Apri questo HTML in un browser con WebGL attivo.</p><button class="primary" onclick="location.reload()">Riprova</button></div>
 </main>
 <footer id="footer"><section class="story glass" aria-labelledby="story-title">
-  <div class="story-top"><div class="step-label"><span id="step-number">01</span><span id="step-name">THE FERN</span></div><ol id="steps" class="steps" aria-label="Journey progress"><li class="current" aria-current="step">Fern</li><li>Cell</li><li>DNA</li><li>Comparison</li><li>Discovery</li></ol></div>
-  <div class="story-body"><div class="story-copy"><h2 id="story-title" tabindex="-1">Small on the outside. Gigantic inside.</h2><p id="story-text">This fern hides an astonishing secret inside its cells. Tap to zoom in.</p></div><div class="actions"><button id="btn-back" class="secondary" hidden>← Back</button><button id="btn-next" class="primary"><span id="next-text">Explore the fern</span><svg><use href="#i-arrow"/></svg></button><button id="btn-info" class="secondary book-button" aria-label="Open science notes and sources from the book"><svg><use href="#i-book"/></svg><span>From the book</span></button></div></div>
-  <div id="quiz" class="quiz" role="group" aria-label="What does having more DNA really mean?" hidden><button data-answer="intelligence">It is more intelligent</button><button data-answer="dna">It contains more DNA</button><button data-answer="size">It is a larger plant</button></div>
+  <div class="story-top"><div class="step-label"><span id="step-number">01</span><span id="step-name">EL HELECHO</span></div><ol id="steps" class="steps" aria-label="Avanzamento del viaggio"><li class="current" aria-current="step">Felce</li><li>Cellula</li><li>DNA</li><li>Confronto</li><li>Scoperta</li></ol></div>
+  <div class="story-body"><div class="story-copy"><h2 id="story-title" tabindex="-1">Pequeño por fuera. Gigantesco por dentro.</h2><p id="story-text">Questa felce nasconde una sorpresa nelle sue cellule. Tocca per avvicinarti.</p></div><div class="actions"><button id="btn-back" class="secondary" hidden>← Indietro</button><button id="btn-next" class="primary"><span id="next-text">Esplora la felce</span><svg><use href="#i-arrow"/></svg></button><button id="btn-info" class="secondary book-button" aria-label="Apri le curiosità e le fonti scientifiche"><svg><use href="#i-book"/></svg><span>Notas del libro</span></button></div></div>
+  <div id="quiz" class="quiz" role="group" aria-label="Che cosa significa avere più DNA?" hidden><button data-answer="intelligence">Es más inteligente</button><button data-answer="dna">Contiene più DNA</button><button data-answer="size">È una pianta più grande</button></div>
   <p id="feedback" class="feedback" role="status" aria-live="polite" hidden></p>
 </section></footer>
 </div>
 <div id="live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
 <dialog id="info-dialog" aria-labelledby="info-title">
-  <div class="dialog-head"><div><span class="eyebrow">DISCOVERY 13 · THE SCIENCE BEHIND THE JOURNEY</span><h2 id="info-title">A tiny world, immense DNA.</h2></div><button id="btn-close" class="tool icon-only" aria-label="Close"><svg><use href="#i-close"/></svg></button></div>
+  <div class="dialog-head"><div><span class="eyebrow">SCOPERTA 13 · LA SCIENZA DIETRO IL VIAGGIO</span><h2 id="info-title">Un piccolo mondo, tanto DNA.</h2></div><button id="btn-close" class="tool icon-only" aria-label="Chiudi"><svg><use href="#i-close"/></svg></button></div>
   <div class="dialog-content">
-    <div class="fact-highlight"><strong>160.45 billion</strong><span>base pairs in a genome of this fern</span></div>
-    <h3>A 2024 Discovery</h3><p>Fernández and colleagues measured the genome of <em>Tmesipteris oblanceolata</em>: 160.45 Gbp, the largest known among eukaryotes. This delicate fern from New Caledonia can grow on tree trunks. The world record is about the physical quantity of DNA.</p>
-    <h3>How did scientists measure it?</h3><p>They isolated cell nuclei, stained the DNA with a fluorescent dye, and compared fluorescence with reference standards. Measuring DNA mass does not require sequencing every individual letter.</p>
-    <h3>From a single cell to over 100 meters</h3><p>Imagine uncoiling and lining up all the DNA from one nucleus: about 2 meters in a human, and over 100 meters (328 ft) in this fern! In this 3D animation, both strands are compared at the exact same scale.</p>
-    <h3>More DNA ≠ More Intelligence</h3><p>A larger genome does not make an organism smarter or more complex. A large portion of plant DNA consists of non-coding, repetitive sequences.</p>
-    <details><summary>For those who want to dive deeper</summary><p>160.45 Gbp represents the 1C haploid content; in humans, 1C is about 3.1 Gbp. Unreplicated 2C diploid nuclei correspond to roughly 109.1 m vs 2.1 m, assuming 0.34 nanometers per base pair. These are illustrative comparisons.</p><p>The cell, nucleus, and double helix are enlarged educational 3D models with conventional coloring. DNA is organized into chromosomes: the single strand represents total combined length. In nature, DNA never unfurls outside the plant.</p></details>
-    <div class="sources"><h3>Discovery Sources</h3><a href="https://doi.org/10.1016/j.isci.2024.109889" target="_blank" rel="noopener noreferrer">Fernández et al. · iScience, 2024 ↗</a><a href="https://www.kew.org/about-us/press-media/worlds-largest-genome" target="_blank" rel="noopener noreferrer">Royal Botanic Gardens, Kew · length comparison ↗</a></div>
-  </div><div class="dialog-foot"><button id="btn-close-bottom" class="primary">Back to the discovery <svg><use href="#i-arrow"/></svg></button></div>
+    <div class="fact-highlight"><strong>160,45 miliardi</strong><span>di coppie di basi in un genoma di questa felce</span></div>
+    <h3>Un descubrimiento de 2024</h3><p>Fernández e colleghi hanno misurato il genoma di <em>Tmesipteris oblanceolata</em>: 160,45 Gbp, il più grande allora noto tra gli eucarioti. Questa piccola felce dell’Oceania può crescere sui tronchi degli alberi. Il record riguarda la quantità di DNA.</p>
+    <h3>¿Cómo lo midieron?</h3><p>Hanno isolato nuclei cellulari, colorato il DNA con un colorante fluorescente e confrontato il segnale con campioni di riferimento. Misurare la quantità di DNA non richiede di leggerne tutta la sequenza.</p>
+    <h3>De una sola célula a más de 100 metros</h3><p>Immagina di distendere e mettere in fila tutto il DNA di un nucleo: circa 2 metri nell’essere umano, oltre 100 metri in questa felce. Nell’animazione il confronto usa la stessa scala per entrambi.</p>
+    <h3>Más ADN ≠ más inteligencia</h3><p>Un genoma più grande non rende automaticamente un organismo più intelligente o più complesso. Una parte del DNA può essere costituita da sequenze ripetute.</p>
+    <details><summary>Per chi vuole approfondire</summary><p>160,45 Gbp è il contenuto 1C; nell’essere umano il riferimento è circa 3,1 Gbp. Il confronto dei nuclei non replicati usa il contenuto 2C: circa 109,1 m e 2,1 m, assumendo 0,34 nanometri per coppia di basi. Sono valori indicativi.</p><p>Cellula, nucleo e doppia elica sono modelli didattici ingranditi, con colori convenzionali. Il DNA è distribuito tra cromosomi: il filo del confronto rappresenta la lunghezza totale. Il DNA non esce realmente dalla felce.</p></details>
+    <div class="sources"><h3>Fuentes del descubrimiento</h3><a href="https://doi.org/10.1016/j.isci.2024.109889" target="_blank" rel="noopener noreferrer">Fernández et al. · iScience, 2024 ↗</a><a href="https://www.kew.org/about-us/press-media/worlds-largest-genome" target="_blank" rel="noopener noreferrer">Royal Botanic Gardens, Kew · il confronto delle lunghezze ↗</a></div>
+  </div><div class="dialog-foot"><button id="btn-close-bottom" class="primary">Torniamo alla scoperta <svg><use href="#i-arrow"/></svg></button></div>
 </dialog>
-<noscript><p class="noscript">Please enable JavaScript to explore this simulation.</p></noscript>
+<noscript><p class="noscript">Attiva JavaScript per esplorare questa animazione.</p></noscript>
 <script>/**
  * @license
  * Copyright 2010-2021 Three.js Authors
@@ -232,11 +232,11 @@ function switchAnimLang(targetLang){
   const screenLabels=[];
   const camLook = V(0,2.4,0), camDestination = V(), lookDestination = V();
   const phaseData = [
-    {name:'THE FERN', title:'Small on the outside. Gigantic inside.', text:'This fern hides an astonishing secret inside its <strong>cells</strong>. Tap to zoom in.', next:'Explore the fern', caption:'NEW CALEDONIA · FOREST UNDERSTORY', label:'A tiny fern', sub:'Tmesipteris oblanceolata', note:'3D botanical reconstruction', hot:'Enter a cell'},
-    {name:'THE CELL', title:'A universe inside a plant.', text:'The fern is made of cells. Look at the <strong>nucleus</strong>: it protects nearly all the DNA.', next:'Open the nucleus', caption:'FROM FERN TO CELL', label:'Look at the glowing nucleus', sub:'A plant cell, magnified', note:'Educational model · conventional colors', hot:'Open the nucleus'},
-    {name:'THE DNA', title:'A strand packed with information.', text:'DNA is folded tightly inside the nucleus. Imagine <strong>uncoiling it all</strong>: how much space would it occupy?', next:'Measure the DNA', caption:'INSIDE THE NUCLEUS · THE DNA', label:'The double helix', sub:'A small section of DNA, highly magnified', note:'Illustrative model · dimensions not to scale', hot:null},
-    {name:'THE COMPARISON', title:'Starting with our own DNA.', text:'All the DNA in a single human nucleus, laid end-to-end, measures <strong>about 2 meters (6.5 ft)</strong>. And the fern’s?', next:'Uncoil the fern’s DNA', caption:'THE SAME RULER · TWO LENGTHS', label:'', sub:'', note:'A symbolic strand represents all DNA in one nucleus', hot:null},
-    {name:'THE DISCOVERY', title:'More DNA: what does it mean?', text:'This tiny fern contains <strong>over 50 times more DNA</strong> than a human.', next:'Replay the journey', caption:'TINY PLANT · GIANT DISCOVERY', label:'Appearances don’t tell the whole story', sub:'A scientific breakthrough from 2024', note:'More DNA does not mean greater intelligence', hot:null}
+    {name:'EL HELECHO', title:'Pequeño por fuera. Gigantesco por dentro.', text:'Questa felce nasconde una sorpresa nelle sue <strong>cellule</strong>. Tocca per avvicinarti.', next:'Esplora la felce', caption:'NUOVA CALEDONIA · NEL SOTTOBOSCO', label:'Una piccola felce', sub:'Tmesipteris oblanceolata', note:'Reconstrucción botánica 3D', hot:'Entra in una cellula'},
+    {name:'LA CÉLULA', title:'Un mondo dentro una pianta.', text:'La felce è fatta di cellule. Guarda il <strong>nucleo</strong>: custodisce la maggior parte del DNA.', next:'Apri il nucleo', caption:'DALEL HELECHO ALLA CÉLULA', label:'Guarda il nucleo dorato', sub:'Una cellula vegetale, ingrandita', note:'Modello didattico · colori convenzionali', hot:'Apri il nucleo'},
+    {name:'EL ADN', title:'Un filo pieno di informazioni.', text:'Il DNA è ripiegato nel nucleo. Immaginiamo di <strong>distenderlo tutto</strong>: quanto spazio occuperebbe?', next:'Misuriamo il DNA', caption:'NEL NUCLEO · EL ADN', label:'La doppia elica', sub:'Un piccolo tratto di DNA, molto ingrandito', note:'Modello illustrativo · dimensioni non in scala', hot:null},
+    {name:'LA COMPARACIÓN', title:'Partiamo dal nostro DNA.', text:'Tutto il DNA di un nucleo umano, messo in fila, misura <strong>circa 2 metri</strong>. E quello della felce?', next:'Srotola quello della felce', caption:'LO STESSO RIGHELLO · DUE LUNGHEZZE', label:'', sub:'', note:'Un filo simbolico rappresenta tutto il DNA di un nucleo', hot:null},
+    {name:'EL DESCUBRIMIENTO', title:'Più DNA: che cosa significa?', text:'Questa piccola felce contiene <strong>oltre 50 volte più DNA</strong> di noi.', next:'Rivedi il viaggio', caption:'PICCOLA PIANTA · GRANDE SCOPERTA', label:'L’apparenza non dice tutto', sub:'Una scoperta scientifica del 2024', note:'Più DNA non significa più intelligenza', hot:null}
   ];
 
   class ForestAudio {
@@ -529,17 +529,17 @@ function switchAnimLang(targetLang){
 
   function announce(message){$('live').textContent=message;}
   function setPaused(value){
-    S.paused=value;$('btn-pause').setAttribute('aria-pressed',String(value));$('btn-pause').setAttribute('aria-label',value ? 'Resume' : 'Pause');$('pause-icon').setAttribute('href',value?'#i-play':'#i-pause');$('pause-badge').hidden=!value;audio.sync();refreshActions();
+    S.paused=value;$('btn-pause').setAttribute('aria-pressed',String(value));$('btn-pause').setAttribute('aria-label',value?'Riprendi':'Metti in pausa');$('pause-icon').setAttribute('href',value?'#i-play':'#i-pause');$('pause-badge').hidden=!value;audio.sync();refreshActions();
   }
-  function setAuto(value){S.auto=value;$('btn-auto').setAttribute('aria-pressed',String(value));$('btn-auto').querySelector('span').textContent=value?'Traveling':'The Journey';}
+  function setAuto(value){S.auto=value;$('btn-auto').setAttribute('aria-pressed',String(value));$('btn-auto').querySelector('span').textContent=value?'En viaje':'El Viaje';}
   function refreshActions(){
     $('btn-next').disabled=S.paused||S.measuring;
     $('hotspot').disabled=S.paused;
     $('btn-back').disabled=S.paused;
     if(S.phase===3){
-      $('next-text').textContent=S.measuring?'DNA uncoiling…':S.measured?'The final surprise':'Uncoil the fern’s DNA';
-      $('story-title').textContent=S.measured?'Over 100 meters in a single cell!':S.measuring?'Look how far it goes…':'Starting with our own DNA.';
-      $('story-text').innerHTML=S.measured?'In that same microscopic space, the fern holds <strong>over 50 times more DNA</strong>. Yet it remains a small plant.':S.measuring?'The fern strand keeps uncoiling long after ours stopped. <strong>The scale is identical.</strong>':phaseData[3].text;
+      $('next-text').textContent=S.measuring?'Il DNA si srotola…':S.measured?'La sorpresa finale':'Srotola quello della felce';
+      $('story-title').textContent=S.measured?'Oltre 100 metri in una cellula!':S.measuring?'Guarda quanto continua…':'Partiamo dal nostro DNA.';
+      $('story-text').innerHTML=S.measured?'Nello stesso spazio, la felce ha <strong>oltre 50 volte più DNA</strong>. Eppure resta una piccola pianta.':S.measuring?'Il filo della felce continua, mentre il nostro si è già fermato. <strong>La scala è la stessa.</strong>':phaseData[3].text;
     }
   }
   function setPhase(index,{focus=true,keepMeasure=false}={}){
@@ -561,7 +561,7 @@ function switchAnimLang(targetLang){
   }
   function startMeasurement(){
     if(S.phase!==3||S.measuring||S.measured||S.paused)return;
-    S.measuring=true;S.measureTime=0;refreshActions();announce('The fern DNA unrolls. Watch the measuring ruler.');
+    S.measuring=true;S.measureTime=0;refreshActions();announce('Il DNA della felce si srotola. Guarda il righello.');
   }
   function updateMeasurement(){
     const length=fernMetres*S.measureProgress*DNA.worldPerMetre;
@@ -569,7 +569,7 @@ function switchAnimLang(targetLang){
     barTip.visible=S.measuring;barTip.position.x=ruler.startX+length;barGlow.visible=S.measuring;barGlow.position.copy(barTip.position);
     const display=S.measured?'> 100 m':S.measuring?Math.round(fernMetres*S.measureProgress)+' m':'?';
     if($('fern-length').textContent!==display)$('fern-length').textContent=display;
-    $('ratio-note').textContent=S.measured?'Over 50 times more DNA · comparison to scale':S.measuring?'The fern strand keeps going…':'How long will the fern’s DNA be?';
+    $('ratio-note').textContent=S.measured?'Oltre 50 volte più DNA · confronto alla stessa scala':S.measuring?'La felce continua…':'Quanto sarà lungo quello della felce?';
   }
   function next(){
     if(S.paused||S.measuring)return;
@@ -588,7 +588,7 @@ function switchAnimLang(targetLang){
       if(!reducedMotion){plant.rotation.z=Math.sin(S.time*.5)*.018;plant.rotation.y=Math.sin(S.time*.17)*.045;forestFireflies.rotation.y=S.time*.014;helix.rotation.y=Math.sin(S.time*.22)*.28;nucleus.userData.chromatin.rotation.y=S.time*.045;groups[1].userData.nucleus.userData.chromatin.rotation.y=S.time*.05;particles.rotation.y=S.time*.016;}
       if(S.measuring){
         S.measureTime+=dt;S.measureProgress=smooth(clamp(S.measureTime/(reducedMotion?1:6.2),0,1));
-        if(S.measureProgress>=1){S.measured=true;S.measuring=false;refreshActions();audio.chime();announce('Over one hundred meters: this fern holds over fifty times more DNA than human cells.');}
+        if(S.measureProgress>=1){S.measured=true;S.measuring=false;refreshActions();audio.chime();announce('Oltre cento metri: questa felce contiene oltre cinquanta volte più DNA di noi.');}
         updateMeasurement();
       }
       if(S.auto){
@@ -602,10 +602,10 @@ function switchAnimLang(targetLang){
   $('btn-next').addEventListener('click',next);$('hotspot').addEventListener('click',next);
   $('btn-back').addEventListener('click',()=>{if(S.paused)return;setAuto(false);S.measuring=false;setPhase(S.phase-1,{keepMeasure:S.phase===4});});
   $('btn-reset').addEventListener('click',reset);
-  $('btn-view').addEventListener('click',()=>{S.top=!S.top;$('btn-view').setAttribute('aria-pressed',String(S.top));$('btn-view').setAttribute('aria-label',S.top?'Switch to front view':'Switch to top view');$('view-name').textContent=S.top?'Front view':'Top view';});
+  $('btn-view').addEventListener('click',()=>{S.top=!S.top;$('btn-view').setAttribute('aria-pressed',String(S.top));$('btn-view').setAttribute('aria-label',S.top?'Passa alla vista frontale':'Passa alla vista dall’alto');$('view-name').textContent=S.top?'Frontale':'Dall’alto';});
   $('btn-pause').addEventListener('click',()=>setPaused(!S.paused));
-  $('btn-auto').addEventListener('click',()=>{if(S.auto){setAuto(false);return;}reset();setAuto(true);announce('Automatic journey started. You can pause at any time.');});
-  $('btn-audio').addEventListener('click',()=>{const enabled=audio.toggle();$('btn-audio').setAttribute('aria-pressed',String(enabled));$('btn-audio').setAttribute('aria-label',enabled ? 'Mute sound' : 'Enable sound');$('btn-audio').classList.toggle('muted',!enabled);});
+  $('btn-auto').addEventListener('click',()=>{if(S.auto){setAuto(false);return;}reset();setAuto(true);announce('Viaggio automatico avviato. Puoi metterlo in pausa in qualsiasi momento.');});
+  $('btn-audio').addEventListener('click',()=>{const enabled=audio.toggle();$('btn-audio').setAttribute('aria-pressed',String(enabled));$('btn-audio').setAttribute('aria-label',enabled?'Disattiva i suoni':'Attiva i suoni');$('btn-audio').classList.toggle('muted',!enabled);});
   $('quiz').querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
     if(S.paused||S.answered)return;
     $('feedback').hidden=false;
@@ -613,11 +613,11 @@ function switchAnimLang(targetLang){
       S.answered=true;button.classList.add('correct');button.setAttribute('aria-pressed','true');
       $('quiz').hidden=true;
       $('quiz').querySelectorAll('button').forEach(b=>{b.disabled=b!==button;});
-      $('feedback').textContent='Correct! It holds a record for DNA quantity. More DNA does not mean greater intelligence or a larger organism.';
-      $('story-title').textContent='A tiny fern. A giant secret.';$('story-text').innerHTML='Outward appearances never reveal how much DNA an organism holds. <strong>Nature still holds immense surprises.</strong>';
+      $('feedback').textContent='Esatto! È un record di quantità di DNA. Più DNA non significa più intelligenza o una pianta più grande.';
+      $('story-title').textContent='Una piccola felce. Un grande segreto.';$('story-text').innerHTML='L’aspetto non ci dice quanto DNA contiene un organismo. <strong>La natura sa ancora sorprenderci.</strong>';
       $('btn-next').hidden=false;audio.chime();
     }else{
-      button.classList.add('wrong');$('feedback').textContent='We are comparing the physical amount of DNA. The fern remains small: try another answer!';
+      button.classList.add('wrong');$('feedback').textContent='Stiamo confrontando la quantità di DNA. La felce resta piccola: prova un’altra risposta.';
     }
   }));
   let modalWasPaused=false,focusBeforeModal=null;

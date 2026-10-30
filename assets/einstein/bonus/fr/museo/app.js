@@ -432,7 +432,7 @@ function renderChallenge(r) {
     const idx = game.index || 0;
     body = `
       <div class="challenge-box">
-        <span class="badge-mini">Challenge 1 · Fact vs. Hypothesis</span>
+        <span class="badge-mini">Défi 1 · Fait contre hypothèse</span>
         <p class="challenge-title">Read the statement below. Is it an <strong>observed fact</strong> recorded on camera, or an <strong>unproven hypothesis</strong>?</p>
         <div class="statement-card">
           <span class="statement-n">Clue ${idx + 1} of 4</span>
@@ -447,7 +447,7 @@ function renderChallenge(r) {
   } else if (r.challenge === 'terreno') {
     body = `
       <div class="challenge-box">
-        <span class="badge-mini">Challenge 2 · Fair Comparison</span>
+        <span class="badge-mini">Défi 2 · Comparaison rigoureuse</span>
         <p class="challenge-title">To prove whether Moon dust impairs plant growth, what is the best scientific control comparison?</p>
         <div class="choice-grid vertical">
           <button class="choice-button" data-act="soil" data-val="a">Grow a cactus on the Moon in freezing dark and compare it to a tomato in a warm Earth greenhouse.</button>
@@ -465,7 +465,7 @@ function renderChallenge(r) {
     const n = game.seq || 0;
     body = `
       <div class="challenge-box">
-        <span class="badge-mini">Challenge 3 · The Mechanical Chain</span>
+        <span class="badge-mini">Défi 3 · La chaîne mécanique</span>
         <p class="challenge-title">Assemble the 4 steps that allow a goldfish to drive a land vehicle:</p>
         <div class="seq-list">
           ${steps.map(s => `
@@ -481,7 +481,7 @@ function renderChallenge(r) {
   } else if (r.challenge === 'dino') {
     body = `
       <div class="challenge-box">
-        <span class="badge-mini">Challenge 4 · Reading the Evolutionary Tree</span>
+        <span class="badge-mini">Défi 4 · Lire l’arbre évolutif</span>
         <p class="challenge-title">Which statement correctly explains the relation between modern birds and dinosaurs?</p>
         <div class="choice-grid vertical">
           <button class="choice-button" data-act="dino" data-val="1">Birds are surviving living theropods that share a common ancestor with T. rex; T. rex is not the chicken's direct parent.</button>
@@ -493,7 +493,7 @@ function renderChallenge(r) {
     const grip = game.grip === undefined ? 15 : game.grip;
     body = `
       <div class="challenge-box">
-        <span class="badge-mini">Challenge 5 · Soft Robotics Simulator</span>
+        <span class="badge-mini">Défi 5 · Simulateur de robotique biohybride</span>
         <p class="challenge-title">Adjust the slider to find the optimal gripper pressure to hold a fragile egg:</p>
         <div class="gripper-scene" data-level="${grip < 35 ? 'soft' : grip > 65 ? 'hard' : 'good'}">
           <input type="range" id="gripSlider" min="0" max="100" value="${grip}" aria-label="Grip pressure">
@@ -515,7 +515,7 @@ function renderChallenge(r) {
     game.seen = game.seen || [];
     body = `
       <div class="challenge-box">
-        <span class="badge-mini">Challenge 6 · Neural Pathways</span>
+        <span class="badge-mini">Défi 6 · Voies neuromusculaires</span>
         <p class="challenge-title">Click all 4 checkpoints in the neural signal transmission chain:</p>
         <div class="sensor-grid">
           ${pts.map(p => `
@@ -537,7 +537,7 @@ function renderChallenge(r) {
     game.tel = game.tel || [];
     body = `
       <div class="challenge-box">
-        <span class="badge-mini">Challenge 7 · Event Horizon Array</span>
+        <span class="badge-mini">Défi 7 · Réseau Event Horizon</span>
         <p class="challenge-title">Synchronize the radio observatories across Earth to reconstruct M87*:</p>
         <div class="eht-lab">
           ${observatories.map(o => `
@@ -707,7 +707,7 @@ function clickHandler(e) {
     if (val === answers[idx]) {
       game.index = idx + 1;
       if (game.index === 4) { win(); return; }
-      feedback = 'Correct reasoning! Now check the next clue.';
+      feedback = 'Raisonnement exact ! Vérifie maintenant l’indice suivant.';
     } else {
       feedback = answers[idx] === 'osservato'
         ? 'This behavior was visibly recorded on video: it is an observed fact.'
@@ -725,7 +725,7 @@ function clickHandler(e) {
     if (Number(val) === expect) {
       game.seq = expect;
       if (expect === 4) { win(); return; }
-      feedback = 'Correct! Next, choose the following step.';
+      feedback = 'Exact ! Choisis ensuite l’étape suivante.';
     } else {
       feedback = 'That step happens later. Start from what the fish does first.';
       feedbackKind = 'wrong';
