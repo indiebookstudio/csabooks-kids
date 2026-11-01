@@ -206,8 +206,8 @@ function switchAnimLang(targetLang){
  <div class="story-top"><div class="step-label"><span id="step-number">01</span><span id="step-name">LE POISSON</span></div><ol id="steps" class="steps" aria-label="Avanzamento dell’esperienza"><li class="current" aria-current="step">Pesce</li><li>Sistema</li><li>Prova</li><li>Test</li><li>Scoperta</li></ol></div>
  <div class="story-body"><div class="story-copy"><h2 id="story-title" tabindex="-1">Una vasca con le ruote. E un pesce dentro.</h2><p id="story-text">Il pesce nuota nell’acqua. Eppure può far spostare il veicolo sul pavimento. Come?</p></div><div class="actions"><button id="btn-back" class="secondary" hidden>← Indietro</button><button id="btn-next" class="primary"><span id="next-text">Scopri come funziona</span><svg><use href="#i-arrow"/></svg></button><button id="btn-info" class="secondary book-button" aria-label="Apri le curiosità e le fonti scientifiche"><svg><use href="#i-book"/></svg><span>Dal libro</span></button></div></div>
  <div id="mechanism" class="mechanism" role="group" aria-label="Tre passaggi dal pesce alle ruote" hidden><button id="btn-part-1">1 · Il pesce nuota</button><button id="btn-part-2" disabled>2 · La telecamera osserva</button><button id="btn-part-3" disabled>3 · Il sistema muove le ruote</button></div>
- <div id="start-choices" class="start-choices" role="group" aria-label="Scegli un nuovo punto di partenza" hidden><button id="btn-start-left">Parti da sinistra</button><button id="btn-start-right">Parti da destra</button></div>
- <div id="drive-controls" class="drive-controls" role="group" aria-label="Guida il pesce con un tocco alla volta" hidden>
+ <div id="start-choices" class="start-choices" role="group" aria-label="Choisis un nouveau point de départ" hidden><button id="btn-start-left">Parti da sinistra</button><button id="btn-start-right">Parti da destra</button></div>
+ <div id="drive-controls" class="drive-controls" role="group" aria-label="Guide le poisson une touche à la fois" hidden>
   <button id="btn-left" data-direction="left" aria-label="Fai nuotare il pesce a sinistra"><b>←</b><span>Sinistra</span></button>
   <button id="btn-up" data-direction="up" aria-label="Orienta il pesce e fai avanzare il veicolo verso il bersaglio"><b>↑</b><span>Bersaglio</span></button>
   <button id="btn-center" class="center-button" aria-label="Porta il pesce al centro e ferma il veicolo"><b>⊙</b><span>Al centro</span></button>
@@ -263,7 +263,7 @@ function switchAnimLang(targetLang){
     {name:'LE POISSON',title:'Una vasca con le ruote. E un pesce dentro.',text:'Il pesce nuota nell’acqua. Eppure può far spostare il veicolo sul pavimento. <strong>Come?</strong>',next:'Scopri come funziona',caption:'LABORATORIO · NAVIGAZIONE ANIMALE',label:'Un pesce in viaggio',sub:'Carassius auratus · il pesce rosso',note:'Ricostruzione di un esperimento scientifico'},
     {name:'IL SISTEMA',title:'Dal nuoto al movimento: tre passaggi.',text:'Tocca i pulsanti in ordine per osservare <strong>pesce, telecamera e ruote</strong>.',next:'Prova tu',caption:'TRE PASSAGGI · UN MOVIMENTO',label:'La telecamera guarda dall’alto',sub:'Il sistema traduce i dati in comandi per i motori',note:'Funzionamento rallentato e scomposto per osservarlo'},
     {name:'PROVA TU',title:'Raggiungi il bersaglio rosa.',text:'Nello studio i pesci sono stati <strong>addestrati</strong>. Tocca «Bersaglio»: il pesce si orienta e il veicolo lo segue.',next:'Cambia la partenza',caption:'UNA PROVA DI NAVIGAZIONE',label:'',sub:'',note:'Simulazione di un pesce già addestrato'},
-    {name:'CAMBIA LA PARTENZA',title:'Stesso bersaglio. Un altro inizio.',text:'Scegli una nuova partenza. Il pesce riuscirà a raggiungere <strong>lo stesso bersaglio</strong>?',next:'Che cosa abbiamo scoperto?',caption:'METTIAMO ALLA PROVA LA NAVIGAZIONE',label:'',sub:'',note:'Nel test cambia la partenza, il bersaglio resta fisso'},
+    {name:'CAMBIA LA PARTENZA',title:'Stesso bersaglio. Un altro inizio.',text:'Choisis un nouveau point de départ. Le poisson riuscirà a raggiungere <strong>lo stesso bersaglio</strong>?',next:'Che cosa abbiamo scoperto?',caption:'METTIAMO ALLA PROVA LA NAVIGAZIONE',label:'',sub:'',note:'Nel test cambia la partenza, il bersaglio resta fisso'},
     {name:'LA SCOPERTA',title:'Come capiamo se sta imparando?',text:'Quale dato aiuta i ricercatori a valutare il miglioramento in <strong>prove ripetute</strong>?',next:'Rivedi l’esperienza',caption:'UNA DOMANDA SULL’APPRENDIMENTO',label:'Un pesce. Un ambiente nuovo.',sub:'Una ricerca pubblicata nel 2022',note:'L’esperimento comprendeva apparecchiatura e addestramento'}
   ];
 
@@ -469,7 +469,7 @@ function switchAnimLang(targetLang){
     if(S.phase===0){resetTrial(V(0,0,3.6));setView(false);}
     if(S.phase===1){resetTrial(V(0,0,3.6));S.demoCompleted=0;S.demoActive=0;S.demoTimer=0;setView(false);}
     if(S.phase===2){resetTrial(V(0,0,3.6));setView(true);}
-    if(S.phase===3){resetTrial(V(0,0,3.6));S.choice=null;setView(true);setTelemetry('Scegli una nuova partenza');}
+    if(S.phase===3){resetTrial(V(0,0,3.6));S.choice=null;setView(true);setTelemetry('Choisis un nouveau point de départ');}
     if(S.phase===4){S.fishTarget.set(0,0,0);setAuto(false);setView(false);}
     trail.visible=S.phase===2||S.phase===3;goalRing.visible=S.phase===2||S.phase===3;
     refresh();if(!reduced)$('canvas-wrap').animate([{opacity:.3},{opacity:1}],{duration:420,easing:'ease-out'});

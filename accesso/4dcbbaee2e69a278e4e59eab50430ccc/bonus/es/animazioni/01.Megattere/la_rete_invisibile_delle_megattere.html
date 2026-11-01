@@ -510,13 +510,13 @@ function switchAnimLang(targetLang){
       </div>
     </div>
 
-    <!-- PANNELLO INFERIORE CONTESTUALE: Guida Narrativa + Azioni Bambino -->
+    <!-- PANNELLO INFERIORE CONTESTUALE: Guía Narrativa + Azioni Bambino -->
     <footer id="story-footer" class="w-full flex flex-col items-center pointer-events-none">
       <div id="story-card" class="glass-panel rounded-3xl p-4 sm:p-5 max-w-2xl w-full pointer-events-auto fade-slide-up transition-all duration-300">
         
 
         <div id="net-controls" class="hidden" role="group" aria-label="Costruisci la rete con tre tocchi">
-          <button id="btn-net-1" class="net-step" type="button">1 · Inizia il giro</button>
+          <button id="btn-net-1" class="net-step" type="button">1 · Iniciar la ronda</button>
           <button id="btn-net-2" class="net-step" type="button" disabled>2 · Añadir burbujas</button>
           <button id="btn-net-3" class="net-step" type="button" disabled>3 · Cerrar círculo</button>
         </div>
@@ -573,7 +573,7 @@ function switchAnimLang(targetLang){
       <div class="px-6 py-4 bg-gradient-to-r from-sky-900/80 to-blue-950/80 border-b border-sky-400/25 flex items-center justify-between">
         <div>
           <span class="text-xs font-bold uppercase tracking-widest text-amber-300">Capitolo 1 • Animali fuori dal comune • Scoperta 05</span>
-          <h2 id="book-title" class="text-xl sm:text-2xl font-bold text-white">La Balena e le Bolle: Come funziona davvero?</h2>
+          <h2 id="book-title" class="text-xl sm:text-2xl font-bold text-white">La Ballena y las Burbujas: ¿Cómo funciona realmente?</h2>
         </div>
         <button id="btn-close-modal" aria-label="Chiudi le curiosità scientifiche" class="glass-pill p-2 rounded-xl text-sky-200 hover:text-white">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
@@ -1653,11 +1653,11 @@ function switchAnimLang(targetLang){
       }
 
       /* -----------------------------------------------------------------------
-         9. ELEMENTI VISIVI PER L'INTERAZIONE DEL BAMBINO (Piano Guida e Traccia)
+         9. ELEMENTI VISIVI PER L'INTERAZIONE DEL BAMBINO (Plano Guía y Trazo)
          ----------------------------------------------------------------------- */
 
 
-      // Guida visiva tratteggiata attorno al banco di pesci nella fase "Prova tu"
+      // Guía visual tratteggiata attorno al banco di pesci nella fase "Prova tu"
       const guideRingGroup = new THREE.Group();
       guideRingGroup.position.set(SCHOOL_CENTER.x, WHALE_BUILD_Y, SCHOOL_CENTER.z);
       scene.add(guideRingGroup);
@@ -1831,7 +1831,7 @@ function switchAnimLang(targetLang){
 
       const netControls = document.getElementById('net-controls');
       const netButtons = [1, 2, 3].map(i => document.getElementById(`btn-net-${i}`));
-      const netLabels = ['1 · Inizia il giro', '2 · Añadir burbujas', '3 · Cerrar círculo'];
+      const netLabels = ['1 · Iniciar la ronda', '2 · Añadir burbujas', '3 · Cerrar círculo'];
       function updateNetStatusUI() {
         const building = SimState.phase === 'BUILD_NET';
         netControls.classList.toggle('hidden', !building);

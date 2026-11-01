@@ -123,24 +123,32 @@ const CRITICAL_FILES = [
   path.join('bonus', 'it', 'colora', 'colora.pdf'),
   path.join('bonus', 'it', 'carte', 'index.html'),
   path.join('bonus', 'it', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf'),
+  path.join('bonus', 'it', 'carte', 'OTTO_CARTE_36_SOLO_FRONTE_A4.pdf'),
+  path.join('bonus', 'it', 'carte', 'OTTO_GUIDA_PREMIUM.pdf'),
   path.join('bonus', 'en', 'museo', 'index.html'),
   path.join('bonus', 'en', 'animazioni', 'index.html'),
   path.join('bonus', 'en', 'animazioni', '01.Megattere', 'la_rete_invisibile_delle_megattere.html'),
   path.join('bonus', 'en', 'colora', 'colora.pdf'),
   path.join('bonus', 'en', 'carte', 'index.html'),
   path.join('bonus', 'en', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf'),
+  path.join('bonus', 'en', 'carte', 'OTTO_CARTE_36_SOLO_FRONTE_A4.pdf'),
+  path.join('bonus', 'en', 'carte', 'OTTO_GUIDA_PREMIUM.pdf'),
   path.join('bonus', 'fr', 'museo', 'index.html'),
   path.join('bonus', 'fr', 'animazioni', 'index.html'),
   path.join('bonus', 'fr', 'animazioni', '01.Megattere', 'la_rete_invisibile_delle_megattere.html'),
   path.join('bonus', 'fr', 'colora', 'colora.pdf'),
   path.join('bonus', 'fr', 'carte', 'index.html'),
   path.join('bonus', 'fr', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf'),
+  path.join('bonus', 'fr', 'carte', 'OTTO_CARTE_36_SOLO_FRONTE_A4.pdf'),
+  path.join('bonus', 'fr', 'carte', 'OTTO_GUIDA_PREMIUM.pdf'),
   path.join('bonus', 'es', 'museo', 'index.html'),
   path.join('bonus', 'es', 'animazioni', 'index.html'),
   path.join('bonus', 'es', 'animazioni', '01.Megattere', 'la_rete_invisibile_delle_megattere.html'),
   path.join('bonus', 'es', 'colora', 'colora.pdf'),
   path.join('bonus', 'es', 'carte', 'index.html'),
-  path.join('bonus', 'es', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf')
+  path.join('bonus', 'es', 'carte', 'OTTO_CARTE_36_FRONTE_RETRO_A4.pdf'),
+  path.join('bonus', 'es', 'carte', 'OTTO_CARTE_36_SOLO_FRONTE_A4.pdf'),
+  path.join('bonus', 'es', 'carte', 'OTTO_GUIDA_PREMIUM.pdf')
 ];
 
 let errors = [];

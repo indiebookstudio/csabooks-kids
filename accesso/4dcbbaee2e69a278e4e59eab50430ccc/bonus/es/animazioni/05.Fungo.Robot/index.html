@@ -292,7 +292,7 @@ function switchAnimLang(targetLang){
   if(S.phase===0){S.seenParts.clear();S.seenTrials.clear();S.part=-1;S.chainDone=false;S.connected=true;setView(false);}
   if(S.phase===1){S.part=-1;S.seenParts.clear();status('Tocca i componenti per osservarli');}
   if(S.phase===2){S.chainDone=false;S.chainAge=0;S.connected=true;status('Pronto · segui il percorso di un impulso');$('signal-mode').textContent='Schema del collegamento';}
-  if(S.phase===3){S.seenTrials.clear();S.connected=true;status('Scegli una condizione e osserva il sistema');$('signal-mode').textContent='Laboratorio virtuale';}
+  if(S.phase===3){S.seenTrials.clear();S.connected=true;status('Elige una condición y observa el sistema');$('signal-mode').textContent='Laboratorio virtuale';}
   if(S.phase===4){S.answered=false;S.connected=true;setAuto(false);$('quiz').querySelectorAll('button').forEach(b=>b.className='');}
   arrange();updateCables();drawTrace();refresh();if(focusTitle)$('story-title').focus({preventScroll:true});if(!reduced)$('canvas-wrap').animate([{opacity:.25},{opacity:1}],{duration:400,easing:'ease-out'});audio.chime();$('live').textContent=d.title+' '+$('story-text').textContent;
  }
