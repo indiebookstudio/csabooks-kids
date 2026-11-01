@@ -293,7 +293,7 @@ function renderAtrium() {
           <h1 class="display">LE MUSÉE DES<br><em>DÉCOUVERTES</em><br>IMPOSSIBLES</h1>
           <p class="lead">Sept salles. Sept mystères scientifiques. Une petite pieuvre curieuse qui t’attend. Entre, observe les preuves, résous les énigmes et collectionne les sceaux d’Otto.</p>
           <div class="hero-buttons">
-            <a class="primary-button" href="#sala-${next.id}">${completed.size ? 'Continuer l'exploration' : 'Commencer l'exploration'} →</a>
+            <a class="primary-button" href="#sala-${next.id}">${completed.size ? "Continuer l'exploration" : "Commencer l'exploration"} →</a>
             <button class="quiet-button" data-act="passport">Ouvrir le Passeport d'Explorateur</button>
           </div>
           <p class="hint">Pour explorateurs de 7 à 12 ans · Gratuit avec le livre · Sans compte</p>
@@ -313,7 +313,7 @@ function renderAtrium() {
       <div class="progress-rail" aria-label="${completed.size} galleries visited out of 7">
         <div style="width:${completed.size / 7 * 100}%"></div>
       </div>
-      <div class="hint">${completed.size} of 7 salles complétées ${completed.size === 7 ? '· Ton diplôme d'explorateur est prêt !' : ''}</div>
+      <div class="hint">${completed.size} of 7 salles complétées ${completed.size === 7 ? "· Ton diplôme d'explorateur est prêt !" : ''}</div>
     </section>
 
     <section class="wrap museum-map" aria-label="The seven museum galleries">

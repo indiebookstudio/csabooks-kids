@@ -274,7 +274,7 @@ function generateMuseoApp(lang) {
     code = code.replace(/EXCLUSIVE BOOK COMPANION/, 'COMPAGNON EXCLUSIF DU LIVRE');
     code = code.replace(/Seven galleries\. Seven scientific mysteries\. One curious little octopus waiting for you\. Step in, observe the evidence, solve the puzzles, and collect Otto's seals\./,
       'Sept salles. Sept mystères scientifiques. Une petite pieuvre curieuse qui t’attend. Entre, observe les preuves, résous les énigmes et collectionne les sceaux d’Otto.');
-    code = code.replace(/'Continue Exploring' : 'Start Exploring'/, "'Continuer l\'exploration' : 'Commencer l\'exploration'");
+    code = code.replace(/'Continue Exploring' : 'Start Exploring'/, '"Continuer l\'exploration" : "Commencer l\'exploration"');
     code = code.replace(/Open Explorer Passport/, 'Ouvrir le Passeport d\'Explorateur');
     code = code.replace(/For explorers aged 7–12 · Free with the book · No account needed/, 'Pour explorateurs de 7 à 12 ans · Gratuit avec le livre · Sans compte');
     code = code.replace(/YOUR JOURNEY/, 'TON PARCOURS');
@@ -282,7 +282,7 @@ function generateMuseoApp(lang) {
     code = code.replace(/You can visit the galleries in any order you like\. Each time you solve a mystery, Otto adds an official seal to your passport\./,
       'Tu peux visiter les salles dans l’ordre de ton choix. Chaque fois que tu résous un mystère, Otto appose un sceau officiel dans ton passeport.');
     code = code.replace(/galleries completed/, 'salles complétées');
-    code = code.replace(/· Your Explorer Diploma is ready!/, '· Ton diplôme d\'explorateur est prêt !');
+    code = code.replace(/'· Your Explorer Diploma is ready!'/, '"· Ton diplôme d\'explorateur est prêt !"');
     code = code.replace(/✦ Seal Earned/g, '✦ Sceau Obtenu');
     code = code.replace(/GALLERY /g, 'SALLE ');
     code = code.replace(/Explore gallery/g, 'Explorer la salle');
@@ -322,7 +322,7 @@ function generateMuseoApp(lang) {
     code = code.replace(/EXCLUSIVE BOOK COMPANION/, 'COMPAÑERO EXCLUSIVO DEL LIBRO');
     code = code.replace(/Seven galleries\. Seven scientific mysteries\. One curious little octopus waiting for you\. Step in, observe the evidence, solve the puzzles, and collect Otto's seals\./,
       'Siete salas. Siete misterios científicos. Un pequeño pulpo curioso esperándote. Entra, observa las pruebas, resuelve los enigmas y colecciona los sellos de Otto.');
-    code = code.replace(/'Continue Exploring' : 'Start Exploring'/, "'Continuar la exploración' : 'Comenzar la exploración'");
+    code = code.replace(/'Continue Exploring' : 'Start Exploring'/, '"Continuar la exploración" : "Comenzar la exploración"');
     code = code.replace(/Open Explorer Passport/, 'Abrir Pasaporte de Explorador');
     code = code.replace(/For explorers aged 7–12 · Free with the book · No account needed/, 'Para exploradores de 7 a 12 años · Gratis con el libro · Sin registro');
     code = code.replace(/YOUR JOURNEY/, 'TU RECORRIDO');
@@ -330,7 +330,7 @@ function generateMuseoApp(lang) {
     code = code.replace(/You can visit the galleries in any order you like\. Each time you solve a mystery, Otto adds an official seal to your passport\./,
       'Puedes visitar las salas en el orden que prefieras. Cada vez que resuelvas un misterio, Otto estampará un sello oficial en tu pasaporte.');
     code = code.replace(/galleries completed/, 'salas completadas');
-    code = code.replace(/· Your Explorer Diploma is ready!/, '· ¡Tu diploma de explorador está listo!');
+    code = code.replace(/'· Your Explorer Diploma is ready!'/, '"· ¡Tu diploma de explorador está listo!"');
     code = code.replace(/✦ Seal Earned/g, '✦ Sello Conseguido');
     code = code.replace(/GALLERY /g, 'SALA ');
     code = code.replace(/Explore gallery/g, 'Explorar sala');

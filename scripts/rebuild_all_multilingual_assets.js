@@ -206,10 +206,10 @@ const SIMS = [
       '<p>Entriamo nel mondo microscopico della felce…</p>': '<p>Entrons dans le monde microscopique de la fougère…</p>',
       'LA FELCE': 'LA FOUGÈRE',
       'LA CELLULA': 'LA CELLULE',
-      'IL DNA': 'L\'ADN',
+      'IL DNA': 'L’ADN',
       'IL CONFRONTO': 'LA COMPARAISON',
       'LA SCOPERTA': 'LA DÉCOUVERTE',
-      'Piccola fuori. Gigantesca dentro.': 'Petite à l\'extérieur. Gigantesque à l\'intérieur.',
+      'Piccola fuori. Gigantesca dentro.': 'Petite à l’extérieur. Gigantesque à l’intérieur.',
       'Questa felce nasconde un segreto sbalorditivo dentro le sue cellule.': 'Cette fougère cache un secret stupéfiant à l\'intérieur de ses cellules.',
       '<span>Esplora la felce</span>': '<span>Explorer la fougère</span>',
       '<span>Dal libro</span>': '<span>Notes du livre</span>',
@@ -462,7 +462,7 @@ const SIMS = [
       'LA DOMANDA': 'LA QUESTION',
       'LA RETE': 'LE RÉSEAU',
       'I DATI': 'LES DONNÉES',
-      'L’IMMAGINE': 'L\'IMAGE',
+      'L’IMMAGINE': 'L’IMAGE',
       'LA SCOPERTA': 'LA DÉCOUVERTE'
     },
     transES: {
