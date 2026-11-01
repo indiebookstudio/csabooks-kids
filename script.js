@@ -2693,6 +2693,8 @@ document.addEventListener('DOMContentLoaded', () => {
     currentBookLanguage = 'fr';
   } else if (currentLanguage === 'it') {
     currentBookLanguage = 'it';
+  } else if (currentLanguage === 'en') {
+    currentBookLanguage = 'en';
   } else if (savedBookLang && (savedBookLang === 'it' || savedBookLang === 'en' || savedBookLang === 'fr')) {
     currentBookLanguage = savedBookLang;
   } else {
@@ -2990,14 +2992,14 @@ window.setLanguage = function(langCode) {
     localStorage.setItem('csabooks_lang', langCode);
   } catch (e) {}
 
-  // Sincronizza automaticamente la lingua dei libri con la lingua selezionata (se it o fr)
+  // Sincronizza automaticamente la lingua dei libri con la lingua selezionata (it, fr, o en/altre)
   if (langCode === 'fr') {
     currentBookLanguage = 'fr';
     try { localStorage.setItem('csabooks_book_lang', 'fr'); } catch (e) {}
   } else if (langCode === 'it') {
     currentBookLanguage = 'it';
     try { localStorage.setItem('csabooks_book_lang', 'it'); } catch (e) {}
-  } else if (currentBookLanguage === 'fr') {
+  } else {
     currentBookLanguage = 'en';
     try { localStorage.setItem('csabooks_book_lang', 'en'); } catch (e) {}
   }
