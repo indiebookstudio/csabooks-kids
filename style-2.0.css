@@ -1463,3 +1463,77 @@ body.csa-modal-open {
   display: none !important;
 }
 
+/* ==========================================================================
+   TOP RIGHT HOME BUTTONS (ALWAYS RETURN TO HOME)
+   ========================================================================== */
+.lang-switcher-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.topbar-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem 0.72rem;
+  background-color: #FFFFFF;
+  border: 1px solid var(--csa-border, #e2e8f0);
+  border-radius: var(--csa-radius-pill, 9999px);
+  font-family: var(--csa-font-heading, 'Fredoka', cursive, sans-serif);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--csa-text, #1e293b);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all var(--csa-transition, 0.2s ease);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.topbar-home-btn:hover {
+  background-color: var(--csa-primary-light, #e0f2fe);
+  color: var(--csa-primary, #0284c7);
+  border-color: #7dd3fc;
+  transform: translateY(-1px);
+}
+
+.csa-nav-home-btn {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background-color: #ffffff;
+  border: 1.5px solid var(--csa-border, #e2e8f0);
+  border-radius: var(--csa-radius-pill, 9999px);
+  font-family: var(--csa-font-heading, 'Fredoka', cursive, sans-serif);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--csa-text, #1e293b);
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all var(--csa-transition, 0.2s ease);
+}
+
+.csa-nav-home-btn:hover {
+  background-color: var(--csa-primary-light, #e0f2fe);
+  color: var(--csa-primary, #0284c7);
+  border-color: #7dd3fc;
+  transform: translateY(-50%) translateY(-1px);
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.15);
+}
+
+@media (max-width: 768px) {
+  .csa-nav-home-btn {
+    right: 58px;
+    padding: 6px 10px;
+    font-size: 0.82rem;
+  }
+}
+
+
