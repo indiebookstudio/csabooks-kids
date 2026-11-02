@@ -200,7 +200,7 @@ function switchAnimLang(targetLang){
  <div id="stage-note" class="stage-note">Ricostruzione 3D di un esperimento scientifico</div>
  <div id="pause-badge" class="pause-badge glass" hidden>In pausa · tocca ▶ per riprendere</div>
  <div id="loading" class="loading"><span class="loading-ring"></span><p>Entriamo nel laboratorio del pesce rosso…</p></div>
- <div id="error" class="error glass" hidden><h2>La scena 3D non è disponibile</h2><p>Apri questo HTML in un browser con WebGL attivo.</p><button class="primary" onclick="location.reload()">Riprova</button></div>
+ <div id="error" class="error glass" hidden><h2>La scena 3D non è disponibile</h2><p>Apri questa pagina in un browser con supporto WebGL attivo.</p><button class="primary" onclick="location.reload()">Riprova</button></div>
 </main>
 <footer id="footer"><section class="story glass" aria-labelledby="story-title">
  <div class="story-top"><div class="step-label"><span id="step-number">01</span><span id="step-name">IL PESCE</span></div><ol id="steps" class="steps" aria-label="Avanzamento"><li class="current" aria-current="step">Pesce</li><li>Sistema</li><li>Prova</li><li>Test</li><li>Scoperta</li></ol></div>
@@ -221,16 +221,16 @@ function switchAnimLang(targetLang){
 </div>
 <div id="live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
 <dialog id="info-dialog" aria-labelledby="info-title">
- <div class="dialog-head"><div><span class="eyebrow">SCOPERTA 15 · LA SCIENZA DIETRO IL VIAGGIO</span><h2 id="info-title">Il pesce nuota. Il sistema muove le ruote.</h2></div><button id="btn-close" class="tool icon-only" aria-label="Chiudi"><svg><use href="#i-close"/></svg></button></div>
- <div class="dialog-content">
-  <div class="fact-highlight"><strong>Pesce → telecamera → ruote</strong><span>Una vasca mobile per studiare la navigazione</span></div>
-  <h3>Che cosa hanno studiato?</h3><p>Givon e colleghi hanno addestrato pesci rossi a portare un veicolo verso un bersaglio visibile. L’esperimento, pubblicato in <em>Behavioural Brain Research</em> nel 2022, esplorava l’uso di capacità di orientamento in un ambiente diverso da quello acquatico.</p>
-  <h3>Come funzionava il veicolo?</h3><p>Una telecamera osservava posizione e orientamento del pesce nella vasca. Un sistema elettronico usava quelle informazioni per comandare i motori. Il pesce restava nell’acqua: non girava un volante e non toccava le ruote.</p>
-  <h3>Il bersaglio e la ricompensa</h3><p>Raggiungere la zona del bersaglio portava una piccola ricompensa di cibo. I ricercatori hanno svolto addestramento e test, cambiando alcune condizioni. I risultati sostengono la possibilità di trasferire capacità di navigazione tra ambienti differenti.</p>
-  <h3>Una prova sola non basta</h3><p>Per valutare l’apprendimento servono prove ripetute e misure delle prestazioni, come raggiungimenti del bersaglio e tempi. Una corsa riuscita, da sola, non dimostra un miglioramento stabile.</p>
-  <details><summary>Come leggere questa ricostruzione</summary><p>Il modello scompone il funzionamento in tre passaggi per renderli osservabili. I tocchi guidano un pesce simulato; non sono l’addestramento svolto nello studio. Direzioni, distanze e tempi dell’animazione sono semplificati e non costituiscono dati sperimentali.</p><p>Il veicolo originale aveva ruote omnidirezionali. Qui, per rendere leggibile la relazione tra nuoto e moto, il pesce si orienta, il telaio sterza e il veicolo avanza nella stessa direzione. Le ruote ruotano attorno ai loro assi; durante la sterzata i due lati girano in versi opposti. La posizione centrale corrisponde a una zona di arresto. Nel test interattivo cambiamo la partenza mantenendo lo stesso bersaglio.</p></details>
-  <div class="sources"><h3>Fonti della scoperta</h3><a href="https://doi.org/10.1016/j.bbr.2021.113711" target="_blank" rel="noopener noreferrer">Givon et al. · Behavioural Brain Research, 2022 ↗</a><a href="https://pubmed.ncbi.nlm.nih.gov/34896210/" target="_blank" rel="noopener noreferrer">Articolo e riassunto scientifico · PubMed ↗</a><a href="https://www.eurekalert.org/news-releases/939194" target="_blank" rel="noopener noreferrer">Ben-Gurion University · comunicato della ricerca ↗</a></div>
- </div><div class="dialog-foot"><button id="btn-close-bottom" class="primary">Torniamo al laboratorio <svg><use href="#i-arrow"/></svg></button></div>
+  <div class="dialog-head"><div><span class="eyebrow">SCOPERTA 15 · LA SCIENZA DIETRO IL VIAGGIO</span><h2 id="info-title">Il pesce nuota. Il sistema muove le ruote.</h2></div><button id="btn-close" class="tool icon-only" aria-label="Chiudi"><svg><use href="#i-close"/></svg></button></div>
+  <div class="dialog-content">
+    <div class="fact-highlight"><strong>Pesce → telecamera → ruote</strong><span>Una vasca mobile per studiare la navigazione</span></div>
+    <h3>Che cosa hanno studiato?</h3><p>Givon e colleghi hanno addestrato pesci rossi a portare un veicolo verso un bersaglio visibile. L’esperimento, pubblicato in <em>Behavioural Brain Research</em> nel 2022, esplorava l’uso di capacità di orientamento in un ambiente diverso da quello acquatico.</p>
+    <h3>Come funzionava il veicolo?</h3><p>Una telecamera osservava posizione e orientamento del pesce nella vasca. Un sistema elettronico usava quelle informazioni per comandare i motori. Il pesce restava nell’acqua: non girava un volante e non toccava le ruote.</p>
+    <h3>Il bersaglio e la ricompensa</h3><p>Raggiungere la zona del bersaglio portava una piccola ricompensa di cibo. I ricercatori hanno svolto addestramento e test, cambiando alcune condizioni. I risultati sostengono la possibilità di trasferire capacità di navigazione tra ambienti differenti.</p>
+    <h3>Una prova sola non basta</h3><p>Per valutare l’apprendimento servono prove ripetute e misure delle prestazioni, come raggiungimenti del bersaglio e tempi. Una corsa riuscita, da sola, non dimostra un miglioramento stabile.</p>
+    <details><summary>Come leggere questa ricostruzione</summary><p>Il modello scompone il funzionamento in tre passaggi per renderli osservabili. I tocchi guidano un pesce simulato; non sono l’addestramento svolto nello studio. Direzioni, distanze e tempi dell’animazione sono semplificati e non costituiscono dati sperimentali.</p><p>Il veicolo originale aveva ruote omnidirezionali. Qui, per rendere leggibile la relazione tra nuoto e moto, il pesce si orienta, il telaio sterza e il veicolo avanza nella stessa direzione.</p></details>
+    <div class="sources"><h3>Fonti della scoperta</h3><a href="https://doi.org/10.1016/j.bbr.2021.113711" target="_blank" rel="noopener noreferrer">Givon et al. · Behavioural Brain Research, 2022 ↗</a><a href="https://www.bgu.ac.il/" target="_blank" rel="noopener noreferrer">Ben-Gurion University of the Negev ↗</a></div>
+  </div><div class="dialog-foot"><button id="btn-close-bottom" class="primary">Torniamo al laboratorio <svg><use href="#i-arrow"/></svg></button></div>
 </dialog>
 <noscript><p class="noscript">Attiva JavaScript per esplorare questa animazione.</p></noscript>
 <script>/**

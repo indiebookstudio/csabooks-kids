@@ -143,7 +143,7 @@ function switchAnimLang(targetLang){
 <!-- PERSISTENT GLOBAL TOP BAR -->
 <header class="site-nav-bar">
   <div class="site-nav-inner">
-    <a class="brand-link" href="../../../../?lang=es&pagina=inizio" aria-label="Torna all’inizio">
+    <a class="brand-link" href="../../../../?lang=es&pagina=inizio" aria-label="Volver al inicio">
       <span class="brand-mark-otto"><img src="../assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../../media/otto.webp';"></span>
       <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
     </a>
@@ -184,9 +184,9 @@ function switchAnimLang(targetLang){
 
   <button id="btn-auto" class="tool" aria-pressed="false" title="Explora el descubrimiento paso a paso"><svg><use href="#i-play"/></svg><span>El viaje</span></button>
   <button id="btn-view" class="tool" aria-pressed="false"><svg><use href="#i-cube"/></svg> Vista cenital</button>
-  <button id="btn-pause" class="tool icon-only" aria-label="Metti in pausa" aria-pressed="false"><svg><use id="pause-icon" href="#i-pause"/></svg></button>
-  <button id="btn-audio" class="tool icon-only muted" aria-label="Attiva i suoni" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
-  <button id="btn-reset" class="tool icon-only" aria-label="Ricomincia dall’inizio"><svg><use href="#i-reset"/></svg></button>
+  <button id="btn-pause" class="tool icon-only" aria-label="Pausar" aria-pressed="false"><svg><use id="pause-icon" href="#i-pause"/></svg></button>
+  <button id="btn-audio" class="tool icon-only muted" aria-label="Activar sonido" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
+  <button id="btn-reset" class="tool icon-only" aria-label="Reiniciar desde el principio"><svg><use href="#i-reset"/></svg></button>
  </nav>
 </header>
 <main id="stage" aria-label="Ricostruzione 3D di un pesce rosso in una vasca su ruote">
@@ -200,7 +200,7 @@ function switchAnimLang(targetLang){
  <div id="stage-note" class="stage-note">Simulación 3D de un experimento científico</div>
  <div id="pause-badge" class="pause-badge glass" hidden>En pausa · toca ▶ para reanudar</div>
  <div id="loading" class="loading"><span class="loading-ring"></span><p>Entriamo nel laboratorio del pesce rosso…</p></div>
- <div id="error" class="error glass" hidden><h2>La scena 3D non è disponibile</h2><p>Apri questo HTML in un browser con WebGL attivo.</p><button class="primary" onclick="location.reload()">Riprova</button></div>
+ <div id="error" class="error glass" hidden><h2>La scena 3D non è disponibile</h2><p>Apri questo HTML in un browser con WebGL attivo.</p><button class="primary" onclick="location.reload()">Reintentar</button></div>
 </main>
 <footer id="footer"><section class="story glass" aria-labelledby="story-title">
  <div class="story-top"><div class="step-label"><span id="step-number">01</span><span id="step-name">EL PEZ</span></div><ol id="steps" class="steps" aria-label="Progreso"><li class="current" aria-current="step">Pez</li><li>Sistema</li><li>Prueba</li><li>Test</li><li>Descubrimiento</li></ol></div>
@@ -211,7 +211,7 @@ function switchAnimLang(targetLang){
   <button id="btn-left" data-direction="left" aria-label="Fai nuotare il pesce a sinistra"><b>←</b><span>Sinistra</span></button>
   <button id="btn-up" data-direction="up" aria-label="Orienta il pesce e fai avanzare il veicolo verso il bersaglio"><b>↑</b><span>Bersaglio</span></button>
   <button id="btn-center" class="center-button" aria-label="Porta il pesce al centro e ferma il veicolo"><b>⊙</b><span>Al centro</span></button>
-  <button id="btn-down" data-direction="down" aria-label="Fai nuotare il pesce indietro"><b>↓</b><span>Indietro</span></button>
+  <button id="btn-down" data-direction="down" aria-label="Hacer nadar al pez hacia atrás"><b>↓</b><span>Atrás</span></button>
   <button id="btn-right" data-direction="right" aria-label="Fai nuotare il pesce a destra"><b>→</b><span>Destra</span></button>
  </div>
  <p id="control-hint" class="control-hint" hidden>Un tocco = un breve tratto. Il veicolo si orienta e poi avanza. «Al centro» lo ferma.</p>

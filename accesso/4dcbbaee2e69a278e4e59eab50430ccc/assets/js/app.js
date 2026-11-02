@@ -215,8 +215,13 @@
   }
   function sourceCard(s){
     const code=esc(s.codice),title=esc(s.titolo);
-    const integCount = integrativeSources.filter(x => x.parent === s.codice).length;
-    const integBadge = integCount > 0 ? `<span class="source-card-integ">+${integCount} ${integCount===1?'correlata':'correlate'}</span>` : '';
+    const integLabelMap = {
+      it: n => `+${n} ${n === 1 ? 'correlata' : 'correlate'}`,
+      en: n => `+${n} related`,
+      fr: n => `+${n} ${n === 1 ? 'associée' : 'associées'}`,
+      es: n => `+${n} ${n === 1 ? 'relacionada' : 'relacionadas'}`
+    };
+    const integBadge = integCount > 0 ? `<span class="source-card-integ">${(integLabelMap[language] || integLabelMap.it)(integCount)}</span>` : '';
     return `<article class="source-card"><a href="${url('fonte',{sc:s.codice})}" data-source="${code}" aria-label="${code}: ${title}"><div class="source-card-art"><img src="media/fonti/${code}.webp" alt="${title}" width="660" height="440" loading="lazy" onerror="this.onerror=null;this.src='media/temi/${esc(s.categoria)}.webp'"></div><div class="source-card-body"><div class="source-card-topbar"><span class="source-code">${code}</span><span class="source-card-category">${esc(L('categories.'+s.categoria))}</span></div><h3>${title}</h3><p>${esc(s.citazione)}</p><div class="source-card-footer">${integBadge}<span class="source-card-more">${esc(L('actions.learnMore'))} ↗</span></div></div></a></article>`;
   }
   function filteredSources(){let q0=state.query.trim().toLocaleLowerCase(language);return sources.filter(s=>(state.filter==='all'||s.categoria===state.filter)&&(!q0||[s.codice,s.titolo,s.citazione,s.categoria,s.url].join(' ').toLocaleLowerCase(language).includes(q0)));}
@@ -264,16 +269,154 @@
     const result=parts.map(x=>linkOK(x)?`<a href="${esc(x)}" rel="noopener noreferrer" target="_blank">${esc(x)}</a>`:esc(x)).join('');
     return `<div class="citation-card"><h3>${esc(L('actions.correction'))}</h3><p>${result}</p></div>`;
   }
+  function localizeIntegrativeItem(it, lang){
+    const types = {
+      'PDF originale': {
+        it: 'PDF originale',
+        en: 'Original PDF',
+        fr: 'PDF original',
+        es: 'PDF original'
+      },
+      'Stampa pagina web': {
+        it: 'Stampa pagina web',
+        en: 'Web page printout',
+        fr: 'Impression de page web',
+        es: 'Impresión de página web'
+      },
+      'Stampa pagina web - estratto introduttivo': {
+        it: 'Stampa pagina web - estratto introduttivo',
+        en: 'Web page printout - introductory excerpt',
+        fr: 'Impression de page web - extrait introductif',
+        es: 'Impresión de página web - extracto introductorio'
+      },
+      'Preprint - versione precedente alla pubblicazione': {
+        it: 'Preprint - versione precedente alla pubblicazione',
+        en: 'Preprint - version prior to publication',
+        fr: 'Prépublication - version antérieure à la publication',
+        es: 'Preprint - versión previa a la publicación'
+      },
+      'PDF ISSCR - Guidelines August 2025, versione 1.2': {
+        it: 'PDF ISSCR - Linee guida agosto 2025, versione 1.2',
+        en: 'PDF ISSCR - Guidelines August 2025, version 1.2',
+        fr: 'PDF ISSCR - Lignes directrices août 2025, version 1.2',
+        es: 'PDF ISSCR - Directrices agosto de 2025, versión 1.2'
+      }
+    };
+    const authors = {
+      'Fonte del calcolo': {
+        it: 'Fonte del calcolo',
+        en: 'Calculation source',
+        fr: 'Source du calcul',
+        es: 'Fuente del cálculo'
+      },
+      'Shu, Herr e colleghi · 2025': {
+        it: 'Shu, Herr e colleghi · 2025',
+        en: 'Shu, Herr and colleagues · 2025',
+        fr: 'Shu, Herr et collègues · 2025',
+        es: 'Shu, Herr y colegas · 2025'
+      },
+      'Colossal · annuncio aziendale 2026': {
+        it: 'Colossal · annuncio aziendale 2026',
+        en: 'Colossal · company announcement 2026',
+        fr: 'Colossal · annonce d’entreprise 2026',
+        es: 'Colossal · anuncio de la empresa 2026'
+      },
+      'NHGRI / ISSCR · 2026 · Anche: ISSCR Guidelines (2025).': {
+        it: 'NHGRI / ISSCR · 2026 · Anche: ISSCR Guidelines (2025).',
+        en: 'NHGRI / ISSCR · 2026 · Also: ISSCR Guidelines (2025).',
+        fr: 'NHGRI / ISSCR · 2026 · Également : Lignes directrices ISSCR (2025).',
+        es: 'NHGRI / ISSCR · 2026 · También: Directrices ISSCR (2025).'
+      },
+      'Shimada et al. · 2025 e 2026': {
+        it: 'Shimada et al. · 2025 e 2026',
+        en: 'Shimada et al. · 2025 and 2026',
+        fr: 'Shimada et al. · 2025 et 2026',
+        es: 'Shimada et al. · 2025 y 2026'
+      }
+    };
+    const notes = {
+      'SC-00-integrativa-01': {
+        it: 'Estratto introduttivo della pagina Smithsonian attuale sui forni a microonde. Il precedente URL del registro non è acquisibile.',
+        en: 'Introductory excerpt from the current Smithsonian microwave page. The previous registry URL is unavailable.',
+        fr: 'Extrait introductif de la page actuelle du Smithsonian sur les micro-ondes. L’ancienne URL du registre n’est plus accessible.',
+        es: 'Extracto introductorio de la página actual del Smithsonian sobre hornos microondas. La URL anterior del registro no es recuperable.'
+      },
+      'SC-00-integrativa-02': {
+        it: 'Estratto editoriale di The Expanded Quotable Einstein, utile per la provenienza della citazione Einstein/Seelig; non è la scansione della lettera originale del 1952.',
+        en: 'Editorial excerpt from The Expanded Quotable Einstein, useful for the source of the Einstein/Seelig quote; not a scan of the original 1952 letter.',
+        fr: 'Extrait éditorial de The Expanded Quotable Einstein, utile pour la source de la citation Einstein/Seelig ; il ne s’agit pas du scan de la lettre originale de 1952.',
+        es: 'Extracto editorial de The Expanded Quotable Einstein, útil para la procedencia de la cita de Einstein/Seelig; no es un escaneo de la carta original de 1952.'
+      },
+      'SC-25-integrativa-03': {
+        it: 'Stessa pubblicazione di SC-25.pdf, raggiunta anche tramite il collegamento alla pagina dell’editore.',
+        en: 'Same publication as SC-25.pdf, also reached via the publisher page link.',
+        fr: 'Même publication que SC-25.pdf, également accessible via le lien vers la page de l’éditeur.',
+        es: 'Misma publicación que SC-25.pdf, accesible también mediante el enlace a la página de la editorial.'
+      },
+      'SC-51-integrativa-02': {
+        it: 'Stesso manoscritto di SC-51.pdf, citato anche tramite il collegamento diretto ESO.',
+        en: 'Same manuscript as SC-51.pdf, also cited via the direct ESO link.',
+        fr: 'Même manuscrit que SC-51.pdf, également cité via le lien direct de l’ESO.',
+        es: 'Mismo manuscrito que SC-51.pdf, citado también mediante el enlace directo del ESO.'
+      }
+    };
+    return {
+      ...it,
+      tipo: types[it.tipo]?.[lang] || it.tipo || it.scheda,
+      autore: authors[it.autore]?.[lang] || it.autore,
+      nota: notes[it.code]?.[lang] || it.nota
+    };
+  }
+
   function renderIntegrativeSection(code){
-    const items = integrativeSources.filter(x => x.parent === code);
-    if(!items.length) return '';
+    const rawItems = integrativeSources.filter(x => x.parent === code);
+    if(!rawItems.length) return '';
+    const items = rawItems.map(it => localizeIntegrativeItem(it, language));
     const dir = config?.sourcePdfDirectory || 'downloads/fonti/';
-    const isEn = language === 'en';
-    const headerTitle = isEn ? `📚 Supplementary sources and related materials (${items.length})` : `📚 Fonti integrative e materiali correlati (${items.length})`;
-    const headerIntro = isEn ? 'In-depth analyses, connected scientific studies, preprints, or archived author notes:' : 'Approfondimenti, studi scientifici collegati, preprints o note degli autori archiviati:';
-    const authLabel = isEn ? 'Authors/Source:' : 'Autori/Origine:';
-    const dlText = pages => isEn ? `Download PDF (${esc(pages)} p.) ↓` : `Scarica PDF (${esc(pages)} pag.) ↓`;
-    const readOnline = isEn ? 'Read online ↗' : 'Consulta online ↗';
+    const headerTitleMap = {
+      it: n => `📚 Fonti integrative e materiali correlati (${n})`,
+      en: n => `📚 Supplementary sources and related materials (${n})`,
+      fr: n => `📚 Sources complémentaires et documents associés (${n})`,
+      es: n => `📚 Fuentes complementarias y materiales relacionados (${n})`
+    };
+    const headerIntroMap = {
+      it: 'Approfondimenti, studi scientifici collegati, preprints o note degli autori archiviati:',
+      en: 'In-depth analyses, connected scientific studies, preprints, or archived author notes:',
+      fr: 'Analyses approfondies, études scientifiques associées, prépublications ou notes d’auteurs archivées :',
+      es: 'Análisis en profundidad, estudios científicos relacionados, preprints o notas de autores archivadas:'
+    };
+    const authLabelMap = {
+      it: 'Autori/Origine:',
+      en: 'Authors/Source:',
+      fr: 'Auteurs/Origine :',
+      es: 'Autores/Origen:'
+    };
+    const dlTextMap = {
+      it: p => `Scarica PDF (${esc(p)} pag.) ↓`,
+      en: p => `Download PDF (${esc(p)} p.) ↓`,
+      fr: p => `Télécharger le PDF (${esc(p)} p.) ↓`,
+      es: p => `Descargar PDF (${esc(p)} pág.) ↓`
+    };
+    const readOnlineMap = {
+      it: 'Consulta online ↗',
+      en: 'Read online ↗',
+      fr: 'Consulter en ligne ↗',
+      es: 'Consultar en línea ↗'
+    };
+    const pageSuffixMap = {
+      it: ' pag.',
+      en: ' p.',
+      fr: ' p.',
+      es: ' pág.'
+    };
+
+    const headerTitle = (headerTitleMap[language] || headerTitleMap.it)(items.length);
+    const headerIntro = headerIntroMap[language] || headerIntroMap.it;
+    const authLabel = authLabelMap[language] || authLabelMap.it;
+    const dlText = dlTextMap[language] || dlTextMap.it;
+    const readOnline = readOnlineMap[language] || readOnlineMap.it;
+    const pageSuffix = pageSuffixMap[language] || pageSuffixMap.it;
+
     return `
       <div class="citation-card integrative-card">
         <div class="integrative-header">
@@ -286,7 +429,7 @@
               <div class="integrative-meta">
                 <span class="integrative-code">${esc(it.code)}</span>
                 <span class="integrative-title">${esc(it.tipo || it.scheda)}</span>
-                <span class="integrative-pages">${it.pagine ? esc(it.pagine) + (isEn ? ' p.' : ' pag.') : ''}</span>
+                <span class="integrative-pages">${it.pagine ? esc(it.pagine) + pageSuffix : ''}</span>
               </div>
               ${it.autore ? `<p class="integrative-author"><strong>${authLabel}</strong> ${esc(it.autore)}</p>` : ''}
               ${it.doi ? `<p class="integrative-doi"><strong>DOI:</strong> <a href="https://doi.org/${esc(it.doi)}" target="_blank" rel="noopener noreferrer">${esc(it.doi)}</a></p>` : ''}
@@ -304,7 +447,13 @@
   function renderSource(s){
     const dir = config?.sourcePdfDirectory || 'downloads/fonti/';
     const official = linkOK(s.url) ? btn(L('actions.openOfficial'), s.url, 'outline', 'target="_blank" rel="noopener noreferrer"') : '';
-    const imageCredit = s.codice === 'SC-55' ? (language === 'en' ? 'Image credit: EHT Collaboration / ESO (2019), CC BY 4.0' : 'Credito immagine: EHT Collaboration / ESO (2019), CC BY 4.0') : esc(L('actions.sourceIllustration'));
+    const imageCreditMap = {
+      it: 'Credito immagine: EHT Collaboration / ESO (2019), CC BY 4.0',
+      en: 'Image credit: EHT Collaboration / ESO (2019), CC BY 4.0',
+      fr: 'Crédit image : EHT Collaboration / ESO (2019), CC BY 4.0',
+      es: 'Crédito de la imagen: EHT Collaboration / ESO (2019), CC BY 4.0'
+    };
+    const imageCredit = s.codice === 'SC-55' ? (imageCreditMap[language] || imageCreditMap.it) : esc(L('actions.sourceIllustration'));
     return `<section class="page-top"><div class="wrap">${breadcrumb([L('nav.home'),L('nav.sources'),s.codice])}</div></section><section class="wrap source-detail"><div class="source-image"><img src="media/fonti/${esc(s.codice)}.webp" alt="${esc(s.titolo)}" width="660" height="440" onerror="this.onerror=null;this.src='media/temi/${esc(s.categoria)}.webp'"><div class="source-caption">${imageCredit}</div></div><div class="source-detail-info"><span class="source-badge">${esc(s.codice)}</span><h1>${esc(s.titolo)}</h1><p class="detail-meta">${esc(L('categories.'+s.categoria))}</p><div class="citation-card"><h3>${esc(L('sourceUi.citation'))}</h3><p>${formatCitation(s.citazione)}</p></div>${linkedCorrections(s)}<div class="source-buttons">${official}<a id="source-pdf-link" class="btn btn-primary" href="${esc(dir + s.codice)}.pdf" download="${esc(s.codice)}.pdf">${esc(L('actions.downloadSource'))} ↓</a></div>${renderIntegrativeSection(s.codice)}<div class="minor-links">${btn(L('actions.backSources'),url('fonti'),'outline')}</div></div></section>`;
   }
   async function checkSourcePDF(code){
@@ -337,32 +486,61 @@
       </div>
     ` : '';
 
-    const isEn = language === 'en';
-    const privacyBody = isEn ? `
-      <p><strong>Information for adults / parents under EU Regulation 2016/679 (GDPR)</strong></p>
-      <h3>1. Purpose of the Service (Secret Key Delivery)</h3>
-      <p>The email address entered is used solely to deliver the requested universal key («OTTO») to access educational resources for the book <em>Einstein, You Missed This!</em>. Legal basis: performance of a requested measure (art. 6, para. 1, letter b, GDPR).</p>
-      <h3>2. Optional Newsletter Subscription</h3>
-      <p>The promotional consent box is optional and non-binding. If checked, it allows updates about new books, free educational activities, and editorial news (art. 6, para. 1, letter a, GDPR). Consent can be withdrawn at any time by writing to <a href="mailto:csabooks.kids@gmail.com" class="privacy-link">csabooks.kids@gmail.com</a>.</p>
-      <h3>3. Protection of Minors</h3>
-      <p>The key request is strictly intended for parents and adults. No minors' personal data is collected, stored, or profiled for commercial purposes.</p>
-      <h3>4. Technical Provider & Data Processing</h3>
-      <p>Emails are delivered via the secure Brevo platform (Sendinblue SAS, with EU-based GDPR-compliant servers). No data is transferred to third parties.</p>
-      <h3>5. Data Subject Rights</h3>
-      <p>You can request access, rectification, or deletion of your data at any time by emailing <strong>csabooks.kids@gmail.com</strong>.</p>
-    ` : `
-      <p><strong>Informativa per gli adulti / genitori ex Regolamento UE 2016/679 (GDPR)</strong></p>
-      <h3>1. Finalità del Servizio (Invio Chiave Segreta)</h3>
-      <p>L'indirizzo email inserito viene utilizzato unicamente per inviare la chiave universale richiesta («OTTO») per accedere alle risorse didattiche del libro <em>Einstein, questa te la sei persa!</em>. La base giuridica è l'esecuzione di una misura richiesta dall'interessato (art. 6, par. 1, lett. b, GDPR).</p>
-      <h3>2. Iscrizione Facoltativa alle Novità Editoriali</h3>
-      <p>La casella di consenso promozionale è completamente facoltativa e non vincolante. Se selezionata, consente l'invio di aggiornamenti su nuovi libri, attività didattiche e iniziative editoriali gratuite (art. 6, par. 1, lett. a, GDPR). Il consenso può essere revocato in ogni momento scrivendo a <a href="mailto:csabooks.kids@gmail.com" class="privacy-link">csabooks.kids@gmail.com</a>.</p>
-      <h3>3. Protezione dei Minori</h3>
-      <p>La richiesta della chiave è rivolta esclusivamente a genitori e adulti. Nessun dato di minori viene raccolto, conservato o profilato per scopi commerciali.</p>
-      <h3>4. Fornitore Tecnico e Trattamento Dati</h3>
-      <p>I messaggi email sono recapitati tramite la piattaforma sicura Brevo (Sendinblue SAS, con server situati nell'Unione Europea conformi al GDPR). Nessun dato viene ceduto a terzi.</p>
-      <h3>5. Diritti dell'Interessato</h3>
-      <p>È sempre possibile richiedere l'accesso, la rettifica, la cancellazione o l'opposizione al trattamento dei propri dati inviando una comunicazione a <strong>csabooks.kids@gmail.com</strong>.</p>
-    `;
+    const privacyBodies = {
+      en: `
+        <p><strong>Information for adults / parents under EU Regulation 2016/679 (GDPR)</strong></p>
+        <h3>1. Purpose of the Service (Secret Key Delivery)</h3>
+        <p>The email address entered is used solely to deliver the requested universal key («OTTO») to access educational resources for the book <em>Einstein, You Missed This!</em>. Legal basis: performance of a requested measure (art. 6, para. 1, letter b, GDPR).</p>
+        <h3>2. Optional Newsletter Subscription</h3>
+        <p>The promotional consent box is optional and non-binding. If checked, it allows updates about new books, free educational activities, and editorial news (art. 6, para. 1, letter a, GDPR). Consent can be withdrawn at any time by writing to <a href="mailto:csabooks.kids@gmail.com" class="privacy-link">csabooks.kids@gmail.com</a>.</p>
+        <h3>3. Protection of Minors</h3>
+        <p>The key request is strictly intended for parents and adults. No minors' personal data is collected, stored, or profiled for commercial purposes.</p>
+        <h3>4. Technical Provider & Data Processing</h3>
+        <p>Emails are delivered via the secure Brevo platform (Sendinblue SAS, with EU-based GDPR-compliant servers). No data is transferred to third parties.</p>
+        <h3>5. Data Subject Rights</h3>
+        <p>You can request access, rectification, or deletion of your data at any time by emailing <strong>csabooks.kids@gmail.com</strong>.</p>
+      `,
+      fr: `
+        <p><strong>Informations destinées aux adultes / parents conformément au Règlement UE 2016/679 (RGPD)</strong></p>
+        <h3>1. Finalité du Service (Envoi de la Clé Secrète)</h3>
+        <p>L'adresse e-mail saisie est utilisée uniquement pour envoyer la clé universelle demandée (« OTTO ») afin d'accéder aux ressources éducatives du livre <em>Einstein, tu as manqué ça !</em>. La base juridique est l'exécution d'une mesure demandée par la personne concernée (art. 6, par. 1, point b, RGPD).</p>
+        <h3>2. Inscription Facultative aux Nouveautés Éditoriales</h3>
+        <p>La case de consentement promotionnel est entièrement facultative et non contraignante. Si elle est cochée, elle permet l'envoi d'actualités sur les nouveaux livres, les activités éducatives gratuites et les initiatives éditoriales (art. 6, par. 1, point a, RGPD). Le consentement peut être retiré à tout moment en écrivant à <a href="mailto:csabooks.kids@gmail.com" class="privacy-link">csabooks.kids@gmail.com</a>.</p>
+        <h3>3. Protection des Mineurs</h3>
+        <p>La demande de clé est strictement réservée aux parents et aux adultes. Aucune donnée personnelle de mineur n'est collectée, conservée ou profilée à des fins commerciales.</p>
+        <h3>4. Prestataire Technique et Traitement des Données</h3>
+        <p>Les messages électroniques sont acheminés via la plateforme sécurisée Brevo (Sendinblue SAS, avec des serveurs situés dans l'Union Européenne conformes au RGPD). Aucune donnée n'est cédée à des tiers.</p>
+        <h3>5. Droits de la Personne Concernée</h3>
+        <p>Il est possible à tout moment de demander l'accès, la rectification, la suppression ou l'opposition au traitement de ses données en envoyant une communication à <strong>csabooks.kids@gmail.com</strong>.</p>
+      `,
+      es: `
+        <p><strong>Información para adultos / padres conforme al Reglamento UE 2016/679 (RGPD)</strong></p>
+        <h3>1. Finalidad del Servicio (Envío de la Llave Secreta)</h3>
+        <p>La dirección de correo electrónico introducida se utiliza únicamente para enviar la llave universal solicitada (« OTTO ») para acceder a los recursos educativos del libro <em>¡Einstein, esta te la perdiste!</em>. La base jurídica es la ejecución de una medida solicitada por el interesado (art. 6, apdo. 1, letra b, RGPD).</p>
+        <h3>2. Suscripción Opcional a las Novedades Editoriales</h3>
+        <p>La casilla de consentimiento promocional es completamente voluntaria y no vinculante. Si se marca, permite el envío de actualizaciones sobre nuevos libros, actividades educativas gratuitas e iniciativas editoriales (art. 6, apdo. 1, letra a, RGPD). El consentimiento puede revocarse en cualquier momento escribiendo a <a href="mailto:csabooks.kids@gmail.com" class="privacy-link">csabooks.kids@gmail.com</a>.</p>
+        <h3>3. Protección de Menores</h3>
+        <p>La solicitud de la llave está dirigida exclusivamente a padres y adultos. No se recopilan, conservan ni elaboran perfiles con datos de menores para fines comerciales.</p>
+        <h3>4. Proveedor Técnico y Tratamiento de Datos</h3>
+        <p>Los correos electrónicos se envían a través de la plataforma segura Brevo (Sendinblue SAS, con servidores situados en la Unión Europea conformes al RGPD). No se ceden datos a terceros.</p>
+        <h3>5. Derechos del Interesado</h3>
+        <p>Es posible solicitar en todo momento el acceso, la rectificación, la supresión o la oposición al tratamiento de sus datos enviando una comunicación a <strong>csabooks.kids@gmail.com</strong>.</p>
+      `,
+      it: `
+        <p><strong>Informativa per gli adulti / genitori ex Regolamento UE 2016/679 (GDPR)</strong></p>
+        <h3>1. Finalità del Servizio (Invio Chiave Segreta)</h3>
+        <p>L'indirizzo email inserito viene utilizzato unicamente per inviare la chiave universale richiesta («OTTO») per accedere alle risorse didattiche del libro <em>Einstein, questa te la sei persa!</em>. La base giuridica è l'esecuzione di una misura richiesta dall'interessato (art. 6, par. 1, lett. b, GDPR).</p>
+        <h3>2. Iscrizione Facoltativa alle Novità Editoriali</h3>
+        <p>La casella di consenso promozionale è completamente facoltativa e non vincolante. Se selezionata, consente l'invio di aggiornamenti su nuovi libri, attività didattiche e iniziative editoriali gratuite (art. 6, par. 1, lett. a, GDPR). Il consenso può essere revocato in ogni momento scrivendo a <a href="mailto:csabooks.kids@gmail.com" class="privacy-link">csabooks.kids@gmail.com</a>.</p>
+        <h3>3. Protezione dei Minori</h3>
+        <p>La richiesta della chiave è rivolta esclusivamente a genitori e adulti. Nessun dato di minori viene raccolto, conservato o profilato per scopi commerciali.</p>
+        <h3>4. Fornitore Tecnico e Trattamento Dati</h3>
+        <p>I messaggi email sono recapitati tramite la piattaforma sicura Brevo (Sendinblue SAS, con server situati nell'Unione Europea conformi al GDPR). Nessun dato viene ceduto a terzi.</p>
+        <h3>5. Diritti dell'Interessato</h3>
+        <p>È sempre possibile richiedere l'accesso, la rettifica, la cancellazione o l'opposizione al trattamento dei propri dati inviando una comunicazione a <strong>csabooks.kids@gmail.com</strong>.</p>
+      `
+    };
+    const privacyBody = privacyBodies[language] || privacyBodies.it;
 
     return `
       <section class="access-section">
@@ -416,7 +594,7 @@
                 </div>
                 <input type="text" name="website" id="honeypot-otto" style="position:absolute;left:-9999px;opacity:0" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <label class="access-consent" for="chk-marketing">
-                  <input type="checkbox" id="chk-marketing" checked>
+                  <input type="checkbox" id="chk-marketing">
                   <span>${esc(L('access.marketingConsent'))} <a href="#privacy-modal" class="privacy-link" id="trigger-privacy-modal">${esc(L('access.privacyLink'))}</a></span>
                 </label>
                 <div id="email-feedback" class="access-feedback" role="alert"></div>

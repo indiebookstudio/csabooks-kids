@@ -127,7 +127,7 @@ function switchAnimLang(targetLang){
 <!-- PERSISTENT GLOBAL TOP BAR -->
 <header class="site-nav-bar">
   <div class="site-nav-inner">
-    <a class="brand-link" href="../../../../?lang=en&pagina=inizio" aria-label="Torna all’inizio">
+    <a class="brand-link" href="../../../../?lang=en&pagina=inizio" aria-label="Go to Home">
       <span class="brand-mark-otto"><img src="../assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../../media/otto.webp';"></span>
       <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
     </a>
@@ -162,15 +162,15 @@ function switchAnimLang(targetLang){
 
 <header id="toolbar">
   <div class="brand glass"><div class="brand-icon"><svg><use href="#i-leaf"/></svg></div><div><div class="eyebrow"><span class="chapter">Discovery 13</span><span class="brand-kicker">Plants & tiny worlds</span></div><h1>The Fern with Giant DNA</h1></div></div>
-  <nav class="tools" aria-label="Controlli dell’esperienza">
+  <nav class="tools" aria-label="Experience controls">
     <a href="../index.html" class="tool" style="color:#f7d184;font-weight:700" title="Back to 3D Lab"><svg viewBox="0 0 24 24" style="width:18px;height:18px;vertical-align:middle"><path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>3D Lab</span></a>
     <a href="../../../../?lang=en&pagina=inizio" class="tool" style="color:#7dd3fc;font-weight:700" title="Back to Otto+"><span>Home ✦</span></a>
 
     <button id="btn-auto" class="tool" aria-pressed="false" title="Explore the discovery step by step"><svg><use href="#i-play"/></svg><span>The Tour</span></button>
     <button id="btn-view" class="tool" aria-pressed="false"><svg><use href="#i-cube"/></svg> Top view</button>
-    <button id="btn-pause" class="tool icon-only" aria-label="Metti in pausa" aria-pressed="false"><svg><use id="pause-icon" href="#i-pause"/></svg></button>
-    <button id="btn-audio" class="tool icon-only muted" aria-label="Attiva i suoni" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
-    <button id="btn-reset" class="tool icon-only" aria-label="Ricomincia dall’inizio"><svg><use href="#i-reset"/></svg></button>
+    <button id="btn-pause" class="tool icon-only" aria-label="Pause" aria-pressed="false"><svg><use id="pause-icon" href="#i-pause"/></svg></button>
+    <button id="btn-audio" class="tool icon-only muted" aria-label="Enable sound" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
+    <button id="btn-reset" class="tool icon-only" aria-label="Restart from beginning"><svg><use href="#i-reset"/></svg></button>
   </nav>
 </header>
 <main id="stage" aria-label="Esplorazione tridimensionale della felce e del suo DNA">
@@ -182,7 +182,7 @@ function switchAnimLang(targetLang){
   <div id="stage-note" class="stage-note">3D botanical reconstruction</div>
   <div id="pause-badge" class="pause-badge glass" hidden>Paused · tap ▶ to resume</div>
   <div id="loading" class="loading"><span class="loading-ring"></span><p>Entriamo nel piccolo mondo della felce…</p></div>
-  <div id="error" class="error glass" hidden><h2>La scena 3D non è disponibile</h2><p>Apri questo HTML in un browser con WebGL attivo.</p><button class="primary" onclick="location.reload()">Riprova</button></div>
+  <div id="error" class="error glass" hidden><h2>3D scene unavailable</h2><p>Please open this page in a browser with WebGL enabled.</p><button class="primary" onclick="location.reload()">Retry</button></div>
 </main>
 <footer id="footer"><section class="story glass" aria-labelledby="story-title">
   <div class="story-top"><div class="step-label"><span id="step-number">01</span><span id="step-name">THE FERN</span></div><ol id="steps" class="steps" aria-label="Progress"><li class="current" aria-current="step">Fern</li><li>Cell</li><li>DNA</li><li>Comparison</li><li>Discovery</li></ol></div>
@@ -200,11 +200,11 @@ function switchAnimLang(targetLang){
     <h3>How did they measure it?</h3><p>They isolated cellular nuclei, stained the DNA with a fluorescent dye, and measured the light intensity against calibrated reference samples using flow cytometry.</p>
     <h3>From a single cell to over 100 meters</h3><p>If you unraveled all the DNA from a single cell: human DNA spans about 2 meters, while this fern’s DNA stretches past 100 meters—longer than a football pitch!</p>
     <h3>More DNA ≠ more complexity</h3><p>A larger genome does not make an organism more complex or intelligent. Much of this giant genome consists of non-coding repetitive DNA sequences accumulated over evolutionary time.</p>
-    <details><summary>Per chi vuole approfondire</summary><p>160,45 Gbp è il contenuto 1C; nell’essere umano il riferimento è circa 3,1 Gbp. Il confronto dei nuclei non replicati usa il contenuto 2C: circa 109,1 m e 2,1 m, assumendo 0,34 nanometri per coppia di basi. Sono valori indicativi.</p><p>Cellula, nucleo e doppia elica sono modelli didattici ingranditi, con colori convenzionali. Il DNA è distribuito tra cromosomi: il filo del confronto rappresenta la lunghezza totale. Il DNA non esce realmente dalla felce.</p></details>
-    <div class="sources"><h3>Discovery sources</h3><a href="https://doi.org/10.1016/j.isci.2024.109889" target="_blank" rel="noopener noreferrer">Fernández et al. · iScience, 2024 ↗</a><a href="https://www.kew.org/about-us/press-media/worlds-largest-genome" target="_blank" rel="noopener noreferrer">Royal Botanic Gardens, Kew · il confronto delle lunghezze ↗</a></div>
+    <details><summary>In-depth details</summary><p>160.45 Gbp represents the 1C genome size; the human reference is approximately 3.1 Gbp. Comparing unreplicated nuclei uses 2C content: roughly 109.1 meters vs. 2.1 meters, assuming 0.34 nanometers per base pair. These are illustrative figures.</p><p>Cell, nucleus, and double helix are enlarged educational models with standard explanatory colors. DNA is packaged across chromosomes: the comparison strand symbolizes the combined length.</p></details>
+    <div class="sources"><h3>Discovery sources</h3><a href="https://doi.org/10.1016/j.isci.2024.109889" target="_blank" rel="noopener noreferrer">Fernández et al. · iScience, 2024 ↗</a><a href="https://www.kew.org/about-us/press-media/worlds-largest-genome" target="_blank" rel="noopener noreferrer">Royal Botanic Gardens, Kew ↗</a></div>
   </div><div class="dialog-foot"><button id="btn-close-bottom" class="primary">Back to discovery <svg><use href="#i-arrow"/></svg></button></div>
 </dialog>
-<noscript><p class="noscript">Attiva JavaScript per esplorare questa animazione.</p></noscript>
+<noscript><p class="noscript">Please enable JavaScript to view this 3D animation.</p></noscript>
 <script>/**
  * @license
  * Copyright 2010-2021 Three.js Authors
@@ -596,7 +596,7 @@ function switchAnimLang(targetLang){
   }
   function startMeasurement(){
     if(S.phase!==3||S.measuring||S.measured||S.paused)return;
-    S.measuring=true;S.measureTime=0;refreshActions();announce('Il DNA della felce si srotola. Guarda il righello.');
+    S.measuring=true;S.measureTime=0;refreshActions();announce('The fern DNA unrolls. Watch the measuring scale.');
   }
   function updateMeasurement(){
     const length=fernMetres*S.measureProgress*DNA.worldPerMetre;
@@ -623,7 +623,7 @@ function switchAnimLang(targetLang){
       if(!reducedMotion){plant.rotation.z=Math.sin(S.time*.5)*.018;plant.rotation.y=Math.sin(S.time*.17)*.045;forestFireflies.rotation.y=S.time*.014;helix.rotation.y=Math.sin(S.time*.22)*.28;nucleus.userData.chromatin.rotation.y=S.time*.045;groups[1].userData.nucleus.userData.chromatin.rotation.y=S.time*.05;particles.rotation.y=S.time*.016;}
       if(S.measuring){
         S.measureTime+=dt;S.measureProgress=smooth(clamp(S.measureTime/(reducedMotion?1:6.2),0,1));
-        if(S.measureProgress>=1){S.measured=true;S.measuring=false;refreshActions();audio.chime();announce('Oltre cento metri: questa felce contiene oltre cinquanta volte più DNA di noi.');}
+        if(S.measureProgress>=1){S.measured=true;S.measuring=false;refreshActions();audio.chime();announce('Over one hundred meters: this fern holds more than 50 times more DNA than humans.');}
         updateMeasurement();
       }
       if(S.auto){
@@ -637,10 +637,10 @@ function switchAnimLang(targetLang){
   $('btn-next').addEventListener('click',next);$('hotspot').addEventListener('click',next);
   $('btn-back').addEventListener('click',()=>{if(S.paused)return;setAuto(false);S.measuring=false;setPhase(S.phase-1,{keepMeasure:S.phase===4});});
   $('btn-reset').addEventListener('click',reset);
-  $('btn-view').addEventListener('click',()=>{S.top=!S.top;$('btn-view').setAttribute('aria-pressed',String(S.top));$('btn-view').setAttribute('aria-label',S.top?'Passa alla vista frontale':'Passa alla vista dall’alto');$('view-name').textContent=S.top?'Front view':'Top view';});
+  $('btn-view').addEventListener('click',()=>{S.top=!S.top;$('btn-view').setAttribute('aria-pressed',String(S.top));$('btn-view').setAttribute('aria-label',S.top?'Switch to front view':'Switch to top view');$('view-name').textContent=S.top?'Front view':'Top view';});
   $('btn-pause').addEventListener('click',()=>setPaused(!S.paused));
-  $('btn-auto').addEventListener('click',()=>{if(S.auto){setAuto(false);return;}reset();setAuto(true);announce('Viaggio automatico avviato. Puoi metterlo in pausa in qualsiasi momento.');});
-  $('btn-audio').addEventListener('click',()=>{const enabled=audio.toggle();$('btn-audio').setAttribute('aria-pressed',String(enabled));$('btn-audio').setAttribute('aria-label',enabled?'Disattiva i suoni':'Attiva i suoni');$('btn-audio').classList.toggle('muted',!enabled);});
+  $('btn-auto').addEventListener('click',()=>{if(S.auto){setAuto(false);return;}reset();setAuto(true);announce('Automated tour started. You can pause it anytime.');});
+  $('btn-audio').addEventListener('click',()=>{const enabled=audio.toggle();$('btn-audio').setAttribute('aria-pressed',String(enabled));$('btn-audio').setAttribute('aria-label',enabled?'Mute audio':'Turn on sound');$('btn-audio').classList.toggle('muted',!enabled);});
   $('quiz').querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
     if(S.paused||S.answered)return;
     $('feedback').hidden=false;

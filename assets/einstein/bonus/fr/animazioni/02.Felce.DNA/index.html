@@ -127,7 +127,7 @@ function switchAnimLang(targetLang){
 <!-- PERSISTENT GLOBAL TOP BAR -->
 <header class="site-nav-bar">
   <div class="site-nav-inner">
-    <a class="brand-link" href="../../../../?lang=fr&pagina=inizio" aria-label="Torna all’inizio">
+    <a class="brand-link" href="../../../../?lang=fr&pagina=inizio" aria-label="Retour à l'accueil">
       <span class="brand-mark-otto"><img src="../assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../../media/otto.webp';"></span>
       <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
     </a>
@@ -162,15 +162,15 @@ function switchAnimLang(targetLang){
 
 <header id="toolbar">
   <div class="brand glass"><div class="brand-icon"><svg><use href="#i-leaf"/></svg></div><div><div class="eyebrow"><span class="chapter">Découverte 13</span><span class="brand-kicker">Plantes et mondes miniatures</span></div><h1>La Fougère au Super-ADN Géant</h1></div></div>
-  <nav class="tools" aria-label="Controlli dell’esperienza">
+  <nav class="tools" aria-label="Contrôles de l’expérience">
     <a href="../index.html" class="tool" style="color:#f7d184;font-weight:700" title="Retour au laboratoire 3D"><svg viewBox="0 0 24 24" style="width:18px;height:18px;vertical-align:middle"><path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Laboratoire 3D</span></a>
     <a href="../../../../?lang=fr&pagina=inizio" class="tool" style="color:#7dd3fc;font-weight:700" title="Retour à Otto+"><span>Home ✦</span></a>
 
     <button id="btn-auto" class="tool" aria-pressed="false" title="Explore la découverte pas à pas"><svg><use href="#i-play"/></svg><span>Le parcours</span></button>
     <button id="btn-view" class="tool" aria-pressed="false"><svg><use href="#i-cube"/></svg> Vue du dessus</button>
-    <button id="btn-pause" class="tool icon-only" aria-label="Metti in pausa" aria-pressed="false"><svg><use id="pause-icon" href="#i-pause"/></svg></button>
-    <button id="btn-audio" class="tool icon-only muted" aria-label="Attiva i suoni" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
-    <button id="btn-reset" class="tool icon-only" aria-label="Ricomincia dall’inizio"><svg><use href="#i-reset"/></svg></button>
+    <button id="btn-pause" class="tool icon-only" aria-label="Mettre en pause" aria-pressed="false"><svg><use id="pause-icon" href="#i-pause"/></svg></button>
+    <button id="btn-audio" class="tool icon-only muted" aria-label="Activer le son" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
+    <button id="btn-reset" class="tool icon-only" aria-label="Recommencer depuis le début"><svg><use href="#i-reset"/></svg></button>
   </nav>
 </header>
 <main id="stage" aria-label="Esplorazione tridimensionale della felce e del suo DNA">
@@ -182,7 +182,7 @@ function switchAnimLang(targetLang){
   <div id="stage-note" class="stage-note">Reconstitution botanique 3D</div>
   <div id="pause-badge" class="pause-badge glass" hidden>En pause · touche ▶ pour reprendre</div>
   <div id="loading" class="loading"><span class="loading-ring"></span><p>Entriamo nel piccolo mondo della felce…</p></div>
-  <div id="error" class="error glass" hidden><h2>La scena 3D non è disponibile</h2><p>Apri questo HTML in un browser con WebGL attivo.</p><button class="primary" onclick="location.reload()">Riprova</button></div>
+  <div id="error" class="error glass" hidden><h2>Scène 3D non disponible</h2><p>Veuillez ouvrir cette page dans un navigateur avec WebGL activé.</p><button class="primary" onclick="location.reload()">Réessayer</button></div>
 </main>
 <footer id="footer"><section class="story glass" aria-labelledby="story-title">
   <div class="story-top"><div class="step-label"><span id="step-number">01</span><span id="step-name">LA FOUGÈRE</span></div><ol id="steps" class="steps" aria-label="Progression"><li class="current" aria-current="step">Fougère</li><li>Cellule</li><li>ADN</li><li>Comparaison</li><li>Découverte</li></ol></div>
@@ -200,11 +200,11 @@ function switchAnimLang(targetLang){
     <h3>Comment ont-ils réussi à le mesurer ?</h3><p>Ils ont isolé des noyaux cellulaires, marqué l’ADN avec un colorant fluorescent et comparé le signal lumineux avec des échantillons de référence par cytométrie en flux.</p>
     <h3>D’une cellule à plus de 100 mètres</h3><p>Si l’on déroulait l’ADN d’une seule cellule bout à bout : l’ADN humain mesure environ 2 mètres, tandis que celui de cette fougère dépasse les 100 mètres de long !</p>
     <h3>Plus d’ADN ≠ plus d’intelligence</h3><p>Un génome plus grand ne rend pas un organisme plus intelligent ou plus complexe. Une grande partie de ce super-génome est composée de séquences répétitives sans fonction codante directe.</p>
-    <details><summary>Per chi vuole approfondire</summary><p>160,45 Gbp è il contenuto 1C; nell’essere umano il riferimento è circa 3,1 Gbp. Il confronto dei nuclei non replicati usa il contenuto 2C: circa 109,1 m e 2,1 m, assumendo 0,34 nanometri per coppia di basi. Sono valori indicativi.</p><p>Cellula, nucleo e doppia elica sono modelli didattici ingranditi, con colori convenzionali. Il DNA è distribuito tra cromosomi: il filo del confronto rappresenta la lunghezza totale. Il DNA non esce realmente dalla felce.</p></details>
-    <div class="sources"><h3>Sources de la découverte</h3><a href="https://doi.org/10.1016/j.isci.2024.109889" target="_blank" rel="noopener noreferrer">Fernández et al. · iScience, 2024 ↗</a><a href="https://www.kew.org/about-us/press-media/worlds-largest-genome" target="_blank" rel="noopener noreferrer">Royal Botanic Gardens, Kew · il confronto delle lunghezze ↗</a></div>
+    <details><summary>Pour en savoir plus</summary><p>160,45 Gbp représente la valeur 1C ; la référence humaine est d’environ 3,1 Gbp. La comparaison des noyaux utilise le contenu 2C : environ 109,1 m contre 2,1 m, sur la base de 0,34 nanomètre par paire de bases. Ce sont des repères indicatifs.</p><p>La cellule, le noyau et la double hélice sont des modèles didactiques agrandis avec des couleurs conventionnelles. L’ADN est réparti sur des chromosomes : le fil symbolise sa longueur totale déroulée.</p></details>
+    <div class="sources"><h3>Sources de la découverte</h3><a href="https://doi.org/10.1016/j.isci.2024.109889" target="_blank" rel="noopener noreferrer">Fernández et al. · iScience, 2024 ↗</a><a href="https://www.kew.org/about-us/press-media/worlds-largest-genome" target="_blank" rel="noopener noreferrer">Royal Botanic Gardens, Kew ↗</a></div>
   </div><div class="dialog-foot"><button id="btn-close-bottom" class="primary">Retour à la découverte <svg><use href="#i-arrow"/></svg></button></div>
 </dialog>
-<noscript><p class="noscript">Attiva JavaScript per esplorare questa animazione.</p></noscript>
+<noscript><p class="noscript">Active JavaScript pour explorer cette animation 3D.</p></noscript>
 <script>/**
  * @license
  * Copyright 2010-2021 Three.js Authors
@@ -596,7 +596,7 @@ function switchAnimLang(targetLang){
   }
   function startMeasurement(){
     if(S.phase!==3||S.measuring||S.measured||S.paused)return;
-    S.measuring=true;S.measureTime=0;refreshActions();announce('Il DNA della felce si srotola. Guarda il righello.');
+    S.measuring=true;S.measureTime=0;refreshActions();announce('L’ADN de la fougère se déroule. Regarde la règle graduée.');
   }
   function updateMeasurement(){
     const length=fernMetres*S.measureProgress*DNA.worldPerMetre;
@@ -623,7 +623,7 @@ function switchAnimLang(targetLang){
       if(!reducedMotion){plant.rotation.z=Math.sin(S.time*.5)*.018;plant.rotation.y=Math.sin(S.time*.17)*.045;forestFireflies.rotation.y=S.time*.014;helix.rotation.y=Math.sin(S.time*.22)*.28;nucleus.userData.chromatin.rotation.y=S.time*.045;groups[1].userData.nucleus.userData.chromatin.rotation.y=S.time*.05;particles.rotation.y=S.time*.016;}
       if(S.measuring){
         S.measureTime+=dt;S.measureProgress=smooth(clamp(S.measureTime/(reducedMotion?1:6.2),0,1));
-        if(S.measureProgress>=1){S.measured=true;S.measuring=false;refreshActions();audio.chime();announce('Oltre cento metri: questa felce contiene oltre cinquanta volte più DNA di noi.');}
+        if(S.measureProgress>=1){S.measured=true;S.measuring=false;refreshActions();audio.chime();announce('Plus de cent mètres : cette fougère contient plus de cinquante fois plus d’ADN que nous.');}
         updateMeasurement();
       }
       if(S.auto){
@@ -637,10 +637,10 @@ function switchAnimLang(targetLang){
   $('btn-next').addEventListener('click',next);$('hotspot').addEventListener('click',next);
   $('btn-back').addEventListener('click',()=>{if(S.paused)return;setAuto(false);S.measuring=false;setPhase(S.phase-1,{keepMeasure:S.phase===4});});
   $('btn-reset').addEventListener('click',reset);
-  $('btn-view').addEventListener('click',()=>{S.top=!S.top;$('btn-view').setAttribute('aria-pressed',String(S.top));$('btn-view').setAttribute('aria-label',S.top?'Passa alla vista frontale':'Passa alla vista dall’alto');$('view-name').textContent=S.top?'Vue de face':'Vue du dessus';});
+  $('btn-view').addEventListener('click',()=>{S.top=!S.top;$('btn-view').setAttribute('aria-pressed',String(S.top));$('btn-view').setAttribute('aria-label',S.top?'Passer en vue frontale':'Passer en vue de dessus');$('view-name').textContent=S.top?'Vue de face':'Vue du dessus';});
   $('btn-pause').addEventListener('click',()=>setPaused(!S.paused));
-  $('btn-auto').addEventListener('click',()=>{if(S.auto){setAuto(false);return;}reset();setAuto(true);announce('Viaggio automatico avviato. Puoi metterlo in pausa in qualsiasi momento.');});
-  $('btn-audio').addEventListener('click',()=>{const enabled=audio.toggle();$('btn-audio').setAttribute('aria-pressed',String(enabled));$('btn-audio').setAttribute('aria-label',enabled?'Disattiva i suoni':'Attiva i suoni');$('btn-audio').classList.toggle('muted',!enabled);});
+  $('btn-auto').addEventListener('click',()=>{if(S.auto){setAuto(false);return;}reset();setAuto(true);announce('Parcours automatique démarré. Tu peux faire une pause à tout moment.');});
+  $('btn-audio').addEventListener('click',()=>{const enabled=audio.toggle();$('btn-audio').setAttribute('aria-pressed',String(enabled));$('btn-audio').setAttribute('aria-label',enabled?'Couper le son':'Activer le son');$('btn-audio').classList.toggle('muted',!enabled);});
   $('quiz').querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
     if(S.paused||S.answered)return;
     $('feedback').hidden=false;

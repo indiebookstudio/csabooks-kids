@@ -351,7 +351,7 @@ function switchAnimLang(targetLang){
 <!-- PERSISTENT GLOBAL TOP BAR -->
 <header class="site-nav-bar">
   <div class="site-nav-inner">
-    <a class="brand-link" href="../../../../?lang=en&pagina=inizio" aria-label="Torna all’inizio">
+    <a class="brand-link" href="../../../../?lang=en&pagina=inizio" aria-label="Go to Home">
       <span class="brand-mark-otto"><img src="../assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../../media/otto.webp';"></span>
       <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
     </a>
@@ -464,7 +464,7 @@ function switchAnimLang(targetLang){
         </div>
 
         <!-- Pausa / Riprendi animazione -->
-        <button id="btn-pause" aria-label="Metti in pausa" aria-pressed="false" class="glass-pill p-2 sm:px-3 sm:py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1" title="Sospendi o riavvia l'animazione">
+        <button id="btn-pause" aria-label="Pause" aria-pressed="false" class="glass-pill p-2 sm:px-3 sm:py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1" title="Sospendi o riavvia l'animazione">
           <svg id="icon-pause" class="w-4 h-4 text-sky-200" fill="currentColor" viewBox="0 0 24 24">
             <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
           </svg>
@@ -474,7 +474,7 @@ function switchAnimLang(targetLang){
         </button>
 
         <!-- Audio On/Off -->
-        <button id="btn-audio" aria-label="Attiva i suoni dell’oceano" aria-pressed="false" class="glass-pill p-2 sm:px-3 sm:py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1" title="Attiva o disattiva i suoni dell'oceano">
+        <button id="btn-audio" aria-label="Enable ocean sound" aria-pressed="false" class="glass-pill p-2 sm:px-3 sm:py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1" title="Attiva o disattiva i suoni dell'oceano">
           <svg id="icon-sound-off" class="w-4 h-4 text-sky-300/70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
             <path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>
@@ -485,7 +485,7 @@ function switchAnimLang(targetLang){
         </button>
 
         <!-- Pulsante Ricomincia -->
-        <button id="btn-reset" aria-label="Ricomincia dall’inizio" class="glass-pill px-3 py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5 text-rose-200 hover:text-white" title="Ricomincia l'esperimento dall'inizio">
+        <button id="btn-reset" aria-label="Restart from beginning" class="glass-pill px-3 py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5 text-rose-200 hover:text-white" title="Restart experiment from beginning">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
           </svg>
@@ -547,11 +547,11 @@ function switchAnimLang(targetLang){
             </button>
 
             <!-- Pulsante "Lo sapevi?" dal libro -->
-            <button id="btn-book-info" class="glass-pill px-3.5 py-2.5 rounded-2xl font-display font-semibold text-xs sm:text-sm text-amber-200 flex items-center gap-1.5 cursor-pointer" title="Leggi le scoperte scientifiche del libro">
+            <button id="btn-book-info" class="glass-pill px-3.5 py-2.5 rounded-2xl font-display font-semibold text-xs sm:text-sm text-amber-200 flex items-center gap-1.5 cursor-pointer" title="Read scientific discoveries from the book">
               <svg class="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
               </svg>
-              <span>Dal Libro</span>
+              <span>From the book</span>
             </button>
           </div>
         </div>
@@ -570,7 +570,7 @@ function switchAnimLang(targetLang){
           <span class="text-xs font-bold uppercase tracking-widest text-amber-300">Capitolo 1 • Animali fuori dal comune • Scoperta 05</span>
           <h2 id="book-title" class="text-xl sm:text-2xl font-bold text-white">La Balena e le Bolle: Come funziona davvero?</h2>
         </div>
-        <button id="btn-close-modal" aria-label="Chiudi le curiosità scientifiche" class="glass-pill p-2 rounded-xl text-sky-200 hover:text-white">
+        <button id="btn-close-modal" aria-label="Close scientific insights" class="glass-pill p-2 rounded-xl text-sky-200 hover:text-white">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
           </svg>
@@ -1826,7 +1826,7 @@ function switchAnimLang(targetLang){
 
       const netControls = document.getElementById('net-controls');
       const netButtons = [1, 2, 3].map(i => document.getElementById(`btn-net-${i}`));
-      const netLabels = ['1 · Inizia il giro', '2 · Aggiungi bolle', '3 · Chiudi il cerchio'];
+      const netLabels = ['1 · Start spiral', '2 · Add bubbles', '3 · Close circle'];
       function updateNetStatusUI() {
         const building = SimState.phase === 'BUILD_NET';
         netControls.classList.toggle('hidden', !building);
@@ -1834,19 +1834,19 @@ function switchAnimLang(targetLang){
         SimState.netQuality = SimState.completedSegments === 3 && SimState.coverageRatio >= 0.94 ? 'GOOD' :
           SimState.drawnPoints.length ? 'INCOMPLETE' : 'NONE';
         let status;
-        if (SimState.paused) status = 'In pausa. Tocca Riprendi per continuare.';
-        else if (SimState.netQuality === 'GOOD') status = '3 di 3 · Rete chiusa! I pesci si radunano al centro.';
-        else if (SimState.netBusy) status = `Bolle in arrivo · tratto ${SimState.completedSegments + 1} di 3`;
+        if (SimState.paused) status = 'Paused. Tap Resume to continue.';
+        else if (SimState.netQuality === 'GOOD') status = '3 of 3 · Net closed! Fish gather in the center.';
+        else if (SimState.netBusy) status = `Bubbles rising · segment ${SimState.completedSegments + 1} of 3`;
         else if (building) status = `${SimState.completedSegments}/3 · Tocca «${netLabels[SimState.completedSegments].split(' · ')[1]}»`;
-        else status = 'Rete aperta: alcuni pesci escono dal varco.';
+        else status = 'Open net: some fish escape through the gap.';
         if (netStatusLabel.textContent !== status) netStatusLabel.textContent = status;
         netStatusDot.className = 'w-3 h-3 rounded-full ' + (SimState.netQuality === 'GOOD' ? 'bg-emerald-400' : 'bg-amber-400');
         netButtons.forEach((button, i) => {
           const done = i < SimState.completedSegments;
           button.disabled = !building || i !== SimState.completedSegments || SimState.netBusy || SimState.paused;
           button.dataset.done = String(done);
-          button.textContent = done ? `${i + 1} · Fatto ✓` : netLabels[i];
-          button.setAttribute('aria-label', done ? `Tratto ${i + 1} completato` : netLabels[i]);
+          button.textContent = done ? `${i + 1} · Done ✓` : netLabels[i];
+          button.setAttribute('aria-label', done ? `Segment ${i + 1} completed` : netLabels[i]);
         });
         if (building) {
           btnMainAction.classList.toggle('hidden', SimState.completedSegments === 0 || SimState.netBusy);
@@ -1894,9 +1894,9 @@ function switchAnimLang(targetLang){
 
           stepBadge.textContent = '1';
           storySubtitle.textContent = 'Interazione 1 • Esplora l\'oceano';
-          storyText.innerHTML = 'Le megattere hanno trovato dei pesci. <strong class="text-amber-300">Tocca il banco</strong> per scoprire come li radunano!';
+          storyText.innerHTML = 'The humpback whales located fish. <strong class="text-amber-300">Tap the school</strong> to see how they gather them!';
           btnMainAction.classList.remove('hidden');
-          btnMainActionText.textContent = 'Scopri il banco';
+          btnMainActionText.textContent = 'Inspect the school';
           btnMainAction.onclick = () => enterPhase('FOUND');
           btnSecondaryAction.classList.add('hidden');
         }
@@ -1909,10 +1909,10 @@ function switchAnimLang(targetLang){
 
           stepBadge.textContent = '1';
           storySubtitle.textContent = 'Lunch spotted!';
-          storyText.innerHTML = '<strong>"Le megattere hanno trovato il loro pranzo! Ma come faranno a catturare tanti pesci insieme?"</strong>';
+          storyText.innerHTML = '<strong>"The humpbacks found their lunch! But how will they catch so many fish together?"</strong>';
 
           btnMainAction.classList.remove('hidden');
-          btnMainActionText.textContent = 'Prova tu';
+          btnMainActionText.textContent = 'Try it yourself';
           btnMainAction.onclick = () => enterPhase('BUILD_NET');
           btnSecondaryAction.classList.add('hidden');
         }
@@ -1934,9 +1934,9 @@ function switchAnimLang(targetLang){
 
           stepBadge.textContent = '2';
           storySubtitle.textContent = '2 • Build the bubble net';
-          storyText.innerHTML = 'Tocca i <strong class="text-amber-300">tre pulsanti in ordine</strong>: la megattera crea un cerchio di bolle.';
+          storyText.innerHTML = 'Tap the <strong class="text-amber-300">three buttons in sequence</strong>: the whale creates a circle of bubbles.';
 
-          btnMainActionText.textContent = 'Osserva la rete aperta';
+          btnMainActionText.textContent = 'Observe open net';
           btnMainAction.onclick = () => enterPhase('EVALUATE');
           btnMainAction.classList.add('hidden');
           btnSecondaryAction.classList.add('hidden');
@@ -1949,10 +1949,10 @@ function switchAnimLang(targetLang){
           stepBadge.textContent = '3';
           if (SimState.netQuality === 'GOOD') {
             storySubtitle.textContent = '3 • A net made of air!';
-            storyText.innerHTML = 'Le bolle disorientano i pesci e li fanno <strong class="text-emerald-300">radunare al centro</strong>.';
+            storyText.innerHTML = 'The bubbles confuse the fish and cause them to <strong class="text-emerald-300">gather in the center</strong>.';
           } else {
             storySubtitle.textContent = '3 • Net still open';
-            storyText.innerHTML = 'La rete ha un <strong class="text-amber-300">varco</strong>: guarda come alcuni pesci escono dall’apertura!';
+            storyText.innerHTML = 'The net has a <strong class="text-amber-300">gap</strong>: look how some fish escape through the opening!';
           }
 
           btnMainAction.classList.remove('hidden');
@@ -1976,7 +1976,7 @@ function switchAnimLang(targetLang){
 
           stepBadge.textContent = '4';
           storySubtitle.textContent = '4 • La risalita della megattera';
-          storyText.innerHTML = 'Guarda dalle profondità! La megattera risale attraverso la colonna di bolle <strong class="text-amber-300">spalancando la bocca e gonfiando le pieghe ventrali</strong>!';
+          storyText.innerHTML = 'Look from the deep! The humpback whale rises through the bubble column <strong class="text-amber-300">opening wide its jaws and expanding its ventral pleats</strong>!';
 
           btnMainAction.classList.add('hidden');
           btnSecondaryAction.classList.add('hidden');
@@ -1985,10 +1985,10 @@ function switchAnimLang(targetLang){
         else if (newPhase === 'CONCLUSION') {
           stepBadge.textContent = '★';
           storySubtitle.textContent = 'Experiment completed!';
-          storyText.innerHTML = 'Le bolle radunano i pesci. Poi le megattere <strong class="text-amber-300">risalgono con la bocca aperta</strong> e catturano molte prede insieme!';
+          storyText.innerHTML = 'Bubbles corral the fish. Then humpback whales <strong class="text-amber-300">lunge upward with open mouths</strong> and catch many prey together!';
 
           btnMainAction.classList.remove('hidden');
-          btnMainActionText.textContent = 'Riprova!';
+          btnMainActionText.textContent = 'Try again!';
           btnMainAction.onclick = () => enterPhase('BUILD_NET');
 
           btnSecondaryAction.classList.remove('hidden');
@@ -2041,7 +2041,7 @@ function switchAnimLang(targetLang){
         SimState.paused = paused;
         iconPause.classList.toggle('hidden', paused);
         iconPlay.classList.toggle('hidden', !paused);
-        btnPause.setAttribute('aria-label', paused ? 'Riprendi' : 'Metti in pausa');
+        btnPause.setAttribute('aria-label', paused ? 'Resume' : 'Pause');
         btnPause.setAttribute('aria-pressed', String(paused));
         updateNetStatusUI();
       }
@@ -2054,7 +2054,7 @@ function switchAnimLang(targetLang){
       btnAudio.addEventListener('click', () => {
         const active = soundEngine.toggle();
         btnAudio.setAttribute('aria-pressed', String(active));
-        btnAudio.setAttribute('aria-label', active ? 'Disattiva i suoni dell’oceano' : 'Attiva i suoni dell’oceano');
+        btnAudio.setAttribute('aria-label', active ? 'Mute ocean sound' : 'Enable ocean sound');
         iconSoundOff.classList.toggle('hidden', active);
         iconSoundOn.classList.toggle('hidden', !active);
       });

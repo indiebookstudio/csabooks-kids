@@ -127,7 +127,7 @@ function switchAnimLang(targetLang){
 <!-- PERSISTENT GLOBAL TOP BAR -->
 <header class="site-nav-bar">
   <div class="site-nav-inner">
-    <a class="brand-link" href="../../../../?lang=fr&pagina=inizio" aria-label="Torna all’inizio">
+    <a class="brand-link" href="../../../../?lang=fr&pagina=inizio" aria-label="Retour à l'accueil">
       <span class="brand-mark-otto"><img src="../assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../../media/otto.webp';"></span>
       <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
     </a>
@@ -168,9 +168,9 @@ function switchAnimLang(targetLang){
 
     <button id="btn-auto" class="tool" aria-pressed="false" title="Explore la découverte pas à pas"><svg><use href="#i-play"/></svg><span>Le parcours</span></button>
     <button id="btn-view" class="tool" aria-pressed="false"><svg><use href="#i-cube"/></svg> Vue du dessus</button>
-    <button id="btn-pause" class="tool icon-only" aria-label="Metti in pausa" aria-pressed="false"><svg><use id="pause-icon" href="#i-pause"/></svg></button>
-    <button id="btn-audio" class="tool icon-only muted" aria-label="Attiva i suoni" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
-    <button id="btn-reset" class="tool icon-only" aria-label="Ricomincia dall’inizio"><svg><use href="#i-reset"/></svg></button>
+    <button id="btn-pause" class="tool icon-only" aria-label="Mettre en pause" aria-pressed="false"><svg><use id="pause-icon" href="#i-pause"/></svg></button>
+    <button id="btn-audio" class="tool icon-only muted" aria-label="Activer le son" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
+    <button id="btn-reset" class="tool icon-only" aria-label="Recommencer depuis le début"><svg><use href="#i-reset"/></svg></button>
   </nav>
 </header>
 <main id="stage" aria-label="Esplorazione tridimensionale della felce e del suo DNA">
@@ -182,7 +182,7 @@ function switchAnimLang(targetLang){
   <div id="stage-note" class="stage-note">Reconstitution botanique 3D</div>
   <div id="pause-badge" class="pause-badge glass" hidden>En pause · touche ▶ pour reprendre</div>
   <div id="loading" class="loading"><span class="loading-ring"></span><p>Entriamo nel piccolo mondo della felce…</p></div>
-  <div id="error" class="error glass" hidden><h2>La scena 3D non è disponibile</h2><p>Apri questo HTML in un browser con WebGL attivo.</p><button class="primary" onclick="location.reload()">Riprova</button></div>
+  <div id="error" class="error glass" hidden><h2>La scena 3D non è disponibile</h2><p>Apri questo HTML in un browser con WebGL attivo.</p><button class="primary" onclick="location.reload()">Réessayer</button></div>
 </main>
 <footer id="footer"><section class="story glass" aria-labelledby="story-title">
   <div class="story-top"><div class="step-label"><span id="step-number">01</span><span id="step-name">LA FOUGÈRE</span></div><ol id="steps" class="steps" aria-label="Progression"><li class="current" aria-current="step">Fougère</li><li>Cellule</li><li>ADN</li><li>Comparaison</li><li>Découverte</li></ol></div>
@@ -596,7 +596,7 @@ function switchAnimLang(targetLang){
   }
   function startMeasurement(){
     if(S.phase!==3||S.measuring||S.measured||S.paused)return;
-    S.measuring=true;S.measureTime=0;refreshActions();announce('Il DNA della felce si srotola. Guarda il righello.');
+    S.measuring=true;S.measureTime=0;refreshActions();announce('L’ADN de la fougère se déroule. Regarde la règle graduée.');
   }
   function updateMeasurement(){
     const length=fernMetres*S.measureProgress*DNA.worldPerMetre;

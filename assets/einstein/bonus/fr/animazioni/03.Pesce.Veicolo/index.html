@@ -143,7 +143,7 @@ function switchAnimLang(targetLang){
 <!-- PERSISTENT GLOBAL TOP BAR -->
 <header class="site-nav-bar">
   <div class="site-nav-inner">
-    <a class="brand-link" href="../../../../?lang=fr&pagina=inizio" aria-label="Torna all’inizio">
+    <a class="brand-link" href="../../../../?lang=fr&pagina=inizio" aria-label="Retour à l'accueil">
       <span class="brand-mark-otto"><img src="../assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../../media/otto.webp';"></span>
       <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
     </a>
@@ -178,15 +178,15 @@ function switchAnimLang(targetLang){
 
 <header id="toolbar">
  <div class="brand glass"><div class="brand-icon"><svg><use href="#i-fish"/></svg></div><div><div class="eyebrow"><span class="chapter">Découverte 15</span><span class="brand-kicker">Expériences surprenantes</span></div><h1>Un Poisson Peut-il Conduire un Véhicule ?</h1></div></div>
- <nav class="tools" aria-label="Controlli dell’esperienza">
+ <nav class="tools" aria-label="Contrôles de l’expérience">
     <a href="../index.html" class="tool" style="color:#f7d184;font-weight:700" title="Retour au laboratoire 3D"><svg viewBox="0 0 24 24" style="width:18px;height:18px;vertical-align:middle"><path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Laboratoire 3D</span></a>
     <a href="../../../../?lang=fr&pagina=inizio" class="tool" style="color:#7dd3fc;font-weight:700" title="Retour à Otto+"><span>Home ✦</span></a>
 
   <button id="btn-auto" class="tool" aria-pressed="false" title="Explore la découverte pas à pas"><svg><use href="#i-play"/></svg><span>Le parcours</span></button>
   <button id="btn-view" class="tool" aria-pressed="false"><svg><use href="#i-cube"/></svg> Vue du dessus</button>
-  <button id="btn-pause" class="tool icon-only" aria-label="Metti in pausa" aria-pressed="false"><svg><use id="pause-icon" href="#i-pause"/></svg></button>
-  <button id="btn-audio" class="tool icon-only muted" aria-label="Attiva i suoni" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
-  <button id="btn-reset" class="tool icon-only" aria-label="Ricomincia dall’inizio"><svg><use href="#i-reset"/></svg></button>
+  <button id="btn-pause" class="tool icon-only" aria-label="Mettre en pause" aria-pressed="false"><svg><use id="pause-icon" href="#i-pause"/></svg></button>
+  <button id="btn-audio" class="tool icon-only muted" aria-label="Activer le son" aria-pressed="false"><svg><use href="#i-sound"/></svg></button>
+  <button id="btn-reset" class="tool icon-only" aria-label="Recommencer depuis le début"><svg><use href="#i-reset"/></svg></button>
  </nav>
 </header>
 <main id="stage" aria-label="Ricostruzione 3D di un pesce rosso in una vasca su ruote">
@@ -200,7 +200,7 @@ function switchAnimLang(targetLang){
  <div id="stage-note" class="stage-note">Simulation 3D d’une expérience scientifique</div>
  <div id="pause-badge" class="pause-badge glass" hidden>En pause · touche ▶ pour reprendre</div>
  <div id="loading" class="loading"><span class="loading-ring"></span><p>Entriamo nel laboratorio del pesce rosso…</p></div>
- <div id="error" class="error glass" hidden><h2>La scena 3D non è disponibile</h2><p>Apri questo HTML in un browser con WebGL attivo.</p><button class="primary" onclick="location.reload()">Riprova</button></div>
+ <div id="error" class="error glass" hidden><h2>Scène 3D non disponible</h2><p>Veuillez ouvrir cette page dans un navigateur avec WebGL activé.</p><button class="primary" onclick="location.reload()">Réessayer</button></div>
 </main>
 <footer id="footer"><section class="story glass" aria-labelledby="story-title">
  <div class="story-top"><div class="step-label"><span id="step-number">01</span><span id="step-name">LE POISSON</span></div><ol id="steps" class="steps" aria-label="Progression"><li class="current" aria-current="step">Poisson</li><li>Système</li><li>Essai</li><li>Test</li><li>Découverte</li></ol></div>
@@ -211,28 +211,28 @@ function switchAnimLang(targetLang){
   <button id="btn-left" data-direction="left" aria-label="Fai nuotare il pesce a sinistra"><b>←</b><span>Sinistra</span></button>
   <button id="btn-up" data-direction="up" aria-label="Orienta il pesce e fai avanzare il veicolo verso il bersaglio"><b>↑</b><span>Bersaglio</span></button>
   <button id="btn-center" class="center-button" aria-label="Porta il pesce al centro e ferma il veicolo"><b>⊙</b><span>Al centro</span></button>
-  <button id="btn-down" data-direction="down" aria-label="Fai nuotare il pesce indietro"><b>↓</b><span>Indietro</span></button>
+  <button id="btn-down" data-direction="down" aria-label="Faire nager le poisson vers l’arrière"><b>↓</b><span>Arrière</span></button>
   <button id="btn-right" data-direction="right" aria-label="Fai nuotare il pesce a destra"><b>→</b><span>Destra</span></button>
  </div>
  <p id="control-hint" class="control-hint" hidden>Un tocco = un breve tratto. Il veicolo si orienta e poi avanza. «Al centro» lo ferma.</p>
- <div id="quiz" class="quiz" role="group" aria-label="Quale dato aiuta a valutare l’apprendimento?" hidden><button data-answer="evidence">Temps requis et cibles atteintes sur plusieurs essais</button><button data-answer="wheels">Le nombre de roues du véhicule</button></div>
+ <div id="quiz" class="quiz" role="group" aria-label="Quelle donnée aide à évaluer l’apprentissage ?" hidden><button data-answer="evidence">Temps requis et cibles atteintes sur plusieurs essais</button><button data-answer="wheels">Le nombre de roues du véhicule</button></div>
  <p id="feedback" class="feedback" role="status" aria-live="polite" hidden></p>
 </section></footer>
 </div>
 <div id="live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
 <dialog id="info-dialog" aria-labelledby="info-title">
- <div class="dialog-head"><div><span class="eyebrow">DÉCOUVERTE 15 · LA SCIENCE DERRIÈRE L’EXPÉRIENCE</span><h2 id="info-title">Le poisson nage. Le robot fait tourner ses roues.</h2></div><button id="btn-close" class="tool icon-only" aria-label="Fermer"><svg><use href="#i-close"/></svg></button></div>
- <div class="dialog-content">
-  <div class="fact-highlight"><strong>Poisson → caméra → roues</strong><span>Un aquarium motorisé pour explorer l’orientation animale</span></div>
-  <h3>Qu’ont étudié les chercheurs ?</h3><p>Givon et ses collègues ont entraîné des poissons rouges à piloter un véhicule motorisé vers une cible visuelle. L’étude, parue dans <em>Behavioural Brain Research</em> (2022), prouve que les compétences d’orientation spatiale fonctionnent même hors de l’eau.</p>
-  <h3>Comment fonctionnait le véhicule ?</h3><p>Une caméra fixée au-dessus du bassin suivait la position et l’orientation du poisson. Un mini-ordinateur traduisait sa nage en impulsions pour les moteurs électriques.</p>
-  <h3>La cible et la récompense</h3><p>Atteindre la cible libérait un granulé de nourriture. Au fil des séances et des départs variés, les poissons ont appris à corriger leurs trajectoires pour aller droit au but.</p>
-  <h3>Un seul essai ne suffit pas</h3><p>Mesurer un réel apprentissage exige des tests statistiques répétés : chronométrage, rectitude de la trajectoire et régularité sur des dizaines d’essais.</p>
-  <details><summary>Come leggere questa ricostruzione</summary><p>Il modello scompone il funzionamento in tre passaggi per renderli osservabili. I tocchi guidano un pesce simulato; non sono l’addestramento svolto nello studio. Direzioni, distanze e tempi dell’animazione sono semplificati e non costituiscono dati sperimentali.</p><p>Il veicolo originale aveva ruote omnidirezionali. Qui, per rendere leggibile la relazione tra nuoto e moto, il pesce si orienta, il telaio sterza e il veicolo avanza nella stessa direzione. Le ruote ruotano attorno ai loro assi; durante la sterzata i due lati girano in versi opposti. La posizione centrale corrisponde a una zona di arresto. Nel test interattivo cambiamo la partenza mantenendo lo stesso bersaglio.</p></details>
-  <div class="sources"><h3>Sources de la découverte</h3><a href="https://doi.org/10.1016/j.bbr.2021.113711" target="_blank" rel="noopener noreferrer">Givon et al. · Behavioural Brain Research, 2022 ↗</a><a href="https://pubmed.ncbi.nlm.nih.gov/34896210/" target="_blank" rel="noopener noreferrer">Articolo e riassunto scientifico · PubMed ↗</a><a href="https://www.eurekalert.org/news-releases/939194" target="_blank" rel="noopener noreferrer">Ben-Gurion University · comunicato della ricerca ↗</a></div>
- </div><div class="dialog-foot"><button id="btn-close-bottom" class="primary">Retour au laboratoire <svg><use href="#i-arrow"/></svg></button></div>
+  <div class="dialog-head"><div><span class="eyebrow">DÉCOUVERTE 15 · LA SCIENCE DERRIÈRE L’EXPÉRIENCE</span><h2 id="info-title">Le poisson nage. Le robot fait tourner ses roues.</h2></div><button id="btn-close" class="tool icon-only" aria-label="Fermer"><svg><use href="#i-close"/></svg></button></div>
+  <div class="dialog-content">
+    <div class="fact-highlight"><strong>Poisson → caméra → roues</strong><span>Un aquarium motorisé pour explorer l’orientation animale</span></div>
+    <h3>Qu’ont étudié les chercheurs ?</h3><p>Givon et ses collègues ont entraîné des poissons rouges à piloter un véhicule motorisé vers une cible visuelle. L’étude, parue dans <em>Behavioural Brain Research</em> (2022), prouve que les compétences d’orientation spatiale fonctionnent même hors de l’eau.</p>
+    <h3>Comment fonctionnait le véhicule ?</h3><p>Une caméra fixée au-dessus du bassin suivait la position et l’orientation du poisson. Un mini-ordinateur traduisait sa nage en impulsions pour les moteurs électriques.</p>
+    <h3>La cible et la récompense</h3><p>Atteindre la cible libérait un granulé de nourriture. Au fil des séances et des départs variés, les poissons ont appris à corriger leurs trajectoires pour aller droit au but.</p>
+    <h3>Un seul essai ne suffit pas</h3><p>Mesurer un réel apprentissage exige des tests statistiques répétés : chronométrage, rectitude de la trajectoire et régularité sur des dizaines d’essais.</p>
+    <details><summary>Comment lire cette reconstruction</summary><p>Ce modèle décompose le système en étapes observables. Tes touches guident un poisson simulé ; cela ne reproduit pas le protocole de dressage scientifique. Distances et temps sont simplifiés pour la pédagogie.</p><p>Le véhicule expérimental d’origine utilisait des roues omnidirectionnelles. Ici, la direction illustre le passage de l’orientation aquatique au déplacement terrestre.</p></details>
+    <div class="sources"><h3>Sources de la découverte</h3><a href="https://doi.org/10.1016/j.bbr.2021.113711" target="_blank" rel="noopener noreferrer">Givon et al. · Behavioural Brain Research, 2022 ↗</a><a href="https://www.bgu.ac.il/" target="_blank" rel="noopener noreferrer">Ben-Gurion University of the Negev ↗</a></div>
+  </div><div class="dialog-foot"><button id="btn-close-bottom" class="primary">Retour au laboratoire <svg><use href="#i-arrow"/></svg></button></div>
 </dialog>
-<noscript><p class="noscript">Attiva JavaScript per esplorare questa animazione.</p></noscript>
+<noscript><p class="noscript">Active JavaScript pour explorer cette animation 3D.</p></noscript>
 <script>/**
  * @license
  * Copyright 2010-2021 Three.js Authors
@@ -619,7 +619,7 @@ function switchAnimLang(targetLang){
   $('btn-next').addEventListener('click',next);$('hotspot').addEventListener('click',next);
   $('btn-back').addEventListener('click',()=>{if(S.paused)return;setAuto(false);setPhase(S.phase-1);});$('btn-reset').addEventListener('click',reset);
   $('btn-view').addEventListener('click',()=>setView(!S.top));$('btn-pause').addEventListener('click',()=>setPaused(!S.paused));
-  $('btn-auto').addEventListener('click',()=>{if(S.auto){setAuto(false);return;}reset();setAuto(true);announce('Viaggio automatico avviato. Puoi metterlo in pausa.');});
+  $('btn-auto').addEventListener('click',()=>{if(S.auto){setAuto(false);return;}reset();setAuto(true);announce('Parcours automatique démarré. Tu peux faire une pause.');});
   $('btn-audio').addEventListener('click',()=>{const enabled=audio.toggle();$('btn-audio').setAttribute('aria-pressed',String(enabled));$('btn-audio').setAttribute('aria-label',enabled?'Disattiva i suoni':'Attiva i suoni');$('btn-audio').classList.toggle('muted',!enabled);});
   for(let i=1;i<=3;i++)$('btn-part-'+i).addEventListener('click',()=>startDemo(i));
   $('drive-controls').querySelectorAll('[data-direction]').forEach(b=>b.addEventListener('click',()=>beginCommand(b.dataset.direction)));
@@ -627,7 +627,7 @@ function switchAnimLang(targetLang){
   document.addEventListener('keydown',event=>{const keys={ArrowUp:'up',ArrowDown:'down',ArrowLeft:'left',ArrowRight:'right'};if($('info-dialog').open||S.paused||!(S.phase===2||S.phase===3)||!keys[event.key])return;event.preventDefault();if(!event.repeat)beginCommand(keys[event.key]);});
   $('quiz').querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
     if(S.paused||S.answered)return;$('feedback').hidden=false;
-    if(button.dataset.answer==='evidence'){S.answered=true;$('quiz').hidden=true;button.classList.add('correct');$('story-title').textContent='Servono più prove per capire se impara.';$('story-text').innerHTML='Il pesce può orientarsi in una situazione nuova. Per capire se migliora, <strong>confrontiamo più prove</strong>.';$('feedback').textContent='Esatto! Tempi e bersagli raggiunti, osservati in più prove, aiutano a valutare l’apprendimento.';refresh();audio.chime();}
+    if(button.dataset.answer==='evidence'){S.answered=true;$('quiz').hidden=true;button.classList.add('correct');$('story-title').textContent='Plusieurs essais sont requis pour évaluer l’apprentissage.';$('story-text').innerHTML='Le poisson s’oriente dans un milieu inédit. Pour mesurer les progrès, les chercheurs <strong>comparent plusieurs essais</strong>.';$('feedback').textContent='Exact ! Les temps de trajet et les cibles atteintes lors d’essais répétés permettent de quantifier l’apprentissage.';refresh();audio.chime();}
     else{button.classList.add('wrong');$('feedback').textContent='Le nombre de roues décrit la machine. Pour étudier le poisson, il faut mesurer ses performances répétées.';}
   }));
   let modalWasPaused=false,focusBeforeModal=null;
