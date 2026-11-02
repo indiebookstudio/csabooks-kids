@@ -134,8 +134,8 @@ h1, h2, h3, h4, .csa-heading {
   display: inline-flex;
   align-items: center;
   padding: 8px 16px;
-  font-family: var(--csa-font-body);
-  font-size: 0.95rem;
+  font-family: var(--csa-font-heading, 'Fredoka', cursive, sans-serif);
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--csa-text);
   text-decoration: none;
@@ -486,23 +486,17 @@ h1, h2, h3, h4, .csa-heading {
    OUR WORLDS SECTION (4 Categories)
    ========================================================================== */
 .csa-section {
-  padding: 80px 0;
+  padding: 36px 0;
 }
 
 .csa-section-header {
   text-align: center;
   max-width: 680px;
-  margin: 0 auto 52px;
+  margin: 0 auto 24px;
 }
 
 .csa-section-eyebrow {
-  display: inline-block;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--csa-primary);
-  margin-bottom: 8px;
+  display: none !important;
 }
 
 .csa-section-title {
@@ -1397,3 +1391,75 @@ body.csa-modal-open {
     padding: 24px 16px;
   }
 }
+
+/* ==========================================================================
+   LANGUAGE SWITCHER & UTILITY OVERRIDES
+   ========================================================================== */
+.lang-switcher-desktop {
+  display: inline-flex !important;
+}
+
+.lang-mobile-select {
+  display: none !important;
+  position: relative;
+}
+
+@media (max-width: 900px) {
+  .lang-switcher-desktop {
+    display: none !important;
+  }
+  .lang-mobile-select {
+    display: inline-flex !important;
+  }
+}
+
+.topbar-inner.force-compact-lang .lang-switcher-desktop {
+  display: none !important;
+}
+
+.topbar-inner.force-compact-lang .lang-mobile-select {
+  display: inline-flex !important;
+}
+
+/* Category Pills & Disabled State */
+.csa-pill-disabled {
+  opacity: 0.55 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #94a3b8 !important;
+}
+
+.csa-badge-soon {
+  background: #fef3c7;
+  color: #b45309;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 999px;
+  margin-left: 6px;
+  text-transform: uppercase;
+}
+
+/* Amazon Buttons Clean Styling */
+.csa-btn-amazon {
+  background: #f59e0b !important;
+  color: #1e293b !important;
+  font-weight: 700 !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3) !important;
+  transition: all var(--csa-transition) !important;
+}
+
+.csa-btn-amazon:hover {
+  background: #d97706 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4) !important;
+}
+
+.csa-amazon-icon {
+  display: none !important;
+}
+

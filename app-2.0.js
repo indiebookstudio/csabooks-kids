@@ -19,7 +19,77 @@
     return l;
   }
 
-  // Default marketplace for each interface language
+  // Supported Amazon Marketplaces (US, UK, DE, FR, ES, IT, NL, PL, SE, BE, IE, JP, CA, AU)
+  const MARKET_DOMAINS = {
+    us: 'com',
+    com: 'com',
+    uk: 'co.uk',
+    ca: 'ca',
+    au: 'com.au',
+    de: 'de',
+    fr: 'fr',
+    es: 'es',
+    it: 'it',
+    nl: 'nl',
+    pl: 'pl',
+    se: 'se',
+    be: 'com.be',
+    ie: 'co.uk',
+    jp: 'co.jp'
+  };
+
+  // Client-side detection of user location / Amazon marketplace
+  function detectUserMarketplace() {
+    try {
+      const saved = localStorage.getItem('csa_marketplace');
+      if (saved && MARKET_DOMAINS[saved.toLowerCase()]) return saved.toLowerCase();
+    } catch(e) {}
+
+    let tz = '';
+    try {
+      tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    } catch (e) {}
+
+    const navLangs = (navigator.languages && navigator.languages.length) ? Array.from(navigator.languages) : [navigator.language || ''];
+    const langsLower = navLangs.map(l => (l || '').toLowerCase());
+
+    // Timezone check
+    if (tz.includes('London')) return 'uk';
+    if (tz.includes('Dublin')) return 'ie';
+    if (tz.includes('Australia') || tz.includes('Sydney') || tz.includes('Melbourne') || tz.includes('Brisbane') || tz.includes('Perth') || tz.includes('Adelaide')) return 'au';
+    if (tz.includes('Canada') || tz.includes('Toronto') || tz.includes('Vancouver') || tz.includes('Montreal') || tz.includes('Edmonton') || tz.includes('Winnipeg') || tz.includes('Halifax') || tz.includes('St_Johns')) return 'ca';
+    if (tz.includes('America') || tz.includes('New_York') || tz.includes('Chicago') || tz.includes('Los_Angeles') || tz.includes('Denver') || tz.includes('Phoenix')) return 'us';
+    if (tz.includes('Rome')) return 'it';
+    if (tz.includes('Paris')) return 'fr';
+    if (tz.includes('Berlin') || tz.includes('Vienna') || tz.includes('Zurich')) return 'de';
+    if (tz.includes('Madrid')) return 'es';
+    if (tz.includes('Amsterdam')) return 'nl';
+    if (tz.includes('Warsaw')) return 'pl';
+    if (tz.includes('Stockholm')) return 'se';
+    if (tz.includes('Brussels')) return 'be';
+    if (tz.includes('Tokyo')) return 'jp';
+
+    // Language/Locale code check
+    if (langsLower.some(l => /-gb\b/.test(l))) return 'uk';
+    if (langsLower.some(l => /-ie\b/.test(l))) return 'ie';
+    if (langsLower.some(l => /-ca\b/.test(l))) return 'ca';
+    if (langsLower.some(l => /-au\b/.test(l))) return 'au';
+    if (langsLower.some(l => /-be\b/.test(l))) return 'be';
+    if (langsLower.some(l => /-us\b/.test(l))) return 'us';
+    if (langsLower.some(l => /^it\b/.test(l))) return 'it';
+    if (langsLower.some(l => /^fr\b/.test(l))) return 'fr';
+    if (langsLower.some(l => /^de\b/.test(l))) return 'de';
+    if (langsLower.some(l => /^es\b/.test(l))) return 'es';
+    if (langsLower.some(l => /^nl\b/.test(l))) return 'nl';
+    if (langsLower.some(l => /^pl\b/.test(l))) return 'pl';
+    if (langsLower.some(l => /^sv\b/.test(l))) return 'se';
+    if (langsLower.some(l => /^ja\b/.test(l))) return 'jp';
+
+    // Fallback based on selected interface language
+    const langFallbacks = { it: 'it', en: 'us', de: 'de', fr: 'fr', es: 'es', nl: 'nl', pl: 'pl', se: 'se', jp: 'jp' };
+    return langFallbacks[currentLang] || 'us';
+  }
+  window.detectUserMarketplace = detectUserMarketplace;
   const LANG_MARKET_MAP = {
     it: 'it',
     en: 'com',
@@ -68,6 +138,31 @@
     applyLanguage(norm, true);
   }
   window.setLanguage = setLanguage;
+  // Mobile Language Dropdown Toggle
+  window.toggleMobileLangDropdown = function(e) {
+    if (e && e.stopPropagation) e.stopPropagation();
+    const dropdown = document.getElementById('lang-mobile-dropdown');
+    const select = document.getElementById('lang-mobile-select');
+    if (dropdown && select) {
+      const isOpen = dropdown.classList.contains('show');
+      dropdown.classList.toggle('show', !isOpen);
+      select.classList.toggle('open', !isOpen);
+      const trigger = document.getElementById('lang-mobile-trigger');
+      if (trigger) trigger.setAttribute('aria-expanded', String(!isOpen));
+    }
+  };
+
+  document.addEventListener('click', function(e) {
+    const select = document.getElementById('lang-mobile-select');
+    const dropdown = document.getElementById('lang-mobile-dropdown');
+    if (dropdown && select && !select.contains(e.target)) {
+      dropdown.classList.remove('show');
+      select.classList.remove('open');
+      const trigger = document.getElementById('lang-mobile-trigger');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
 
   // Retrieve translation key
   function t(keyPath, lang = currentLang) {
@@ -100,6 +195,23 @@
     if (mobileSelect && mobileSelect.value !== lang) {
       mobileSelect.value = lang;
     }
+
+    // Update custom mobile trigger flag and code
+    const flagMap = {
+      it: 'https://flagcdn.com/24x18/it.png',
+      en: 'https://flagcdn.com/24x18/gb.png',
+      de: 'https://flagcdn.com/24x18/de.png',
+      fr: 'https://flagcdn.com/24x18/fr.png',
+      es: 'https://flagcdn.com/24x18/es.png',
+      nl: 'https://flagcdn.com/24x18/nl.png',
+      pl: 'https://flagcdn.com/24x18/pl.png',
+      se: 'https://flagcdn.com/24x18/se.png',
+      jp: 'https://flagcdn.com/24x18/jp.png'
+    };
+    const mobileFlag = document.getElementById('lang-mobile-flag');
+    const mobileCode = document.getElementById('lang-mobile-code');
+    if (mobileFlag && flagMap[lang]) mobileFlag.src = flagMap[lang];
+    if (mobileCode) mobileCode.textContent = lang.toUpperCase();
 
     // Update all elements with data-i18n
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -134,37 +246,52 @@
     }
   }
 
-  // Central Amazon Link Helper
+  // Central Amazon Link Helper (Auto Geo-Targeted to User Country / Marketplace)
   function getAmazonPaperbackUrl(book, lang = currentLang) {
     if (!book || !book.editions) return null;
     
-    // Check if book has edition in current language, or fallback to first available edition
+    // Choose appropriate edition
     let edKey = lang;
     if (!book.editions[edKey] || !book.editions[edKey].available) {
-      // Find first available edition
       const availKeys = Object.keys(book.editions).filter(k => book.editions[k].available);
       if (availKeys.length === 0) return null;
       edKey = availKeys[0];
     }
 
     const edition = book.editions[edKey];
-    if (!edition.available) return null;
+    if (!edition || !edition.available) return null;
 
-    // Prefer market matching site language
-    const preferredMarket = LANG_MARKET_MAP[lang] || 'it';
-    if (edition.amazon && edition.amazon[preferredMarket]) {
-      const val = edition.amazon[preferredMarket];
-      return val.startsWith('http') ? val : `https://www.amazon.${preferredMarket === 'com' ? 'com' : (preferredMarket === 'uk' ? 'co.uk' : preferredMarket)}/dp/${val}`;
+    const market = detectUserMarketplace();
+    const domain = MARKET_DOMAINS[market] || 'com';
+
+    // 1. Direct match in edition.amazon dict
+    if (edition.amazon && edition.amazon[market]) {
+      const val = edition.amazon[market];
+      return val.startsWith('http') ? val : `https://www.amazon.${domain}/dp/${val}`;
     }
 
-    // Otherwise first market configured
-    if (edition.amazon) {
-      const markets = Object.keys(edition.amazon);
-      if (markets.length > 0) {
-        const m = markets[0];
-        const val = edition.amazon[m];
-        return val.startsWith('http') ? val : `https://www.amazon.${m === 'com' ? 'com' : (m === 'uk' ? 'co.uk' : m)}/dp/${val}`;
+    // 2. Extract ASIN
+    let asin = edition.asin || null;
+    if (!asin && edition.amazon) {
+      for (const k of Object.keys(edition.amazon)) {
+        const val = edition.amazon[k];
+        if (typeof val === 'string') {
+          const match = val.match(/\/dp\/([A-Z0-9]{10})/i);
+          if (match) { asin = match[1]; break; }
+          if (/^[A-Z0-9]{10}$/i.test(val)) { asin = val; break; }
+        }
       }
+    }
+
+    if (asin) {
+      return `https://www.amazon.${domain}/dp/${asin}`;
+    }
+
+    // 3. Fallback to first existing URL
+    if (edition.amazon) {
+      const firstKey = Object.keys(edition.amazon)[0];
+      const val = edition.amazon[firstKey];
+      if (val && val.startsWith('http')) return val;
     }
 
     return null;
@@ -418,9 +545,7 @@
                 class="csa-btn csa-btn-amazon csa-btn-lg"
                 onclick="window.trackAmazonClick('${bookId}', '${amazonUrl}')"
               >
-                <svg class="csa-amazon-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13.9 12.8c-1.3-.2-2.8-.4-4.2-.4-3.6 0-5.7 1.7-5.7 4.2 0 2.4 1.8 3.8 4.6 3.8 2.2 0 3.9-.9 4.8-2.3v2.1h3.3v-9c0-3.1-2.4-4.8-6.4-4.8-3.4 0-5.8 1.4-6.3 3.6l3 .5c.3-1.1 1.6-1.7 3.3-1.7 2.1 0 3.1.9 3.1 2.5v1.5zm-3.8 5.6c-1.5 0-2.4-.8-2.4-2 0-1.3 1.1-2.1 2.8-2.1 1.2 0 2.4.2 3.4.4v1.2c-.8 1.5-2.2 2.5-3.8 2.5zM22.5 19.8c-.3.4-.8.5-1.2.3-4.2-2.5-10.4-3.1-15.5-1.7-.5.1-1-.1-1.2-.6-.2-.5.1-1 .6-1.2 5.8-1.5 12.6-.9 17.3 1.8.4.3.5.9.2 1.4h-.2z"/></svg>
                 <span>${t('modal.buyAmazonPaperback')}</span>
-                <span class="csa-btn-sublabel">(${t('modal.paperback')})</span>
               </a>
             ` : `
               <button type="button" class="csa-btn csa-btn-disabled csa-btn-lg" disabled>
@@ -519,7 +644,7 @@
 
             ${isEinstein ? `
               <div class="csa-card-highlights">
-                <span class="csa-highlight-label">🔬 57 scoperte scientifiche & QR interattivo</span>
+                <span class="csa-highlight-label">🔬 55 avventure nella scienza di oggi & QR interattivo</span>
               </div>
             ` : ''}
 
@@ -532,9 +657,7 @@
                   class="csa-btn csa-btn-amazon csa-btn-block"
                   onclick="window.trackAmazonClick('${book.id}', '${amazonUrl}')"
                 >
-                  <svg class="csa-amazon-icon" viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M13.9 12.8c-1.3-.2-2.8-.4-4.2-.4-3.6 0-5.7 1.7-5.7 4.2 0 2.4 1.8 3.8 4.6 3.8 2.2 0 3.9-.9 4.8-2.3v2.1h3.3v-9c0-3.1-2.4-4.8-6.4-4.8-3.4 0-5.8 1.4-6.3 3.6l3 .5c.3-1.1 1.6-1.7 3.3-1.7 2.1 0 3.1.9 3.1 2.5v1.5zm-3.8 5.6c-1.5 0-2.4-.8-2.4-2 0-1.3 1.1-2.1 2.8-2.1 1.2 0 2.4.2 3.4.4v1.2c-.8 1.5-2.2 2.5-3.8 2.5zM22.5 19.8c-.3.4-.8.5-1.2.3-4.2-2.5-10.4-3.1-15.5-1.7-.5.1-1-.1-1.2-.6-.2-.5.1-1 .6-1.2 5.8-1.5 12.6-.9 17.3 1.8.4.3.5.9.2 1.4h-.2z"/></svg>
                   <span>${t('featured.buyAmazon')}</span>
-                  <span class="csa-badge-edition">(${t('featured.paperbackBadge')})</span>
                 </a>
               ` : `
                 <button type="button" class="csa-btn csa-btn-disabled csa-btn-block" disabled>
@@ -635,9 +758,7 @@
                   class="csa-btn csa-btn-amazon csa-btn-block"
                   onclick="window.trackAmazonClick('${book.id}', '${amazonUrl}')"
                 >
-                  <svg class="csa-amazon-icon" viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M13.9 12.8c-1.3-.2-2.8-.4-4.2-.4-3.6 0-5.7 1.7-5.7 4.2 0 2.4 1.8 3.8 4.6 3.8 2.2 0 3.9-.9 4.8-2.3v2.1h3.3v-9c0-3.1-2.4-4.8-6.4-4.8-3.4 0-5.8 1.4-6.3 3.6l3 .5c.3-1.1 1.6-1.7 3.3-1.7 2.1 0 3.1.9 3.1 2.5v1.5zm-3.8 5.6c-1.5 0-2.4-.8-2.4-2 0-1.3 1.1-2.1 2.8-2.1 1.2 0 2.4.2 3.4.4v1.2c-.8 1.5-2.2 2.5-3.8 2.5zM22.5 19.8c-.3.4-.8.5-1.2.3-4.2-2.5-10.4-3.1-15.5-1.7-.5.1-1-.1-1.2-.6-.2-.5.1-1 .6-1.2 5.8-1.5 12.6-.9 17.3 1.8.4.3.5.9.2 1.4h-.2z"/></svg>
                   <span>${t('featured.buyAmazon')}</span>
-                  <span class="csa-badge-edition">(${t('featured.paperbackBadge')})</span>
                 </a>
               ` : `
                 <button type="button" class="csa-btn csa-btn-disabled csa-btn-block" disabled>
@@ -698,6 +819,57 @@
       const b2 = window.CSA_BOOKS_DATA.books.find(b => b.id === 'csa-vol2');
       const url = getAmazonPaperbackUrl(b2, currentLang);
       if (url) vol2Btn.href = url;
+    }
+
+    const grid = document.getElementById('cantiere-episodes-grid');
+    if (grid && window.CSA_BOOKS_DATA) {
+      const episodes = window.CSA_BOOKS_DATA.books.filter(b => b.category === 'cantiere' && b.id !== 'csa-vol1' && b.id !== 'csa-vol2');
+      grid.innerHTML = episodes.map((book, idx) => {
+        const title = (book.title && book.title[currentLang]) || book.title['it'];
+        const subtitle = (book.subtitle && book.subtitle[currentLang]) || book.subtitle['it'] || `Volume ${idx + 1}`;
+        const pitch = (book.pitch && book.pitch[currentLang]) || book.pitch['it'];
+        const cover = getBookCover(book.id, currentLang);
+        const amazonUrl = getAmazonPaperbackUrl(book, currentLang);
+
+        return `
+          <article class="csa-book-card" data-book-id="${book.id}">
+            <div class="csa-card-cover-wrapper" onclick="window.openBookModal('${book.id}')">
+              <img src="${cover}" alt="${title}" class="csa-card-cover-img" loading="lazy" />
+              <div class="csa-card-cover-overlay">
+                <span class="csa-btn csa-btn-primary csa-btn-sm">${t('featured.readSample')}</span>
+              </div>
+            </div>
+            <div class="csa-card-content">
+              <div class="csa-card-meta">
+                <span class="csa-badge csa-badge-age">${book.age} ${t('ages.age2to5').split(' ')[1] || 'anni'}</span>
+                <span class="csa-badge csa-badge-cantiere">${subtitle}</span>
+              </div>
+              <h3 class="csa-card-title" onclick="window.openBookModal('${book.id}')">${title}</h3>
+              <p class="csa-card-pitch">${pitch}</p>
+              <div class="csa-card-actions">
+                ${amazonUrl ? `
+                  <a 
+                    href="${amazonUrl}" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="csa-btn csa-btn-amazon csa-btn-block"
+                    onclick="window.trackAmazonClick('${book.id}', '${amazonUrl}')"
+                  >
+                    <span>${t('featured.buyAmazon')}</span>
+                  </a>
+                ` : `
+                  <button type="button" class="csa-btn csa-btn-disabled csa-btn-block" disabled>
+                    <span>${t('featured.comingSoon')}</span>
+                  </button>
+                `}
+                <button type="button" class="csa-btn csa-btn-secondary csa-btn-block" onclick="window.openBookModal('${book.id}')">
+                  ${t('featured.viewDetails')}
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
     }
   }
 

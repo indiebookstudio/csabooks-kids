@@ -312,6 +312,22 @@ window.BOOKS_MANIFEST = {
       "pageCount": 9
     }
   },
+  "csa-09-leo-rudy-savana": {
+    "it": {
+      "cover": "books/csa-09-leo-rudy-savana/it/cover.png",
+      "back": "books/csa-09-leo-rudy-savana/it/back.png",
+      "interiors": [
+        "books/csa-09-leo-rudy-savana/it/interiors/01.png",
+        "books/csa-09-leo-rudy-savana/it/interiors/02.png",
+        "books/csa-09-leo-rudy-savana/it/interiors/03.png",
+        "books/csa-09-leo-rudy-savana/it/interiors/04.png",
+        "books/csa-09-leo-rudy-savana/it/interiors/05.png",
+        "books/csa-09-leo-rudy-savana/it/interiors/06.png",
+        "books/csa-09-leo-rudy-savana/it/interiors/07.png"
+      ],
+      "pageCount": 9
+    }
+  },
   "csa-vol1": {
     "it": {
       "cover": "books/csa-vol1/it/cover.png",

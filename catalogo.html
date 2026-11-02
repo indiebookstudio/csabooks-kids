@@ -124,6 +124,61 @@
               <span class="lang-code">JP</span>
             </button>
           </div>
+          <!-- Mobile Dropdown (<= 900px) -->
+          <div class="lang-mobile-select" id="lang-mobile-select">
+            <button type="button" class="lang-mobile-trigger" id="lang-mobile-trigger" aria-haspopup="listbox" aria-expanded="false" onclick="window.toggleMobileLangDropdown && window.toggleMobileLangDropdown(event)">
+              <img src="https://flagcdn.com/24x18/it.png" alt="IT" class="lang-mobile-flag" id="lang-mobile-flag">
+              <span class="lang-mobile-code" id="lang-mobile-code">IT</span>
+              <svg class="lang-mobile-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="lang-mobile-dropdown" id="lang-mobile-dropdown" role="listbox">
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="it" role="option" onclick="setLanguage('it')">
+                <img src="https://flagcdn.com/24x18/it.png" alt="Italiano" class="lang-flag-img">
+                <span class="lang-mobile-name">Italiano</span>
+                <span class="lang-mobile-short">IT</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="en" role="option" onclick="setLanguage('en')">
+                <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="lang-flag-img">
+                <span class="lang-mobile-name">English</span>
+                <span class="lang-mobile-short">EN</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="de" role="option" onclick="setLanguage('de')">
+                <img src="https://flagcdn.com/24x18/de.png" alt="Deutsch" class="lang-flag-img">
+                <span class="lang-mobile-name">Deutsch</span>
+                <span class="lang-mobile-short">DE</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="fr" role="option" onclick="setLanguage('fr')">
+                <img src="https://flagcdn.com/24x18/fr.png" alt="Français" class="lang-flag-img">
+                <span class="lang-mobile-name">Français</span>
+                <span class="lang-mobile-short">FR</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="es" role="option" onclick="setLanguage('es')">
+                <img src="https://flagcdn.com/24x18/es.png" alt="Español" class="lang-flag-img">
+                <span class="lang-mobile-name">Español</span>
+                <span class="lang-mobile-short">ES</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="nl" role="option" onclick="setLanguage('nl')">
+                <img src="https://flagcdn.com/24x18/nl.png" alt="Nederlands" class="lang-flag-img">
+                <span class="lang-mobile-name">Nederlands</span>
+                <span class="lang-mobile-short">NL</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="pl" role="option" onclick="setLanguage('pl')">
+                <img src="https://flagcdn.com/24x18/pl.png" alt="Polski" class="lang-flag-img">
+                <span class="lang-mobile-name">Polski</span>
+                <span class="lang-mobile-short">PL</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="se" role="option" onclick="setLanguage('se')">
+                <img src="https://flagcdn.com/24x18/se.png" alt="Svenska" class="lang-flag-img">
+                <span class="lang-mobile-name">Svenska</span>
+                <span class="lang-mobile-short">SE</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="jp" role="option" onclick="setLanguage('jp')">
+                <img src="https://flagcdn.com/24x18/jp.png" alt="日本語" class="lang-flag-img">
+                <span class="lang-mobile-name">日本語</span>
+                <span class="lang-mobile-short">JP</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -187,7 +242,6 @@
   <main class="csa-section">
     <div class="csa-container">
       <div class="csa-section-header">
-        <span class="csa-section-eyebrow" data-i18n="catalog.eyebrow">Catalogo Completo</span>
         <h1 class="csa-section-title" data-i18n="catalog.title">Tutti i libri CSA Books Kids</h1>
         <p class="csa-section-subtitle" data-i18n="catalog.subtitle">
           Sfoglia l'intero catalogo editoriale, filtra per categoria ed esplora le edizioni disponibili.
@@ -208,8 +262,9 @@
           <button type="button" class="csa-filter-pill-btn csa-cat-filter-btn" data-cat="scienza" onclick="window.setCatalogCatFilter('scienza')" data-i18n="nav.scienza">
             Scienza e curiosità
           </button>
-          <button type="button" class="csa-filter-pill-btn csa-cat-filter-btn" data-cat="scuola" onclick="window.setCatalogCatFilter('scuola')" data-i18n="nav.scuola">
-            Per la scuola
+          <button type="button" class="csa-filter-pill-btn csa-pill-disabled" disabled aria-disabled="true" title="In arrivo">
+            <span data-i18n="nav.scuola">Per la scuola</span>
+            <span class="csa-badge-soon">Coming Soon</span>
           </button>
           <button type="button" class="csa-filter-pill-btn csa-cat-filter-btn" data-cat="creativita" onclick="window.setCatalogCatFilter('creativita')" data-i18n="nav.colorare">
             Da colorare

@@ -15,7 +15,7 @@
   <title>Scienza e curiosità — CSA Books Kids</title>
 
   <!-- SEO & Social Meta -->
-  <meta name="description" content="Libri di divulgazione scientifica per ragazzi e bambini 7-12 anni. Scopri Einstein, questa te la sei persa! di Clara Musicco con 57 scoperte autentiche e il portale interattivo di Otto." />
+  <meta name="description" content="Libri di divulgazione scientifica per ragazzi e bambini 7-12 anni. Scopri Einstein, questa te la sei persa! di Clara Musicco: 55 avventure nella scienza di oggi, scoperte autentiche e il portale interattivo di Otto." />
   <meta name="author" content="Clara Musicco - CSA Books Kids" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://csabookskids.com/scienza.html" />
@@ -23,7 +23,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="book" />
   <meta property="og:title" content="Scienza e curiosità — Einstein, questa te la sei persa!" />
-  <meta property="og:description" content="57 scoperte scientifiche autentiche, dinosauri, spazio, tecnologia e un portale interattivo 3D con la mascotte Otto." />
+  <meta property="og:description" content="55 avventure nella scienza di oggi, scoperte scientifiche autentiche, dinosauri, spazio, tecnologia e un portale interattivo 3D con la mascotte Otto." />
   <meta property="og:image" content="books/einstein/it/cover.png" />
 
   <!-- Google Fonts -->
@@ -83,6 +83,61 @@
             <button type="button" class="lang-btn" data-lang="se" onclick="setLanguage('se')"><img src="https://flagcdn.com/24x18/se.png" width="18" height="13" alt="SE" class="lang-flag-img"><span class="lang-code">SE</span></button>
             <button type="button" class="lang-btn" data-lang="jp" onclick="setLanguage('jp')"><img src="https://flagcdn.com/24x18/jp.png" width="18" height="13" alt="JP" class="lang-flag-img"><span class="lang-code">JP</span></button>
           </div>
+          <!-- Mobile Dropdown (<= 900px) -->
+          <div class="lang-mobile-select" id="lang-mobile-select">
+            <button type="button" class="lang-mobile-trigger" id="lang-mobile-trigger" aria-haspopup="listbox" aria-expanded="false" onclick="window.toggleMobileLangDropdown && window.toggleMobileLangDropdown(event)">
+              <img src="https://flagcdn.com/24x18/it.png" alt="IT" class="lang-mobile-flag" id="lang-mobile-flag">
+              <span class="lang-mobile-code" id="lang-mobile-code">IT</span>
+              <svg class="lang-mobile-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="lang-mobile-dropdown" id="lang-mobile-dropdown" role="listbox">
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="it" role="option" onclick="setLanguage('it')">
+                <img src="https://flagcdn.com/24x18/it.png" alt="Italiano" class="lang-flag-img">
+                <span class="lang-mobile-name">Italiano</span>
+                <span class="lang-mobile-short">IT</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="en" role="option" onclick="setLanguage('en')">
+                <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="lang-flag-img">
+                <span class="lang-mobile-name">English</span>
+                <span class="lang-mobile-short">EN</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="de" role="option" onclick="setLanguage('de')">
+                <img src="https://flagcdn.com/24x18/de.png" alt="Deutsch" class="lang-flag-img">
+                <span class="lang-mobile-name">Deutsch</span>
+                <span class="lang-mobile-short">DE</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="fr" role="option" onclick="setLanguage('fr')">
+                <img src="https://flagcdn.com/24x18/fr.png" alt="Français" class="lang-flag-img">
+                <span class="lang-mobile-name">Français</span>
+                <span class="lang-mobile-short">FR</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="es" role="option" onclick="setLanguage('es')">
+                <img src="https://flagcdn.com/24x18/es.png" alt="Español" class="lang-flag-img">
+                <span class="lang-mobile-name">Español</span>
+                <span class="lang-mobile-short">ES</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="nl" role="option" onclick="setLanguage('nl')">
+                <img src="https://flagcdn.com/24x18/nl.png" alt="Nederlands" class="lang-flag-img">
+                <span class="lang-mobile-name">Nederlands</span>
+                <span class="lang-mobile-short">NL</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="pl" role="option" onclick="setLanguage('pl')">
+                <img src="https://flagcdn.com/24x18/pl.png" alt="Polski" class="lang-flag-img">
+                <span class="lang-mobile-name">Polski</span>
+                <span class="lang-mobile-short">PL</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="se" role="option" onclick="setLanguage('se')">
+                <img src="https://flagcdn.com/24x18/se.png" alt="Svenska" class="lang-flag-img">
+                <span class="lang-mobile-name">Svenska</span>
+                <span class="lang-mobile-short">SE</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="jp" role="option" onclick="setLanguage('jp')">
+                <img src="https://flagcdn.com/24x18/jp.png" alt="日本語" class="lang-flag-img">
+                <span class="lang-mobile-name">日本語</span>
+                <span class="lang-mobile-short">JP</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -130,10 +185,13 @@
             <span class="csa-hero-badge" style="color: #0369a1; border-color: #bae6fd;">Divulgazione Scientifica · 7–12 anni</span>
             <h1 class="csa-hero-title">Einstein, questa te la sei persa!</h1>
             <p class="csa-hero-subtitle" style="color: #0c4a6e;">
-              Di Clara Musicco. Un viaggio entusiasmante tra 57 scoperte della scienza moderna, dinosauri piumati, buchi neri, robot, animali sorprendenti e il segreto del portale interattivo della mascotte Otto.
+              Di Clara Musicco. 55 avventure nella scienza di oggi | 55 scoperte vere! Dinosauri piumati, buchi neri, robot, animali sorprendenti e il segreto del portale interattivo della mascotte Otto.
             </p>
             <div class="csa-hero-ctas">
-              <button type="button" class="csa-btn csa-btn-primary csa-btn-lg" onclick="window.openBookModal('einstein')">
+              <a id="csa-einstein-buy-btn" href="https://www.amazon.it/dp/B0HP6YD1CM" target="_blank" rel="noopener noreferrer" class="csa-btn csa-btn-amazon csa-btn-lg">
+                Acquista su Amazon
+              </a>
+              <button type="button" class="csa-btn csa-btn-secondary csa-btn-lg" onclick="window.openBookModal('einstein')">
                 Sfoglia l'anteprima interna
               </button>
             </div>
@@ -151,7 +209,6 @@
     <section class="csa-section" style="background: #ffffff;">
       <div class="csa-container">
         <div class="csa-section-header">
-          <span class="csa-section-eyebrow">Rigore &amp; Meraviglia</span>
           <h2 class="csa-section-title">Cosa rende unico questo libro</h2>
           <p class="csa-section-subtitle">
             Un'opera che unisce una narrazione vivace con l'affidabilità delle grandi riviste e università scientifiche mondiali.
@@ -162,9 +219,9 @@
           <!-- 1 -->
           <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 16px; padding: 28px;">
             <div style="font-size: 2rem; margin-bottom: 12px;">🔬</div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">57 Scoperte Verificate</h3>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">55 Scoperte Verificate</h3>
             <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">
-              Dalle onde gravitazionali al telescopio James Webb, dai dinosauri piumati all'intelligenza animale: storie vere con codici di riferimento alle fonti storiche (SC-00 fino a SC-55).
+              Dalle onde gravitazionali al telescopio James Webb, dai dinosauri piumati all'intelligenza animale: storie vere con codici di riferimento alle fonti storiche (SC-01 fino a SC-55).
             </p>
           </div>
 
@@ -195,7 +252,6 @@
         <div class="csa-brand-banner" style="background: linear-gradient(135deg, #e0f2fe 0%, #ecfdf5 100%); border-color: #a7f3d0;">
           <div style="display: grid; grid-template-columns: 1.3fr 0.7fr; align-items: center; gap: 40px;">
             <div>
-              <span class="csa-section-eyebrow" style="color: #059669;">Esperienza Digitale Inclusa</span>
               <h2 class="csa-banner-title">Il mondo segreto di Otto</h2>
               <p class="csa-banner-text">
                 Il libro è finito. Le scoperte no! Attraverso il portale multimediale accessibile via QR code, i lettori possono esplorare il Museo delle Scoperte Impossibili, cimentarsi in simulazioni fisiche 3D e scaricare giochi da fare in famiglia.

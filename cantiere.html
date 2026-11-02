@@ -83,6 +83,61 @@
             <button type="button" class="lang-btn" data-lang="se" onclick="setLanguage('se')"><img src="https://flagcdn.com/24x18/se.png" width="18" height="13" alt="SE" class="lang-flag-img"><span class="lang-code">SE</span></button>
             <button type="button" class="lang-btn" data-lang="jp" onclick="setLanguage('jp')"><img src="https://flagcdn.com/24x18/jp.png" width="18" height="13" alt="JP" class="lang-flag-img"><span class="lang-code">JP</span></button>
           </div>
+          <!-- Mobile Dropdown (<= 900px) -->
+          <div class="lang-mobile-select" id="lang-mobile-select">
+            <button type="button" class="lang-mobile-trigger" id="lang-mobile-trigger" aria-haspopup="listbox" aria-expanded="false" onclick="window.toggleMobileLangDropdown && window.toggleMobileLangDropdown(event)">
+              <img src="https://flagcdn.com/24x18/it.png" alt="IT" class="lang-mobile-flag" id="lang-mobile-flag">
+              <span class="lang-mobile-code" id="lang-mobile-code">IT</span>
+              <svg class="lang-mobile-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="lang-mobile-dropdown" id="lang-mobile-dropdown" role="listbox">
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="it" role="option" onclick="setLanguage('it')">
+                <img src="https://flagcdn.com/24x18/it.png" alt="Italiano" class="lang-flag-img">
+                <span class="lang-mobile-name">Italiano</span>
+                <span class="lang-mobile-short">IT</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="en" role="option" onclick="setLanguage('en')">
+                <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="lang-flag-img">
+                <span class="lang-mobile-name">English</span>
+                <span class="lang-mobile-short">EN</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="de" role="option" onclick="setLanguage('de')">
+                <img src="https://flagcdn.com/24x18/de.png" alt="Deutsch" class="lang-flag-img">
+                <span class="lang-mobile-name">Deutsch</span>
+                <span class="lang-mobile-short">DE</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="fr" role="option" onclick="setLanguage('fr')">
+                <img src="https://flagcdn.com/24x18/fr.png" alt="Français" class="lang-flag-img">
+                <span class="lang-mobile-name">Français</span>
+                <span class="lang-mobile-short">FR</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="es" role="option" onclick="setLanguage('es')">
+                <img src="https://flagcdn.com/24x18/es.png" alt="Español" class="lang-flag-img">
+                <span class="lang-mobile-name">Español</span>
+                <span class="lang-mobile-short">ES</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="nl" role="option" onclick="setLanguage('nl')">
+                <img src="https://flagcdn.com/24x18/nl.png" alt="Nederlands" class="lang-flag-img">
+                <span class="lang-mobile-name">Nederlands</span>
+                <span class="lang-mobile-short">NL</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="pl" role="option" onclick="setLanguage('pl')">
+                <img src="https://flagcdn.com/24x18/pl.png" alt="Polski" class="lang-flag-img">
+                <span class="lang-mobile-name">Polski</span>
+                <span class="lang-mobile-short">PL</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="se" role="option" onclick="setLanguage('se')">
+                <img src="https://flagcdn.com/24x18/se.png" alt="Svenska" class="lang-flag-img">
+                <span class="lang-mobile-name">Svenska</span>
+                <span class="lang-mobile-short">SE</span>
+              </button>
+              <button type="button" class="lang-mobile-item lang-btn" data-lang="jp" role="option" onclick="setLanguage('jp')">
+                <img src="https://flagcdn.com/24x18/jp.png" alt="日本語" class="lang-flag-img">
+                <span class="lang-mobile-name">日本語</span>
+                <span class="lang-mobile-short">JP</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -149,7 +204,6 @@
     <section class="csa-section" id="raccolte">
       <div class="csa-container">
         <div class="csa-section-header">
-          <span class="csa-section-eyebrow" style="color: #d97706;">Le Grandi Raccolte</span>
           <h2 class="csa-section-title">Quattro storie complete in ogni volume</h2>
           <p class="csa-section-subtitle">
             Edizioni speciali in grande formato (21,5 × 28 cm) con testi in rima, copertina flessibile di pregio e codici QR con contenuti multimediali in regalo.
@@ -174,8 +228,7 @@
               </p>
               <div class="csa-card-actions">
                 <a id="csa-cantiere-vol1-buy" href="https://www.amazon.it/dp/B0HN4QMLV1" target="_blank" rel="noopener noreferrer" class="csa-btn csa-btn-amazon csa-btn-block">
-                  <svg class="csa-amazon-icon" viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M13.9 12.8c-1.3-.2-2.8-.4-4.2-.4-3.6 0-5.7 1.7-5.7 4.2 0 2.4 1.8 3.8 4.6 3.8 2.2 0 3.9-.9 4.8-2.3v2.1h3.3v-9c0-3.1-2.4-4.8-6.4-4.8-3.4 0-5.8 1.4-6.3 3.6l3 .5c.3-1.1 1.6-1.7 3.3-1.7 2.1 0 3.1.9 3.1 2.5v1.5zm-3.8 5.6c-1.5 0-2.4-.8-2.4-2 0-1.3 1.1-2.1 2.8-2.1 1.2 0 2.4.2 3.4.4v1.2c-.8 1.5-2.2 2.5-3.8 2.5zM22.5 19.8c-.3.4-.8.5-1.2.3-4.2-2.5-10.4-3.1-15.5-1.7-.5.1-1-.1-1.2-.6-.2-.5.1-1 .6-1.2 5.8-1.5 12.6-.9 17.3 1.8.4.3.5.9.2 1.4h-.2z"/></svg>
-                  <span>Acquista su Amazon</span> (Paperback)
+                  <span>Acquista su Amazon</span>
                 </a>
                 <button type="button" class="csa-btn csa-btn-secondary csa-btn-block" onclick="window.openBookModal('csa-vol1')">Dettagli e anteprima</button>
               </div>
@@ -199,8 +252,7 @@
               </p>
               <div class="csa-card-actions">
                 <a id="csa-cantiere-vol2-buy" href="https://www.amazon.it/dp/B0HN9G1V81" target="_blank" rel="noopener noreferrer" class="csa-btn csa-btn-amazon csa-btn-block">
-                  <svg class="csa-amazon-icon" viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M13.9 12.8c-1.3-.2-2.8-.4-4.2-.4-3.6 0-5.7 1.7-5.7 4.2 0 2.4 1.8 3.8 4.6 3.8 2.2 0 3.9-.9 4.8-2.3v2.1h3.3v-9c0-3.1-2.4-4.8-6.4-4.8-3.4 0-5.8 1.4-6.3 3.6l3 .5c.3-1.1 1.6-1.7 3.3-1.7 2.1 0 3.1.9 3.1 2.5v1.5zm-3.8 5.6c-1.5 0-2.4-.8-2.4-2 0-1.3 1.1-2.1 2.8-2.1 1.2 0 2.4.2 3.4.4v1.2c-.8 1.5-2.2 2.5-3.8 2.5zM22.5 19.8c-.3.4-.8.5-1.2.3-4.2-2.5-10.4-3.1-15.5-1.7-.5.1-1-.1-1.2-.6-.2-.5.1-1 .6-1.2 5.8-1.5 12.6-.9 17.3 1.8.4.3.5.9.2 1.4h-.2z"/></svg>
-                  <span>Acquista su Amazon</span> (Paperback)
+                  <span>Acquista su Amazon</span>
                 </a>
                 <button type="button" class="csa-btn csa-btn-secondary csa-btn-block" onclick="window.openBookModal('csa-vol2')">Dettagli e anteprima</button>
               </div>
@@ -210,11 +262,25 @@
       </div>
     </section>
 
+    <!-- SEZIONE TUTTI GLI EPISODI DEL CANTIERE (Vol. 1-9) -->
+    <section class="csa-section" id="episodi" style="background: #ffffff;">
+      <div class="csa-container">
+        <div class="csa-section-header">
+          <h2 class="csa-section-title">Tutti gli Episodi Singoli</h2>
+          <p class="csa-section-subtitle">
+            Tutte le 9 singole storie illustrate in rima per bambini 2-5 anni. Include l'attesissima missione di Leo e Rudy nella Savana!
+          </p>
+        </div>
+        <div class="csa-books-grid" id="cantiere-episodes-grid">
+          <!-- Popolato dinamicamente da app-2.0.js -->
+        </div>
+      </div>
+    </section>
+
     <!-- I Personaggi del Cantiere -->
     <section class="csa-section" id="personaggi" style="background: #ffffff;">
       <div class="csa-container">
         <div class="csa-section-header">
-          <span class="csa-section-eyebrow">La Squadra del Cantiere</span>
           <h2 class="csa-section-title">Incontra i protagonisti</h2>
           <p class="csa-section-subtitle">
             Ciascun veicolo ha un carattere unico e positivo con cui i bambini si identificano subito.
@@ -267,7 +333,6 @@
       <div class="csa-container">
         <div class="csa-brand-banner" style="background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%); border-color: #fde68a;">
           <div style="text-align: center; max-width: 650px; margin: 0 auto;">
-            <span class="csa-section-eyebrow" style="color: #b45309;">Multimedia &amp; Read-Aloud</span>
             <h2 class="csa-banner-title">Ascolta e guarda le storie ovunque</h2>
             <p class="csa-banner-text">
               Le Avventure del Cantiere sono disponibili anche in formato video narrato su YouTube e in podcast ufficiale su Spotify, in italiano, inglese e francese.

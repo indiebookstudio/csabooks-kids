@@ -141,8 +141,8 @@
       "format": "paperback",
       "title": {
         "it": "Einstein, questa te la sei persa!",
-        "en": "Einstein, You Missed This!",
-        "fr": "Einstein, tu as manqué ça !",
+        "en": "Einstein You Missed This!",
+        "fr": "Einstein, tu as raté ça !",
         "es": "¡Einstein, esta te la perdiste!",
         "de": "Einstein, das hast du verpasst!",
         "nl": "Einstein, dit heb je gemist!",
@@ -151,98 +151,80 @@
         "jp": "アインシュタイン、これを見逃したね！"
       },
       "subtitle": {
-        "it": "Dinosauri, animali straordinari, spazio e invenzioni incredibili. Storie vere per menti curiose.",
-        "en": "Dinosaurs, extraordinary animals, space, and incredible inventions. True stories for curious minds.",
-        "fr": "Dinosaures, animaux extraordinaires, espace et inventions incroyables. De vraies histoires pour esprits curieux.",
-        "es": "Dinosaurios, animales extraordinarios, espacio e inventos increíbles. Historias reales para mentes curiosas.",
-        "de": "Dinosaurier, faszinierende Tiere, Weltall und Erfindungen. Wahre Geschichten für neugierige Köpfe.",
-        "nl": "Dinosaurussen, buitengewone dieren, ruimte en uitvindingen. Waargebeurde verhalen voor nieuwsgierigen.",
-        "pl": "Dinozaury, niezwykłe zwierzęta, kosmos i wynalazki. Prawdziwe historie dla ciekawskich umysłów.",
-        "se": "Dinosaurier, fantastiska djur, rymden och uppfinningar. Sanna berättelser för nyfikna hjärnor.",
-        "jp": "恐竜、めずらしい動物、宇宙、大発明。好奇心旺盛な子どものための本物の科学物語。"
+        "it": "Dinosauri, spazio e invenzioni incredibili: 55 avventure nella scienza di oggi | Il grande libro illustrato per bambini curiosi dai 7 ai 12 anni",
+        "en": "Dinosaurs, Space and Amazing Inventions: 55 Adventures in Modern Science | The Big Illustrated Book for Curious Kids Ages 7-12",
+        "fr": "Dinosaures, espace et inventions étonnantes: 55 aventures au cœur de la science d’aujourd’hui | Le grand livre illustré pour les enfants curieux de 7 à 12 ans",
+        "es": "Dinosaurios, espacio e inventos increíbles: 55 aventuras en la ciencia actual para niños curiosos",
+        "de": "Dinosaurier, Weltall und erstaunliche Erfindungen: 55 Abenteuer in der modernen Wissenschaft",
+        "nl": "Dinosaurussen, ruimte en uitvindingen: 55 avonturen in de hedendaagse wetenschap",
+        "pl": "Dinozaury, kosmos i wynalazki: 55 przygód we współczesnej nauce",
+        "se": "Dinosaurier, rymden och fantastiska uppfinningar: 55 äventyr i modern vetenskap",
+        "jp": "恐竜、宇宙、大発明：現代科学の55の大冒険"
       },
       "pitch": {
-        "it": "Cosa accadrebbe se Albert Einstein tornasse oggi tra noi e scoprisse tutto ciò che la scienza ha rivelato dopo di lui? Un viaggio illustrato avvincente tra 57 scoperte autentiche, verificate e documentate, con un portale segreto interattivo accessibile tramite QR code.",
-        "en": "What if Albert Einstein returned today to discover everything science uncovered after him? A captivating illustrated journey across 57 documented discoveries, complete with an interactive secret QR portal.",
-        "fr": "Que se passerait-il si Albert Einstein revenait aujourd'hui découvrir les merveilles scientifiques d'après son époque ? Un voyage illustré fascinant parmi 57 découvertes vérifiées avec un portale QR interactif.",
-        "es": "Un viaje ilustrado fascinante por descubrimientos científicos asombrosos con un portal QR interactivo.",
-        "de": "Eine faszinierende illustrierte Reise durch 57 verifizierte wissenschaftliche Entdeckungen mit interaktivem QR-Portal.",
-        "nl": "Een meeslepende reis langs 57 wetenschappelijke ontdekkingen met een interactief QR-portaal.",
-        "pl": "Fascynująca ilustrowana podróż przez 57 naukowych odkryć z interaktywnym portalem QR.",
-        "se": "En fängslande illustrerad resa genom 57 vetenskapliga upptäckter med interaktiv QR-portal.",
-        "jp": "57の科学的大発見を美しいイラストとインタラクティブなQRコンテンツで探究する本。"
+        "it": "55 scoperte vere. Mille domande nuove. Un viaggio straordinario nella scienza! Un polpo può cacciare in squadra con i pesci? Un robot può ricevere comandi da un fungo? E come si può fotografare un buco nero, se nemmeno la luce riesce a uscirne? Sembrano storie inventate. E invece è tutto vero! Einstein, questa te la sei persa! è un grande libro illustrato di divulgazione scientifica per bambini e ragazzi dai 7 ai 12 anni, pensato per trasformare la curiosità in una voglia irresistibile di scoprire.",
+        "en": "What would surprise Einstein about science today? An octopus that teams up with fish. A fern with far more DNA than a human. Robots inspired by animals. Worlds revealed by the light of distant stars. Einstein You Missed This! takes curious readers ages 7-12 on 55 adventures through modern science, from extraordinary animals and feathered dinosaurs to remarkable inventions, medical breakthroughs and the next frontier in space.",
+        "fr": "Et si une poule était un dinosaure ? Si un poisson pouvait conduire ? Et si les baleines savaient fabriquer des filets avec des bulles ? Ce ne sont pas des histoires inventées. Ce sont de vraies découvertes scientifiques. Et elles sont encore plus étonnantes que la fiction ! Avec Einstein, tu as raté ça !, les enfants de 7 à 12 ans partent pour 55 aventures illustrées au cœur de la science d’aujourd’hui.",
+        "es": "¡55 descubrimientos científicos reales y fascinantes para niños de 7 a 12 años! Con Otto el pulpo explorador.",
+        "de": "55 verblüffende wissenschaftliche Entdeckungen für neugierige Kinder von 7 bis 12 Jahren.",
+        "nl": "55 waargebeurde wetenschappelijke ontdekkingen voor nieuwsgierige kinderen van 7 tot 12 jaar.",
+        "pl": "55 prawdziwych odkryć naukowych dla ciekawskich dzieci w wieku 7–12 lat.",
+        "se": "55 verkliga vetenskapliga upptäckter för nyfikna barn i åldrarna 7–12 år.",
+        "jp": "タコのオットーと一緒に現代科学の55の驚くべき真実をめぐる大冒険。"
       },
       "benefits": {
         "it": [
-          "57 schede scientifiche e storiche rigorosamente verificate su fonti accademiche",
-          "Mascotte Otto il polpo che guida i piccoli lettori con umorismo e intelligenza",
-          "Portale multimediale interattivo con 7 simulazioni 3D, videoteca, carte stampabili e museo web",
-          "Ideale per stimolare la passione scientifica e il pensiero critico a scuola e in famiglia"
+          "55 avventure nella scienza di oggi tra animali incredibili, dinosauri, DNA, robot, invenzioni e misteri dello spazio",
+          "Grandi illustrazioni a colori che accompagnano le spiegazioni e rendono le scoperte accessibili e affascinanti",
+          "Il dietro le quinte della scienza: prove raccolte, metodo scientifico e fonti verificabili",
+          "Piccole sfide, attività di osservazione, quiz e la simpatica mascotte Otto il polpo"
         ],
         "en": [
-          "57 scientifically verified discoveries with authentic citations",
-          "Otto the octopus mascot guiding readers with humor and curiosity",
-          "Secret interactive portal featuring 7 3D simulations, printable cards, and web museum",
-          "Sparks scientific passion and critical thinking for ages 7–12"
+          "55 adventures through modern science covering animals, plants, technology, space, and the human body",
+          "Short, accessible explanations with rich full-color illustrations for young explorers",
+          "Scientific sources, questions, simple activities, and quizzes to spark critical thinking",
+          "Otto the octopus mascot guiding readers through every discovery"
         ],
         "fr": [
-          "57 fiches scientifiques rigoureusement vérifiées sur des sources académiques",
-          "Otto la pieuvre comme guide complice et stimulant",
-          "Portail interactif secret avec simulations 3D, musée virtuel et cartes à imprimer",
-          "Développe l'esprit critique et l'amour de la science"
-        ],
-        "es": [
-          "57 fichas científicas verificadas con rigor",
-          "Otto el pulpo como compañero de exploración",
-          "Portal interactivo secreto con simulaciones 3D y museo virtual"
-        ],
-        "de": [
-          "57 wissenschaftlich belegte Entdeckungen",
-          "Krake Otto als humorvoller Begleiter",
-          "Interaktives Geheimportal mit 3D-Simulationen und virtuellem Museum"
-        ],
-        "nl": [
-          "57 wetenschappelijk geverifieerde ontdekkingen",
-          "Otto de octopus als vrolijke gids",
-          "Geheim interactief portaal met 3D-simulaties"
-        ],
-        "pl": [
-          "57 rzetelnie sprawdzonych odkryć naukowych",
-          "Ośmiornica Otto jako przewodnik pełen humoru",
-          "Interaktywny portal z symulacjami 3D"
-        ],
-        "se": [
-          "57 vetenskapligt granskade upptäckter",
-          "Bläckfisken Otto som nyfiken guide",
-          "Interaktiv portal med 3D-simuleringar"
-        ],
-        "jp": [
-          "学術的根拠に基づいた57の科学的発見",
-          "ユーモアあふれるタコのオットーがナビゲート",
-          "3Dシミュレーションやバーチャル博物館が楽しめるQRポータル付き"
+          "55 aventures scientifiques passionnantes inspirées de recherches réelles",
+          "De grandes illustrations en couleurs pour rendre les découvertes accessibles et captivantes",
+          "Des sources scientifiques vérifiables, quiz, glossaire et activités d'observation",
+          "Otto la pieuvre comme compagnon d'exploration avec des surprises à découvrir"
         ]
       },
       "editions": {
         "it": {
           "languageName": "Italiano",
           "title": "Einstein, questa te la sei persa!",
-          "available": false,
-          "note": "Pubblicato — Inserire ASIN paperback verificato",
-          "amazon": {}
+          "available": true,
+          "asin": "B0HP6YD1CM",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0HP6YD1CM",
+            "com": "https://www.amazon.com/dp/B0HP6YD1CM"
+          }
         },
         "en": {
           "languageName": "English",
-          "title": "Einstein, You Missed This!",
-          "available": false,
-          "note": "Published — Insert verified paperback ASIN",
-          "amazon": {}
+          "title": "Einstein You Missed This!",
+          "available": true,
+          "asin": "B0HPG9WFSR",
+          "amazon": {
+            "com": "https://www.amazon.com/dp/B0HPG9WFSR",
+            "uk": "https://www.amazon.co.uk/dp/B0HPG9WFSR",
+            "ca": "https://www.amazon.ca/dp/B0HPG9WFSR",
+            "it": "https://www.amazon.it/dp/B0HPG9WFSR"
+          }
         },
         "fr": {
           "languageName": "Français",
-          "title": "Einstein, tu as manqué ça !",
-          "available": false,
-          "note": "Publié — Insérer l'ASIN broché vérifié",
-          "amazon": {}
+          "title": "Einstein, tu as raté ça !",
+          "available": true,
+          "asin": "B0HQ1F1HX8",
+          "amazon": {
+            "fr": "https://www.amazon.fr/dp/B0HQ1F1HX8",
+            "com": "https://www.amazon.com/dp/B0HQ1F1HX8",
+            "it": "https://www.amazon.it/dp/B0HQ1F1HX8"
+          }
         },
         "es": {
           "languageName": "Español",
@@ -604,7 +586,7 @@
       "age": "7–8",
       "featured": false,
       "format": "paperback",
-      "status": "in_preparation",
+      "status": "coming_soon",
       "title": {
         "it": "La Bussola Misteriosa — Matematica 2ª Primaria",
         "en": "The Mysterious Compass — Math Grade 2",
@@ -696,7 +678,8 @@
           "note": "In preparazione per il nuovo anno scolastico",
           "amazon": {}
         }
-      }
+      },
+      "catalogVisible": false
     },
     {
       "id": "csa-01-benny-collina",
@@ -1345,6 +1328,76 @@
           "title": "Leo la grue et le nid de la mésange",
           "available": false,
           "amazon": {}
+        }
+      }
+    },
+    {
+      "id": "csa-09-leo-rudy-savana",
+      "category": "cantiere",
+      "author": "Marco Salucci",
+      "age": "2–5",
+      "featured": false,
+      "format": "paperback",
+      "title": {
+        "it": "Leo la gru & Rudy la ruspa in Missione Savana",
+        "en": "Leo the Crane & Rudy the Bulldozer in Savanna Mission",
+        "fr": "Léo la grue et Rudy le bulldozer en Mission Savane",
+        "de": "Leo der Kran & Rudy die Planierraupe auf Savannen-Mission",
+        "es": "Leo la grúa y Rudy la excavadora en Misión Sabana",
+        "nl": "Leo de kraan en Rudy de bulldozer op Savanne-missie",
+        "pl": "Dźwig Leo i spychacz Rudy na Misji Sawanna",
+        "se": "Kranen Leo och schaktmaskinen Rudy på Savannuppdrag",
+        "jp": "クレーンのレオとブルドーザーのルディ サバンナ大作戦"
+      },
+      "subtitle": {
+        "it": "Volume 9 delle Avventure del Cantiere",
+        "en": "Volume 9 of Construction Site Adventures",
+        "fr": "Tome 9 des Aventures du Chantier",
+        "de": "Band 9 der Baustellen-Abenteuer",
+        "es": "Volumen 9 de Las Aventuras de la Construcción",
+        "nl": "Deel 9 van Bouwplaats Avonturen",
+        "pl": "Tom 9 Przygód na Placu Budowy",
+        "se": "Del 9 av Byggarbetsplatsens Äventyr",
+        "jp": "工事現場の冒険 第9巻"
+      },
+      "pitch": {
+        "it": "Una trasferta straordinaria lontano dal cantiere di città! Leo la gru e Rudy la ruspa partono per una grande avventura nella savana africana, tra giraffe curiose, elefanti da aiutare e sfide emozionanti sotto il sole.",
+        "en": "An exciting mission far from the city site! Leo and Rudy travel to the African savanna to help wild animals and build something special.",
+        "fr": "Une mission extraordinaire en pleine savane africaine pour Léo et Rudy !",
+        "es": "¡Una gran aventura en la sabana africana para ayudar a los animales!",
+        "de": "Leo und Rudy erleben ein spannendes Abenteuer in der afrikanischen Savanne.",
+        "nl": "Leo en Rudy gaan op een spannend avontuur in de Afrikaanse savanne.",
+        "pl": "Niezwykła wyprawa Leo i Rudy'ego na afrykańską sawannę.",
+        "se": "Ett spännande uppdrag på den afrikanska savannen.",
+        "jp": "クレーンのレオとブルドーザーのルディがアフリカのサバンナへ！"
+      },
+      "benefits": {
+        "it": [
+          "Avventura mozzafiato con Leo e Rudy in un ambiente esotico e affascinante",
+          "Testi in rima perfetti per la lettura serale e ad alta voce",
+          "Insegna il rispetto per gli animali, la natura e il valore della cooperazione"
+        ],
+        "en": [
+          "Breathtaking adventure set in the African savanna",
+          "Engaging rhyming story perfect for bedtime read-aloud",
+          "Teaches animal respect, nature conservation, and teamwork"
+        ],
+        "fr": [
+          "Une aventure colorée au cœur de la faune sauvage",
+          "Rimes entraînantes et illustrations chaleureuses",
+          "Sensibilise au respect de la nature et à la solidarité"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Leo la gru & Rudy la ruspa in Missione Savana",
+          "available": true,
+          "asin": "B0HJRRRDMX",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0HJRRRDMX",
+            "com": "https://www.amazon.com/dp/B0HJRRRDMX"
+          }
         }
       }
     }
