@@ -1,11 +1,4 @@
-/**
- * data/i18n.js
- * Dizionario completo di internazionalizzazione (i18n) per CSA Books 4 Kids 2.0
- */
-(function() {
-  'use strict';
-
-  const SITE_I18N = {
+window.SITE_I18N = {
   "it": {
     "nav": {
       "home": "Home",
@@ -90,7 +83,10 @@
       "noResults": "Nessun libro corrisponde ai filtri selezionati.",
       "resetFilters": "Azzera filtri",
       "searchPlaceholder": "Cerca per titolo, autore o tema…",
-      "resultsCount": "libri trovati"
+      "resultsCount": "libri trovati",
+      "availableEditions": "Disponibile in:",
+      "italianEditionBadge": "Edizione Italiana",
+      "italianEditionOnly": "Edizione in lingua italiana"
     },
     "modal": {
       "close": "Chiudi finestra",
@@ -344,7 +340,10 @@
       "noResults": "No books match the selected filters.",
       "resetFilters": "Reset filters",
       "searchPlaceholder": "Search by title, author, or theme…",
-      "resultsCount": "books found"
+      "resultsCount": "books found",
+      "availableEditions": "Available in:",
+      "italianEditionBadge": "Italian Edition",
+      "italianEditionOnly": "Italian language edition"
     },
     "modal": {
       "close": "Close window",
@@ -598,7 +597,10 @@
       "noResults": "Keine Bücher für die ausgewählten Filter gefunden.",
       "resetFilters": "Filter zurücksetzen",
       "searchPlaceholder": "Nach Titel, Autor oder Thema suchen…",
-      "resultsCount": "Bücher gefunden"
+      "resultsCount": "Bücher gefunden",
+      "availableEditions": "Verfügbar in:",
+      "italianEditionBadge": "Italienische Ausgabe",
+      "italianEditionOnly": "Italienische Sprachausgabe"
     },
     "modal": {
       "close": "Fenster schließen",
@@ -852,7 +854,10 @@
       "noResults": "Aucun livre ne correspond aux filtres sélectionnés.",
       "resetFilters": "Réinitialiser les filtres",
       "searchPlaceholder": "Rechercher par titre, auteur ou thème…",
-      "resultsCount": "livres trouvés"
+      "resultsCount": "livres trouvés",
+      "availableEditions": "Disponible en :",
+      "italianEditionBadge": "Édition Italienne",
+      "italianEditionOnly": "Édition en langue italienne"
     },
     "modal": {
       "close": "Fermer la fenêtre",
@@ -1106,7 +1111,10 @@
       "noResults": "No se encontraron libros con los filtros seleccionados.",
       "resetFilters": "Restablecer filtros",
       "searchPlaceholder": "Buscar por título, autor o tema…",
-      "resultsCount": "libros encontrados"
+      "resultsCount": "libros encontrados",
+      "availableEditions": "Disponible en:",
+      "italianEditionBadge": "Edición Italiana",
+      "italianEditionOnly": "Edición en lengua italiana"
     },
     "modal": {
       "close": "Cerrar ventana",
@@ -1360,7 +1368,10 @@
       "noResults": "Geen boeken gevonden voor de geselecteerde filters.",
       "resetFilters": "Filters resetten",
       "searchPlaceholder": "Zoek op titel, auteur of onderwerp…",
-      "resultsCount": "boeken gevonden"
+      "resultsCount": "boeken gevonden",
+      "availableEditions": "Beschikbaar in:",
+      "italianEditionBadge": "Italiaanse Editie",
+      "italianEditionOnly": "Italiaanse taaleditie"
     },
     "modal": {
       "close": "Venster sluiten",
@@ -1614,7 +1625,10 @@
       "noResults": "Brak książek spełniających wybrane kryteria.",
       "resetFilters": "Wyczyść filtry",
       "searchPlaceholder": "Szukaj po tytule, autorze lub temacie…",
-      "resultsCount": "znalezionych książek"
+      "resultsCount": "znalezionych książek",
+      "availableEditions": "Dostępne w:",
+      "italianEditionBadge": "Wydanie Włoskie",
+      "italianEditionOnly": "Wydanie w języku włoskim"
     },
     "modal": {
       "close": "Zamknij okno",
@@ -1868,7 +1882,10 @@
       "noResults": "Inga böcker matchade de valda filtren.",
       "resetFilters": "Återställ filter",
       "searchPlaceholder": "Sök efter titel, författare eller tema…",
-      "resultsCount": "böcker hittades"
+      "resultsCount": "böcker hittades",
+      "availableEditions": "Tillgänglig på:",
+      "italianEditionBadge": "Italiensk Utgåva",
+      "italianEditionOnly": "Italiensk språkutgåva"
     },
     "modal": {
       "close": "Stäng fönster",
@@ -2122,7 +2139,10 @@
       "noResults": "条件に該当する本が見つかりませんでした。",
       "resetFilters": "条件をリセット",
       "searchPlaceholder": "タイトル、著者、キーワードで検索…",
-      "resultsCount": "冊の本が見つかりました"
+      "resultsCount": "冊の本が見つかりました",
+      "availableEditions": "対応言語：",
+      "italianEditionBadge": "イタリア語版",
+      "italianEditionOnly": "イタリア語版"
     },
     "modal": {
       "close": "閉じる",
@@ -2293,11 +2313,3 @@
     }
   }
 };
-
-  if (typeof module !== 'undefined' && module.exports) {
-    module.exports = SITE_I18N;
-  }
-  if (typeof window !== 'undefined') {
-    window.SITE_I18N = SITE_I18N;
-  }
-})();

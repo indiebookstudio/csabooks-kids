@@ -39,7 +39,7 @@
     // Fallback ad ASIN noti verificati
     const fallbackMap = {
       'csa-vol1': 'https://www.amazon.it/dp/B0HN4QMLV1',
-      'csa-vol2': 'https://www.amazon.it/dp/B0HN9G1V81',
+      'csa-vol2': 'https://www.amazon.it/dp/B0HPB2L59F',
       'einstein': lang === 'en' ? 'https://www.amazon.com/dp/B0HPG9WFSR' : (lang === 'fr' ? 'https://www.amazon.fr/dp/B0HQ1F1HX8' : 'https://www.amazon.it/dp/B0HP6YD1CM'),
       'fano': 'https://www.amazon.it/dp/B0HD2X6HVJ'
     };

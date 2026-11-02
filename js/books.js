@@ -234,10 +234,10 @@ const BOOKS = [
       "assets/construction-site-adventures/Bundle.Volume.2/IT/12.png",
       "assets/construction-site-adventures/Bundle.Volume.2/IT/Back.Cover.png"
     ],
-    "asin": "B0HN9G1V81",
+    "asin": "B0HPB2L59F",
     "amazon": {
-      "it": "B0HN9G1V81",
-      "com": "B0HN9G1V81"
+      "it": "B0HPB2L59F",
+      "com": "B0HPB2L59F"
     }
   },
   {

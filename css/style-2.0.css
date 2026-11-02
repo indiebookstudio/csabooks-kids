@@ -1711,3 +1711,61 @@ body.csa-modal-open {
 }
 
 
+
+/* Language Badges on Book Cards & Modals */
+.csa-card-languages {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 6px 0 10px 0;
+  font-size: 0.78rem;
+}
+.csa-card-languages .csa-lang-label {
+  font-size: 0.74rem;
+  color: var(--csa-text-muted, #64748b);
+  font-weight: 600;
+}
+.csa-card-languages .csa-lang-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+.csa-card-languages .csa-lang-pill.active {
+  background: #e0f2fe;
+  border-color: #0284c7;
+  color: #0369a1;
+}
+.csa-modal-edition-selector.single-edition {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.csa-edition-badge.single {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #f0fdf4;
+  border: 1.5px solid #86efac;
+  color: #166534;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.csa-story-translated {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #64748b;
+  font-weight: normal;
+}

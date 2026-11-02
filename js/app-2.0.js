@@ -273,12 +273,22 @@
     if (!book || !book.editions) return null;
     
     // Choose appropriate edition
-    const effLang = getEffectiveBookLang(lang);
-    let edKey = effLang;
+    let edKey = lang;
     if (!book.editions[edKey] || !book.editions[edKey].available) {
-      const availKeys = Object.keys(book.editions).filter(k => book.editions[k].available);
-      if (availKeys.length === 0) return null;
-      edKey = availKeys[0];
+      if (['nl', 'pl', 'se', 'jp'].includes(lang)) {
+        edKey = 'en';
+      }
+      if (!book.editions[edKey] || !book.editions[edKey].available) {
+        if (book.editions.en && book.editions.en.available) {
+          edKey = 'en';
+        } else if (book.editions.it && book.editions.it.available) {
+          edKey = 'it';
+        } else {
+          const availKeys = Object.keys(book.editions).filter(k => book.editions[k]?.available);
+          if (availKeys.length === 0) return null;
+          edKey = availKeys[0];
+        }
+      }
     }
 
     const edition = book.editions[edKey];
@@ -320,6 +330,43 @@
     return null;
   }
   window.getAmazonPaperbackUrl = getAmazonPaperbackUrl;
+
+  // Language Badges Renderer for Cards
+  function renderCardLanguageBadges(book, targetLang = currentLang) {
+    if (!book || !book.editions) return '';
+    const avail = Object.keys(book.editions).filter(k => book.editions[k] && book.editions[k].available);
+    if (avail.length === 0) return '';
+
+    const flagMap = { it: '🇮🇹', en: '🇬🇧', fr: '🇫🇷', de: '🇩🇪', es: '🇪🇸', nl: '🇳🇱', pl: '🇵🇱', se: '🇸🇪', jp: '🇯🇵' };
+    const nameMap = { it: 'IT', en: 'EN', fr: 'FR', de: 'DE', es: 'ES', nl: 'NL', pl: 'PL', se: 'SE', jp: 'JP' };
+
+    if (avail.length === 1 && avail[0] === 'it') {
+      const label = t('catalog.italianEditionBadge') || 'Edizione Italiana';
+      return `
+        <div class="csa-card-languages" title="${t('catalog.italianEditionOnly') || 'Edizione in lingua italiana'}">
+          <span class="csa-lang-pill active">🇮🇹 ${label}</span>
+        </div>
+      `;
+    }
+
+    const labelText = t('catalog.availableEditions') || 'Disponibile in:';
+    const pillsHtml = avail.map(k => {
+      const isCur = (k === targetLang) || (k === 'en' && ['nl', 'pl', 'se', 'jp', 'de', 'es'].includes(targetLang) && !avail.includes(targetLang));
+      return `
+        <span class="csa-lang-pill ${isCur ? 'active' : ''}">
+          ${flagMap[k] || ''} ${nameMap[k] || k.toUpperCase()}
+        </span>
+      `;
+    }).join('');
+
+    return `
+      <div class="csa-card-languages">
+        <span class="csa-lang-label">${labelText}</span>
+        ${pillsHtml}
+      </div>
+    `;
+  }
+  window.renderCardLanguageBadges = renderCardLanguageBadges;
 
   // Outbound tracking helper
   function trackAmazonClick(bookId, url) {
@@ -377,11 +424,18 @@
     if (!book) return;
 
     // Determine available edition
-    const effLang = getEffectiveBookLang(requestedLang);
-    let editionKey = effLang;
+    const availKeys = Object.keys(book.editions || {}).filter(k => book.editions[k]?.available);
+    let editionKey = requestedLang;
     if (!book.editions || !book.editions[editionKey] || !book.editions[editionKey].available) {
-      const availKeys = Object.keys(book.editions || {}).filter(k => book.editions[k].available);
-      editionKey = availKeys[0] || 'it';
+      if (['nl', 'pl', 'se', 'jp'].includes(requestedLang) && book.editions?.en?.available) {
+        editionKey = 'en';
+      } else if (book.editions?.en?.available) {
+        editionKey = 'en';
+      } else if (book.editions?.it?.available) {
+        editionKey = 'it';
+      } else {
+        editionKey = availKeys[0] || 'it';
+      }
     }
 
     activeModalState = {
@@ -512,6 +566,17 @@
           </div>
         </div>
       `;
+    } else if (availableEditions.length === 1) {
+      const ed = book.editions[availableEditions[0]];
+      const edName = ed.languageName || (availableEditions[0] === 'it' ? 'Italiano' : availableEditions[0].toUpperCase());
+      editionsHtml = `
+        <div class="csa-modal-edition-selector single-edition">
+          <span class="csa-modal-edition-label">${t('modal.editionSelect')}</span>
+          <span class="csa-edition-badge single">
+            ${availableEditions[0] === 'it' ? '🇮🇹 ' : ''}${edName} (${t('modal.paperback')})
+          </span>
+        </div>
+      `;
     }
 
     let storiesHtml = '';
@@ -520,7 +585,22 @@
         <div class="csa-modal-stories-box">
           <h4 class="csa-modal-subheading">${t('modal.storiesTitle')}</h4>
           <ul class="csa-modal-stories-list">
-            ${book.storiesIncluded.map(s => `<li><span class="csa-story-check">✓</span> ${s}</li>`).join('')}
+            ${book.storiesIncluded.map((s, idx) => {
+              let extraTitle = '';
+              if (currentLang !== 'it') {
+                const storyBookId = (book.id === 'csa-vol1')
+                  ? ['csa-01-benny-collina', 'csa-02-rudy-spiaggia', 'csa-03-leo-montagna', 'csa-04-bruno-papere'][idx]
+                  : ['csa-05-benny-roma', 'csa-06-nina-conigli', 'csa-07-rino-ladri', 'csa-08-leo-cinciallegra'][idx];
+                if (storyBookId) {
+                  const sb = data.books.find(b => b.id === storyBookId);
+                  const offTitle = sb?.title?.[currentLang] || sb?.title?.en;
+                  if (offTitle && offTitle !== s) {
+                    extraTitle = ` <span class="csa-story-translated">(${offTitle})</span>`;
+                  }
+                }
+              }
+              return `<li><span class="csa-story-check">✓</span> <strong>${s}</strong>${extraTitle}</li>`;
+            }).join('')}
           </ul>
         </div>
       `;
@@ -611,7 +691,7 @@
                 class="csa-btn csa-btn-amazon csa-btn-lg"
                 onclick="window.trackAmazonClick('${bookId}', '${amazonUrl}')"
               >
-                <span>${t('modal.buyAmazonPaperback')}</span>
+                <span>${t('modal.buyAmazonPaperback')}${availableEditions.length === 1 && availableEditions[0] === 'it' && currentLang !== 'it' ? ' (IT)' : ''}</span>
               </a>
             ` : `
               <button type="button" class="csa-btn csa-btn-disabled csa-btn-lg" disabled>
@@ -710,7 +790,7 @@
 
   // Render Featured Books in Homepage
   function renderFeaturedSection() {
-    const container = document.getElementById('csa-featured-books-grid');
+    const container = document.getElementById('csa-featured-books-grid') || document.getElementById('csa-featured-grid');
     if (!container) return;
 
     const data = window.CSA_BOOKS_DATA;
@@ -720,7 +800,7 @@
     const books = featuredIds
       .map(id => data.books.find(b => b.id === id))
       .filter(Boolean)
-      .filter(b => isBookAvailableInLang(b, currentLang));
+      .filter(b => Object.values(b.editions || {}).some(ed => ed && ed.available));
 
     const sectionEl = document.getElementById('in-primo-piano');
     if (sectionEl) {
@@ -740,10 +820,17 @@
 
     container.innerHTML = books.map(book => {
       const effLang = getEffectiveBookLang(currentLang);
-      const title = (book.title && (book.title[effLang] || book.title[currentLang] || book.title.it)) || '';
-      const subtitle = (book.subtitle && (book.subtitle[effLang] || book.subtitle[currentLang] || book.subtitle.it)) || '';
+      const title = (book.title && (book.title[currentLang] || book.title[effLang] || book.title.it)) || '';
+      const subtitle = (book.subtitle && (book.subtitle[currentLang] || book.subtitle[effLang] || book.subtitle.it)) || '';
       const amazonUrl = getAmazonPaperbackUrl(book, currentLang);
       const coverUrl = getBookCover(book.id, currentLang);
+      const langBadgesHtml = renderCardLanguageBadges(book, currentLang);
+
+      const availLangs = Object.keys(book.editions || {}).filter(k => book.editions[k]?.available);
+      const edKey = availLangs.includes(currentLang) ? currentLang : (availLangs.includes('en') ? 'en' : availLangs[0]);
+      const buyLabel = (edKey && edKey !== currentLang) 
+        ? `${t('featured.buyAmazon')} (${edKey.toUpperCase()})` 
+        : t('featured.buyAmazon');
 
       return `
         <article class="csa-book-card csa-featured-card" data-book-id="${book.id}">
@@ -765,6 +852,7 @@
             <span class="csa-card-author">${book.author}</span>
             <h3 class="csa-card-title" onclick="window.openBookModal('${book.id}')">${title}</h3>
             <p class="csa-card-subtitle">${subtitle}</p>
+            ${langBadgesHtml}
 
             <div class="csa-card-actions">
               ${amazonUrl ? `
@@ -775,7 +863,7 @@
                   class="csa-btn csa-btn-amazon csa-btn-block"
                   onclick="window.trackAmazonClick('${book.id}', '${amazonUrl}')"
                 >
-                  <span>${t('featured.buyAmazon')}</span>
+                  <span>${buyLabel}</span>
                 </a>
               ` : `
                 <button type="button" class="csa-btn csa-btn-disabled csa-btn-block" disabled>
@@ -805,8 +893,10 @@
     if (!data || !data.books) return;
 
     let filtered = data.books.filter(book => {
-      // Show only books available in the current language
-      if (!isBookAvailableInLang(book, currentLang)) return false;
+      // Must have at least one published edition
+      const availLangs = Object.keys(book.editions || {}).filter(k => book.editions[k]?.available);
+      if (availLangs.length === 0) return false;
+
       if (currentCatFilter !== 'all' && book.category !== currentCatFilter) return false;
       if (currentAgeFilter !== 'all') {
         const cleanAge = String(book.age || '').replace(/–/g, '-');
@@ -821,7 +911,7 @@
         const tCur = (book.title[currentLang] || '').toLowerCase();
         const tEff = (book.title[effLang] || '').toLowerCase();
         const aut = (book.author || '').toLowerCase();
-        const pit = (book.pitch[effLang] || book.pitch[currentLang] || book.pitch.it || '').toLowerCase();
+        const pit = (book.pitch[currentLang] || book.pitch[effLang] || book.pitch.it || '').toLowerCase();
         if (!tIt.includes(q) && !tCur.includes(q) && !tEff.includes(q) && !aut.includes(q) && !pit.includes(q)) return false;
       }
       return true;
@@ -846,10 +936,17 @@
 
     container.innerHTML = filtered.map(book => {
       const effLang = getEffectiveBookLang(currentLang);
-      const title = (book.title && (book.title[effLang] || book.title[currentLang] || book.title.it)) || '';
-      const pitch = (book.pitch && (book.pitch[effLang] || book.pitch[currentLang] || book.pitch.it)) || '';
+      const title = (book.title && (book.title[currentLang] || book.title[effLang] || book.title.it)) || '';
+      const pitch = (book.pitch && (book.pitch[currentLang] || book.pitch[effLang] || book.pitch.it)) || '';
       const amazonUrl = getAmazonPaperbackUrl(book, currentLang);
       const coverUrl = getBookCover(book.id, currentLang);
+      const langBadgesHtml = renderCardLanguageBadges(book, currentLang);
+
+      const availLangs = Object.keys(book.editions || {}).filter(k => book.editions[k]?.available);
+      const edKey = availLangs.includes(currentLang) ? currentLang : (availLangs.includes('en') ? 'en' : availLangs[0]);
+      const buyLabel = (edKey && edKey !== currentLang) 
+        ? `${t('featured.buyAmazon')} (${edKey.toUpperCase()})` 
+        : t('featured.buyAmazon');
 
       return `
         <article class="csa-book-card" data-book-id="${book.id}">
@@ -870,6 +967,7 @@
           <div class="csa-card-content">
             <span class="csa-card-author">${book.author}</span>
             <h3 class="csa-card-title" onclick="window.openBookModal('${book.id}')">${title}</h3>
+            ${langBadgesHtml}
             <p class="csa-card-pitch">${pitch}</p>
 
             <div class="csa-card-actions">
@@ -881,7 +979,7 @@
                   class="csa-btn csa-btn-amazon csa-btn-block"
                   onclick="window.trackAmazonClick('${book.id}', '${amazonUrl}')"
                 >
-                  <span>${t('featured.buyAmazon')}</span>
+                  <span>${buyLabel}</span>
                 </a>
               ` : `
                 <button type="button" class="csa-btn csa-btn-disabled csa-btn-block" disabled>
@@ -960,42 +1058,41 @@
       if (url) vol2Btn.href = url;
     }
 
-    // Toggle collections section (Vol. 1 and Vol. 2) based on language availability
+    // Raccolte section (Vol. 1 and Vol. 2) is ALWAYS visible
     const raccolteSection = document.getElementById('raccolte');
     const heroCta = document.getElementById('csa-cantiere-hero-cta');
     const heroImg1 = document.getElementById('csa-cantiere-hero-img1');
     const heroImg2 = document.getElementById('csa-cantiere-hero-img2');
 
-    if (b1 && b2) {
-      const hasRaccolte = isBookAvailableInLang(b1, currentLang) || isBookAvailableInLang(b2, currentLang);
-      if (raccolteSection) {
-        raccolteSection.style.display = hasRaccolte ? '' : 'none';
-      }
-      if (heroCta) {
-        heroCta.href = hasRaccolte ? '#raccolte' : '#cantiere-episodes-grid';
-        heroCta.textContent = hasRaccolte ? t('cantierePage.ctaRaccolte') : t('cantierePage.ctaEpisodes');
-      }
-      if (heroImg1 && heroImg2) {
-        if (hasRaccolte) {
-          heroImg1.src = 'books/csa-vol1/it/cover.png';
-          heroImg2.src = 'books/csa-vol2/it/cover.png';
-        } else {
-          heroImg1.src = getBookCover('csa-01-benny-collina', currentLang);
-          heroImg2.src = getBookCover('csa-02-rudy-spiaggia', currentLang);
-        }
-      }
+    if (raccolteSection) {
+      raccolteSection.style.display = '';
+    }
+    if (heroCta) {
+      heroCta.href = '#raccolte';
+      heroCta.textContent = t('cantierePage.ctaRaccolte');
+    }
+    if (heroImg1 && heroImg2) {
+      heroImg1.src = 'books/csa-vol1/it/cover.png';
+      heroImg2.src = 'books/csa-vol2/it/cover.png';
     }
 
     const grid = document.getElementById('cantiere-episodes-grid');
     if (grid) {
-      const episodes = data.books.filter(b => b.category === 'cantiere' && b.id !== 'csa-vol1' && b.id !== 'csa-vol2' && isBookAvailableInLang(b, currentLang));
+      const episodes = data.books.filter(b => b.category === 'cantiere' && b.id !== 'csa-vol1' && b.id !== 'csa-vol2');
       grid.innerHTML = episodes.map((book, idx) => {
         const effLang = getEffectiveBookLang(currentLang);
-        const title = (book.title && (book.title[effLang] || book.title[currentLang] || book.title.it)) || '';
-        const subtitle = (book.subtitle && (book.subtitle[effLang] || book.subtitle[currentLang] || book.subtitle.it)) || `Episodio ${idx + 1}`;
-        const pitch = (book.pitch && (book.pitch[effLang] || book.pitch[currentLang] || book.pitch.it)) || '';
+        const title = (book.title && (book.title[currentLang] || book.title[effLang] || book.title.it)) || '';
+        const subtitle = (book.subtitle && (book.subtitle[currentLang] || book.subtitle[effLang] || book.subtitle.it)) || `Episodio ${idx + 1}`;
+        const pitch = (book.pitch && (book.pitch[currentLang] || book.pitch[effLang] || book.pitch.it)) || '';
         const coverUrl = getBookCover(book.id, currentLang);
         const amazonUrl = getAmazonPaperbackUrl(book, currentLang);
+        const langBadgesHtml = renderCardLanguageBadges(book, currentLang);
+
+        const availLangs = Object.keys(book.editions || {}).filter(k => book.editions[k]?.available);
+        const edKey = availLangs.includes(currentLang) ? currentLang : (availLangs.includes('en') ? 'en' : availLangs[0]);
+        const buyLabel = (edKey && edKey !== currentLang) 
+          ? `${t('featured.buyAmazon')} (${edKey.toUpperCase()})` 
+          : t('featured.buyAmazon');
 
         return `
           <article class="csa-book-card" data-book-id="${book.id}">
@@ -1017,6 +1114,7 @@
               <span class="csa-card-author">${book.author || 'Marco Salucci'}</span>
               <h3 class="csa-card-title" onclick="window.openBookModal('${book.id}')">${title}</h3>
               <p class="csa-card-subtitle">${subtitle}</p>
+              ${langBadgesHtml}
               <p class="csa-card-pitch">${pitch}</p>
 
               <div class="csa-card-actions">
@@ -1028,7 +1126,7 @@
                     class="csa-btn csa-btn-amazon csa-btn-block"
                     onclick="window.trackAmazonClick('${book.id}', '${amazonUrl}')"
                   >
-                    <span>${t('featured.buyAmazon')}</span>
+                    <span>${buyLabel}</span>
                   </a>
                 ` : `
                   <button type="button" class="csa-btn csa-btn-disabled csa-btn-block" disabled>
@@ -1054,6 +1152,11 @@
       if (url) {
         buyBtn.href = url;
         buyBtn.classList.remove('csa-btn-disabled');
+        const avail = Object.keys(einstein.editions || {}).filter(k => einstein.editions[k]?.available);
+        const edKey = avail.includes(currentLang) ? currentLang : 'en';
+        const label = (edKey !== currentLang) ? `${t('featured.buyAmazon')} (${edKey.toUpperCase()})` : t('featured.buyAmazon');
+        const span = buyBtn.querySelector('span');
+        if (span) span.textContent = label;
       } else {
         buyBtn.removeAttribute('href');
         buyBtn.classList.add('csa-btn-disabled');

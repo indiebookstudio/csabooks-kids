@@ -102,8 +102,8 @@ def create_document(output_path):
         },
         {
             "title": "🏗️ Raccolta Volume 2",
-            "asin": "B0HN9G1V81",
-            "amazon_url": "https://www.amazon.it/dp/B0HN9G1V81",
+            "asin": "B0HPB2L59F",
+            "amazon_url": "https://www.amazon.it/dp/B0HPB2L59F",
             "accent_color": "1E3A8A", # Dark Navy
             "rows": [
                 (
