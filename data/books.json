@@ -1,0 +1,1353 @@
+{
+  "featuredBookIds": [
+    "einstein",
+    "csa-vol1",
+    "csa-vol2"
+  ],
+  "categories": [
+    {
+      "id": "cantiere",
+      "slug": "cantiere",
+      "title": {
+        "it": "Le Avventure del Cantiere",
+        "en": "Construction Site Adventures",
+        "de": "Baustellen-Abenteuer",
+        "fr": "Les Aventures du Chantier",
+        "es": "Las Aventuras de la Construcción",
+        "nl": "Bouwplaats Avonturen",
+        "pl": "Przygody na Placu Budowy",
+        "se": "Byggarbetsplatsens Äventyr",
+        "jp": "工事現場の冒険"
+      },
+      "subtitle": {
+        "it": "Storie illustrate di amicizia, collaborazione e macchine da lavoro per i più piccoli.",
+        "en": "Illustrated stories of friendship, teamwork, and big machines for young readers.",
+        "de": "Illustrierte Geschichten über Freundschaft, Teamarbeit und große Maschinen für die Kleinsten.",
+        "fr": "Histoires illustrées d'amitié, d'entraide et de gros engins pour les tout-petits.",
+        "es": "Historias ilustradas de amistad, trabajo en equipo y máquinas para los más pequeños.",
+        "nl": "Geïllustreerde verhalen over vriendschap, samenwerking en machines voor kleintjes.",
+        "pl": "Ilustrowane opowieści o przyjaźni, współpracy i maszynach dla najmłodszych.",
+        "se": "Illustrerade berättelser om vänskap, samarbete och maskiner för de minsta.",
+        "jp": "友情、チームワーク、はたらく車を描いた絵本シリーズ。"
+      },
+      "ageRange": "2–5",
+      "badge": "2–5 anni",
+      "author": "Marco Salucci",
+      "accentColor": "#f59e0b",
+      "icon": "truck"
+    },
+    {
+      "id": "scienza",
+      "slug": "scienza",
+      "title": {
+        "it": "Scienza e curiosità",
+        "en": "Science & Wonder",
+        "de": "Wissenschaft & Neugier",
+        "fr": "Science et curiosités",
+        "es": "Ciencia y curiosidades",
+        "nl": "Wetenschap & Nieuwsgierigheid",
+        "pl": "Nauka i Ciekawostki",
+        "se": "Vetenskap & Nyfikenhet",
+        "jp": "科学と好奇心"
+      },
+      "subtitle": {
+        "it": "Dinosauri, spazio, natura e grandi misteri della scienza spiegati con rigore e stupore.",
+        "en": "Dinosaurs, space, nature, and great science mysteries explained with rigor and wonder.",
+        "de": "Dinosaurier, Weltraum, Natur und große Geheimnisse der Wissenschaft verständlich erklärt.",
+        "fr": "Dinosaures, espace, nature et grands mystères scientifiques expliqués avec rigueur et émerveillement.",
+        "es": "Dinosaurios, espacio, naturaleza y grandes misterios científicos explicados con rigor y asombro.",
+        "nl": "Dinosaurussen, ruimte, natuur en wetenschappelijke mysteries vol verwondering.",
+        "pl": "Dinozaury, kosmos, natura i fascynujące tajemnice nauki wyjaśnione z pasją.",
+        "se": "Dinosaurier, rymden, naturen och vetenskapliga mysterier förklarade med förundran.",
+        "jp": "恐竜、宇宙、自然、そして科学の不思議を楽しく解き明かすシリーズ。"
+      },
+      "ageRange": "7–12",
+      "badge": "7–12 anni",
+      "author": "Clara Musicco",
+      "accentColor": "#0284c7",
+      "icon": "atom"
+    },
+    {
+      "id": "scuola",
+      "slug": "scuola",
+      "title": {
+        "it": "Per la scuola",
+        "en": "Learning & School",
+        "de": "Für die Schule",
+        "fr": "Pour l'école",
+        "es": "Para la escuela",
+        "nl": "Voor School",
+        "pl": "Do Szkoły",
+        "se": "För Skolan",
+        "jp": "学習・学校向け"
+      },
+      "subtitle": {
+        "it": "Esercizi, sfide stimolanti e strumenti didattici per consolidare le competenze scolastiche.",
+        "en": "Exercises, engaging puzzles, and learning tools to strengthen school skills.",
+        "de": "Übungen, anregende Aufgaben und didaktische Werkzeuge zur Förderung von Schulkompetenzen.",
+        "fr": "Exercices, énigmes stimulantes et outils pédagogiques pour consolider les acquis scolaires.",
+        "es": "Ejercicios, desafíos estimulantes y recursos didácticos para consolidar el aprendizaje escolar.",
+        "nl": "Oefeningen en educatieve hulpmiddelen om schoolvaardigheden spelenderwijs te versterken.",
+        "pl": "Ćwiczenia, łamigłówki i materiały edukacyjne wspierające naukę szkolną.",
+        "se": "Övningar och pedagogiska verktyg som stärker barnens skolkunskaper.",
+        "jp": "小学校での学習を楽しくサポートする学習ドリル・知育シリーズ。"
+      },
+      "ageRange": "7–8",
+      "badge": "In arrivo",
+      "author": "Clara Musicco",
+      "accentColor": "#10b981",
+      "icon": "compass",
+      "comingSoon": true
+    },
+    {
+      "id": "creativita",
+      "slug": "creativita",
+      "title": {
+        "it": "Da colorare e creare",
+        "en": "Color & Create",
+        "de": "Malen & Gestalten",
+        "fr": "À colorier et créer",
+        "es": "Colorear y crear",
+        "nl": "Kleuren & Creëren",
+        "pl": "Koloruj i Twórz",
+        "se": "Färglägg & Skapa",
+        "jp": "ぬりえ・クリエイティブ"
+      },
+      "subtitle": {
+        "it": "Album da colorare, giochi, labirinti e attività creative per viaggiare con la fantasia.",
+        "en": "Coloring books, games, mazes, and creative activities to spark the imagination.",
+        "de": "Malbücher, Rätsel, Labyrinthe und kreative Aktivitäten für fantasievolle Stunden.",
+        "fr": "Livres de coloriage, jeux, labyrinthes et activités créatives pour libérer l'imagination.",
+        "es": "Libros para colorear, juegos, laberintos y actividades creativas para dejar volar la imaginación.",
+        "nl": "Kleurboeken, doolhoven en creatieve activiteiten om de verbeelding te prikkelen.",
+        "pl": "Kolorowanki, gry, labirynty i kreatywne zabawy rozwijające wyobraźnię.",
+        "se": "Målarböcker, spel och kreativa aktiviteter som väcker barnens fantasi.",
+        "jp": "ぬりえ、迷路、ゲームなど、子どもの創造力を育てるアクティビティブック。"
+      },
+      "ageRange": "5–10",
+      "badge": "5–10 anni",
+      "author": "Marco Salucci",
+      "accentColor": "#ec4899",
+      "icon": "palette"
+    }
+  ],
+  "books": [
+    {
+      "id": "einstein",
+      "category": "scienza",
+      "author": "Clara Musicco",
+      "age": "7–12",
+      "featured": true,
+      "format": "paperback",
+      "micrositeUrl": "/accesso/4dcbbaee2e69a278e4e59eab50430ccc/",
+      "title": {
+        "it": "Einstein, questa te la sei persa!",
+        "en": "Einstein, You Missed This!",
+        "fr": "Einstein, tu as manqué ça !",
+        "es": "¡Einstein, esta te la perdiste!",
+        "de": "Einstein, das hast du verpasst!",
+        "nl": "Einstein, dit heb je gemist!",
+        "pl": "Einsteinie, to cię ominęło!",
+        "se": "Einstein, det här missade du!",
+        "jp": "アインシュタイン、これを見逃したね！"
+      },
+      "subtitle": {
+        "it": "Dinosauri, animali straordinari, spazio e invenzioni incredibili. Storie vere per menti curiose.",
+        "en": "Dinosaurs, extraordinary animals, space, and incredible inventions. True stories for curious minds.",
+        "fr": "Dinosaures, animaux extraordinaires, espace et inventions incroyables. De vraies histoires pour esprits curieux.",
+        "es": "Dinosaurios, animales extraordinarios, espacio e inventos increíbles. Historias reales para mentes curiosas.",
+        "de": "Dinosaurier, faszinierende Tiere, Weltall und Erfindungen. Wahre Geschichten für neugierige Köpfe.",
+        "nl": "Dinosaurussen, buitengewone dieren, ruimte en uitvindingen. Waargebeurde verhalen voor nieuwsgierigen.",
+        "pl": "Dinozaury, niezwykłe zwierzęta, kosmos i wynalazki. Prawdziwe historie dla ciekawskich umysłów.",
+        "se": "Dinosaurier, fantastiska djur, rymden och uppfinningar. Sanna berättelser för nyfikna hjärnor.",
+        "jp": "恐竜、めずらしい動物、宇宙、大発明。好奇心旺盛な子どものための本物の科学物語。"
+      },
+      "pitch": {
+        "it": "Cosa accadrebbe se Albert Einstein tornasse oggi tra noi e scoprisse tutto ciò che la scienza ha rivelato dopo di lui? Un viaggio illustrato avvincente tra 57 scoperte autentiche, verificate e documentate, con un portale segreto interattivo accessibile tramite QR code.",
+        "en": "What if Albert Einstein returned today to discover everything science uncovered after him? A captivating illustrated journey across 57 documented discoveries, complete with an interactive secret QR portal.",
+        "fr": "Que se passerait-il si Albert Einstein revenait aujourd'hui découvrir les merveilles scientifiques d'après son époque ? Un voyage illustré fascinant parmi 57 découvertes vérifiées avec un portale QR interactif.",
+        "es": "Un viaje ilustrado fascinante por descubrimientos científicos asombrosos con un portal QR interactivo.",
+        "de": "Eine faszinierende illustrierte Reise durch 57 verifizierte wissenschaftliche Entdeckungen mit interaktivem QR-Portal.",
+        "nl": "Een meeslepende reis langs 57 wetenschappelijke ontdekkingen met een interactief QR-portaal.",
+        "pl": "Fascynująca ilustrowana podróż przez 57 naukowych odkryć z interaktywnym portalem QR.",
+        "se": "En fängslande illustrerad resa genom 57 vetenskapliga upptäckter med interaktiv QR-portal.",
+        "jp": "57の科学的大発見を美しいイラストとインタラクティブなQRコンテンツで探究する本。"
+      },
+      "benefits": {
+        "it": [
+          "57 schede scientifiche e storiche rigorosamente verificate su fonti accademiche",
+          "Mascotte Otto il polpo che guida i piccoli lettori con umorismo e intelligenza",
+          "Portale multimediale interattivo con 7 simulazioni 3D, videoteca, carte stampabili e museo web",
+          "Ideale per stimolare la passione scientifica e il pensiero critico a scuola e in famiglia"
+        ],
+        "en": [
+          "57 scientifically verified discoveries with authentic citations",
+          "Otto the octopus mascot guiding readers with humor and curiosity",
+          "Secret interactive portal featuring 7 3D simulations, printable cards, and web museum",
+          "Sparks scientific passion and critical thinking for ages 7–12"
+        ],
+        "fr": [
+          "57 fiches scientifiques rigoureusement vérifiées sur des sources académiques",
+          "Otto la pieuvre comme guide complice et stimulant",
+          "Portail interactif secret avec simulations 3D, musée virtuel et cartes à imprimer",
+          "Développe l'esprit critique et l'amour de la science"
+        ],
+        "es": [
+          "57 fichas científicas verificadas con rigor",
+          "Otto el pulpo como compañero de exploración",
+          "Portal interactivo secreto con simulaciones 3D y museo virtual"
+        ],
+        "de": [
+          "57 wissenschaftlich belegte Entdeckungen",
+          "Krake Otto als humorvoller Begleiter",
+          "Interaktives Geheimportal mit 3D-Simulationen und virtuellem Museum"
+        ],
+        "nl": [
+          "57 wetenschappelijk geverifieerde ontdekkingen",
+          "Otto de octopus als vrolijke gids",
+          "Geheim interactief portaal met 3D-simulaties"
+        ],
+        "pl": [
+          "57 rzetelnie sprawdzonych odkryć naukowych",
+          "Ośmiornica Otto jako przewodnik pełen humoru",
+          "Interaktywny portal z symulacjami 3D"
+        ],
+        "se": [
+          "57 vetenskapligt granskade upptäckter",
+          "Bläckfisken Otto som nyfiken guide",
+          "Interaktiv portal med 3D-simuleringar"
+        ],
+        "jp": [
+          "学術的根拠に基づいた57の科学的発見",
+          "ユーモアあふれるタコのオットーがナビゲート",
+          "3Dシミュレーションやバーチャル博物館が楽しめるQRポータル付き"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Einstein, questa te la sei persa!",
+          "available": false,
+          "note": "Pubblicato — Inserire ASIN paperback verificato",
+          "amazon": {}
+        },
+        "en": {
+          "languageName": "English",
+          "title": "Einstein, You Missed This!",
+          "available": false,
+          "note": "Published — Insert verified paperback ASIN",
+          "amazon": {}
+        },
+        "fr": {
+          "languageName": "Français",
+          "title": "Einstein, tu as manqué ça !",
+          "available": false,
+          "note": "Publié — Insérer l'ASIN broché vérifié",
+          "amazon": {}
+        },
+        "es": {
+          "languageName": "Español",
+          "title": "¡Einstein, esta te la perdiste!",
+          "available": false,
+          "note": "In arrivo — Edizione spagnola pianificata",
+          "amazon": {}
+        }
+      }
+    },
+    {
+      "id": "csa-vol1",
+      "category": "cantiere",
+      "author": "Marco Salucci",
+      "age": "2–5",
+      "featured": true,
+      "format": "paperback",
+      "title": {
+        "it": "Le Avventure del Cantiere — Raccolta Vol. 1",
+        "en": "Construction Site Adventures — Collection Vol. 1",
+        "de": "Baustellen-Abenteuer — Sammelband 1",
+        "fr": "Les Aventures du Chantier — Recueil Vol. 1",
+        "es": "Las Aventuras de la Construcción — Colección Vol. 1",
+        "nl": "Bouwplaats Avonturen — Verzameling Deel 1",
+        "pl": "Przygody na Placu Budowy — Zbiór Tom 1",
+        "se": "Byggarbetsplatsens Äventyr — Samling Vol. 1",
+        "jp": "工事現場の冒険 — コレクション第1巻"
+      },
+      "subtitle": {
+        "it": "Edizione speciale in grande formato (21,5 × 28 cm) con 4 storie complete.",
+        "en": "Large format edition (21.5 × 28 cm) featuring 4 complete stories.",
+        "de": "Großformat-Ausgabe (21,5 × 28 cm) mit 4 vollständigen Geschichten.",
+        "fr": "Édition grand format (21,5 × 28 cm) contenant 4 histoires complètes.",
+        "es": "Edición especial en gran formato con 4 historias completas.",
+        "nl": "Groot formaat uitgave met 4 complete verhalen.",
+        "pl": "Wydanie w dużym formacie zawierające 4 pełne opowieści.",
+        "se": "Stort format med 4 kompletta berättelser.",
+        "jp": "4つの物語を一冊に収録した大型絵本（21.5 × 28 cm）。"
+      },
+      "storiesIncluded": [
+        "Benny l'escavatore e la collina che cambiava forma",
+        "Rudy la ruspa e la spiaggia che scompariva",
+        "Leo la gru e le gemme della montagna",
+        "Bruno il camion e lo stagno delle papere"
+      ],
+      "pitch": {
+        "it": "Un unico grande volume che riunisce le prime quattro amatissime avventure del cantiere. Grandi illustrazioni a tutta pagina, testi in rima e personaggi indimenticabili: Benny, Rudy, Leo e Bruno. Include QR code con audiolibri, video read-aloud e disegni da colorare in regalo.",
+        "en": "Four beloved construction adventures gathered in one large treasury. Full-page vibrant illustrations and unforgettable vehicles.",
+        "fr": "Quatre aventures incontournables réunies dans un grand recueil cartonné illustré pour les petits passionnés de chantiers.",
+        "es": "Cuatro historias llenas de emoción y vehículos en un solo volumen de gran formato.",
+        "de": "Vier beliebte Baustellen-Geschichten in einem prachtvollen Sammelband für Kleinkinder.",
+        "nl": "Vier geliefde bouwplaatsverhalen in één prachtig verzamelboek.",
+        "pl": "Cztery uwielbiane opowieści z placu budowy w jednym dużym tomie.",
+        "se": "Fyra älskade byggäventyr samlade i en stor bilderboksutgåva.",
+        "jp": "子どもたちに大人気の工事車両の冒険4話を収録した豪華な絵本。"
+      },
+      "benefits": {
+        "it": [
+          "Quattro storie complete in un unico volume di pregio",
+          "Valori positivi: aiuto reciproco, rispetto per la natura, lavoro di squadra",
+          "Codici QR stampati per ascoltare la voce narrante e guardare le animazioni",
+          "Grande formato ergonomico con illustrazioni studiate per catturare l'attenzione"
+        ],
+        "en": [
+          "4 complete stories in a single premium volume",
+          "Teaches teamwork, problem-solving, and nature respect",
+          "Bonus QR codes for audio read-aloud and printable coloring sheets",
+          "High visual impact for bedtime and shared family reading"
+        ],
+        "fr": [
+          "4 histoires complètes réunies dans un recueil généreux",
+          "Valeurs fortes d'amitié, de solidarité et de respect de l'environnement",
+          "Bonus QR code inclus pour le coloriage et la lecture audio",
+          "Grand format idéal pour la lecture partagée"
+        ],
+        "es": [
+          "4 historias completas en un solo tomo",
+          "Valores de amistad, cooperación y cuidado de la naturaleza",
+          "Códigos QR para descargar actividades"
+        ],
+        "de": [
+          "4 vollständige Geschichten in einem Band",
+          "Vermittelt Teamgeist und Hilfsbereitschaft",
+          "QR-Code mit Malvorlagen und Audio"
+        ],
+        "nl": [
+          "4 complete verhalen in één groot boek",
+          "Leert over samenwerken en vriendschap",
+          "Inclusief leuke extra's via QR-code"
+        ],
+        "pl": [
+          "4 pełne opowieści w jednym tomie",
+          "Wartości: współpraca, empatia i szacunek dla przyrody",
+          "Darmowe materiały do pobrania przez kod QR"
+        ],
+        "se": [
+          "4 kompletta sagor i en och samma bok",
+          "Lär ut samarbete och vänskap",
+          "Bonusmaterial via QR-koder"
+        ],
+        "jp": [
+          "1冊に4つの完結ストーリーを収録",
+          "助け合いと環境への思いやりを育むメッセージ",
+          "QRコードからぬりえや読み聞かせ音声を体験可能"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Le Avventure del Cantiere — Raccolta Vol. 1",
+          "available": true,
+          "asin": "B0HN4QMLV1",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0HN4QMLV1",
+            "com": "https://www.amazon.com/dp/B0HN4QMLV1",
+            "de": "https://www.amazon.de/dp/B0HN4QMLV1",
+            "fr": "https://www.amazon.fr/dp/B0HN4QMLV1",
+            "es": "https://www.amazon.es/dp/B0HN4QMLV1",
+            "uk": "https://www.amazon.co.uk/dp/B0HN4QMLV1",
+            "nl": "https://www.amazon.nl/dp/B0HN4QMLV1",
+            "pl": "https://www.amazon.pl/dp/B0HN4QMLV1",
+            "se": "https://www.amazon.se/dp/B0HN4QMLV1",
+            "jp": "https://www.amazon.co.jp/dp/B0HN4QMLV1"
+          }
+        }
+      }
+    },
+    {
+      "id": "csa-vol2",
+      "category": "cantiere",
+      "author": "Marco Salucci",
+      "age": "2–5",
+      "featured": true,
+      "format": "paperback",
+      "title": {
+        "it": "Le Avventure del Cantiere — Raccolta Vol. 2",
+        "en": "Construction Site Adventures — Collection Vol. 2",
+        "de": "Baustellen-Abenteuer — Sammelband 2",
+        "fr": "Les Aventures du Chantier — Recueil Vol. 2",
+        "es": "Las Aventuras de la Construcción — Colección Vol. 2",
+        "nl": "Bouwplaats Avonturen — Verzameling Deel 2",
+        "pl": "Przygody na Placu Budowy — Zbiór Tom 2",
+        "se": "Byggarbetsplatsens Äventyr — Samling Vol. 2",
+        "jp": "工事現場の冒険 — コレクション第2巻"
+      },
+      "subtitle": {
+        "it": "Edizione speciale in grande formato (21,5 × 28 cm) con 4 storie complete.",
+        "en": "Large format edition (21.5 × 28 cm) featuring 4 complete stories.",
+        "de": "Großformat-Ausgabe (21,5 × 28 cm) mit 4 vollständigen Geschichten.",
+        "fr": "Édition grand format (21,5 × 28 cm) contenant 4 histoires complètes.",
+        "es": "Edición especial en gran formato con 4 historias completas.",
+        "nl": "Groot formaat uitgave met 4 complete verhalen.",
+        "pl": "Wydanie w dużym formacie zawierające 4 pełne opowieści.",
+        "se": "Stort format med 4 kompletta berättelser.",
+        "jp": "4つの物語を一冊に収録した大型絵本第2弾（21.5 × 28 cm）。"
+      },
+      "storiesIncluded": [
+        "Benny l'escavatore e le monete dell'antica Roma",
+        "Nina la betoniera e il ponte dei coniglietti",
+        "Rino il rullo e i ladri del cantiere",
+        "Leo la gru e il nido della cinciallegra"
+      ],
+      "pitch": {
+        "it": "Il secondo volume della raccolta ufficiale accoglie nuovi irresistibili compagni di lavoro: Nina la betoniera e Rino il rullo compressore. Dalla scoperta archeologica alla protezione dei piccoli animali del bosco, quattro storie ricche di cuore e allegria.",
+        "en": "The second official treasury introduces Nina the Cement Truck and Rino the Roller into four new heartwarming missions.",
+        "fr": "Le deuxième recueil accueille Nina la bétonnière et Rino le rouleau dans quatre nouvelles missions d'ingéniosité et de tendresse.",
+        "es": "El segundo volumen presenta nuevos personajes y divertidas aventuras para los más pequeños.",
+        "de": "Der zweite Band bringt neue Freunde wie Betonmischerin Nina und Walze Rino ins Spiel.",
+        "nl": "Het tweede verzamelboek met nieuwe vriendjes en hartverwarmende avonturen.",
+        "pl": "Drugi tom przygód przedstawia betoniarkę Ninę i walec Rino w 4 nowych misjach.",
+        "se": "Den andra samlingen introducerar cementbilen Nina och välten Rino.",
+        "jp": "コンクリートミキサー車のニーナとロードローラーのリノが登場する第2弾。"
+      },
+      "benefits": {
+        "it": [
+          "Quattro nuove storie inedite in un volume di grande formato",
+          "Introduzione dei personaggi amatissimi Nina la betoniera e Rino il rullo",
+          "Temi educativi: rispetto della fauna, ingegno e protezione del bene comune",
+          "Include QR code per il download gratuito dei disegni da colorare esclusivi"
+        ],
+        "en": [
+          "4 all-new complete stories in one premium book",
+          "Introduces favorite characters Nina and Rino",
+          "Inspires empathy for animals and teamwork",
+          "Includes printed QR codes for free downloadable bonuses"
+        ],
+        "fr": [
+          "4 nouvelles histoires complètes",
+          "Nouveaux héros : Nina et Rino",
+          "Sensibilisation au respect des animaux et à la générosité",
+          "Bonus QR code exclusif inclus"
+        ],
+        "es": [
+          "4 nuevas historias completas",
+          "Con Nina y Rino como nuevos protagonistas",
+          "Valores de empatía y trabajo conjunto"
+        ],
+        "de": [
+          "4 brandneue Abenteuer",
+          "Neue beliebte Figuren: Nina und Rino",
+          "Pädagogisch wertvoll für Kindergartenkinder"
+        ],
+        "nl": [
+          "4 gloednieuwe verhalen",
+          "Met Nina en Rino in de hoofdrol",
+          "Prachtige illustraties op groot formaat"
+        ],
+        "pl": [
+          "4 nowe historie z placu budowy",
+          "Nowi bohaterowie: Nina i Rino",
+          "Wspaniałe ilustracje na dużych stronach"
+        ],
+        "se": [
+          "4 helt nya sagor",
+          "Möt favoriterna Nina och Rino",
+          "Stimulerar omtanke och fantasi"
+        ],
+        "jp": [
+          "4つの新しい物語をたっぷり収録",
+          "人気キャラクターのニーナとリノが仲間入り",
+          "ぬりえがダウンロードできるQRコード付き"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Le Avventure del Cantiere — Raccolta Vol. 2",
+          "available": true,
+          "asin": "B0HN9G1V81",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0HN9G1V81",
+            "com": "https://www.amazon.com/dp/B0HN9G1V81",
+            "de": "https://www.amazon.de/dp/B0HN9G1V81",
+            "fr": "https://www.amazon.fr/dp/B0HN9G1V81",
+            "es": "https://www.amazon.es/dp/B0HN9G1V81",
+            "uk": "https://www.amazon.co.uk/dp/B0HN9G1V81",
+            "nl": "https://www.amazon.nl/dp/B0HN9G1V81",
+            "pl": "https://www.amazon.pl/dp/B0HN9G1V81",
+            "se": "https://www.amazon.se/dp/B0HN9G1V81",
+            "jp": "https://www.amazon.co.jp/dp/B0HN9G1V81"
+          }
+        }
+      }
+    },
+    {
+      "id": "fano",
+      "category": "creativita",
+      "author": "Marco Salucci",
+      "age": "5–10",
+      "featured": false,
+      "format": "paperback",
+      "title": {
+        "it": "Fano col naso all'insù",
+        "en": "Fano Looking Up — Coloring & Activity Book",
+        "de": "Fano mit Blick nach oben — Mal- und Entdeckerbuch",
+        "fr": "Fano le nez en l'air — Livre de coloriage et d'activités",
+        "es": "Fano con la nariz hacia arriba — Libro de actividades",
+        "nl": "Fano met de neus omhoog — Kleur- en doeboek",
+        "pl": "Fano z nosem do góry — Kolorowanka i zadania",
+        "se": "Fano med näsan i vädret — Målarbok",
+        "jp": "ファーノを見上げて — お絵かき＆アクティビティブック"
+      },
+      "subtitle": {
+        "it": "Oltre 40 disegni, giochi e attività creative per scoprire la città di Vitruvio divertendosi.",
+        "en": "Over 40 drawings, puzzles, and creative activities discovering the historic city of Vitruvius.",
+        "de": "Über 40 Malvorlagen, Rätsel und kreative Spiele zur Stadt des Vitruv.",
+        "fr": "Plus de 40 dessins, jeux et énigmes pour explorer la cité romaine de Vitruve.",
+        "es": "Más de 40 láminas para colorear, acertijos y juegos creativos.",
+        "nl": "Meer dan 40 kleurplaten, spellen en activiteiten.",
+        "pl": "Ponad 40 rysunków, łamigłówek i zabaw rozwijających kreatywność.",
+        "se": "Över 40 teckningar, pyssel och gåtor.",
+        "jp": "40枚以上のぬりえとパズルで歴史ある街を楽しく探検。"
+      },
+      "pitch": {
+        "it": "Un libro da colorare e di attività che porta i bambini (e tutta la famiglia!) alla scoperta delle meraviglie storiche, dei monumenti romani e delle tradizioni di Fano, la città dell'Arco d'Augusto e di Vitruvio. Oltre quaranta tavole originali, curiosità e giochi educativi.",
+        "en": "An interactive coloring adventure inviting children and families to explore Roman monuments and coastal traditions.",
+        "fr": "Un livre d'activités et de coloriage captivant sur l'histoire romaine et les secrets d'une ville antique.",
+        "es": "Un libro creativo que une el arte de colorear con el descubrimiento histórico.",
+        "de": "Ein kreatives Mitmach- und Malbuch über römische Monumente und faszinierende Geschichte.",
+        "nl": "Een creatief doeboek dat jonge kunstenaars meeneemt op een historische ontdekkingsreis.",
+        "pl": "Kreatywna kolorowanka łącząca zabawę plastyczną z odkrywaniem historii.",
+        "se": "En kreativ målarbok fylld med historiska byggnader och gåtor.",
+        "jp": "古代ローマの遺跡や伝統をぬりえやクイズで学べる知育アクティビティブック。"
+      },
+      "benefits": {
+        "it": [
+          "Oltre 40 illustrazioni dettagliate pronte da colorare su carta resistente",
+          "Giochi di osservazione, labirinti, indovinelli e aneddoti storici accessibili",
+          "Promuove la curiosità culturale e l'amore per il patrimonio artistico",
+          "Perfetto per i pomeriggi creativi, le vacanze e le visite in famiglia"
+        ],
+        "en": [
+          "Over 40 high-detail coloring plates",
+          "Engaging mazes, observation games, and historical anecdotes",
+          "Nurtures cultural curiosity and fine motor skills",
+          "Great companion for travel and creative afternoons"
+        ],
+        "fr": [
+          "Plus de 40 planches détaillées à colorier",
+          "Labyrinthes, jeux d'observation et anecdotes historiques",
+          "Stimule la curiosité culturelle et la créativité",
+          "Compagnon idéal pour les vacances et les loisirs en famille"
+        ],
+        "es": [
+          "Más de 40 láminas de dibujo",
+          "Laberintos y juegos educativos",
+          "Fomenta la creatividad y la curiosidad histórica"
+        ],
+        "de": [
+          "Über 40 detailreiche Motive",
+          "Labyrinthe, Suchspiele und kindgerechtes Geschichtswissen",
+          "Fördert Feinmotorik und Konzentration"
+        ],
+        "nl": [
+          "Meer dan 40 gedetailleerde kleurplaten",
+          "Spelletjes, doolhoven en leuke weetjes",
+          "Stimuleert creativiteit en historische interesse"
+        ],
+        "pl": [
+          "Ponad 40 starannych ilustracji do kolorowania",
+          "Labirynty, zagadki i ciekawostki z epoki rzymskiej",
+          "Rozwija zdolności manualne i wyobraźnię"
+        ],
+        "se": [
+          "Över 40 detaljrika målarbilder",
+          "Labyrinter och historiska kuriosa",
+          "Perfekt för kreativa stunder"
+        ],
+        "jp": [
+          "40点以上の精緻なぬりえイラスト",
+          "迷路、間違い探し、歴史の豆知識が満載",
+          "集中力と手先の器用さを育む"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Fano col naso all'insù",
+          "available": true,
+          "asin": "B0HD2X6HVJ",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0HD2X6HVJ",
+            "com": "https://www.amazon.com/dp/B0HD2X6HVJ",
+            "de": "https://www.amazon.de/dp/B0HD2X6HVJ",
+            "fr": "https://www.amazon.fr/dp/B0HD2X6HVJ",
+            "es": "https://www.amazon.es/dp/B0HD2X6HVJ",
+            "uk": "https://www.amazon.co.uk/dp/B0HD2X6HVJ"
+          }
+        }
+      }
+    },
+    {
+      "id": "la-bussola-misteriosa-matematica-2",
+      "category": "scuola",
+      "series": "La Bussola Misteriosa",
+      "subject": "Matematica",
+      "schoolClass": "Classe Seconda Primaria",
+      "author": "Clara Musicco",
+      "age": "7–8",
+      "featured": false,
+      "format": "paperback",
+      "status": "in_preparation",
+      "title": {
+        "it": "La Bussola Misteriosa — Matematica 2ª Primaria",
+        "en": "The Mysterious Compass — Math Grade 2",
+        "de": "Der Geheimnisvolle Kompass — Mathematik 2. Klasse",
+        "fr": "La Boussole Mystérieuse — Mathématiques CE1",
+        "es": "La Brújula Misteriosa — Matemáticas 2º Primaria",
+        "nl": "Het Mystieke Kompas — Rekenen Groep 4",
+        "pl": "Tajemniczy Kompas — Matematyka Klasa 2",
+        "se": "Den Mystiska Kompassen — Matematik Årskurs 2",
+        "jp": "ふしぎなコンパス — 小学2年生のさんすう"
+      },
+      "subtitle": {
+        "it": "Avventure, sfide logiche e giochi numerici per allenare la mente e consolidare il programma della classe seconda.",
+        "en": "Adventures, logic puzzles, and number games to practice second grade math skills.",
+        "de": "Abenteuer, logische Herausforderungen und Zahlenspiele für die 2. Grundschulklasse.",
+        "fr": "Aventures, énigmes logiques et jeux de calcul pour consolider le programme de CE1.",
+        "es": "Desafíos lógicos y juegos numéricos para afianzar el aprendizaje de 2º de Primaria.",
+        "nl": "Rekenkundige raadsels en logische puzzels voor groep 4.",
+        "pl": "Matematyczne zagadki i łamigłówki logiczne dla uczniów klasy 2.",
+        "se": "Kluriga matteuppgifter och logikövningar för årskurs 2.",
+        "jp": "数のパズルや論理的思考力を鍛える小学2年生向けさんすうアドベンチャー。"
+      },
+      "pitch": {
+        "it": "Una nuova collana didattica firmata da Clara Musicco che trasforma l'apprendimento scolastico in un'avventura entusiasmante. La matematica non è più un elenco arido di regole, ma una bussola magica per svelare enigmi, capire il mondo e sviluppare sicurezza.",
+        "en": "A new educational series turning school curriculum into an exciting journey.",
+        "fr": "Une nouvelle collection pédagogique qui transforme les mathématiques en un jeu d'exploration stimulant.",
+        "es": "Una colección didáctica que motiva a los alumnos con retos matemáticos divertidos.",
+        "de": "Eine spannende Lernreihe, die Freude an Zahlen und mathematischem Denken weckt.",
+        "nl": "Een inspirerende leermethode vol rekenplezier.",
+        "pl": "Seria edukacyjna, która uczy matematyki przez zabawę i odkrywanie.",
+        "se": "En inspirerande serie som gör matematik till ett lustfyllt äventyr.",
+        "jp": "楽しみながら算数の基礎をしっかり身につける新シリーズ。"
+      },
+      "benefits": {
+        "it": [
+          "Allineato agli obiettivi didattici della seconda classe primaria",
+          "Esercizi progressivi di calcolo a mente, problemi illustrati e geometria intuitiva",
+          "Approccio narrativo che mantiene alta la motivazione dei bambini",
+          "Soluzioni chiare e consigli metodologici per genitori e insegnanti"
+        ],
+        "en": [
+          "Aligned with grade 2 learning standards",
+          "Progressive calculation exercises and visual word problems",
+          "Narrative approach keeping young learners engaged",
+          "Clear solutions and tips for parents and educators"
+        ],
+        "fr": [
+          "Conforme aux programmes de cycle 2 (CE1)",
+          "Calcul mental, géométrie intuitive et résolution de problèmes",
+          "Trame narrative motivante et valorisante",
+          "Solutions claires et repères pour les parents"
+        ],
+        "es": [
+          "Adaptado al currículo escolar de 2º de Primaria",
+          "Problemas visuales y cálculo mental progresivo",
+          "Explicaciones amenas para el hogar y el aula"
+        ],
+        "de": [
+          "Orientiert an den Bildungsstandards der 2. Klasse",
+          "Anschauliche Rechenaufgaben und geometrische Rätsel",
+          "Fördert das Selbstvertrauen beim Lösen von Aufgaben"
+        ],
+        "nl": [
+          "Afgestemd op leerdoelen voor rekenen",
+          "Stapsgewijze opbouw van sommen en getalbegrip",
+          "Motiverend en kindvriendelijk"
+        ],
+        "pl": [
+          "Zgodny z podstawą programową klasy 2",
+          "Stopniowane zadania, arytmetyka i zadania z treścią",
+          "Wskazówki dla rodziców i nauczycieli"
+        ],
+        "se": [
+          "Anpassad för årskurs 2",
+          "Pedagogiska övningar i huvudräkning och geometri",
+          "Bygger självförtroende i matematik"
+        ],
+        "jp": [
+          "小学校2年生の学習指導要領に対応",
+          "計算力と論理的思考力をバランスよく伸ばす",
+          "保護者向けのわかりやすい解説付き"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "La Bussola Misteriosa — Matematica 2ª Primaria",
+          "available": false,
+          "note": "In preparazione per il nuovo anno scolastico",
+          "amazon": {}
+        }
+      }
+    },
+    {
+      "id": "csa-01-benny-collina",
+      "category": "cantiere",
+      "author": "Marco Salucci",
+      "age": "2–5",
+      "featured": false,
+      "format": "paperback",
+      "title": {
+        "it": "Benny l'escavatore e la collina che cambiava forma",
+        "en": "Benny the Excavator and the Shape-Shifting Hill",
+        "fr": "Benny l'excavateur et la colline qui changeait de forme",
+        "de": "Bagger Benny und der Zauberhügel",
+        "es": "Benny la excavadora y la colina que cambiaba de forma",
+        "nl": "Benny de graafmachine en de heuvel",
+        "pl": "Koparka Benny i wzgórze",
+        "se": "Grävskopan Benny och kullen",
+        "jp": "ショベルカーのベニーとふしぎな丘"
+      },
+      "subtitle": {
+        "it": "Volume 1 delle Avventure del Cantiere",
+        "en": "Volume 1 of Construction Site Adventures",
+        "fr": "Tome 1 des Aventures du Chantier",
+        "de": "Band 1 der Baustellen-Abenteuer",
+        "es": "Volumen 1 de Las Aventuras de la Construcción",
+        "nl": "Deel 1 van Bouwplaats Avonturen",
+        "pl": "Tom 1 Przygód na Placu Budowy",
+        "se": "Del 1 av Byggarbetsplatsens Äventyr",
+        "jp": "工事現場の冒険 第1巻"
+      },
+      "pitch": {
+        "it": "Benny è un escavatore giallo pieno di entusiasmo. Quando una collina inizia a muoversi in modo misterioso, scoprirà che con un po' di ingegno e tanta gentilezza ogni ostacolo può trasformarsi in una bella sorpresa.",
+        "en": "Benny the yellow excavator is always eager to dig and help his friends solve mysteries on the site.",
+        "fr": "Benny la petite excavatrice jaune fait face à une colline bien mystérieuse !",
+        "es": "Benny la excavadora descubre el valor de la amistad y el ingenio.",
+        "de": "Bagger Benny löst ein kniffliges Rätsel auf der Baustelle.",
+        "nl": "Benny helpt zijn vrienden op de bouwplaats.",
+        "pl": "Koparka Benny odkrywa tajemnicę zmieniającego się wzgórza.",
+        "se": "Grävskopan Benny hittar på smarta lösningar.",
+        "jp": "ショベルカーのベニーが工事現場で活躍する心温まる物語。"
+      },
+      "benefits": {
+        "it": [
+          "Storia illustrata in rime coinvolgenti per la lettura ad alta voce",
+          "Insegna a non arrendersi di fronte alle difficoltà impreviste",
+          "Disponibile anche in video-lettura e audiolibro gratuito via QR"
+        ],
+        "en": [
+          "Engaging rhymes for bedtime read-aloud",
+          "Teaches perseverance and problem solving",
+          "Includes free audio read-aloud link"
+        ],
+        "fr": [
+          "Histoire rythmée et colorée pour la lecture du soir",
+          "Stimule la confiance en soi et l'entraide",
+          "Vidéo et audio en accès libre via QR code"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Benny l'escavatore e la collina che cambiava forma",
+          "available": true,
+          "asin": "B0H6MN4LW7",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0H6MN4LW7",
+            "com": "https://www.amazon.com/dp/B0H6MN4LW7"
+          }
+        },
+        "en": {
+          "languageName": "English",
+          "title": "Benny the Excavator and the Shape-Shifting Hill",
+          "available": true,
+          "asin": "B0H6SBPNM5",
+          "amazon": {
+            "com": "https://www.amazon.com/dp/B0H6SBPNM5",
+            "uk": "https://www.amazon.co.uk/dp/B0H6SBPNM5",
+            "it": "https://www.amazon.it/dp/B0H6SBPNM5"
+          }
+        },
+        "fr": {
+          "languageName": "Français",
+          "title": "Benny l'excavateur et la colline qui changeait de forme",
+          "available": true,
+          "asin": "B0HJM5R74L",
+          "amazon": {
+            "fr": "https://www.amazon.fr/dp/B0HJM5R74L",
+            "it": "https://www.amazon.it/dp/B0HJM5R74L",
+            "com": "https://www.amazon.com/dp/B0HJM5R74L",
+            "de": "https://www.amazon.de/dp/B0HJM5R74L",
+            "es": "https://www.amazon.es/dp/B0HJM5R74L",
+            "uk": "https://www.amazon.co.uk/dp/B0HJM5R74L"
+          }
+        }
+      }
+    },
+    {
+      "id": "csa-02-rudy-spiaggia",
+      "category": "cantiere",
+      "author": "Marco Salucci",
+      "age": "2–5",
+      "featured": false,
+      "format": "paperback",
+      "title": {
+        "it": "Rudy la ruspa e la spiaggia che scompariva",
+        "en": "Rudy the Bulldozer and the Vanishing Beach",
+        "fr": "Rudy le bulldozer et la plage qui disparaissait",
+        "de": "Planierraupe Rudy und der verschwundene Strand",
+        "es": "Rudy la excavadora y la playa que desaparecía",
+        "nl": "Rudy de bulldozer en het verdwijnende strand",
+        "pl": "Spychacz Rudy i znikająca plaża",
+        "se": "Schaktmaskinen Rudy och stranden",
+        "jp": "ブルドーザーのルディと消えた砂浜"
+      },
+      "subtitle": {
+        "it": "Volume 2 delle Avventure del Cantiere",
+        "en": "Volume 2 of Construction Site Adventures",
+        "fr": "Tome 2 des Aventures du Chantier",
+        "de": "Band 2 der Baustellen-Abenteuer",
+        "es": "Volumen 2 de Las Aventuras de la Construcción",
+        "nl": "Deel 2 van Bouwplaats Avonturen",
+        "pl": "Tom 2 Przygód na Placu Budowy",
+        "se": "Del 2 av Byggarbetsplatsens Äventyr",
+        "jp": "工事現場の冒険 第2巻"
+      },
+      "pitch": {
+        "it": "Rudy è una ruspa coraggiosa. In riva al mare, tra maree e onde birichine, capirà insieme ai suoi amici l'importanza di rispettare le forze della natura.",
+        "en": "Rudy the energetic bulldozer takes on waves and sand on a sunny seaside mission.",
+        "fr": "Rudy le bulldozer part au bord de l'eau pour une mission pleine d'embruns !",
+        "es": "Rudy descubre los secretos de la costa y el mar.",
+        "de": "Rudy erlebt ein maritimes Abenteuer am Strand.",
+        "nl": "Rudy helpt op het strand.",
+        "pl": "Rudy wyrusza nad morze, by uratować plażę.",
+        "se": "Rudy hjälper till på stranden.",
+        "jp": "海辺でがんばるブルドーザーのルディの冒険。"
+      },
+      "benefits": {
+        "it": [
+          "Sensibilizza i bambini al rispetto dell'ambiente marino e della spiaggia",
+          "Disegni ad alto contrasto adatti alla fascia 2–5 anni",
+          "Audio e video read-aloud disponibili via QR code"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Rudy la ruspa e la spiaggia che scompariva",
+          "available": true,
+          "asin": "B0H6Q5TX7M",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0H6Q5TX7M",
+            "com": "https://www.amazon.com/dp/B0H6Q5TX7M"
+          }
+        },
+        "en": {
+          "languageName": "English",
+          "title": "Rudy the Bulldozer and the Vanishing Beach",
+          "available": true,
+          "asin": "B0H6XV8LN6",
+          "amazon": {
+            "com": "https://www.amazon.com/dp/B0H6XV8LN6",
+            "uk": "https://www.amazon.co.uk/dp/B0H6XV8LN6",
+            "it": "https://www.amazon.it/dp/B0H6XV8LN6"
+          }
+        },
+        "fr": {
+          "languageName": "Français",
+          "title": "Rudy le bulldozer et la plage qui disparaissait",
+          "available": true,
+          "asin": "B0HJX2H3MF",
+          "amazon": {
+            "fr": "https://www.amazon.fr/dp/B0HJX2H3MF",
+            "it": "https://www.amazon.it/dp/B0HJX2H3MF",
+            "com": "https://www.amazon.com/dp/B0HJX2H3MF",
+            "de": "https://www.amazon.de/dp/B0HJX2H3MF",
+            "es": "https://www.amazon.es/dp/B0HJX2H3MF",
+            "uk": "https://www.amazon.co.uk/dp/B0HJX2H3MF"
+          }
+        }
+      }
+    },
+    {
+      "id": "csa-03-leo-montagna",
+      "category": "cantiere",
+      "author": "Marco Salucci",
+      "age": "2–5",
+      "featured": false,
+      "format": "paperback",
+      "title": {
+        "it": "Leo la gru e le gemme della montagna",
+        "en": "Leo the Crane and the Mountain Gems",
+        "fr": "Leo la grue et les gemmes de la montagne",
+        "de": "Kran Leo und die Bergedelsteine",
+        "es": "Leo la grúa y las gemas de la montaña",
+        "nl": "Leo de kraanwagen en de berg",
+        "pl": "Dźwig Leo i skarby góry",
+        "se": "Kranbilen Leo och bergskristallerna",
+        "jp": "クレーン車のレオと山のほうせき"
+      },
+      "subtitle": {
+        "it": "Volume 3 delle Avventure del Cantiere",
+        "en": "Volume 3 of Construction Site Adventures",
+        "fr": "Tome 3 des Aventures du Chantier",
+        "de": "Band 3 der Baustellen-Abenteuer",
+        "es": "Volumen 3 de Las Aventuras de la Construcción",
+        "nl": "Deel 3 van Bouwplaats Avonturen",
+        "pl": "Tom 3 Przygód na Placu Budowy",
+        "se": "Del 3 av Byggarbetsplatsens Äventyr",
+        "jp": "工事現場の冒険 第3巻"
+      },
+      "pitch": {
+        "it": "Leo è la gru più alta e gentile del cantiere. Su una parete di roccia scopre cristalli splendenti, ma capirà che il vero tesoro è la prudenza e l'amicizia.",
+        "en": "Leo the tall gentle crane reaches high up the mountain to discover shining stones.",
+        "fr": "Leo la grande grue bienveillante hisse ses câbles jusqu'aux sommets.",
+        "es": "Leo la grúa alcanza las cimas para ayudar a todos.",
+        "de": "Kran Leo beweist Mut und Umsicht in luftiger Höhe.",
+        "nl": "Leo de kraan tilt iedereen op met zijn vriendelijkheid.",
+        "pl": "Dźwig Leo sięga chmur na górskim szlaku.",
+        "se": "Leo når de högsta höjderna.",
+        "jp": "背が高いやさしいクレーン車のレオが大活躍。"
+      },
+      "benefits": {
+        "it": [
+          "Insegna la pazienza, la sicurezza e la cura dei dettagli",
+          "Favola avvincente ambientata tra le cime montuose",
+          "Contenuti speciali multimediali accessibili da smartphone"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Leo la gru e le gemme della montagna",
+          "available": true,
+          "asin": "B0H6MY4W6X",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0H6MY4W6X",
+            "com": "https://www.amazon.com/dp/B0H6MY4W6X"
+          }
+        },
+        "en": {
+          "languageName": "English",
+          "title": "Leo the Crane and the Mountain Gems",
+          "available": true,
+          "asin": "B0H6ZDZ2N8",
+          "amazon": {
+            "com": "https://www.amazon.com/dp/B0H6ZDZ2N8",
+            "uk": "https://www.amazon.co.uk/dp/B0H6ZDZ2N8",
+            "it": "https://www.amazon.it/dp/B0H6ZDZ2N8"
+          }
+        },
+        "fr": {
+          "languageName": "Français",
+          "title": "Leo la grue et les gemmes de la montagne",
+          "available": true,
+          "asin": "B0HJWY3YZ4",
+          "amazon": {
+            "fr": "https://www.amazon.fr/dp/B0HJWY3YZ4",
+            "it": "https://www.amazon.it/dp/B0HJWY3YZ4",
+            "com": "https://www.amazon.com/dp/B0HJWY3YZ4",
+            "de": "https://www.amazon.de/dp/B0HJWY3YZ4",
+            "es": "https://www.amazon.es/dp/B0HJWY3YZ4",
+            "uk": "https://www.amazon.co.uk/dp/B0HJWY3YZ4"
+          }
+        }
+      }
+    },
+    {
+      "id": "csa-04-bruno-papere",
+      "category": "cantiere",
+      "author": "Marco Salucci",
+      "age": "2–5",
+      "featured": false,
+      "format": "paperback",
+      "title": {
+        "it": "Bruno il camion e lo stagno delle papere",
+        "en": "Bruno the Truck and the Duck Pond",
+        "fr": "Bruno le camion et la mare aux canards",
+        "de": "Laster Bruno und der Ententeich",
+        "es": "Bruno el camión y el estanque de los patos",
+        "nl": "Bruno de vrachtwagen en de eendenvijver",
+        "pl": "Ciężarówka Bruno i kaczuszki",
+        "se": "Lastbilen Bruno och ankdammen",
+        "jp": "ダンプカーのブルーノとカモのいけ"
+      },
+      "subtitle": {
+        "it": "Volume 4 delle Avventure del Cantiere",
+        "en": "Volume 4 of Construction Site Adventures",
+        "fr": "Tome 4 des Aventures du Chantier",
+        "de": "Band 4 der Baustellen-Abenteuer",
+        "es": "Volumen 4 de Las Aventuras de la Construcción",
+        "nl": "Deel 4 van Bouwplaats Avonturen",
+        "pl": "Tom 4 Przygód na Placu Budowy",
+        "se": "Del 4 av Byggarbetsplatsens Äventyr",
+        "jp": "工事現場の冒険 第4巻"
+      },
+      "pitch": {
+        "it": "Bruno è un camion forte e robusto, ma dal cuore tenerissimo. Quando una famigliola di anatroccoli rischia di perdere il suo laghetto, Bruno fa di tutto per proteggerli.",
+        "en": "Bruno the dump truck carries big loads but has the gentlest heart for little creatures.",
+        "fr": "Bruno le gros camion costaud a un cœur d'or pour protéger les canetons du chantier !",
+        "es": "Bruno el camión cuida con cariño de los patitos del estanque.",
+        "de": "Laster Bruno setzt sich für die kleinen Enten ein.",
+        "nl": "Bruno beschermt de eendjes.",
+        "pl": "Ciężarówka Bruno chroni małe kaczuszki.",
+        "se": "Bruno hjälper ankorna.",
+        "jp": "力持ちで心優しいダンプカーのブルーノの物語。"
+      },
+      "benefits": {
+        "it": [
+          "Educazione all'empatia verso gli animali e la natura",
+          "Grande tenerezza narrativa adatta alle letture della buonanotte",
+          "Disponibile in versione audiolibro tramite QR code"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Bruno il camion e lo stagno delle papere",
+          "available": true,
+          "asin": "B0H6QFZBDS",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0H6QFZBDS",
+            "com": "https://www.amazon.com/dp/B0H6QFZBDS"
+          }
+        },
+        "en": {
+          "languageName": "English",
+          "title": "Bruno the Truck and the Duck Pond",
+          "available": true,
+          "asin": "B0H6SDVJDZ",
+          "amazon": {
+            "com": "https://www.amazon.com/dp/B0H6SDVJDZ",
+            "uk": "https://www.amazon.co.uk/dp/B0H6SDVJDZ",
+            "it": "https://www.amazon.it/dp/B0H6SDVJDZ"
+          }
+        },
+        "fr": {
+          "languageName": "Français",
+          "title": "Bruno le camion et la mare aux canards",
+          "available": false,
+          "amazon": {}
+        }
+      }
+    },
+    {
+      "id": "csa-05-benny-roma",
+      "category": "cantiere",
+      "author": "Marco Salucci",
+      "age": "2–5",
+      "featured": false,
+      "format": "paperback",
+      "title": {
+        "it": "Benny l'escavatore e le monete dell'antica Roma",
+        "en": "Benny the Excavator and the Coins of Ancient Rome",
+        "fr": "Benny l'excavateur et les pièces de l'antiquité romaine",
+        "de": "Bagger Benny und die antiken römischen Münzen",
+        "es": "Benny y las monedas de la antigua Roma",
+        "nl": "Benny en de Romeinse munten",
+        "pl": "Koparka Benny i rzymskie monety",
+        "se": "Benny och de romerska mynten",
+        "jp": "ショベルカーのベニーと古代ローマのコイン"
+      },
+      "subtitle": {
+        "it": "Volume 5 delle Avventure del Cantiere",
+        "en": "Volume 5 of Construction Site Adventures",
+        "fr": "Tome 5 des Aventures du Chantier",
+        "de": "Band 5 der Baustellen-Abenteuer",
+        "es": "Volumen 5 de Las Aventuras de la Construcción",
+        "nl": "Deel 5 van Bouwplaats Avonturen",
+        "pl": "Tom 5 Przygód na Placu Budowy",
+        "se": "Del 5 av Byggarbetsplatsens Äventyr",
+        "jp": "工事現場の冒険 第5巻"
+      },
+      "pitch": {
+        "it": "Scavando nel terreno con la sua benna, Benny urta un vecchio vaso di terracotta colmo di monete imperiali. Una scoperta che trasformerà il cantiere in uno scavo archeologico indimenticabile.",
+        "en": "Digging into the ground, Benny uncovers an ancient terracotta pot filled with historic coins.",
+        "fr": "En creusant la terre, Benny déterre un mystérieux trésor archéologique !",
+        "es": "Benny encuentra un tesoro arqueológico de la antigua Roma.",
+        "de": "Bagger Benny stößt auf einen antiken Schatz.",
+        "nl": "Benny vindt een oude Romeinse schat.",
+        "pl": "Benny odkrywa skarb ze starożytnego Rzymu.",
+        "se": "Benny hittar en gammal skatt.",
+        "jp": "ベニーが地面を掘っていると古代ローマのコインを発見！"
+      },
+      "benefits": {
+        "it": [
+          "Primo incontro divertente con la storia e l'archeologia per i più piccoli",
+          "Insegna il rispetto dei beni storici e culturali",
+          "Audio e video dedicati con QR code stampato"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Benny l'escavatore e le monete dell'antica Roma",
+          "available": true,
+          "asin": "B0H6VBNX5D",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0H6VBNX5D",
+            "com": "https://www.amazon.com/dp/B0H6VBNX5D"
+          }
+        },
+        "en": {
+          "languageName": "English",
+          "title": "Benny the Excavator and the Coins of Ancient Rome",
+          "available": true,
+          "asin": "B0H6XMYR8Q",
+          "amazon": {
+            "com": "https://www.amazon.com/dp/B0H6XMYR8Q",
+            "uk": "https://www.amazon.co.uk/dp/B0H6XMYR8Q",
+            "it": "https://www.amazon.it/dp/B0H6XMYR8Q"
+          }
+        },
+        "fr": {
+          "languageName": "Français",
+          "title": "Benny l'excavateur et les pièces de l'antiquité romaine",
+          "available": false,
+          "amazon": {}
+        }
+      }
+    },
+    {
+      "id": "csa-06-nina-conigli",
+      "category": "cantiere",
+      "author": "Marco Salucci",
+      "age": "2–5",
+      "featured": false,
+      "format": "paperback",
+      "title": {
+        "it": "Nina la betoniera e il ponte dei coniglietti",
+        "en": "Nina the Cement Truck and the Bunny Bridge",
+        "fr": "Nina la bétonnière et le pont des petits lapins",
+        "de": "Betonmischerin Nina und die Hasenbrücke",
+        "es": "Nina la hormigonera y el puente de los conejitos",
+        "nl": "Nina de betonmolen en de konijnenbrug",
+        "pl": "Betoniarka Nina i mostek dla króliczków",
+        "se": "Cementbilen Nina och kaninbron",
+        "jp": "ミキサー車のニーナとうさぎのはし"
+      },
+      "subtitle": {
+        "it": "Volume 6 delle Avventure del Cantiere",
+        "en": "Volume 6 of Construction Site Adventures",
+        "fr": "Tome 6 des Aventures du Chantier",
+        "de": "Band 6 der Baustellen-Abenteuer",
+        "es": "Volumen 6 de Las Aventuras de la Construcción",
+        "nl": "Deel 6 van Bouwplaats Avonturen",
+        "pl": "Tom 6 Przygód na Placu Budowy",
+        "se": "Del 6 av Byggarbetsplatsens Äventyr",
+        "jp": "工事現場の冒険 第6巻"
+      },
+      "pitch": {
+        "it": "Nina è una betoniera allegra con una botte scintillante. Quando un ruscello in piena isola una colonia di teneri coniglietti, Nina prepara il calcestruzzo perfetto per costruire un ponte sicuro.",
+        "en": "Nina the cheerful cement mixer prepares the perfect mix to build a safe crossing for the little woodland bunnies.",
+        "fr": "Nina la bétonnière ingénieuse construit un petit pont pour sauver de mignons lapereaux.",
+        "es": "Nina la hormigonera construye un puente salvador para los conejitos.",
+        "de": "Nina baut eine rettende Brücke für kleine Waldhasen.",
+        "nl": "Nina bouwt een brug voor de konijntjes.",
+        "pl": "Nina buduje bezpieczny mostek dla zajączków.",
+        "se": "Nina bygger en bro åt kaninerna.",
+        "jp": "ミキサー車のニーナがうさぎたちのために橋をつくる優しいお話。"
+      },
+      "benefits": {
+        "it": [
+          "Promuove la figura femminile nei ruoli tecnici e nei macchinari da lavoro",
+          "Messaggio di soccorso, gentilezza e collaborazione",
+          "Include traccia audio e video narrato"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Nina la betoniera e il ponte dei coniglietti",
+          "available": true,
+          "asin": "B0H717X9ZL",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0H717X9ZL",
+            "com": "https://www.amazon.com/dp/B0H717X9ZL"
+          }
+        },
+        "en": {
+          "languageName": "English",
+          "title": "Nina the Cement Truck and the Bunny Bridge",
+          "available": true,
+          "asin": "B0H723KGZ5",
+          "amazon": {
+            "com": "https://www.amazon.com/dp/B0H723KGZ5",
+            "uk": "https://www.amazon.co.uk/dp/B0H723KGZ5",
+            "it": "https://www.amazon.it/dp/B0H723KGZ5"
+          }
+        },
+        "fr": {
+          "languageName": "Français",
+          "title": "Nina la bétonnière et le pont des petits lapins",
+          "available": false,
+          "amazon": {}
+        }
+      }
+    },
+    {
+      "id": "csa-07-rino-ladri",
+      "category": "cantiere",
+      "author": "Marco Salucci",
+      "age": "2–5",
+      "featured": false,
+      "format": "paperback",
+      "title": {
+        "it": "Rino il rullo e i ladri del cantiere",
+        "en": "Rino the Roller and the Construction Site Thieves",
+        "fr": "Rino le rouleau compresseur et les voleurs du chantier",
+        "de": "Walze Rino und die Baustellendiebe",
+        "es": "Rino el rodillo y los ladrones de la obra",
+        "nl": "Rino de wals en de dieven",
+        "pl": "Walec Rino i złodzieje na budowie",
+        "se": "Välten Rino och tjuvarna",
+        "jp": "ロードローラーのリノとどろぼうたち"
+      },
+      "subtitle": {
+        "it": "Volume 7 delle Avventure del Cantiere",
+        "en": "Volume 7 of Construction Site Adventures",
+        "fr": "Tome 7 des Aventures du Chantier",
+        "de": "Band 7 der Baustellen-Abenteuer",
+        "es": "Volumen 7 de Las Aventuras de la Construcción",
+        "nl": "Deel 7 van Bouwplaats Avonturen",
+        "pl": "Tom 7 Przygód na Placu Budowy",
+        "se": "Del 7 av Byggarbetsplatsens Äventyr",
+        "jp": "工事現場の冒険 第7巻"
+      },
+      "pitch": {
+        "it": "Rino è un rullo compressore pesante e tranquillo. Di notte, quando due malintenzionati tentano di sottrarre attrezzi preziosi, Rino interviene con astuzia e calma per sventare il colpo.",
+        "en": "Rino the heavy roller stands guard at night to keep the construction tools safe.",
+        "fr": "Rino le rouleau veille la nuit sur le chantier et déjoue les plans de deux voleurs.",
+        "es": "Rino el rodillo protege las herramientas del cantiere durante la noche.",
+        "de": "Walze Rino beschützt die Baustelle in der Nacht.",
+        "nl": "Rino bewaakt de bouwplaats.",
+        "pl": "Walec Rino pilnuje porządku nocą.",
+        "se": "Rino vaktar arbetsplatsen på natten.",
+        "jp": "夜の工事現場でリノが大活躍。"
+      },
+      "benefits": {
+        "it": [
+          "Insegna il valore della lealtà e della tutela dei beni comuni",
+          "Avventura serale rilassante che rassicura i bambini sulla sicurezza",
+          "Include QR code per fruire di audio e video gratuiti"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Rino il rullo e i ladri del cantiere",
+          "available": true,
+          "asin": "B0H75DDGLQ",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0H75DDGLQ",
+            "com": "https://www.amazon.com/dp/B0H75DDGLQ"
+          }
+        },
+        "en": {
+          "languageName": "English",
+          "title": "Rino the Roller and the Construction Site Thieves",
+          "available": true,
+          "asin": "B0H75N8JT9",
+          "amazon": {
+            "com": "https://www.amazon.com/dp/B0H75N8JT9",
+            "uk": "https://www.amazon.co.uk/dp/B0H75N8JT9",
+            "it": "https://www.amazon.it/dp/B0H75N8JT9"
+          }
+        },
+        "fr": {
+          "languageName": "Français",
+          "title": "Rino le rouleau compresseur et les voleurs du chantier",
+          "available": false,
+          "amazon": {}
+        }
+      }
+    },
+    {
+      "id": "csa-08-leo-cinciallegra",
+      "category": "cantiere",
+      "author": "Marco Salucci",
+      "age": "2–5",
+      "featured": false,
+      "format": "paperback",
+      "title": {
+        "it": "Leo la gru e il nido della cinciallegra",
+        "en": "Leo the Crane and the Little Bird's Nest",
+        "fr": "Leo la grue et le nid de la mésange",
+        "de": "Kran Leo und das Meisennest",
+        "es": "Leo la grúa y el nido del herrerillo",
+        "nl": "Leo de kraan en het mezennest",
+        "pl": "Dźwig Leo i gniazdko sikorki",
+        "se": "Kranbilen Leo och talgoxens bo",
+        "jp": "クレーン車のレオとシジュウカラの巣"
+      },
+      "subtitle": {
+        "it": "Volume 8 delle Avventure del Cantiere",
+        "en": "Volume 8 of Construction Site Adventures",
+        "fr": "Tome 8 des Aventures du Chantier",
+        "de": "Band 8 der Baustellen-Abenteuer",
+        "es": "Volumen 8 de Las Aventuras de la Construcción",
+        "nl": "Deel 8 van Bouwplaats Avonturen",
+        "pl": "Tom 8 Przygód na Placu Budowy",
+        "se": "Del 8 av Byggarbetsplatsens Äventyr",
+        "jp": "工事現場の冒険 第8巻"
+      },
+      "pitch": {
+        "it": "Tra i rami di un albero vicino all'area di scavo, una piccola cinciallegra ha deposto le sue uova. Leo la gru e i suoi compagni fermano i motori e proteggono il nido fino alla schiusa.",
+        "en": "Leo the crane stops site operations to protect a tiny bird's nest resting safely in a nearby tree.",
+        "fr": "Leo la grue arrête les travaux pour veiller tendrement sur un nid de mésange.",
+        "es": "Leo y las máquinas cuidan con devoción de los pajaritos recién nacidos.",
+        "de": "Kran Leo schützt ein kleines Vogelnest vor dem Baulärm.",
+        "nl": "Leo beschermt een vogelnestje.",
+        "pl": "Dźwig Leo dba o gniazdko z jajkami małej sikorki.",
+        "se": "Leo skyddar fågelboet.",
+        "jp": "小鳥の巣を見守るクレーン車のレオの優しいお話。"
+      },
+      "benefits": {
+        "it": [
+          "Sensibilizzazione all'ecologia, al rispetto della biodiversità e dell'avifauna",
+          "Messaggio di rispetto dei ritmi naturali e gentilezza verso i più deboli",
+          "Lettura e ascolto arricchiti da contenuti speciali digitali"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Leo la gru e il nido della cinciallegra",
+          "available": true,
+          "asin": "B0H7JK9R46",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0H7JK9R46",
+            "com": "https://www.amazon.com/dp/B0H7JK9R46"
+          }
+        },
+        "en": {
+          "languageName": "English",
+          "title": "Leo the Crane and the Little Bird's Nest",
+          "available": true,
+          "asin": "B0H7LPQ8KX",
+          "amazon": {
+            "com": "https://www.amazon.com/dp/B0H7LPQ8KX",
+            "uk": "https://www.amazon.co.uk/dp/B0H7LPQ8KX",
+            "it": "https://www.amazon.it/dp/B0H7LPQ8KX"
+          }
+        },
+        "fr": {
+          "languageName": "Français",
+          "title": "Leo la grue et le nid de la mésange",
+          "available": false,
+          "amazon": {}
+        }
+      }
+    }
+  ]
+}

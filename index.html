@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWGT28FQGF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FWGT28FQGF');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FWGT28FQGF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FWGT28FQGF');
+  </script>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSA Books 4 Kids | Libri illustrati per bambini | Children's Books</title>
-  
-  <!-- SEO & Meta Tags -->
-  <meta name="description" content="CSA Books 4 Kids: libri illustrati e storie educative per bambini di 2-5 anni di Marco Salucci. Scopri la collana Le Avventure del Cantiere su Amazon." />
-  <meta name="keywords" content="CSA Books 4 Kids, libri per bambini, libri illustrati 2-5 anni, Le Avventure del Cantiere, Construction Site Adventures, Marco Salucci, Amazon libri bambini" />
-  <meta name="author" content="Marco Salucci - CSA Books 4 Kids" />
+  <title>CSA Books Kids — Grandi storie. Piccole scoperte. Libri per bambini</title>
+
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="CSA Books Kids è un marchio editoriale indipendente dedicato ai bambini: storie illustrate, scienza e curiosità, supporto scolastico e creatività." />
+  <meta name="keywords" content="CSA Books Kids, libri per bambini, Le Avventure del Cantiere, Einstein questa te la sei persa, Clara Musicco, Marco Salucci, libri illustrati, divulgazione scientifica bambini" />
+  <meta name="author" content="CSA Books Kids" />
   <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://csabookskids.com/" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="CSA Books 4 Kids | Libri illustrati per bambini" />
-  <meta property="og:description" content="Grandi macchine, piccole avventure. Scopri la collana di libri per bambini di Marco Salucci." />
-  <meta property="og:image" content="assets/construction-site-adventures/Logo.ITA.v2.png" />
+  <meta property="og:title" content="CSA Books Kids — Grandi storie. Piccole scoperte." />
+  <meta property="og:description" content="Libri che fanno immaginare, esplorare, creare e imparare. Storie per bambini, scienza e creatività." />
+  <meta property="og:image" content="books/csa-vol1/it/cover.png" />
+  <meta property="og:url" content="https://csabookskids.com/" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CSA Books 4 Kids | Children's Picture Books" />
-  <meta name="twitter:description" content="Picture books and fun stories for curious little minds." />
-  <meta name="twitter:image" content="assets/construction-site-adventures/Logo.ITA.v2.png" />
-
-  <!-- Google Fonts: Fredoka & Plus Jakarta Sans -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css?v=2.7" />
-  <link rel="stylesheet" href="campaign.css?v=2.7" />
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style-2.0.css" />
 </head>
 <body>
 
   <!-- ======================================================================
-       HEADER & BARRA DI CONTROLLO
+       HEADER: BARRA SUPERIORE ORIGINALE (Preservata al 100%)
        ====================================================================== -->
   <header class="site-header">
-    <!-- BARRA SUPERIORE: Email, Social (Instagram, TikTok, YouTube) e Selettore Lingua FlagCDN -->
     <div class="site-topbar">
       <div class="container topbar-inner">
         <!-- Social & Email Links -->
@@ -125,274 +118,144 @@
               <img src="https://flagcdn.com/24x18/pl.png" srcset="https://flagcdn.com/48x36/pl.png 2x" width="18" height="13" alt="Polski" class="lang-flag-img" loading="eager">
               <span class="lang-code">PL</span>
             </button>
-            <button type="button" class="lang-btn" data-lang="sv" onclick="setLanguage('sv')" aria-pressed="false" title="Svenska">
+            <button type="button" class="lang-btn" data-lang="se" onclick="setLanguage('se')" aria-pressed="false" title="Svenska">
               <img src="https://flagcdn.com/24x18/se.png" srcset="https://flagcdn.com/48x36/se.png 2x" width="18" height="13" alt="Svenska" class="lang-flag-img" loading="eager">
               <span class="lang-code">SE</span>
             </button>
-            <button type="button" class="lang-btn" data-lang="ja" onclick="setLanguage('ja')" aria-pressed="false" title="日本語">
+            <button type="button" class="lang-btn" data-lang="jp" onclick="setLanguage('jp')" aria-pressed="false" title="日本語">
               <img src="https://flagcdn.com/24x18/jp.png" srcset="https://flagcdn.com/48x36/jp.png 2x" width="18" height="13" alt="日本語" class="lang-flag-img" loading="eager">
               <span class="lang-code">JP</span>
             </button>
           </div>
 
-          <!-- Mobile: Dropdown Compatto Elegante -->
-          <div class="lang-mobile-select" id="lang-mobile-select">
-            <button type="button" class="lang-mobile-trigger" id="lang-mobile-trigger" aria-haspopup="listbox" aria-expanded="false" aria-label="Seleziona Lingua">
-              <img src="https://flagcdn.com/24x18/it.png" alt="IT" class="lang-mobile-flag" id="lang-mobile-selected-flag">
-              <span class="lang-mobile-code" id="lang-mobile-selected-code">IT</span>
-              <svg class="lang-mobile-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="lang-mobile-dropdown" id="lang-mobile-dropdown" role="listbox">
-              <button type="button" class="lang-mobile-item lang-btn" data-lang="it" role="option" onclick="setLanguage('it')">
-                <img src="https://flagcdn.com/24x18/it.png" alt="Italiano" class="lang-flag-img">
-                <span class="lang-mobile-name">Italiano</span>
-                <span class="lang-mobile-short">IT</span>
-              </button>
-              <button type="button" class="lang-mobile-item lang-btn" data-lang="en" role="option" onclick="setLanguage('en')">
-                <img src="https://flagcdn.com/24x18/gb.png" alt="English" class="lang-flag-img">
-                <span class="lang-mobile-name">English</span>
-                <span class="lang-mobile-short">EN</span>
-              </button>
-              <button type="button" class="lang-mobile-item lang-btn" data-lang="de" role="option" onclick="setLanguage('de')">
-                <img src="https://flagcdn.com/24x18/de.png" alt="Deutsch" class="lang-flag-img">
-                <span class="lang-mobile-name">Deutsch</span>
-                <span class="lang-mobile-short">DE</span>
-              </button>
-              <button type="button" class="lang-mobile-item lang-btn" data-lang="fr" role="option" onclick="setLanguage('fr')">
-                <img src="https://flagcdn.com/24x18/fr.png" alt="Français" class="lang-flag-img">
-                <span class="lang-mobile-name">Français</span>
-                <span class="lang-mobile-short">FR</span>
-              </button>
-              <button type="button" class="lang-mobile-item lang-btn" data-lang="es" role="option" onclick="setLanguage('es')">
-                <img src="https://flagcdn.com/24x18/es.png" alt="Español" class="lang-flag-img">
-                <span class="lang-mobile-name">Español</span>
-                <span class="lang-mobile-short">ES</span>
-              </button>
-              <button type="button" class="lang-mobile-item lang-btn" data-lang="nl" role="option" onclick="setLanguage('nl')">
-                <img src="https://flagcdn.com/24x18/nl.png" alt="Nederlands" class="lang-flag-img">
-                <span class="lang-mobile-name">Nederlands</span>
-                <span class="lang-mobile-short">NL</span>
-              </button>
-              <button type="button" class="lang-mobile-item lang-btn" data-lang="pl" role="option" onclick="setLanguage('pl')">
-                <img src="https://flagcdn.com/24x18/pl.png" alt="Polski" class="lang-flag-img">
-                <span class="lang-mobile-name">Polski</span>
-                <span class="lang-mobile-short">PL</span>
-              </button>
-              <button type="button" class="lang-mobile-item lang-btn" data-lang="sv" role="option" onclick="setLanguage('sv')">
-                <img src="https://flagcdn.com/24x18/se.png" alt="Svenska" class="lang-flag-img">
-                <span class="lang-mobile-name">Svenska</span>
-                <span class="lang-mobile-short">SE</span>
-              </button>
-              <button type="button" class="lang-mobile-item lang-btn" data-lang="ja" role="option" onclick="setLanguage('ja')">
-                <img src="https://flagcdn.com/24x18/jp.png" alt="日本語" class="lang-flag-img">
-                <span class="lang-mobile-name">日本語</span>
-                <span class="lang-mobile-short">JP</span>
-              </button>
-            </div>
-          </div>
+          <!-- Mobile Select Native Fallback -->
+          <select id="mobile-lang-select" class="lang-mobile-native-select" aria-label="Seleziona Lingua">
+            <option value="it">🇮🇹 IT - Italiano</option>
+            <option value="en">🇬🇧 EN - English</option>
+            <option value="de">🇩🇪 DE - Deutsch</option>
+            <option value="fr">🇫🇷 FR - Français</option>
+            <option value="es">🇪🇸 ES - Español</option>
+            <option value="nl">🇳🇱 NL - Nederlands</option>
+            <option value="pl">🇵🇱 PL - Polski</option>
+            <option value="se">🇸🇪 SE - Svenska</option>
+            <option value="jp">🇯🇵 JP - 日本語</option>
+          </select>
         </div>
       </div>
     </div>
 
-    <!-- BARRA PRINCIPALE: Brand Identity & Navigazione -->
-    <div class="site-header-main">
-      <div class="container header-inner">
-        <!-- Brand Identity -->
-        <a href="index.html" class="brand-identity" aria-label="CSA Books 4 Kids">
-          <img 
-            src="assets/construction-site-adventures/Logo.ITA.v2.png" 
-            alt="Logo Collana" 
-            class="header-series-logo" 
-            id="series-logo-img"
-          />
-          <div class="brand-text-group">
-            <span class="brand-name">CSA Books <span class="highlight">4 Kids</span></span>
+    <!-- BARRA DI NAVIGAZIONE PRINCIPALE 2.0 -->
+    <nav class="csa-navbar" aria-label="Navigazione Principale">
+      <div class="csa-container csa-nav-container">
+        <!-- Logo Brand -->
+        <a href="index.html" class="csa-brand-link">
+          <div class="csa-logo-mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+          </div>
+          <div class="csa-brand-text">
+            <span class="csa-brand-name">CSA Books <span class="highlight">Kids</span></span>
+            <span class="csa-brand-tagline" data-i18n="hero.badge">Marchio Editoriale per Bambini</span>
           </div>
         </a>
 
-        <!-- Navigazione Principale -->
-        <nav class="site-nav" aria-label="Navigazione principale">
-          <a href="#collana" class="nav-link" id="nav-link-series">Collana</a>
-          <a href="#libri" class="nav-link" id="nav-link-books">Libri</a>
-          <a href="#raccolte" class="nav-link" id="nav-link-raccolte">Raccolte</a>
-          <a href="characters.html" class="nav-link" id="nav-link-characters">Personaggi</a>
-          <a href="#valori" class="nav-link" id="nav-link-values">Valori</a>
-          <a href="#recensioni" class="nav-link" id="nav-link-reviews">Recensioni</a>
-          <a href="about.html" class="nav-link" id="nav-link-about">Chi siamo</a>
-          <a href="fano.html" class="nav-link" id="nav-link-coloring">Da colorare</a>
-        </nav>
+        <!-- Desktop Menu -->
+        <ul class="csa-nav-menu">
+          <li class="csa-nav-item">
+            <a href="catalogo.html" class="csa-nav-link" data-i18n="nav.allBooks">Tutti i libri</a>
+          </li>
+          <li class="csa-nav-item">
+            <a href="cantiere.html" class="csa-nav-link" data-i18n="nav.cantiere">Il Cantiere</a>
+          </li>
+          <li class="csa-nav-item">
+            <a href="scienza.html" class="csa-nav-link" data-i18n="nav.scienza">Scienza e curiosità</a>
+          </li>
+          <li class="csa-nav-item">
+            <a href="scuola.html" class="csa-nav-link" data-i18n="nav.scuola">
+              Per la scuola
+              <span class="csa-nav-badge-new" data-i18n="worlds.comingSoonBadge">In arrivo</span>
+            </a>
+          </li>
+          <li class="csa-nav-item">
+            <a href="colorare.html" class="csa-nav-link" data-i18n="nav.colorare">Da colorare</a>
+          </li>
+          <li class="csa-nav-item">
+            <a href="about.html" class="csa-nav-link" data-i18n="nav.about">Chi siamo</a>
+          </li>
+        </ul>
+
+        <!-- Hamburger Toggle Mobile -->
+        <button type="button" class="csa-menu-toggle" id="csa-menu-toggle" aria-label="Menu" aria-expanded="false">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
-    </div>
+    </nav>
   </header>
+
+  <!-- Mobile Drawer -->
+  <div class="csa-mobile-drawer" id="csa-mobile-drawer">
+    <div class="csa-drawer-header">
+      <span class="csa-brand-name">CSA Books <span class="highlight">Kids</span></span>
+      <button type="button" class="csa-drawer-close" id="csa-drawer-close" aria-label="Chiudi">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="csa-drawer-nav">
+      <a href="catalogo.html" class="csa-drawer-link" data-i18n="nav.allBooks">Tutti i libri</a>
+      <a href="cantiere.html" class="csa-drawer-link" data-i18n="nav.cantiere">Il Cantiere</a>
+      <a href="scienza.html" class="csa-drawer-link" data-i18n="nav.scienza">Scienza e curiosità</a>
+      <a href="scuola.html" class="csa-drawer-link" data-i18n="nav.scuola">Per la scuola</a>
+      <a href="colorare.html" class="csa-drawer-link" data-i18n="nav.colorare">Da colorare</a>
+      <a href="about.html" class="csa-drawer-link" data-i18n="nav.about">Chi siamo</a>
+    </div>
+  </div>
 
   <main>
     <!-- ======================================================================
-         HERO BANNER CAROUSEL 16:9 (MOSTRATO PER INTERO SENZA TAGLI)
+         HERO SECTION 2.0
          ====================================================================== -->
-    <section class="hero-banner" id="hero-banner" aria-label="CSA Books 4 Kids Hero">
-      <div class="container hero-banner-wrapper">
-        <div class="hero-banner-container" id="hero-carousel" role="region" aria-roledescription="carousel" aria-label="CSA Books 4 Kids Carousel" tabindex="0">
-          <!-- Slides Track / Container -->
-          <div class="hero-carousel-slides" id="hero-carousel-slides" aria-live="polite">
-            <div class="hero-carousel-slide active" data-index="0" role="group" aria-roledescription="slide" aria-label="1 di 7">
-              <img 
-                src="assets/banner/banner-csa-books-4-kids.jpg" 
-                alt="CSA Books 4 Kids - Storie per bambini, nate da un papà e una mamma." 
-                class="hero-banner-img" 
-                id="hero-banner-img"
-                fetchpriority="high"
-                loading="eager"
-              />
+    <section class="csa-hero-section" aria-label="Presentazione CSA Books Kids">
+      <div class="csa-container">
+        <div class="csa-hero-grid">
+          <div class="csa-hero-text">
+            <span class="csa-hero-badge" data-i18n="hero.badge">Marchio Editoriale per Bambini</span>
+            <h1 class="csa-hero-title" data-i18n="hero.title">Grandi storie. Piccole scoperte.</h1>
+            <p class="csa-hero-subtitle" data-i18n="hero.subtitle">
+              Libri che fanno immaginare, esplorare, creare e imparare.
+            </p>
+            <div class="csa-hero-ctas">
+              <a href="catalogo.html" class="csa-btn csa-btn-primary csa-btn-lg" data-i18n="hero.ctaAll">
+                Scopri tutti i libri
+              </a>
+              <a href="cantiere.html" class="csa-btn csa-btn-cantiere csa-btn-lg" data-i18n="hero.ctaCantiere">
+                Esplora Le Avventure del Cantiere
+              </a>
             </div>
           </div>
 
-          <!-- Overlay con Logo/Titolo e Sottotitolo Localizzati -->
-          <div class="hero-banner-overlay">
-            <h1 class="hero-title" id="hero-title">CSA Books <span class="highlight">4 Kids</span></h1>
-            <p class="hero-subtitle" id="hero-subtitle">Storie per bambini, nate da un papà e una mamma.</p>
-          </div>
-
-          <!-- Controlli Navigazione Precedente / Successivo -->
-          <button type="button" class="hero-carousel-btn prev" id="hero-carousel-prev" aria-label="Slide precedente" title="Precedente">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          <button type="button" class="hero-carousel-btn next" id="hero-carousel-next" aria-label="Slide successiva" title="Successiva">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-
-          <!-- Indicatori Slide (Dots) -->
-          <div class="hero-carousel-indicators" id="hero-carousel-indicators" role="tablist" aria-label="Seleziona slide">
-            <!-- Popolato dinamicamente da script.js -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         SEZIONE STORYTIME (WATCH & LISTEN ON YOUTUBE)
-         ====================================================================== -->
-    <section class="storytime-section" id="storytime" aria-label="Storytime">
-      <div class="container hero-banner-wrapper">
-        <div class="storytime-slider-wrapper" style="position: relative; width: 100%; max-width: 100%; overflow: hidden;">
-          <div class="storytime-slider" id="storytime-slider" role="region" aria-roledescription="carousel" aria-label="Storytime Video" style="position: relative; width: 100%; max-width: 100%; overflow: hidden;">
-            <!-- Slider Track con i video disponibili -->
-            <div class="storytime-slider-track" id="storytime-slider-track" style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; align-items: stretch; width: 100%; box-sizing: border-box;">
-              <!-- Slide 0: Leo la gru e le gemme della montagna (Nuovo video!) -->
-              <div class="storytime-slide active" data-index="0" role="group" aria-roledescription="slide" aria-label="1 di 2" style="flex: 0 0 100% !important; min-width: 100% !important; max-width: 100% !important; width: 100% !important; flex-shrink: 0 !important; box-sizing: border-box;">
-                <div class="storytime-card">
-                  <div class="storytime-media-col">
-                    <div 
-                      class="storytime-cover-frame" 
-                      role="button" 
-                      tabindex="0" 
-                      onclick="jumpToStorytimeBook('leo-montagna-it')" 
-                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();jumpToStorytimeBook('leo-montagna-it');}" 
-                      aria-label="Leo la gru e le gemme della montagna - Vai al libro nel catalogo"
-                      title="Leo la gru e le gemme della montagna - Vai al libro nel catalogo"
-                    >
-                      <img 
-                        src="assets/construction-site-adventures/03.Leo.Montagna/IT/Front.Cover.png" 
-                        alt="Leo la gru e le gemme della montagna - Storytime" 
-                        class="storytime-cover-img" 
-                        loading="eager"
-                        fetchpriority="high"
-                      />
-                      <span class="storytime-badge-new">NOVITÀ</span>
-                    </div>
-                  </div>
-                  <div class="storytime-content-col">
-                    <div class="storytime-eyebrow-wrapper">
-                      <div class="storytime-eyebrow">STORYTIME</div>
-                      <span class="storytime-pill-new">NUOVO VIDEO</span>
-                    </div>
-                    <h2 class="storytime-title">Leo la gru e le gemme della montagna</h2>
-                    <p class="storytime-desc">Ascolta l'avventura di Leo mentre la storia prende vita su YouTube e Spotify.</p>
-                    <div class="storytime-action-wrapper">
-                      <a href="https://youtu.be/7VBlotwS230" target="_blank" rel="noopener noreferrer" class="storytime-cta-btn storytime-cta-youtube" title="Guarda su YouTube">
-                        <svg class="storytime-cta-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                          <path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                        </svg>
-                        <span>Guarda su YouTube</span>
-                      </a>
-                      <a href="https://open.spotify.com/episode/1Ri2dxfymPcWnlwrVGnx6h?si=tOTipQZ0Q_up9VRmrjQI3Q" target="_blank" rel="noopener noreferrer" class="storytime-cta-btn storytime-cta-spotify" title="Ascolta su Spotify">
-                        <svg class="storytime-cta-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                          <path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.5 17.3c-.2.3-.6.4-.9.2-2.5-1.5-5.6-1.9-9.3-1-.3.1-.7-.1-.8-.4-.1-.3.1-.7.4-.8 4-1 7.4-.5 10.3 1.2.3.2.4.6.3.8zm1.5-3.3c-.3.4-.8.5-1.2.3-3-1.8-7.5-2.4-11-1.3-.4.1-.9-.1-1-.5-.1-.4.1-.9.5-1 4.1-1.2 9.1-.6 12.4 1.5.4.2.5.7.3 1zm.1-3.4c-3.6-2.1-9.5-2.3-12.9-1.3-.5.2-1.1-.1-1.3-.6-.2-.5.1-1.1.6-1.3 4-1.2 10.5-1 14.6 1.5.5.3.6.9.3 1.4-.3.5-.9.6-1.3.3z"/>
-                        </svg>
-                        <span>Ascolta su Spotify</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+          <!-- Hero Visual: Stack sfalsato di copertine reali -->
+          <div class="csa-hero-visual" aria-hidden="true">
+            <div class="csa-cover-stack">
+              <div class="csa-stack-item item-1" onclick="window.openBookModal('einstein')">
+                <img src="books/einstein/it/cover.png" alt="Einstein, questa te la sei persa!" loading="eager" />
               </div>
-
-              <!-- Slide 1: Benny l'escavatore e la collina che cambiava forma -->
-              <div class="storytime-slide" data-index="1" role="group" aria-roledescription="slide" aria-label="2 di 2" aria-hidden="true" style="flex: 0 0 100% !important; min-width: 100% !important; max-width: 100% !important; width: 100% !important; flex-shrink: 0 !important; box-sizing: border-box;">
-                <div class="storytime-card">
-                  <div class="storytime-media-col">
-                    <div 
-                      class="storytime-cover-frame" 
-                      role="button" 
-                      tabindex="0" 
-                      onclick="jumpToStorytimeBook('benny-collina-it')" 
-                      onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();jumpToStorytimeBook('benny-collina-it');}" 
-                      aria-label="Benny l'escavatore e la collina che cambiava forma - Vai al libro nel catalogo"
-                      title="Benny l'escavatore e la collina che cambiava forma - Vai al libro nel catalogo"
-                    >
-                      <img 
-                        src="assets/construction-site-adventures/01.Benny.Collina/IT/Front.Cover.png" 
-                        alt="Benny l'escavatore e la collina che cambiava forma - Storytime" 
-                        class="storytime-cover-img" 
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-                  <div class="storytime-content-col">
-                    <div class="storytime-eyebrow-wrapper">
-                      <div class="storytime-eyebrow">STORYTIME</div>
-                    </div>
-                    <h2 class="storytime-title">Benny l'escavatore e la collina che cambiava forma</h2>
-                    <p class="storytime-desc">Ascolta l'avventura di Benny mentre la storia prende vita su YouTube e Spotify.</p>
-                    <div class="storytime-action-wrapper">
-                      <a href="https://youtu.be/Q5BzuefwUuA" target="_blank" rel="noopener noreferrer" class="storytime-cta-btn storytime-cta-youtube" title="Guarda su YouTube">
-                        <svg class="storytime-cta-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                          <path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                        </svg>
-                        <span>Guarda su YouTube</span>
-                      </a>
-                      <a href="https://open.spotify.com/episode/7wCHeAATwC0cMo3cLz09GT?si=_KomHQZ3QOurT1-MfCcu1Q" target="_blank" rel="noopener noreferrer" class="storytime-cta-btn storytime-cta-spotify" title="Ascolta su Spotify">
-                        <svg class="storytime-cta-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                          <path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.5 17.3c-.2.3-.6.4-.9.2-2.5-1.5-5.6-1.9-9.3-1-.3.1-.7-.1-.8-.4-.1-.3.1-.7.4-.8 4-1 7.4-.5 10.3 1.2.3.2.4.6.3.8zm1.5-3.3c-.3.4-.8.5-1.2.3-3-1.8-7.5-2.4-11-1.3-.4.1-.9-.1-1-.5-.1-.4.1-.9.5-1 4.1-1.2 9.1-.6 12.4 1.5.4.2.5.7.3 1zm.1-3.4c-3.6-2.1-9.5-2.3-12.9-1.3-.5.2-1.1-.1-1.3-.6-.2-.5.1-1.1.6-1.3 4-1.2 10.5-1 14.6 1.5.5.3.6.9.3 1.4-.3.5-.9.6-1.3.3z"/>
-                        </svg>
-                        <span>Ascolta su Spotify</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+              <div class="csa-stack-item item-2" onclick="window.openBookModal('csa-vol2')">
+                <img src="books/csa-vol2/it/cover.png" alt="Le Avventure del Cantiere Vol. 2" loading="eager" />
+              </div>
+              <div class="csa-stack-item item-3" onclick="window.openBookModal('csa-vol1')">
+                <img src="books/csa-vol1/it/cover.png" alt="Le Avventure del Cantiere Vol. 1" loading="eager" />
               </div>
             </div>
-
-            <!-- Frecce di navigazione -->
-            <button type="button" class="storytime-slider-btn storytime-slider-prev" id="storytime-slider-prev" aria-label="Video precedente">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-            </button>
-            <button type="button" class="storytime-slider-btn storytime-slider-next" id="storytime-slider-next" aria-label="Video successivo">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </button>
-
-            <!-- Indicatori (Dots) -->
-            <div class="storytime-slider-indicators" id="storytime-slider-indicators" role="tablist" aria-label="Seleziona video storytime">
-              <button type="button" class="storytime-slider-dot active" data-slide-to="0" role="tab" aria-selected="true" aria-label="Video 1 di 2"></button>
-              <button type="button" class="storytime-slider-dot" data-slide-to="1" role="tab" aria-selected="false" aria-label="Video 2 di 2"></button>
+            <!-- Badge Otto il Polpo -->
+            <div class="csa-hero-mascot-pill">
+              <img src="assets/einstein/media/otto.webp" alt="Otto il polpo" />
+              <span>Con la mascotte Otto!</span>
             </div>
           </div>
         </div>
@@ -400,391 +263,271 @@
     </section>
 
     <!-- ======================================================================
-         SEZIONE 1: LA COLLANA
+         I NOSTRI MONDI (4 Card Categorie Editoriali)
          ====================================================================== -->
-    <section class="series-section" id="collana" aria-label="La Collana">
-      <div class="container series-container">
-        <div class="series-logo-frame">
-          <img 
-            src="assets/construction-site-adventures/Logo.ITA.v2.png" 
-            alt="Le Avventure del Cantiere - Logo Collana" 
-            class="series-logo-img" 
-            id="series-section-logo" 
-            loading="lazy"
-          />
-        </div>
-
-        <h2 class="series-title" id="series-section-title">La Collana</h2>
-
-        <div class="series-lead-box">
-          <p class="series-lead-text" id="series-lead-text">
-            "Le Avventure del Cantiere" è una collana di storie illustrate per bambini che ha come protagonisti un gruppo di simpatici veicoli da costruzione. Ogni libro trasforma una sfida quotidiana di cantiere in una piccola grande avventura ricca di amicizia, curiosità, lavoro di squadra e scoperta, offrendo a genitori e figli storie semplici e coinvolgenti da condividere insieme.
+    <section class="csa-section csa-worlds-section" id="mondi" aria-label="I nostri mondi editoriali">
+      <div class="csa-container">
+        <div class="csa-section-header">
+          <span class="csa-section-eyebrow" data-i18n="worlds.eyebrow">I Nostri Mondi</span>
+          <h2 class="csa-section-title" data-i18n="worlds.title">Esplora i nostri mondi</h2>
+          <p class="csa-section-subtitle" data-i18n="worlds.subtitle">
+            Quattro aree editoriali per nutrire l'immaginazione, il pensiero scientifico e la creatività di ogni età.
           </p>
         </div>
 
-        <div class="series-characters-preview">
-          <div class="series-chars-avatars">
-            <span class="series-char-avatar" title="Benny"><img src="assets/brand/Benny.jpeg" alt="Benny" loading="lazy" /></span>
-            <span class="series-char-avatar" title="Bruno"><img src="assets/brand/Bruno.jpeg" alt="Bruno" loading="lazy" /></span>
-            <span class="series-char-avatar" title="Leo"><img src="assets/brand/Leo.jpeg" alt="Leo" loading="lazy" /></span>
-            <span class="series-char-avatar" title="Nina"><img src="assets/brand/Nina.jpeg" alt="Nina" loading="lazy" /></span>
-            <span class="series-char-avatar" title="Rino"><img src="assets/brand/Rino.jpeg" alt="Rino" loading="lazy" /></span>
-            <span class="series-char-avatar" title="Rudy"><img src="assets/brand/Rudy.jpeg" alt="Rudy" loading="lazy" /></span>
-          </div>
-          <p class="series-chars-intro" id="series-chars-intro">
-            Sei simpatici veicoli da cantiere — Benny, Bruno, Leo, Nina, Rino e Rudy — pronti a collaborare e ad affrontare ogni sfida insieme.
-          </p>
-          <a href="characters.html" class="series-characters-cta" id="series-chars-cta">
-            <span id="series-chars-cta-text">Scopri i personaggi delle Avventure del Cantiere</span>
-            <span class="cta-arrow" aria-hidden="true">&rarr;</span>
+        <div class="csa-worlds-grid">
+          <!-- 1. Cantiere -->
+          <a href="cantiere.html" class="csa-world-card cantiere">
+            <div class="csa-world-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <span class="csa-world-badge">2–5 anni</span>
+            <h3 class="csa-world-title">Le Avventure del Cantiere</h3>
+            <p class="csa-world-desc">
+              Benny, Rudy, Leo, Bruno, Nina e Rino. Raccolte speciali, storie illustrate in rima, amicizia e grandi macchine.
+            </p>
+            <span class="csa-world-action">
+              <span data-i18n="worlds.exploreBtn">Esplora la collana</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </span>
+          </a>
+
+          <!-- 2. Scienza e curiosità -->
+          <a href="scienza.html" class="csa-world-card scienza">
+            <div class="csa-world-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <span class="csa-world-badge">7–12 anni</span>
+            <h3 class="csa-world-title">Scienza e curiosità</h3>
+            <p class="csa-world-desc">
+              Einstein, dinosauri, spazio e grandi misteri della natura documentati su fonti storiche e scientifiche reali.
+            </p>
+            <span class="csa-world-action">
+              <span data-i18n="worlds.exploreBtn">Esplora la collana</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </span>
+          </a>
+
+          <!-- 3. Per la scuola -->
+          <a href="scuola.html" class="csa-world-card scuola">
+            <div class="csa-world-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+            </div>
+            <span class="csa-world-badge" data-i18n="worlds.comingSoonBadge">In preparazione</span>
+            <h3 class="csa-world-title">Per la scuola</h3>
+            <p class="csa-world-desc">
+              La Bussola Misteriosa: giochi logici, matematica per la primaria e strumenti didattici per allenare la mente.
+            </p>
+            <span class="csa-world-action">
+              <span data-i18n="worlds.exploreBtn">Scopri il progetto</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </span>
+          </a>
+
+          <!-- 4. Da colorare e creare -->
+          <a href="colorare.html" class="csa-world-card creativita">
+            <div class="csa-world-icon-wrap">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="13.5" cy="6.5" r=".5"></circle>
+                <circle cx="17.5" cy="10.5" r=".5"></circle>
+                <circle cx="8.5" cy="7.5" r=".5"></circle>
+                <circle cx="6.5" cy="12.5" r=".5"></circle>
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+              </svg>
+            </div>
+            <span class="csa-world-badge">5–10 anni</span>
+            <h3 class="csa-world-title">Da colorare e creare</h3>
+            <p class="csa-world-desc">
+              Fano col naso all'insù: oltre 40 disegni da colorare, giochi, labirinti e monumenti della città antica di Vitruvio.
+            </p>
+            <span class="csa-world-action">
+              <span data-i18n="worlds.exploreBtn">Esplora la collana</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </span>
           </a>
         </div>
       </div>
     </section>
 
     <!-- ======================================================================
-         SEZIONE 2: I LIBRI (CATALOGO CON FILTRI E ANTEPRIMA)
+         LIBRI IN PRIMO PIANO (Einstein, CSA Vol 1, CSA Vol 2)
          ====================================================================== -->
-    <section class="catalog-section" id="libri">
-      <span id="catalogo" style="position: absolute; margin-top: -110px;"></span>
-      <div class="container">
-        <div class="catalog-header">
-          <h2 class="catalog-title" id="books-section-title">I Libri</h2>
-          <p class="catalog-subtitle" id="books-section-subtitle">Storie illustrate per piccoli lettori: scopri tutti i libri disponibili</p>
+    <section class="csa-section csa-featured-section" id="in-primo-piano" aria-label="Libri in primo piano">
+      <div class="csa-container">
+        <div class="csa-section-header">
+          <span class="csa-section-eyebrow" data-i18n="featured.eyebrow">Titoli in Evidenza</span>
+          <h2 class="csa-section-title" data-i18n="featured.title">Libri in primo piano</h2>
+          <p class="csa-section-subtitle" data-i18n="featured.subtitle">
+            Le pubblicazioni più amate dai piccoli lettori e consigliate da genitori ed educatori.
+          </p>
         </div>
 
-        <!-- Selettore Secondario Lingua Libri (Indipendente dalla lingua del sito) -->
-        <div class="book-filters-container">
-          <div class="book-filters" role="tablist" aria-label="Filtra libri per lingua">
-            <button type="button" class="filter-btn active" data-book-lang="it" role="tab" aria-selected="true" onclick="setBookLanguageFilter('it')">
-              <img src="https://flagcdn.com/24x18/it.png" srcset="https://flagcdn.com/48x36/it.png 2x" width="18" height="13" alt="" class="lang-flag-img" loading="eager">
-              <span class="filter-text" id="filter-text-it">Edizione Italiana</span>
-              <span class="filter-count">9</span>
-            </button>
-            <button type="button" class="filter-btn" data-book-lang="en" role="tab" aria-selected="false" onclick="setBookLanguageFilter('en')">
-              <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="18" height="13" alt="" class="lang-flag-img" loading="eager">
-              <span class="filter-text" id="filter-text-en">Edizione Inglese</span>
-              <span class="filter-count">8</span>
-            </button>
-            <button type="button" class="filter-btn" data-book-lang="fr" role="tab" aria-selected="false" onclick="setBookLanguageFilter('fr')">
-              <img src="https://flagcdn.com/24x18/fr.png" srcset="https://flagcdn.com/48x36/fr.png 2x" width="18" height="13" alt="" class="lang-flag-img" loading="eager">
-              <span class="filter-text" id="filter-text-fr">Édition Française</span>
-              <span class="filter-count">8</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Griglia Card Libri -->
-        <div class="catalog-grid" id="books-catalog-grid">
-          <!-- Popolato dinamicamente da script.js -->
+        <!-- Popolato dinamicamente da app-2.0.js -->
+        <div class="csa-books-grid" id="csa-featured-books-grid">
+          <!-- Fallback statico per rendering immediato -->
         </div>
       </div>
     </section>
 
     <!-- ======================================================================
-         SEZIONE RACCOLTE (VISIBILE SOLO IN ITALIANO)
+         ESPLORA PER ETÀ
          ====================================================================== -->
-    <section class="collections-section" id="raccolte" aria-label="Le Raccolte">
-      <div class="container">
-        <div class="collections-header">
-          <h2 class="collections-title" id="collections-section-title">Le Raccolte</h2>
-          <p class="collections-subtitle" id="collections-section-subtitle">Volumi speciali con 4 storie complete in grande formato per piccoli lettori</p>
+    <section class="csa-section csa-ages-section" id="eta" aria-label="Esplora i libri per età">
+      <div class="csa-container">
+        <div class="csa-section-header">
+          <span class="csa-section-eyebrow" data-i18n="ages.eyebrow">Fasce d'Età</span>
+          <h2 class="csa-section-title" data-i18n="ages.title">Esplora per età</h2>
+          <p class="csa-section-subtitle" data-i18n="ages.subtitle">
+            Trova con un click il libro più adatto per il tuo bambino.
+          </p>
         </div>
 
-        <div class="collections-grid" id="collections-catalog-grid">
-          <!-- Popolato dinamicamente da script.js -->
+        <div class="csa-ages-grid">
+          <!-- 2–5 anni -->
+          <a href="catalogo.html?age=2-5" class="csa-age-card">
+            <span class="csa-age-badge" data-i18n="ages.age2to5">2–5 anni</span>
+            <p class="csa-age-desc" data-i18n="ages.age2to5Desc">
+              Prime storie illustrate, rime, veicoli e grandi valori di amicizia e aiuto reciproco.
+            </p>
+            <span class="csa-age-action">
+              <span data-i18n="ages.viewBooks">Vedi i libri</span> →
+            </span>
+          </a>
+
+          <!-- 5–10 anni -->
+          <a href="catalogo.html?age=5-10" class="csa-age-card">
+            <span class="csa-age-badge" data-i18n="ages.age5to10">5–10 anni</span>
+            <p class="csa-age-desc" data-i18n="ages.age5to10Desc">
+              Libri da colorare, creatività, monumenti storici, giochi e attività coinvolgenti.
+            </p>
+            <span class="csa-age-action">
+              <span data-i18n="ages.viewBooks">Vedi i libri</span> →
+            </span>
+          </a>
+
+          <!-- 7–12 anni -->
+          <a href="catalogo.html?age=7-12" class="csa-age-card">
+            <span class="csa-age-badge" data-i18n="ages.age7to12">7–12 anni</span>
+            <p class="csa-age-desc" data-i18n="ages.age7to12Desc">
+              Grandi scoperte scientifiche, dinosauri, spazio, tecnologia e misteri della natura.
+            </p>
+            <span class="csa-age-action">
+              <span data-i18n="ages.viewBooks">Vedi i libri</span> →
+            </span>
+          </a>
         </div>
       </div>
     </section>
 
     <!-- ======================================================================
-         SEZIONE 3: VALORI (BAMBINI & GENITORI)
+         PRESENTAZIONE DEL MARCHIO & LINK CHI SIAMO
          ====================================================================== -->
-    <section class="values-section" id="valori" aria-label="I Valori della Collana">
-      <div class="container">
-        <div class="values-header">
-          <h2 class="values-title" id="values-section-title">Valori</h2>
-          <p class="values-subtitle" id="values-section-subtitle">Perché le Avventure del Cantiere piacciono sia ai bambini sia ai genitori</p>
-        </div>
-
-        <div class="values-grid">
-          <!-- Blocco Bambini -->
-          <div class="values-card kids">
-            <div class="values-card-header">
-              <div class="values-card-icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
+    <section class="csa-section csa-brand-section" aria-label="Presentazione CSA Books Kids">
+      <div class="csa-container">
+        <div class="csa-brand-banner">
+          <div class="csa-brand-banner-grid">
+            <div class="csa-banner-text-col">
+              <span class="csa-section-eyebrow" data-i18n="brand.eyebrow">CSA Books Kids</span>
+              <h2 class="csa-banner-title" data-i18n="brand.title">Storie nate dal cuore di una famiglia</h2>
+              <p class="csa-banner-text" data-i18n="brand.text1">
+                CSA Books Kids nasce dal desiderio di creare libri illustrati speciali: opere pensate per accendere la meraviglia, stimolare l'ingegno e offrire momenti preziosi di lettura condivisa.
+              </p>
+              <p class="csa-banner-text" data-i18n="brand.text2">
+                Dalle avventure dei mezzi da cantiere per i più piccoli alla divulgazione scientifica di frontiera, ogni nostro libro è curato nei minimi dettagli per qualità narrativa, bellezza visiva e rispetto del bambino.
+              </p>
+              <div style="margin-top: 24px;">
+                <a href="about.html" class="csa-btn csa-btn-primary" data-i18n="brand.ctaAbout">
+                  Scopri la nostra storia
+                </a>
               </div>
-              <h3 class="values-card-title" id="values-kids-title">Perché piace ai bambini</h3>
             </div>
-            <ul class="values-list">
-              <li class="values-item">
-                <span class="values-bullet" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span id="values-kids-item-1">Grandi macchine e cantieri</span>
-              </li>
-              <li class="values-item">
-                <span class="values-bullet" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span id="values-kids-item-2">Personaggi riconoscibili</span>
-              </li>
-              <li class="values-item">
-                <span class="values-bullet" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span id="values-kids-item-3">Piccole grandi avventure</span>
-              </li>
-              <li class="values-item">
-                <span class="values-bullet" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span id="values-kids-item-4">Curiosità da esplorare</span>
-              </li>
-              <li class="values-item">
-                <span class="values-bullet" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span id="values-kids-item-5">Problemi da risolvere insieme</span>
-              </li>
-              <li class="values-item">
-                <span class="values-bullet" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span id="values-kids-item-6">Amicizia e collaborazione</span>
-              </li>
-            </ul>
-          </div>
 
-          <!-- Blocco Genitori -->
-          <div class="values-card parents">
-            <div class="values-card-header">
-              <div class="values-card-icon" aria-hidden="true">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                </svg>
+            <!-- Autori Foto Preview -->
+            <div class="csa-banner-photo-col" style="text-align: center;">
+              <div style="display: flex; gap: 16px; justify-content: center; align-items: center;">
+                <img src="assets/author/SALUCCI.Marco.png" alt="Marco Salucci" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: var(--csa-shadow-md);" />
+                <img src="assets/author/MUSICCO.Clara.png" alt="Clara Musicco" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: var(--csa-shadow-md);" />
               </div>
-              <h3 class="values-card-title" id="values-parents-title">Perché piace ai genitori</h3>
+              <p style="margin-top: 14px; font-weight: 700; color: #1e293b; font-size: 1.05rem;">Marco Salucci &amp; Clara Musicco</p>
+              <p style="font-size: 0.88rem; color: #64748b; margin-top: 2px;">Gli autori di CSA Books Kids</p>
             </div>
-            <ul class="values-list">
-              <li class="values-item">
-                <span class="values-bullet" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span id="values-parents-item-1">Storie positive e rassicuranti</span>
-              </li>
-              <li class="values-item">
-                <span class="values-bullet" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span id="values-parents-item-2">Valori educativi senza essere didascaliche</span>
-              </li>
-              <li class="values-item">
-                <span class="values-bullet" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span id="values-parents-item-3">Collaborazione e amicizia</span>
-              </li>
-              <li class="values-item">
-                <span class="values-bullet" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span id="values-parents-item-4">Curiosità e problem solving</span>
-              </li>
-              <li class="values-item">
-                <span class="values-bullet" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span id="values-parents-item-5">Lettura condivisa prima della nanna</span>
-              </li>
-              <li class="values-item">
-                <span class="values-bullet" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </span>
-                <span id="values-parents-item-6">Personaggi ricorrenti a cui affezionarsi</span>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- ======================================================================
-         SEZIONE 4: RECENSIONI CLIENTI AMAZON (SOCIAL PROOF AUTENTICO)
-         ====================================================================== -->
-    <section class="reviews-section" id="recensioni" aria-label="Recensioni Amazon">
-      <div class="container">
-        <div class="reviews-header">
-          <h2 class="reviews-title" id="reviews-section-title">Recensioni</h2>
-          <p class="reviews-subtitle" id="reviews-section-subtitle">Cosa dicono i genitori che hanno letto le nostre storie</p>
-        </div>
-
-        <div class="reviews-carousel-wrapper" id="reviews-carousel" role="region" aria-roledescription="carousel" aria-label="Recensioni dei clienti Amazon" tabindex="0">
-          <div class="reviews-slider-track" id="reviews-slider-track" aria-live="polite">
-            <!-- Popolato dinamicamente da script.js con le 8 recensioni originali -->
-          </div>
-
-          <!-- Controlli Navigazione Precedente / Successivo -->
-          <button type="button" class="reviews-nav-btn prev" id="reviews-prev-btn" aria-label="Recensioni precedenti" title="Precedente">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          <button type="button" class="reviews-nav-btn next" id="reviews-next-btn" aria-label="Recensioni successive" title="Successiva">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Indicatori Paginazione (Dots) -->
-        <div class="reviews-indicators" id="reviews-indicators" role="tablist" aria-label="Seleziona recensioni">
-          <!-- Popolato dinamicamente da script.js -->
-        </div>
-      </div>
-    </section>
-
   </main>
 
-    <!-- ======================================================================
-       FOOTER (4 COLONNE)
+  <!-- ======================================================================
+       FOOTER 2.0
        ====================================================================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Colonna 1: Brand & Filosofia -->
-        <div class="footer-col footer-col-brand">
-          <div class="footer-brand">
-            <div class="footer-brand-title">CSA Books <span class="highlight">4 Kids</span></div>
-          </div>
-          <p class="footer-tagline" id="footer-tagline-text">
-            Storie per bambini, nate in famiglia e cresciute con la fantasia.
-          </p>
-          <p class="footer-mission" id="footer-mission-text">
-            Libri illustrati pensati per accendere la curiosità e condividere momenti speciali tra genitori e figli.
+  <footer class="csa-footer" aria-label="Piè di pagina">
+    <div class="csa-container">
+      <div class="csa-footer-grid">
+        <!-- Colonna 1: Marchio -->
+        <div class="csa-footer-col">
+          <span class="csa-brand-name" style="color: #fff; margin-bottom: 12px; display: block;">
+            CSA Books <span class="highlight">Kids</span>
+          </span>
+          <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6;" data-i18n="footer.brandPitch">
+            CSA Books Kids è un marchio editoriale indipendente per bambini: storie illustrate, divulgazione scientifica, apprendimento e creatività.
           </p>
         </div>
 
-        <!-- Colonna 2: La Collana -->
-        <div class="footer-col footer-col-series">
-          <h3 class="footer-col-title" id="footer-series-title">Collana</h3>
-          <nav class="footer-links-list" aria-label="Link collana footer">
-            <a href="#collana" class="footer-link" id="footer-link-series">Collana</a>
-            <a href="#libri" class="footer-link" id="footer-link-books">Libri</a>
-            <a href="#raccolte" class="footer-link" id="footer-link-raccolte">Raccolte</a>
-            <a href="characters.html" class="footer-link" id="footer-link-characters">Personaggi</a>
-            <a href="#valori" class="footer-link" id="footer-link-values">Valori</a>
-          </nav>
+        <!-- Colonna 2: Navigazione -->
+        <div class="csa-footer-col">
+          <h4 data-i18n="footer.navTitle">Esplora</h4>
+          <ul class="csa-footer-links">
+            <li><a href="catalogo.html" data-i18n="nav.allBooks">Tutti i libri</a></li>
+            <li><a href="cantiere.html" data-i18n="nav.cantiere">Il Cantiere</a></li>
+            <li><a href="scienza.html" data-i18n="nav.scienza">Scienza e curiosità</a></li>
+            <li><a href="scuola.html" data-i18n="nav.scuola">Per la scuola</a></li>
+            <li><a href="colorare.html" data-i18n="nav.colorare">Da colorare</a></li>
+          </ul>
         </div>
 
-        <!-- Colonna 3: Esplora -->
-        <div class="footer-col footer-col-nav">
-          <h3 class="footer-col-title" id="footer-nav-title">Esplora</h3>
-          <nav class="footer-links-list" aria-label="Link esplora footer">
-            <a href="#recensioni" class="footer-link" id="footer-link-reviews">Recensioni</a>
-            <a href="about.html" class="footer-link" id="footer-link-about">Chi siamo</a>
-            <a href="fano.html" class="footer-link" id="footer-link-coloring">Da colorare</a>
-          </nav>
+        <!-- Colonna 3: Informazioni -->
+        <div class="csa-footer-col">
+          <h4 data-i18n="footer.legalTitle">Informazioni</h4>
+          <ul class="csa-footer-links">
+            <li><a href="about.html" data-i18n="nav.about">Chi siamo</a></li>
+            <li><a href="accesso/4dcbbaee2e69a278e4e59eab50430ccc/" target="_blank" rel="noopener noreferrer">Portale di Otto (Einstein QR)</a></li>
+            <li><a href="csa-vol1-bonus-8f2e91b7d4a6.html">Bonus CSA Vol. 1</a></li>
+            <li><a href="csa-vol2-bonus-46c694dc3ec4.html">Bonus CSA Vol. 2</a></li>
+          </ul>
         </div>
 
-        <!-- Colonna 4: Seguici & Contatti -->
-        <div class="footer-col footer-col-contact">
-          <h3 class="footer-col-title" id="footer-contact-title">Seguici</h3>
-          <div class="footer-contact-list">
-            <a href="mailto:csabooks.kids@gmail.com" class="footer-contact-item" aria-label="Email csabooks.kids@gmail.com">
-              <svg class="footer-contact-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-              </svg>
-              <span>csabooks.kids@gmail.com</span>
-            </a>
-            <a href="https://www.instagram.com/csabooks.kids" target="_blank" rel="noopener noreferrer" class="footer-contact-item" aria-label="Instagram @csabooks.kids">
-              <svg class="footer-contact-icon" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              <span>Instagram</span>
-            </a>
-            <a href="https://www.tiktok.com/@csabooks.kids" target="_blank" rel="noopener noreferrer" class="footer-contact-item" aria-label="TikTok @csabooks.kids">
-              <svg class="footer-contact-icon" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3 15.67 6.34 6.34 0 0 0 9.34 22a6.34 6.34 0 0 0 6.34-6.33V8.87a8.28 8.28 0 0 0 4.91 1.6V7.02a4.85 4.85 0 0 1-1-.33z"/></svg>
-              <span>TikTok</span>
-            </a>
-            <a href="https://www.youtube.com/channel/UCJHJOCak9LyUjG0akPfKqAw" target="_blank" rel="noopener noreferrer" class="footer-contact-item" aria-label="YouTube @csabookskids">
-              <svg class="footer-contact-icon" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              <span>YouTube</span>
-            </a>
-            <a href="https://open.spotify.com/show/4lLJo6ZXfVhITTnPFCCMIS?si=j3SzwenwRxq6BgIUBhl4cg" target="_blank" rel="noopener noreferrer" class="footer-contact-item footer-spotify-btn" aria-label="Spotify">
-              <svg class="footer-contact-icon" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.5 17.3c-.2.3-.6.4-.9.2-2.5-1.5-5.6-1.9-9.3-1-.3.1-.7-.1-.8-.4-.1-.3.1-.7.4-.8 4-1 7.4-.5 10.3 1.2.3.2.4.6.3.8zm1.5-3.3c-.3.4-.8.5-1.2.3-3-1.8-7.5-2.4-11-1.3-.4.1-.9-.1-1-.5-.1-.4.1-.9.5-1 4.1-1.2 9.1-.6 12.4 1.5.4.2.5.7.3 1zm.1-3.4c-3.6-2.1-9.5-2.3-12.9-1.3-.5.2-1.1-.1-1.3-.6-.2-.5.1-1.1.6-1.3 4-1.2 10.5-1 14.6 1.5.5.3.6.9.3 1.4-.3.5-.9.6-1.3.3z"/></svg>
-              <span>Spotify</span>
-            </a>
-
-          </div>
+        <!-- Colonna 4: Contatti & Trasparenza -->
+        <div class="csa-footer-col">
+          <h4 data-i18n="footer.contactsTitle">Contatti</h4>
+          <ul class="csa-footer-links">
+            <li><a href="mailto:csabooks.kids@gmail.com">csabooks.kids@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/csabooks.kids" target="_blank" rel="noopener noreferrer">Instagram @csabooks.kids</a></li>
+            <li><a href="https://www.youtube.com/channel/UCJHJOCak9LyUjG0akPfKqAw" target="_blank" rel="noopener noreferrer">YouTube @csabookskids</a></li>
+            <li><a href="https://open.spotify.com/show/4lLJo6ZXfVhITTnPFCCMIS?si=j3SzwenwRxq6BgIUBhl4cg" target="_blank" rel="noopener noreferrer">Spotify Podcast</a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="footer-bottom-copy">
-        <p id="footer-copyright-text">&copy; 2026 CSA Books 4 Kids. Tutti i diritti riservati.</p>
+      <div class="csa-footer-bottom">
+        <p data-i18n="footer.rights">&copy; 2026 CSA Books Kids. Tutti i diritti riservati.</p>
+        <p style="opacity: 0.7;">Acquisti ufficiali garantiti in esclusiva su Amazon in edizione paperback.</p>
       </div>
     </div>
   </footer>
 
-  <!-- ======================================================================
-       MODAL POPUP ANTEPRIMA LIBRO (READ SAMPLE)
-       ====================================================================== -->
-  <div class="sample-modal-backdrop" id="sample-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="sample-modal-title">
-    <div class="sample-modal-dialog">
-      <div class="sample-modal-header">
-        <div class="sample-modal-title-group">
-          <span class="sample-modal-badge" id="sample-modal-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-            </svg>
-            <span>Anteprima</span>
-          </span>
-          <h3 class="sample-modal-title" id="sample-modal-title">Titolo Libro</h3>
-        </div>
-        <button type="button" class="sample-modal-close" onclick="closeSampleModal()" aria-label="Chiudi anteprima">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-
-      <div class="sample-modal-body">
-        <button type="button" class="sample-nav-btn prev" id="sample-prev-btn" onclick="changeSamplePage(-1)" aria-label="Pagina precedente">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
-        
-        <div class="sample-page-viewer" id="sample-viewer">
-          <div class="sample-img-container">
-            <img src="" alt="Anteprima pagina" id="sample-page-img" class="sample-page-img" />
-          </div>
-          <div class="sample-page-info">
-            <span class="sample-page-label" id="sample-page-label">Copertina</span>
-            <span class="sample-page-counter" id="sample-page-counter">1 / 9</span>
-          </div>
-        </div>
-
-        <button type="button" class="sample-nav-btn next" id="sample-next-btn" onclick="changeSamplePage(1)" aria-label="Pagina successiva">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
-      </div>
-
-      <div class="sample-modal-footer" id="sample-modal-footer">
-        <!-- Popolato dinamicamente da script.js -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="assets/banner/banners.js?v=2.7"></script>
-  <script src="books.js?v=2.7"></script>
-  <script src="script.js?v=2.7"></script>
-  <script src="campaign.js?v=2.7"></script>
+  <!-- Scripts Runtime CSA 2.0 -->
+  <script src="data/runtime-data.js"></script>
+  <script src="app-2.0.js"></script>
 </body>
 </html>

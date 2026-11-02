@@ -1,0 +1,1241 @@
+const fs = require('fs');
+const path = require('path');
+
+const dataDir = path.join(__dirname, '..', 'data');
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+
+// 9 Lingue: IT, EN, DE, FR, ES, NL, PL, SE, JP
+const I18N = {
+  it: {
+    nav: {
+      home: "Home",
+      allBooks: "Tutti i libri",
+      cantiere: "Il Cantiere",
+      scienza: "Scienza e curiosità",
+      scuola: "Per la scuola",
+      colorare: "Da colorare",
+      about: "Chi siamo",
+      menuToggle: "Menu principale",
+      closeMenu: "Chiudi menu"
+    },
+    hero: {
+      badge: "Marchio Editoriale per Bambini",
+      title: "Grandi storie. Piccole scoperte.",
+      subtitle: "Libri che fanno immaginare, esplorare, creare e imparare.",
+      ctaAll: "Scopri tutti i libri",
+      ctaCantiere: "Esplora Le Avventure del Cantiere"
+    },
+    worlds: {
+      eyebrow: "I Nostri Mondi",
+      title: "Esplora i nostri mondi",
+      subtitle: "Quattro aree editoriali per nutrire l'immaginazione, il pensiero scientifico e la creatività di ogni età.",
+      exploreBtn: "Esplora la collana",
+      comingSoonBadge: "In preparazione"
+    },
+    featured: {
+      eyebrow: "Titoli in Evidenza",
+      title: "Libri in primo piano",
+      subtitle: "Le pubblicazioni più amate dai piccoli lettori e consigliate da genitori ed educatori.",
+      buyAmazon: "Acquista su Amazon",
+      comingSoon: "Disponibile a breve su Amazon",
+      viewDetails: "Dettagli e anteprima",
+      readSample: "Sfoglia l'anteprima",
+      paperbackBadge: "Copertina flessibile"
+    },
+    ages: {
+      eyebrow: "Fasce d'Età",
+      title: "Esplora per età",
+      subtitle: "Trova con un click il libro più adatto per il tuo bambino.",
+      allAges: "Tutte le età",
+      age2to5: "2–5 anni",
+      age5to10: "5–10 anni",
+      age7to12: "7–12 anni",
+      age2to5Desc: "Prime storie illustrate, rime, veicoli e grandi valori di amicizia e aiuto reciproco.",
+      age5to10Desc: "Libri da colorare, creatività, monumenti storici, giochi e attività coinvolgenti.",
+      age7to12Desc: "Grandi scoperte scientifiche, dinosauri, spazio, tecnologia e misteri della natura.",
+      viewBooks: "Vedi i libri"
+    },
+    brand: {
+      eyebrow: "CSA Books Kids",
+      title: "Storie nate dal cuore di una famiglia",
+      text1: "CSA Books Kids nasce dal desiderio di creare libri illustrati speciali: opere pensate per accendere la meraviglia, stimolare l'ingegno e offrire momenti preziosi di lettura condivisa.",
+      text2: "Dalle avventure dei mezzi da cantiere per i più piccoli alla divulgazione scientifica di frontiera, ogni nostro libro è curato nei minimi dettagli per qualità narrativa, bellezza visiva e rispetto del bambino.",
+      ctaAbout: "Scopri la nostra storia"
+    },
+    catalog: {
+      eyebrow: "Catalogo Completo",
+      title: "Tutti i libri CSA Books Kids",
+      subtitle: "Sfoglia l'intero catalogo editoriale, filtra per categoria ed esplora le edizioni disponibili.",
+      filterCategory: "Categoria",
+      filterAge: "Età consigliata",
+      filterLanguage: "Lingua del libro",
+      allCategories: "Tutte le categorie",
+      allAges: "Tutte le età",
+      allEditions: "Tutte le edizioni",
+      noResults: "Nessun libro corrisponde ai filtri selezionati.",
+      resetFilters: "Azzera filtri",
+      searchPlaceholder: "Cerca per titolo, autore o tema…",
+      resultsCount: "libri trovati"
+    },
+    modal: {
+      close: "Chiudi finestra",
+      preview: "Anteprima sfogliabile",
+      page: "Pagina",
+      of: "di",
+      prevPage: "Pagina precedente",
+      nextPage: "Pagina successiva",
+      zoom: "Ingrandisci immagine",
+      editionSelect: "Edizione linguistica del libro:",
+      benefitsTitle: "Perché è speciale:",
+      contentsTitle: "Caratteristiche dell'opera:",
+      storiesTitle: "Storie complete incluse nel volume:",
+      interactiveMicrosite: "Portale interattivo multimediale incluso",
+      openMicrosite: "Accedi al portale di Otto",
+      buyAmazonPaperback: "Acquista su Amazon",
+      buyAmazonDisabled: "Disponibile a breve su Amazon",
+      relatedBooks: "Ti potrebbero interessare anche:",
+      authorLabel: "Autore:",
+      ageLabel: "Età consigliata:",
+      formatLabel: "Formato:",
+      paperback: "Copertina flessibile"
+    },
+    about: {
+      eyebrow: "Chi Siamo",
+      title: "Passione editoriale, storie vere e amore per la conoscenza",
+      subtitle: "Un marchio editoriale indipendente nato dall'ispirazione familiare e dalla dedizione per la crescita dei bambini.",
+      intro: "Dietro ogni libro di CSA Books Kids c'è una passione autentica: quella di genitori ed educatori desiderosi di offrire letture coinvolgenti, ricche di valore, illustrate con maestria e capaci di accompagnare i bambini alla scoperta del mondo.",
+      marcoTitle: "Marco Salucci",
+      marcoRole: "Autore de «Le Avventure del Cantiere» e «Fano col naso all'insù»",
+      marcoBio: "Autore e ideatore della collana 'Le Avventure del Cantiere', Marco ha trasformato la passione reale di suo figlio per escavatori, ruspe e camion in una serie internazionale di storie in rima amate da migliaia di famiglie. Con 'Fano col naso all'insù' ha unito l'arte dell'illustrazione alla riscoperta delle radici storiche e architettoniche della sua terra.",
+      claraTitle: "Clara Musicco",
+      claraRole: "Autrice di «Einstein, questa te la sei persa!» e della collana «La Bussola Misteriosa»",
+      claraBio: "Autrice e appassionata divulgatrice scientifica, Clara cura le collane dedicate alla scoperta, alla scienza e al supporto scolastico. Con uno stile brillante, rigoroso e coinvolgente, traduce le grandi conquiste della ricerca e le sfide didattiche in avventure entusiasmanti per giovani menti curiose.",
+      valuesTitle: "I nostri pilastri editoriali",
+      val1Title: "Rigore e Meraviglia",
+      val1Desc: "Contenuti verificati con cura, capaci di stimolare l'intelligenza e la curiosità senza mai annoiare.",
+      val2Title: "Qualità Illustrata",
+      val2Desc: "Disegni e impaginazione studiati per emozionare, facilitare la comprensione visiva e favorire la concentrazione.",
+      val3Title: "Valori Positivi",
+      val3Desc: "Empatia, collaborazione, rispetto per l'ambiente e amore per la scoperta al centro di ogni pubblicazione.",
+      galleryTitle: "Dalla passione reale alle pagine dei libri"
+    },
+    footer: {
+      brandPitch: "CSA Books Kids è un marchio editoriale indipendente per bambini: storie illustrate, divulgazione scientifica, apprendimento e creatività.",
+      navTitle: "Esplora",
+      legalTitle: "Informazioni",
+      contactsTitle: "Contatti",
+      rights: "© 2026 CSA Books Kids. Tutti i diritti riservati.",
+      privacy: "Privacy Policy",
+      terms: "Note legali",
+      permanentQr: "Contenuti QR Code stampati nei libri"
+    },
+    common: {
+      loading: "Caricamento in corso…",
+      error: "Si è verificato un errore.",
+      backToTop: "Torna in alto",
+      notFoundTitle: "Pagina non trovata",
+      notFoundText: "La pagina richiesta non esiste o è stata spostata.",
+      backHome: "Torna alla Homepage",
+      externalLink: "Apre il prodotto su Amazon in una nuova scheda",
+      langSelector: "Lingua del sito"
+    }
+  },
+
+  en: {
+    nav: {
+      home: "Home",
+      allBooks: "All Books",
+      cantiere: "The Construction Site",
+      scienza: "Science & Wonder",
+      scuola: "Learning & School",
+      colorare: "Color & Create",
+      about: "About Us",
+      menuToggle: "Main Menu",
+      closeMenu: "Close menu"
+    },
+    hero: {
+      badge: "Children's Book Publisher",
+      title: "Big stories. Little discoveries.",
+      subtitle: "Books that inspire children to imagine, explore, create, and learn.",
+      ctaAll: "Discover All Books",
+      ctaCantiere: "Explore Construction Site Adventures"
+    },
+    worlds: {
+      eyebrow: "Our Worlds",
+      title: "Explore our book collections",
+      subtitle: "Four distinct worlds designed to nurture imagination, scientific curiosity, and creativity.",
+      exploreBtn: "Explore collection",
+      comingSoonBadge: "Coming Soon"
+    },
+    featured: {
+      eyebrow: "Featured Books",
+      title: "Spotlight titles",
+      subtitle: "The most cherished books chosen by young readers, parents, and educators.",
+      buyAmazon: "Buy on Amazon",
+      comingSoon: "Coming soon to Amazon",
+      viewDetails: "Details & preview",
+      readSample: "Look Inside",
+      paperbackBadge: "Paperback"
+    },
+    ages: {
+      eyebrow: "Age Groups",
+      title: "Explore by age",
+      subtitle: "Easily find the best book tailored for your child's stage of growth.",
+      allAges: "All ages",
+      age2to5: "Ages 2–5",
+      age5to10: "Ages 5–10",
+      age7to12: "Ages 7–12",
+      age2to5Desc: "First picture books, rhyming stories, mighty machines, and values of teamwork.",
+      age5to10Desc: "Coloring adventures, creativity, historic monuments, and captivating puzzles.",
+      age7to12Desc: "Groundbreaking science discoveries, dinosaurs, space, technology, and nature wonders.",
+      viewBooks: "Browse books"
+    },
+    brand: {
+      eyebrow: "CSA Books Kids",
+      title: "Stories born from the heart of a family",
+      text1: "CSA Books Kids was born from a family's passion to create picture books that spark wonder, encourage problem-solving, and provide meaningful shared reading moments.",
+      text2: "From construction machine adventures for toddlers to cutting-edge science exploration for older kids, every book is crafted with narrative care, artistic vibrancy, and deep respect for children.",
+      ctaAbout: "Discover our story"
+    },
+    catalog: {
+      eyebrow: "Complete Catalog",
+      title: "All CSA Books Kids Titles",
+      subtitle: "Browse our entire publishing catalog, filter by category or age, and explore language editions.",
+      filterCategory: "Category",
+      filterAge: "Target Age",
+      filterLanguage: "Book Language",
+      allCategories: "All categories",
+      allAges: "All ages",
+      allEditions: "All editions",
+      noResults: "No books match the selected filters.",
+      resetFilters: "Reset filters",
+      searchPlaceholder: "Search by title, author, or theme…",
+      resultsCount: "books found"
+    },
+    modal: {
+      close: "Close window",
+      preview: "Look Inside Preview",
+      page: "Page",
+      of: "of",
+      prevPage: "Previous page",
+      nextPage: "Next page",
+      zoom: "Zoom image",
+      editionSelect: "Book language edition:",
+      benefitsTitle: "Why children love it:",
+      contentsTitle: "Book features:",
+      storiesTitle: "Complete stories included in this volume:",
+      interactiveMicrosite: "Interactive multimedia portal included",
+      openMicrosite: "Access Otto's Secret Portal",
+      buyAmazonPaperback: "Buy on Amazon",
+      buyAmazonDisabled: "Coming soon on Amazon",
+      relatedBooks: "You may also like:",
+      authorLabel: "Author:",
+      ageLabel: "Target Age:",
+      formatLabel: "Format:",
+      paperback: "Paperback"
+    },
+    about: {
+      eyebrow: "About Us",
+      title: "Publishing passion, authentic stories, and a love for learning",
+      subtitle: "An independent publishing house inspired by family life and dedicated to children's growth.",
+      intro: "Behind every CSA Books Kids title is a heartfelt journey: parents and educators committed to delivering captivating, value-packed, beautifully illustrated books that guide young minds to explore the world.",
+      marcoTitle: "Marco Salucci",
+      marcoRole: "Author of «Construction Site Adventures» and «Fano Looking Up»",
+      marcoBio: "Creator of the original Construction Site Adventures franchise, Marco turned his son's genuine fascination with diggers, bulldozers, and cranes into an international picture book series cherished by thousands of families. With 'Fano Looking Up', he blended coloring artistry with the historical roots of his home city.",
+      claraTitle: "Clara Musicco",
+      claraRole: "Author of «Einstein, You Missed This!» and «The Mysterious Compass» series",
+      claraBio: "Writer and passionate science communicator, Clara leads collections dedicated to science, curiosity, and educational learning for school-age children. With engaging storytelling and thorough factual documentation, she brings the wonder of science and mathematical discovery directly to eager young readers.",
+      valuesTitle: "Our Publishing Pillars",
+      val1Title: "Rigor & Wonder",
+      val1Desc: "Accurately researched content that respects children's intelligence while sparking genuine curiosity.",
+      val2Title: "Visual Artistry",
+      val2Desc: "Illustrations and typography carefully designed to delight, aid visual comprehension, and focus attention.",
+      val3Title: "Positive Values",
+      val3Desc: "Empathy, teamwork, environmental respect, and joy of discovery at the center of every book.",
+      galleryTitle: "From real-life inspiration to the printed page"
+    },
+    footer: {
+      brandPitch: "CSA Books Kids is an independent children's publisher dedicated to picture books, popular science, educational learning, and creative activities.",
+      navTitle: "Explore",
+      legalTitle: "Information",
+      contactsTitle: "Contact",
+      rights: "© 2026 CSA Books Kids. All rights reserved.",
+      privacy: "Privacy Policy",
+      terms: "Terms of Use",
+      permanentQr: "Printed QR Code Content Area"
+    },
+    common: {
+      loading: "Loading…",
+      error: "An error occurred.",
+      backToTop: "Back to top",
+      notFoundTitle: "Page Not Found",
+      notFoundText: "The requested page does not exist or has been moved.",
+      backHome: "Back to Home",
+      externalLink: "Opens product page on Amazon in a new tab",
+      langSelector: "Website Language"
+    }
+  },
+
+  de: {
+    nav: {
+      home: "Startseite",
+      allBooks: "Alle Bücher",
+      cantiere: "Die Baustelle",
+      scienza: "Wissenschaft & Neugier",
+      scuola: "Für die Schule",
+      colorare: "Malen & Gestalten",
+      about: "Über uns",
+      menuToggle: "Hauptmenü",
+      closeMenu: "Menü schließen"
+    },
+    hero: {
+      badge: "Kinderbuchverlag",
+      title: "Große Geschichten. Kleine Entdeckungen.",
+      subtitle: "Bücher, die Kinder zum Träumen, Forschen, Gestalten und Lernen anregen.",
+      ctaAll: "Alle Bücher entdecken",
+      ctaCantiere: "Baustellen-Abenteuer erkunden"
+    },
+    worlds: {
+      eyebrow: "Unsere Welten",
+      title: "Entdecke unsere Bücherwelten",
+      subtitle: "Vier Buchreihen, sorgfältig gestaltet, um Fantasie, Neugier und Forschergeist zu wecken.",
+      exploreBtn: "Reihe entdecken",
+      comingSoonBadge: "In Vorbereitung"
+    },
+    featured: {
+      eyebrow: "Im Fokus",
+      title: "Empfohlene Titel",
+      subtitle: "Die beliebtesten Bücher für junge Leser, empfohlen von Eltern und Pädagogen.",
+      buyAmazon: "Bei Amazon kaufen",
+      comingSoon: "Demnächst bei Amazon",
+      viewDetails: "Details & Vorschau",
+      readSample: "Blick ins Buch",
+      paperbackBadge: "Taschenbuch"
+    },
+    ages: {
+      eyebrow: "Altersstufen",
+      title: "Nach Alter entdecken",
+      subtitle: "Finde mit einem Klick das passende Buch für jedes Entwicklungsalter.",
+      allAges: "Alle Altersstufen",
+      age2to5: "2–5 Jahre",
+      age5to10: "5–10 Jahre",
+      age7to12: "7–12 Jahre",
+      age2to5Desc: "Erste Bilderbücher, Reime, Baustellenfahrzeuge und Werte wie Hilfsbereitschaft.",
+      age5to10Desc: "Malbücher, kreative Aktivitäten, historische Bauwerke und spannende Rätsel.",
+      age7to12Desc: "Wissenschaftliche Entdeckungen, Dinosaurier, Weltraum und Wunder der Natur.",
+      viewBooks: "Bücher ansehen"
+    },
+    brand: {
+      eyebrow: "CSA Books Kids",
+      title: "Geschichten mit Herz für die ganze Familie",
+      text1: "CSA Books Kids entstand aus dem Wunsch, hochwertige Kinderbücher zu schaffen, die Staunen wecken, Neugier fördern und gemeinsame Leseerlebnisse bereichern.",
+      text2: "Von den beliebten Baustellenabenteuern für die Kleinsten bis hin zu faszinierender Wissenschaft für Schulkinder: Jedes Buch entsteht mit Hingabe und Respekt vor dem Kind.",
+      ctaAbout: "Unsere Geschichte entdecken"
+    },
+    catalog: {
+      eyebrow: "Gesamtkatalog",
+      title: "Alle CSA Books Kids Titel",
+      subtitle: "Stöbere im gesamten Buchprogramm, filtere nach Kategorie und Alter und entdecke alle Sprachausgaben.",
+      filterCategory: "Kategorie",
+      filterAge: "Altersgruppe",
+      filterLanguage: "Buchsprache",
+      allCategories: "Alle Kategorien",
+      allAges: "Alle Altersstufen",
+      allEditions: "Alle Ausgaben",
+      noResults: "Keine Bücher für die ausgewählten Filter gefunden.",
+      resetFilters: "Filter zurücksetzen",
+      searchPlaceholder: "Nach Titel, Autor oder Thema suchen…",
+      resultsCount: "Bücher gefunden"
+    },
+    modal: {
+      close: "Fenster schließen",
+      preview: "Buchvorschau",
+      page: "Seite",
+      of: "von",
+      prevPage: "Vorherige Seite",
+      nextPage: "Nächste Seite",
+      zoom: "Bild vergrößern",
+      editionSelect: "Sprachausgabe des Buches:",
+      benefitsTitle: "Warum Kinder dieses Buch lieben:",
+      contentsTitle: "Besonderheiten des Buches:",
+      storiesTitle: "Vollständige Geschichten in diesem Band:",
+      interactiveMicrosite: "Interaktives Multimedia-Portal enthalten",
+      openMicrosite: "Zu Ottos Geheimportal",
+      buyAmazonPaperback: "Bei Amazon kaufen",
+      buyAmazonDisabled: "Demnächst bei Amazon erhältlich",
+      relatedBooks: "Das könnte dir auch gefallen:",
+      authorLabel: "Autor:",
+      ageLabel: "Altersempfehlung:",
+      formatLabel: "Format:",
+      paperback: "Taschenbuch"
+    },
+    about: {
+      eyebrow: "Über Uns",
+      title: "Verlegerische Leidenschaft und Freude am Entdecken",
+      subtitle: "Ein unabhängiger Verlag, gewidmet der kindlichen Entwicklung und Neugier.",
+      intro: "Hinter jedem Titel von CSA Books Kids steht echte Begeisterung: Eltern und Pädagogen, die warmherzige, lehrreiche und wunderschön illustrierte Bücher schaffen.",
+      marcoTitle: "Marco Salucci",
+      marcoRole: "Autor der «Baustellen-Abenteuer» und «Fano mit Blick nach oben»",
+      marcoBio: "Schöpfer der Baustellen-Abenteuer. Marco verwandelte die echte Begeisterung seines Sohnes für Bagger, Kräne und Laster in eine beliebte internationale Bilderbuchreihe.",
+      claraTitle: "Clara Musicco",
+      claraRole: "Autorin von «Einstein, das hast du verpasst!» und «Der Geheimnisvolle Kompass»",
+      claraBio: "Autorin und Wissenschaftsvermittlerin. Clara betreut Sach- und Lernbücher für neugierige Schulkinder und verbindet gründliche Recherche mit fesselnder Erzählkunst.",
+      valuesTitle: "Unsere verlegerischen Werte",
+      val1Title: "Gründlichkeit & Staunen",
+      val1Desc: "Geprüfte Inhalte, die kindgerecht faszinieren und zum Weiterfragen ermutigen.",
+      val2Title: "Illustrative Qualität",
+      val2Desc: "Liebevolle Zeichnungen, die das Verständnis fördern und Freude beim Betrachten machen.",
+      val3Title: "Positive Werte",
+      val3Desc: "Freundschaft, Umweltschutz, gegenseitige Hilfe und Begeisterung für Wissen.",
+      galleryTitle: "Von der Inspiration zum gedruckten Buch"
+    },
+    footer: {
+      brandPitch: "CSA Books Kids ist ein unabhängiger Kinderbuchverlag für illustrierte Geschichten, Wissenschaft, Schullernen und kreative Bücher.",
+      navTitle: "Erkunden",
+      legalTitle: "Rechtliches",
+      contactsTitle: "Kontakt",
+      rights: "© 2026 CSA Books Kids. Alle Rechte vorbehalten.",
+      privacy: "Datenschutzerklärung",
+      terms: "Nutzungsbedingungen",
+      permanentQr: "Permanenter QR-Code-Bereich aus den Büchern"
+    },
+    common: {
+      loading: "Wird geladen…",
+      error: "Ein Fehler ist aufgetreten.",
+      backToTop: "Nach oben",
+      notFoundTitle: "Seite nicht gefunden",
+      notFoundText: "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+      backHome: "Zur Startseite",
+      externalLink: "Öffnet die Produktseite auf Amazon in einem neuen Tab",
+      langSelector: "Webseiten-Sprache"
+    }
+  },
+
+  fr: {
+    nav: {
+      home: "Accueil",
+      allBooks: "Tous les livres",
+      cantiere: "Le Chantier",
+      scienza: "Science et curiosités",
+      scuola: "Pour l'école",
+      colorare: "À colorier",
+      about: "Qui sommes-nous",
+      menuToggle: "Menu principal",
+      closeMenu: "Fermer le menu"
+    },
+    hero: {
+      badge: "Maison d'Édition Jeunesse",
+      title: "Grandes histoires. Petites découvertes.",
+      subtitle: "Des livres pour imaginer, explorer, créer et apprendre en s'amusant.",
+      ctaAll: "Découvrir tous les livres",
+      ctaCantiere: "Explorer Les Aventures du Chantier"
+    },
+    worlds: {
+      eyebrow: "Nos Univers",
+      title: "Explorez nos mondes",
+      subtitle: "Quatre collections soigneusement pensées pour éveiller la curiosité et l'imagination à chaque âge.",
+      exploreBtn: "Découvrir la collection",
+      comingSoonBadge: "Bientôt disponible"
+    },
+    featured: {
+      eyebrow: "À la Une",
+      title: "Livres à l'honneur",
+      subtitle: "Les titres les plus appréciés des jeunes lecteurs et recommandés par les familles.",
+      buyAmazon: "Acheter sur Amazon",
+      comingSoon: "Bientôt disponible sur Amazon",
+      viewDetails: "Détails & extrait",
+      readSample: "Feilleter l'extrait",
+      paperbackBadge: "Broché"
+    },
+    ages: {
+      eyebrow: "Tranches d'Âge",
+      title: "Explorer par âge",
+      subtitle: "Trouvez facilement le livre parfaitement adapté au développement de votre enfant.",
+      allAges: "Tous les âges",
+      age2to5: "2–5 ans",
+      age5to10: "5–10 ans",
+      age7to12: "7–12 ans",
+      age2to5Desc: "Premiers albums illustrés, rimes, gros engins et belles valeurs de solidarité.",
+      age5to10Desc: "Coloriages, créativité, histoire vivante, labyrinthes et jeux éducatifs.",
+      age7to12Desc: "Grandes découvertes scientifiques, dinosaures, espace et énigmes de la nature.",
+      viewBooks: "Voir les livres"
+    },
+    brand: {
+      eyebrow: "CSA Books Kids",
+      title: "Des histoires nées au cœur d'une famille",
+      text1: "CSA Books Kids est née de l'envie de créer des livres jeunesse captivants qui éveillent l'émerveillement et nourrissent la complicité de la lecture partagée.",
+      text2: "Des aventures de chantier pour les tout-petits aux livres de vulgarisation scientifique pour les plus grands, chaque ouvrage allie qualité d'écriture et respect du rythme de l'enfant.",
+      ctaAbout: "Découvrir notre histoire"
+    },
+    catalog: {
+      eyebrow: "Catalogue Complet",
+      title: "Tous les livres CSA Books Kids",
+      subtitle: "Parcourez l'ensemble de notre catalogue, filtrez par catégorie ou tranche d'âge et découvrez les éditions disponibles.",
+      filterCategory: "Catégorie",
+      filterAge: "Âge conseillé",
+      filterLanguage: "Langue du livre",
+      allCategories: "Toutes les catégories",
+      allAges: "Tous les âges",
+      allEditions: "Toutes les éditions",
+      noResults: "Aucun livre ne correspond aux filtres sélectionnés.",
+      resetFilters: "Réinitialiser les filtres",
+      searchPlaceholder: "Rechercher par titre, auteur ou thème…",
+      resultsCount: "livres trouvés"
+    },
+    modal: {
+      close: "Fermer la fenêtre",
+      preview: "Feilleter l'extrait",
+      page: "Page",
+      of: "sur",
+      prevPage: "Page précédente",
+      nextPage: "Page suivante",
+      zoom: "Agrandir l'image",
+      editionSelect: "Édition linguistique du livre :",
+      benefitsTitle: "Pourquoi les enfants l'adorent :",
+      contentsTitle: "Caractéristiques du livre :",
+      storiesTitle: "Histoires complètes incluses dans ce volume :",
+      interactiveMicrosite: "Portail interactif multimédia inclus",
+      openMicrosite: "Accéder au portail d'Otto",
+      buyAmazonPaperback: "Acheter sur Amazon",
+      buyAmazonDisabled: "Bientôt disponible sur Amazon",
+      relatedBooks: "Vous aimerez aussi :",
+      authorLabel: "Auteur :",
+      ageLabel: "Âge conseillé :",
+      formatLabel: "Format :",
+      paperback: "Broché"
+    },
+    about: {
+      eyebrow: "Qui Sommes-Nous",
+      title: "Passion d'éditer, récits authentiques et amour de la transmission",
+      subtitle: "Une maison d'édition jeunesse indépendante dédiée à l'éveil et à la créativité des enfants.",
+      intro: "Derrière chaque publication de CSA Books Kids se trouvent des parents et des auteurs passionnés, désireux d'offrir des histoires enrichissantes, chaleureuses et merveilleusement illustrées.",
+      marcoTitle: "Marco Salucci",
+      marcoRole: "Auteur des «Aventures du Chantier» et de «Fano le nez en l'air»",
+      marcoBio: "Créateur de la série à succès Les Aventures du Chantier, Marco a transformé la fascination de son fils pour les engins en récits rimés traduits en plusieurs langues.",
+      claraTitle: "Clara Musicco",
+      claraRole: "Auteure de «Einstein, tu as manqué ça !» et de la collection «La Boussole Mystérieuse»",
+      claraBio: "Auteure et médiatrice scientifique, Clara conçoit des livres captivants qui rendent la science, l'histoire et les mathématiques accessibles et passionnantes pour les enfants.",
+      valuesTitle: "Nos engagements éditoriaux",
+      val1Title: "Rigueur et Émerveillement",
+      val1Desc: "Des contenus vérifiés scientifiquement qui répondent aux vraies questions des enfants.",
+      val2Title: "Qualité Graphique",
+      val2Desc: "Des illustrations chaleureuses qui soutiennent la compréhension et éveillent le sens esthétique.",
+      val3Title: "Valeurs Positives",
+      val3Desc: "Solidarité, curiosité, respect de la nature et bienveillance au cœur de chaque livre.",
+      galleryTitle: "De l'inspiration familiale aux pages imprimées"
+    },
+    footer: {
+      brandPitch: "CSA Books Kids est une maison d'édition jeunesse indépendante : albums illustrés, vulgarisation scientifique, apprentissages et créativité.",
+      navTitle: "Explorer",
+      legalTitle: "Informations",
+      contactsTitle: "Contact",
+      rights: "© 2026 CSA Books Kids. Tous droits réservés.",
+      privacy: "Politique de confidentialité",
+      terms: "Mentions légales",
+      permanentQr: "Espace QR Codes permanents imprimés dans les livres"
+    },
+    common: {
+      loading: "Chargement en cours…",
+      error: "Une erreur est survenue.",
+      backToTop: "Haut de page",
+      notFoundTitle: "Page non trouvée",
+      notFoundText: "La page demandée n'existe pas ou a été déplacée.",
+      backHome: "Retour à l'accueil",
+      externalLink: "Ouvre la fiche produit Amazon dans un nouvel onglet",
+      langSelector: "Langue du site"
+    }
+  },
+
+  es: {
+    nav: {
+      home: "Inicio",
+      allBooks: "Todos los libros",
+      cantiere: "La Construcción",
+      scienza: "Ciencia y curiosidades",
+      scuola: "Para la escuela",
+      colorare: "Colorear",
+      about: "Quiénes somos",
+      menuToggle: "Menú principal",
+      closeMenu: "Cerrar menú"
+    },
+    hero: {
+      badge: "Sello Editorial Infantil",
+      title: "Grandes historias. Pequeños descubrimientos.",
+      subtitle: "Libros que invitan a imaginar, explorar, crear y aprender.",
+      ctaAll: "Descubre todos los libros",
+      ctaCantiere: "Explora Las Aventuras de la Construcción"
+    },
+    worlds: {
+      eyebrow: "Nuestros Mundos",
+      title: "Explora nuestros mundos",
+      subtitle: "Cuatro universos diseñados para alimentar la imaginación y la curiosidad científica en cada etapa.",
+      exploreBtn: "Explorar colección",
+      comingSoonBadge: "En preparación"
+    },
+    featured: {
+      eyebrow: "Destacados",
+      title: "Libros en primer plano",
+      subtitle: "Los títulos más queridos por pequeños lectores y recomendados por familias y educadores.",
+      buyAmazon: "Comprar en Amazon",
+      comingSoon: "Próximamente en Amazon",
+      viewDetails: "Detalles y vista previa",
+      readSample: "Hojea el libro",
+      paperbackBadge: "Tapa blanda"
+    },
+    ages: {
+      eyebrow: "Edades",
+      title: "Explora por edad",
+      subtitle: "Encuentra fácilmente el libro ideal para el crecimiento de tu hijo.",
+      allAges: "Todas las edades",
+      age2to5: "2–5 años",
+      age5to10: "5–10 años",
+      age7to12: "7–12 años",
+      age2to5Desc: "Primeras historias ilustradas, rimas, vehículos de obra y valores de cooperación.",
+      age5to10Desc: "Libros para colorear, actividades creativas, monumentos y juegos divertidos.",
+      age7to12Desc: "Descubrimientos científicos reales, dinosaurios, espacio y maravillas de la naturaleza.",
+      viewBooks: "Ver libros"
+    },
+    brand: {
+      eyebrow: "CSA Books Kids",
+      title: "Historias nacidas del corazón de una familia",
+      text1: "CSA Books Kids nace del deseo de crear libros ilustrados que despierten el asombro y ofrezcan momentos inolvidables de lectura compartida.",
+      text2: "Desde aventuras de excavadoras para los más pequeños hasta divulgación científica fascinante, cada libro está cuidado con esmero y respeto hacia el niño.",
+      ctaAbout: "Descubre nuestra historia"
+    },
+    catalog: {
+      eyebrow: "Catálogo Completo",
+      title: "Todos los libros de CSA Books Kids",
+      subtitle: "Explora todo nuestro catálogo, filtra por categoría o edad y conoce las ediciones disponibles.",
+      filterCategory: "Categoría",
+      filterAge: "Edad recomendada",
+      filterLanguage: "Idioma del libro",
+      allCategories: "Todas las categorías",
+      allAges: "Todas las edades",
+      allEditions: "Todas las ediciones",
+      noResults: "No se encontraron libros con los filtros seleccionados.",
+      resetFilters: "Restablecer filtros",
+      searchPlaceholder: "Buscar por título, autor o tema…",
+      resultsCount: "libros encontrados"
+    },
+    modal: {
+      close: "Cerrar ventana",
+      preview: "Vista previa del libro",
+      page: "Página",
+      of: "de",
+      prevPage: "Página anterior",
+      nextPage: "Página siguiente",
+      zoom: "Ampliar imagen",
+      editionSelect: "Edición lingüística del libro:",
+      benefitsTitle: "Por qué les encanta a los niños:",
+      contentsTitle: "Características del libro:",
+      storiesTitle: "Historias completas incluidas en este volumen:",
+      interactiveMicrosite: "Portal interactivo multimedia incluido",
+      openMicrosite: "Accede al portal secreto de Otto",
+      buyAmazonPaperback: "Comprar en Amazon",
+      buyAmazonDisabled: "Próximamente en Amazon",
+      relatedBooks: "También te puede gustar:",
+      authorLabel: "Autor:",
+      ageLabel: "Edad recomendada:",
+      formatLabel: "Formato:",
+      paperback: "Tapa blanda"
+    },
+    about: {
+      eyebrow: "Quiénes Somos",
+      title: "Pasión editorial, historias reales y amor por el conocimiento",
+      subtitle: "Un sello editorial independiente dedicado al crecimiento y aprendizaje de los niños.",
+      intro: "Detrás de cada libro de CSA Books Kids hay padres y autores comprometidos en ofrecer lecturas hermosas, constructivas e ilustradas con talento.",
+      marcoTitle: "Marco Salucci",
+      marcoRole: "Autor de «Las Aventuras de la Construcción» y «Fano con la nariz hacia arriba»",
+      marcoBio: "Creador de la serie Las Aventuras de la Construcción. Inspirado por la curiosidad de su hijo, dio vida a una colección de cuentos en rima con vehículos de obra.",
+      claraTitle: "Clara Musicco",
+      claraRole: "Autora de «¡Einstein, esta te la perdiste!» y la serie «La Brújula Misteriosa»",
+      claraBio: "Autora y divulgadora científica, Clara acerca grandes descubrimientos de la ciencia y retos matemáticos a las mentes jóvenes con estilo ameno y riguroso.",
+      valuesTitle: "Nuestros valores editoriales",
+      val1Title: "Rigor y Asombro",
+      val1Desc: "Contenidos verificados con esmero que estimulan la curiosidad innata de los niños.",
+      val2Title: "Calidad Visual",
+      val2Desc: "Ilustraciones ricas en detalles pensadas para enriquecer la experiencia de lectura.",
+      val3Title: "Valores Positivos",
+      val3Desc: "Empatía, amistad, cuidado del medio ambiente y entusiasmo por aprender.",
+      galleryTitle: "De la inspiración familiar al libro impreso"
+    },
+    footer: {
+      brandPitch: "CSA Books Kids es un sello editorial independiente para niños: álbumes ilustrados, divulgación científica, educación y creatividad.",
+      navTitle: "Explorar",
+      legalTitle: "Información",
+      contactsTitle: "Contacto",
+      rights: "© 2026 CSA Books Kids. Todos los derechos reservados.",
+      privacy: "Política de privacidad",
+      terms: "Términos de uso",
+      permanentQr: "Área de códigos QR permanentes impresos en los libros"
+    },
+    common: {
+      loading: "Cargando…",
+      error: "Ha ocurrido un error.",
+      backToTop: "Subir al inicio",
+      notFoundTitle: "Página no encontrada",
+      notFoundText: "La página solicitada no existe o ha sido movida.",
+      backHome: "Volver al inicio",
+      externalLink: "Abre la página en Amazon en una nueva pestaña",
+      langSelector: "Idioma del sitio"
+    }
+  },
+
+  nl: {
+    nav: {
+      home: "Home",
+      allBooks: "Alle boeken",
+      cantiere: "De Bouwplaats",
+      scienza: "Wetenschap & Verwondering",
+      scuola: "Voor School",
+      colorare: "Kleuren & Creëren",
+      about: "Over ons",
+      menuToggle: "Hoofdmenu",
+      closeMenu: "Menu sluiten"
+    },
+    hero: {
+      badge: "Kinderboeken Uitgeverij",
+      title: "Grote verhalen. Kleine ontdekkingen.",
+      subtitle: "Boeken die kinderen inspireren om te dromen, ontdekken, creëren en leren.",
+      ctaAll: "Bekijk alle boeken",
+      ctaCantiere: "Ontdek Bouwplaats Avonturen"
+    },
+    worlds: {
+      eyebrow: "Onze Werelden",
+      title: "Ontdek onze boekenwerelden",
+      subtitle: "Vier thematische series om de verbeelding, wetenschappelijke nieuwsgierigheid en creativiteit te prikkelen.",
+      exploreBtn: "Ontdek de serie",
+      comingSoonBadge: "Binnenkort beschikbaar"
+    },
+    featured: {
+      eyebrow: "Uitgelicht",
+      title: "Boeken in de schijnwerpers",
+      subtitle: "De favoriete boeken van jonge lezers, aanbevolen door ouders en leerkrachten.",
+      buyAmazon: "Koop op Amazon",
+      comingSoon: "Binnenkort op Amazon",
+      viewDetails: "Details & inkijkexemplaar",
+      readSample: "Inkijkexemplaar",
+      paperbackBadge: "Paperback"
+    },
+    ages: {
+      eyebrow: "Leeftijden",
+      title: "Ontdek op leeftijd",
+      subtitle: "Vind eenvoudig het perfecte boek passend bij de ontwikkelingsfase van je kind.",
+      allAges: "Alle leeftijden",
+      age2to5: "2–5 jaar",
+      age5to10: "5–10 jaar",
+      age7to12: "7–12 jaar",
+      age2to5Desc: "Eerste prentenboeken, rijmverhalen, stoere voertuigen en waarden van vriendschap.",
+      age5to10Desc: "Kleurboeken, creativiteit, historische monumenten, doolhoven en spelletjes.",
+      age7to12Desc: "Echte wetenschappelijke ontdekkingen, dinosaurussen, ruimte en natuurwonderen.",
+      viewBooks: "Bekijk boeken"
+    },
+    brand: {
+      eyebrow: "CSA Books Kids",
+      title: "Verhalen ontstaan in het hart van een gezin",
+      text1: "CSA Books Kids is ontstaan uit de wens om bijzondere kinderboeken te maken die verwondering wekken en waardevolle voorleesmomenten creëren.",
+      text2: "Van stoere bouwplaatsvoertuigen voor de kleintjes tot fascinerende wetenschap voor oudere kinderen: elk boek is met liefde en zorg ontworpen.",
+      ctaAbout: "Ontdek ons verhaal"
+    },
+    catalog: {
+      eyebrow: "Volledige Catalogus",
+      title: "Alle CSA Books Kids Titels",
+      subtitle: "Blader door onze complete catalogus, filter op categorie of leeftijd en ontdek de beschikbare edities.",
+      filterCategory: "Categorie",
+      filterAge: "Leeftijd",
+      filterLanguage: "Taal van het boek",
+      allCategories: "Alle categorieën",
+      allAges: "Alle leeftijden",
+      allEditions: "Alle edities",
+      noResults: "Geen boeken gevonden voor de geselecteerde filters.",
+      resetFilters: "Filters resetten",
+      searchPlaceholder: "Zoek op titel, auteur of onderwerp…",
+      resultsCount: "boeken gevonden"
+    },
+    modal: {
+      close: "Venster sluiten",
+      preview: "Inkijkexemplaar",
+      page: "Pagina",
+      of: "van",
+      prevPage: "Vorige pagina",
+      nextPage: "Volgende pagina",
+      zoom: "Afbeelding vergroten",
+      editionSelect: "Taaleditie van het boek:",
+      benefitsTitle: "Waarom kinderen dit geweldig vinden:",
+      contentsTitle: "Boekkenmerken:",
+      storiesTitle: "Complete verhalen in deze bundel:",
+      interactiveMicrosite: "Interactief multimediaportaal inbegrepen",
+      openMicrosite: "Naar Otto's geheime portaal",
+      buyAmazonPaperback: "Koop op Amazon",
+      buyAmazonDisabled: "Binnenkort verkrijgbaar op Amazon",
+      relatedBooks: "Dit vind je misschien ook leuk:",
+      authorLabel: "Auteur:",
+      ageLabel: "Leeftijdsadvies:",
+      formatLabel: "Formaat:",
+      paperback: "Paperback"
+    },
+    about: {
+      eyebrow: "Over Ons",
+      title: "Passie voor boeken, authentieke verhalen en liefde voor leren",
+      subtitle: "Een onafhankelijke kinderboekenuitgeverij gewijd aan de groei en nieuwsgierigheid van kinderen.",
+      intro: "Achter elk boek van CSA Books Kids schuilt een warm verhaal van ouders en auteurs die waardevolle, prachtig geïllustreerde verhalen willen delen met jonge lezers.",
+      marcoTitle: "Marco Salucci",
+      marcoRole: "Auteur van «Bouwplaats Avonturen» en «Fano met de neus omhoog»",
+      marcoBio: "Bedenker van Bouwplaats Avonturen. Marco vertaalde de fascinatie van zijn zoontje voor graafmachines en kranen naar een internationale reeks vrolijke prentenboeken.",
+      claraTitle: "Clara Musicco",
+      claraRole: "Auteur van «Einstein, dit heb je gemist!» en «Het Mystieke Kompas»",
+      claraBio: "Auteur en wetenschapscommunicator. Clara brengt wetenschappelijke ontdekkingen en rekenkundige uitdagingen op een speelse manier tot leven voor nieuwsgierige kinderen.",
+      valuesTitle: "Onze uitgeefpijlers",
+      val1Title: "Kennis & Verwondering",
+      val1Desc: "Wetenschappelijk betrouwbare inhoud die kinderen inspireert om vragen te blijven stellen.",
+      val2Title: "Artistieke Kwaliteit",
+      val2Desc: "Illustraties vol warmte en detail die de leeservaring verrijken.",
+      val3Title: "Positieve Waarden",
+      val3Desc: "Vriendschap, samenwerking, zorg voor de natuur en liefde voor ontdekken.",
+      galleryTitle: "Van gezinsinspiratie naar het gedrukte boek"
+    },
+    footer: {
+      brandPitch: "CSA Books Kids is een onafhankelijke kinderuitgeverij voor prentenboeken, populairwetenschappelijke ontdekkingen, schoolvaardigheden en creativiteit.",
+      navTitle: "Verkennen",
+      legalTitle: "Informatie",
+      contactsTitle: "Contact",
+      rights: "© 2026 CSA Books Kids. Alle rechten voorbehouden.",
+      privacy: "Privacybeleid",
+      terms: "Gebruiksvoorwaarden",
+      permanentQr: "Permanente QR-code pagina's uit de boeken"
+    },
+    common: {
+      loading: "Laden…",
+      error: "Er is een fout opgetreden.",
+      backToTop: "Naar boven",
+      notFoundTitle: "Pagina niet gevonden",
+      notFoundText: "De opgevraagde pagina bestaat niet of is verplaatst.",
+      backHome: "Terug naar Home",
+      externalLink: "Opent de productpagina op Amazon in een nieuw tabblad",
+      langSelector: "Website Taal"
+    }
+  },
+
+  pl: {
+    nav: {
+      home: "Główna",
+      allBooks: "Wszystkie książki",
+      cantiere: "Plac Budowy",
+      scienza: "Nauka i Ciekawostki",
+      scuola: "Do Szkoły",
+      colorare: "Kolorowanki",
+      about: "O nas",
+      menuToggle: "Menu główne",
+      closeMenu: "Zamknij menu"
+    },
+    hero: {
+      badge: "Wydawnictwo dla Dzieci",
+      title: "Wielkie opowieści. Małe odkrycia.",
+      subtitle: "Książki, które inspirują dzieci do marzeń, odkrywania, tworzenia i nauki.",
+      ctaAll: "Odkryj wszystkie książki",
+      ctaCantiere: "Poznaj Przygody na Placu Budowy"
+    },
+    worlds: {
+      eyebrow: "Nasze Światy",
+      title: "Poznaj nasze serie",
+      subtitle: "Cztery serie stworzone z pasją, by rozwijać wyobraźnię i pasję do wiedzy na każdym etapie rozwoju.",
+      exploreBtn: "Zobacz serię",
+      comingSoonBadge: "W przygotowaniu"
+    },
+    featured: {
+      eyebrow: "Polecane",
+      title: "Książki na pierwszym planie",
+      subtitle: "Tytuły najchętniej wybierane przez młodych czytelników i rekomendowane przez rodziców.",
+      buyAmazon: "Kup na Amazon",
+      comingSoon: "Wkrótce na Amazon",
+      viewDetails: "Szczegóły i podgląd",
+      readSample: "Zajrzyj do środka",
+      paperbackBadge: "Miękka oprawa"
+    },
+    ages: {
+      eyebrow: "Grupy Wiekowe",
+      title: "Wybierz według wieku",
+      subtitle: "Szybko znajdź idealną książkę dopasowaną do wieku Twojego dziecka.",
+      allAges: "Każdy wiek",
+      age2to5: "2–5 lat",
+      age5to10: "5–10 lat",
+      age7to12: "7–12 lat",
+      age2to5Desc: "Pierwsze rymowane opowieści, pojazdy budowlane i nauka współpracy.",
+      age5to10Desc: "Kolorowanki, kreatywne zabawy, zabytki historyczne i wciągające labirynty.",
+      age7to12Desc: "Prawdziwe odkrycia naukowe, dinozaury, kosmos i niezwykła przyroda.",
+      viewBooks: "Przeglądaj książki"
+    },
+    brand: {
+      eyebrow: "CSA Books Kids",
+      title: "Historie zrodzone w sercu rodziny",
+      text1: "Wydawnictwo CSA Books Kids powstało z pragnienia tworzenia pięknych książek dla dzieci, które budzą zachwyt i łączą pokolenia przy wspólnym czytaniu.",
+      text2: "Od przygód maszyn budowlanych dla maluchów po fascynującą naukę dla starszaków — każda książka jest tworzona z dbałością o treść i szacunkiem dla dziecka.",
+      ctaAbout: "Poznaj naszą historię"
+    },
+    catalog: {
+      eyebrow: "Pełny Katalog",
+      title: "Wszystkie tytuły CSA Books Kids",
+      subtitle: "Przeglądaj nasz katalog, filtruj według kategorii lub wieku i odkrywaj dostępne wydania językowe.",
+      filterCategory: "Kategoria",
+      filterAge: "Wiek",
+      filterLanguage: "Język książki",
+      allCategories: "Wszystkie kategorie",
+      allAges: "Wszystkie grupy wiekowe",
+      allEditions: "Wszystkie wydania",
+      noResults: "Brak książek spełniających wybrane kryteria.",
+      resetFilters: "Wyczyść filtry",
+      searchPlaceholder: "Szukaj po tytule, autorze lub temacie…",
+      resultsCount: "znalezionych książek"
+    },
+    modal: {
+      close: "Zamknij okno",
+      preview: "Podgląd książki",
+      page: "Strona",
+      of: "z",
+      prevPage: "Poprzednia strona",
+      nextPage: "Następna strona",
+      zoom: "Powiększ obraz",
+      editionSelect: "Wersja językowa książki:",
+      benefitsTitle: "Dlaczego dzieci to uwielbiają:",
+      contentsTitle: "Informacje o książce:",
+      storiesTitle: "Kompletne opowieści w tym tomie:",
+      interactiveMicrosite: "W zestawie interaktywny portal multimedialny",
+      openMicrosite: "Odwiedź portal Otto",
+      buyAmazonPaperback: "Kup na Amazon",
+      buyAmazonDisabled: "Wkrótce dostępne na Amazon",
+      relatedBooks: "Może Ci się spodobać:",
+      authorLabel: "Autor:",
+      ageLabel: "Zalecany wiek:",
+      formatLabel: "Format:",
+      paperback: "Miękka oprawa"
+    },
+    about: {
+      eyebrow: "O Nas",
+      title: "Pasja wydawnicza, autentyczność i miłość do nauki",
+      subtitle: "Niezależne wydawnictwo dziecięce stworzone, by wspierać rozwój i ciekawość najmłodszych.",
+      intro: "Za każdą książką CSA Books Kids stoją rodzice i autorzy, którzy pragną dzielić się z dziećmi mądrymi, ciepłymi i wspaniale zilustrowanymi historiami.",
+      marcoTitle: "Marco Salucci",
+      marcoRole: "Autor «Przygód na Placu Budowy» oraz «Fano z nosem do góry»",
+      marcoBio: "Twórca serii Przygody na Placu Budowy. Przekształcił fascynację swojego synka maszynami w rymowane, międzynarodowe bajki uwielbiane przez rodziny.",
+      claraTitle: "Clara Musicco",
+      claraRole: "Autorka «Einsteinie, to cię ominęło!» oraz serii «Tajemniczy Kompas»",
+      claraBio: "Autorka i popularyzatorka nauki. W lekki i wciągający sposób tłumaczy dzieciom wielkie odkrycia naukowe oraz tajniki matematyki.",
+      valuesTitle: "Nasze zasady wydawnicze",
+      val1Title: "Rzetelność i Zachwyt",
+      val1Desc: "Sprawdzona wiedza naukowa przekazana z pasją, która inspiruje do zadawania pytań.",
+      val2Title: "Kunszt Ilustracji",
+      val2Desc: "Staranne ilustracje pomagające w skupieniu i rozwijające zmysł estetyczny.",
+      val3Title: "Dobre Wartości",
+      val3Desc: "Empatia, współpraca, szacunek dla przyrody i radość ze zdobywania wiedzy.",
+      galleryTitle: "Od rodzinnej pasji po drukowane strony"
+    },
+    footer: {
+      brandPitch: "CSA Books Kids to niezależne wydawnictwo dla dzieci: książki obrazkowe, literatura popularnonaukowa, edukacja i kreatywność.",
+      navTitle: "Kategorie",
+      legalTitle: "Informacje",
+      contactsTitle: "Kontakt",
+      rights: "© 2026 CSA Books Kids. Wszelkie prawa zastrzeżone.",
+      privacy: "Polityka prywatności",
+      terms: "Regulamin",
+      permanentQr: "Materiały z kodów QR wydrukowanych w książkach"
+    },
+    common: {
+      loading: "Ładowanie…",
+      error: "Wystąpił błąd.",
+      backToTop: "Na górę",
+      notFoundTitle: "Nie znaleziono strony",
+      notFoundText: "Żądana strona nie istnieje lub została przeniesiona.",
+      backHome: "Wróć do strony głównej",
+      externalLink: "Otwiera stronę produktu na Amazon w nowej karcie",
+      langSelector: "Język strony"
+    }
+  },
+
+  se: {
+    nav: {
+      home: "Hem",
+      allBooks: "Alla böcker",
+      cantiere: "Byggarbetsplatsen",
+      scienza: "Vetenskap & Nyfikenhet",
+      scuola: "För Skolan",
+      colorare: "Färglägg & Skapa",
+      about: "Om oss",
+      menuToggle: "Huvudmeny",
+      closeMenu: "Stäng meny"
+    },
+    hero: {
+      badge: "Barnboksförlag",
+      title: "Stora berättelser. Små upptäckter.",
+      subtitle: "Böcker som inspirerar barn att fantisera, utforska, skapa och lära sig.",
+      ctaAll: "Upptäck alla böcker",
+      ctaCantiere: "Utforska Byggarbetsplatsens Äventyr"
+    },
+    worlds: {
+      eyebrow: "Våra Världar",
+      title: "Utforska våra bokvärldar",
+      subtitle: "Fyra serier skapade för att ge näring åt fantasi, vetenskaplig nyfikenhet och skaparglädje.",
+      exploreBtn: "Utforska serien",
+      comingSoonBadge: "Under förberedelse"
+    },
+    featured: {
+      eyebrow: "I Fokus",
+      title: "Utvalda böcker",
+      subtitle: "Böckerna som uppskattas mest av unga läsare och rekommenderas av föräldrar och pedagoger.",
+      buyAmazon: "Köp på Amazon",
+      comingSoon: "Snart på Amazon",
+      viewDetails: "Detaljer & förhandstitt",
+      readSample: "Bläddra i boken",
+      paperbackBadge: "Häftad"
+    },
+    ages: {
+      eyebrow: "Åldersgrupper",
+      title: "Utforska efter ålder",
+      subtitle: "Hitta enkelt rätt bok för ditt barns ålder och utveckling.",
+      allAges: "Alla åldrar",
+      age2to5: "2–5 år",
+      age5to10: "5–10 år",
+      age7to12: "7–12 år",
+      age2to5Desc: "Första bilderböckerna, rim, arbetsfordon och goda värderingar om vänskap.",
+      age5to10Desc: "Målarböcker, kreativitet, historiska platser och kluriga pyssel.",
+      age7to12Desc: "Spännande vetenskapliga upptäckter, dinosaurier, rymden och naturens under.",
+      viewBooks: "Se böckerna"
+    },
+    brand: {
+      eyebrow: "CSA Books Kids",
+      title: "Berättelser skapade med familjevärme",
+      text1: "CSA Books Kids föddes ur önskan att skapa bilderböcker som väcker förundran och bjuder in till mysiga lässtunder tillsammans.",
+      text2: "Från småbarnens favoritmaskiner på bygget till modern vetenskap för nyfikna skolbarn: varje bok görs med stor omsorg och respekt för barnet.",
+      ctaAbout: "Läs vår historia"
+    },
+    catalog: {
+      eyebrow: "Hela Katalogen",
+      title: "Alla CSA Books Kids Böcker",
+      subtitle: "Bläddra i hela vårt sortiment, filtrera på kategori eller ålder och upptäck alla språkutgåvor.",
+      filterCategory: "Kategori",
+      filterAge: "Rekommenderad ålder",
+      filterLanguage: "Bokens språk",
+      allCategories: "Alla kategorier",
+      allAges: "Alla åldrar",
+      allEditions: "Alla utgåvor",
+      noResults: "Inga böcker matchade de valda filtren.",
+      resetFilters: "Återställ filter",
+      searchPlaceholder: "Sök efter titel, författare eller tema…",
+      resultsCount: "böcker hittades"
+    },
+    modal: {
+      close: "Stäng fönster",
+      preview: "Provbläddring",
+      page: "Sida",
+      of: "av",
+      prevPage: "Föregående sida",
+      nextPage: "Nästa sida",
+      zoom: "Förstora bild",
+      editionSelect: "Språkutgåva för boken:",
+      benefitsTitle: "Därför älskar barn boken:",
+      contentsTitle: "Bokens innehåll:",
+      storiesTitle: "Kompletta berättelser i denna volym:",
+      interactiveMicrosite: "Interaktiv multimediaportal ingår",
+      openMicrosite: "Öppna Ottos hemliga portal",
+      buyAmazonPaperback: "Köp på Amazon",
+      buyAmazonDisabled: "Kommer snart till Amazon",
+      relatedBooks: "Du gillar kanske också:",
+      authorLabel: "Författare:",
+      ageLabel: "Åldersrekommendation:",
+      formatLabel: "Format:",
+      paperback: "Häftad"
+    },
+    about: {
+      eyebrow: "Om Oss",
+      title: "Bokpassion, äkta historier och glädjen att lära",
+      subtitle: "Ett oberoende barnboksförlag dedikerat till barns växande och nyfikenhet.",
+      intro: "Bakom varje CSA Books Kids-bok finns föräldrar och författare som brinner för att skapa meningsfulla, varma och vackert illustrerade böcker för barn.",
+      marcoTitle: "Marco Salucci",
+      marcoRole: "Författare till «Byggarbetsplatsens Äventyr» och «Fano med näsan i vädret»",
+      marcoBio: "Skaparen av Byggarbetsplatsens Äventyr. Marco inspirerades av sin sons passion för grävmaskiner och kranar och skapade en uppskattad internationell serie.",
+      claraTitle: "Clara Musicco",
+      claraRole: "Författare till «Einstein, det här missade du!» och «Den Mystiska Kompassen»",
+      claraBio: "Författare och vetenskapskommunikatör. Clara förklarar vetenskap och matematik på ett lättsamt och spännande sätt för unga nyfikna hjärnor.",
+      valuesTitle: "Våra förlagsprinciper",
+      val1Title: "Kunskap & Förundran",
+      val1Desc: "Faktagranskat innehåll som väcker nyfikenhet och stimulerar självständigt tänkande.",
+      val2Title: "Illustrerad Kvalitet",
+      val2Desc: "Bilder skapade för att engagera barnets fantasi och underlätta läsförståelsen.",
+      val3Title: "Goda Värderingar",
+      val3Desc: "Empati, samarbete, naturvård och glädjen i att upptäcka nytt.",
+      galleryTitle: "Från familjeinspiration till tryckt bok"
+    },
+    footer: {
+      brandPitch: "CSA Books Kids är ett oberoende barnboksförlag med bilderböcker, populärvetenskap, skolförberedelse och kreativt skapande.",
+      navTitle: "Utforska",
+      legalTitle: "Information",
+      contactsTitle: "Kontakt",
+      rights: "© 2026 CSA Books Kids. Alla rättigheter förbehållna.",
+      privacy: "Integritetspolicy",
+      terms: "Användarvillkor",
+      permanentQr: "Område för tryckta permanenta QR-koder"
+    },
+    common: {
+      loading: "Laddar…",
+      error: "Ett fel uppstod.",
+      backToTop: "Till toppen",
+      notFoundTitle: "Sidan kunde inte hittas",
+      notFoundText: "Sidan du söker finns inte eller har flyttats.",
+      backHome: "Tillbaka till startsidan",
+      externalLink: "Öppnar produktsidan på Amazon i en ny flik",
+      langSelector: "Webbplatsens språk"
+    }
+  },
+
+  jp: {
+    nav: {
+      home: "ホーム",
+      allBooks: "すべての本",
+      cantiere: "工事現場のなかまたち",
+      scienza: "科学と好奇心",
+      scuola: "学習・学校向け",
+      colorare: "ぬりえ・クリエイティブ",
+      about: "出版社について",
+      menuToggle: "メインメニュー",
+      closeMenu: "メニューを閉じる"
+    },
+    hero: {
+      badge: "こども向け絵本レーベル",
+      title: "心おどる物語。小さな大発見。",
+      subtitle: "想像力を広げ、探究し、つくり、学ぶ楽しさを届ける絵本たち。",
+      ctaAll: "すべての本を見る",
+      ctaCantiere: "「工事現場の冒険」シリーズを見る"
+    },
+    worlds: {
+      eyebrow: "私たちの絵本世界",
+      title: "4つの出版コレクション",
+      subtitle: "子どもの成長と好奇心に寄り添う、個性豊かな4つの絵本シリーズ。",
+      exploreBtn: "シリーズを見る",
+      comingSoonBadge: "準備中"
+    },
+    featured: {
+      eyebrow: "注目タイトル",
+      title: "おすすめの絵本",
+      subtitle: "世界中の子どもたちに親しまれ、保護者や教育関係者から推薦されている人気作。",
+      buyAmazon: "Amazonで購入",
+      comingSoon: "Amazonにて近日発売",
+      viewDetails: "詳細と試し読み",
+      readSample: "試し読み",
+      paperbackBadge: "ペーパーバック"
+    },
+    ages: {
+      eyebrow: "対象年齢別",
+      title: "年齢からえらぶ",
+      subtitle: "お子さまの成長にぴったりな絵本がすぐに見つかります。",
+      allAges: "すべての年齢",
+      age2to5: "2〜5歳向け",
+      age5to10: "5〜10歳向け",
+      age7to12: "7〜12歳向け",
+      age2to5Desc: "はじめての絵本、リズミカルな文章、はたらく車と友情の物語。",
+      age5to10Desc: "ぬりえ、歴史的建造物、迷路やクイズなど創造力を刺激する本。",
+      age7to12Desc: "恐竜、宇宙、最新テクノロジーなど科学のふしぎを解き明かす本。",
+      viewBooks: "絵本をみる"
+    },
+    brand: {
+      eyebrow: "CSA Books Kids",
+      title: "家族のぬくもりから生まれた絵本たち",
+      text1: "CSA Books Kidsは、子どもたちの知的好奇心と豊かな心を育む特別な絵本を届けたいという想いから誕生しました。",
+      text2: "工事現場の車たちの心温まる物語から、本格的な科学の探究ブックまで、一冊一冊丁寧に心を込めて制作しています。",
+      ctaAbout: "私たちの歩みを見る"
+    },
+    catalog: {
+      eyebrow: "公式カタログ",
+      title: "CSA Books Kids 全作品カタログ",
+      subtitle: "出版ラインナップをカテゴリや対象年齢で絞り込んでご覧いただけます。",
+      filterCategory: "カテゴリー",
+      filterAge: "対象年齢",
+      filterLanguage: "本の言語エディション",
+      allCategories: "すべてのカテゴリー",
+      allAges: "すべての年齢",
+      allEditions: "すべての言語",
+      noResults: "条件に該当する本が見つかりませんでした。",
+      resetFilters: "条件をリセット",
+      searchPlaceholder: "タイトル、著者、キーワードで検索…",
+      resultsCount: "冊の本が見つかりました"
+    },
+    modal: {
+      close: "閉じる",
+      preview: "試し読みビューア",
+      page: "ページ",
+      of: "/",
+      prevPage: "前のページ",
+      nextPage: "次のページ",
+      zoom: "画像を拡大",
+      editionSelect: "本の言語エディション：",
+      benefitsTitle: "この本の魅力・おすすめポイント：",
+      contentsTitle: "収録内容：",
+      storiesTitle: "本書に収録されているお話：",
+      interactiveMicrosite: "限定QRインタラクティブポータル付き",
+      openMicrosite: "オットーの秘密ポータルを開く",
+      buyAmazonPaperback: "Amazonで購入する",
+      buyAmazonDisabled: "Amazonにて近日発売予定",
+      relatedBooks: "こちらのおすすめ作品もどうぞ：",
+      authorLabel: "著者：",
+      ageLabel: "対象年齢：",
+      formatLabel: "判型：",
+      paperback: "ペーパーバック"
+    },
+    about: {
+      eyebrow: "出版社について",
+      title: "出版への情熱、本物の物語、そして学ぶ喜び",
+      subtitle: "子どもの成長と好奇心を支えるインディペンデントな児童書レーベル。",
+      intro: "CSA Books Kidsのすべての本の背景には、子どもたちに楽しく価値ある読書体験を届けたいと願う親とクリエイターたちの想いがあります。",
+      marcoTitle: "マルコ・サルッチ (Marco Salucci)",
+      marcoRole: "「工事現場の冒険」シリーズおよび「ファーノを見上げて」著者",
+      marcoBio: "「工事現場の冒険」シリーズの生みの親。息子の工事車両への純粋な情熱から着想を得て、世界中で愛される絵本シリーズを執筆。",
+      claraTitle: "クララ・ムシッコ (Clara Musicco)",
+      claraRole: "「アインシュタイン、これを見逃したね！」および「ふしぎなコンパス」著者",
+      claraBio: "作家・科学コミュニケーター。子どもたちに向けて科学の驚きや算数の面白さを生き生きと伝える作品を手がけています。",
+      valuesTitle: "私たちの3つのこだわり",
+      val1Title: "確かな知識と驚き",
+      val1Desc: "学術的根拠に基づいた内容で、子どもたちの知的好奇心を刺激します。",
+      val2Title: "温かみのある絵の美しさ",
+      val2Desc: "読書の楽しさを引き立て、豊かな感性を育む魅力的なイラストレーション。",
+      val3Title: "育むメッセージ",
+      val3Desc: "友情、助け合い、自然環境への愛を物語の核に据えています。",
+      galleryTitle: "家族のインスピレーションから絵本へ"
+    },
+    footer: {
+      brandPitch: "CSA Books Kidsは絵本、科学普及、学習支援、創造的アクティビティを手がける児童書レーベルです。",
+      navTitle: "ナビゲーション",
+      legalTitle: "インフォメーション",
+      contactsTitle: "お問い合わせ",
+      rights: "© 2026 CSA Books Kids. 無断転載を禁じます。",
+      privacy: "プライバシーポリシー",
+      terms: "利用規約",
+      permanentQr: "書籍掲載QRコード専用コンテンツ"
+    },
+    common: {
+      loading: "読み込み中…",
+      error: "エラーが発生しました。",
+      backToTop: "ページ上部へ",
+      notFoundTitle: "ページが見つかりません",
+      notFoundText: "お探しのページは存在しないか、移動した可能性があります。",
+      backHome: "ホームへ戻る",
+      externalLink: "新しいタブでAmazon商品ページを開きます",
+      langSelector: "表示言語"
+    }
+  }
+};
+
+// Write i18n.json
+fs.writeFileSync(
+  path.join(dataDir, 'i18n.json'),
+  JSON.stringify(I18N, null, 2),
+  'utf8'
+);
+
+// Write i18n.js for browser runtime
+fs.writeFileSync(
+  path.join(dataDir, 'i18n.js'),
+  `// Auto-generated 9-language dictionary for CSA Books Kids\nwindow.SITE_I18N = ${JSON.stringify(I18N, null, 2)};\nif (typeof module !== 'undefined') module.exports = window.SITE_I18N;\n`,
+  'utf8'
+);
+
+console.log('✅ Dizionario i18n a 9 lingue generato con successo!');
