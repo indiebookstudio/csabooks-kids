@@ -122,6 +122,7 @@
     renderCatalogSection();
     renderCantiereSection();
     renderScienzaSection();
+    updateHeroCarouselTranslations(lang);
 
     // If modal is open, re-render modal with new language
     if (activeModalState) {
@@ -351,19 +352,6 @@
     }
 
     let micrositeHtml = '';
-    if (book.micrositeUrl) {
-      micrositeHtml = `
-        <div class="csa-modal-microsite-card">
-          <div class="csa-microsite-info">
-            <span class="csa-microsite-badge">${t('modal.interactiveMicrosite')}</span>
-            <p class="csa-microsite-desc">${t('scienza.micrositeCardDesc') || 'Accedi a 7 simulazioni 3D, carte da gioco e museo interattivo.'}</p>
-          </div>
-          <a href="${book.micrositeUrl}" class="csa-btn csa-btn-accent csa-btn-sm" target="_blank" rel="noopener noreferrer">
-            ${t('modal.openMicrosite')} →
-          </a>
-        </div>
-      `;
-    }
 
     const currentImgUrl = (pages && pages[currentPage]) ? pages[currentPage] : `books/${bookId}/${editionKey}/cover.png`;
 
@@ -728,6 +716,274 @@
     }
   }
 
+  // ======================================================================
+  // HERO BANNER CAROUSEL 16:9 (AUTO-SCROLLING, SWIPE & KEYBOARD)
+  // ======================================================================
+  const heroCarouselState = {
+    manifest: [],
+    currentIndex: 0,
+    timer: null,
+    intervalMs: 5000,
+    isPaused: false,
+    touchStartX: 0,
+    touchEndX: 0,
+    initialized: false
+  };
+
+  const HERO_SUBTITLES = {
+    it: "Storie per bambini, nate da un papà e una mamma.",
+    en: "Children's stories, made by a dad and a mom.",
+    de: "Kindergeschichten, von einem Papa und einer Mama.",
+    fr: "Histoires pour enfants, créées par un papa et une maman.",
+    es: "Cuentos infantiles, creados por un papá y una mamá.",
+    nl: "Kinderverhalen, gemaakt door een papa en een mama.",
+    pl: "Opowieści dla dzieci, stworzone przez tatę i mamę.",
+    se: "Barnberättelser, skapade av en pappa och en mamma.",
+    jp: "パパとママが作った、子どもたちのための物語。"
+  };
+
+  function updateHeroCarouselTranslations(lang) {
+    const titleEl = document.getElementById('hero-title');
+    const subtitleEl = document.getElementById('hero-subtitle');
+    const heroImg = document.getElementById('hero-banner-img');
+    if (titleEl) {
+      titleEl.innerHTML = 'CSA Books <span class="highlight">Kids</span>';
+    }
+    if (subtitleEl && HERO_SUBTITLES[lang]) {
+      subtitleEl.textContent = HERO_SUBTITLES[lang];
+    }
+    if (heroImg) {
+      heroImg.alt = `CSA Books Kids - ${HERO_SUBTITLES[lang] || HERO_SUBTITLES.it}`;
+    }
+  }
+
+  function shuffleBanners(items) {
+    if (!Array.isArray(items) || items.length <= 1) return items;
+    const mainBannerIndex = items.findIndex(item => 
+      item.characterKey === 'banner' || 
+      (item.file && item.file.toLowerCase().includes('banner-csa-books-4-kids'))
+    );
+    let mainBanner = null;
+    let remaining = [...items];
+    if (mainBannerIndex !== -1) {
+      mainBanner = remaining.splice(mainBannerIndex, 1)[0];
+    }
+    for (let i = remaining.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [remaining[i], remaining[j]] = [remaining[j], remaining[i]];
+    }
+    return mainBanner ? [mainBanner, ...remaining] : remaining;
+  }
+
+  function goToHeroSlide(index) {
+    const total = heroCarouselState.manifest.length;
+    if (total <= 1) return;
+    const newIndex = (index + total) % total;
+    heroCarouselState.currentIndex = newIndex;
+
+    const slides = document.querySelectorAll('.hero-carousel-slide');
+    slides.forEach((slide, idx) => {
+      const isActive = idx === newIndex;
+      slide.classList.toggle('active', isActive);
+      if (isActive) {
+        slide.removeAttribute('aria-hidden');
+      } else {
+        slide.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    const dots = document.querySelectorAll('.hero-carousel-dot');
+    dots.forEach((dot, idx) => {
+      const isActive = idx === newIndex;
+      dot.classList.toggle('active', isActive);
+      dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+  }
+
+  function startHeroAutoplay() {
+    clearTimeout(heroCarouselState.timer);
+    if (heroCarouselState.manifest.length <= 1) return;
+    if (heroCarouselState.isPaused) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+    heroCarouselState.timer = setTimeout(() => {
+      goToHeroSlide(heroCarouselState.currentIndex + 1);
+      startHeroAutoplay();
+    }, heroCarouselState.intervalMs);
+  }
+
+  function resetHeroAutoplay() {
+    clearTimeout(heroCarouselState.timer);
+    startHeroAutoplay();
+  }
+
+  function setupHeroCarousel(items) {
+    const container = document.getElementById('hero-carousel');
+    const slidesTrack = document.getElementById('hero-carousel-slides');
+    const indicatorsContainer = document.getElementById('hero-carousel-indicators');
+    const prevBtn = document.getElementById('hero-carousel-prev');
+    const nextBtn = document.getElementById('hero-carousel-next');
+
+    if (!container || !slidesTrack) return;
+
+    const shuffled = shuffleBanners(items);
+    heroCarouselState.manifest = shuffled;
+    heroCarouselState.currentIndex = 0;
+    const total = shuffled.length;
+
+    slidesTrack.innerHTML = shuffled.map((item, idx) => {
+      const isActive = idx === 0;
+      const isPriority = idx === 0;
+      const alt = `CSA Books Kids - ${item.title || 'Storie per bambini'}`;
+      return `
+        <div class="hero-carousel-slide ${isActive ? 'active' : ''}" 
+             data-index="${idx}" 
+             role="group" 
+             aria-roledescription="slide" 
+             aria-label="${idx + 1} di ${total}"
+             ${isActive ? '' : 'aria-hidden="true"'}>
+          <img 
+            src="${item.src}" 
+            alt="${alt}" 
+            class="hero-banner-img" 
+            ${isPriority ? 'id="hero-banner-img" fetchpriority="high" loading="eager"' : 'loading="lazy"'}
+          />
+        </div>
+      `;
+    }).join('');
+
+    if (indicatorsContainer) {
+      if (total <= 1) {
+        indicatorsContainer.style.display = 'none';
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+      } else {
+        indicatorsContainer.style.display = 'flex';
+        if (prevBtn) prevBtn.style.display = 'flex';
+        if (nextBtn) nextBtn.style.display = 'flex';
+
+        indicatorsContainer.innerHTML = shuffled.map((item, idx) => {
+          const isActive = idx === 0;
+          return `
+            <button type="button" 
+                    class="hero-carousel-dot ${isActive ? 'active' : ''}" 
+                    data-slide-to="${idx}" 
+                    role="tab" 
+                    aria-selected="${isActive ? 'true' : 'false'}" 
+                    aria-label="Slide ${idx + 1} di ${total}">
+            </button>
+          `;
+        }).join('');
+
+        indicatorsContainer.querySelectorAll('.hero-carousel-dot').forEach(dot => {
+          dot.addEventListener('click', (e) => {
+            e.preventDefault();
+            const slideIdx = parseInt(dot.getAttribute('data-slide-to'), 10);
+            if (!isNaN(slideIdx)) {
+              goToHeroSlide(slideIdx);
+              resetHeroAutoplay();
+            }
+          });
+        });
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.onclick = (e) => {
+        e.preventDefault();
+        goToHeroSlide(heroCarouselState.currentIndex - 1);
+        resetHeroAutoplay();
+      };
+    }
+    if (nextBtn) {
+      nextBtn.onclick = (e) => {
+        e.preventDefault();
+        goToHeroSlide(heroCarouselState.currentIndex + 1);
+        resetHeroAutoplay();
+      };
+    }
+
+    if (!heroCarouselState.initialized) {
+      heroCarouselState.initialized = true;
+
+      container.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          goToHeroSlide(heroCarouselState.currentIndex - 1);
+          resetHeroAutoplay();
+        } else if (e.key === 'ArrowRight') {
+          goToHeroSlide(heroCarouselState.currentIndex + 1);
+          resetHeroAutoplay();
+        }
+      });
+
+      container.addEventListener('mouseenter', () => {
+        heroCarouselState.isPaused = true;
+        clearTimeout(heroCarouselState.timer);
+      });
+      container.addEventListener('mouseleave', () => {
+        heroCarouselState.isPaused = false;
+        startHeroAutoplay();
+      });
+
+      container.addEventListener('focusin', () => {
+        heroCarouselState.isPaused = true;
+        clearTimeout(heroCarouselState.timer);
+      });
+      container.addEventListener('focusout', (e) => {
+        if (!container.contains(e.relatedTarget)) {
+          heroCarouselState.isPaused = false;
+          startHeroAutoplay();
+        }
+      });
+
+      container.addEventListener('touchstart', (e) => {
+        if (e.touches && e.touches.length === 1) {
+          heroCarouselState.touchStartX = e.touches[0].clientX;
+        }
+      }, { passive: true });
+
+      container.addEventListener('touchend', (e) => {
+        if (e.changedTouches && e.changedTouches.length === 1) {
+          heroCarouselState.touchEndX = e.changedTouches[0].clientX;
+          const diff = heroCarouselState.touchStartX - heroCarouselState.touchEndX;
+          if (Math.abs(diff) > 40) {
+            if (diff > 0) {
+              goToHeroSlide(heroCarouselState.currentIndex + 1);
+            } else {
+              goToHeroSlide(heroCarouselState.currentIndex - 1);
+            }
+            resetHeroAutoplay();
+          }
+        }
+      }, { passive: true });
+    }
+
+    startHeroAutoplay();
+    updateHeroCarouselTranslations(currentLang);
+  }
+
+  function initHeroCarousel() {
+    const container = document.getElementById('hero-carousel');
+    if (!container) return;
+
+    if (Array.isArray(window.BANNER_MANIFEST) && window.BANNER_MANIFEST.length > 0) {
+      setupHeroCarousel(window.BANNER_MANIFEST);
+      return;
+    }
+
+    fetch('assets/banner/banners.json?t=' + Date.now())
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) {
+          setupHeroCarousel(data);
+        }
+      })
+      .catch(err => {
+        console.warn('[Carousel] Fallback static hero active');
+      });
+  }
+
   // Mobile navigation drawer toggle
   function initNavigation() {
     const toggle = document.getElementById('csa-menu-toggle');
@@ -780,6 +1036,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     initLanguage();
     initNavigation();
+    initHeroCarousel();
     handleHashDeepLinks();
   });
 

@@ -98,68 +98,32 @@ h1, h2, h3, h4, .csa-heading {
 .csa-nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 76px;
-}
-
-/* Brand Logo */
-.csa-brand-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.csa-logo-mark {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
-  display: flex;
-  align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.25);
-  color: #fff;
-  flex-shrink: 0;
-}
-
-.csa-brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.csa-brand-name {
-  font-family: var(--csa-font-heading);
-  font-size: 1.45rem;
-  font-weight: 700;
-  color: #0f172a;
-  line-height: 1.1;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.csa-brand-name .highlight {
-  color: var(--csa-cantiere);
-}
-
-.csa-brand-tagline {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--csa-text-muted);
+  height: 64px;
+  position: relative;
 }
 
 /* Nav Menu Desktop */
 .csa-nav-menu {
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 12px;
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/* Hero Banner Wrapper Alignment */
+.hero-banner {
+  padding: 1rem 0 1.25rem 0;
+  background: linear-gradient(180deg, #FAF7F2 0%, #F5EFE6 100%);
+}
+.hero-banner-wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .csa-nav-item {
@@ -1387,6 +1351,9 @@ body.csa-modal-open {
 }
 
 @media (max-width: 768px) {
+  .csa-nav-container {
+    justify-content: flex-end;
+  }
   .csa-nav-menu {
     display: none;
   }
