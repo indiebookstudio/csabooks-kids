@@ -3,6 +3,50 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/style.css",
+      "destination": "/css/style.css"
+    },
+    {
+      "source": "/style-2.0.css",
+      "destination": "/css/style-2.0.css"
+    },
+    {
+      "source": "/campaign.css",
+      "destination": "/css/campaign.css"
+    },
+    {
+      "source": "/app-2.0.js",
+      "destination": "/js/app-2.0.js"
+    },
+    {
+      "source": "/campaign.js",
+      "destination": "/js/campaign.js"
+    },
+    {
+      "source": "/script.js",
+      "destination": "/js/script.js"
+    },
+    {
+      "source": "/books.js",
+      "destination": "/js/books.js"
+    },
+    {
+      "source": "/characters",
+      "destination": "/cantiere.html"
+    },
+    {
+      "source": "/characters.html",
+      "destination": "/cantiere.html"
+    },
+    {
+      "source": "/fano",
+      "destination": "/colorare.html"
+    },
+    {
+      "source": "/fano.html",
+      "destination": "/colorare.html"
+    },
+    {
       "source": "/accesso/4dcbbaee2e69a278e4e59eab50430ccc",
       "destination": "/accesso/4dcbbaee2e69a278e4e59eab50430ccc/index.html"
     },

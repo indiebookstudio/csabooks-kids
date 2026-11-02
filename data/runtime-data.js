@@ -1,10 +1,10 @@
-// CSA Books Kids 2.0 - Core Runtime Data
+// CSA Books 4 Kids 2.0 - Core Runtime Data
 (function() {
   window.CSA_BOOKS_DATA = {
   "featuredBookIds": [
-    "einstein",
     "csa-vol1",
-    "csa-vol2"
+    "csa-vol2",
+    "einstein"
   ],
   "categories": [
     {
@@ -256,15 +256,15 @@
         "jp": "工事現場の冒険 — コレクション第1巻"
       },
       "subtitle": {
-        "it": "Edizione speciale in grande formato (21,5 × 28 cm) con 4 storie complete.",
-        "en": "Large format edition (21.5 × 28 cm) featuring 4 complete stories.",
-        "de": "Großformat-Ausgabe (21,5 × 28 cm) mit 4 vollständigen Geschichten.",
-        "fr": "Édition grand format (21,5 × 28 cm) contenant 4 histoires complètes.",
-        "es": "Edición especial en gran formato con 4 historias completas.",
-        "nl": "Groot formaat uitgave met 4 complete verhalen.",
-        "pl": "Wydanie w dużym formacie zawierające 4 pełne opowieści.",
-        "se": "Stort format med 4 kompletta berättelser.",
-        "jp": "4つの物語を一冊に収録した大型絵本（21.5 × 28 cm）。"
+        "it": "Raccolta di 4 storie | Avventure illustrate con escavatori, ruspe, gru e camion per bambini dai 2 ai 5 anni",
+        "en": "Collection of 4 stories | Illustrated adventures with excavators, bulldozers, cranes and trucks for children ages 2 to 5",
+        "fr": "Recueil de 4 histoires | Aventures illustrées avec pelleteuses, bulldozers, grues et camions pour enfants de 2 à 5 ans",
+        "de": "Sammlung von 4 Geschichten | Illustrierte Abenteuer mit Baggern, Planierraupen, Kränen und Lastern für Kinder von 2 bis 5 Jahren",
+        "es": "Colección de 4 historias | Aventuras ilustradas con excavadoras, excavadoras, grúas y camiones para niños de 2 a 5 años",
+        "nl": "Verzameling van 4 verhalen | Geïllustreerde avonturen met graafmachines, bulldozers, kranen en vrachtwagens voor kinderen van 2 tot 5 jaar",
+        "pl": "Zbiór 4 opowieści | Ilustrowane przygody z koparkami, spychaczami, dźwigami i ciężarówkami dla dzieci w wieku 2-5 lat",
+        "se": "Samling med 4 berättelser | Illustrerade äventyr med grävmaskiner, schaktmaskiner, kranar och lastbilar för barn 2-5 år",
+        "jp": "4つの物語のコレクション | 2〜5歳向けショベルカー、ブルドーザー、クレーン、トラックの楽しい絵本"
       },
       "storiesIncluded": [
         "Benny l'escavatore e la collina che cambiava forma",
@@ -373,15 +373,15 @@
         "jp": "工事現場の冒険 — コレクション第2巻"
       },
       "subtitle": {
-        "it": "Edizione speciale in grande formato (21,5 × 28 cm) con 4 storie complete.",
-        "en": "Large format edition (21.5 × 28 cm) featuring 4 complete stories.",
-        "de": "Großformat-Ausgabe (21,5 × 28 cm) mit 4 vollständigen Geschichten.",
-        "fr": "Édition grand format (21,5 × 28 cm) contenant 4 histoires complètes.",
-        "es": "Edición especial en gran formato con 4 historias completas.",
-        "nl": "Groot formaat uitgave met 4 complete verhalen.",
-        "pl": "Wydanie w dużym formacie zawierające 4 pełne opowieści.",
-        "se": "Stort format med 4 kompletta berättelser.",
-        "jp": "4つの物語を一冊に収録した大型絵本第2弾（21.5 × 28 cm）。"
+        "it": "Raccolta di 4 storie: Avventure illustrate con escavatore, rullo compressore, betoniera e gru per bambini dai 2 ai 5 anni",
+        "en": "Collection of 4 stories: Illustrated adventures with excavator, steamroller, cement mixer and crane for children ages 2 to 5",
+        "fr": "Recueil de 4 histoires: Aventures illustrées avec pelleteuse, rouleau compresseur, bétonnière et grue pour enfants de 2 à 5 ans",
+        "de": "Sammlung von 4 Geschichten: Illustrierte Abenteuer mit Bagger, Walze, Betonmischer und Kran für Kinder von 2 bis 5 Jahren",
+        "es": "Colección de 4 historias: Aventuras ilustradas con excavadora, apisonadora, hormigonera y grúa para niños de 2 a 5 años",
+        "nl": "Verzameling van 4 verhalen: Geïllustreerde avonturen met graafmachine, wals, betonmolen en kraan voor kinderen van 2 tot 5 jaar",
+        "pl": "Zbiór 4 opowieści: Ilustrowane przygody z koparką, walcem, betoniarką i dźwigiem dla dzieci w wieku 2-5 lat",
+        "se": "Samling med 4 berättelser: Illustrerade äventyr med grävmaskin, vält, betongbil och kran för barn 2-5 år",
+        "jp": "4つの物語のコレクション：2〜5歳向けショベルカー、ロードローラー、ミキサー車、クレーンの楽しい絵本"
       },
       "storiesIncluded": [
         "Benny l'escavatore e le monete dell'antica Roma",
@@ -490,15 +490,15 @@
         "jp": "ファーノを見上げて — お絵かき＆アクティビティブック"
       },
       "subtitle": {
-        "it": "Oltre 40 disegni, giochi e attività creative per scoprire la città di Vitruvio divertendosi.",
-        "en": "Over 40 drawings, puzzles, and creative activities discovering the historic city of Vitruvius.",
-        "de": "Über 40 Malvorlagen, Rätsel und kreative Spiele zur Stadt des Vitruv.",
-        "fr": "Plus de 40 dessins, jeux et énigmes pour explorer la cité romaine de Vitruve.",
-        "es": "Más de 40 láminas para colorear, acertijos y juegos creativos.",
-        "nl": "Meer dan 40 kleurplaten, spellen en activiteiten.",
-        "pl": "Ponad 40 rysunków, łamigłówek i zabaw rozwijających kreatywność.",
-        "se": "Över 40 teckningar, pyssel och gåtor.",
-        "jp": "40枚以上のぬりえとパズルで歴史ある街を楽しく探検。"
+        "it": "La città di Vitruvio da scoprire e colorare | Libro da colorare con oltre 40 disegni, giochi e attività creative per bambini 5-10 anni",
+        "en": "The city of Vitruvius to discover and color | Coloring book with over 40 drawings, games and creative activities for children ages 5-10",
+        "fr": "La cité de Vitruve à découvrir et colorier | Livre de coloriage avec plus de 40 dessins, jeux et activités pour enfants de 5 à 10 ans",
+        "de": "Die Stadt des Vitruv entdecken und ausmalen | Malbuch mit über 40 Zeichnungen, Spielen und Aktivitäten für Kinder von 5 bis 10 Jahren",
+        "es": "La ciudad de Vitruvio para descubrir y colorear | Libro para colorear con más de 40 dibujos, juegos y actividades para niños de 5 a 10 años",
+        "nl": "De stad van Vitruvius ontdekken en kleuren | Kleurboek met meer dan 40 tekeningen, spelletjes en creatieve activiteiten voor kinderen van 5-10 jaar",
+        "pl": "Odkryj i pokoloruj miasto Witruwiusza | Kolorowanka z ponad 40 rysunkami, grami i kreatywnymi zadaniami dla dzieci w wieku 5-10 lat",
+        "se": "Upptäck och färglägg Vitruvius stad | Målarbok med över 40 teckningar, lekar och kreativa aktiviteter för barn 5-10 år",
+        "jp": "ウィトルウィウスの街を発見してぬりえを楽しもう | 5〜10歳向け40以上の絵、ゲーム、迷路が詰まったアクティビティブック"
       },
       "pitch": {
         "it": "Un libro da colorare e di attività che porta i bambini (e tutta la famiglia!) alla scoperta delle meraviglie storiche, dei monumenti romani e delle tradizioni di Fano, la città dell'Arco d'Augusto e di Vitruvio. Oltre quaranta tavole originali, curiosità e giochi educativi.",
@@ -702,15 +702,15 @@
         "jp": "ショベルカーのベニーとふしぎな丘"
       },
       "subtitle": {
-        "it": "Volume 1 delle Avventure del Cantiere",
-        "en": "Volume 1 of Construction Site Adventures",
-        "fr": "Tome 1 des Aventures du Chantier",
-        "de": "Band 1 der Baustellen-Abenteuer",
-        "es": "Volumen 1 de Las Aventuras de la Construcción",
-        "nl": "Deel 1 van Bouwplaats Avonturen",
-        "pl": "Tom 1 Przygód na Placu Budowy",
-        "se": "Del 1 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第1巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Benny è un escavatore giallo pieno di entusiasmo. Quando una collina inizia a muoversi in modo misterioso, scoprirà che con un po' di ingegno e tanta gentilezza ogni ostacolo può trasformarsi in una bella sorpresa.",
@@ -797,15 +797,15 @@
         "jp": "ブルドーザーのルディと消えた砂浜"
       },
       "subtitle": {
-        "it": "Volume 2 delle Avventure del Cantiere",
-        "en": "Volume 2 of Construction Site Adventures",
-        "fr": "Tome 2 des Aventures du Chantier",
-        "de": "Band 2 der Baustellen-Abenteuer",
-        "es": "Volumen 2 de Las Aventuras de la Construcción",
-        "nl": "Deel 2 van Bouwplaats Avonturen",
-        "pl": "Tom 2 Przygód na Placu Budowy",
-        "se": "Del 2 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第2巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Rudy è una ruspa coraggiosa. In riva al mare, tra maree e onde birichine, capirà insieme ai suoi amici l'importanza di rispettare le forze della natura.",
@@ -882,15 +882,15 @@
         "jp": "クレーン車のレオと山のほうせき"
       },
       "subtitle": {
-        "it": "Volume 3 delle Avventure del Cantiere",
-        "en": "Volume 3 of Construction Site Adventures",
-        "fr": "Tome 3 des Aventures du Chantier",
-        "de": "Band 3 der Baustellen-Abenteuer",
-        "es": "Volumen 3 de Las Aventuras de la Construcción",
-        "nl": "Deel 3 van Bouwplaats Avonturen",
-        "pl": "Tom 3 Przygód na Placu Budowy",
-        "se": "Del 3 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第3巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Leo è la gru più alta e gentile del cantiere. Su una parete di roccia scopre cristalli splendenti, ma capirà che il vero tesoro è la prudenza e l'amicizia.",
@@ -967,15 +967,15 @@
         "jp": "ダンプカーのブルーノとカモのいけ"
       },
       "subtitle": {
-        "it": "Volume 4 delle Avventure del Cantiere",
-        "en": "Volume 4 of Construction Site Adventures",
-        "fr": "Tome 4 des Aventures du Chantier",
-        "de": "Band 4 der Baustellen-Abenteuer",
-        "es": "Volumen 4 de Las Aventuras de la Construcción",
-        "nl": "Deel 4 van Bouwplaats Avonturen",
-        "pl": "Tom 4 Przygód na Placu Budowy",
-        "se": "Del 4 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第4巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Bruno è un camion forte e robusto, ma dal cuore tenerissimo. Quando una famigliola di anatroccoli rischia di perdere il suo laghetto, Bruno fa di tutto per proteggerli.",
@@ -1044,15 +1044,15 @@
         "jp": "ショベルカーのベニーと古代ローマのコイン"
       },
       "subtitle": {
-        "it": "Volume 5 delle Avventure del Cantiere",
-        "en": "Volume 5 of Construction Site Adventures",
-        "fr": "Tome 5 des Aventures du Chantier",
-        "de": "Band 5 der Baustellen-Abenteuer",
-        "es": "Volumen 5 de Las Aventuras de la Construcción",
-        "nl": "Deel 5 van Bouwplaats Avonturen",
-        "pl": "Tom 5 Przygód na Placu Budowy",
-        "se": "Del 5 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第5巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Scavando nel terreno con la sua benna, Benny urta un vecchio vaso di terracotta colmo di monete imperiali. Una scoperta che trasformerà il cantiere in uno scavo archeologico indimenticabile.",
@@ -1121,15 +1121,15 @@
         "jp": "ミキサー車のニーナとうさぎのはし"
       },
       "subtitle": {
-        "it": "Volume 6 delle Avventure del Cantiere",
-        "en": "Volume 6 of Construction Site Adventures",
-        "fr": "Tome 6 des Aventures du Chantier",
-        "de": "Band 6 der Baustellen-Abenteuer",
-        "es": "Volumen 6 de Las Aventuras de la Construcción",
-        "nl": "Deel 6 van Bouwplaats Avonturen",
-        "pl": "Tom 6 Przygód na Placu Budowy",
-        "se": "Del 6 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第6巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Nina è una betoniera allegra con una botte scintillante. Quando un ruscello in piena isola una colonia di teneri coniglietti, Nina prepara il calcestruzzo perfetto per costruire un ponte sicuro.",
@@ -1198,15 +1198,15 @@
         "jp": "ロードローラーのリノとどろぼうたち"
       },
       "subtitle": {
-        "it": "Volume 7 delle Avventure del Cantiere",
-        "en": "Volume 7 of Construction Site Adventures",
-        "fr": "Tome 7 des Aventures du Chantier",
-        "de": "Band 7 der Baustellen-Abenteuer",
-        "es": "Volumen 7 de Las Aventuras de la Construcción",
-        "nl": "Deel 7 van Bouwplaats Avonturen",
-        "pl": "Tom 7 Przygód na Placu Budowy",
-        "se": "Del 7 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第7巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Rino è un rullo compressore pesante e tranquillo. Di notte, quando due malintenzionati tentano di sottrarre attrezzi preziosi, Rino interviene con astuzia e calma per sventare il colpo.",
@@ -1275,15 +1275,15 @@
         "jp": "クレーン車のレオとシジュウカラの巣"
       },
       "subtitle": {
-        "it": "Volume 8 delle Avventure del Cantiere",
-        "en": "Volume 8 of Construction Site Adventures",
-        "fr": "Tome 8 des Aventures du Chantier",
-        "de": "Band 8 der Baustellen-Abenteuer",
-        "es": "Volumen 8 de Las Aventuras de la Construcción",
-        "nl": "Deel 8 van Bouwplaats Avonturen",
-        "pl": "Tom 8 Przygód na Placu Budowy",
-        "se": "Del 8 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第8巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Tra i rami di un albero vicino all'area di scavo, una piccola cinciallegra ha deposto le sue uova. Leo la gru e i suoi compagni fermano i motori e proteggono il nido fino alla schiusa.",
@@ -1352,15 +1352,15 @@
         "jp": "クレーンのレオとブルドーザーのルディ サバンナ大作戦"
       },
       "subtitle": {
-        "it": "Volume 9 delle Avventure del Cantiere",
-        "en": "Volume 9 of Construction Site Adventures",
-        "fr": "Tome 9 des Aventures du Chantier",
-        "de": "Band 9 der Baustellen-Abenteuer",
-        "es": "Volumen 9 de Las Aventuras de la Construcción",
-        "nl": "Deel 9 van Bouwplaats Avonturen",
-        "pl": "Tom 9 Przygód na Placu Budowy",
-        "se": "Del 9 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第9巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Una trasferta straordinaria lontano dal cantiere di città! Leo la gru e Rudy la ruspa partono per una grande avventura nella savana africana, tra giraffe curiose, elefanti da aiutare e sfide emozionanti sotto il sole.",
@@ -1777,49 +1777,104 @@
       "cover": "books/einstein/en/cover.png",
       "back": "books/einstein/en/back.png",
       "interiors": [
-        "books/einstein/en/interiors/06.png",
-        "books/einstein/en/interiors/07.png",
-        "books/einstein/en/interiors/08.png",
-        "books/einstein/en/interiors/09.png",
-        "books/einstein/en/interiors/10.png"
+        "books/einstein/en/interiors/2.png",
+        "books/einstein/en/interiors/8.png",
+        "books/einstein/en/interiors/9.png",
+        "books/einstein/en/interiors/11.png",
+        "books/einstein/en/interiors/12.png",
+        "books/einstein/en/interiors/14.png",
+        "books/einstein/en/interiors/15.png",
+        "books/einstein/en/interiors/16.png",
+        "books/einstein/en/interiors/23.png",
+        "books/einstein/en/interiors/24.png",
+        "books/einstein/en/interiors/32.png",
+        "books/einstein/en/interiors/37.png",
+        "books/einstein/en/interiors/38.png",
+        "books/einstein/en/interiors/46.png",
+        "books/einstein/en/interiors/49.png",
+        "books/einstein/en/interiors/50.png",
+        "books/einstein/en/interiors/84.png",
+        "books/einstein/en/interiors/89.png",
+        "books/einstein/en/interiors/90.png",
+        "books/einstein/en/interiors/106.png",
+        "books/einstein/en/interiors/111.png",
+        "books/einstein/en/interiors/112.png",
+        "books/einstein/en/interiors/118.png",
+        "books/einstein/en/interiors/135.png",
+        "books/einstein/en/interiors/136.png"
       ],
-      "pageCount": 7
+      "pageCount": 27
     },
     "es": {
       "cover": "books/einstein/es/cover.png",
       "back": null,
-      "interiors": [
-        "books/einstein/es/interiors/06.png",
-        "books/einstein/es/interiors/07.png",
-        "books/einstein/es/interiors/08.png",
-        "books/einstein/es/interiors/09.png",
-        "books/einstein/es/interiors/10.png"
-      ],
-      "pageCount": 6
+      "interiors": [],
+      "pageCount": 1
     },
     "fr": {
       "cover": "books/einstein/fr/cover.png",
       "back": "books/einstein/fr/back.png",
       "interiors": [
-        "books/einstein/fr/interiors/06.png",
-        "books/einstein/fr/interiors/07.png",
-        "books/einstein/fr/interiors/08.png",
-        "books/einstein/fr/interiors/09.png",
-        "books/einstein/fr/interiors/10.png"
+        "books/einstein/fr/interiors/2.png",
+        "books/einstein/fr/interiors/8.png",
+        "books/einstein/fr/interiors/9.png",
+        "books/einstein/fr/interiors/11.png",
+        "books/einstein/fr/interiors/12.png",
+        "books/einstein/fr/interiors/14.png",
+        "books/einstein/fr/interiors/21.png",
+        "books/einstein/fr/interiors/22.png",
+        "books/einstein/fr/interiors/27.png",
+        "books/einstein/fr/interiors/28.png",
+        "books/einstein/fr/interiors/32.png",
+        "books/einstein/fr/interiors/51.png",
+        "books/einstein/fr/interiors/52.png",
+        "books/einstein/fr/interiors/60.png",
+        "books/einstein/fr/interiors/65.png",
+        "books/einstein/fr/interiors/66.png",
+        "books/einstein/fr/interiors/84.png",
+        "books/einstein/fr/interiors/87.png",
+        "books/einstein/fr/interiors/88.png",
+        "books/einstein/fr/interiors/106.png",
+        "books/einstein/fr/interiors/115.png",
+        "books/einstein/fr/interiors/116.png",
+        "books/einstein/fr/interiors/118.png",
+        "books/einstein/fr/interiors/129.png",
+        "books/einstein/fr/interiors/130.png"
       ],
-      "pageCount": 7
+      "pageCount": 27
     },
     "it": {
       "cover": "books/einstein/it/cover.png",
       "back": "books/einstein/it/back.png",
       "interiors": [
-        "books/einstein/it/interiors/06.png",
-        "books/einstein/it/interiors/07.png",
-        "books/einstein/it/interiors/08.png",
-        "books/einstein/it/interiors/09.png",
-        "books/einstein/it/interiors/10.png"
+        "books/einstein/it/interiors/8.png",
+        "books/einstein/it/interiors/9.png",
+        "books/einstein/it/interiors/10.png",
+        "books/einstein/it/interiors/11.png",
+        "books/einstein/it/interiors/12.png",
+        "books/einstein/it/interiors/14.png",
+        "books/einstein/it/interiors/15.png",
+        "books/einstein/it/interiors/16.png",
+        "books/einstein/it/interiors/32.png",
+        "books/einstein/it/interiors/33.png",
+        "books/einstein/it/interiors/34.png",
+        "books/einstein/it/interiors/46.png",
+        "books/einstein/it/interiors/47.png",
+        "books/einstein/it/interiors/48.png",
+        "books/einstein/it/interiors/60.png",
+        "books/einstein/it/interiors/61.png",
+        "books/einstein/it/interiors/62.png",
+        "books/einstein/it/interiors/84.png",
+        "books/einstein/it/interiors/85.png",
+        "books/einstein/it/interiors/86.png",
+        "books/einstein/it/interiors/106.png",
+        "books/einstein/it/interiors/107.png",
+        "books/einstein/it/interiors/108.png",
+        "books/einstein/it/interiors/118.png",
+        "books/einstein/it/interiors/119.png",
+        "books/einstein/it/interiors/120.png"
       ],
-      "pageCount": 7
+      "pageCount": 28
     }
   },
   "fano": {
@@ -1860,7 +1915,8 @@
       "colorare": "Da colorare",
       "about": "Chi siamo",
       "menuToggle": "Menu principale",
-      "closeMenu": "Chiudi menu"
+      "closeMenu": "Chiudi menu",
+      "reviews": "Cosa dicono i genitori"
     },
     "hero": {
       "badge": "Marchio Editoriale per Bambini",
@@ -1873,8 +1929,21 @@
       "eyebrow": "I Nostri Mondi",
       "title": "Esplora i nostri mondi",
       "subtitle": "Quattro aree editoriali per nutrire l'immaginazione, il pensiero scientifico e la creatività di ogni età.",
-      "exploreBtn": "Esplora la collana",
-      "comingSoonBadge": "In preparazione"
+      "exploreBtn": "Scopri i libri",
+      "comingSoonBadge": "In preparazione",
+      "cantiereTitle": "Le Avventure del Cantiere",
+      "cantiereDesc": "Benny, Rudy, Leo, Bruno, Nina e Rino. Raccolte speciali, storie illustrate in rima, amicizia e grandi macchine.",
+      "cantiereAlt": "Le Avventure del Cantiere: Benny l'escavatore, Rudy la ruspa e Nina la betoniera",
+      "scienzaTitle": "Scienza e curiosità",
+      "scienzaDesc": "Einstein, dinosauri, spazio e grandi misteri della natura documentati su fonti storiche e scientifiche reali.",
+      "scienzaAlt": "Scienza e curiosità: la mascotte Otto con telescopio e pianeti",
+      "scuolaTitle": "Per la scuola",
+      "scuolaDesc": "La Bussola Misteriosa: giochi logici, matematica per la primaria e strumenti didattici per allenare la mente.",
+      "scuolaAlt": "Per la scuola: Mira, Leo e Peperino con la bussola misteriosa",
+      "creativitaTitle": "Da colorare e creare",
+      "creativitaDesc": "Album attivi e creativi con illustrazioni d'autore da colorare, giochi, labirinti e curiosità culturali.",
+      "creativitaAlt": "Da colorare e creare: bambini che disegnano e colorano la piazza storica",
+      "discoverProject": "Scopri i libri"
     },
     "featured": {
       "eyebrow": "Titoli in Evidenza",
@@ -1900,15 +1969,16 @@
       "viewBooks": "Vedi i libri"
     },
     "brand": {
-      "eyebrow": "CSA Books Kids",
+      "eyebrow": "CSA Books 4 Kids",
       "title": "Storie nate dal cuore di una famiglia",
-      "text1": "CSA Books Kids nasce dal desiderio di creare libri illustrati speciali: opere pensate per accendere la meraviglia, stimolare l'ingegno e offrire momenti preziosi di lettura condivisa.",
+      "text1": "CSA Books 4 Kids nasce dal desiderio di creare libri illustrati speciali: opere pensate per accendere la meraviglia, stimolare l'ingegno e offrire momenti preziosi di lettura condivisa.",
       "text2": "Dalle avventure dei mezzi da cantiere per i più piccoli alla divulgazione scientifica di frontiera, ogni nostro libro è curato nei minimi dettagli per qualità narrativa, bellezza visiva e rispetto del bambino.",
-      "ctaAbout": "Scopri la nostra storia"
+      "ctaAbout": "Scopri la nostra storia",
+      "authorsRole": "Gli autori di CSA Books 4 Kids"
     },
     "catalog": {
       "eyebrow": "Catalogo Completo",
-      "title": "Tutti i libri CSA Books Kids",
+      "title": "Tutti i libri CSA Books 4 Kids",
       "subtitle": "Sfoglia l'intero catalogo editoriale, filtra per categoria ed esplora le edizioni disponibili.",
       "filterCategory": "Categoria",
       "filterAge": "Età consigliata",
@@ -1947,7 +2017,7 @@
       "eyebrow": "Chi Siamo",
       "title": "Passione editoriale, storie vere e amore per la conoscenza",
       "subtitle": "Un marchio editoriale indipendente nato dall'ispirazione familiare e dalla dedizione per la crescita dei bambini.",
-      "intro": "Dietro ogni libro di CSA Books Kids c'è una passione autentica: quella di genitori ed educatori desiderosi di offrire letture coinvolgenti, ricche di valore, illustrate con maestria e capaci di accompagnare i bambini alla scoperta del mondo.",
+      "intro": "Dietro ogni libro di CSA Books 4 Kids c'è una passione autentica: quella di genitori ed educatori desiderosi di offrire letture coinvolgenti, ricche di valore, illustrate con maestria e capaci di accompagnare i bambini alla scoperta del mondo.",
       "marcoTitle": "Marco Salucci",
       "marcoRole": "Autore de «Le Avventure del Cantiere» e «Fano col naso all'insù»",
       "marcoBio": "Autore e ideatore della collana 'Le Avventure del Cantiere', Marco ha trasformato la passione reale di suo figlio per escavatori, ruspe e camion in una serie internazionale di storie in rima amate da migliaia di famiglie. Con 'Fano col naso all'insù' ha unito l'arte dell'illustrazione alla riscoperta delle radici storiche e architettoniche della sua terra.",
@@ -1961,17 +2031,30 @@
       "val2Desc": "Disegni e impaginazione studiati per emozionare, facilitare la comprensione visiva e favorire la concentrazione.",
       "val3Title": "Valori Positivi",
       "val3Desc": "Empatia, collaborazione, rispetto per l'ambiente e amore per la scoperta al centro di ogni pubblicazione.",
-      "galleryTitle": "Dalla passione reale alle pagine dei libri"
+      "galleryTitle": "Dalla passione reale alle pagine dei libri",
+      "roleAuthorCreator": "Autore & Creatore",
+      "roleAuthorScience": "Autrice & Divulgatrice",
+      "originsTitle": "La nascita delle storie",
+      "originsSubtitle": "Fotografie autentiche delle origini: pomeriggi trascorsi insieme a osservare i cantieri e momenti preziosi di lettura condivisa.",
+      "cantiereBooksBtn": "I Libri del Cantiere",
+      "fanoBookBtn": "Fano col naso all'insù",
+      "scienceBooksBtn": "I Libri di Scienza",
+      "schoolBooksBtn": "Per la scuola"
     },
     "footer": {
-      "brandPitch": "CSA Books Kids è un marchio editoriale indipendente per bambini: storie illustrate, divulgazione scientifica, apprendimento e creatività.",
+      "brandPitch": "CSA Books 4 Kids è un marchio editoriale indipendente per bambini: storie illustrate, divulgazione scientifica, apprendimento e creatività.",
       "navTitle": "Esplora",
       "legalTitle": "Informazioni",
       "contactsTitle": "Contatti",
-      "rights": "© 2026 CSA Books Kids. Tutti i diritti riservati.",
+      "rights": "© 2026 CSA Books 4 Kids. Tutti i diritti riservati.",
       "privacy": "Privacy Policy",
       "terms": "Note legali",
-      "permanentQr": "Contenuti QR Code stampati nei libri"
+      "permanentQr": "Contenuti QR Code stampati nei libri",
+      "amazonDisclaimer": "Acquisti ufficiali garantiti in esclusiva su Amazon in edizione paperback.",
+      "cantierePitch": "Le Avventure del Cantiere di Marco Salucci.",
+      "scienzaPitch": "Collana Scienza e curiosità di Clara Musicco.",
+      "colorarePitch": "Collana da colorare e creare di Marco Salucci.",
+      "scuolaPitch": "Area didattica e apprendimento di CSA Books 4 Kids."
     },
     "common": {
       "loading": "Caricamento in corso…",
@@ -1981,7 +2064,99 @@
       "notFoundText": "La pagina richiesta non esiste o è stata spostata.",
       "backHome": "Torna alla Homepage",
       "externalLink": "Apre il prodotto su Amazon in una nuova scheda",
-      "langSelector": "Lingua del sito"
+      "langSelector": "Lingua del sito",
+      "redirecting": "Reindirizzamento in corso...",
+      "redirectingDesc": "Stiamo aprendo la pagina del tuo libro. Se non vieni reindirizzato automaticamente entro pochi secondi, clicca sul pulsante qui sotto."
+    },
+    "reviews": {
+      "title": "Cosa dicono i genitori",
+      "subtitle": "Recensioni autentiche da Amazon sui libri de Le Avventure del Cantiere",
+      "badge": "Recensioni Verificate",
+      "ratingLabel": "Valutazione: ",
+      "amazonSource": "Recensione Amazon",
+      "prevAria": "Recensioni precedenti",
+      "nextAria": "Recensioni successive"
+    },
+    "cantierePage": {
+      "badge": "Franchise Originale · 2–5 anni",
+      "heroTitle": "Le Avventure del Cantiere",
+      "heroSubtitle": "La celebre serie illustrata di Marco Salucci: storie in rima, grandi macchine e indimenticabili lezioni di amicizia, cooperazione e rispetto della natura.",
+      "ctaRaccolte": "Scopri le Raccolte Vol. 1 e 2",
+      "ctaCharacters": "I Personaggi",
+      "raccolteTitle": "Quattro storie complete in ogni volume",
+      "raccolteSubtitle": "Edizioni speciali in grande formato (21,5 × 28 cm) con testi in rima, copertina flessibile di pregio e codici QR con contenuti multimediali in regalo.",
+      "episodesTitle": "Tutti i 9 Episodi Singoli",
+      "episodesSubtitle": "Tutte le 9 singole storie illustrate in rima per bambini 2–5 anni. Include l'attesissima missione di Leo e Rudy nella Savana!",
+      "charactersTitle": "Incontra i protagonisti",
+      "charactersSubtitle": "Ciascun veicolo ha un carattere unico e positivo con cui i bambini si identificano subito.",
+      "bennyTitle": "Benny l'escavatore",
+      "bennyDesc": "Entusiasta, instancabile scavatore e grande amico pronto ad aiutare tutti.",
+      "rudyTitle": "Rudy la ruspa",
+      "rudyDesc": "Forte e veloce, sposta montagne di sabbia e sassi con gioia contagiosa.",
+      "leoTitle": "Leo la gru",
+      "leoDesc": "Gentile e altissimo, osserva dall'alto e protegge con cura i nidi del cantiere.",
+      "brunoTitle": "Bruno il camion",
+      "brunoDesc": "Robusto trasportatore dal cuore tenero, difensore degli anatroccoli.",
+      "ninaTitle": "Nina la betoniera",
+      "ninaDesc": "Ingegnosa e determinata, impasta il calcestruzzo perfetto per costruire ponti sicuri.",
+      "rinoTitle": "Rino il rullo",
+      "rinoDesc": "Calmo e ponderato, spiana il terreno e protegge la squadra durante la notte.",
+      "mediaTitle": "Ascolta e guarda le storie ovunque",
+      "watchYouTube": "Guarda su YouTube",
+      "vol1Title": "Le Avventure del Cantiere — Raccolta Vol. 1",
+      "vol1Pitch": "Comprende 4 storie: Benny l'escavatore, Rudy la ruspa, Leo la gru e Bruno il camion. QR code con video-lettura e disegni da colorare.",
+      "vol2Title": "Le Avventure del Cantiere — Raccolta Vol. 2",
+      "vol2Pitch": "Comprende 4 storie: Benny e le monete romane, Nina la betoniera, Rino il rullo e Leo e la cinciallegra. QR code con bonus esclusivi.",
+      "ctaEpisodes": "Tutti gli episodi singoli"
+    },
+    "scienzaPage": {
+      "badge": "Divulgazione Scientifica · 7–12 anni",
+      "heroTitle": "Einstein, questa te la sei persa!",
+      "heroSubtitle": "Di Clara Musicco. 55 avventure nella scienza di oggi | 55 scoperte vere! Dinosauri piumati, buchi neri, robot, animali sorprendenti e il segreto del portale interattivo della mascotte Otto.",
+      "featuresTitle": "Cosa rende unico questo libro",
+      "featuresSubtitle": "Un'opera che unisce una narrazione vivace con l'affidabilità delle grandi riviste e università scientifiche mondiali.",
+      "feat1Title": "55 Scoperte Verificate",
+      "feat1Desc": "Dalle onde gravitazionali al telescopio James Webb, dai dinosauri piumati all'intelligenza animale: storie vere con codici di riferimento alle fonti storiche (SC-01 fino a SC-55).",
+      "feat2Title": "La Mascotte Otto",
+      "feat2Desc": "Un polpo curioso e ironico con tre cuori e nove cervelli che accompagna i lettori, ponendo domande intelligenti e spiegando concetti complessi in modo limpido e coinvolgente.",
+      "feat3Title": "Portale Segreto Esclusivo",
+      "feat3Desc": "Il QR code stampato nel libro apre un mondo multimediale con 7 simulazioni 3D, videoteca, un museo virtuale con passaporto da completare e carte stampabili da ritagliare.",
+      "secretOttoTitle": "Il mondo segreto di Otto",
+      "secretOttoDesc": "Il libro è finito. Le scoperte no! Attraverso il portale multimediale accessibile via QR code, i lettori possono esplorare il Museo delle Scoperte Impossibili, cimentarsi in simulazioni fisiche 3D e scaricare giochi da fare in famiglia.",
+      "qrExclusive": "🔒 Accessibile tramite QR Code esclusivo stampato nel libro",
+      "lookInsideSample": "Sfoglia l'anteprima interna"
+    },
+    "colorarePage": {
+      "badge": "Creatività e Colore · 5–10 anni",
+      "heroTitle": "Fano col naso all'insù",
+      "heroSubtitle": "Di Marco Salucci. Il libro illustrato da colorare con oltre 40 tavole originali, giochi, labirinti e curiosità storiche alla scoperta della città antica di Vitruvio e dell'Arco d'Augusto.",
+      "featuresTitle": "Colorare, scoprire, imparare",
+      "featuresSubtitle": "Un album di grande formato pensato per unire il relax del disegno con il valore culturale della scoperta.",
+      "feat1Title": "Oltre 40 Tavole",
+      "feat1Desc": "Disegni curati a mano libera pronti per essere personalizzati con matite, pennarelli o pastelli su carta spessa e resistente.",
+      "feat2Title": "Storia e Monumenti",
+      "feat2Desc": "L'Arco d'Augusto, la Basilica di Vitruvio, il Carnevale e il porto storico raccontati con aneddoti curiosi per i bambini.",
+      "feat3Title": "Giochi e Attività",
+      "feat3Desc": "Labirinti, indovinelli, cerca le differenze e sfide visive per stimolare la concentrazione e la motricità fine."
+    },
+    "scuolaPage": {
+      "badge": "Nuova Collana Didattica · In Preparazione",
+      "heroTitle": "Per la scuola",
+      "heroSubtitle": "Materiali di apprendimento, esercizi e sfide logiche per consolidare le competenze scolastiche dei bambini con entusiasmo, chiarezza e metodo.",
+      "compassTitle": "La Bussola Misteriosa",
+      "compassSubtitle": "In arrivo per il nuovo anno scolastico",
+      "projectDesc": "Un progetto didattico firmato da Clara Musicco per trasformare le materie scolastiche in un'avventura da vivere e comprendere.",
+      "subjectMath": "Materia: Matematica",
+      "grade2": "Classe: 2ª Primaria",
+      "age78": "Età: 7–8 anni",
+      "authorClara": "Autrice: Clara Musicco",
+      "bookMath2Title": "La Bussola Misteriosa — Matematica 2ª Primaria",
+      "bookMath2Desc": "Il volume dedicato alla seconda elementare affronta i numeri fino al centinaio, il calcolo a mente, i primi problemi illustrati e l'orientamento spaziale attraverso una trama a enigmi che stimola la motivazione dei bambini senza generare ansia da prestazione.",
+      "whatInside": "Cosa troveranno i bambini:",
+      "featExercises": "Esercizi progressivi",
+      "featVisual": "Approccio visuale",
+      "featSolutions": "Soluzioni guidate",
+      "statusInWork": "In lavorazione — Disponibile a breve su Amazon"
     }
   },
   "en": {
@@ -1994,7 +2169,8 @@
       "colorare": "Color & Create",
       "about": "About Us",
       "menuToggle": "Main Menu",
-      "closeMenu": "Close menu"
+      "closeMenu": "Close menu",
+      "reviews": "What Parents Say"
     },
     "hero": {
       "badge": "Children's Book Publisher",
@@ -2007,8 +2183,21 @@
       "eyebrow": "Our Worlds",
       "title": "Explore our book collections",
       "subtitle": "Four distinct worlds designed to nurture imagination, scientific curiosity, and creativity.",
-      "exploreBtn": "Explore collection",
-      "comingSoonBadge": "Coming Soon"
+      "exploreBtn": "Discover the books",
+      "comingSoonBadge": "Coming Soon",
+      "cantiereTitle": "Construction Site Adventures",
+      "cantiereDesc": "Benny, Rudy, Leo, Bruno, Nina and Rino. Rhyming illustrated stories of big machines, teamwork and friendship.",
+      "cantiereAlt": "Construction Site Adventures: Benny the excavator, Rudy the bulldozer and Nina the mixer",
+      "scienzaTitle": "Science & Curiosity",
+      "scienzaDesc": "Einstein, dinosaurs, deep space and wonders of nature verified with real scientific and historical research.",
+      "scienzaAlt": "Science and Curiosity: mascot Otto the octopus with telescope and stars",
+      "scuolaTitle": "For School & Learning",
+      "scuolaDesc": "The Mysterious Compass: logic games, primary math, and engaging learning tools to sharpen young minds.",
+      "scuolaAlt": "For School: Mira, Leo and Peperino with the mysterious compass",
+      "creativitaTitle": "Coloring & Creativity",
+      "creativitaDesc": "Active coloring books featuring original hand-drawn artwork, puzzles, mazes and cultural trivia.",
+      "creativitaAlt": "Coloring and Creativity: children drawing and coloring the historic town square",
+      "discoverProject": "Discover the books"
     },
     "featured": {
       "eyebrow": "Featured Books",
@@ -2034,15 +2223,16 @@
       "viewBooks": "Browse books"
     },
     "brand": {
-      "eyebrow": "CSA Books Kids",
+      "eyebrow": "CSA Books 4 Kids",
       "title": "Stories born from the heart of a family",
-      "text1": "CSA Books Kids was born from a family's passion to create picture books that spark wonder, encourage problem-solving, and provide meaningful shared reading moments.",
+      "text1": "CSA Books 4 Kids was born from a family's passion to create picture books that spark wonder, encourage problem-solving, and provide meaningful shared reading moments.",
       "text2": "From construction machine adventures for toddlers to cutting-edge science exploration for older kids, every book is crafted with narrative care, artistic vibrancy, and deep respect for children.",
-      "ctaAbout": "Discover our story"
+      "ctaAbout": "Discover our story",
+      "authorsRole": "The authors of CSA Books 4 Kids"
     },
     "catalog": {
       "eyebrow": "Complete Catalog",
-      "title": "All CSA Books Kids Titles",
+      "title": "All CSA Books 4 Kids Titles",
       "subtitle": "Browse our entire publishing catalog, filter by category or age, and explore language editions.",
       "filterCategory": "Category",
       "filterAge": "Target Age",
@@ -2081,7 +2271,7 @@
       "eyebrow": "About Us",
       "title": "Publishing passion, authentic stories, and a love for learning",
       "subtitle": "An independent publishing house inspired by family life and dedicated to children's growth.",
-      "intro": "Behind every CSA Books Kids title is a heartfelt journey: parents and educators committed to delivering captivating, value-packed, beautifully illustrated books that guide young minds to explore the world.",
+      "intro": "Behind every CSA Books 4 Kids title is a heartfelt journey: parents and educators committed to delivering captivating, value-packed, beautifully illustrated books that guide young minds to explore the world.",
       "marcoTitle": "Marco Salucci",
       "marcoRole": "Author of «Construction Site Adventures» and «Fano Looking Up»",
       "marcoBio": "Creator of the original Construction Site Adventures franchise, Marco turned his son's genuine fascination with diggers, bulldozers, and cranes into an international picture book series cherished by thousands of families. With 'Fano Looking Up', he blended coloring artistry with the historical roots of his home city.",
@@ -2095,17 +2285,30 @@
       "val2Desc": "Illustrations and typography carefully designed to delight, aid visual comprehension, and focus attention.",
       "val3Title": "Positive Values",
       "val3Desc": "Empathy, teamwork, environmental respect, and joy of discovery at the center of every book.",
-      "galleryTitle": "From real-life inspiration to the printed page"
+      "galleryTitle": "From real-life inspiration to the printed page",
+      "roleAuthorCreator": "Author & Creator",
+      "roleAuthorScience": "Author & Science Communicator",
+      "originsTitle": "The birth of the stories",
+      "originsSubtitle": "Authentic photographs from the beginnings: afternoons spent observing construction sites together and precious moments of shared reading.",
+      "cantiereBooksBtn": "Construction Site Books",
+      "fanoBookBtn": "Fano with Your Nose in the Air",
+      "scienceBooksBtn": "Science Books",
+      "schoolBooksBtn": "For School & Learning"
     },
     "footer": {
-      "brandPitch": "CSA Books Kids is an independent children's publisher dedicated to picture books, popular science, educational learning, and creative activities.",
+      "brandPitch": "CSA Books 4 Kids is an independent children's publisher dedicated to picture books, popular science, educational learning, and creative activities.",
       "navTitle": "Explore",
       "legalTitle": "Information",
       "contactsTitle": "Contact",
-      "rights": "© 2026 CSA Books Kids. All rights reserved.",
+      "rights": "© 2026 CSA Books 4 Kids. All rights reserved.",
       "privacy": "Privacy Policy",
       "terms": "Terms of Use",
-      "permanentQr": "Printed QR Code Content Area"
+      "permanentQr": "Printed QR Code Content Area",
+      "amazonDisclaimer": "Guaranteed official purchases exclusively on Amazon in paperback edition.",
+      "cantierePitch": "Construction Site Adventures by Marco Salucci.",
+      "scienzaPitch": "Science & Wonder collection by Clara Musicco.",
+      "colorarePitch": "Coloring and creativity collection by Marco Salucci.",
+      "scuolaPitch": "Educational and learning series by CSA Books 4 Kids."
     },
     "common": {
       "loading": "Loading…",
@@ -2115,7 +2318,99 @@
       "notFoundText": "The requested page does not exist or has been moved.",
       "backHome": "Back to Home",
       "externalLink": "Opens product page on Amazon in a new tab",
-      "langSelector": "Website Language"
+      "langSelector": "Website Language",
+      "redirecting": "Redirecting...",
+      "redirectingDesc": "Opening your book's page. If not automatically redirected in a few seconds, click the button below."
+    },
+    "reviews": {
+      "title": "What Parents Say",
+      "subtitle": "Authentic Amazon reviews on Construction Site Adventures books",
+      "badge": "Verified Reviews",
+      "ratingLabel": "Rating: ",
+      "amazonSource": "Amazon Review",
+      "prevAria": "Previous reviews",
+      "nextAria": "Next reviews"
+    },
+    "cantierePage": {
+      "badge": "Original Series · Ages 2–5",
+      "heroTitle": "Construction Site Adventures",
+      "heroSubtitle": "The celebrated picture book series by Marco Salucci: rhyming stories, mighty machines, and memorable lessons in friendship, teamwork, and respect for nature.",
+      "ctaRaccolte": "Discover Collections Vol. 1 & 2",
+      "ctaCharacters": "Meet the Characters",
+      "raccolteTitle": "Four complete stories in every volume",
+      "raccolteSubtitle": "Special large format editions (21.5 × 28 cm) with rhyming texts, premium paperback finish, and bonus multimedia QR codes.",
+      "episodesTitle": "All 8 Single Episodes",
+      "episodesSubtitle": "All 8 rhyming picture books for children ages 2–5. Engaging stories of teamwork and friendship.",
+      "charactersTitle": "Meet the protagonists",
+      "charactersSubtitle": "Each vehicle has a unique, positive personality that children immediately connect with.",
+      "bennyTitle": "Benny the Excavator",
+      "bennyDesc": "Enthusiastic, tireless excavator and loyal friend ready to help everyone.",
+      "rudyTitle": "Rudy the Bulldozer",
+      "rudyDesc": "Strong and swift, moving piles of sand and rocks with cheerful energy.",
+      "leoTitle": "Leo the Crane",
+      "leoDesc": "Gentle and tall, watching from above and tenderly protecting site nests.",
+      "brunoTitle": "Bruno the Dump Truck",
+      "brunoDesc": "Sturdy hauler with a gentle heart, protector of ducklings.",
+      "ninaTitle": "Nina the Cement Truck",
+      "ninaDesc": "Clever and determined, mixing perfect concrete to build safe bridges.",
+      "rinoTitle": "Rino the Steamroller",
+      "rinoDesc": "Calm and thoughtful, leveling the ground and guarding the crew through the night.",
+      "mediaTitle": "Listen and watch the stories anywhere",
+      "watchYouTube": "Watch on YouTube",
+      "vol1Title": "Construction Site Adventures — Collection Vol. 1",
+      "vol1Pitch": "Includes 4 stories: Benny the Excavator, Rudy the Bulldozer, Leo the Crane, and Bruno the Dump Truck. QR code with video read-aloud and coloring pages.",
+      "vol2Title": "Construction Site Adventures — Collection Vol. 2",
+      "vol2Pitch": "Includes 4 stories: Benny and the Roman Coins, Nina the Cement Truck, Rino the Steamroller, and Leo and the Titmouse. QR code with exclusive bonuses.",
+      "ctaEpisodes": "Explore All Episodes"
+    },
+    "scienzaPage": {
+      "badge": "Popular Science · Ages 7–12",
+      "heroTitle": "Einstein, You Missed This!",
+      "heroSubtitle": "By Clara Musicco. 55 adventures in modern science | 55 real discoveries! Feathered dinosaurs, black holes, robots, remarkable animals and the secret interactive portal of Otto the octopus.",
+      "featuresTitle": "What makes this book unique",
+      "featuresSubtitle": "A book uniting vibrant storytelling with the verified rigor of world-leading scientific journals and universities.",
+      "feat1Title": "55 Verified Discoveries",
+      "feat1Desc": "From gravitational waves to the James Webb Space Telescope, feathered dinosaurs to animal intelligence: real stories referenced to scientific sources (SC-01 through SC-55).",
+      "feat2Title": "Otto the Mascot",
+      "feat2Desc": "A curious, witty octopus with three hearts and nine brains guiding young readers through fascinating concepts with humor and clarity.",
+      "feat3Title": "Exclusive Secret Portal",
+      "feat3Desc": "The QR code printed in the book unlocks an interactive world with 7 3D simulations, video library, virtual museum with passport, and printable game cards.",
+      "secretOttoTitle": "Otto's Secret World",
+      "secretOttoDesc": "The book is finished. The discoveries are not! Through the secret portal accessible via QR code, young readers can explore the Museum of Impossible Discoveries, try interactive 3D simulations, and download family games.",
+      "qrExclusive": "🔒 Accessible via exclusive QR Code printed inside the book",
+      "lookInsideSample": "Look inside preview"
+    },
+    "colorarePage": {
+      "badge": "Creativity & Colors · Ages 5–10",
+      "heroTitle": "Fano with Your Nose in the Air",
+      "heroSubtitle": "By Marco Salucci. The coloring book featuring over 40 original hand-drawn plates, mazes, and historical trivia exploring the ancient Roman city of Vitruvius and the Arch of Augustus.",
+      "featuresTitle": "Color, discover, learn",
+      "featuresSubtitle": "A large-format album designed to combine relaxing coloring with cultural discovery.",
+      "feat1Title": "Over 40 Original Plates",
+      "feat1Desc": "Detailed hand-drawn artwork ready to be personalized with pencils, markers, or crayons on thick, sturdy paper.",
+      "feat2Title": "History & Landmarks",
+      "feat2Desc": "The Arch of Augustus, Vitruvius' Basilica, Carnival, and the historic harbor narrated with curious trivia for children.",
+      "feat3Title": "Games & Activities",
+      "feat3Desc": "Mazes, riddles, spot-the-difference, and visual puzzles to sharpen focus and fine motor skills."
+    },
+    "scuolaPage": {
+      "badge": "New Educational Series · Coming Soon",
+      "heroTitle": "For School & Learning",
+      "heroSubtitle": "Learning resources, exercises, and logic puzzles designed to strengthen school skills with enthusiasm, clarity, and solid method.",
+      "compassTitle": "The Mysterious Compass",
+      "compassSubtitle": "Coming soon for the new school year",
+      "projectDesc": "An educational project created by Clara Musicco to transform school subjects into an exciting adventure to experience and understand.",
+      "subjectMath": "Subject: Mathematics",
+      "grade2": "Grade: 2nd Grade",
+      "age78": "Age: Ages 7–8",
+      "authorClara": "Author: Clara Musicco",
+      "bookMath2Title": "The Mysterious Compass — 2nd Grade Math",
+      "bookMath2Desc": "The 2nd grade volume covers numbers up to 100, mental math, early word problems, and spatial reasoning through puzzle mysteries that motivate without test anxiety.",
+      "whatInside": "What children will discover:",
+      "featExercises": "Progressive exercises",
+      "featVisual": "Visual approach",
+      "featSolutions": "Step-by-step solutions",
+      "statusInWork": "In preparation — Coming soon on Amazon"
     }
   },
   "de": {
@@ -2128,7 +2423,8 @@
       "colorare": "Malen & Gestalten",
       "about": "Über uns",
       "menuToggle": "Hauptmenü",
-      "closeMenu": "Menü schließen"
+      "closeMenu": "Menü schließen",
+      "reviews": "Was Eltern sagen"
     },
     "hero": {
       "badge": "Kinderbuchverlag",
@@ -2141,8 +2437,21 @@
       "eyebrow": "Unsere Welten",
       "title": "Entdecke unsere Bücherwelten",
       "subtitle": "Vier Buchreihen, sorgfältig gestaltet, um Fantasie, Neugier und Forschergeist zu wecken.",
-      "exploreBtn": "Reihe entdecken",
-      "comingSoonBadge": "In Vorbereitung"
+      "exploreBtn": "Bücher entdecken",
+      "comingSoonBadge": "In Vorbereitung",
+      "cantiereTitle": "Baustellen-Abenteuer",
+      "cantiereDesc": "Benny, Rudy, Leo, Bruno, Nina und Rino. Illustrierte Reimgeschichten über Freundschaft und Baustellenfahrzeuge.",
+      "cantiereAlt": "Baustellen-Abenteuer: Bagger Benny, Planierraupe Rudy und Betonmischer Nina",
+      "scienzaTitle": "Wissenschaft & Neugier",
+      "scienzaDesc": "Einstein, Dinosaurier, das Weltall und Naturwunder – fundiert belegt durch echte wissenschaftliche Forschung.",
+      "scienzaAlt": "Wissenschaft und Neugier: Krake Otto mit Teleskop und Planeten",
+      "scuolaTitle": "Für die Schule",
+      "scuolaDesc": "Der Geheimnisvolle Kompass: Denkspiele, Grundschulmathematik und spielerische Übungen für den Verstand.",
+      "scuolaAlt": "Für die Schule: Mira, Leo und Peperino mit dem geheimnisvollen Kompass",
+      "creativitaTitle": "Malen & Gestalten",
+      "creativitaDesc": "Kreative Mal- und Entdeckerhefte mit handgezeichneten Bildern, Labyrinthen und spannenden Stadtgeschichten.",
+      "creativitaAlt": "Malen und Gestalten: Kinder malen den historischen Marktplatz bunt aus",
+      "discoverProject": "Bücher entdecken"
     },
     "featured": {
       "eyebrow": "Im Fokus",
@@ -2168,15 +2477,16 @@
       "viewBooks": "Bücher ansehen"
     },
     "brand": {
-      "eyebrow": "CSA Books Kids",
+      "eyebrow": "CSA Books 4 Kids",
       "title": "Geschichten mit Herz für die ganze Familie",
-      "text1": "CSA Books Kids entstand aus dem Wunsch, hochwertige Kinderbücher zu schaffen, die Staunen wecken, Neugier fördern und gemeinsame Leseerlebnisse bereichern.",
+      "text1": "CSA Books 4 Kids entstand aus dem Wunsch, hochwertige Kinderbücher zu schaffen, die Staunen wecken, Neugier fördern und gemeinsame Leseerlebnisse bereichern.",
       "text2": "Von den beliebten Baustellenabenteuern für die Kleinsten bis hin zu faszinierender Wissenschaft für Schulkinder: Jedes Buch entsteht mit Hingabe und Respekt vor dem Kind.",
-      "ctaAbout": "Unsere Geschichte entdecken"
+      "ctaAbout": "Unsere Geschichte entdecken",
+      "authorsRole": "Die Autoren von CSA Books 4 Kids"
     },
     "catalog": {
       "eyebrow": "Gesamtkatalog",
-      "title": "Alle CSA Books Kids Titel",
+      "title": "Alle CSA Books 4 Kids Titel",
       "subtitle": "Stöbere im gesamten Buchprogramm, filtere nach Kategorie und Alter und entdecke alle Sprachausgaben.",
       "filterCategory": "Kategorie",
       "filterAge": "Altersgruppe",
@@ -2215,7 +2525,7 @@
       "eyebrow": "Über Uns",
       "title": "Verlegerische Leidenschaft und Freude am Entdecken",
       "subtitle": "Ein unabhängiger Verlag, gewidmet der kindlichen Entwicklung und Neugier.",
-      "intro": "Hinter jedem Titel von CSA Books Kids steht echte Begeisterung: Eltern und Pädagogen, die warmherzige, lehrreiche und wunderschön illustrierte Bücher schaffen.",
+      "intro": "Hinter jedem Titel von CSA Books 4 Kids steht echte Begeisterung: Eltern und Pädagogen, die warmherzige, lehrreiche und wunderschön illustrierte Bücher schaffen.",
       "marcoTitle": "Marco Salucci",
       "marcoRole": "Autor der «Baustellen-Abenteuer» und «Fano mit Blick nach oben»",
       "marcoBio": "Schöpfer der Baustellen-Abenteuer. Marco verwandelte die echte Begeisterung seines Sohnes für Bagger, Kräne und Laster in eine beliebte internationale Bilderbuchreihe.",
@@ -2229,17 +2539,30 @@
       "val2Desc": "Liebevolle Zeichnungen, die das Verständnis fördern und Freude beim Betrachten machen.",
       "val3Title": "Positive Werte",
       "val3Desc": "Freundschaft, Umweltschutz, gegenseitige Hilfe und Begeisterung für Wissen.",
-      "galleryTitle": "Von der Inspiration zum gedruckten Buch"
+      "galleryTitle": "Von der Inspiration zum gedruckten Buch",
+      "roleAuthorCreator": "Autor & Schöpfer",
+      "roleAuthorScience": "Autorin & Wissenschaftskommunikatorin",
+      "originsTitle": "Die Entstehung der Geschichten",
+      "originsSubtitle": "Authentische Fotos aus den Anfängen: Nachmittage beim gemeinsamen Beobachten von Baustellen und kostbare Lesemomente.",
+      "cantiereBooksBtn": "Die Baustellen-Bücher",
+      "fanoBookBtn": "Fano mit der Nase im Wind",
+      "scienceBooksBtn": "Wissenschaftsbücher",
+      "schoolBooksBtn": "Für die Schule"
     },
     "footer": {
-      "brandPitch": "CSA Books Kids ist ein unabhängiger Kinderbuchverlag für illustrierte Geschichten, Wissenschaft, Schullernen und kreative Bücher.",
+      "brandPitch": "CSA Books 4 Kids ist ein unabhängiger Kinderbuchverlag für illustrierte Geschichten, Wissenschaft, Schullernen und kreative Bücher.",
       "navTitle": "Erkunden",
       "legalTitle": "Rechtliches",
       "contactsTitle": "Kontakt",
-      "rights": "© 2026 CSA Books Kids. Alle Rechte vorbehalten.",
+      "rights": "© 2026 CSA Books 4 Kids. Alle Rechte vorbehalten.",
       "privacy": "Datenschutzerklärung",
       "terms": "Nutzungsbedingungen",
-      "permanentQr": "Permanenter QR-Code-Bereich aus den Büchern"
+      "permanentQr": "Permanenter QR-Code-Bereich aus den Büchern",
+      "amazonDisclaimer": "Garantierte offizielle Käufe exklusiv auf Amazon in der Taschenbuchausgabe.",
+      "cantierePitch": "Die Baustellen-Abenteuer von Marco Salucci.",
+      "scienzaPitch": "Reihe Wissenschaft und Wunder von Clara Musicco.",
+      "colorarePitch": "Mal- und Kreativreihe von Marco Salucci.",
+      "scuolaPitch": "Lern- und Bildungsreihe von CSA Books 4 Kids."
     },
     "common": {
       "loading": "Wird geladen…",
@@ -2249,7 +2572,99 @@
       "notFoundText": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
       "backHome": "Zur Startseite",
       "externalLink": "Öffnet die Produktseite auf Amazon in einem neuen Tab",
-      "langSelector": "Webseiten-Sprache"
+      "langSelector": "Webseiten-Sprache",
+      "redirecting": "Weiterleitung läuft...",
+      "redirectingDesc": "Wir öffnen die Seite deines Buches. Solltest du nicht in wenigen Sekunden weitergeleitet werden, klicke auf den Button unten."
+    },
+    "reviews": {
+      "title": "Was Eltern sagen",
+      "subtitle": "Authentische Amazon-Bewertungen zu den Baustellen-Abenteuer-Büchern",
+      "badge": "Verifizierte Bewertungen",
+      "ratingLabel": "Bewertung: ",
+      "amazonSource": "Amazon-Rezension",
+      "prevAria": "Vorherige Bewertungen",
+      "nextAria": "Nächste Bewertungen"
+    },
+    "cantierePage": {
+      "badge": "Original-Serie · 2–5 Jahre",
+      "heroTitle": "Die Baustellen-Abenteuer",
+      "heroSubtitle": "Die beliebte Bilderbuchreihe von Marco Salucci: Reimgeschichten, große Maschinen und unvergessliche Lektionen über Freundschaft, Teamarbeit und Respekt vor der Natur.",
+      "ctaRaccolte": "Entdecke die Sammelbände Band 1 & 2",
+      "ctaCharacters": "Die Charaktere",
+      "raccolteTitle": "Vier vollständige Geschichten in jedem Band",
+      "raccolteSubtitle": "Besondere Großformat-Ausgaben (21,5 × 28 cm) mit Reimen, edlem Taschenbucheinband und Bonus-QR-Codes.",
+      "episodesTitle": "Alle einzelnen Episoden",
+      "episodesSubtitle": "Alle einzelnen Reimbilderbücher für Kinder von 2–5 Jahren. Farbenfroh, lehrreich und voller Herz.",
+      "charactersTitle": "Triff die Helden",
+      "charactersSubtitle": "Jedes Fahrzeug hat einen einzigartigen, positiven Charakter, mit dem sich Kinder sofort identifizieren.",
+      "bennyTitle": "Benny der Bagger",
+      "bennyDesc": "Begeisterter, unermüdlicher Bagger und treuer Freund, der allen hilft.",
+      "rudyTitle": "Rudy die Planierraupe",
+      "rudyDesc": "Stark und flink, schiebt Sand- und Steinberge mit ansteckender Freude.",
+      "leoTitle": "Leo der Kran",
+      "leoDesc": "Sanftmütig und riesengroß, wacht von oben und schützt die Nester der Baustelle.",
+      "brunoTitle": "Bruno der Kipper",
+      "brunoDesc": "Robuster Transporter mit weichem Herzen, Beschützer der Entenküken.",
+      "ninaTitle": "Nina der Betonmischer",
+      "ninaDesc": "Klug und entschlossen, mischt perfekten Beton für sichere Brücken.",
+      "rinoTitle": "Rino die Walze",
+      "rinoDesc": "Ruhig und besonnen, glättet den Boden und bewacht das Team in der Nacht.",
+      "mediaTitle": "Höre und schaue die Geschichten überall",
+      "watchYouTube": "Auf YouTube ansehen",
+      "vol1Title": "Die Baustellen-Abenteuer — Sammelband 1",
+      "vol1Pitch": "Enthält 4 Geschichten: Benny der Bagger, Rudy die Planierraupe, Leo der Kran und Bruno der Kipper. QR-Code mit Videolesung und Malvorlagen.",
+      "vol2Title": "Die Baustellen-Abenteuer — Sammelband 2",
+      "vol2Pitch": "Enthält 4 Geschichten: Benny und die römischen Münzen, Nina der Betonmischer, Rino die Walze und Leo und die Blaumeise. QR-Code mit exklusiven Boni.",
+      "ctaEpisodes": "Alle Einzelepisoden"
+    },
+    "scienzaPage": {
+      "badge": "Wissenschaft für Kinder · 7–12 Jahre",
+      "heroTitle": "Einstein, das hast du verpasst!",
+      "heroSubtitle": "Von Clara Musicco. 55 Abenteuer in der modernen Wissenschaft | 55 echte Entdeckungen! Gefiederte Dinosaurier, Schwarze Löcher, Roboter und das Geheimportal von Krake Otto.",
+      "featuresTitle": "Was dieses Buch einzigartig macht",
+      "featuresSubtitle": "Ein Werk, das lebendiges Erzählen mit den geprüften Quellen weltführender Wissenschaftsmagazine und Universitäten vereint.",
+      "feat1Title": "55 Geprüfte Entdeckungen",
+      "feat1Desc": "Von Gravitationswellen über das James-Webb-Teleskop bis zur Tierintelligenz: Wahre Geschichten mit Quellenangaben (SC-01 bis SC-55).",
+      "feat2Title": "Das Maskottchen Otto",
+      "feat2Desc": "Ein neugieriger, witziger Krake mit drei Herzen und neun Gehirnen, der junge Leser mit Humor und Klarheit begeistert.",
+      "feat3Title": "Exklusives Geheimportal",
+      "feat3Desc": "Der im Buch gedruckte QR-Code öffnet eine interaktive Welt mit 7 3D-Simulationen, Videothek, Museum mit Entdeckerpass und Bastelkarten.",
+      "secretOttoTitle": "Ottos geheime Welt",
+      "secretOttoDesc": "Das Buch ist zu Ende, die Entdeckungen gehen weiter! Über das QR-Portal erkunden Kinder das Museum, 3D-Physiksimulationen und Familienspiele.",
+      "qrExclusive": "🔒 Zugänglich über den exklusiven QR-Code im Buch",
+      "lookInsideSample": "Leseprobe ansehen"
+    },
+    "colorarePage": {
+      "badge": "Kreativität & Farbe · 5–10 Jahre",
+      "heroTitle": "Fano mit der Nase im Wind",
+      "heroSubtitle": "Von Marco Salucci. Das Ausmalbuch mit über 40 handgezeichneten Tafeln, Labyrinthen und historischen Anekdoten über die römische Stadt des Vitruv.",
+      "featuresTitle": "Malen, entdecken, lernen",
+      "featuresSubtitle": "Ein Großformat-Album, das entspanntes Zeichnen mit kulturellen Entdeckungen verbindet.",
+      "feat1Title": "Über 40 Tafeln",
+      "feat1Desc": "Detaillierte Handzeichnungen zum Ausmalen auf starkem, hochwertigem Papier.",
+      "feat2Title": "Geschichte & Denkmäler",
+      "feat2Desc": "Der Augustusbogen, Vitruvs Basilika, der Karneval und der Hafen, kindgerecht und spannend erzählt.",
+      "feat3Title": "Spiele & Rätsel",
+      "feat3Desc": "Labyrinthe, Suchbilder und Logikaufgaben zur Förderung von Konzentration und Feinmotorik."
+    },
+    "scuolaPage": {
+      "badge": "Neue Lernreihe · In Vorbereitung",
+      "heroTitle": "Für die Schule",
+      "heroSubtitle": "Lernmaterialien, Übungen und logische Herausforderungen zur Festigung des Schulstoffs mit Begeisterung, Klarheit und Methode.",
+      "compassTitle": "Der geheimnisvolle Kompass",
+      "compassSubtitle": "Demnächst zum neuen Schuljahr",
+      "projectDesc": "Ein pädagogisches Projekt von Clara Musicco, um Schulfächer in ein faszinierendes Abenteuer zu verwandeln.",
+      "subjectMath": "Fach: Mathematik",
+      "grade2": "Klasse: 2. Grundschulklasse",
+      "age78": "Alter: 7–8 Jahre",
+      "authorClara": "Autorin: Clara Musicco",
+      "bookMath2Title": "Der geheimnisvolle Kompass — Mathematik 2. Klasse",
+      "bookMath2Desc": "Der Band für die 2. Klasse vermittelt Zahlen bis 100, Kopfrechnen, Textaufgaben und Raumorientierung durch motivierende Rätselkrimis.",
+      "whatInside": "Was Kinder erwartet:",
+      "featExercises": "Aufbauende Übungen",
+      "featVisual": "Anschaulicher Zugang",
+      "featSolutions": "Geführte Lösungen",
+      "statusInWork": "In Vorbereitung — Bald auf Amazon erhältlich"
     }
   },
   "fr": {
@@ -2262,7 +2677,8 @@
       "colorare": "À colorier",
       "about": "Qui sommes-nous",
       "menuToggle": "Menu principal",
-      "closeMenu": "Fermer le menu"
+      "closeMenu": "Fermer le menu",
+      "reviews": "Ce que disent les parents"
     },
     "hero": {
       "badge": "Maison d'Édition Jeunesse",
@@ -2275,8 +2691,21 @@
       "eyebrow": "Nos Univers",
       "title": "Explorez nos mondes",
       "subtitle": "Quatre collections soigneusement pensées pour éveiller la curiosité et l'imagination à chaque âge.",
-      "exploreBtn": "Découvrir la collection",
-      "comingSoonBadge": "Bientôt disponible"
+      "exploreBtn": "Découvrir les livres",
+      "comingSoonBadge": "Bientôt disponible",
+      "cantiereTitle": "Les Aventures du Chantier",
+      "cantiereDesc": "Benny, Rudy, Léo, Bruno, Nina et Rino. Histoires illustrées en rimes, amitié et grands engins de chantier.",
+      "cantiereAlt": "Les Aventures du Chantier : Benny l'excavateur, Rudy le bulldozer et Nina la bétonnière",
+      "scienzaTitle": "Science & Curiosité",
+      "scienzaDesc": "Einstein, dinosaures, espace et mystères de la nature appuyés par de vraies découvertes scientifiques.",
+      "scienzaAlt": "Science et Curiosité : la mascotte Otto avec télescope et planètes",
+      "scuolaTitle": "Pour l'école",
+      "scuolaDesc": "La Boussole Mystérieuse : énigmes logiques, maths du primaire et outils stimulants pour aiguiser l'esprit.",
+      "scuolaAlt": "Pour l'école : Mira, Léo et Peperino avec la boussole mystérieuse",
+      "creativitaTitle": "Coloriage & Création",
+      "creativitaDesc": "Albums de coloriage créatifs avec illustrations originales, jeux d'observation, labyrinthes et découvertes.",
+      "creativitaAlt": "Coloriage et Création : enfants dessinant et coloriant la place historique",
+      "discoverProject": "Découvrir les livres"
     },
     "featured": {
       "eyebrow": "À la Une",
@@ -2302,15 +2731,16 @@
       "viewBooks": "Voir les livres"
     },
     "brand": {
-      "eyebrow": "CSA Books Kids",
+      "eyebrow": "CSA Books 4 Kids",
       "title": "Des histoires nées au cœur d'une famille",
-      "text1": "CSA Books Kids est née de l'envie de créer des livres jeunesse captivants qui éveillent l'émerveillement et nourrissent la complicité de la lecture partagée.",
+      "text1": "CSA Books 4 Kids est née de l'envie de créer des livres jeunesse captivants qui éveillent l'émerveillement et nourrissent la complicité de la lecture partagée.",
       "text2": "Des aventures de chantier pour les tout-petits aux livres de vulgarisation scientifique pour les plus grands, chaque ouvrage allie qualité d'écriture et respect du rythme de l'enfant.",
-      "ctaAbout": "Découvrir notre histoire"
+      "ctaAbout": "Découvrir notre histoire",
+      "authorsRole": "Les auteurs de CSA Books 4 Kids"
     },
     "catalog": {
       "eyebrow": "Catalogue Complet",
-      "title": "Tous les livres CSA Books Kids",
+      "title": "Tous les livres CSA Books 4 Kids",
       "subtitle": "Parcourez l'ensemble de notre catalogue, filtrez par catégorie ou tranche d'âge et découvrez les éditions disponibles.",
       "filterCategory": "Catégorie",
       "filterAge": "Âge conseillé",
@@ -2349,7 +2779,7 @@
       "eyebrow": "Qui Sommes-Nous",
       "title": "Passion d'éditer, récits authentiques et amour de la transmission",
       "subtitle": "Une maison d'édition jeunesse indépendante dédiée à l'éveil et à la créativité des enfants.",
-      "intro": "Derrière chaque publication de CSA Books Kids se trouvent des parents et des auteurs passionnés, désireux d'offrir des histoires enrichissantes, chaleureuses et merveilleusement illustrées.",
+      "intro": "Derrière chaque publication de CSA Books 4 Kids se trouvent des parents et des auteurs passionnés, désireux d'offrir des histoires enrichissantes, chaleureuses et merveilleusement illustrées.",
       "marcoTitle": "Marco Salucci",
       "marcoRole": "Auteur des «Aventures du Chantier» et de «Fano le nez en l'air»",
       "marcoBio": "Créateur de la série à succès Les Aventures du Chantier, Marco a transformé la fascination de son fils pour les engins en récits rimés traduits en plusieurs langues.",
@@ -2363,17 +2793,30 @@
       "val2Desc": "Des illustrations chaleureuses qui soutiennent la compréhension et éveillent le sens esthétique.",
       "val3Title": "Valeurs Positives",
       "val3Desc": "Solidarité, curiosité, respect de la nature et bienveillance au cœur de chaque livre.",
-      "galleryTitle": "De l'inspiration familiale aux pages imprimées"
+      "galleryTitle": "De l'inspiration familiale aux pages imprimées",
+      "roleAuthorCreator": "Auteur & Créateur",
+      "roleAuthorScience": "Auteure & Vulgarisatrice",
+      "originsTitle": "La naissance des histoires",
+      "originsSubtitle": "Photographies authentiques des origines : après-midis passés ensemble à observer les chantiers et moments précieux de lecture partagée.",
+      "cantiereBooksBtn": "Les Livres du Chantier",
+      "fanoBookBtn": "Fano le nez en l'air",
+      "scienceBooksBtn": "Les Livres de Science",
+      "schoolBooksBtn": "Pour l'école"
     },
     "footer": {
-      "brandPitch": "CSA Books Kids est une maison d'édition jeunesse indépendante : albums illustrés, vulgarisation scientifique, apprentissages et créativité.",
+      "brandPitch": "CSA Books 4 Kids est une maison d'édition jeunesse indépendante : albums illustrés, vulgarisation scientifique, apprentissages et créativité.",
       "navTitle": "Explorer",
       "legalTitle": "Informations",
       "contactsTitle": "Contact",
-      "rights": "© 2026 CSA Books Kids. Tous droits réservés.",
+      "rights": "© 2026 CSA Books 4 Kids. Tous droits réservés.",
       "privacy": "Politique de confidentialité",
       "terms": "Mentions légales",
-      "permanentQr": "Espace QR Codes permanents imprimés dans les livres"
+      "permanentQr": "Espace QR Codes permanents imprimés dans les livres",
+      "amazonDisclaimer": "Achats officiels garantis exclusivement sur Amazon en édition brochée.",
+      "cantierePitch": "Les Aventures du Chantier par Marco Salucci.",
+      "scienzaPitch": "Collection Science et curiosité par Clara Musicco.",
+      "colorarePitch": "Collection à colorier et créer par Marco Salucci.",
+      "scuolaPitch": "Espace pédagogique et apprentissage de CSA Books 4 Kids."
     },
     "common": {
       "loading": "Chargement en cours…",
@@ -2383,7 +2826,99 @@
       "notFoundText": "La page demandée n'existe pas ou a été déplacée.",
       "backHome": "Retour à l'accueil",
       "externalLink": "Ouvre la fiche produit Amazon dans un nouvel onglet",
-      "langSelector": "Langue du site"
+      "langSelector": "Langue du site",
+      "redirecting": "Redirection en cours...",
+      "redirectingDesc": "Nous ouvrons la page de votre livre. Si vous n'êtes pas redirigé dans quelques secondes, cliquez sur le bouton ci-dessous."
+    },
+    "reviews": {
+      "title": "Ce que disent les parents",
+      "subtitle": "Avis authentiques d'Amazon sur les livres des Aventures du Chantier",
+      "badge": "Avis Vérifiés",
+      "ratingLabel": "Évaluation : ",
+      "amazonSource": "Avis Amazon",
+      "prevAria": "Avis précédents",
+      "nextAria": "Avis suivants"
+    },
+    "cantierePage": {
+      "badge": "Série originale · 2–5 ans",
+      "heroTitle": "Les Aventures du Chantier",
+      "heroSubtitle": "La célèbre série illustrée de Marco Salucci : des histoires en rimes, de grands engins et d'inoubliables leçons d'amitié, d'entraide et de respect de la nature.",
+      "ctaRaccolte": "Découvrez les recueils Vol. 1 & 2",
+      "ctaCharacters": "Les Personnages",
+      "raccolteTitle": "Quatre histoires complètes dans chaque volume",
+      "raccolteSubtitle": "Éditions spéciales grand format (21,5 × 28 cm) avec textes rimés, couverture souple de qualité et QR codes multimédias offerts.",
+      "episodesTitle": "Les 3 Épisodes Disponibles",
+      "episodesSubtitle": "Les 3 albums illustrés en rimes disponibles pour les enfants de 2 à 5 ans. Belles histoires d'amitié et de coopération.",
+      "charactersTitle": "Rencontrez les héros",
+      "charactersSubtitle": "Chaque engin possède un caractère unique et positif auquel les enfants s'identifient immédiatement.",
+      "bennyTitle": "Benny la pelleteuse",
+      "bennyDesc": "Pelleteuse enthousiaste et infatigable, un ami loyal toujours prêt à aider.",
+      "rudyTitle": "Rudy le bulldozer",
+      "rudyDesc": "Fort et agile, déplaçant des montagnes de sable avec une joie communicative.",
+      "leoTitle": "Léo la grue",
+      "leoDesc": "Bienveillante et immense, observant d'en haut pour protéger les nids du chantier.",
+      "brunoTitle": "Bruno le camion benne",
+      "brunoDesc": "Robuste transporteur au grand cœur, protecteur des petits canetons.",
+      "ninaTitle": "Nina la toupie à béton",
+      "ninaDesc": "Ingénieuse et décidée, gâchant le béton parfait pour bâtir des ponts solides.",
+      "rinoTitle": "Rino le rouleau compresseur",
+      "rinoDesc": "Calme et réfléchi, aplanissant le sol et veillant sur l'équipe pendant la nuit.",
+      "mediaTitle": "Écoutez et regardez les histoires partout",
+      "watchYouTube": "Regarder sur YouTube",
+      "vol1Title": "Les Aventures du Chantier — Recueil Vol. 1",
+      "vol1Pitch": "Comprend 4 histoires : Benny la pelleteuse, Rudy le bulldozer, Léo la grue et Bruno le camion. QR code avec lecture vidéo et coloriages.",
+      "vol2Title": "Les Aventures du Chantier — Recueil Vol. 2",
+      "vol2Pitch": "Comprend 4 histoires : Benny et les pièces romaines, Nina la toupie, Rino le rouleau et Léo et la mésange. QR code avec bonus exclusifs.",
+      "ctaEpisodes": "Découvrir les épisodes"
+    },
+    "scienzaPage": {
+      "badge": "Vulgarisation scientifique · 7–12 ans",
+      "heroTitle": "Einstein, tu as raté ça !",
+      "heroSubtitle": "De Clara Musicco. 55 aventures dans la science d'aujourd'hui | 55 vraies découvertes ! Dinosaures à plumes, trous noirs, robots et le portail secret de la mascotte Otto.",
+      "featuresTitle": "Ce qui rend ce livre unique",
+      "featuresSubtitle": "Une œuvre alliant narration vivante et rigueur des plus grandes revues et universités scientifiques mondiales.",
+      "feat1Title": "55 Découvertes Vérifiées",
+      "feat1Desc": "Des ondes gravitationnelles au télescope James Webb, des dinosaures à l'intelligence animale : de vraies histoires sourcées (SC-01 à SC-55).",
+      "feat2Title": "La Mascotte Otto",
+      "feat2Desc": "Un poulpe curieux et plein d'humour à trois cœurs et neuf cerveaux qui guide les jeunes lecteurs avec clarté.",
+      "feat3Title": "Portail Secret Exclusif",
+      "feat3Desc": "Le QR code imprimé dans le livre ouvre un univers interactif avec 7 simulations 3D, vidéos, musée virtuel et cartes à découper.",
+      "secretOttoTitle": "Le monde secret d'Otto",
+      "secretOttoDesc": "Le livre est fini, mais pas les découvertes ! Grâce au portail secret via QR code, explorez le Musée, des simulations 3D et des jeux en famille.",
+      "qrExclusive": "🔒 Accessible via le QR Code exclusif imprimé dans le livre",
+      "lookInsideSample": "Feuilleter l'extrait"
+    },
+    "colorarePage": {
+      "badge": "Créativité & Couleurs · 5–10 ans",
+      "heroTitle": "Fano le nez en l'air",
+      "heroSubtitle": "De Marco Salucci. L'album illustré à colorier avec plus de 40 planches originales, labyrinthes et anecdotes historiques sur la cité romaine de Vitruve.",
+      "featuresTitle": "Colorier, découvrir, apprendre",
+      "featuresSubtitle": "Un grand format conçu pour marier le plaisir du coloriage et la richesse de la découverte culturelle.",
+      "feat1Title": "Plus de 40 Planches",
+      "feat1Desc": "Dessins soignés dessinés à la main prêts à être coloriés sur papier épais et résistant.",
+      "feat2Title": "Histoire & Monuments",
+      "feat2Desc": "L'Arc d'Auguste, la Basilique de Vitruve, le Carnaval et le port racontés aux enfants avec passion.",
+      "feat3Title": "Jeux & Activités",
+      "feat3Desc": "Labyrinthes, énigmes, jeux des différences pour stimuler concentration et motricité fine."
+    },
+    "scuolaPage": {
+      "badge": "Nouvelle Collection Pédagogique · En Préparation",
+      "heroTitle": "Pour l'école",
+      "heroSubtitle": "Supports d'apprentissage, exercices et défis logiques pour consolider les compétences scolaires avec enthousiasme, clarté et méthode.",
+      "compassTitle": "La Boussole Mystérieuse",
+      "compassSubtitle": "Bientôt disponible pour la rentrée scolaire",
+      "projectDesc": "Un projet pédagogique signé Clara Musicco pour transformer les matières scolaires en une aventure captivante.",
+      "subjectMath": "Matière : Mathématiques",
+      "grade2": "Niveau : CE1 (2e primaire)",
+      "age78": "Âge : 7–8 ans",
+      "authorClara": "Auteure : Clara Musicco",
+      "bookMath2Title": "La Boussole Mystérieuse — Mathématiques CE1",
+      "bookMath2Desc": "Le volume de CE1 aborde les nombres jusqu'à 100, le calcul mental, les premiers problèmes illustrés et l'orientation spatiale via des énigmes palpitantes.",
+      "whatInside": "Ce que les enfants trouveront :",
+      "featExercises": "Exercices progressifs",
+      "featVisual": "Approche visuelle",
+      "featSolutions": "Solutions guidées",
+      "statusInWork": "En préparation — Bientôt disponible sur Amazon"
     }
   },
   "es": {
@@ -2396,7 +2931,8 @@
       "colorare": "Colorear",
       "about": "Quiénes somos",
       "menuToggle": "Menú principal",
-      "closeMenu": "Cerrar menú"
+      "closeMenu": "Cerrar menú",
+      "reviews": "Lo que dicen las familias"
     },
     "hero": {
       "badge": "Sello Editorial Infantil",
@@ -2409,8 +2945,21 @@
       "eyebrow": "Nuestros Mundos",
       "title": "Explora nuestros mundos",
       "subtitle": "Cuatro universos diseñados para alimentar la imaginación y la curiosidad científica en cada etapa.",
-      "exploreBtn": "Explorar colección",
-      "comingSoonBadge": "En preparación"
+      "exploreBtn": "Descubrir los libros",
+      "comingSoonBadge": "En preparación",
+      "cantiereTitle": "Las Aventuras de la Construcción",
+      "cantiereDesc": "Benny, Rudy, Leo, Bruno, Nina y Rino. Historias ilustradas en rima sobre amistad y grandes máquinas.",
+      "cantiereAlt": "Las Aventuras de la Construcción: Benny la excavadora, Rudy el bulldozer y Nina la hormigonera",
+      "scienzaTitle": "Ciencia y Curiosidad",
+      "scienzaDesc": "Einstein, dinosaurios, el espacio y grandes misteros documentados con descubrimientos científicos reales.",
+      "scienzaAlt": "Ciencia y Curiosidad: la mascota Otto con telescopio y planetas",
+      "scuolaTitle": "Para la Escuela",
+      "scuolaDesc": "La Brújula Misteriosa: retos lógicos, matemáticas de primaria y herramientas didácticas divertidas.",
+      "scuolaAlt": "Para la Escuela: Mira, Leo y Peperino con la brújula misteriosa",
+      "creativitaTitle": "Para Colorear y Crear",
+      "creativitaDesc": "Cuadernos creativos de colorear con dibujos originales a mano alzada, pasatiempos, laberintos y curiosidades.",
+      "creativitaAlt": "Para Colorear y Crear: niños dibujando y coloreando la plaza histórica",
+      "discoverProject": "Descubrir los libros"
     },
     "featured": {
       "eyebrow": "Destacados",
@@ -2436,15 +2985,16 @@
       "viewBooks": "Ver libros"
     },
     "brand": {
-      "eyebrow": "CSA Books Kids",
+      "eyebrow": "CSA Books 4 Kids",
       "title": "Historias nacidas del corazón de una familia",
-      "text1": "CSA Books Kids nace del deseo de crear libros ilustrados que despierten el asombro y ofrezcan momentos inolvidables de lectura compartida.",
+      "text1": "CSA Books 4 Kids nace del deseo de crear libros ilustrados que despierten el asombro y ofrezcan momentos inolvidables de lectura compartida.",
       "text2": "Desde aventuras de excavadoras para los más pequeños hasta divulgación científica fascinante, cada libro está cuidado con esmero y respeto hacia el niño.",
-      "ctaAbout": "Descubre nuestra historia"
+      "ctaAbout": "Descubre nuestra historia",
+      "authorsRole": "Los autores de CSA Books 4 Kids"
     },
     "catalog": {
       "eyebrow": "Catálogo Completo",
-      "title": "Todos los libros de CSA Books Kids",
+      "title": "Todos los libros de CSA Books 4 Kids",
       "subtitle": "Explora todo nuestro catálogo, filtra por categoría o edad y conoce las ediciones disponibles.",
       "filterCategory": "Categoría",
       "filterAge": "Edad recomendada",
@@ -2483,7 +3033,7 @@
       "eyebrow": "Quiénes Somos",
       "title": "Pasión editorial, historias reales y amor por el conocimiento",
       "subtitle": "Un sello editorial independiente dedicado al crecimiento y aprendizaje de los niños.",
-      "intro": "Detrás de cada libro de CSA Books Kids hay padres y autores comprometidos en ofrecer lecturas hermosas, constructivas e ilustradas con talento.",
+      "intro": "Detrás de cada libro de CSA Books 4 Kids hay padres y autores comprometidos en ofrecer lecturas hermosas, constructivas e ilustradas con talento.",
       "marcoTitle": "Marco Salucci",
       "marcoRole": "Autor de «Las Aventuras de la Construcción» y «Fano con la nariz hacia arriba»",
       "marcoBio": "Creador de la serie Las Aventuras de la Construcción. Inspirado por la curiosidad de su hijo, dio vida a una colección de cuentos en rima con vehículos de obra.",
@@ -2497,17 +3047,30 @@
       "val2Desc": "Ilustraciones ricas en detalles pensadas para enriquecer la experiencia de lectura.",
       "val3Title": "Valores Positivos",
       "val3Desc": "Empatía, amistad, cuidado del medio ambiente y entusiasmo por aprender.",
-      "galleryTitle": "De la inspiración familiar al libro impreso"
+      "galleryTitle": "De la inspiración familiar al libro impreso",
+      "roleAuthorCreator": "Autor & Creador",
+      "roleAuthorScience": "Autora & Divulgadora científica",
+      "originsTitle": "El nacimiento de las historias",
+      "originsSubtitle": "Fotografías auténticas de los orígenes: tardes juntos observando las obras y momentos preciosos de lectura compartida.",
+      "cantiereBooksBtn": "Los Libros de la Construcción",
+      "fanoBookBtn": "Fano con la nariz hacia arriba",
+      "scienceBooksBtn": "Los Libros de Ciencia",
+      "schoolBooksBtn": "Para la escuela"
     },
     "footer": {
-      "brandPitch": "CSA Books Kids es un sello editorial independiente para niños: álbumes ilustrados, divulgación científica, educación y creatividad.",
+      "brandPitch": "CSA Books 4 Kids es un sello editorial independiente para niños: álbumes ilustrados, divulgación científica, educación y creatividad.",
       "navTitle": "Explorar",
       "legalTitle": "Información",
       "contactsTitle": "Contacto",
-      "rights": "© 2026 CSA Books Kids. Todos los derechos reservados.",
+      "rights": "© 2026 CSA Books 4 Kids. Todos los derechos reservados.",
       "privacy": "Política de privacidad",
       "terms": "Términos de uso",
-      "permanentQr": "Área de códigos QR permanentes impresos en los libros"
+      "permanentQr": "Área de códigos QR permanentes impresos en los libros",
+      "amazonDisclaimer": "Compras oficiales garantizadas exclusivamente en Amazon en edición de bolsillo.",
+      "cantierePitch": "Las Aventuras de la Construcción de Marco Salucci.",
+      "scienzaPitch": "Colección Ciencia y curiosidad de Clara Musicco.",
+      "colorarePitch": "Colección para colorear y crear de Marco Salucci.",
+      "scuolaPitch": "Área didáctica y de aprendizaje de CSA Books 4 Kids."
     },
     "common": {
       "loading": "Cargando…",
@@ -2517,7 +3080,99 @@
       "notFoundText": "La página solicitada no existe o ha sido movida.",
       "backHome": "Volver al inicio",
       "externalLink": "Abre la página en Amazon en una nueva pestaña",
-      "langSelector": "Idioma del sitio"
+      "langSelector": "Idioma del sitio",
+      "redirecting": "Redirigiendo...",
+      "redirectingDesc": "Abriendo la página de tu libro. Si no te redirige en unos segundos, pulsa el botón siguiente."
+    },
+    "reviews": {
+      "title": "Lo que dicen las familias",
+      "subtitle": "Reseñas auténticas de Amazon sobre los libros de Las Aventuras de la Construcción",
+      "badge": "Opiniones Verificadas",
+      "ratingLabel": "Valoración: ",
+      "amazonSource": "Opinión en Amazon",
+      "prevAria": "Opiniones anteriores",
+      "nextAria": "Opiniones siguientes"
+    },
+    "cantierePage": {
+      "badge": "Serie original · 2–5 años",
+      "heroTitle": "Las Aventuras de la Construcción",
+      "heroSubtitle": "La célebre serie ilustrada de Marco Salucci: historias en rima, grandes máquinas e inolvidables lecciones de amistad, cooperación y respeto por la naturaleza.",
+      "ctaRaccolte": "Descubre las colecciones Vol. 1 y 2",
+      "ctaCharacters": "Los Personajes",
+      "raccolteTitle": "Cuatro historias completas en cada volumen",
+      "raccolteSubtitle": "Ediciones especiales en gran formato (21,5 × 28 cm) con textos en rima, portada rústica de calidad y códigos QR con contenidos multimedia de regalo.",
+      "episodesTitle": "Todos los episodios individuales",
+      "episodesSubtitle": "Todas las historias ilustradas en rima para niños de 2 a 5 años. Grandes lecciones de amistad y trabajo en equipo.",
+      "charactersTitle": "Conoce a los protagonistas",
+      "charactersSubtitle": "Cada vehículo tiene un carácter único y positivo con el que los niños se identifican al instante.",
+      "bennyTitle": "Benny la excavadora",
+      "bennyDesc": "Excavadora entusiasta e incansable, un fiel amigo dispuesto a ayudar a todos.",
+      "rudyTitle": "Rudy la excavadora",
+      "rudyDesc": "Fuerte y rápida, mueve montones de arena y rocas con alegre energía.",
+      "leoTitle": "Leo la grúa",
+      "leoDesc": "Amable y muy alta, observa desde arriba y cuida con cariño los nidos de la obra.",
+      "brunoTitle": "Bruno el camión",
+      "brunoDesc": "Robusto volquete de tierno corazón, defensor de los patitos.",
+      "ninaTitle": "Nina la hormigonera",
+      "ninaDesc": "Ingeniosa y decidida, amasa el hormigón perfecto para tender puentes seguros.",
+      "rinoTitle": "Rino la apisonadora",
+      "rinoDesc": "Calma y reflexiva, allana el terreno y vigila al equipo durante la noche.",
+      "mediaTitle": "Escucha y mira las historias en cualquier lugar",
+      "watchYouTube": "Ver en YouTube",
+      "vol1Title": "Las Aventuras de la Construcción — Colección Vol. 1",
+      "vol1Pitch": "Incluye 4 historias: Benny la excavadora, Rudy la excavadora, Leo la grúa y Bruno el camión. Código QR con video-lectura y dibujos para colorear.",
+      "vol2Title": "Las Aventuras de la Construcción — Colección Vol. 2",
+      "vol2Pitch": "Incluye 4 historias: Benny y las monedas romanas, Nina la hormigonera, Rino la apisonadora y Leo y el herrerillo. Código QR con extras exclusivos.",
+      "ctaEpisodes": "Explorar los episodios"
+    },
+    "scienzaPage": {
+      "badge": "Divulgación científica · 7–12 años",
+      "heroTitle": "¡Einstein, te perdiste esto!",
+      "heroSubtitle": "De Clara Musicco. ¡55 aventuras en la ciencia actual | 55 descubrimientos reales! Dinosaurios con plumas, agujeros negros, robots y el portal secreto de Otto.",
+      "featuresTitle": "Qué hace único a este libro",
+      "featuresSubtitle": "Una obra que une una narración viva con el rigor verificado de revistas y universidades científicas mundiales.",
+      "feat1Title": "55 Descubrimientos Verificados",
+      "feat1Desc": "De las ondas gravitacionales al telescopio James Webb, dinosaurios e inteligencia animal: historias reales referenciadas (SC-01 a SC-55).",
+      "feat2Title": "La Mascota Otto",
+      "feat2Desc": "Un pulpo curioso e irónico con tres corazones y nueve cerebros que guía a los pequeños lectores con humor y claridad.",
+      "feat3Title": "Portal Secreto Exclusivo",
+      "feat3Desc": "El código QR del libro abre un mundo interactivo con 7 simulaciones 3D, videoteca, museo virtual y tarjetas recortables.",
+      "secretOttoTitle": "El mundo secreto de Otto",
+      "secretOttoDesc": "El libro termina, ¡los descubrimientos no! A través del portal secreto por QR, explora el Museo, simulaciones 3D y juegos familiares.",
+      "qrExclusive": "🔒 Accesible mediante el código QR exclusivo impreso en el libro",
+      "lookInsideSample": "Hojear muestra interior"
+    },
+    "colorarePage": {
+      "badge": "Creatividad & Color · 5–10 años",
+      "heroTitle": "Fano con la nariz hacia arriba",
+      "heroSubtitle": "De Marco Salucci. El libro para colorear con más de 40 láminas originales, laberintos y datos históricos sobre la ciudad romana de Vitruvio.",
+      "featuresTitle": "Colorear, descubrir, aprender",
+      "featuresSubtitle": "Un álbum en gran formato diseñado para combinar la calma del dibujo con el valor cultural del descubrimiento.",
+      "feat1Title": "Más de 40 Láminas",
+      "feat1Desc": "Dibujos hechos a mano listos para colorear en papel grueso y resistente.",
+      "feat2Title": "Historia y Monumentos",
+      "feat2Desc": "El Arco de Augusto, la Basílica de Vitruvio, el Carnaval y el puerto explicados con divertidas anécdotas para niños.",
+      "feat3Title": "Juegos y Actividades",
+      "feat3Desc": "Laberintos, acertijos y busca las diferencias para ejercitar la concentración y la motricidad fina."
+    },
+    "scuolaPage": {
+      "badge": "Nueva Colección Didáctica · En Preparación",
+      "heroTitle": "Para la escuela",
+      "heroSubtitle": "Materiales de aprendizaje, ejercicios y retos lógicos para afianzar competencias escolares con entusiasmo, claridad y método.",
+      "compassTitle": "La Brújula Misteriosa",
+      "compassSubtitle": "Próximamente para el nuevo curso escolar",
+      "projectDesc": "Un proyecto pedagógico de Clara Musicco para convertir las asignaturas en una aventura emocionante.",
+      "subjectMath": "Asignatura: Matemáticas",
+      "grade2": "Curso: 2º de Primaria",
+      "age78": "Edad: 7–8 años",
+      "authorClara": "Autora: Clara Musicco",
+      "bookMath2Title": "La Brújula Misteriosa — Matemáticas 2º Primaria",
+      "bookMath2Desc": "El tomo de 2º de primaria aborda los números hasta el 100, cálculo mental, problemas ilustrados y orientación espacial mediante divertidos enigmas.",
+      "whatInside": "Qué encontrarán los niños:",
+      "featExercises": "Ejercicios progresivos",
+      "featVisual": "Enfoque visual",
+      "featSolutions": "Soluciones guiadas",
+      "statusInWork": "En preparación — Muy pronto en Amazon"
     }
   },
   "nl": {
@@ -2530,7 +3185,8 @@
       "colorare": "Kleuren & Creëren",
       "about": "Over ons",
       "menuToggle": "Hoofdmenu",
-      "closeMenu": "Menu sluiten"
+      "closeMenu": "Menu sluiten",
+      "reviews": "Wat ouders zeggen"
     },
     "hero": {
       "badge": "Kinderboeken Uitgeverij",
@@ -2543,8 +3199,21 @@
       "eyebrow": "Onze Werelden",
       "title": "Ontdek onze boekenwerelden",
       "subtitle": "Vier thematische series om de verbeelding, wetenschappelijke nieuwsgierigheid en creativiteit te prikkelen.",
-      "exploreBtn": "Ontdek de serie",
-      "comingSoonBadge": "Binnenkort beschikbaar"
+      "exploreBtn": "Ontdek de boeken",
+      "comingSoonBadge": "Binnenkort beschikbaar",
+      "cantiereTitle": "Bouwplaats Avonturen",
+      "cantiereDesc": "Benny, Rudy, Leo, Bruno, Nina en Rino. Geïllustreerde rijmverhalen over vriendschap en grote machines.",
+      "cantiereAlt": "Bouwplaats Avonturen: Benny de graafmachine, Rudy de bulldozer en Nina de betonmolen",
+      "scienzaTitle": "Wetenschap & Nieuwsgierigheid",
+      "scienzaDesc": "Einstein, dinosauriërs, de ruimte en natuurwonderen gebaseerd op echt wetenschappelijk onderzoek.",
+      "scienzaAlt": "Wetenschap en Nieuwsgierigheid: mascotte Otto met telescoop en planeten",
+      "scuolaTitle": "Voor School",
+      "scuolaDesc": "Het Mystieke Kompas: logische puzzels, basisschool rekenen en inspirerende oefeningen.",
+      "scuolaAlt": "Voor School: Mira, Leo en Peperino met het mystieke kompas",
+      "creativitaTitle": "Kleur & Creativiteit",
+      "creativitaDesc": "Kleurboeken vol unieke tekeningen, doolhoven, spelletjes en culturele ontdekkingen.",
+      "creativitaAlt": "Kleur en Creativiteit: kinderen die het historische plein inkleuren",
+      "discoverProject": "Ontdek de boeken"
     },
     "featured": {
       "eyebrow": "Uitgelicht",
@@ -2570,15 +3239,16 @@
       "viewBooks": "Bekijk boeken"
     },
     "brand": {
-      "eyebrow": "CSA Books Kids",
+      "eyebrow": "CSA Books 4 Kids",
       "title": "Verhalen ontstaan in het hart van een gezin",
-      "text1": "CSA Books Kids is ontstaan uit de wens om bijzondere kinderboeken te maken die verwondering wekken en waardevolle voorleesmomenten creëren.",
+      "text1": "CSA Books 4 Kids is ontstaan uit de wens om bijzondere kinderboeken te maken die verwondering wekken en waardevolle voorleesmomenten creëren.",
       "text2": "Van stoere bouwplaatsvoertuigen voor de kleintjes tot fascinerende wetenschap voor oudere kinderen: elk boek is met liefde en zorg ontworpen.",
-      "ctaAbout": "Ontdek ons verhaal"
+      "ctaAbout": "Ontdek ons verhaal",
+      "authorsRole": "De auteurs van CSA Books 4 Kids"
     },
     "catalog": {
       "eyebrow": "Volledige Catalogus",
-      "title": "Alle CSA Books Kids Titels",
+      "title": "Alle CSA Books 4 Kids Titels",
       "subtitle": "Blader door onze complete catalogus, filter op categorie of leeftijd en ontdek de beschikbare edities.",
       "filterCategory": "Categorie",
       "filterAge": "Leeftijd",
@@ -2617,7 +3287,7 @@
       "eyebrow": "Over Ons",
       "title": "Passie voor boeken, authentieke verhalen en liefde voor leren",
       "subtitle": "Een onafhankelijke kinderboekenuitgeverij gewijd aan de groei en nieuwsgierigheid van kinderen.",
-      "intro": "Achter elk boek van CSA Books Kids schuilt een warm verhaal van ouders en auteurs die waardevolle, prachtig geïllustreerde verhalen willen delen met jonge lezers.",
+      "intro": "Achter elk boek van CSA Books 4 Kids schuilt een warm verhaal van ouders en auteurs die waardevolle, prachtig geïllustreerde verhalen willen delen met jonge lezers.",
       "marcoTitle": "Marco Salucci",
       "marcoRole": "Auteur van «Bouwplaats Avonturen» en «Fano met de neus omhoog»",
       "marcoBio": "Bedenker van Bouwplaats Avonturen. Marco vertaalde de fascinatie van zijn zoontje voor graafmachines en kranen naar een internationale reeks vrolijke prentenboeken.",
@@ -2631,17 +3301,30 @@
       "val2Desc": "Illustraties vol warmte en detail die de leeservaring verrijken.",
       "val3Title": "Positieve Waarden",
       "val3Desc": "Vriendschap, samenwerking, zorg voor de natuur en liefde voor ontdekken.",
-      "galleryTitle": "Van gezinsinspiratie naar het gedrukte boek"
+      "galleryTitle": "Van gezinsinspiratie naar het gedrukte boek",
+      "roleAuthorCreator": "Auteur & Bedenker",
+      "roleAuthorScience": "Auteur & Wetenschapscommunicator",
+      "originsTitle": "Het ontstaan van de verhalen",
+      "originsSubtitle": "Authentieke foto's uit het begin: samen middagen doorbrengen met kijken naar bouwplaatsen en dierbare voorleesmomenten.",
+      "cantiereBooksBtn": "De Bouwplaatsboeken",
+      "fanoBookBtn": "Fano met de neus in de lucht",
+      "scienceBooksBtn": "Wetenschapsboeken",
+      "schoolBooksBtn": "Voor school"
     },
     "footer": {
-      "brandPitch": "CSA Books Kids is een onafhankelijke kinderuitgeverij voor prentenboeken, populairwetenschappelijke ontdekkingen, schoolvaardigheden en creativiteit.",
+      "brandPitch": "CSA Books 4 Kids is een onafhankelijke kinderuitgeverij voor prentenboeken, populairwetenschappelijke ontdekkingen, schoolvaardigheden en creativiteit.",
       "navTitle": "Verkennen",
       "legalTitle": "Informatie",
       "contactsTitle": "Contact",
-      "rights": "© 2026 CSA Books Kids. Alle rechten voorbehouden.",
+      "rights": "© 2026 CSA Books 4 Kids. Alle rechten voorbehouden.",
       "privacy": "Privacybeleid",
       "terms": "Gebruiksvoorwaarden",
-      "permanentQr": "Permanente QR-code pagina's uit de boeken"
+      "permanentQr": "Permanente QR-code pagina's uit de boeken",
+      "amazonDisclaimer": "Gegarandeerde officiële aankopen exclusief op Amazon in paperbackeditie.",
+      "cantierePitch": "De Bouwplaats Avonturen van Marco Salucci.",
+      "scienzaPitch": "Wetenschap & Verwondering collectie van Clara Musicco.",
+      "colorarePitch": "Kleur- en knutselcollectie van Marco Salucci.",
+      "scuolaPitch": "Educatieve en leerserie van CSA Books 4 Kids."
     },
     "common": {
       "loading": "Laden…",
@@ -2651,7 +3334,99 @@
       "notFoundText": "De opgevraagde pagina bestaat niet of is verplaatst.",
       "backHome": "Terug naar Home",
       "externalLink": "Opent de productpagina op Amazon in een nieuw tabblad",
-      "langSelector": "Website Taal"
+      "langSelector": "Website Taal",
+      "redirecting": "Bezig met doorsturen...",
+      "redirectingDesc": "We openen de pagina van je boek. Als je niet binnen enkele seconden wordt doorgestuurd, klik dan op de onderstaande knop."
+    },
+    "reviews": {
+      "title": "Wat ouders zeggen",
+      "subtitle": "Authentieke Amazon-recensies over de boeken van De Bouwplaats Avonturen",
+      "badge": "Geverifieerde Recensies",
+      "ratingLabel": "Beoordeling: ",
+      "amazonSource": "Amazon-recensie",
+      "prevAria": "Vorige recensies",
+      "nextAria": "Volgende recensies"
+    },
+    "cantierePage": {
+      "badge": "Originele serie · 2–5 jaar",
+      "heroTitle": "De Bouwplaats Avonturen",
+      "heroSubtitle": "De populaire prentenboekenreeks van Marco Salucci: rijmverhalen, grote machines en onvergetelijke lessen in vriendschap, samenwerking en respect voor de natuur.",
+      "ctaRaccolte": "Ontdek verzamelbundels Vol. 1 & 2",
+      "ctaCharacters": "De Personages",
+      "raccolteTitle": "Vier complete verhalen in elk deel",
+      "raccolteSubtitle": "Speciale grootformaat edities (21,5 × 28 cm) met rijmteksten, luxe paperback en gratis multimedia QR-codes.",
+      "episodesTitle": "Alle 8 losse afleveringen",
+      "episodesSubtitle": "Alle 8 geïllustreerde rijmverhalen voor kinderen van 2–5 jaar. Kleurrijke verhalen over vriendschap en samenwerking.",
+      "charactersTitle": "Ontmoet de personages",
+      "charactersSubtitle": "Elk voertuig heeft een uniek en positief karakter waarin kinderen zich meteen herkennen.",
+      "bennyTitle": "Benny de graafmachine",
+      "bennyDesc": "Enthousiaste, onvermoeibare graver en trouwe vriend die altijd voor iedereen klaarstaat.",
+      "rudyTitle": "Rudy de bulldozer",
+      "rudyDesc": "Sterk en snel, verzet bergen zand en stenen met aanstekelijke energie.",
+      "leoTitle": "Leo de kraanwagen",
+      "leoDesc": "Vriendelijk en torenhoog, waakt van bovenaf en beschermt nestjes op de bouwplaats.",
+      "brunoTitle": "Bruno de kiepwagen",
+      "brunoDesc": "Stevige vervoerder met een klein hartje, beschermer van de eendenkuikens.",
+      "ninaTitle": "Nina de betonmolen",
+      "ninaDesc": "Slim en vastberaden, mengt het beste beton voor oersterke bruggen.",
+      "rinoTitle": "Rino de wals",
+      "rinoDesc": "Rustig en bedachtzaam, egaliseert het terrein en bewaakt het team 's nachts.",
+      "mediaTitle": "Luister en bekijk de verhalen overal",
+      "watchYouTube": "Bekijk op YouTube",
+      "vol1Title": "De Bouwplaats Avonturen — Bundel Deel 1",
+      "vol1Pitch": "Bevat 4 verhalen: Benny de graafmachine, Rudy de bulldozer, Leo de kraanwagen en Bruno de kiepwagen. QR-code met voorleesvideo en kleurplaten.",
+      "vol2Title": "De Bouwplaats Avonturen — Bundel Deel 2",
+      "vol2Pitch": "Bevat 4 verhalen: Benny en de Romeinse munten, Nina de betonmolen, Rino de wals en Leo en de pimpelmees. QR-code met exclusieve extra's.",
+      "ctaEpisodes": "Ontdek alle afleveringen"
+    },
+    "scienzaPage": {
+      "badge": "Wetenschap voor kinderen · 7–12 jaar",
+      "heroTitle": "Einstein, dit heb je gemist!",
+      "heroSubtitle": "Van Clara Musicco. 55 avonturen in de hedendaagse wetenschap | 55 echte ontdekkingen! Gevederde dino's, zwarte gaten, robots en Otto's geheime portaal.",
+      "featuresTitle": "Wat dit boek uniek maakt",
+      "featuresSubtitle": "Een levendig verteld kinderboek gebaseerd op gecontroleerde bronnen van toonaangevende wetenschappelijke bladen en universiteiten.",
+      "feat1Title": "55 Geverifieerde Ontdekkingen",
+      "feat1Desc": "Van zwaartekrachtsgolven tot de James Webb-telescoop en dierlijke intelligentie: waargebeurde verhalen met bronverwijzingen (SC-01 t/m SC-55).",
+      "feat2Title": "De Mascotte Otto",
+      "feat2Desc": "Een nieuwsgierige inktvis met drie harten en negen breinen die jonge lezers met humor en eenvoud door moeilijke vragen loodst.",
+      "feat3Title": "Exclusief Geheim Portaal",
+      "feat3Desc": "De QR-code in het boek ontgrendelt een interactieve wereld met 7 3D-simulaties, videotheek, virtueel museum en knutselkaarten.",
+      "secretOttoTitle": "De geheime wereld van Otto",
+      "secretOttoDesc": "Het boek is uit, de ontdekkingen gaan door! Verken via de QR-code het virtuele museum, 3D-simulaties en gezelschapsspelletjes.",
+      "qrExclusive": "🔒 Toegankelijk via de exclusieve QR-code in het boek",
+      "lookInsideSample": "Inkijkexemplaar bekijken"
+    },
+    "colorarePage": {
+      "badge": "Creativiteit & Kleur · 5–10 jaar",
+      "heroTitle": "Fano met de neus in de lucht",
+      "heroSubtitle": "Van Marco Salucci. Het kleurboek met meer dan 40 originele tekeningen, doolhoven en historische weetjes over de Romeinse stad van Vitruvius.",
+      "featuresTitle": "Kleuren, ontdekken, leren",
+      "featuresSubtitle": "Een grootformaat album dat rustgevend kleuren combineert met culturele ontdekkingen.",
+      "feat1Title": "Meer dan 40 Platen",
+      "feat1Desc": "Met de hand getekende illustraties op stevig, kwalitatief papier.",
+      "feat2Title": "Geschiedenis & Monumenten",
+      "feat2Desc": "De Boog van Augustus, de basiliek, het carnaval en de haven, op kindermaat verteld.",
+      "feat3Title": "Spelletjes & Activiteiten",
+      "feat3Desc": "Doolhoven, raadsels en zoekplaatjes om concentratie en fijne motoriek te oefenen."
+    },
+    "scuolaPage": {
+      "badge": "Nieuwe Educatieve Reeks · In Voorbereiding",
+      "heroTitle": "Voor school",
+      "heroSubtitle": "Leermiddelen, oefeningen en logische puzzels om schoolvaardigheden met plezier, helderheid en methode te versterken.",
+      "compassTitle": "Het Mystieke Kompas",
+      "compassSubtitle": "Binnenkort beschikbaar voor het nieuwe schooljaar",
+      "projectDesc": "Een pedagogisch project van Clara Musicco om schoolvakken om te toveren in een boeiend avontuur.",
+      "subjectMath": "Vak: Rekenen & Wiskunde",
+      "grade2": "Klas: Groep 4 (2e leerjaar)",
+      "age78": "Leeftijd: 7–8 jaar",
+      "authorClara": "Auteur: Clara Musicco",
+      "bookMath2Title": "Het Mystieke Kompas — Rekenen Groep 4",
+      "bookMath2Desc": "Het deel voor groep 4 behandelt getallen tot 100, hoofdrekenen, verhaaltjessommen en ruimtelijk inzicht aan de hand van motiverende raadsels.",
+      "whatInside": "Wat kinderen ontdekken:",
+      "featExercises": "Opbouwende oefeningen",
+      "featVisual": "Visuele aanpak",
+      "featSolutions": "Stap-voor-stap antwoorden",
+      "statusInWork": "In voorbereiding — Binnenkort op Amazon"
     }
   },
   "pl": {
@@ -2664,7 +3439,8 @@
       "colorare": "Kolorowanki",
       "about": "O nas",
       "menuToggle": "Menu główne",
-      "closeMenu": "Zamknij menu"
+      "closeMenu": "Zamknij menu",
+      "reviews": "Co mówią rodzice"
     },
     "hero": {
       "badge": "Wydawnictwo dla Dzieci",
@@ -2677,8 +3453,21 @@
       "eyebrow": "Nasze Światy",
       "title": "Poznaj nasze serie",
       "subtitle": "Cztery serie stworzone z pasją, by rozwijać wyobraźnię i pasję do wiedzy na każdym etapie rozwoju.",
-      "exploreBtn": "Zobacz serię",
-      "comingSoonBadge": "W przygotowaniu"
+      "exploreBtn": "Odkryj książki",
+      "comingSoonBadge": "W przygotowaniu",
+      "cantiereTitle": "Przygody na Placu Budowy",
+      "cantiereDesc": "Benny, Rudy, Leo, Bruno, Nina i Rino. Rymowane opowieści o przyjaźni, współpracy i maszynach budowlanych.",
+      "cantiereAlt": "Przygody na Placu Budowy: koparka Benny, spychacz Rudy i betoniarka Nina",
+      "scienzaTitle": "Nauka i Ciekawostki",
+      "scienzaDesc": "Einstein, dinozaury, kosmos i niezwykłe tajemnice przyrody poparte prawdziwymi odkryciami naukowymi.",
+      "scienzaAlt": "Nauka i Ciekawostki: maskotka Otto z teleskopem i planetami",
+      "scuolaTitle": "Dla Szkoły",
+      "scuolaDesc": "Tajemniczy Kompas: łamigłówki logiczne, matematyka wczesnoszkolna i ćwiczenia rozwijające myślenie.",
+      "scuolaAlt": "Dla Szkoły: Mira, Leo i Peperino z tajemniczym kompasem",
+      "creativitaTitle": "Kolorowanie i Twórczość",
+      "creativitaDesc": "Kreatywne kolorowanki z autorskimi ilustracjami, labiryntami, grami i ciekawostkami historycznymi.",
+      "creativitaAlt": "Kolorowanie i Twórczość: dzieci rysujące i kolorujące zabytkowy rynek",
+      "discoverProject": "Odkryj książki"
     },
     "featured": {
       "eyebrow": "Polecane",
@@ -2704,15 +3493,16 @@
       "viewBooks": "Przeglądaj książki"
     },
     "brand": {
-      "eyebrow": "CSA Books Kids",
+      "eyebrow": "CSA Books 4 Kids",
       "title": "Historie zrodzone w sercu rodziny",
-      "text1": "Wydawnictwo CSA Books Kids powstało z pragnienia tworzenia pięknych książek dla dzieci, które budzą zachwyt i łączą pokolenia przy wspólnym czytaniu.",
+      "text1": "Wydawnictwo CSA Books 4 Kids powstało z pragnienia tworzenia pięknych książek dla dzieci, które budzą zachwyt i łączą pokolenia przy wspólnym czytaniu.",
       "text2": "Od przygód maszyn budowlanych dla maluchów po fascynującą naukę dla starszaków — każda książka jest tworzona z dbałością o treść i szacunkiem dla dziecka.",
-      "ctaAbout": "Poznaj naszą historię"
+      "ctaAbout": "Poznaj naszą historię",
+      "authorsRole": "Autorzy CSA Books 4 Kids"
     },
     "catalog": {
       "eyebrow": "Pełny Katalog",
-      "title": "Wszystkie tytuły CSA Books Kids",
+      "title": "Wszystkie tytuły CSA Books 4 Kids",
       "subtitle": "Przeglądaj nasz katalog, filtruj według kategorii lub wieku i odkrywaj dostępne wydania językowe.",
       "filterCategory": "Kategoria",
       "filterAge": "Wiek",
@@ -2751,7 +3541,7 @@
       "eyebrow": "O Nas",
       "title": "Pasja wydawnicza, autentyczność i miłość do nauki",
       "subtitle": "Niezależne wydawnictwo dziecięce stworzone, by wspierać rozwój i ciekawość najmłodszych.",
-      "intro": "Za każdą książką CSA Books Kids stoją rodzice i autorzy, którzy pragną dzielić się z dziećmi mądrymi, ciepłymi i wspaniale zilustrowanymi historiami.",
+      "intro": "Za każdą książką CSA Books 4 Kids stoją rodzice i autorzy, którzy pragną dzielić się z dziećmi mądrymi, ciepłymi i wspaniale zilustrowanymi historiami.",
       "marcoTitle": "Marco Salucci",
       "marcoRole": "Autor «Przygód na Placu Budowy» oraz «Fano z nosem do góry»",
       "marcoBio": "Twórca serii Przygody na Placu Budowy. Przekształcił fascynację swojego synka maszynami w rymowane, międzynarodowe bajki uwielbiane przez rodziny.",
@@ -2765,17 +3555,30 @@
       "val2Desc": "Staranne ilustracje pomagające w skupieniu i rozwijające zmysł estetyczny.",
       "val3Title": "Dobre Wartości",
       "val3Desc": "Empatia, współpraca, szacunek dla przyrody i radość ze zdobywania wiedzy.",
-      "galleryTitle": "Od rodzinnej pasji po drukowane strony"
+      "galleryTitle": "Od rodzinnej pasji po drukowane strony",
+      "roleAuthorCreator": "Autor & Twórca",
+      "roleAuthorScience": "Autorka & Popularyzatorka nauki",
+      "originsTitle": "Narodziny opowieści",
+      "originsSubtitle": "Autentyczne zdjęcia z początków: popołudnia spędzone na wspólnym obserwowaniu budowy i cenne chwile czytania.",
+      "cantiereBooksBtn": "Książki z placu budowy",
+      "fanoBookBtn": "Fano z zadartym nosem",
+      "scienceBooksBtn": "Książki o nauce",
+      "schoolBooksBtn": "Dla szkoły"
     },
     "footer": {
-      "brandPitch": "CSA Books Kids to niezależne wydawnictwo dla dzieci: książki obrazkowe, literatura popularnonaukowa, edukacja i kreatywność.",
+      "brandPitch": "CSA Books 4 Kids to niezależne wydawnictwo dla dzieci: książki obrazkowe, literatura popularnonaukowa, edukacja i kreatywność.",
       "navTitle": "Kategorie",
       "legalTitle": "Informacje",
       "contactsTitle": "Kontakt",
-      "rights": "© 2026 CSA Books Kids. Wszelkie prawa zastrzeżone.",
+      "rights": "© 2026 CSA Books 4 Kids. Wszelkie prawa zastrzeżone.",
       "privacy": "Polityka prywatności",
       "terms": "Regulamin",
-      "permanentQr": "Materiały z kodów QR wydrukowanych w książkach"
+      "permanentQr": "Materiały z kodów QR wydrukowanych w książkach",
+      "amazonDisclaimer": "Gwarantowane oficjalne zakupy wyłącznie na Amazon w wydaniu broszurowym.",
+      "cantierePitch": "Przygody na Placu Budowy – Marco Salucci.",
+      "scienzaPitch": "Seria Nauka i ciekawostki – Clara Musicco.",
+      "colorarePitch": "Seria do kolorowania i tworzenia – Marco Salucci.",
+      "scuolaPitch": "Dział edukacji i nauki CSA Books 4 Kids."
     },
     "common": {
       "loading": "Ładowanie…",
@@ -2785,7 +3588,99 @@
       "notFoundText": "Żądana strona nie istnieje lub została przeniesiona.",
       "backHome": "Wróć do strony głównej",
       "externalLink": "Otwiera stronę produktu na Amazon w nowej karcie",
-      "langSelector": "Język strony"
+      "langSelector": "Język strony",
+      "redirecting": "Przekierowywanie...",
+      "redirectingDesc": "Otwieramy stronę Twojej książki. Jeśli przekierowanie nie nastąpi za chwilę, kliknij poniższy przycisk."
+    },
+    "reviews": {
+      "title": "Co mówią rodzice",
+      "subtitle": "Autentyczne recenzje z Amazon o książkach z serii Przygody na Placu Budowy",
+      "badge": "Zweryfikowane Opinie",
+      "ratingLabel": "Ocena: ",
+      "amazonSource": "Opinia z Amazon",
+      "prevAria": "Poprzednie opinie",
+      "nextAria": "Następne opinie"
+    },
+    "cantierePage": {
+      "badge": "Oryginalna seria · 2–5 lat",
+      "heroTitle": "Przygody na Placu Budowy",
+      "heroSubtitle": "Słynna seria ilustrowana Marco Salucciego: rymowane opowieści, wielkie maszyny i niezapomniane lekcje przyjaźni, współpracy oraz szacunku dla natury.",
+      "ctaRaccolte": "Odkryj tomy zbiorcze 1 i 2",
+      "ctaCharacters": "Bohaterowie",
+      "raccolteTitle": "Cztery kompletne opowieści w każdym tomie",
+      "raccolteSubtitle": "Wydania specjalne w dużym formacie (21,5 × 28 cm) z rymowanym tekstem, miękką oprawą wysokiej jakości i kodami QR z multimediami.",
+      "episodesTitle": "Wszystkie 8 pojedynczych opowiadań",
+      "episodesSubtitle": "Wszystkie 8 rymowanych książeczek z obrazkami dla dzieci w wieku 2–5 lat. Ciepłe historie o przyjaźni i współpracy.",
+      "charactersTitle": "Poznaj bohaterów",
+      "charactersSubtitle": "Każdy pojazd ma wyjątkowy charakter, z którym dzieci od razu się utożsamiają.",
+      "bennyTitle": "Benny koparka",
+      "bennyDesc": "Pełna entuzjazmu koparka i wierny przyjaciel gotowy pomóc każdemu.",
+      "rudyTitle": "Rudy spychacz",
+      "rudyDesc": "Silny i szybki spychacz, który z uśmiechem przenosi góry piasku.",
+      "leoTitle": "Leo dźwig",
+      "leoDesc": "Łagodny olbrzym, który czuwa z góry i troskliwie chroni gniazda ptaków.",
+      "brunoTitle": "Bruno wywrotka",
+      "brunoDesc": "Krzepka ciężarówka o wielkim sercu, obrońca małych kaczuszek.",
+      "ninaTitle": "Nina betoniarka",
+      "ninaDesc": "Pomysłowa i zdeterminowana, miesza idealny beton pod bezpieczne mosty.",
+      "rinoTitle": "Rino walec",
+      "rinoDesc": "Spokojny i rozważny walec drogowy, który nocą czuwa nad całą ekipą.",
+      "mediaTitle": "Słuchaj i oglądaj historie wszędzie",
+      "watchYouTube": "Oglądaj na YouTube",
+      "vol1Title": "Przygody na Placu Budowy — Tom 1",
+      "vol1Pitch": "Zawiera 4 opowieści: Benny koparka, Rudy spychacz, Leo dźwig i Bruno wywrotka. Kod QR z wideo-czytaniem i kolorowankami.",
+      "vol2Title": "Przygody na Placu Budowy — Tom 2",
+      "vol2Pitch": "Zawiera 4 opowieści: Benny i rzymskie monety, Nina betoniarka, Rino walec oraz Leo i sikorka. Kod QR z ekskluzywnymi dodatkami.",
+      "ctaEpisodes": "Odkryj wszystkie opowiadania"
+    },
+    "scienzaPage": {
+      "badge": "Popularyzacja nauki · 7–12 lat",
+      "heroTitle": "Einstein, to cię ominęło!",
+      "heroSubtitle": "Clara Musicco. 55 przygód w dzisiejszej nauce | 55 prawdziwych odkryć! Pierzaste dinozaury, czarne dziury, roboty i sekretny portal ośmiornicy Otto.",
+      "featuresTitle": "Co wyróżnia tę książkę",
+      "featuresSubtitle": "Dzieło łączące barwną narrację z rzetelnością największych światowych czasopism i uczelni naukowych.",
+      "feat1Title": "55 Potwierdzonych Odkryć",
+      "feat1Desc": "Od fal grawitacyjnych po teleskop Webba, od dinozaurów po inteligencję zwierząt: prawdziwe historie ze źródłami (SC-01 do SC-55).",
+      "feat2Title": "Maskotka Otto",
+      "feat2Desc": "Ciekawska ośmiornica o trzech sercach i dziewięciu mózgach, która w przystępny i dowcipny sposób objaśnia trudne zjawiska.",
+      "feat3Title": "Sekretny Portal Multimedialny",
+      "feat3Desc": "Kod QR w książce otwiera dostęp do 7 symulacji 3D, filmów, wirtualnego muzeum z paszportem i kart do wycinania.",
+      "secretOttoTitle": "Tajemniczy świat Otto",
+      "secretOttoDesc": "Książka się skończyła, ale odkrycia nie! Dzięki portalowi QR dzieci mogą badać Muzeum, symulacje 3D i pobierać gry rodzinne.",
+      "qrExclusive": "🔒 Dostępne przez ekskluzywny kod QR wydrukowany w książce",
+      "lookInsideSample": "Zobacz fragment książki"
+    },
+    "colorarePage": {
+      "badge": "Kreatywność i kolory · 5–10 lat",
+      "heroTitle": "Fano z zadartym nosem",
+      "heroSubtitle": "Marco Salucci. Kolorowanka z ponad 40 autorskimi planszami, labiryntami i ciekawostkami o rzymskim mieście Witruwiusza.",
+      "featuresTitle": "Koloruj, odkrywaj, poznawaj",
+      "featuresSubtitle": "Wielkoformatowy album łączący relaks z wartościową wiedzą o historii i architekturze.",
+      "feat1Title": "Ponad 40 Plansz",
+      "feat1Desc": "Ręcznie rysowane ilustracje na grubym papierze odpornym na pisaki i kredki.",
+      "feat2Title": "Historia i Zabytki",
+      "feat2Desc": "Łuk Augusta, bazylika Witruwiusza, karnawał i port w pełnych humoru opowiastkach dla dzieci.",
+      "feat3Title": "Gry i Łamigłówki",
+      "feat3Desc": "Labirynty, zagadki i rebusy wspierające koncentrację oraz sprawność manualną."
+    },
+    "scuolaPage": {
+      "badge": "Nowa Seria Edukacyjna · W Przygotowaniu",
+      "heroTitle": "Dla szkoły",
+      "heroSubtitle": "Materiały dydaktyczne, ćwiczenia i zadania logiczne wspierające naukę szkolną w sposób ciekawy, jasny i metodyczny.",
+      "compassTitle": "Tajemniczy Kompas",
+      "compassSubtitle": "Wkrótce na nowy rok szkolny",
+      "projectDesc": "Projekt edukacyjny Clary Musicco zamieniający przedmioty szkolne w fascynującą przygodę.",
+      "subjectMath": "Przedmiot: Matematyka",
+      "grade2": "Klasa: 2. klasa szkoły podstawowej",
+      "age78": "Wiek: 7–8 lat",
+      "authorClara": "Autorka: Clara Musicco",
+      "bookMath2Title": "Tajemniczy Kompas — Matematyka dla 2. klasy",
+      "bookMath2Desc": "Tom dla 2. klasy obejmuje liczby do 100, liczenie w pamięci, zadania z treścią i orientację przestrzenną poprzez pełne zagadek łamigłówki.",
+      "whatInside": "Co znajdą dzieci:",
+      "featExercises": "Stopniowane ćwiczenia",
+      "featVisual": "Podejście wizualne",
+      "featSolutions": "Wskazówki i rozwiązania",
+      "statusInWork": "W przygotowaniu — Wkrótce na Amazon"
     }
   },
   "se": {
@@ -2798,7 +3693,8 @@
       "colorare": "Färglägg & Skapa",
       "about": "Om oss",
       "menuToggle": "Huvudmeny",
-      "closeMenu": "Stäng meny"
+      "closeMenu": "Stäng meny",
+      "reviews": "Vad föräldrar säger"
     },
     "hero": {
       "badge": "Barnboksförlag",
@@ -2811,8 +3707,21 @@
       "eyebrow": "Våra Världar",
       "title": "Utforska våra bokvärldar",
       "subtitle": "Fyra serier skapade för att ge näring åt fantasi, vetenskaplig nyfikenhet och skaparglädje.",
-      "exploreBtn": "Utforska serien",
-      "comingSoonBadge": "Under förberedelse"
+      "exploreBtn": "Upptäck böckerna",
+      "comingSoonBadge": "Under förberedelse",
+      "cantiereTitle": "Byggarbetsplatsens Äventyr",
+      "cantiereDesc": "Benny, Rudy, Leo, Bruno, Nina och Rino. Rimmade berättelser om vänskap, samarbete och stora fordon.",
+      "cantiereAlt": "Byggarbetsplatsens Äventyr: grävskopan Benny, schaktmaskinen Rudy och cementblandaren Nina",
+      "scienzaTitle": "Vetenskap & Nyfikenhet",
+      "scienzaDesc": "Einstein, dinosaurier, rymden och naturens mysterier baserade på verklig vetenskaplig forskning.",
+      "scienzaAlt": "Vetenskap och Nyfikenhet: maskoten Otto med teleskop och planeter",
+      "scuolaTitle": "För Skolan",
+      "scuolaDesc": "Den Mystiska Kompassen: klurig logik, grundskolematte och pedagogiska verktyg som väcker nyfikenhet.",
+      "scuolaAlt": "För Skolan: Mira, Leo och Peperino med den mystiska kompassen",
+      "creativitaTitle": "Måla & Skapa",
+      "creativitaDesc": "Kreativa målarböcker med originalillustrationer, labyrinter, pyssel och kulturhistoriska upptäckter.",
+      "creativitaAlt": "Måla och Skapa: barn som tecknar och färglägger det historiska torget",
+      "discoverProject": "Upptäck böckerna"
     },
     "featured": {
       "eyebrow": "I Fokus",
@@ -2838,15 +3747,16 @@
       "viewBooks": "Se böckerna"
     },
     "brand": {
-      "eyebrow": "CSA Books Kids",
+      "eyebrow": "CSA Books 4 Kids",
       "title": "Berättelser skapade med familjevärme",
-      "text1": "CSA Books Kids föddes ur önskan att skapa bilderböcker som väcker förundran och bjuder in till mysiga lässtunder tillsammans.",
+      "text1": "CSA Books 4 Kids föddes ur önskan att skapa bilderböcker som väcker förundran och bjuder in till mysiga lässtunder tillsammans.",
       "text2": "Från småbarnens favoritmaskiner på bygget till modern vetenskap för nyfikna skolbarn: varje bok görs med stor omsorg och respekt för barnet.",
-      "ctaAbout": "Läs vår historia"
+      "ctaAbout": "Läs vår historia",
+      "authorsRole": "Författarna till CSA Books 4 Kids"
     },
     "catalog": {
       "eyebrow": "Hela Katalogen",
-      "title": "Alla CSA Books Kids Böcker",
+      "title": "Alla CSA Books 4 Kids Böcker",
       "subtitle": "Bläddra i hela vårt sortiment, filtrera på kategori eller ålder och upptäck alla språkutgåvor.",
       "filterCategory": "Kategori",
       "filterAge": "Rekommenderad ålder",
@@ -2885,7 +3795,7 @@
       "eyebrow": "Om Oss",
       "title": "Bokpassion, äkta historier och glädjen att lära",
       "subtitle": "Ett oberoende barnboksförlag dedikerat till barns växande och nyfikenhet.",
-      "intro": "Bakom varje CSA Books Kids-bok finns föräldrar och författare som brinner för att skapa meningsfulla, varma och vackert illustrerade böcker för barn.",
+      "intro": "Bakom varje CSA Books 4 Kids-bok finns föräldrar och författare som brinner för att skapa meningsfulla, varma och vackert illustrerade böcker för barn.",
       "marcoTitle": "Marco Salucci",
       "marcoRole": "Författare till «Byggarbetsplatsens Äventyr» och «Fano med näsan i vädret»",
       "marcoBio": "Skaparen av Byggarbetsplatsens Äventyr. Marco inspirerades av sin sons passion för grävmaskiner och kranar och skapade en uppskattad internationell serie.",
@@ -2899,17 +3809,30 @@
       "val2Desc": "Bilder skapade för att engagera barnets fantasi och underlätta läsförståelsen.",
       "val3Title": "Goda Värderingar",
       "val3Desc": "Empati, samarbete, naturvård och glädjen i att upptäcka nytt.",
-      "galleryTitle": "Från familjeinspiration till tryckt bok"
+      "galleryTitle": "Från familjeinspiration till tryckt bok",
+      "roleAuthorCreator": "Författare & Skapare",
+      "roleAuthorScience": "Författare & Vetenskapsförmedlare",
+      "originsTitle": "Hur berättelserna föddes",
+      "originsSubtitle": "Autentiska fotografier från början: eftermiddagar tillsammans vid byggarbetsplatser och värdefulla stunder av gemensam läsning.",
+      "cantiereBooksBtn": "Byggarbetsplatsens böcker",
+      "fanoBookBtn": "Fano med näsan i vädret",
+      "scienceBooksBtn": "Vetenskapsböcker",
+      "schoolBooksBtn": "För skolan"
     },
     "footer": {
-      "brandPitch": "CSA Books Kids är ett oberoende barnboksförlag med bilderböcker, populärvetenskap, skolförberedelse och kreativt skapande.",
+      "brandPitch": "CSA Books 4 Kids är ett oberoende barnboksförlag med bilderböcker, populärvetenskap, skolförberedelse och kreativt skapande.",
       "navTitle": "Utforska",
       "legalTitle": "Information",
       "contactsTitle": "Kontakt",
-      "rights": "© 2026 CSA Books Kids. Alla rättigheter förbehållna.",
+      "rights": "© 2026 CSA Books 4 Kids. Alla rättigheter förbehållna.",
       "privacy": "Integritetspolicy",
       "terms": "Användarvillkor",
-      "permanentQr": "Område för tryckta permanenta QR-koder"
+      "permanentQr": "Område för tryckta permanenta QR-koder",
+      "amazonDisclaimer": "Garanterade officiella köp exklusivt på Amazon i pocketutgåva.",
+      "cantierePitch": "Byggarbetsplatsens Äventyr av Marco Salucci.",
+      "scienzaPitch": "Vetenskap och upptäckter av Clara Musicco.",
+      "colorarePitch": "Målar- och pysselserie av Marco Salucci.",
+      "scuolaPitch": "Pedagogisk och lärande serie av CSA Books 4 Kids."
     },
     "common": {
       "loading": "Laddar…",
@@ -2919,7 +3842,99 @@
       "notFoundText": "Sidan du söker finns inte eller har flyttats.",
       "backHome": "Tillbaka till startsidan",
       "externalLink": "Öppnar produktsidan på Amazon i en ny flik",
-      "langSelector": "Webbplatsens språk"
+      "langSelector": "Webbplatsens språk",
+      "redirecting": "Omdirigerar...",
+      "redirectingDesc": "Vi öppnar sidan för din bok. Om du inte omdirigeras automatiskt inom några sekunder, klicka på knappen nedan."
+    },
+    "reviews": {
+      "title": "Vad föräldrar säger",
+      "subtitle": "Autentiska Amazon-recensioner om Byggarbetsplatsens Äventyr-böckerna",
+      "badge": "Verifierade Recensioner",
+      "ratingLabel": "Betyg: ",
+      "amazonSource": "Amazon-recension",
+      "prevAria": "Föregående recensioner",
+      "nextAria": "Nästa recensioner"
+    },
+    "cantierePage": {
+      "badge": "Originalserie · 2–5 år",
+      "heroTitle": "Byggarbetsplatsens Äventyr",
+      "heroSubtitle": "Den hyllade bilderboksserien av Marco Salucci: berättelser på rim, stora fordon och oförglömliga lärdomar om vänskap, samarbete och respekt för naturen.",
+      "ctaRaccolte": "Upptäck samlingsvolymerna Vol. 1 & 2",
+      "ctaCharacters": "Karaktärerna",
+      "raccolteTitle": "Fyra kompletta berättelser i varje volym",
+      "raccolteSubtitle": "Speciella storformatsutgåvor (21,5 × 28 cm) med rimtexter, högkvalitativt mjukband och multimedia-QR-koder som gåva.",
+      "episodesTitle": "Alla 8 enskilda avsnitt",
+      "episodesSubtitle": "Alla 8 illustrerade rimmade berättelser för barn 2–5 år. Vackra berättelser om vänskap och samarbete.",
+      "charactersTitle": "Träffa karaktärerna",
+      "charactersSubtitle": "Varje fordon har en unik personlighet som barn omedelbart känner igen sig i.",
+      "bennyTitle": "Grävskopan Benny",
+      "bennyDesc": "Entusiastisk, outtröttlig grävare och trogen vän som gärna hjälper alla.",
+      "rudyTitle": "Schaktmaskinen Rudy",
+      "rudyDesc": "Stark och snabb, flyttar sandberg och sten med smittande glädje.",
+      "leoTitle": "Kranbilen Leo",
+      "leoDesc": "Vänlig och väldig, vakar från ovan och skyddar fågelbon på arbetsplatsen.",
+      "brunoTitle": "Lastbilen Bruno",
+      "brunoDesc": "Rejäl dumper med ett varmt hjärta, beskyddare av små ankungar.",
+      "ninaTitle": "Betongbilen Nina",
+      "ninaDesc": "Klurig och målmedveten, blandar perfekt betong för att bygga trygga broar.",
+      "rinoTitle": "Vältbilen Rino",
+      "rinoDesc": "Lugn och eftertänksam vägvält som jämnar till marken och vakar över teamet på natten.",
+      "mediaTitle": "Lyssna och titta på berättelserna överallt",
+      "watchYouTube": "Se på YouTube",
+      "vol1Title": "Byggarbetsplatsens Äventyr — Samlingsvolym 1",
+      "vol1Pitch": "Innehåller 4 berättelser: Grävskopan Benny, Schaktmaskinen Rudy, Kranbilen Leo och Lastbilen Bruno. QR-kod med videouppläsning och målarbilder.",
+      "vol2Title": "Byggarbetsplatsens Äventyr — Samlingsvolym 2",
+      "vol2Pitch": "Innehåller 4 berättelser: Benny och de romerska mynten, Betongbilen Nina, Vältbilen Rino och Leo och blåmesen. QR-kod med exklusiva bonusar.",
+      "ctaEpisodes": "Upptäck alla avsnitt"
+    },
+    "scienzaPage": {
+      "badge": "Vetenskap för barn · 7–12 år",
+      "heroTitle": "Einstein, det här missade du!",
+      "heroSubtitle": "Av Clara Musicco. 55 äventyr i modern vetenskap | 55 sanna upptäckter! Fjäderklädda dinosaurier, svarta hål, robotar och bläckfisken Ottos hemliga portal.",
+      "featuresTitle": "Vad som gör boken unik",
+      "featuresSubtitle": "Ett verk som förenar livfullt berättande med verifierad fakta från världsledande vetenskapliga tidskrifter och universitet.",
+      "feat1Title": "55 Verifierade Upptäckter",
+      "feat1Desc": "Från gravitationsvågor till James Webb-teleskopet och djurens intelligens: sanna berättelser med källhänvisningar (SC-01 till SC-55).",
+      "feat2Title": "Maskoten Otto",
+      "feat2Desc": "En nyfiken, humoristisk bläckfisk med tre hjärtan och nio hjärnor som förklarar komplexa gåtor enkelt och lekfullt.",
+      "feat3Title": "Exklusiv Hemlig Portal",
+      "feat3Desc": "QR-koden i boken öppnar en interaktiv värld med 7 3D-simuleringar, videor, museum med upptäckarpass och pysselkort.",
+      "secretOttoTitle": "Ottos hemliga värld",
+      "secretOttoDesc": "Boken tar slut, men inte upptäckterna! Via QR-portalen kan barn utforska museet, 3D-simuleringar och familjespel.",
+      "qrExclusive": "🔒 Tillgänglig via exklusiv QR-kod tryckt i boken",
+      "lookInsideSample": "Bläddra i smakprov"
+    },
+    "colorarePage": {
+      "badge": "Kreativitet & Färg · 5–10 år",
+      "heroTitle": "Fano med näsan i vädret",
+      "heroSubtitle": "Av Marco Salucci. Målarboken med över 40 handtecknade planscher, labyrinter och historiska kuriosa om den romerska staden.",
+      "featuresTitle": "Måla, upptäck, lär",
+      "featuresSubtitle": "Ett storformatsalbum skapat för att förena avkopplande skapande med kulturella upptäckter.",
+      "feat1Title": "Över 40 Planscher",
+      "feat1Desc": "Detaljerade handteckningar redo att färgläggas på tjockt kvalitetspapper.",
+      "feat2Title": "Historia & Monument",
+      "feat2Desc": "Augustusbågen, Vitruvius basilika, karnevalen och hamnen berättade med roliga anekdoter.",
+      "feat3Title": "Pyssel & Klurigheter",
+      "feat3Desc": "Labyrinter, gåtor och finn-fem-fel som tränar fokus och finmotorik."
+    },
+    "scuolaPage": {
+      "badge": "Ny Pedagogisk Serie · Under Förberedelse",
+      "heroTitle": "För skolan",
+      "heroSubtitle": "Läromedel, övningar och logiska klurigheter för att stärka skolkunskaper med glädje, klarhet och metod.",
+      "compassTitle": "Den Mystiska Kompassen",
+      "compassSubtitle": "Kommer snart inför det nya läsåret",
+      "projectDesc": "Ett pedagogiskt projekt av Clara Musicco som gör skolämnen till ett fängslande äventyr.",
+      "subjectMath": "Ämne: Matematik",
+      "grade2": "Årskurs: Åk 2",
+      "age78": "Ålder: 7–8 år",
+      "authorClara": "Författare: Clara Musicco",
+      "bookMath2Title": "Den Mystiska Kompassen — Matematik Åk 2",
+      "bookMath2Desc": "Boken för årskurs 2 tränar tal upp till 100, huvudräkning, textuppgifter och rumsuppfattning genom roliga mysterier.",
+      "whatInside": "Vad barnen får uppleva:",
+      "featExercises": "Stegvisa övningar",
+      "featVisual": "Visuellt lärande",
+      "featSolutions": "Guidade facit",
+      "statusInWork": "Under förberedelse — Snart på Amazon"
     }
   },
   "jp": {
@@ -2932,7 +3947,8 @@
       "colorare": "ぬりえ・クリエイティブ",
       "about": "出版社について",
       "menuToggle": "メインメニュー",
-      "closeMenu": "メニューを閉じる"
+      "closeMenu": "メニューを閉じる",
+      "reviews": "読者の声・レビュー"
     },
     "hero": {
       "badge": "こども向け絵本レーベル",
@@ -2945,8 +3961,21 @@
       "eyebrow": "私たちの絵本世界",
       "title": "4つの出版コレクション",
       "subtitle": "子どもの成長と好奇心に寄り添う、個性豊かな4つの絵本シリーズ。",
-      "exploreBtn": "シリーズを見る",
-      "comingSoonBadge": "準備中"
+      "exploreBtn": "本を見る",
+      "comingSoonBadge": "準備中",
+      "cantiereTitle": "工事現場の冒険",
+      "cantiereDesc": "ベニー、ルディ、レオ、ブルーノ、ニーナ、リノ。働く車たちの友情と成長を描いた絵本シリーズ。",
+      "cantiereAlt": "工事現場の冒険：ショベルカーのベニー、ブルドーザーのルディ、ミキサー車のニーナ",
+      "scienzaTitle": "科学と好奇心",
+      "scienzaDesc": "アインシュタイン、恐竜、宇宙、自然の驚異を本物の科学的根拠に基づいて探究する物語。",
+      "scienzaAlt": "科学と好奇心：望遠鏡と惑星に囲まれたタコのオットー",
+      "scuolaTitle": "学習・学校",
+      "scuolaDesc": "ふしぎなコンパス：論理的思考力を鍛える算数パズルと楽しい学習アクティビティ。",
+      "scuolaAlt": "学習・学校：ミラ、レオ、ペペリーノとふしぎなコンパス",
+      "creativitaTitle": "ぬりえ・工作",
+      "creativitaDesc": "手描きの美しいイラスト、迷路、クイズ、文化の発見が詰まった楽しいぬりえ絵本。",
+      "creativitaAlt": "ぬりえ・工作：歴史ある広場で絵を描いて色をぬる子どもたち",
+      "discoverProject": "本を見る"
     },
     "featured": {
       "eyebrow": "注目タイトル",
@@ -2972,15 +4001,16 @@
       "viewBooks": "絵本をみる"
     },
     "brand": {
-      "eyebrow": "CSA Books Kids",
+      "eyebrow": "CSA Books 4 Kids",
       "title": "家族のぬくもりから生まれた絵本たち",
-      "text1": "CSA Books Kidsは、子どもたちの知的好奇心と豊かな心を育む特別な絵本を届けたいという想いから誕生しました。",
+      "text1": "CSA Books 4 Kidsは、子どもたちの知的好奇心と豊かな心を育む特別な絵本を届けたいという想いから誕生しました。",
       "text2": "工事現場の車たちの心温まる物語から、本格的な科学の探究ブックまで、一冊一冊丁寧に心を込めて制作しています。",
-      "ctaAbout": "私たちの歩みを見る"
+      "ctaAbout": "私たちの歩みを見る",
+      "authorsRole": "CSA Books 4 Kidsの著者"
     },
     "catalog": {
       "eyebrow": "公式カタログ",
-      "title": "CSA Books Kids 全作品カタログ",
+      "title": "CSA Books 4 Kids 全作品カタログ",
       "subtitle": "出版ラインナップをカテゴリや対象年齢で絞り込んでご覧いただけます。",
       "filterCategory": "カテゴリー",
       "filterAge": "対象年齢",
@@ -3019,7 +4049,7 @@
       "eyebrow": "出版社について",
       "title": "出版への情熱、本物の物語、そして学ぶ喜び",
       "subtitle": "子どもの成長と好奇心を支えるインディペンデントな児童書レーベル。",
-      "intro": "CSA Books Kidsのすべての本の背景には、子どもたちに楽しく価値ある読書体験を届けたいと願う親とクリエイターたちの想いがあります。",
+      "intro": "CSA Books 4 Kidsのすべての本の背景には、子どもたちに楽しく価値ある読書体験を届けたいと願う親とクリエイターたちの想いがあります。",
       "marcoTitle": "マルコ・サルッチ (Marco Salucci)",
       "marcoRole": "「工事現場の冒険」シリーズおよび「ファーノを見上げて」著者",
       "marcoBio": "「工事現場の冒険」シリーズの生みの親。息子の工事車両への純粋な情熱から着想を得て、世界中で愛される絵本シリーズを執筆。",
@@ -3033,17 +4063,30 @@
       "val2Desc": "読書の楽しさを引き立て、豊かな感性を育む魅力的なイラストレーション。",
       "val3Title": "育むメッセージ",
       "val3Desc": "友情、助け合い、自然環境への愛を物語の核に据えています。",
-      "galleryTitle": "家族のインスピレーションから絵本へ"
+      "galleryTitle": "家族のインスピレーションから絵本へ",
+      "roleAuthorCreator": "著者＆クリエイター",
+      "roleAuthorScience": "著者＆サイエンスコミュニケーター",
+      "originsTitle": "物語の誕生",
+      "originsSubtitle": "原点となった本物の写真：工事現場を一緒に眺めて過ごした午後と、家族で本を読んだかけがえのない時間。",
+      "cantiereBooksBtn": "工事現場の絵本",
+      "fanoBookBtn": "見上げてごらんファーノの街",
+      "scienceBooksBtn": "科学の絵本",
+      "schoolBooksBtn": "学習・学校向け"
     },
     "footer": {
-      "brandPitch": "CSA Books Kidsは絵本、科学普及、学習支援、創造的アクティビティを手がける児童書レーベルです。",
+      "brandPitch": "CSA Books 4 Kidsは絵本、科学普及、学習支援、創造的アクティビティを手がける児童書レーベルです。",
       "navTitle": "ナビゲーション",
       "legalTitle": "インフォメーション",
       "contactsTitle": "お問い合わせ",
-      "rights": "© 2026 CSA Books Kids. 無断転載を禁じます。",
+      "rights": "© 2026 CSA Books 4 Kids. 無断転載を禁じます。",
       "privacy": "プライバシーポリシー",
       "terms": "利用規約",
-      "permanentQr": "書籍掲載QRコード専用コンテンツ"
+      "permanentQr": "書籍掲載QRコード専用コンテンツ",
+      "amazonDisclaimer": "Amazon限定ペーパーバック版の公式保証付き購入。",
+      "cantierePitch": "マルコ・サルッチによる工事現場のぼうけんシリーズ。",
+      "scienzaPitch": "クララ・ムシッコによる科学と好奇心シリーズ。",
+      "colorarePitch": "マルコ・サルッチによるぬりえと創作シリーズ。",
+      "scuolaPitch": "CSA Books 4 Kidsの教育・学習シリーズ。"
     },
     "common": {
       "loading": "読み込み中…",
@@ -3053,8 +4096,238 @@
       "notFoundText": "お探しのページは存在しないか、移動した可能性があります。",
       "backHome": "ホームへ戻る",
       "externalLink": "新しいタブでAmazon商品ページを開きます",
-      "langSelector": "表示言語"
+      "langSelector": "表示言語",
+      "redirecting": "転送中…",
+      "redirectingDesc": "書籍ページを開いています。数秒後に自動転送されない場合は、下のボタンを押してください。"
+    },
+    "reviews": {
+      "title": "読者の声・レビュー",
+      "subtitle": "工事現場のぼうけんシリーズに寄せられたAmazonの公式レビュー",
+      "badge": "確認済みレビュー",
+      "ratingLabel": "評価: ",
+      "amazonSource": "Amazonレビュー",
+      "prevAria": "前のレビュー",
+      "nextAria": "次のレビュー"
+    },
+    "cantierePage": {
+      "badge": "オリジナルシリーズ · 2〜5歳",
+      "heroTitle": "工事現場のぼうけん",
+      "heroSubtitle": "マルコ・サルッチによる人気の絵本シリーズ：リズミカルな韻を踏んだ物語、働く車たち、そして友情・協力・自然への思いやりを描いた心温まるストーリー。",
+      "ctaRaccolte": "コレクション第1巻・第2巻を見る",
+      "ctaCharacters": "キャラクター紹介",
+      "raccolteTitle": "各巻に4つの完全な物語を収録",
+      "raccolteSubtitle": "大判サイズ（21.5×28cm）、上質なペーパーバック、特典のQRコード付きマルチメディアコンテンツを収録した特別版。",
+      "episodesTitle": "全8巻の個別エピソード",
+      "episodesSubtitle": "2〜5歳の子どもたちのための、8つの絵本シリーズ。友情と協力の心温まる物語。",
+      "charactersTitle": "なかまたちの紹介",
+      "charactersSubtitle": "どの車も個性的で前向きなキャラクターで、子どもたちにすぐに親しまれます。",
+      "bennyTitle": "ショベルカーのベニー",
+      "bennyDesc": "いつも元気いっぱいで頼もしい掘削機。困っている仲間を決して見捨てません。",
+      "rudyTitle": "ブルドーザーのルディ",
+      "rudyDesc": "力持ちで素早く、山のような砂や石を楽しそうに運ぶ明るいブルドーザー。",
+      "leoTitle": "クレーン車のレオ",
+      "leoDesc": "背が高くて心優しいクレーン車。高いところから現場の小鳥の巣を温かく見守ります。",
+      "brunoTitle": "ダンプカーのブルーノ",
+      "brunoDesc": "頑丈で力持ちだけど心優しいダンプカー。小さなカモの親子を大切に守ります。",
+      "ninaTitle": "ミキサー車のニーナ",
+      "ninaDesc": "機転が利きしっかり者。安全な橋を作るための完璧なコンクリートを練り上げます。",
+      "rinoTitle": "ロードローラーのリノ",
+      "rinoDesc": "物静かで落ち着いたロードローラー。夜通し地面を平らに整え、仲間を見守ります。",
+      "mediaTitle": "いつでもどこでも物語を楽しもう",
+      "watchYouTube": "YouTubeで見る",
+      "vol1Title": "工事現場のぼうけん — コレクション第1巻",
+      "vol1Pitch": "4つの物語を収録：ショベルカーのベニー、ブルドーザーのルディ、クレーン車のレオ、ダンプカーのブルーノ。読み聞かせ動画とぬりえのQRコード付き。",
+      "vol2Title": "工事現場のぼうけん — コレクション第2巻",
+      "vol2Pitch": "4つの物語を収録：ベニーとローマのコイン、ミキサー車のニーナ、ロードローラーのリノ、レオとシジュウカラ。限定特典付きQRコード収録。",
+      "ctaEpisodes": "すべてのエピソードを見る"
+    },
+    "scienzaPage": {
+      "badge": "子どものための科学 · 7〜12歳",
+      "heroTitle": "アインシュタイン、これを見逃したね！",
+      "heroSubtitle": "クララ・ムシッコ著。現代科学の55の冒険｜55の驚くべき本物の発見！羽毛恐竜、ブラックホール、ロボット、そしてタコのオットーの秘密ポータル。",
+      "featuresTitle": "この本ならではの魅力",
+      "featuresSubtitle": "生き生きとした物語と、世界の主要な科学誌や大学の研究に基づいた確かな内容を両立した一冊。",
+      "feat1Title": "55の実証された発見",
+      "feat1Desc": "重力波からジェイムズ・ウェッブ宇宙望遠鏡、羽毛恐竜、動物の知能まで：科学的出典（SC-01〜SC-55）付きの真実の物語。",
+      "feat2Title": "マスコットのオットー",
+      "feat2Desc": "3つの心臓と9つの脳を持つ好奇心旺盛でユーモラスなタコ。難しい科学の疑問を楽しく分かりやすく案内します。",
+      "feat3Title": "限定シークレットポータル",
+      "feat3Desc": "本に印刷されたQRコードから、7つの3Dシミュレーション、動画、パスポート付き仮想博物館、印刷用カードが楽しめます。",
+      "secretOttoTitle": "オットーの秘密の世界",
+      "secretOttoDesc": "本を読み終えても発見は終わりません！QRコードの秘密ポータルから、不可能の科学博物館や3D物理シミュレーションを体験できます。",
+      "qrExclusive": "🔒 本に印刷された限定QRコードからアクセス",
+      "lookInsideSample": "サンプルページを見る"
+    },
+    "colorarePage": {
+      "badge": "創造力と色彩 · 5〜10歳",
+      "heroTitle": "見上げてごらんファーノの街",
+      "heroSubtitle": "マルコ・サルッチ著。40枚以上のオリジナル手描きイラスト、迷路、歴史トリビアで古代ローマの街を探検するぬりえ絵本。",
+      "featuresTitle": "ぬりえで発見し、学ぶ",
+      "featuresSubtitle": "絵を描くリラックスした楽しさと、文化的な発見の喜びを組み合わせた大判アルバム。",
+      "feat1Title": "40枚以上の手描き原画",
+      "feat1Desc": "色鉛筆やマーカーで塗るのに最適な、厚手で丈夫な上質紙に描かれた精密なイラスト。",
+      "feat2Title": "歴史とモニュメント",
+      "feat2Desc": "アウグストゥスの凱旋門、ウィトルウィウスのバシリカ、カーニバルや港の物語を子ども向けに紹介。",
+      "feat3Title": "ゲームとアクティビティ",
+      "feat3Desc": "集中力と手先の器用さを育む迷路、クイズ、間違い探しパズルを多数収録。"
+    },
+    "scuolaPage": {
+      "badge": "新しい学習シリーズ · 刊行準備中",
+      "heroTitle": "学習・学校向け",
+      "heroSubtitle": "確かな自信と知的好奇心を育む、わかりやすく体系的な学習教材・思考力パズルシリーズ。",
+      "compassTitle": "ふしぎなコンパス",
+      "compassSubtitle": "新学期に向けてまもなく登場",
+      "projectDesc": "教科の勉強をワクワクする冒険へと変える、クララ・ムシッコによる新しい教育プロジェクト。",
+      "subjectMath": "教科：算数・数学",
+      "grade2": "対象学年：小学2年生",
+      "age78": "対象年齢：7〜8歳",
+      "authorClara": "著者：クララ・ムシッコ",
+      "bookMath2Title": "ふしぎなコンパス — 小学2年生の算数",
+      "bookMath2Desc": "100までの数、暗算、文章題、図形と空間認識を、謎解きストーリーを通して楽しく無理なく学びます。",
+      "whatInside": "本書の特長：",
+      "featExercises": "ステップアップ練習問題",
+      "featVisual": "視覚的で直感的な解説",
+      "featSolutions": "丁寧なガイド付き解答",
+      "statusInWork": "刊行準備中 — まもなくAmazonにて発売"
     }
   }
 };
+  window.CSA_AMAZON_REVIEWS = [
+  {
+    "reviewer": "Stefania Omiccioli",
+    "rating": 5,
+    "text": {
+      "it": "Momenti di sano divertimento e riflessioni condivise coi più piccoli. La lettura ideale per cementare il legame d'affetto tra genitori e figli, all'insegna della leggerezza, ma anche dei primi intelligenti approcci ai grandi temi della vita. Consigliatissimo!!",
+      "en": "Moments of wholesome fun and shared reflections with the little ones. The ideal read to strengthen the bond of affection between parents and children, filled with lightness, but also the first smart approaches to the great themes of life. Highly recommended!!",
+      "de": "Momente des gesunden Vergnügens und gemeinsame Gedanken mit den Kleinen. Die ideale Lektüre, um das Band der Zuneigung zwischen Eltern und Kindern zu stärken – geprägt von Leichtigkeit, aber auch ersten klugen Annäherungen an die großen Themen des Lebens. Wärmstens empfohlen!!",
+      "fr": "Des moments de pur plaisir et de réflexions partagées avec les plus petits. La lecture idéale pour cimenter le lien d'affection entre parents et enfants, placée sous le signe de la légèreté, mais aussi des premières approches intelligentes des grands thèmes de la vie. Vivement recommandé !!",
+      "es": "Momentos de sana diversión y reflexiones compartidas con los más pequeños. La lectura ideal para fortalecer el vínculo de afecto entre padres e hijos, marcada por la ligereza, pero también por los primeros acercamientos inteligentes a los grandes temas de la vida. ¡¡Muy recomendado!!",
+      "nl": "Momenten van gezond plezier en gedeelde reflecties met de kleintjes. De ideale lectuur om de band van genegenheid tussen ouders en kinderen te versterken, in het teken van luchtigheid, maar ook van de eerste slimme benaderingen van de grote levensthema's. Zeer aanbevolen!!",
+      "pl": "Chwile zdrowej zabawy i wspólnych refleksji z najmłodszymi. Idealna lektura, by zacieśnić więź miłości między rodzicami a dziećmi, pełna lekkości, ale też pierwszego mądrego podejścia do wielkich tematów życia. Gorąco polecam!!",
+      "sv": "Stunder av sund glädje och gemensam eftertanke med de små. Den perfekta läsningen för att stärka bandet av kärlek mellan föräldrar och barn, präglad av lätthet, men också de första kloka närmandena till livets stora frågor. Rekommenderas varmt!!",
+      "ja": "子どもたちと一緒に楽しむ健全な時間と、心を通わせる語らいのひととき。親子の絆を深めるのにぴったりの絵本で、軽やかな楽しさの中に、人生の大切なテーマへの知的な第一歩が詰まっています。心からおすすめします！！",
+      "se": "Stunder av sund glädje och gemensam eftertanke med de små. Den perfekta läsningen för att stärka bandet av kärlek mellan föräldrar och barn, präglad av lätthet, men också de första kloka närmandena till livets stora frågor. Rekommenderas varmt!!",
+      "jp": "子どもたちと一緒に楽しむ健全な時間と、心を通わせる語らいのひととき。親子の絆を深めるのにぴったりの絵本で、軽やかな楽しさの中に、人生の大切なテーマへの知的な第一歩が詰まっています。心からおすすめします！！"
+    }
+  },
+  {
+    "reviewer": "Michele L.",
+    "rating": 5,
+    "text": {
+      "it": "Per stimolare la curiosità. Bellissimo libro, un po' diverso dal solito perché fa approcciare alla storia in maniera divertente e che incuriosisce i piccoli. La mia bimba di 4 anni dopo averlo finito ha chiesto se la portavamo a vedere gli scavi a Roma!! Consigliatissimo, lettura bella e non pesante, adatto dai 2 anni, illustrazioni molto belle!!",
+      "en": "To stimulate curiosity. Beautiful book, a little different from usual because it approaches history in a fun way that intrigues the little ones. My 4-year-old girl, after finishing it, asked if we could take her to see the excavations in Rome!! Highly recommended, lovely and light reading, suitable from 2 years old, very beautiful illustrations!!",
+      "de": "Um die Neugier zu wecken. Wunderschönes Buch, ein wenig anders als gewohnt, weil es auf unterhaltsame Weise an die Geschichte heranführt und die Kleinen neugierig macht. Meine 4-jährige Tochter fragte nach dem Lesen, ob wir sie zu den Ausgrabungen nach Rom mitnehmen könnten!! Wärmstens empfohlen, schöne und leichte Lektüre, geeignet ab 2 Jahren, sehr schöne Illustrationen!!",
+      "fr": "Pour stimuler la curiosité. Magnifique livre, un peu différent de l'ordinaire car il aborde l'histoire de manière amusante et pique la curiosité des petits. Ma petite fille de 4 ans, après l'avoir terminé, a demandé si on pouvait l'emmener voir les fouilles à Rome !! Vivement recommandé, lecture belle et légère, adapté dès 2 ans, très belles illustrations !!",
+      "es": "Para estimular la curiosidad. Hermoso libro, un poco diferente a lo habitual porque acerca a la historia de una forma divertida que despierta la curiosidad de los más pequeños. ¡¡Mi niña de 4 años, después de terminarlo, preguntó si la llevábamos a ver las excavaciones a Roma!! Muy recomendado, lectura amena y no pesada, apto a partir de los 2 años, ¡¡ilustraciones preciosas!!",
+      "nl": "Om de nieuwsgierigheid te prikkelen. Prachtig boek, net even anders dan gewoonlijk omdat het op een leuke manier naar de geschiedenis toeleidt en de kleintjes nieuwsgierig maakt. Mijn 4-jarige dochter vroeg na het uitlezen of we haar mee konden nemen naar de opgravingen in Rome!! Zeer aanbevolen, fijn en niet te zwaar om te lezen, geschikt vanaf 2 jaar, hele mooie illustraties!!",
+      "pl": "Żeby rozbudzić ciekawość. Przepiękna książka, nieco inna niż zwykle, bo przybliża historię w zabawny sposób, który ciekawi maluchy. Moja 4-letnia córeczka po jej skończeniu zapytała, czy zabierzemy ją zobaczyć wykopaliska w Rzymie!! Gorąco polecam, wspaniała i lekka lektura, odpowiednia od 2 lat, bardzo piękne ilustracje!!",
+      "sv": "För att väcka nyfikenheten. Jättefin bok, lite annorlunda än vanligt eftersom den närmar sig historien på ett roligt sätt som fångar barnens intresse. Min 4-åriga flicka frågade efter att ha läst ut den om vi kunde ta med henne för att titta på utgrävningarna i Rom!! Rekommenderas varmt, fin och lättläst, passar från 2 år, jättefina illustrationer!!",
+      "ja": "好奇心を刺激するために。普段とはひと味違う素晴らしい本で、楽しく子どもたちの興味を惹きつけながら歴史に触れさせてくれます。4歳の娘は読み終えた後、「ローマの発掘現場を見に連れて行って！」と聞いてきました！！ 心からおすすめ、美しく読みやすい内容で、2歳から楽しめ、イラストもとても綺麗です！！",
+      "se": "För att väcka nyfikenheten. Jättefin bok, lite annorlunda än vanligt eftersom den närmar sig historien på ett roligt sätt som fångar barnens intresse. Min 4-åriga flicka frågade efter att ha läst ut den om vi kunde ta med henne för att titta på utgrävningarna i Rom!! Rekommenderas varmt, fin och lättläst, passar från 2 år, jättefina illustrationer!!",
+      "jp": "好奇心を刺激するために。普段とはひと味違う素晴らしい本で、楽しく子どもたちの興味を惹きつけながら歴史に触れさせてくれます。4歳の娘は読み終えた後、「ローマの発掘現場を見に連れて行って！」と聞いてきました！！ 心からおすすめ、美しく読みやすい内容で、2歳から楽しめ、イラストもとても綺麗です！！"
+    }
+  },
+  {
+    "reviewer": "Edoardo Gattei",
+    "rating": 5,
+    "text": {
+      "it": "Super!! Consigliata da un amico, questa collana si è rivelata una piacevolissima sorpresa. Mio figlio adora tutti i personaggi e la lettura di questi libri è entrata a far parte del nostro rituale della nanna! Un must have per tutti i bimbi amanti dei libri e appassionati di ruspe/ trattori ...",
+      "en": "Super!! Recommended by a friend, this series turned out to be a delightful surprise. My son loves all the characters and reading these books has become part of our bedtime routine! A must-have for all little ones who love books and are passionate about bulldozers/tractors...",
+      "de": "Super!! Von einem Freund empfohlen, hat sich diese Reihe als eine äußerst erfreuliche Überraschung erwiesen. Mein Sohn liebt alle Charaktere und das Lesen dieser Bücher ist Teil unseres Einschlafrituals geworden! Ein Must-have für alle Kinder, die Bücher lieben und von Baggern/Traktoren begeistert sind ...",
+      "fr": "Super !! Conseillée par un ami, cette collection s'est avérée être une très agréable surprise. Mon fils adore tous les personnages et la lecture de ces livres fait désormais partie de notre rituel du coucher ! Un must-have pour tous les petits amateurs de livres et passionnés de pelleteuses/tracteurs...",
+      "es": "¡¡Súper!! Recomendada por un amigo, esta colección resultó ser una sorpresa muy agradable. ¡A mi hijo le encantan todos los personajes y la lectura de estos libros se ha convertido en parte de nuestro ritual para ir a dormir! Un imprescindible para todos los niños amantes de los libros y apasionados de las excavadoras/tractores...",
+      "nl": "Super!! Aanbevolen door een vriend, bleek deze reeks een buitengewoon aangename verrassing. Mijn zoon is dol op alle personages en het lezen van deze boeken is vast onderdeel van ons bedtijdritueel geworden! Een must-have voor alle kindjes die van boeken houden en dol zijn op graafmachines/tractoren...",
+      "pl": "Super!! Polecona przez znajomego, ta seria okazała się przemiłą niespodzianką. Mój syn uwielbia wszystkich bohaterów, a czytanie tych książeczek stało się częścią naszego rytuału zasypiania! Obowiązkowa pozycja dla wszystkich dzieci kochających książki i zafascynowanych koparkami/traktorami...",
+      "sv": "Super!! Rekommenderad av en vän, den här serien visade sig vara en mycket trevlig överraskning. Min son älskar alla karaktärer och läsningen av dessa böcker har blivit en del av vår godnattsrutin! Ett måste för alla barn som älskar böcker och är förtjusta i grävskopor/traktorer...",
+      "ja": "最高です！！ 友人に勧められて購入しましたが、このシリーズは嬉しい驚きでした。息子はすべてのキャラクターが大好きで、この本を読むことが寝かしつけの習慣になりました！ 絵本が好きなお子さんや、ショベルカーやトラクターが大好きな子どもたちには必携の一冊です……",
+      "se": "Super!! Rekommenderad av en vän, den här serien visade sig vara en mycket trevlig överraskning. Min son älskar alla karaktärer och läsningen av dessa böcker har blivit en del av vår godnattsrutin! Ett måste för alla barn som älskar böcker och är förtjusta i grävskopor/traktorer...",
+      "jp": "最高です！！ 友人に勧められて購入しましたが、このシリーズは嬉しい驚きでした。息子はすべてのキャラクターが大好きで、この本を読むことが寝かしつけの習慣になりました！ 絵本が好きなお子さんや、ショベルカーやトラクターが大好きな子どもたちには必携の一冊です……"
+    }
+  },
+  {
+    "reviewer": "chiara",
+    "rating": 5,
+    "text": {
+      "it": "Papere da salvare. Libro molto carino per imparare a rispettare gli animali che ci circondano e che i bambini vedono nella loro quotidianità, da educatrice apprezzo libri del genere. Facile e comprensibile, con immagini utili alla comprensione dei più piccoli, e scrittura in stampato maiuscolo per i più grandi.",
+      "en": "Ducks to rescue. Very sweet book for learning to respect the animals around us that children see in their daily lives; as an educator, I truly appreciate books of this kind. Easy and understandable, with images that help little ones comprehend, and uppercase print text for older children.",
+      "de": "Enten zu retten. Sehr schönes Buch, um den Respekt vor den Tieren zu lernen, die uns umgeben und die Kinder in ihrem Alltag sehen; als Erzieherin schätze ich solche Bücher sehr. Leicht und verständlich, mit Bildern, die den Kleinsten beim Verstehen helfen, und Druckschrift in Großbuchstaben für die Größeren.",
+      "fr": "Des canards à sauver. Très joli livre pour apprendre à respecter les animaux qui nous entourent et que les enfants voient dans leur quotidien ; en tant qu'éducatrice, j'apprécie beaucoup ce genre de livres. Facile et compréhensible, avec des images utiles à la compréhension des plus petits, et une écriture en majuscules d'imprimerie pour les plus grands.",
+      "es": "Patos para salvar. Libro muy bonito para aprender a respetar a los animales que nos rodean y que los niños ven en su vida cotidiana; como educadora, aprecio mucho libros de este tipo. Fácil y comprensible, con imágenes útiles para la comprensión de los más pequeños, y letra mayúscula de imprenta para los más grandes.",
+      "nl": "Eendjes om te redden. Heel lief boekje om respect te leren voor de dieren om ons heen die kinderen in hun dagelijks leven zien; als opvoedster waardeer ik dit soort boeken enorm. Eenvoudig en begrijpelijk, met illustraties die kleintjes helpen het verhaal te begrijpen, en hoofdletters in blokschrift voor de grotere kinderen.",
+      "pl": "Kaczuszki do uratowania. Bardzo ładna książeczka do nauki szacunku dla zwierząt, które nas otaczają i które dzieci widzą na co dzień; jako pedagożka bardzo cenię tego typu książki. Prosta i zrozumiała, z ilustracjami pomagającymi w zrozumieniu najmłodszym i drukowanymi dużymi literami dla starszaków.",
+      "sv": "Änder att rädda. Mycket fin bok för att lära sig respektera djuren runt omkring oss som barnen möter i sin vardag; som pedagog uppskattar jag verkligen sådana här böcker. Lätt och begriplig, med bilder som underlättar förståelsen för de minsta, och text i versaler för de lite äldre.",
+      "ja": "助けを待つアヒルたち。子どもたちが日常で目にする身近な動物たちを大切にする心を育てる、とても素敵な絵本です。教育関係者として、こうした絵本を高く評価しています。わかりやすく読みやすい内容で、小さな子の理解を助ける絵と、少し大きくなった子のための読みやすい文字が使われています。",
+      "se": "Änder att rädda. Mycket fin bok för att lära sig respektera djuren runt omkring oss som barnen möter i sin vardag; som pedagog uppskattar jag verkligen sådana här böcker. Lätt och begriplig, med bilder som underlättar förståelsen för de minsta, och text i versaler för de lite äldre.",
+      "jp": "助けを待つアヒルたち。子どもたちが日常で目にする身近な動物たちを大切にする心を育てる、とても素敵な絵本です。教育関係者として、こうした絵本を高く評価しています。わかりやすく読みやすい内容で、小さな子の理解を助ける絵と、少し大きくなった子のための読みやすい文字が使われています。"
+    }
+  },
+  {
+    "reviewer": "Martina",
+    "rating": 5,
+    "text": {
+      "it": "CONSIGLIATISSIMO. Primo che abbiamo preso della collana, li prenderemo tutti! Semplice e intuitivo, mio figlio lo adora!",
+      "en": "HIGHLY RECOMMENDED. First one we got from the series, we will get them all! Simple and intuitive, my son loves it!",
+      "de": "WÄRMSTENS EMPFOHLEN. Das erste, das wir aus der Reihe gekauft haben, wir werden sie alle holen! Einfach und intuitiv, mein Sohn liebt es!",
+      "fr": "VIVEMENT RECOMMANDÉ. Le premier que nous achetons dans la collection, nous allons tous les prendre ! Simple et intuitif, mon fils l'adore !",
+      "es": "MUY RECOMENDADO. El primero que compramos de la colección, ¡nos haremos con todos! Sencillo e intuitivo, ¡a mi hijo le encanta!",
+      "nl": "ZEER AANBEVOLEN. De eerste die we van de reeks hebben gekocht, we gaan ze allemaal halen! Eenvoudig en intuïtief, mijn zoon is er dol op!",
+      "pl": "GORĄCO POLECAM. Pierwsza, którą kupiliśmy z tej serii, kupimy wszystkie! Prosta i intuicyjna, mój syn ją uwielbia!",
+      "sv": "REKOMMENDERAS VARMT. Den första vi köpte ur serien, vi kommer att köpa alla! Enkel och intuitiv, min son älskar den!",
+      "ja": "心からおすすめ。シリーズで最初に手にした1冊ですが、全部揃えるつもりです！ シンプルで直感的にわかりやすく、息子も夢中になっています！",
+      "se": "REKOMMENDERAS VARMT. Den första vi köpte ur serien, vi kommer att köpa alla! Enkel och intuitiv, min son älskar den!",
+      "jp": "心からおすすめ。シリーズで最初に手にした1冊ですが、全部揃えるつもりです！ シンプルで直感的にわかりやすく、息子も夢中になっています！"
+    }
+  },
+  {
+    "reviewer": "Mattia B.",
+    "rating": 5,
+    "text": {
+      "it": "Colorato e divertente. La mia bimba di 20 mesi ha gradito il regalo, disegni curati e storia divertente per i bambini.",
+      "en": "Colorful and fun. My 20-month-old girl enjoyed the gift, well-crafted drawings and a fun story for children.",
+      "de": "Farbenfroh und unterhaltsam. Meiner 20 Monate alten Tochter hat das Geschenk gefallen, liebevolle Zeichnungen und eine lustige Geschichte für Kinder.",
+      "fr": "Coloré et amusant. Ma petite fille de 20 mois a beaucoup apprécié le cadeau, des dessins soignés et une histoire amusante pour les enfants.",
+      "es": "Colorido y divertido. A mi niña de 20 meses le gustó el regalo, dibujos cuidados y una historia divertida para los niños.",
+      "nl": "Kleurrijk en leuk. Mijn 20 maanden oude dochter vond het een geweldig cadeau, verzorgde tekeningen en een leuk verhaal voor kinderen.",
+      "pl": "Kolorowa i zabawna. Mojej 20-miesięcznej córeczce prezent bardzo się spodobał, staranne rysunki i ciekawa historia dla dzieci.",
+      "sv": "Färgglad och rolig. Min 20 månader gamla flicka uppskattade presenten, fina teckningar och en rolig berättelse för barnen.",
+      "ja": "カラフルで楽しい。20か月の娘はこのプレゼントをとても喜びました。丁寧なイラストと子ども向けの楽しいお話です。",
+      "se": "Färgglad och rolig. Min 20 månader gamla flicka uppskattade presenten, fina teckningar och en rolig berättelse för barnen.",
+      "jp": "カラフルで楽しい。20か月の娘はこのプレゼントをとても喜びました。丁寧なイラストと子ども向けの楽しいお話です。"
+    }
+  },
+  {
+    "reviewer": "Eleonora",
+    "rating": 5,
+    "text": {
+      "it": "Bruno il camion e lo stagno delle papere. Attraverso questa storia emergono diversi temi importanti per la crescita dei bambini, come l'empatia, la solidarietà e il desiderio di aiutare il prossimo. Il racconto trasmette valori positivi e invita il lettore a riflettere sull'importanza della gentilezza e della collaborazione. Inoltre, le immagini sono curate e coinvolgenti: accompagnano il testo, rendono la lettura più piacevole e aiutano a comprendere meglio la storia e le emozioni dei personaggi.",
+      "en": "Bruno the dump truck and the duck pond. Through this story, several important themes for children's growth emerge, such as empathy, solidarity, and the desire to help others. The tale conveys positive values and invites the reader to reflect on the importance of kindness and collaboration. In addition, the illustrations are refined and engaging: they accompany the text, make reading more enjoyable, and help to better understand the story and the emotions of the characters.",
+      "de": "Bruno der Lastwagen und der Ententeich. Durch diese Geschichte kommen verschiedene wichtige Themen für das Heranwachsen von Kindern zum Vorschein, wie Empathie, Solidarität und der Wunsch, anderen zu helfen. Die Erzählung vermittelt positive Werte und lädt dazu ein, über die Bedeutung von Freundlichkeit und Zusammenarbeit nachzudenken. Zudem sind die Bilder liebevoll und fesselnd: Sie begleiten den Text, machen das Lesen angenehmer und helfen, die Geschichte und die Gefühle der Figuren besser zu verstehen.",
+      "fr": "Bruno le camion et la mare aux canards. À travers cette histoire émergent plusieurs thèmes importants pour le développement des enfants, tels que l'empathie, la solidarité et le désir d'aider son prochain. Le récit transmet des valeurs positives et invite le lecteur à réfléchir sur l'importance de la gentillesse et de la collaboration. De plus, les illustrations sont soignées et captivantes : elles accompagnent le texte, rendent la lecture plus agréable et aident à mieux comprendre l'histoire et les émotions des personnages.",
+      "es": "Bruno el camión y el estanque de los patos. A través de este cuento surgen varios temas importantes para el crecimiento de los niños, como la empatía, la solidaridad y el deseo de ayudar al prójimo. El relato transmite valores positivos e invita al lector a reflexionar sobre la importancia de la amabilidad y la colaboración. Además, las ilustraciones son cuidadas y envolventes: acompañan al texto, hacen la lectura más agradable y ayudan a comprender mejor la historia y las emociones de los personajes.",
+      "nl": "Bruno de kiepauto en de eendenvijver. Door dit verhaal komen verschillende belangrijke thema's voor de ontwikkeling van kinderen naar voren, zoals empathie, solidariteit en de wens om anderen te helpen. Het verhaal brengt positieve waarden over en nodigt de lezer uit om na te denken over het belang van vriendelijkheid en samenwerking. Bovendien zijn de illustraties verzorgd en meeslepend: ze vergezellen de tekst, maken het lezen aangenamer en helpen het verhaal en de emoties van de personages beter te begrijpen.",
+      "pl": "Bruno wywrotka i staw z kaczuszkami. Poprzez tę historię wyłania się kilka ważnych tematów dla rozwoju dzieci, takich jak empatia, solidarność i chęć pomocy innym. Opowieść przekazuje pozytywne wartości i zachęca czytelnika do refleksji nad znaczeniem życzliwości i współpracy. Ponadto ilustracje są staranne i wciągające: towarzyszą tekstowi, czynią czytanie przyjemniejszym i pomagają lepiej zrozumieć historię oraz emocje bohaterów.",
+      "sv": "Lastbilen Bruno och ankdammen. Genom den här sagan lyfts flera viktiga teman för barns utveckling fram, såsom empati, solidaritet och viljan att hjälpa andra. Berättelsen förmedlar positiva värderingar och bjuder in läsaren att reflektera över vikten av vänlighet och samarbete. Dessutom är bilderna välgjorda och fängslande: de ackompanjerar texten, gör läsningen mer njutbar och hjälper till att bättre förstå historien och karaktärernas känslor.",
+      "ja": "ダンプカーのブルーノとアヒルの池。この物語を通じて、思いやりや助け合い、他者を助けたいという気持ちなど、子どもの成長に欠かせない数々の大切なテーマが描かれています。前向きな価値観を伝え、優しさと協力の大切さについて考えさせてくれるお話です。さらに、丁寧で魅力的なイラストが文章に寄り添い、読書をより楽しいものにしながら、物語や登場人物の感情への理解を深めてくれます。",
+      "se": "Lastbilen Bruno och ankdammen. Genom den här sagan lyfts flera viktiga teman för barns utveckling fram, såsom empati, solidaritet och viljan att hjälpa andra. Berättelsen förmedlar positiva värderingar och bjuder in läsaren att reflektera över vikten av vänlighet och samarbete. Dessutom är bilderna välgjorda och fängslande: de ackompanjerar texten, gör läsningen mer njutbar och hjälper till att bättre förstå historien och karaktärernas känslor.",
+      "jp": "ダンプカーのブルーノとアヒルの池。この物語を通じて、思いやりや助け合い、他者を助けたいという気持ちなど、子どもの成長に欠かせない数々の大切なテーマが描かれています。前向きな価値観を伝え、優しさと協力の大切さについて考えさせてくれるお話です。さらに、丁寧で魅力的なイラストが文章に寄り添い、読書をより楽しいものにしながら、物語や登場人物の感情への理解を深めてくれます。"
+    }
+  },
+  {
+    "reviewer": "Erdunga",
+    "rating": 5,
+    "text": {
+      "it": "Mio figlio li adora! È incredibile quanto questi libri abbiano aiutato mio figlio a rilassarsi prima di andare a dormire. Leggerli insieme la sera è diventato un momento speciale della nostra routine e lo accompagnano dolcemente verso il sonno. Li adora letteralmente e ogni sera non vede l'ora di sceglierne uno. Li consiglio davvero a chi cerca letture piacevoli e rilassanti per i più piccoli.",
+      "en": "My son loves them! It is incredible how much these books have helped my son relax before going to sleep. Reading them together in the evening has become a special moment of our routine and gently eases him into sleep. He literally adores them and every evening can't wait to pick one. I truly recommend them to anyone looking for pleasant and relaxing reads for the little ones.",
+      "de": "Mein Sohn liebt sie! Es ist unglaublich, wie sehr diese Bücher meinem Sohn geholfen haben, sich vor dem Schlafengehen zu entspannen. Sie abends gemeinsam zu lesen, ist zu einem besonderen Moment unserer Routine geworden und begleitet ihn sanft in den Schlaf. Er liebt sie buchstäblich und kann es jeden Abend kaum erwarten, sich eines auszusuchen. Ich empfehle sie wirklich jedem, der angenehme und entspannende Lektüre für die Kleinen sucht.",
+      "fr": "Mon fils les adore ! C'est incroyable à quel point ces livres ont aidé mon fils à se détendre avant d'aller dormir. Les lire ensemble le soir est devenu un moment privilégié de notre routine et l'accompagne doucement vers le sommeil. Il les adore littéralement et chaque soir, il a hâte d'en choisir un. Je les recommande vivement à tous ceux qui recherchent des lectures agréables et apaisantes pour les plus petits.",
+      "es": "¡Mi hijo los adora! Es increíble cuánto han ayudado estos libros a mi hijo a relajarse antes de ir a dormir. Leerlos juntos por la noche se ha convertido en un momento especial de nuestra rutina y lo acompañan dulcemente hacia el sueño. Literalmente los adora y cada noche está deseando elegir uno. Los recomiendo de verdad a cualquiera que busque lecturas agradables y relajantes para los más pequeños.",
+      "nl": "Mijn zoon is er dol op! Het is ongelooflijk hoeveel deze boeken mijn zoon hebben geholpen om te ontspannen voor het slapengaan. Ze 's avonds samen lezen is een bijzonder moment in onze routine geworden en begeleidt hem zachtjes naar de slaap. Hij is er letterlijk dol op en kan elke avond niet wachten om er eentje te kiezen. Ik raad ze echt aan voor wie op zoek is naar prettige en ontspannende verhalen voor de kleintjes.",
+      "pl": "Mój syn je uwielbia! To niesamowite, jak bardzo te książki pomogły mojemu synowi wyciszyć się przed snem. Wspólne czytanie wieczorem stało się wyjątkową częścią naszej rutyny i łagodnie prowadzi go w stronę snu. Dosłownie je uwielbia i każdego wieczoru nie może się doczekać, aż wybierze jedną z nich. Z całego serca polecam je każdemu, kto szuka przyjemnych i wyciszających lektur dla najmłodszych.",
+      "sv": "Min son älskar dem! Det är otroligt hur mycket de här böckerna har hjälpt min son att varva ner innan han ska sova. Att läsa dem tillsammans på kvällen har blivit en speciell stund i vår rutin och vaggar honom mjukt till sömns. Han fullkomligt älskar dem och ser varje kväll fram emot att välja en. Jag rekommenderar dem verkligen till alla som söker trevlig och lugnande läsning för de små.",
+      "ja": "息子が大のお気に入りです！ この本が寝る前の息子のリラックスにどれほど役立ったか、驚くほどです。夜に一緒に読むことが日課の特別な時間になり、心地よい眠りへと優しく導いてくれます。息子は文字通り夢中になっていて、毎晩どれを読もうか選ぶのが待ちきれない様子です。小さな子のための心地よくリラックスできる本を探している方に、心からおすすめします。",
+      "se": "Min son älskar dem! Det är otroligt hur mycket de här böckerna har hjälpt min son att varva ner innan han ska sova. Att läsa dem tillsammans på kvällen har blivit en speciell stund i vår rutin och vaggar honom mjukt till sömns. Han fullkomligt älskar dem och ser varje kväll fram emot att välja en. Jag rekommenderar dem verkligen till alla som söker trevlig och lugnande läsning för de små.",
+      "jp": "息子が大のお気に入りです！ この本が寝る前の息子のリラックスにどれほど役立ったか、驚くほどです。夜に一緒に読むことが日課の特別な時間になり、心地よい眠りへと優しく導いてくれます。息子は文字通り夢中になっていて、毎晩どれを読もうか選ぶのが待ちきれない様子です。小さな子のための心地よくリラックスできる本を探している方に、心からおすすめします。"
+    }
+  }
+];
 })();

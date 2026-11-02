@@ -24,7 +24,7 @@ async function runTest() {
   console.log('=== TEST: Image Replacement & Zero-Code Maintenance ===');
 
   const targetCover = path.join(__dirname, '..', 'books', 'einstein', 'it', 'cover.png');
-  const targetInterior = path.join(__dirname, '..', 'books', 'einstein', 'it', 'interiors', '06.png');
+  const targetInterior = path.join(__dirname, '..', 'books', 'einstein', 'it', 'interiors', '10.png');
 
   if (!fs.existsSync(targetCover)) {
     throw new Error(`Target cover does not exist: ${targetCover}`);

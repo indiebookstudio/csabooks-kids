@@ -1,0 +1,212 @@
+{
+  "campaign": "Natale 2026",
+  "slides": {
+    "it": [
+      {
+        "id": "01-raccolte",
+        "covers": [
+          "covers/csa-volume-1-it.png",
+          "covers/csa-volume-2-it.png"
+        ],
+        "backgrounds": {
+          "desktop": "backgrounds/01-raccolte-desktop.png",
+          "mobile": "backgrounds/01-raccolte-mobile.png"
+        }
+      },
+      {
+        "id": "02-einstein",
+        "covers": [
+          "covers/einstein-it.png"
+        ],
+        "backgrounds": {
+          "desktop": "backgrounds/02-einstein-desktop.png",
+          "mobile": "backgrounds/02-einstein-mobile.png"
+        }
+      },
+      {
+        "id": "03-collana",
+        "covers": [
+          "covers/csa-it-01.png",
+          "covers/csa-it-02.png",
+          "covers/csa-it-03.png",
+          "covers/csa-it-04.png",
+          "covers/csa-it-05.png",
+          "covers/csa-it-06.png",
+          "covers/csa-it-07.png",
+          "covers/csa-it-08.png",
+          "covers/csa-it-09.png"
+        ],
+        "backgrounds": {
+          "desktop": "backgrounds/03-collana-desktop.png",
+          "mobile": "backgrounds/03-collana-mobile.png"
+        }
+      },
+      {
+        "id": "04-fano",
+        "covers": [
+          "covers/fano-it.png"
+        ],
+        "backgrounds": {
+          "desktop": "backgrounds/04-fano-desktop.png",
+          "mobile": "backgrounds/04-fano-mobile.png"
+        }
+      }
+    ],
+    "en": [
+      {
+        "id": "02-einstein",
+        "covers": [
+          "covers/einstein-en.jpg"
+        ],
+        "backgrounds": {
+          "desktop": "backgrounds/02-einstein-desktop.png",
+          "mobile": "backgrounds/02-einstein-mobile.png"
+        }
+      },
+      {
+        "id": "03-collana",
+        "covers": [
+          "covers/csa-en-01.jpg",
+          "covers/csa-en-02.jpg",
+          "covers/csa-en-03.jpg",
+          "covers/csa-en-04.jpg",
+          "covers/csa-en-05.jpg",
+          "covers/csa-en-06.jpg",
+          "covers/csa-en-07.jpg",
+          "covers/csa-en-08.jpg"
+        ],
+        "backgrounds": {
+          "desktop": "backgrounds/03-collana-desktop.png",
+          "mobile": "backgrounds/03-collana-mobile.png"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "id": "02-einstein",
+        "covers": [
+          "covers/einstein-fr.png"
+        ],
+        "backgrounds": {
+          "desktop": "backgrounds/02-einstein-desktop.png",
+          "mobile": "backgrounds/02-einstein-mobile.png"
+        }
+      },
+      {
+        "id": "03-collana",
+        "covers": [
+          "covers/csa-fr-01.png",
+          "covers/csa-fr-02.png",
+          "covers/csa-fr-03.png"
+        ],
+        "backgrounds": {
+          "desktop": "backgrounds/03-collana-desktop.png",
+          "mobile": "backgrounds/03-collana-mobile.png"
+        }
+      }
+    ]
+  },
+  "sources": {
+    "covers/csa-it-01.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\01.Benny.Collina\\Cover\\v4\\ITA\\Front.Cover.png",
+    "covers/csa-it-02.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\02.Rudy.Spiaggia\\Cover\\v4\\ITA\\Front.Cover.png",
+    "covers/csa-it-03.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\03.Leo.Montagna\\Cover\\v4\\ITA\\Front.Cover.png",
+    "covers/csa-it-04.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\04.Bruno.Papere\\Cover\\v4\\ITA\\Front.Cover.png",
+    "covers/csa-it-05.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\05.Benny.Roma\\Cover\\v4\\ITA\\Front.Cover.png",
+    "covers/csa-it-06.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\06.Nina.Conigli\\Cover\\v4\\ITA\\Front.Cover.png",
+    "covers/csa-it-07.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\07.Rino.Ladri\\Cover\\v4\\ITA\\Front.Cover.png",
+    "covers/csa-it-08.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\08.Leo.Cinciallegra\\Cover\\v4\\ITA\\Front.Cover.png",
+    "covers/csa-it-09.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\09.Leo.Rudy.Savana\\Cover\\ITA\\Front.Cover.png",
+    "covers/csa-en-01.jpg": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\01.Benny.Collina\\Cover\\v4\\ENG\\Front.Cover.jpg",
+    "covers/csa-en-02.jpg": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\02.Rudy.Spiaggia\\Cover\\v4\\ENG\\Front.Cover.jpg",
+    "covers/csa-en-03.jpg": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\03.Leo.Montagna\\Cover\\v4\\ENG\\Front.Cover.jpg",
+    "covers/csa-en-04.jpg": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\04.Bruno.Papere\\Cover\\v4\\ENG\\Front.Cover.jpg",
+    "covers/csa-en-05.jpg": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\05.Benny.Roma\\Cover\\v4\\ENG\\Front.Cover.jpg",
+    "covers/csa-en-06.jpg": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\06.Nina.Conigli\\Cover\\v4\\ENG\\Front.Cover.jpg",
+    "covers/csa-en-07.jpg": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\07.Rino.Ladri\\Cover\\v4\\ENG\\Front.Cover.jpg",
+    "covers/csa-en-08.jpg": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\08.Leo.Cinciallegra\\Cover\\v4\\ENG\\Front.Cover.jpg",
+    "covers/csa-fr-01.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\01.Benny.Collina\\Cover\\v3\\FR\\Front.Cover.png",
+    "covers/csa-fr-02.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\02.Rudy.Spiaggia\\Cover\\v4\\FR\\Front.Cover.png",
+    "covers/csa-fr-03.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\03.Leo.Montagna\\Cover\\v4\\FR\\Front.Cover.png",
+    "covers/einstein-it.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Einstein.Questa.Te.La.Sei.Persa\\Cover\\ITA\\HC\\Front.Page.png",
+    "covers/einstein-en.jpg": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Einstein.Questa.Te.La.Sei.Persa\\Cover\\ENG\\Front.Cover.jpg",
+    "covers/einstein-fr.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Einstein.Questa.Te.La.Sei.Persa\\Cover\\FR\\PB\\Front.Cover.png",
+    "covers/csa-volume-1-it.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\Bundle.Volume.1\\Manoscritto\\ITA\\v2\\Export.PB\\Front.Cover.png",
+    "covers/csa-volume-2-it.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Le.Avventure.Del.Cantiere\\Bundle.Volume.2\\Manoscritto\\ITA\\v2\\Export.PB\\Front.Cover.png",
+    "covers/fano-it.png": "C:\\Users\\Marco\\Desktop\\LIBRI\\Books\\Marco.Salucci\\Fano.Col.Naso.All.Insu\\Cover\\Front.Cover.ITA.png"
+  },
+  "catalogs": {
+    "it": [
+      "covers/csa-it-01.png",
+      "covers/csa-it-02.png",
+      "covers/csa-it-03.png",
+      "covers/csa-it-04.png",
+      "covers/csa-it-05.png",
+      "covers/csa-it-06.png",
+      "covers/csa-it-07.png",
+      "covers/csa-it-08.png",
+      "covers/csa-it-09.png"
+    ],
+    "en": [
+      "covers/csa-en-01.jpg",
+      "covers/csa-en-02.jpg",
+      "covers/csa-en-03.jpg",
+      "covers/csa-en-04.jpg",
+      "covers/csa-en-05.jpg",
+      "covers/csa-en-06.jpg",
+      "covers/csa-en-07.jpg",
+      "covers/csa-en-08.jpg"
+    ],
+    "fr": [
+      "covers/csa-fr-01.png",
+      "covers/csa-fr-02.png",
+      "covers/csa-fr-03.png"
+    ]
+  },
+  "languageRouting": {
+    "it": "it",
+    "en": "en",
+    "fr": "fr",
+    "nl": "en",
+    "pl": "en",
+    "se": "en",
+    "sv": "en",
+    "jp": "en",
+    "ja": "en",
+    "de": "en",
+    "es": "en"
+  },
+  "backgroundDimensions": {
+    "01-raccolte-desktop.png": [
+      2172,
+      724
+    ],
+    "01-raccolte-mobile.png": [
+      1122,
+      1402
+    ],
+    "02-einstein-desktop.png": [
+      2172,
+      724
+    ],
+    "02-einstein-mobile.png": [
+      1122,
+      1402
+    ],
+    "03-collana-desktop.png": [
+      2172,
+      724
+    ],
+    "03-collana-mobile.png": [
+      1122,
+      1402
+    ],
+    "04-fano-desktop.png": [
+      2172,
+      724
+    ],
+    "04-fano-mobile.png": [
+      1122,
+      1402
+    ]
+  }
+}

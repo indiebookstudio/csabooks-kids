@@ -28,11 +28,20 @@ const server = http.createServer((req, res) => {
   const filePath = path.join(__dirname, reqPath);
 
   let targetPath = filePath;
-  if (!fs.existsSync(targetPath) || fs.statSync(targetPath).isDirectory()) {
-    if (fs.existsSync(targetPath + '.html')) {
+  if (!fs.existsSync(targetPath)) {
+    const rawName = path.basename(reqPath);
+    if (fs.existsSync(path.join(__dirname, 'css', rawName))) {
+      targetPath = path.join(__dirname, 'css', rawName);
+    } else if (fs.existsSync(path.join(__dirname, 'js', rawName))) {
+      targetPath = path.join(__dirname, 'js', rawName);
+    } else if (fs.existsSync(targetPath + '.html')) {
       targetPath = targetPath + '.html';
-    } else if (fs.existsSync(path.join(targetPath, 'index.html'))) {
+    }
+  } else if (fs.statSync(targetPath).isDirectory()) {
+    if (fs.existsSync(path.join(targetPath, 'index.html'))) {
       targetPath = path.join(targetPath, 'index.html');
+    } else if (fs.existsSync(targetPath + '.html')) {
+      targetPath = targetPath + '.html';
     }
   }
 

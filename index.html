@@ -12,18 +12,18 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CSA Books Kids — Grandi storie. Piccole scoperte. Libri per bambini</title>
+  <title>CSA Books 4 Kids — Grandi storie. Piccole scoperte. Libri per bambini</title>
 
   <!-- SEO & Social Meta -->
-  <meta name="description" content="CSA Books Kids è un marchio editoriale indipendente dedicato ai bambini: storie illustrate, scienza e curiosità, supporto scolastico e creatività." />
-  <meta name="keywords" content="CSA Books Kids, libri per bambini, Le Avventure del Cantiere, Einstein questa te la sei persa, Clara Musicco, Marco Salucci, libri illustrati, divulgazione scientifica bambini" />
-  <meta name="author" content="CSA Books Kids" />
+  <meta name="description" content="CSA Books 4 Kids è un marchio editoriale indipendente dedicato ai bambini: storie illustrate, scienza e curiosità, supporto scolastico e creatività." />
+  <meta name="keywords" content="CSA Books 4 Kids, libri per bambini, Le Avventure del Cantiere, Einstein questa te la sei persa, Clara Musicco, Marco Salucci, libri illustrati, divulgazione scientifica bambini" />
+  <meta name="author" content="CSA Books 4 Kids" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://csabookskids.com/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="CSA Books Kids — Grandi storie. Piccole scoperte." />
+  <meta property="og:title" content="CSA Books 4 Kids — Grandi storie. Piccole scoperte." />
   <meta property="og:description" content="Libri che fanno immaginare, esplorare, creare e imparare. Storie per bambini, scienza e creatività." />
   <meta property="og:image" content="books/csa-vol1/it/cover.png" />
   <meta property="og:url" content="https://csabookskids.com/" />
@@ -34,8 +34,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="style-2.0.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-2.0.css" />
+  <link rel="stylesheet" href="css/campaign.css" />
 </head>
 <body>
 
@@ -246,7 +247,7 @@
   <!-- Mobile Drawer -->
   <div class="csa-mobile-drawer" id="csa-mobile-drawer">
     <div class="csa-drawer-header">
-      <span class="csa-brand-name">CSA Books <span class="highlight">Kids</span></span>
+      <span class="csa-brand-name">CSA Books <span class="highlight">4 Kids</span></span>
       <button type="button" class="csa-drawer-close" id="csa-drawer-close" aria-label="Chiudi">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
@@ -272,17 +273,24 @@
 
   <main>
     <!-- ======================================================================
-         HERO BANNER CAROUSEL 16:9 (MOSTRATO PER INTERO SENZA TAGLI)
+         HERO CAMPAGNA NATALE 2026 (Attivo per impostazione predefinita)
          ====================================================================== -->
-    <section class="hero-banner" id="hero-banner" aria-label="CSA Books Kids Hero">
+    <div id="christmas-hero-container">
+      <!-- Popolato dinamicamente da campaign.js -->
+    </div>
+
+    <!-- ======================================================================
+         HERO BANNER ORDINARIO DI RIPRISTINO (Mostrato se la campagna è disattivata)
+         ====================================================================== -->
+    <section class="hero-banner" id="hero-banner" aria-label="CSA Books 4 Kids Hero" style="display: none;">
       <div class="hero-banner-wrapper">
-        <div class="hero-banner-container" id="hero-carousel" role="region" aria-roledescription="carousel" aria-label="CSA Books Kids Carousel" tabindex="0">
+        <div class="hero-banner-container" id="hero-carousel" role="region" aria-roledescription="carousel" aria-label="CSA Books 4 Kids Carousel" tabindex="0">
           <!-- Slides Track / Container -->
           <div class="hero-carousel-slides" id="hero-carousel-slides" aria-live="polite">
             <div class="hero-carousel-slide active" data-index="0" role="group" aria-roledescription="slide" aria-label="1 di 13">
               <img 
                 src="assets/banner/banner-csa-books-4-kids.jpg" 
-                alt="CSA Books Kids - Storie per bambini, nate da un papà e una mamma." 
+                alt="CSA Books 4 Kids - Storie per bambini, nate da un papà e una mamma." 
                 class="hero-banner-img" 
                 id="hero-banner-img"
                 fetchpriority="high"
@@ -293,7 +301,7 @@
 
           <!-- Overlay con Titolo e Sottotitolo Localizzati -->
           <div class="hero-banner-overlay">
-            <h1 class="hero-title" id="hero-title">CSA Books <span class="highlight">Kids</span></h1>
+            <h1 class="hero-title" id="hero-title">CSA Books <span class="highlight">4 Kids</span></h1>
             <p class="hero-subtitle" id="hero-subtitle">Storie per bambini, nate da un papà e una mamma.</p>
           </div>
 
@@ -331,85 +339,120 @@
 
         <div class="csa-worlds-grid">
           <!-- 1. Cantiere -->
-          <a href="cantiere.html" class="csa-world-card cantiere">
-            <div class="csa-world-icon-wrap">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="1" y="3" width="15" height="13"></rect>
-                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                <circle cx="18.5" cy="18.5" r="2.5"></circle>
-              </svg>
+          <article class="csa-world-card cantiere">
+            <a href="cantiere.html" class="csa-world-media" tabindex="-1" aria-hidden="true">
+              <img
+                src="assets/images/editorial-worlds/cantiere.png"
+                alt="Le Avventure del Cantiere"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                class="csa-world-img"
+                data-i18n="worlds.cantiereAlt"
+                data-i18n-attr="alt"
+              />
+            </a>
+            <div class="csa-world-body">
+              <span class="csa-world-badge" data-i18n="ages.age2to5">2–5 anni</span>
+              <h3 class="csa-world-title" data-i18n="worlds.cantiereTitle">Le Avventure del Cantiere</h3>
+              <p class="csa-world-desc" data-i18n="worlds.cantiereDesc">
+                Benny, Rudy, Leo, Bruno, Nina e Rino. Raccolte speciali, storie illustrate in rima, amicizia e grandi macchine.
+              </p>
+              <div class="csa-world-footer">
+                <a href="cantiere.html" class="csa-world-btn">
+                  <span data-i18n="worlds.exploreBtn">Scopri i libri</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
             </div>
-            <span class="csa-world-badge">2–5 anni</span>
-            <h3 class="csa-world-title">Le Avventure del Cantiere</h3>
-            <p class="csa-world-desc">
-              Benny, Rudy, Leo, Bruno, Nina e Rino. Raccolte speciali, storie illustrate in rima, amicizia e grandi macchine.
-            </p>
-            <span class="csa-world-action">
-              <span data-i18n="worlds.exploreBtn">Esplora la collana</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </span>
-          </a>
+          </article>
 
           <!-- 2. Scienza e curiosità -->
-          <a href="scienza.html" class="csa-world-card scienza">
-            <div class="csa-world-icon-wrap">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"></circle>
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-              </svg>
+          <article class="csa-world-card scienza">
+            <a href="scienza.html" class="csa-world-media" tabindex="-1" aria-hidden="true">
+              <img
+                src="assets/images/editorial-worlds/scienza.png"
+                alt="Scienza e curiosità"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                class="csa-world-img"
+                data-i18n="worlds.scienzaAlt"
+                data-i18n-attr="alt"
+              />
+            </a>
+            <div class="csa-world-body">
+              <span class="csa-world-badge" data-i18n="ages.age7to12">7–12 anni</span>
+              <h3 class="csa-world-title" data-i18n="worlds.scienzaTitle">Scienza e curiosità</h3>
+              <p class="csa-world-desc" data-i18n="worlds.scienzaDesc">
+                Einstein, dinosauri, spazio e grandi misteri della natura documentati su fonti storiche e scientifiche reali.
+              </p>
+              <div class="csa-world-footer">
+                <a href="scienza.html" class="csa-world-btn">
+                  <span data-i18n="worlds.exploreBtn">Scopri i libri</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
             </div>
-            <span class="csa-world-badge">7–12 anni</span>
-            <h3 class="csa-world-title">Scienza e curiosità</h3>
-            <p class="csa-world-desc">
-              Einstein, dinosauri, spazio e grandi misteri della natura documentati su fonti storiche e scientifiche reali.
-            </p>
-            <span class="csa-world-action">
-              <span data-i18n="worlds.exploreBtn">Esplora la collana</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </span>
-          </a>
+          </article>
 
           <!-- 3. Per la scuola -->
-          <a href="scuola.html" class="csa-world-card scuola">
-            <div class="csa-world-icon-wrap">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-              </svg>
+          <article class="csa-world-card scuola">
+            <a href="scuola.html" class="csa-world-media" tabindex="-1" aria-hidden="true">
+              <img
+                src="assets/images/editorial-worlds/scuola.png"
+                alt="Per la scuola"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                class="csa-world-img"
+                data-i18n="worlds.scuolaAlt"
+                data-i18n-attr="alt"
+              />
+            </a>
+            <div class="csa-world-body">
+              <span class="csa-world-badge" data-i18n="worlds.comingSoonBadge">In preparazione</span>
+              <h3 class="csa-world-title" data-i18n="worlds.scuolaTitle">Per la scuola</h3>
+              <p class="csa-world-desc" data-i18n="worlds.scuolaDesc">
+                La Bussola Misteriosa: giochi logici, matematica per la primaria e strumenti didattici per allenare la mente.
+              </p>
+              <div class="csa-world-footer">
+                <a href="scuola.html" class="csa-world-btn">
+                  <span data-i18n="worlds.discoverProject">Scopri i libri</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
             </div>
-            <span class="csa-world-badge" data-i18n="worlds.comingSoonBadge">In preparazione</span>
-            <h3 class="csa-world-title">Per la scuola</h3>
-            <p class="csa-world-desc">
-              La Bussola Misteriosa: giochi logici, matematica per la primaria e strumenti didattici per allenare la mente.
-            </p>
-            <span class="csa-world-action">
-              <span data-i18n="worlds.exploreBtn">Scopri il progetto</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </span>
-          </a>
+          </article>
 
           <!-- 4. Da colorare e creare -->
-          <a href="colorare.html" class="csa-world-card creativita">
-            <div class="csa-world-icon-wrap">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="13.5" cy="6.5" r=".5"></circle>
-                <circle cx="17.5" cy="10.5" r=".5"></circle>
-                <circle cx="8.5" cy="7.5" r=".5"></circle>
-                <circle cx="6.5" cy="12.5" r=".5"></circle>
-                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
-              </svg>
+          <article class="csa-world-card creativita">
+            <a href="colorare.html" class="csa-world-media" tabindex="-1" aria-hidden="true">
+              <img
+                src="assets/images/editorial-worlds/colorare.png"
+                alt="Da colorare e creare"
+                width="1536"
+                height="1024"
+                loading="lazy"
+                class="csa-world-img"
+                data-i18n="worlds.creativitaAlt"
+                data-i18n-attr="alt"
+              />
+            </a>
+            <div class="csa-world-body">
+              <span class="csa-world-badge" data-i18n="ages.age5to10">5–10 anni</span>
+              <h3 class="csa-world-title" data-i18n="worlds.creativitaTitle">Da colorare e creare</h3>
+              <p class="csa-world-desc" data-i18n="worlds.creativitaDesc">
+                Fano col naso all'insù: oltre 40 disegni da colorare, giochi, labirinti e monumenti della città antica di Vitruvio.
+              </p>
+              <div class="csa-world-footer">
+                <a href="colorare.html" class="csa-world-btn">
+                  <span data-i18n="worlds.exploreBtn">Scopri i libri</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+              </div>
             </div>
-            <span class="csa-world-badge">5–10 anni</span>
-            <h3 class="csa-world-title">Da colorare e creare</h3>
-            <p class="csa-world-desc">
-              Fano col naso all'insù: oltre 40 disegni da colorare, giochi, labirinti e monumenti della città antica di Vitruvio.
-            </p>
-            <span class="csa-world-action">
-              <span data-i18n="worlds.exploreBtn">Esplora la collana</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </span>
-          </a>
+          </article>
         </div>
       </div>
     </section>
@@ -485,14 +528,14 @@
     <!-- ======================================================================
          PRESENTAZIONE DEL MARCHIO & LINK CHI SIAMO
          ====================================================================== -->
-    <section class="csa-section csa-brand-section" aria-label="Presentazione CSA Books Kids">
+    <section class="csa-section csa-brand-section" aria-label="Presentazione CSA Books 4 Kids">
       <div class="csa-container">
         <div class="csa-brand-banner">
           <div class="csa-brand-banner-grid">
             <div class="csa-banner-text-col">
               <h2 class="csa-banner-title" data-i18n="brand.title">Storie nate dal cuore di una famiglia</h2>
               <p class="csa-banner-text" data-i18n="brand.text1">
-                CSA Books Kids nasce dal desiderio di creare libri illustrati speciali: opere pensate per accendere la meraviglia, stimolare l'ingegno e offrire momenti preziosi di lettura condivisa.
+                CSA Books 4 Kids nasce dal desiderio di creare libri illustrati speciali: opere pensate per accendere la meraviglia, stimolare l'ingegno e offrire momenti preziosi di lettura condivisa.
               </p>
               <p class="csa-banner-text" data-i18n="brand.text2">
                 Dalle avventure dei mezzi da cantiere per i più piccoli alla divulgazione scientifica di frontiera, ogni nostro libro è curato nei minimi dettagli per qualità narrativa, bellezza visiva e rispetto del bambino.
@@ -511,7 +554,7 @@
                 <img src="assets/author/MUSICCO.Clara.png" alt="Clara Musicco" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid #fff; box-shadow: var(--csa-shadow-md);" />
               </div>
               <p style="margin-top: 14px; font-weight: 700; color: #1e293b; font-size: 1.05rem;">Marco Salucci &amp; Clara Musicco</p>
-              <p style="font-size: 0.88rem; color: #64748b; margin-top: 2px;">Gli autori di CSA Books Kids</p>
+              <p style="font-size: 0.88rem; color: #64748b; margin-top: 2px;" data-i18n="brand.authorsRole">Gli autori di CSA Books 4 Kids</p>
             </div>
           </div>
         </div>
@@ -528,10 +571,10 @@
         <!-- Colonna 1: Marchio -->
         <div class="csa-footer-col">
           <span class="csa-brand-name" style="color: #fff; margin-bottom: 12px; display: block;">
-            CSA Books <span class="highlight">Kids</span>
+            CSA Books <span class="highlight">4 Kids</span>
           </span>
           <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6;" data-i18n="footer.brandPitch">
-            CSA Books Kids è un marchio editoriale indipendente per bambini: storie illustrate, divulgazione scientifica, apprendimento e creatività.
+            CSA Books 4 Kids è un marchio editoriale indipendente per bambini: storie illustrate, divulgazione scientifica, apprendimento e creatività.
           </p>
         </div>
 
@@ -568,8 +611,8 @@
       </div>
 
       <div class="csa-footer-bottom">
-        <p data-i18n="footer.rights">&copy; 2026 CSA Books Kids. Tutti i diritti riservati.</p>
-        <p style="opacity: 0.7;">Acquisti ufficiali garantiti in esclusiva su Amazon in edizione paperback.</p>
+        <p data-i18n="footer.rights">&copy; 2026 CSA Books 4 Kids. Tutti i diritti riservati.</p>
+        <p style="opacity: 0.7;" data-i18n="footer.amazonDisclaimer">Acquisti ufficiali garantiti in esclusiva su Amazon in edizione paperback.</p>
       </div>
     </div>
   </footer>
@@ -577,6 +620,8 @@
   <!-- Scripts Runtime CSA 2.0 -->
   <script src="assets/banner/banners.js"></script>
   <script src="data/runtime-data.js"></script>
-  <script src="app-2.0.js"></script>
+  <script src="config/campaign-christmas-2026.js"></script>
+  <script src="js/campaign.js"></script>
+  <script src="js/app-2.0.js"></script>
 </body>
 </html>

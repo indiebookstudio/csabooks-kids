@@ -12,11 +12,11 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Le Avventure del Cantiere — CSA Books Kids</title>
+  <title>Le Avventure del Cantiere — CSA Books 4 Kids</title>
 
   <!-- SEO & Meta Tags -->
   <meta name="description" content="Scopri l'universo de Le Avventure del Cantiere di Marco Salucci: storie in rima per bambini 2-5 anni, le raccolte Vol. 1 e Vol. 2, i personaggi Benny, Rudy, Leo, Bruno, Nina e Rino." />
-  <meta name="author" content="Marco Salucci - CSA Books Kids" />
+  <meta name="author" content="Marco Salucci - CSA Books 4 Kids" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://csabookskids.com/cantiere.html" />
 
@@ -32,8 +32,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="style-2.0.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-2.0.css" />
 </head>
 <body>
 
@@ -179,7 +179,7 @@
   <!-- Mobile Drawer -->
   <div class="csa-mobile-drawer" id="csa-mobile-drawer">
     <div class="csa-drawer-header">
-      <span class="csa-brand-name">CSA Books <span class="highlight">Kids</span></span>
+      <span class="csa-brand-name">CSA Books <span class="highlight">4 Kids</span></span>
       <button type="button" class="csa-drawer-close" id="csa-drawer-close" aria-label="Chiudi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <div class="csa-drawer-nav">
@@ -202,24 +202,70 @@
   </div>
 
   <main>
+    <!-- ======================================================================
+         HERO BANNER CAROUSEL 16:9 TRASFERITO DA HOME (Preservato al 100%)
+         ====================================================================== -->
+    <section class="hero-banner" id="hero-banner" aria-label="Le Avventure del Cantiere Banner">
+      <div class="hero-banner-wrapper">
+        <div class="hero-banner-container" id="hero-carousel" role="region" aria-roledescription="carousel" aria-label="Le Avventure del Cantiere Carousel" tabindex="0">
+          <!-- Slides Track / Container -->
+          <div class="hero-carousel-slides" id="hero-carousel-slides" aria-live="polite">
+            <div class="hero-carousel-slide active" data-index="0" role="group" aria-roledescription="slide" aria-label="1 di 13">
+              <img 
+                src="assets/banner/banner-csa-books-4-kids.jpg" 
+                alt="Le Avventure del Cantiere - Storie per bambini, nate da un papà e una mamma." 
+                class="hero-banner-img" 
+                id="hero-banner-img"
+                fetchpriority="high"
+                loading="eager"
+              />
+            </div>
+          </div>
+
+          <!-- Overlay con Titolo e Sottotitolo Localizzati -->
+          <div class="hero-banner-overlay">
+            <h1 class="hero-title" id="hero-title">Le Avventure <span class="highlight">del Cantiere</span></h1>
+            <p class="hero-subtitle" id="hero-subtitle">Storie per bambini, nate da un papà e una mamma.</p>
+          </div>
+
+          <!-- Controlli Navigazione Precedente / Successivo -->
+          <button type="button" class="hero-carousel-btn prev" id="hero-carousel-prev" aria-label="Slide precedente" title="Precedente">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button type="button" class="hero-carousel-btn next" id="hero-carousel-next" aria-label="Slide successiva" title="Successiva">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+
+          <!-- Indicatori Slide (Dots) -->
+          <div class="hero-carousel-indicators" id="hero-carousel-indicators" role="tablist" aria-label="Seleziona slide">
+            <!-- Popolato dinamicamente da app-2.0.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Hero Cantiere -->
     <section class="csa-hero-section" style="background: linear-gradient(180deg, #fffbeb 0%, #fef3c7 100%);">
       <div class="csa-container">
         <div class="csa-hero-grid">
           <div>
-            <span class="csa-hero-badge" style="color: #b45309; border-color: #fde68a;">Franchise Originale · 2–5 anni</span>
-            <h1 class="csa-hero-title">Le Avventure del Cantiere</h1>
-            <p class="csa-hero-subtitle" style="color: #451a03;">
+            <span class="csa-hero-badge" style="color: #b45309; border-color: #fde68a;" data-i18n="cantierePage.badge">Franchise Originale · 2–5 anni</span>
+            <h1 class="csa-hero-title" data-i18n="cantierePage.heroTitle">Le Avventure del Cantiere</h1>
+            <p class="csa-hero-subtitle" style="color: #451a03;" data-i18n="cantierePage.heroSubtitle">
               La celebre serie illustrata di Marco Salucci: storie in rima, grandi macchine e indimenticabili lezioni di amicizia, cooperazione e rispetto della natura.
             </p>
             <div class="csa-hero-ctas">
-              <a href="#raccolte" class="csa-btn csa-btn-cantiere csa-btn-lg">Scopri le Raccolte Vol. 1 e 2</a>
-              <a href="#personaggi" class="csa-btn csa-btn-secondary csa-btn-lg">I Personaggi</a>
+              <a href="#raccolte" class="csa-btn csa-btn-cantiere csa-btn-lg" data-i18n="cantierePage.ctaRaccolte" id="csa-cantiere-hero-cta">Scopri le Raccolte Vol. 1 e 2</a>
+              <a href="#personaggi" class="csa-btn csa-btn-secondary csa-btn-lg" data-i18n="cantierePage.ctaCharacters">I Personaggi</a>
             </div>
           </div>
           <div class="csa-hero-visual" style="min-height: 380px;">
-            <img src="books/csa-vol1/it/cover.png" alt="Raccolta Volume 1" style="width: 250px; border-radius: 14px; box-shadow: var(--csa-shadow-lg); transform: rotate(-4deg);" />
-            <img src="books/csa-vol2/it/cover.png" alt="Raccolta Volume 2" style="width: 250px; border-radius: 14px; box-shadow: var(--csa-shadow-xl); transform: rotate(5deg) translate(-40px, 40px);" />
+            <img id="csa-cantiere-hero-img1" src="books/csa-vol1/it/cover.png" alt="Raccolta Volume 1" style="width: 250px; border-radius: 14px; box-shadow: var(--csa-shadow-lg); transform: rotate(-4deg);" />
+            <img id="csa-cantiere-hero-img2" src="books/csa-vol2/it/cover.png" alt="Raccolta Volume 2" style="width: 250px; border-radius: 14px; box-shadow: var(--csa-shadow-xl); transform: rotate(5deg) translate(-40px, 40px);" />
           </div>
         </div>
       </div>
@@ -229,8 +275,8 @@
     <section class="csa-section" id="raccolte">
       <div class="csa-container">
         <div class="csa-section-header">
-          <h2 class="csa-section-title">Quattro storie complete in ogni volume</h2>
-          <p class="csa-section-subtitle">
+          <h2 class="csa-section-title" data-i18n="cantierePage.raccolteTitle">Quattro storie complete in ogni volume</h2>
+          <p class="csa-section-subtitle" data-i18n="cantierePage.raccolteSubtitle">
             Edizioni speciali in grande formato (21,5 × 28 cm) con testi in rima, copertina flessibile di pregio e codici QR con contenuti multimediali in regalo.
           </p>
         </div>
@@ -242,20 +288,20 @@
               <img src="books/csa-vol1/it/cover.png" alt="Raccolta Vol. 1" class="csa-card-cover-img" />
               <button type="button" class="csa-card-preview-btn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-                <span>Sfoglia anteprima</span>
+                <span data-i18n="featured.readSample">Sfoglia anteprima</span>
               </button>
             </div>
             <div class="csa-card-content">
               <span class="csa-card-author">Marco Salucci</span>
-              <h3 class="csa-card-title">Le Avventure del Cantiere — Raccolta Vol. 1</h3>
-              <p class="csa-card-pitch">
+              <h3 class="csa-card-title" data-i18n="cantierePage.vol1Title">Le Avventure del Cantiere — Raccolta Vol. 1</h3>
+              <p class="csa-card-pitch" data-i18n="cantierePage.vol1Pitch">
                 Comprende 4 storie: Benny l'escavatore, Rudy la ruspa, Leo la gru e Bruno il camion. QR code con video-lettura e disegni da colorare.
               </p>
               <div class="csa-card-actions">
                 <a id="csa-cantiere-vol1-buy" href="https://www.amazon.it/dp/B0HN4QMLV1" target="_blank" rel="noopener noreferrer" class="csa-btn csa-btn-amazon csa-btn-block">
-                  <span>Acquista su Amazon</span>
+                  <span data-i18n="featured.buyAmazon">Acquista su Amazon</span>
                 </a>
-                <button type="button" class="csa-btn csa-btn-secondary csa-btn-block" onclick="window.openBookModal('csa-vol1')">Dettagli e anteprima</button>
+                <button type="button" class="csa-btn csa-btn-secondary csa-btn-block" onclick="window.openBookModal('csa-vol1')" data-i18n="featured.viewDetails">Dettagli e anteprima</button>
               </div>
             </div>
           </article>
@@ -266,20 +312,20 @@
               <img src="books/csa-vol2/it/cover.png" alt="Raccolta Vol. 2" class="csa-card-cover-img" />
               <button type="button" class="csa-card-preview-btn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-                <span>Sfoglia anteprima</span>
+                <span data-i18n="featured.readSample">Sfoglia anteprima</span>
               </button>
             </div>
             <div class="csa-card-content">
               <span class="csa-card-author">Marco Salucci</span>
-              <h3 class="csa-card-title">Le Avventure del Cantiere — Raccolta Vol. 2</h3>
-              <p class="csa-card-pitch">
+              <h3 class="csa-card-title" data-i18n="cantierePage.vol2Title">Le Avventure del Cantiere — Raccolta Vol. 2</h3>
+              <p class="csa-card-pitch" data-i18n="cantierePage.vol2Pitch">
                 Comprende 4 storie: Benny e le monete romane, Nina la betoniera, Rino il rullo e Leo e la cinciallegra. QR code con bonus esclusivi.
               </p>
               <div class="csa-card-actions">
                 <a id="csa-cantiere-vol2-buy" href="https://www.amazon.it/dp/B0HN9G1V81" target="_blank" rel="noopener noreferrer" class="csa-btn csa-btn-amazon csa-btn-block">
-                  <span>Acquista su Amazon</span>
+                  <span data-i18n="featured.buyAmazon">Acquista su Amazon</span>
                 </a>
-                <button type="button" class="csa-btn csa-btn-secondary csa-btn-block" onclick="window.openBookModal('csa-vol2')">Dettagli e anteprima</button>
+                <button type="button" class="csa-btn csa-btn-secondary csa-btn-block" onclick="window.openBookModal('csa-vol2')" data-i18n="featured.viewDetails">Dettagli e anteprima</button>
               </div>
             </div>
           </article>
@@ -291,8 +337,8 @@
     <section class="csa-section" id="episodi" style="background: #ffffff;">
       <div class="csa-container">
         <div class="csa-section-header">
-          <h2 class="csa-section-title">Tutti gli Episodi Singoli</h2>
-          <p class="csa-section-subtitle">
+          <h2 class="csa-section-title" data-i18n="cantierePage.episodesTitle">Tutti gli Episodi Singoli</h2>
+          <p class="csa-section-subtitle" data-i18n="cantierePage.episodesSubtitle">
             Tutte le 9 singole storie illustrate in rima per bambini 2-5 anni. Include l'attesissima missione di Leo e Rudy nella Savana!
           </p>
         </div>
@@ -306,8 +352,8 @@
     <section class="csa-section" id="personaggi" style="background: #ffffff;">
       <div class="csa-container">
         <div class="csa-section-header">
-          <h2 class="csa-section-title">Incontra i protagonisti</h2>
-          <p class="csa-section-subtitle">
+          <h2 class="csa-section-title" data-i18n="cantierePage.charactersTitle">Incontra i protagonisti</h2>
+          <p class="csa-section-subtitle" data-i18n="cantierePage.charactersSubtitle">
             Ciascun veicolo ha un carattere unico e positivo con cui i bambini si identificano subito.
           </p>
         </div>
@@ -316,38 +362,38 @@
           <!-- Benny -->
           <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 16px; padding: 24px; text-align: center;">
             <img src="assets/brand/Benny.jpeg" alt="Benny l'escavatore" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 3px solid #f59e0b;" />
-            <h3 style="font-size: 1.3rem; margin-bottom: 6px;">Benny l'escavatore</h3>
-            <p style="font-size: 0.92rem; color: #451a03;">Entusiasta, instancabile scavatore e grande amico pronto ad aiutare tutti.</p>
+            <h3 style="font-size: 1.3rem; margin-bottom: 6px;" data-i18n="cantierePage.bennyTitle">Benny l'escavatore</h3>
+            <p style="font-size: 0.92rem; color: #451a03;" data-i18n="cantierePage.bennyDesc">Entusiasta, instancabile scavatore e grande amico pronto ad aiutare tutti.</p>
           </div>
           <!-- Rudy -->
           <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 16px; padding: 24px; text-align: center;">
             <img src="assets/brand/Rudy.jpeg" alt="Rudy la ruspa" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 3px solid #f59e0b;" />
-            <h3 style="font-size: 1.3rem; margin-bottom: 6px;">Rudy la ruspa</h3>
-            <p style="font-size: 0.92rem; color: #451a03;">Forte e veloce, sposta montagne di sabbia e sassi con gioia contagiosa.</p>
+            <h3 style="font-size: 1.3rem; margin-bottom: 6px;" data-i18n="cantierePage.rudyTitle">Rudy la ruspa</h3>
+            <p style="font-size: 0.92rem; color: #451a03;" data-i18n="cantierePage.rudyDesc">Forte e veloce, sposta montagne di sabbia e sassi con gioia contagiosa.</p>
           </div>
           <!-- Leo -->
           <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 16px; padding: 24px; text-align: center;">
             <img src="assets/brand/Leo.jpeg" alt="Leo la gru" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 3px solid #f59e0b;" />
-            <h3 style="font-size: 1.3rem; margin-bottom: 6px;">Leo la gru</h3>
-            <p style="font-size: 0.92rem; color: #451a03;">Gentile e altissimo, osserva dall'alto e protegge con cura i nidi del cantiere.</p>
+            <h3 style="font-size: 1.3rem; margin-bottom: 6px;" data-i18n="cantierePage.leoTitle">Leo la gru</h3>
+            <p style="font-size: 0.92rem; color: #451a03;" data-i18n="cantierePage.leoDesc">Gentile e altissimo, osserva dall'alto e protegge con cura i nidi del cantiere.</p>
           </div>
           <!-- Bruno -->
           <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 16px; padding: 24px; text-align: center;">
             <img src="assets/brand/Bruno.jpeg" alt="Bruno il camion" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 3px solid #f59e0b;" />
-            <h3 style="font-size: 1.3rem; margin-bottom: 6px;">Bruno il camion</h3>
-            <p style="font-size: 0.92rem; color: #451a03;">Robusto trasportatore dal cuore tenero, difensore degli anatroccoli.</p>
+            <h3 style="font-size: 1.3rem; margin-bottom: 6px;" data-i18n="cantierePage.brunoTitle">Bruno il camion</h3>
+            <p style="font-size: 0.92rem; color: #451a03;" data-i18n="cantierePage.brunoDesc">Robusto trasportatore dal cuore tenero, difensore degli anatroccoli.</p>
           </div>
           <!-- Nina -->
           <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 16px; padding: 24px; text-align: center;">
             <img src="assets/brand/Nina.jpeg" alt="Nina la betoniera" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 3px solid #f59e0b;" />
-            <h3 style="font-size: 1.3rem; margin-bottom: 6px;">Nina la betoniera</h3>
-            <p style="font-size: 0.92rem; color: #451a03;">Ingegnosa e determinata, impasta il calcestruzzo perfetto per costruire ponti sicuri.</p>
+            <h3 style="font-size: 1.3rem; margin-bottom: 6px;" data-i18n="cantierePage.ninaTitle">Nina la betoniera</h3>
+            <p style="font-size: 0.92rem; color: #451a03;" data-i18n="cantierePage.ninaDesc">Ingegnosa e determinata, impasta il calcestruzzo perfetto per costruire ponti sicuri.</p>
           </div>
           <!-- Rino -->
           <div style="background: #fffbeb; border: 1.5px solid #fde68a; border-radius: 16px; padding: 24px; text-align: center;">
             <img src="assets/brand/Rino.jpeg" alt="Rino il rullo" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; border: 3px solid #f59e0b;" />
-            <h3 style="font-size: 1.3rem; margin-bottom: 6px;">Rino il rullo</h3>
-            <p style="font-size: 0.92rem; color: #451a03;">Calmo e ponderato, spiana il terreno e protegge la squadra durante la notte.</p>
+            <h3 style="font-size: 1.3rem; margin-bottom: 6px;" data-i18n="cantierePage.rinoTitle">Rino il rullo</h3>
+            <p style="font-size: 0.92rem; color: #451a03;" data-i18n="cantierePage.rinoDesc">Calmo e ponderato, spiana il terreno e protegge la squadra durante la notte.</p>
           </div>
         </div>
       </div>
@@ -358,19 +404,60 @@
       <div class="csa-container">
         <div class="csa-brand-banner" style="background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%); border-color: #fde68a;">
           <div style="text-align: center; max-width: 650px; margin: 0 auto;">
-            <h2 class="csa-banner-title">Ascolta e guarda le storie ovunque</h2>
-            <p class="csa-banner-text">
+            <h2 class="csa-banner-title" data-i18n="cantierePage.mediaTitle">Ascolta e guarda le storie ovunque</h2>
+            <p class="csa-banner-text" data-i18n="hero.subtitle">
               Le Avventure del Cantiere sono disponibili anche in formato video narrato su YouTube e in podcast ufficiale su Spotify, in italiano, inglese e francese.
             </p>
             <div style="display: flex; gap: 16px; justify-content: center; margin-top: 24px; flex-wrap: wrap;">
               <a href="https://open.spotify.com/show/4lLJo6ZXfVhITTnPFCCMIS?si=j3SzwenwRxq6BgIUBhl4cg" target="_blank" rel="noopener noreferrer" class="csa-btn csa-btn-primary">
-                Ascolta su Spotify
+                Spotify
               </a>
-              <a href="https://www.youtube.com/channel/UCJHJOCak9LyUjG0akPfKqAw" target="_blank" rel="noopener noreferrer" class="csa-btn csa-btn-secondary">
+              <a href="https://www.youtube.com/channel/UCJHJOCak9LyUjG0akPfKqAw" target="_blank" rel="noopener noreferrer" class="csa-btn csa-btn-secondary" data-i18n="cantierePage.watchYouTube">
                 Guarda su YouTube
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         RECENSIONI CLIENTI AMAZON (SOCIAL PROOF AUTENTICO LE AVVENTURE DEL CANTIERE)
+         ====================================================================== -->
+    <section class="reviews-section" id="recensioni" aria-label="Recensioni Amazon">
+      <div class="csa-container">
+        <div class="reviews-header">
+          <div class="reviews-badge">
+            <span class="reviews-stars-visual" aria-hidden="true">★★★★★</span>
+            <span class="reviews-badge-text" data-i18n="reviews.badge">Recensioni Verificate</span>
+          </div>
+          <h2 class="reviews-title" id="reviews-section-title" data-i18n="reviews.title">Cosa dicono i genitori</h2>
+          <p class="reviews-subtitle" id="reviews-section-subtitle" data-i18n="reviews.subtitle">
+            Recensioni autentiche da Amazon sui libri de Le Avventure del Cantiere
+          </p>
+        </div>
+
+        <div class="reviews-carousel-wrapper" id="reviews-carousel" role="region" aria-roledescription="carousel" aria-label="Recensioni dei clienti Amazon" tabindex="0">
+          <div class="reviews-slider-track" id="reviews-slider-track" aria-live="polite">
+            <!-- Popolato dinamicamente da app-2.0.js -->
+          </div>
+
+          <!-- Controlli Navigazione Precedente / Successivo -->
+          <button type="button" class="reviews-nav-btn prev" id="reviews-prev-btn" aria-label="Recensioni precedenti" title="Precedente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button type="button" class="reviews-nav-btn next" id="reviews-next-btn" aria-label="Recensioni successive" title="Successiva">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Indicatori Paginazione (Dots) -->
+        <div class="reviews-indicators" id="reviews-indicators" role="tablist" aria-label="Seleziona recensioni">
+          <!-- Popolato dinamicamente da app-2.0.js -->
         </div>
       </div>
     </section>
@@ -380,26 +467,26 @@
     <div class="csa-container">
       <div class="csa-footer-grid">
         <div class="csa-footer-col">
-          <span class="csa-brand-name" style="color: #fff; margin-bottom: 12px; display: block;">CSA Books <span class="highlight">Kids</span></span>
-          <p style="color: #94a3b8; font-size: 0.95rem;">Le Avventure del Cantiere di Marco Salucci.</p>
+          <span class="csa-brand-name" style="color: #fff; margin-bottom: 12px; display: block;">CSA Books <span class="highlight">4 Kids</span></span>
+          <p style="color: #94a3b8; font-size: 0.95rem;" data-i18n="footer.cantierePitch">Le Avventure del Cantiere di Marco Salucci.</p>
         </div>
         <div class="csa-footer-col">
-          <h4>Esplora</h4>
+          <h4 data-i18n="footer.navTitle">Esplora</h4>
           <ul class="csa-footer-links">
-            <li><a href="catalogo.html">Tutti i libri</a></li>
-            <li><a href="cantiere.html">Il Cantiere</a></li>
-            <li><a href="scienza.html">Scienza e curiosità</a></li>
-            <li><a href="colorare.html">Da colorare</a></li>
+            <li><a href="catalogo.html" data-i18n="nav.allBooks">Tutti i libri</a></li>
+            <li><a href="cantiere.html" data-i18n="nav.cantiere">Il Cantiere</a></li>
+            <li><a href="scienza.html" data-i18n="nav.scienza">Scienza e curiosità</a></li>
+            <li><a href="colorare.html" data-i18n="nav.colorare">Da colorare</a></li>
           </ul>
         </div>
         <div class="csa-footer-col">
-          <h4>Informazioni</h4>
+          <h4 data-i18n="footer.legalTitle">Informazioni</h4>
           <ul class="csa-footer-links">
-            <li><a href="about.html">Chi siamo</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Chi siamo</a></li>
           </ul>
         </div>
         <div class="csa-footer-col">
-          <h4>Contatti</h4>
+          <h4 data-i18n="footer.contactsTitle">Contatti</h4>
           <ul class="csa-footer-links">
             <li><a href="mailto:csabooks.kids@gmail.com">csabooks.kids@gmail.com</a></li>
             <li><a href="https://www.instagram.com/csabooks.kids" target="_blank">Instagram</a></li>
@@ -407,12 +494,14 @@
         </div>
       </div>
       <div class="csa-footer-bottom">
-        <p>&copy; 2026 CSA Books Kids. Tutti i diritti riservati.</p>
+        <p data-i18n="footer.rights">&copy; 2026 CSA Books 4 Kids. Tutti i diritti riservati.</p>
+        <p style="opacity: 0.7;" data-i18n="footer.amazonDisclaimer">Acquisti ufficiali garantiti in esclusiva su Amazon in edizione paperback.</p>
       </div>
     </div>
   </footer>
 
+  <script src="assets/banner/banners.js"></script>
   <script src="data/runtime-data.js"></script>
-  <script src="app-2.0.js"></script>
+  <script src="js/app-2.0.js"></script>
 </body>
 </html>

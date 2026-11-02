@@ -1,0 +1,598 @@
+/* ==========================================================================
+   CSA BOOKS 4 KIDS — HERO CAMPAGNA NATALE 2026
+   Stile editoriale, luminoso e curato con tre livelli separati:
+   1. Scena di sfondo (Desktop 3:1 / Mobile 4:5)
+   2. Copertine reali HTML ad alta leggibilità
+   3. Testi, badge e CTA accessibili
+   ========================================================================== */
+
+/* Sezione Hero Natale */
+.csa-christmas-hero-section {
+  position: relative;
+  background: #0d1520;
+  padding: 1rem 0 1.5rem 0;
+  overflow: hidden;
+}
+
+.csa-christmas-hero-wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Container Carosello */
+.csa-christmas-carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  min-height: 440px;
+  max-height: 540px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  background: #101a26;
+  outline: none;
+}
+
+.csa-christmas-carousel:focus-visible {
+  box-shadow: 0 0 0 3px #f59e0b, 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Traccia delle slide */
+.csa-christmas-slides-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Singola Slide */
+.csa-christmas-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.55s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.csa-christmas-slide.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   LIVELLO 1: SCENA NATALIZIA & AREE DOCK
+   ========================================================================== */
+.csa-christmas-scene-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.csa-christmas-desktop-dock {
+  display: block;
+}
+
+.csa-christmas-mobile-dock {
+  display: none;
+}
+
+/* Livello 1: Sfondo Scena Natalizia (Desktop 3:1 / Mobile 4:5) */
+.csa-christmas-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.csa-christmas-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+  user-select: none;
+}
+
+/* Velo sfumato locale per massimizzare il contrasto testo senza scurire i personaggi a destra */
+.csa-christmas-scrim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 14, 22, 0.92) 0%,
+    rgba(8, 14, 22, 0.82) 38%,
+    rgba(8, 14, 22, 0.40) 58%,
+    rgba(8, 14, 22, 0.05) 75%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Livello 3 & 2: Contenuto Principale (Testo a sinistra + Copertine) */
+.csa-christmas-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 24px 38px;
+  display: flex;
+  align-items: center;
+}
+
+.csa-christmas-text-col {
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Badge ed Eyebrow */
+.csa-christmas-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.csa-christmas-eyebrow {
+  font-family: var(--csa-font-heading, 'Fredoka', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fde68a;
+}
+
+.csa-christmas-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(254, 243, 199, 0.15);
+  border: 1px solid rgba(253, 230, 138, 0.4);
+  color: #fef08a;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  backdrop-filter: blur(4px);
+}
+
+.csa-christmas-badge.lang-notice {
+  background: rgba(245, 158, 11, 0.28);
+  border-color: #f59e0b;
+  color: #fffbeb;
+}
+
+/* Titolo e Paragrafo */
+.csa-christmas-title {
+  font-family: var(--csa-font-heading, 'Fredoka', Georgia, serif);
+  font-size: clamp(1.4rem, 2.1vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+}
+
+.csa-christmas-body {
+  font-size: clamp(0.84rem, 1.0vw, 0.94rem);
+  line-height: 1.35;
+  color: #e2e8f0;
+  margin: 0 0 10px 0;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Livello 2: Copertine Reali HTML */
+.csa-christmas-covers-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.csa-christmas-cover-wrapper {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.csa-christmas-cover-wrapper:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
+.csa-christmas-cover-img {
+  height: clamp(80px, 9.5vw, 112px);
+  width: auto;
+  max-width: 105px;
+  object-fit: contain;
+  border-radius: 5px;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.5));
+  display: block;
+}
+
+/* Singolo Pulsante di Azione "Scopri" */
+.csa-christmas-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.csa-btn-christmas-amazon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #18181b;
+  font-family: var(--csa-font-heading, 'Fredoka', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 8px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+  transition: all 0.2s ease;
+}
+
+.csa-btn-christmas-amazon:hover {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.5);
+  color: #0f172a;
+}
+
+.csa-btn-christmas-amazon svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.csa-btn-christmas-amazon:hover svg {
+  transform: translateX(3px);
+}
+
+.csa-btn-christmas-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  font-family: var(--csa-font-heading, 'Fredoka', sans-serif);
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.csa-btn-christmas-secondary:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fffbeb;
+  transform: translateY(-2px);
+}
+
+/* Controlli Frecce Navigazione Carosello */
+.csa-christmas-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(13, 21, 32, 0.65);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.csa-christmas-arrow:hover {
+  background: rgba(245, 158, 11, 0.85);
+  border-color: #f59e0b;
+  color: #1e1e1e;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.csa-christmas-arrow.prev {
+  left: 16px;
+}
+
+.csa-christmas-arrow.next {
+  right: 16px;
+}
+
+/* Indicatori e Controlli Inferiori */
+.csa-christmas-controls-bar {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.csa-christmas-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+.csa-christmas-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.csa-christmas-dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.2);
+}
+
+.csa-christmas-dot.active {
+  width: 26px;
+  background: #f59e0b;
+  border-color: #f59e0b;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.6);
+}
+
+/* Tasto Pausa / Play Accessibile */
+.csa-christmas-pause-btn {
+  position: absolute;
+  bottom: 14px;
+  right: 20px;
+  background: rgba(13, 21, 32, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #e2e8f0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.csa-christmas-pause-btn:hover {
+  background: rgba(245, 158, 11, 0.8);
+  border-color: #f59e0b;
+  color: #1e1e1e;
+}
+
+/* ==========================================================================
+   VERSIONE MOBILE & TABLET (Media Query Responsive)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .csa-christmas-carousel {
+    aspect-ratio: auto;
+    min-height: unset;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .csa-christmas-slide {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+
+  .csa-christmas-slide.active {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+  }
+
+  .csa-christmas-scene-area {
+    position: relative;
+    width: 100%;
+    min-height: 380px;
+    height: 48vw;
+    max-height: 460px;
+    overflow: hidden;
+  }
+
+  .csa-christmas-bg-img {
+    object-position: center bottom;
+  }
+
+  .csa-christmas-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 14, 22, 0.92) 0%,
+      rgba(8, 14, 22, 0.72) 48%,
+      rgba(8, 14, 22, 0.15) 75%,
+      transparent 100%
+    );
+  }
+
+  .csa-christmas-content {
+    padding: 24px 24px 10px 24px;
+    align-items: flex-start;
+  }
+
+  .csa-christmas-text-col {
+    max-width: 100%;
+  }
+
+  .csa-christmas-desktop-dock {
+    display: none;
+  }
+
+  /* Fascia dedicata separata sotto la scena */
+  .csa-christmas-mobile-dock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #0d1724;
+    padding: 18px 20px 54px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    gap: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .csa-christmas-mobile-dock .csa-christmas-covers-row {
+    margin-bottom: 0;
+    justify-content: center;
+  }
+
+  .csa-christmas-mobile-dock .csa-christmas-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .csa-christmas-arrow {
+    top: 35%;
+  }
+}
+
+@media (max-width: 640px) {
+  .csa-christmas-hero-section {
+    padding: 0.5rem 0 1rem 0;
+  }
+
+  .csa-christmas-hero-wrapper {
+    padding: 0 10px;
+  }
+
+  .csa-christmas-carousel {
+    border-radius: 14px;
+  }
+
+  .csa-christmas-scene-area {
+    min-height: 330px;
+    height: 75vw;
+    max-height: 400px;
+  }
+
+  .csa-christmas-content {
+    padding: 16px 16px 8px 16px;
+  }
+
+  .csa-christmas-title {
+    font-size: 1.25rem;
+    line-height: 1.22;
+    margin-bottom: 6px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .csa-christmas-body {
+    font-size: 0.84rem;
+    line-height: 1.38;
+    margin-bottom: 8px;
+  }
+
+  .csa-christmas-cover-img {
+    height: 95px;
+    max-width: 82px;
+  }
+
+  .csa-christmas-mobile-dock {
+    padding: 14px 14px 50px 14px;
+    gap: 12px;
+  }
+
+  .csa-christmas-mobile-dock .csa-christmas-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .csa-btn-christmas-amazon,
+  .csa-btn-christmas-secondary {
+    font-size: 0.84rem;
+    padding: 8px 14px;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .csa-christmas-arrow {
+    width: 36px;
+    height: 36px;
+    top: 32%;
+  }
+
+  .csa-christmas-arrow.prev {
+    left: 6px;
+  }
+
+  .csa-christmas-arrow.next {
+    right: 6px;
+  }
+}
+
+@media (max-width: 380px) {
+  .csa-christmas-scene-area {
+    min-height: 310px;
+  }
+
+  .csa-christmas-title {
+    font-size: 1.15rem;
+  }
+
+  .csa-christmas-covers-row {
+    gap: 6px;
+  }
+
+  .csa-christmas-cover-img {
+    height: 85px;
+    max-width: 72px;
+  }
+}
+
+/* Rispetto accessibilità prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .csa-christmas-slide {
+    transition: none !important;
+  }
+  .csa-christmas-cover-wrapper,
+  .csa-btn-christmas-amazon,
+  .csa-btn-christmas-secondary,
+  .csa-christmas-arrow,
+  .csa-christmas-dot {
+    transition: none !important;
+  }
+}

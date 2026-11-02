@@ -12,18 +12,18 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catalogo Libri — CSA Books Kids</title>
+  <title>Catalogo Libri — CSA Books 4 Kids</title>
 
   <!-- SEO & Social Meta -->
-  <meta name="description" content="Esplora il catalogo completo di libri per bambini di CSA Books Kids: storie illustrate, divulgazione scientifica, matematica per la scuola e libri da colorare." />
-  <meta name="author" content="CSA Books Kids" />
+  <meta name="description" content="Esplora il catalogo completo di libri per bambini di CSA Books 4 Kids: storie illustrate, divulgazione scientifica, matematica per la scuola e libri da colorare." />
+  <meta name="author" content="CSA Books 4 Kids" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://csabookskids.com/catalogo.html" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Catalogo Libri — CSA Books Kids" />
-  <meta property="og:description" content="Tutti i libri pubblicati da CSA Books Kids in edizione paperback su Amazon." />
+  <meta property="og:title" content="Catalogo Libri — CSA Books 4 Kids" />
+  <meta property="og:description" content="Tutti i libri pubblicati da CSA Books 4 Kids in edizione paperback su Amazon." />
   <meta property="og:image" content="books/csa-vol1/it/cover.png" />
 
   <!-- Google Fonts -->
@@ -32,8 +32,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="style-2.0.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-2.0.css" />
 </head>
 <body>
 
@@ -240,7 +240,7 @@
   <!-- Mobile Drawer -->
   <div class="csa-mobile-drawer" id="csa-mobile-drawer">
     <div class="csa-drawer-header">
-      <span class="csa-brand-name">CSA Books <span class="highlight">Kids</span></span>
+      <span class="csa-brand-name">CSA Books <span class="highlight">4 Kids</span></span>
       <button type="button" class="csa-drawer-close" id="csa-drawer-close" aria-label="Chiudi">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
@@ -267,7 +267,7 @@
   <main class="csa-section">
     <div class="csa-container">
       <div class="csa-section-header">
-        <h1 class="csa-section-title" data-i18n="catalog.title">Tutti i libri CSA Books Kids</h1>
+        <h1 class="csa-section-title" data-i18n="catalog.title">Tutti i libri CSA Books 4 Kids</h1>
         <p class="csa-section-subtitle" data-i18n="catalog.subtitle">
           Sfoglia l'intero catalogo editoriale, filtra per categoria ed esplora le edizioni disponibili.
         </p>
@@ -289,7 +289,7 @@
           </button>
           <button type="button" class="csa-filter-pill-btn csa-pill-disabled" disabled aria-disabled="true" title="In arrivo">
             <span data-i18n="nav.scuola">Per la scuola</span>
-            <span class="csa-badge-soon">Coming Soon</span>
+            <span class="csa-badge-soon" data-i18n="worlds.comingSoonBadge">Coming Soon</span>
           </button>
           <button type="button" class="csa-filter-pill-btn csa-cat-filter-btn" data-cat="creativita" onclick="window.setCatalogCatFilter('creativita')" data-i18n="nav.colorare">
             Da colorare
@@ -345,10 +345,10 @@
       <div class="csa-footer-grid">
         <div class="csa-footer-col">
           <span class="csa-brand-name" style="color: #fff; margin-bottom: 12px; display: block;">
-            CSA Books <span class="highlight">Kids</span>
+            CSA Books <span class="highlight">4 Kids</span>
           </span>
           <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6;" data-i18n="footer.brandPitch">
-            CSA Books Kids è un marchio editoriale indipendente per bambini: storie illustrate, divulgazione scientifica, apprendimento e creatività.
+            CSA Books 4 Kids è un marchio editoriale indipendente per bambini: storie illustrate, divulgazione scientifica, apprendimento e creatività.
           </p>
         </div>
 
@@ -382,15 +382,15 @@
       </div>
 
       <div class="csa-footer-bottom">
-        <p data-i18n="footer.rights">&copy; 2026 CSA Books Kids. Tutti i diritti riservati.</p>
-        <p style="opacity: 0.7;">Acquisti ufficiali garantiti in esclusiva su Amazon in edizione paperback.</p>
+        <p data-i18n="footer.rights">&copy; 2026 CSA Books 4 Kids. Tutti i diritti riservati.</p>
+        <p style="opacity: 0.7;" data-i18n="footer.amazonDisclaimer">Acquisti ufficiali garantiti in esclusiva su Amazon in edizione paperback.</p>
       </div>
     </div>
   </footer>
 
   <!-- Scripts Runtime CSA 2.0 -->
   <script src="data/runtime-data.js"></script>
-  <script src="app-2.0.js"></script>
+  <script src="js/app-2.0.js"></script>
   <script>
     // Parse URL params for direct filter link (e.g. ?age=2-5)
     document.addEventListener('DOMContentLoaded', function() {

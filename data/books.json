@@ -1,8 +1,8 @@
 {
   "featuredBookIds": [
-    "einstein",
     "csa-vol1",
-    "csa-vol2"
+    "csa-vol2",
+    "einstein"
   ],
   "categories": [
     {
@@ -254,15 +254,15 @@
         "jp": "工事現場の冒険 — コレクション第1巻"
       },
       "subtitle": {
-        "it": "Edizione speciale in grande formato (21,5 × 28 cm) con 4 storie complete.",
-        "en": "Large format edition (21.5 × 28 cm) featuring 4 complete stories.",
-        "de": "Großformat-Ausgabe (21,5 × 28 cm) mit 4 vollständigen Geschichten.",
-        "fr": "Édition grand format (21,5 × 28 cm) contenant 4 histoires complètes.",
-        "es": "Edición especial en gran formato con 4 historias completas.",
-        "nl": "Groot formaat uitgave met 4 complete verhalen.",
-        "pl": "Wydanie w dużym formacie zawierające 4 pełne opowieści.",
-        "se": "Stort format med 4 kompletta berättelser.",
-        "jp": "4つの物語を一冊に収録した大型絵本（21.5 × 28 cm）。"
+        "it": "Raccolta di 4 storie | Avventure illustrate con escavatori, ruspe, gru e camion per bambini dai 2 ai 5 anni",
+        "en": "Collection of 4 stories | Illustrated adventures with excavators, bulldozers, cranes and trucks for children ages 2 to 5",
+        "fr": "Recueil de 4 histoires | Aventures illustrées avec pelleteuses, bulldozers, grues et camions pour enfants de 2 à 5 ans",
+        "de": "Sammlung von 4 Geschichten | Illustrierte Abenteuer mit Baggern, Planierraupen, Kränen und Lastern für Kinder von 2 bis 5 Jahren",
+        "es": "Colección de 4 historias | Aventuras ilustradas con excavadoras, excavadoras, grúas y camiones para niños de 2 a 5 años",
+        "nl": "Verzameling van 4 verhalen | Geïllustreerde avonturen met graafmachines, bulldozers, kranen en vrachtwagens voor kinderen van 2 tot 5 jaar",
+        "pl": "Zbiór 4 opowieści | Ilustrowane przygody z koparkami, spychaczami, dźwigami i ciężarówkami dla dzieci w wieku 2-5 lat",
+        "se": "Samling med 4 berättelser | Illustrerade äventyr med grävmaskiner, schaktmaskiner, kranar och lastbilar för barn 2-5 år",
+        "jp": "4つの物語のコレクション | 2〜5歳向けショベルカー、ブルドーザー、クレーン、トラックの楽しい絵本"
       },
       "storiesIncluded": [
         "Benny l'escavatore e la collina che cambiava forma",
@@ -371,15 +371,15 @@
         "jp": "工事現場の冒険 — コレクション第2巻"
       },
       "subtitle": {
-        "it": "Edizione speciale in grande formato (21,5 × 28 cm) con 4 storie complete.",
-        "en": "Large format edition (21.5 × 28 cm) featuring 4 complete stories.",
-        "de": "Großformat-Ausgabe (21,5 × 28 cm) mit 4 vollständigen Geschichten.",
-        "fr": "Édition grand format (21,5 × 28 cm) contenant 4 histoires complètes.",
-        "es": "Edición especial en gran formato con 4 historias completas.",
-        "nl": "Groot formaat uitgave met 4 complete verhalen.",
-        "pl": "Wydanie w dużym formacie zawierające 4 pełne opowieści.",
-        "se": "Stort format med 4 kompletta berättelser.",
-        "jp": "4つの物語を一冊に収録した大型絵本第2弾（21.5 × 28 cm）。"
+        "it": "Raccolta di 4 storie: Avventure illustrate con escavatore, rullo compressore, betoniera e gru per bambini dai 2 ai 5 anni",
+        "en": "Collection of 4 stories: Illustrated adventures with excavator, steamroller, cement mixer and crane for children ages 2 to 5",
+        "fr": "Recueil de 4 histoires: Aventures illustrées avec pelleteuse, rouleau compresseur, bétonnière et grue pour enfants de 2 à 5 ans",
+        "de": "Sammlung von 4 Geschichten: Illustrierte Abenteuer mit Bagger, Walze, Betonmischer und Kran für Kinder von 2 bis 5 Jahren",
+        "es": "Colección de 4 historias: Aventuras ilustradas con excavadora, apisonadora, hormigonera y grúa para niños de 2 a 5 años",
+        "nl": "Verzameling van 4 verhalen: Geïllustreerde avonturen met graafmachine, wals, betonmolen en kraan voor kinderen van 2 tot 5 jaar",
+        "pl": "Zbiór 4 opowieści: Ilustrowane przygody z koparką, walcem, betoniarką i dźwigiem dla dzieci w wieku 2-5 lat",
+        "se": "Samling med 4 berättelser: Illustrerade äventyr med grävmaskin, vält, betongbil och kran för barn 2-5 år",
+        "jp": "4つの物語のコレクション：2〜5歳向けショベルカー、ロードローラー、ミキサー車、クレーンの楽しい絵本"
       },
       "storiesIncluded": [
         "Benny l'escavatore e le monete dell'antica Roma",
@@ -488,15 +488,15 @@
         "jp": "ファーノを見上げて — お絵かき＆アクティビティブック"
       },
       "subtitle": {
-        "it": "Oltre 40 disegni, giochi e attività creative per scoprire la città di Vitruvio divertendosi.",
-        "en": "Over 40 drawings, puzzles, and creative activities discovering the historic city of Vitruvius.",
-        "de": "Über 40 Malvorlagen, Rätsel und kreative Spiele zur Stadt des Vitruv.",
-        "fr": "Plus de 40 dessins, jeux et énigmes pour explorer la cité romaine de Vitruve.",
-        "es": "Más de 40 láminas para colorear, acertijos y juegos creativos.",
-        "nl": "Meer dan 40 kleurplaten, spellen en activiteiten.",
-        "pl": "Ponad 40 rysunków, łamigłówek i zabaw rozwijających kreatywność.",
-        "se": "Över 40 teckningar, pyssel och gåtor.",
-        "jp": "40枚以上のぬりえとパズルで歴史ある街を楽しく探検。"
+        "it": "La città di Vitruvio da scoprire e colorare | Libro da colorare con oltre 40 disegni, giochi e attività creative per bambini 5-10 anni",
+        "en": "The city of Vitruvius to discover and color | Coloring book with over 40 drawings, games and creative activities for children ages 5-10",
+        "fr": "La cité de Vitruve à découvrir et colorier | Livre de coloriage avec plus de 40 dessins, jeux et activités pour enfants de 5 à 10 ans",
+        "de": "Die Stadt des Vitruv entdecken und ausmalen | Malbuch mit über 40 Zeichnungen, Spielen und Aktivitäten für Kinder von 5 bis 10 Jahren",
+        "es": "La ciudad de Vitruvio para descubrir y colorear | Libro para colorear con más de 40 dibujos, juegos y actividades para niños de 5 a 10 años",
+        "nl": "De stad van Vitruvius ontdekken en kleuren | Kleurboek met meer dan 40 tekeningen, spelletjes en creatieve activiteiten voor kinderen van 5-10 jaar",
+        "pl": "Odkryj i pokoloruj miasto Witruwiusza | Kolorowanka z ponad 40 rysunkami, grami i kreatywnymi zadaniami dla dzieci w wieku 5-10 lat",
+        "se": "Upptäck och färglägg Vitruvius stad | Målarbok med över 40 teckningar, lekar och kreativa aktiviteter för barn 5-10 år",
+        "jp": "ウィトルウィウスの街を発見してぬりえを楽しもう | 5〜10歳向け40以上の絵、ゲーム、迷路が詰まったアクティビティブック"
       },
       "pitch": {
         "it": "Un libro da colorare e di attività che porta i bambini (e tutta la famiglia!) alla scoperta delle meraviglie storiche, dei monumenti romani e delle tradizioni di Fano, la città dell'Arco d'Augusto e di Vitruvio. Oltre quaranta tavole originali, curiosità e giochi educativi.",
@@ -700,15 +700,15 @@
         "jp": "ショベルカーのベニーとふしぎな丘"
       },
       "subtitle": {
-        "it": "Volume 1 delle Avventure del Cantiere",
-        "en": "Volume 1 of Construction Site Adventures",
-        "fr": "Tome 1 des Aventures du Chantier",
-        "de": "Band 1 der Baustellen-Abenteuer",
-        "es": "Volumen 1 de Las Aventuras de la Construcción",
-        "nl": "Deel 1 van Bouwplaats Avonturen",
-        "pl": "Tom 1 Przygód na Placu Budowy",
-        "se": "Del 1 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第1巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Benny è un escavatore giallo pieno di entusiasmo. Quando una collina inizia a muoversi in modo misterioso, scoprirà che con un po' di ingegno e tanta gentilezza ogni ostacolo può trasformarsi in una bella sorpresa.",
@@ -795,15 +795,15 @@
         "jp": "ブルドーザーのルディと消えた砂浜"
       },
       "subtitle": {
-        "it": "Volume 2 delle Avventure del Cantiere",
-        "en": "Volume 2 of Construction Site Adventures",
-        "fr": "Tome 2 des Aventures du Chantier",
-        "de": "Band 2 der Baustellen-Abenteuer",
-        "es": "Volumen 2 de Las Aventuras de la Construcción",
-        "nl": "Deel 2 van Bouwplaats Avonturen",
-        "pl": "Tom 2 Przygód na Placu Budowy",
-        "se": "Del 2 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第2巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Rudy è una ruspa coraggiosa. In riva al mare, tra maree e onde birichine, capirà insieme ai suoi amici l'importanza di rispettare le forze della natura.",
@@ -880,15 +880,15 @@
         "jp": "クレーン車のレオと山のほうせき"
       },
       "subtitle": {
-        "it": "Volume 3 delle Avventure del Cantiere",
-        "en": "Volume 3 of Construction Site Adventures",
-        "fr": "Tome 3 des Aventures du Chantier",
-        "de": "Band 3 der Baustellen-Abenteuer",
-        "es": "Volumen 3 de Las Aventuras de la Construcción",
-        "nl": "Deel 3 van Bouwplaats Avonturen",
-        "pl": "Tom 3 Przygód na Placu Budowy",
-        "se": "Del 3 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第3巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Leo è la gru più alta e gentile del cantiere. Su una parete di roccia scopre cristalli splendenti, ma capirà che il vero tesoro è la prudenza e l'amicizia.",
@@ -965,15 +965,15 @@
         "jp": "ダンプカーのブルーノとカモのいけ"
       },
       "subtitle": {
-        "it": "Volume 4 delle Avventure del Cantiere",
-        "en": "Volume 4 of Construction Site Adventures",
-        "fr": "Tome 4 des Aventures du Chantier",
-        "de": "Band 4 der Baustellen-Abenteuer",
-        "es": "Volumen 4 de Las Aventuras de la Construcción",
-        "nl": "Deel 4 van Bouwplaats Avonturen",
-        "pl": "Tom 4 Przygód na Placu Budowy",
-        "se": "Del 4 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第4巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Bruno è un camion forte e robusto, ma dal cuore tenerissimo. Quando una famigliola di anatroccoli rischia di perdere il suo laghetto, Bruno fa di tutto per proteggerli.",
@@ -1042,15 +1042,15 @@
         "jp": "ショベルカーのベニーと古代ローマのコイン"
       },
       "subtitle": {
-        "it": "Volume 5 delle Avventure del Cantiere",
-        "en": "Volume 5 of Construction Site Adventures",
-        "fr": "Tome 5 des Aventures du Chantier",
-        "de": "Band 5 der Baustellen-Abenteuer",
-        "es": "Volumen 5 de Las Aventuras de la Construcción",
-        "nl": "Deel 5 van Bouwplaats Avonturen",
-        "pl": "Tom 5 Przygód na Placu Budowy",
-        "se": "Del 5 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第5巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Scavando nel terreno con la sua benna, Benny urta un vecchio vaso di terracotta colmo di monete imperiali. Una scoperta che trasformerà il cantiere in uno scavo archeologico indimenticabile.",
@@ -1119,15 +1119,15 @@
         "jp": "ミキサー車のニーナとうさぎのはし"
       },
       "subtitle": {
-        "it": "Volume 6 delle Avventure del Cantiere",
-        "en": "Volume 6 of Construction Site Adventures",
-        "fr": "Tome 6 des Aventures du Chantier",
-        "de": "Band 6 der Baustellen-Abenteuer",
-        "es": "Volumen 6 de Las Aventuras de la Construcción",
-        "nl": "Deel 6 van Bouwplaats Avonturen",
-        "pl": "Tom 6 Przygód na Placu Budowy",
-        "se": "Del 6 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第6巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Nina è una betoniera allegra con una botte scintillante. Quando un ruscello in piena isola una colonia di teneri coniglietti, Nina prepara il calcestruzzo perfetto per costruire un ponte sicuro.",
@@ -1196,15 +1196,15 @@
         "jp": "ロードローラーのリノとどろぼうたち"
       },
       "subtitle": {
-        "it": "Volume 7 delle Avventure del Cantiere",
-        "en": "Volume 7 of Construction Site Adventures",
-        "fr": "Tome 7 des Aventures du Chantier",
-        "de": "Band 7 der Baustellen-Abenteuer",
-        "es": "Volumen 7 de Las Aventuras de la Construcción",
-        "nl": "Deel 7 van Bouwplaats Avonturen",
-        "pl": "Tom 7 Przygód na Placu Budowy",
-        "se": "Del 7 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第7巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Rino è un rullo compressore pesante e tranquillo. Di notte, quando due malintenzionati tentano di sottrarre attrezzi preziosi, Rino interviene con astuzia e calma per sventare il colpo.",
@@ -1273,15 +1273,15 @@
         "jp": "クレーン車のレオとシジュウカラの巣"
       },
       "subtitle": {
-        "it": "Volume 8 delle Avventure del Cantiere",
-        "en": "Volume 8 of Construction Site Adventures",
-        "fr": "Tome 8 des Aventures du Chantier",
-        "de": "Band 8 der Baustellen-Abenteuer",
-        "es": "Volumen 8 de Las Aventuras de la Construcción",
-        "nl": "Deel 8 van Bouwplaats Avonturen",
-        "pl": "Tom 8 Przygód na Placu Budowy",
-        "se": "Del 8 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第8巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Tra i rami di un albero vicino all'area di scavo, una piccola cinciallegra ha deposto le sue uova. Leo la gru e i suoi compagni fermano i motori e proteggono il nido fino alla schiusa.",
@@ -1350,15 +1350,15 @@
         "jp": "クレーンのレオとブルドーザーのルディ サバンナ大作戦"
       },
       "subtitle": {
-        "it": "Volume 9 delle Avventure del Cantiere",
-        "en": "Volume 9 of Construction Site Adventures",
-        "fr": "Tome 9 des Aventures du Chantier",
-        "de": "Band 9 der Baustellen-Abenteuer",
-        "es": "Volumen 9 de Las Aventuras de la Construcción",
-        "nl": "Deel 9 van Bouwplaats Avonturen",
-        "pl": "Tom 9 Przygód na Placu Budowy",
-        "se": "Del 9 av Byggarbetsplatsens Äventyr",
-        "jp": "工事現場の冒険 第9巻"
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
       },
       "pitch": {
         "it": "Una trasferta straordinaria lontano dal cantiere di città! Leo la gru e Rudy la ruspa partono per una grande avventura nella savana africana, tra giraffe curiose, elefanti da aiutare e sfide emozionanti sotto il sole.",

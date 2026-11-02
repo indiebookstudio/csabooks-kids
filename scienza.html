@@ -12,11 +12,11 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scienza e curiosità — CSA Books Kids</title>
+  <title>Scienza e curiosità — CSA Books 4 Kids</title>
 
   <!-- SEO & Social Meta -->
   <meta name="description" content="Libri di divulgazione scientifica per ragazzi e bambini 7-12 anni. Scopri Einstein, questa te la sei persa! di Clara Musicco: 55 avventure nella scienza di oggi, scoperte autentiche e il portale interattivo di Otto." />
-  <meta name="author" content="Clara Musicco - CSA Books Kids" />
+  <meta name="author" content="Clara Musicco - CSA Books 4 Kids" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://csabookskids.com/scienza.html" />
 
@@ -32,8 +32,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="style-2.0.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-2.0.css" />
 </head>
 <body>
 
@@ -179,7 +179,7 @@
   <!-- Mobile Drawer -->
   <div class="csa-mobile-drawer" id="csa-mobile-drawer">
     <div class="csa-drawer-header">
-      <span class="csa-brand-name">CSA Books <span class="highlight">Kids</span></span>
+      <span class="csa-brand-name">CSA Books <span class="highlight">4 Kids</span></span>
       <button type="button" class="csa-drawer-close" id="csa-drawer-close" aria-label="Chiudi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <div class="csa-drawer-nav">
@@ -207,23 +207,23 @@
       <div class="csa-container">
         <div class="csa-hero-grid">
           <div>
-            <span class="csa-hero-badge" style="color: #0369a1; border-color: #bae6fd;">Divulgazione Scientifica · 7–12 anni</span>
-            <h1 class="csa-hero-title">Einstein, questa te la sei persa!</h1>
-            <p class="csa-hero-subtitle" style="color: #0c4a6e;">
+            <span class="csa-hero-badge" style="color: #0369a1; border-color: #bae6fd;" data-i18n="scienzaPage.badge">Divulgazione Scientifica · 7–12 anni</span>
+            <h1 class="csa-hero-title" data-i18n="scienzaPage.heroTitle">Einstein, questa te la sei persa!</h1>
+            <p class="csa-hero-subtitle" style="color: #0c4a6e;" data-i18n="scienzaPage.heroSubtitle">
               Di Clara Musicco. 55 avventure nella scienza di oggi | 55 scoperte vere! Dinosauri piumati, buchi neri, robot, animali sorprendenti e il segreto del portale interattivo della mascotte Otto.
             </p>
             <div class="csa-hero-ctas">
               <a id="csa-einstein-buy-btn" href="https://www.amazon.it/dp/B0HP6YD1CM" target="_blank" rel="noopener noreferrer" class="csa-btn csa-btn-amazon csa-btn-lg">
-                Acquista su Amazon
+                <span data-i18n="featured.buyAmazon">Acquista su Amazon</span>
               </a>
-              <button type="button" class="csa-btn csa-btn-secondary csa-btn-lg" onclick="window.openBookModal('einstein')">
+              <button type="button" class="csa-btn csa-btn-secondary csa-btn-lg" onclick="window.openBookModal('einstein')" data-i18n="scienzaPage.lookInsideSample">
                 Sfoglia l'anteprima interna
               </button>
             </div>
           </div>
           <div class="csa-hero-visual" style="min-height: 400px;">
             <div class="csa-stack-item item-3" style="position: relative; width: 280px;" onclick="window.openBookModal('einstein')">
-              <img src="books/einstein/it/cover.png" alt="Einstein, questa te la sei persa!" style="width: 100%; border-radius: 14px; box-shadow: var(--csa-shadow-xl);" />
+              <img id="csa-einstein-cover-img" src="books/einstein/it/cover.png" alt="Einstein, questa te la sei persa!" style="width: 100%; border-radius: 14px; box-shadow: var(--csa-shadow-xl);" />
             </div>
           </div>
         </div>
@@ -234,8 +234,8 @@
     <section class="csa-section" style="background: #ffffff;">
       <div class="csa-container">
         <div class="csa-section-header">
-          <h2 class="csa-section-title">Cosa rende unico questo libro</h2>
-          <p class="csa-section-subtitle">
+          <h2 class="csa-section-title" data-i18n="scienzaPage.featuresTitle">Cosa rende unico questo libro</h2>
+          <p class="csa-section-subtitle" data-i18n="scienzaPage.featuresSubtitle">
             Un'opera che unisce una narrazione vivace con l'affidabilità delle grandi riviste e università scientifiche mondiali.
           </p>
         </div>
@@ -244,8 +244,8 @@
           <!-- 1 -->
           <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 16px; padding: 28px;">
             <div style="font-size: 2rem; margin-bottom: 12px;">🔬</div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">55 Scoperte Verificate</h3>
-            <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;" data-i18n="scienzaPage.feat1Title">55 Scoperte Verificate</h3>
+            <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;" data-i18n="scienzaPage.feat1Desc">
               Dalle onde gravitazionali al telescopio James Webb, dai dinosauri piumati all'intelligenza animale: storie vere con codici di riferimento alle fonti storiche (SC-01 fino a SC-55).
             </p>
           </div>
@@ -253,8 +253,8 @@
           <!-- 2 -->
           <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 16px; padding: 28px;">
             <div style="font-size: 2rem; margin-bottom: 12px;">🐙</div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">La Mascotte Otto</h3>
-            <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;" data-i18n="scienzaPage.feat2Title">La Mascotte Otto</h3>
+            <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;" data-i18n="scienzaPage.feat2Desc">
               Un polpo curioso e ironico con tre cuori e nove cervelli che accompagna i lettori, ponendo domande intelligenti e spiegando concetti complessi in modo limpido e coinvolgente.
             </p>
           </div>
@@ -262,8 +262,8 @@
           <!-- 3 -->
           <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 16px; padding: 28px;">
             <div style="font-size: 2rem; margin-bottom: 12px;">📱</div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Portale Segreto Esclusivo</h3>
-            <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;" data-i18n="scienzaPage.feat3Title">Portale Segreto Esclusivo</h3>
+            <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;" data-i18n="scienzaPage.feat3Desc">
               Il QR code stampato nel libro apre un mondo multimediale con 7 simulazioni 3D, videoteca, un museo virtuale con passaporto da completare e carte stampabili da ritagliare.
             </p>
           </div>
@@ -277,15 +277,15 @@
         <div class="csa-brand-banner" style="background: linear-gradient(135deg, #e0f2fe 0%, #ecfdf5 100%); border-color: #a7f3d0;">
           <div style="display: grid; grid-template-columns: 1.3fr 0.7fr; align-items: center; gap: 40px;">
             <div>
-              <h2 class="csa-banner-title">Il mondo segreto di Otto</h2>
-              <p class="csa-banner-text">
+              <h2 class="csa-banner-title" data-i18n="scienzaPage.secretOttoTitle">Il mondo segreto di Otto</h2>
+              <p class="csa-banner-text" data-i18n="scienzaPage.secretOttoDesc">
                 Il libro è finito. Le scoperte no! Attraverso il portale multimediale accessibile via QR code, i lettori possono esplorare il Museo delle Scoperte Impossibili, cimentarsi in simulazioni fisiche 3D e scaricare giochi da fare in famiglia.
               </p>
               <div style="margin-top: 24px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
                 <div style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; background: #e0f2fe; border: 1.5px solid #7dd3fc; border-radius: 999px; color: #0369a1; font-weight: 700; font-size: 0.95rem;">
-                  <span>🔒 Accessibile tramite QR Code esclusivo stampato nel libro</span>
+                  <span data-i18n="scienzaPage.qrExclusive">🔒 Accessibile tramite QR Code esclusivo stampato nel libro</span>
                 </div>
-                <button type="button" class="csa-btn csa-btn-secondary" onclick="window.openBookModal('einstein')">
+                <button type="button" class="csa-btn csa-btn-secondary" onclick="window.openBookModal('einstein')" data-i18n="scienzaPage.lookInsideSample">
                   Guarda l'estratto del libro
                 </button>
               </div>
@@ -303,38 +303,39 @@
     <div class="csa-container">
       <div class="csa-footer-grid">
         <div class="csa-footer-col">
-          <span class="csa-brand-name" style="color: #fff; margin-bottom: 12px; display: block;">CSA Books <span class="highlight">Kids</span></span>
-          <p style="color: #94a3b8; font-size: 0.95rem;">Collana Scienza e curiosità di Clara Musicco.</p>
+          <span class="csa-brand-name" style="color: #fff; margin-bottom: 12px; display: block;">CSA Books <span class="highlight">4 Kids</span></span>
+          <p style="color: #94a3b8; font-size: 0.95rem;" data-i18n="footer.scienzaPitch">Collana Scienza e curiosità di Clara Musicco.</p>
         </div>
         <div class="csa-footer-col">
-          <h4>Esplora</h4>
+          <h4 data-i18n="footer.navTitle">Esplora</h4>
           <ul class="csa-footer-links">
-            <li><a href="catalogo.html">Tutti i libri</a></li>
-            <li><a href="cantiere.html">Il Cantiere</a></li>
-            <li><a href="scienza.html">Scienza e curiosità</a></li>
-            <li><a href="colorare.html">Da colorare</a></li>
+            <li><a href="catalogo.html" data-i18n="nav.allBooks">Tutti i libri</a></li>
+            <li><a href="cantiere.html" data-i18n="nav.cantiere">Il Cantiere</a></li>
+            <li><a href="scienza.html" data-i18n="nav.scienza">Scienza e curiosità</a></li>
+            <li><a href="colorare.html" data-i18n="nav.colorare">Da colorare</a></li>
           </ul>
         </div>
         <div class="csa-footer-col">
-          <h4>Informazioni</h4>
+          <h4 data-i18n="footer.legalTitle">Informazioni</h4>
           <ul class="csa-footer-links">
-            <li><a href="about.html">Chi siamo</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Chi siamo</a></li>
           </ul>
         </div>
         <div class="csa-footer-col">
-          <h4>Contatti</h4>
+          <h4 data-i18n="footer.contactsTitle">Contatti</h4>
           <ul class="csa-footer-links">
             <li><a href="mailto:csabooks.kids@gmail.com">csabooks.kids@gmail.com</a></li>
           </ul>
         </div>
       </div>
       <div class="csa-footer-bottom">
-        <p>&copy; 2026 CSA Books Kids. Tutti i diritti riservati.</p>
+        <p data-i18n="footer.rights">&copy; 2026 CSA Books 4 Kids. Tutti i diritti riservati.</p>
+        <p style="opacity: 0.7;" data-i18n="footer.amazonDisclaimer">Acquisti ufficiali garantiti in esclusiva su Amazon in edizione paperback.</p>
       </div>
     </div>
   </footer>
 
   <script src="data/runtime-data.js"></script>
-  <script src="app-2.0.js"></script>
+  <script src="js/app-2.0.js"></script>
 </body>
 </html>

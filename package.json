@@ -2,13 +2,13 @@
   "name": "csabooks-kids",
   "version": "2.0.0",
   "private": true,
-  "description": "CSA Books Kids - Official Website & Catalog 2.0",
+  "description": "CSA Books 4 Kids - Official Website & Catalog 2.0",
   "scripts": {
     "generate-banners": "node scripts/generate-banners.js",
     "generate-manifest": "node scripts/generate-books-manifest.js",
     "compile-runtime": "node scripts/compile-runtime.js",
     "build": "node scripts/generate-banners.js && node scripts/sync-einstein-route.js && node scripts/generate-books-manifest.js && node scripts/compile-runtime.js",
-    "test": "node test-qr-routes.js && node test-endpoint.js && node scripts/test-access-flow.js && node scripts/verify-all-tests.js && node tests/test-translations.js && node tests/test-books-media.js",
+    "test": "node tests/test-qr-routes.js && node tests/test-endpoint.js && node scripts/test-access-flow.js && node scripts/verify-all-tests.js && node tests/test-translations.js && node tests/test-books-media.js && node tests/test-multilingual-catalog-rules.js",
     "test:e2e": "node tests/test-browser-e2e.js"
   },
   "keywords": [

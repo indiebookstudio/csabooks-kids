@@ -1,0 +1,77 @@
+Modalità: strumento integrato imagegen. Scene senza testi; copertine originali fornite separatamente per il montaggio HTML.
+
+01-raccolte-desktop
+RIFERIMENTI:
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Character.Sheets.Fixed\Benny.Fixed.png
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Character.Sheets.Fixed\Rudy.Fixed.png
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Bundle.Volume.1\Cover\ITA\v1\PB\Front.Cover.png
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Bundle.Volume.2\Cover\ITA\v1\PB\Front.Cover.png
+PROMPT:
+Use case: illustration-story. Christmas 2026 children's books premium ecommerce hero BACKGROUND ART, one cohesive breathtaking polished dimensional storybook scene, NOT a finished advertisement. Benny the original yellow tracked backhoe and Rudy the original blue tracked bulldozer beside a beautifully lit Christmas tree in a warm storybook workshop, wrapped gifts and gold fairy lights, rich evergreen and burgundy, magical cozy Christmas gifting atmosphere. Preserve EXACT original vehicle models and faces from sheets; covers are mood/product references only. Mandatory original reference fidelity, no redesigned mascots. Ultra-wide landscape 3:1, intended 2400x800. Keep LEFT 42% as genuinely calm dark softly lit negative space for HTML sales copy; cluster the original characters on RIGHT 55%. Reserve a calm small foreground area bottom-right for original book cover PNGs to be added separately in HTML. Luxurious thoughtful art direction, cinematic warm light, beautiful tactile detail and controlled depth, strong color hierarchy and instantly legible characters. NO words, NO letters, NO numbers, NO badges, NO logos, NO watermarks, NO UI, NO book mockups, NO books with invented covers, NO blank rectangular placeholders, NO panels. Do not copy reference sheet labels or cover lettering. Original real cover images will be layered separately; do not render them. Full bleed opaque scene. All faces and important features safely within frame.
+
+----------------
+
+01-raccolte-mobile
+RIFERIMENTI:
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Character.Sheets.Fixed\Benny.Fixed.png
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Character.Sheets.Fixed\Rudy.Fixed.png
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Bundle.Volume.1\Cover\ITA\v1\PB\Front.Cover.png
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Bundle.Volume.2\Cover\ITA\v1\PB\Front.Cover.png
+PROMPT:
+Use case: illustration-story. Christmas 2026 children's books premium ecommerce hero BACKGROUND ART, one cohesive breathtaking polished dimensional storybook scene, NOT a finished advertisement. Benny the original yellow tracked backhoe and Rudy the original blue tracked bulldozer beside a beautifully lit Christmas tree in a warm storybook workshop, wrapped gifts and gold fairy lights, rich evergreen and burgundy, magical cozy Christmas gifting atmosphere. Preserve EXACT original vehicle models and faces from sheets; covers are mood/product references only. Mandatory original reference fidelity, no redesigned mascots. Portrait 4:5 intended 1024x1280. Keep TOP 38% as calm dark negative space for HTML headline and button; characters grouped in MIDDLE/LOWER half, safe 8% margins. Reserve lower foreground for actual product cover images added separately in HTML. Luxurious thoughtful art direction, cinematic warm light, beautiful tactile detail and controlled depth, strong color hierarchy and instantly legible characters. NO words, NO letters, NO numbers, NO badges, NO logos, NO watermarks, NO UI, NO book mockups, NO books with invented covers, NO blank rectangular placeholders, NO panels. Do not copy reference sheet labels or cover lettering. Original real cover images will be layered separately; do not render them. Full bleed opaque scene. All faces and important features safely within frame.
+
+----------------
+
+02-einstein-desktop
+RIFERIMENTI:
+C:\Users\Marco\Desktop\LIBRI\Books\Einstein.Questa.Te.La.Sei.Persa\Character.Sheet\OTTO.png
+C:\Users\Marco\Desktop\LIBRI\Books\Einstein.Questa.Te.La.Sei.Persa\Cover\ENG\Front.Cover.jpg
+PROMPT:
+Use case: illustration-story. Christmas 2026 children's books premium ecommerce hero BACKGROUND ART, one cohesive breathtaking polished dimensional storybook scene, NOT a finished advertisement. Otto the EXACT original orange octopus explorer, amber eyes, olive explorer cap with brass goggles, shell satchel and compass, discovering a luminous miniature Saturn Christmas ornament beside a festive Christmas tree decorated with subtle planets and stars in an enchanting deep midnight-blue scientific observatory, warm gold lights and turquoise accents. Preserve Otto from reference 1; reference 2 book is thematic inspiration for science, NOT to redraw its dinosaur or reproduce text. Mandatory original reference fidelity, no redesigned mascots. Ultra-wide landscape 3:1, intended 2400x800. Keep LEFT 42% as genuinely calm dark softly lit negative space for HTML sales copy; cluster the original characters on RIGHT 55%. Reserve a calm small foreground area bottom-right for original book cover PNGs to be added separately in HTML. Luxurious thoughtful art direction, cinematic warm light, beautiful tactile detail and controlled depth, strong color hierarchy and instantly legible characters. NO words, NO letters, NO numbers, NO badges, NO logos, NO watermarks, NO UI, NO book mockups, NO books with invented covers, NO blank rectangular placeholders, NO panels. Do not copy reference sheet labels or cover lettering. Original real cover images will be layered separately; do not render them. Full bleed opaque scene. All faces and important features safely within frame.
+
+----------------
+
+02-einstein-mobile
+RIFERIMENTI:
+C:\Users\Marco\Desktop\LIBRI\Books\Einstein.Questa.Te.La.Sei.Persa\Character.Sheet\OTTO.png
+C:\Users\Marco\Desktop\LIBRI\Books\Einstein.Questa.Te.La.Sei.Persa\Cover\ENG\Front.Cover.jpg
+PROMPT:
+Use case: illustration-story. Christmas 2026 children's books premium ecommerce hero BACKGROUND ART, one cohesive breathtaking polished dimensional storybook scene, NOT a finished advertisement. Otto the EXACT original orange octopus explorer, amber eyes, olive explorer cap with brass goggles, shell satchel and compass, discovering a luminous miniature Saturn Christmas ornament beside a festive Christmas tree decorated with subtle planets and stars in an enchanting deep midnight-blue scientific observatory, warm gold lights and turquoise accents. Preserve Otto from reference 1; reference 2 book is thematic inspiration for science, NOT to redraw its dinosaur or reproduce text. Mandatory original reference fidelity, no redesigned mascots. Portrait 4:5 intended 1024x1280. Keep TOP 38% as calm dark negative space for HTML headline and button; characters grouped in MIDDLE/LOWER half, safe 8% margins. Reserve lower foreground for actual product cover images added separately in HTML. Luxurious thoughtful art direction, cinematic warm light, beautiful tactile detail and controlled depth, strong color hierarchy and instantly legible characters. NO words, NO letters, NO numbers, NO badges, NO logos, NO watermarks, NO UI, NO book mockups, NO books with invented covers, NO blank rectangular placeholders, NO panels. Do not copy reference sheet labels or cover lettering. Original real cover images will be layered separately; do not render them. Full bleed opaque scene. All faces and important features safely within frame.
+
+----------------
+
+03-collana-desktop
+RIFERIMENTI:
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Character.Sheets.Fixed\Benny.Fixed.png
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Character.Sheets.Fixed\Rudy.Fixed.png
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Character.Sheets.Fixed\Leo.Fixed.png
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\03.Leo.Montagna\Cover\v4\ITA\Front.Cover.png
+PROMPT:
+Use case: illustration-story. Christmas 2026 children's books premium ecommerce hero BACKGROUND ART, one cohesive breathtaking polished dimensional storybook scene, NOT a finished advertisement. Exactly the original Benny yellow tracked backhoe, Rudy blue tracked bulldozer, Leo orange crane truck with brown eyes, joyfully decorating a small Christmas tree in a snowy construction village at blue hour, warm illuminated workshop windows, tasteful red ribbons and gold lights, cheerful snowy adventure, characters clearly recognizable and faithful to their exact sheets. Book cover is thematic reference only. Do not invent a tenth published Christmas episode or any extra characters. Mandatory original reference fidelity, no redesigned mascots. Ultra-wide landscape 3:1, intended 2400x800. Keep LEFT 42% as genuinely calm dark softly lit negative space for HTML sales copy; cluster the original characters on RIGHT 55%. Reserve a calm small foreground area bottom-right for original book cover PNGs to be added separately in HTML. Luxurious thoughtful art direction, cinematic warm light, beautiful tactile detail and controlled depth, strong color hierarchy and instantly legible characters. NO words, NO letters, NO numbers, NO badges, NO logos, NO watermarks, NO UI, NO book mockups, NO books with invented covers, NO blank rectangular placeholders, NO panels. Do not copy reference sheet labels or cover lettering. Original real cover images will be layered separately; do not render them. Full bleed opaque scene. All faces and important features safely within frame.
+
+----------------
+
+03-collana-mobile
+RIFERIMENTI:
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Character.Sheets.Fixed\Benny.Fixed.png
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Character.Sheets.Fixed\Rudy.Fixed.png
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\Character.Sheets.Fixed\Leo.Fixed.png
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Le.Avventure.Del.Cantiere\03.Leo.Montagna\Cover\v4\ITA\Front.Cover.png
+PROMPT:
+Use case: illustration-story. Christmas 2026 children's books premium ecommerce hero BACKGROUND ART, one cohesive breathtaking polished dimensional storybook scene, NOT a finished advertisement. Exactly the original Benny yellow tracked backhoe, Rudy blue tracked bulldozer, Leo orange crane truck with brown eyes, joyfully decorating a small Christmas tree in a snowy construction village at blue hour, warm illuminated workshop windows, tasteful red ribbons and gold lights, cheerful snowy adventure, characters clearly recognizable and faithful to their exact sheets. Book cover is thematic reference only. Do not invent a tenth published Christmas episode or any extra characters. Mandatory original reference fidelity, no redesigned mascots. Portrait 4:5 intended 1024x1280. Keep TOP 38% as calm dark negative space for HTML headline and button; characters grouped in MIDDLE/LOWER half, safe 8% margins. Reserve lower foreground for actual product cover images added separately in HTML. Luxurious thoughtful art direction, cinematic warm light, beautiful tactile detail and controlled depth, strong color hierarchy and instantly legible characters. NO words, NO letters, NO numbers, NO badges, NO logos, NO watermarks, NO UI, NO book mockups, NO books with invented covers, NO blank rectangular placeholders, NO panels. Do not copy reference sheet labels or cover lettering. Original real cover images will be layered separately; do not render them. Full bleed opaque scene. All faces and important features safely within frame.
+
+----------------
+
+04-fano-desktop
+RIFERIMENTI:
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Fano.Col.Naso.All.Insu\Cover\Front.Cover.ITA.png
+PROMPT:
+Use case: illustration-story. Christmas 2026 children's books premium ecommerce hero BACKGROUND ART, one cohesive breathtaking polished dimensional storybook scene, NOT a finished advertisement. The EXACT same girl and boy from the Fano cover: brown bob and pink headband, magenta cardigan over mint shirt; tousled brown-haired boy wearing blue knit sweater. They color together at a festive table in Fano's recognizable clock-tower and fountain square, warm Christmas market lights, beautiful Christmas tree, subtle watercolor rainbow accents, joyous creative Christmas gift atmosphere. Preserve their faces, clothing, ages and the cover architecture. No additional people. Mandatory original reference fidelity, no redesigned mascots. Ultra-wide landscape 3:1, intended 2400x800. Keep LEFT 42% as genuinely calm dark softly lit negative space for HTML sales copy; cluster the original characters on RIGHT 55%. Reserve a calm small foreground area bottom-right for original book cover PNGs to be added separately in HTML. Luxurious thoughtful art direction, cinematic warm light, beautiful tactile detail and controlled depth, strong color hierarchy and instantly legible characters. NO words, NO letters, NO numbers, NO badges, NO logos, NO watermarks, NO UI, NO book mockups, NO books with invented covers, NO blank rectangular placeholders, NO panels. Do not copy reference sheet labels or cover lettering. Original real cover images will be layered separately; do not render them. Full bleed opaque scene. All faces and important features safely within frame.
+
+----------------
+
+04-fano-mobile
+RIFERIMENTI:
+C:\Users\Marco\Desktop\LIBRI\Books\Marco.Salucci\Fano.Col.Naso.All.Insu\Cover\Front.Cover.ITA.png
+PROMPT:
+Use case: illustration-story. Christmas 2026 children's books premium ecommerce hero BACKGROUND ART, one cohesive breathtaking polished dimensional storybook scene, NOT a finished advertisement. The EXACT same girl and boy from the Fano cover: brown bob and pink headband, magenta cardigan over mint shirt; tousled brown-haired boy wearing blue knit sweater. They color together at a festive table in Fano's recognizable clock-tower and fountain square, warm Christmas market lights, beautiful Christmas tree, subtle watercolor rainbow accents, joyous creative Christmas gift atmosphere. Preserve their faces, clothing, ages and the cover architecture. No additional people. Mandatory original reference fidelity, no redesigned mascots. Portrait 4:5 intended 1024x1280. Keep TOP 38% as calm dark negative space for HTML headline and button; characters grouped in MIDDLE/LOWER half, safe 8% margins. Reserve lower foreground for actual product cover images added separately in HTML. Luxurious thoughtful art direction, cinematic warm light, beautiful tactile detail and controlled depth, strong color hierarchy and instantly legible characters. NO words, NO letters, NO numbers, NO badges, NO logos, NO watermarks, NO UI, NO book mockups, NO books with invented covers, NO blank rectangular placeholders, NO panels. Do not copy reference sheet labels or cover lettering. Original real cover images will be layered separately; do not render them. Full bleed opaque scene. All faces and important features safely within frame.

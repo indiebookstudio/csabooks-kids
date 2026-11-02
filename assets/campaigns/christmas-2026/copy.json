@@ -1,0 +1,60 @@
+{
+  "it": {
+    "01-raccolte": {
+      "eyebrow": "Natale 2026",
+      "title": "Due volumi. Un Natale pieno di avventure.",
+      "body": "Regala le grandi raccolte delle Avventure del Cantiere: scegli il Volume 1, il Volume 2 o entrambi.",
+      "cta": "Scopri le raccolte",
+      "secondary": [
+        "Volume 1 su Amazon",
+        "Volume 2 su Amazon"
+      ]
+    },
+    "02-einstein": {
+      "eyebrow": "Natale 2026",
+      "title": "Regala la meraviglia di scoprire.",
+      "body": "Dinosauri, spazio e scoperte sorprendenti: Einstein, questa te la sei persa! è il regalo per chi fa mille domande.",
+      "cta": "Acquista su Amazon"
+    },
+    "03-collana": {
+      "eyebrow": "Natale 2026",
+      "title": "Sotto l’albero, una nuova avventura.",
+      "body": "9 episodi in italiano con gli amici del Cantiere. Scegli la storia da regalare.",
+      "cta": "Scegli la tua avventura"
+    },
+    "04-fano": {
+      "eyebrow": "Natale 2026",
+      "title": "Un Natale tutto da colorare.",
+      "body": "Con Fano col naso all’insù, la scoperta della città diventa un regalo di creatività.",
+      "cta": "Acquista su Amazon"
+    }
+  },
+  "en": {
+    "02-einstein": {
+      "eyebrow": "Christmas 2026",
+      "title": "Give the wonder of discovery.",
+      "body": "Dinosaurs, space and surprising discoveries. Einstein, You Missed This! is a gift for curious minds.",
+      "cta": "Buy on Amazon"
+    },
+    "03-collana": {
+      "eyebrow": "Christmas 2026",
+      "title": "A new adventure under the tree.",
+      "body": "8 stories in English with the construction crew. Find the next adventure to give.",
+      "cta": "Choose an adventure"
+    }
+  },
+  "fr": {
+    "02-einstein": {
+      "eyebrow": "Noël 2026",
+      "title": "Offrez le plaisir de découvrir.",
+      "body": "Dinosaures, espace et découvertes étonnantes : un livre à offrir aux enfants qui posent mille questions.",
+      "cta": "Acheter sur Amazon"
+    },
+    "03-collana": {
+      "eyebrow": "Noël 2026",
+      "title": "Une nouvelle aventure sous le sapin.",
+      "body": "3 histoires en français avec les amis du chantier. Choisissez l’aventure à offrir.",
+      "cta": "Choisir une aventure"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+CSA Books Kids — Natale 2026
+
+Apri ANTEPRIMA.html per vedere i montaggi desktop e mobile nelle tre lingue editoriali. È una proposta compositiva, non il sito definitivo. Le CTA dell’anteprima sono disattivate.
+
+Copia in Antigravity il contenuto di PROMPT-ANTIGRAVITY.md. Tutte le immagini sono in backgrounds/ e covers/. Non ci sono scritte promozionali nelle scene. I testi verranno aggiunti nel sito.
+
+8 grafiche imagegen, 26 copertine originali copiate senza modifiche, configurazione linguistica e testi IT/EN/FR. DE/ES/NL/PL/SE/JP usano libri inglesi con testi del sito nella lingua del visitatore. Le traduzioni delle sei interfacce aggiuntive sono richieste nel prompt ad Antigravity.
+
+Le scene sono comuni alle lingue; i montaggi si differenziano attraverso le copertine originali e la selezione di prodotti, senza duplicare inutilmente gli sfondi.
+
+Verificati file, dimensioni, corrispondenza delle copie alle fonti, conteggi 9/8/3 e presenza di tutti i materiali referenziati. L’integrazione nel sito, la resa finale e i link Amazon devono essere verificati da Antigravity sul progetto.
