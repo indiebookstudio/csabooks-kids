@@ -1,796 +1,346 @@
-// Museum of Impossible Discoveries — English Edition
 'use strict';
+/* Museo delle Scoperte Impossibili — standalone, offline-capable, no analytics. */
 const A = name => `assets/${name}.webp`;
 const ROOMS = [
   {
     "id": 1,
     "slug": "animali",
-    "label": "Animales Extraordinarios",
-    "title": "El Océano Esconde Pistas",
-    "teaser": "¿Puede un alga convertirse en herramienta? ¿Y unas burbujas en red de pesca?",
+    "label": "Animales extraordinarios",
+    "title": "El océano esconde pistas",
+    "teaser": "¿Puede un alga convertirse en herramienta? ¿Y unas burbujas en red?",
     "art": "animali",
     "sideArt": "orche",
     "otto": "otto-curioso",
-    "icon": "🌊",
-    "seal": "Lente Marina",
+    "icon": "◉",
+    "seal": "La lente marina",
     "kicker": "SALA 01 · ANIMALES EXTRAORDINARIOS",
-    "intro": "Algunos animales sorprenden a la ciencia no por magia, sino porque hacen cosas que nadie esperaba ver.",
-    "question": "Un vídeo puede mostrarnos qué ocurre. Pero, ¿puede explicarnos el motivo de inmediato?",
-    "mainTitle": "El Caso del Alga Misteriosa",
-    "main": "En el mar de Salish, los científicos grabaron orcas arrancando algas laminarias y haciéndolas rodar entre sus cuerpos. Ver el comportamiento es una cosa; descubrir su función exacta es otra.",
+    "intro": "Algunos animales sorprenden a la ciencia no por magia, sino porque hacen cosas que nadie esperaba.",
+    "question": "Un vídeo puede mostrarnos qué ocurre. Pero, ¿puede decirnos enseguida por qué?",
+    "mainTitle": "El caso del alga misteriosa",
+    "main": "En el mar de Salish, los investigadores filmaron orcas arrancando un tramo de alga y haciéndolo rodar entre sus cuerpos. Observar el movimiento es una cosa; entender su función exacta es otra.",
     "challenge": "prove",
     "source": {
       "code": "SC-04",
-      "title": "Estudio de conducta de orcas (Current Biology)",
+      "title": "Estudio sobre el comportamiento de las orcas (Current Biology)",
       "url": "https://doi.org/10.1016/j.cub.2025.04.021"
     },
     "side": {
-      "title": "La Red de Burbujas de la Ballena",
-      "label": "Otra Pieza Expuesta",
-      "desc": "Algunas ballenas jorobadas expulsan cortinas circulares de burbujas para acorralar bancos de peces. Las burbujas no son muros sólidos, pero alteran la conducta de las presas.",
+      "title": "La ballena que pesca con burbujas",
+      "label": "Otra pieza expuesta",
+      "desc": "Algunas ballenas jorobadas producen redes de burbujas para concentrar a los peces. Las burbujas no son una pared sólida: modifican la conducta de las presas. Su forma y su uso pueden variar.",
       "source": {
         "code": "SC-05",
-        "title": "Investigación sobre redes de burbujas (Royal Society)",
+        "title": "Investigación sobre las redes de burbujas de las ballenas",
         "url": "https://doi.org/10.1098/rsos.240328"
       }
     },
-    "questionHint": "Observa bien las algas, pero fíjate sobre todo en lo que hacen los animales con ellas."
+    "questionHint": "Mira el alga, pero sobre todo observa qué hacen los animales con ella."
   },
   {
     "id": 2,
     "slug": "piante",
-    "label": "Plantas y Mundos Diminutos",
-    "title": "Un Jardín Inesperado",
-    "teaser": "Brotes en polvo lunar y helechos con genomas colosales.",
+    "label": "Plantas y pequeños mundos",
+    "title": "Un jardín inesperado",
+    "teaser": "Brotes en polvo lunar y helechos con un ADN gigantesco.",
     "art": "piante",
     "sideArt": "felce-dna",
     "otto": "otto-pensieroso",
-    "icon": "🌿",
-    "seal": "Brote Lunar",
-    "kicker": "SALA 02 · PLANTAS Y MUNDOS DIMINUTOS",
-    "intro": "Las plantas parecen quietas, pero están llenas de respuestas asombrosas. Hasta el polvo de la Luna formó parte de un estudio pionero.",
-    "question": "Para comprobar si una planta crece de verdad en suelo lunar, ¿con qué deben compararla los científicos?",
-    "mainTitle": "Semillas y Polvo Lunar",
-    "main": "En el laboratorio, varias semillas brotaron en pequeñas muestras de regolito lunar traídas por las misiones Apolo. Sin embargo, las plantas mostraron claros signos de estrés biológico.",
+    "icon": "✿",
+    "seal": "El brote lunar",
+    "kicker": "SALA 02 · PLANTAS Y PEQUEÑOS MUNDOS",
+    "intro": "Las plantas parecen quietas, pero son organismos llenos de respuestas asombrosas. Hasta el polvo de la Luna formó parte de una investigación.",
+    "question": "Para saber si una planta crece en el regolito lunar, ¿qué debemos comparar?",
+    "mainTitle": "La semilla y el polvo de la Luna",
+    "main": "En el laboratorio, varias semillas brotaron en pequeñas muestras de regolito lunar traídas por las misiones Apolo. Sin embargo, las plantas mostraron signos de estrés. Brotar no significa crecer tan bien como en tierra fértil.",
     "challenge": "terreno",
     "source": {
       "code": "SC-12",
-      "title": "Plantas en regolito lunar (Communications Biology)",
+      "title": "Plantas cultivadas en regolito lunar (Communications Biology)",
       "url": "https://doi.org/10.1038/s42003-022-03334-8"
     },
     "side": {
-      "title": "El Helecho que Asombró a la Genética",
-      "label": "Otra Pieza Expuesta",
-      "desc": "Un diminuto helecho del género Tmesipteris alberga un genoma colosal. La cantidad total de ADN no determina la inteligencia: es una curiosidad biológica para entender en su contexto.",
+      "title": "El helecho que asombró a la genética",
+      "label": "Otra pieza expuesta",
+      "desc": "Un diminuto helecho del género Tmesipteris posee un genoma colosal. La cantidad de ADN no mide la inteligencia o la complejidad de un organismo: es un rasgo biológico para entender en su contexto.",
       "source": {
         "code": "SC-13",
-        "title": "Análisis del genoma de Tmesipteris (iScience)",
+        "title": "Estudio del genoma de Tmesipteris (iScience)",
         "url": "https://doi.org/10.1016/j.isci.2024.109889"
       }
     },
-    "questionHint": "En un experimento científico, cambia siempre una sola variable cada vez."
+    "questionHint": "En una comparación científica, intenta cambiar un solo elemento cada vez."
   },
   {
     "id": 3,
     "slug": "esperimenti",
-    "label": "Experimentos Sorprendentes",
-    "title": "El Pez sobre Cuatro Ruedas",
-    "teaser": "¿Quién conduce de verdad un acuario motorizado?",
+    "label": "Experimentos sorprendentes",
+    "title": "El pez sobre cuatro ruedas",
+    "teaser": "¿Quién conduce de verdad un acuario móvil?",
     "art": "esperimenti",
     "sideArt": "pesce",
     "otto": "otto-curioso",
-    "icon": "🔬",
-    "seal": "Inventor Curioso",
+    "icon": "⌁",
+    "seal": "El inventor curioso",
     "kicker": "SALA 03 · EXPERIMENTOS SORPRENDENTES",
-    "intro": "Un gran experimento científico no es magia: es una cadena de pasos que podemos reconstruir, controlar y explicar.",
+    "intro": "Un gran invento no es magia: es una cadena de pasos que podemos reconstruir, controlar y explicar.",
     "question": "¿Cómo puede un pez mover un vehículo terrestre sin tocar las ruedas?",
-    "mainTitle": "Reconstruir el Montaje de Laboratorio",
-    "main": "En un estudio singular, los investigadores colocaron una pecera sobre una plataforma robótica con ruedas. Una cámara seguía la posición del pez y traducía su nado en órdenes de giro para las ruedas.",
+    "mainTitle": "Pon en orden el laboratorio",
+    "main": "En un experimento, los investigadores montaron una pecera sobre una plataforma con motor. Un sistema detectaba la posición del pez y la traducía en órdenes para las ruedas. El pez no conducía con un volante.",
     "challenge": "sequenza",
     "source": {
       "code": "SC-15",
-      "title": "Navegación de un pez en tierra (Behavioural Brain Research)",
+      "title": "Vehículo accionado por un pez (BBR)",
       "url": "https://doi.org/10.1016/j.bbr.2021.113711"
     },
     "side": {
-      "title": "Abejorros que Juegan a la Pelota",
-      "label": "Otra Pieza Expuesta",
-      "desc": "Varios abejorros hicieron rodar bolitas de madera sin recibir premio dulce a cambio. Los científicos investigan si se trata de una auténtica conducta de juego.",
+      "title": "Los abejorros y las pelotas",
+      "label": "Otra pieza expuesta",
+      "desc": "En varios ensayos, algunos abejorros hicieron rodar bolitas de madera sin premio a cambio. Los científicos analizan si es conducta de juego, sin atribuirles pensamientos humanos.",
       "source": {
         "code": "SC-16",
-        "title": "Juego en abejorros (Animal Behaviour)",
+        "title": "Investigación sobre el juego en abejorros",
         "url": "https://doi.org/10.1016/j.anbehav.2022.08.013"
       }
     },
-    "questionHint": "Sigue el viaje de la información: del ojo a la señal, y del motor al movimiento."
+    "questionHint": "¿Qué paso convierte un movimiento observado en movimiento de las ruedas?"
   },
   {
     "id": 4,
     "slug": "dinosauri",
-    "label": "Dinosaurios, Extinciones y ADN",
-    "title": "No Todos los Dinosaurios Desaparecieron",
-    "teaser": "Aves con plumas y el gran tiburón megalodón.",
+    "label": "Dinosaurios, extintos y ADN",
+    "title": "No todos los dinosaurios desaparecieron",
+    "teaser": "En la historia de las aves hay una rama asombrosa.",
     "art": "dinosauri",
     "sideArt": "uccelli",
-    "otto": "otto-curioso",
-    "icon": "🦖",
-    "seal": "Fósil Viviente",
-    "kicker": "SALA 04 · DINOSAURIOS, EXTINCIONES Y ADN",
-    "intro": "Mirar al pasado nos ayuda a comprender el presente: lo que creíamos extinguido a veces sigue vivo ante nuestros ojos.",
-    "question": "¿Por qué las aves actuales se consideran científicamente dinosaurios?",
-    "mainTitle": "Un Dinosaurio en el Gallinero",
-    "main": "Las aves no solo descienden de los dinosaurios: son dinosaurios vivos. Comparten rasgos anatómicos únicos heredados de terópodos carnívoros emplumados.",
-    "challenge": "dino",
+    "otto": "otto-pensieroso",
+    "icon": "❖",
+    "seal": "El detective del pasado",
+    "kicker": "SALA 04 · DINOSAURIOS, EXTINTOS Y ADN",
+    "intro": "Los fósiles son pistas. A partir de un fragmento, una pluma o una forma ósea, los científicos reconstruyen historias milenarias.",
+    "question": "¿Desciende la gallina directamente del T. rex?",
+    "mainTitle": "El árbol genealógico oculto",
+    "main": "Las aves son dinosaurios terópodos vivientes. El T. rex era un pariente lejano, no el abuelo de la gallina. La clave es el antepasado común.",
+    "challenge": "parentela",
     "source": {
-      "code": "SC-22",
-      "title": "Evolución de dinosaurios a aves (Natural History Museum)",
+      "code": "SC-38",
+      "title": "Natural History Museum — Cómo los dinosaurios evolucionaron en aves",
       "url": "https://www.nhm.ac.uk/discover/how-dinosaurs-evolved-into-birds.html"
     },
     "side": {
-      "title": "La Verdadera Forma del Megalodón",
-      "label": "Otra Pieza Expuesta",
-      "desc": "El gran megalodón suele imaginarse como un tiburón blanco gigante. Las últimas revisiones fósiles sugieren una silueta más alargada y estilizada.",
+      "title": "¿Por qué un fósil no basta para clonar un dinosaurio?",
+      "label": "Otra pieza expuesta",
+      "desc": "Un fósil nos enseña mucho sobre la forma de un animal extinto. Pero clonarlo requeriría material biológico adecuado, no una roca mineralizada. La magia del cine no es un método de laboratorio.",
       "source": {
-        "code": "SC-25",
-        "title": "Revisión morfológica de Otodus megalodon (Historical Biology)",
-        "url": "https://doi.org/10.1080/08912963.2024.2380590"
+        "code": "SC-39",
+        "title": "Natural History Museum — ¿Podrían los científicos revivir a los dinosaurios?",
+        "url": "https://www.nhm.ac.uk/discover/could-scientists-bring-dinosaurs-back.html"
       }
     },
-    "questionHint": "No te fíes solo de las apariencias: observa los huesos y los parentescos biológicos."
+    "questionHint": "En un árbol evolutivo cuenta el punto donde se bifurcan las ramas."
   },
   {
     "id": 5,
-    "slug": "tecnologia",
-    "label": "El Laboratorio del Futuro",
-    "title": "Máquinas Inspiradas en la Naturaleza",
-    "teaser": "Robótica biohíbrida con hongos y materiales inteligentes.",
+    "slug": "laboratorio",
+    "label": "El laboratorio del futuro",
+    "title": "Máquinas que aprenden de la naturaleza",
+    "teaser": "¿Puede una trompa inspirar una pinza robótica?",
     "art": "laboratorio",
     "sideArt": "micelio",
-    "otto": "otto-pensieroso",
-    "icon": "🤖",
-    "seal": "Robot Biohíbrido",
+    "otto": "otto-curioso",
+    "icon": "⚙",
+    "seal": "El ingeniero de la naturaleza",
     "kicker": "SALA 05 · EL LABORATORIO DEL FUTURO",
-    "intro": "La ingeniería moderna se inspira cada vez más en la biología: aprovecha señales vivas para accionar circuitos electrónicos.",
-    "question": "¿Cómo puede un hongo guiar los movimientos de un robot sin tener cerebro?",
-    "mainTitle": "El Micelio al Mando",
-    "main": "Los ingenieros conectaron micelio fúngico vivo a electrodos. Cuando el hongo reacciona ante la luz, sus impulsos eléctricos naturales se traducen en órdenes de movimiento para los motores del robot.",
-    "challenge": "bio",
+    "intro": "Muchas tecnologías nacen de observar: ¿cómo resuelve un ser vivo un reto complejo?",
+    "question": "¿Cómo agarrarías un objeto frágil sin romperlo?",
+    "mainTitle": "Diseña el agarre perfecto",
+    "main": "Los investigadores diseñan pinzas flexibles inspiradas en la trompa de los elefantes. Envolver un objeto delicado evita romperlo con piezas rígidas. Aquí puedes probar un modelo interactivo y divertido.",
+    "challenge": "pinza",
     "source": {
-      "code": "SC-36",
-      "title": "Biohíbridos basados en micelio (Science Robotics)",
-      "url": "https://doi.org/10.1126/scirobotics.adk8019"
+      "code": "SC-23",
+      "title": "Estudio sobre pinzas robóticas inspiradas en la trompa",
+      "url": "https://doi.org/10.1038/s44182-025-00038-z"
     },
     "side": {
-      "title": "Robots de Origami que se Despliegan",
-      "label": "Otra Pieza Expuesta",
-      "desc": "Inspirados en el arte del papel plegado, algunos robots se despliegan por sí solos desde una lámina plana al recibir calor o campos magnéticos.",
+      "title": "El micelio conoce a un robot",
+      "label": "Otra pieza expuesta",
+      "desc": "En un prototipo de prueba, señales eléctricas de micelio fúngico fueron traducidas por circuitos para mover un robot. No significa que el hongo decida adónde ir.",
       "source": {
-        "code": "SC-35",
-        "title": "Robótica origami autónoma",
-        "url": "https://doi.org/10.1038/s41586-023-06484-9"
+        "code": "SC-25",
+        "title": "Investigación sobre robots controlados por micelio",
+        "url": "https://doi.org/10.1126/scirobotics.adk8019"
       }
     },
-    "questionHint": "Una señal eléctrica no es un pensamiento: es un pulso medible que los circuitos pueden interpretar."
+    "questionHint": "Apretar con más fuerza no siempre es la mejor solución."
   },
   {
     "id": 6,
     "slug": "corpo",
-    "label": "Cuerpo y Supertecnologías",
-    "title": "El Cuerpo Emite Señales",
-    "teaser": "Prótesis biónicas y nuevas formas de recuperar la voz.",
+    "label": "Cuerpo y supertecnologías",
+    "title": "El cuerpo envía mensajes",
+    "teaser": "Cuando los músculos y la ingeniería trabajan juntos.",
     "art": "corpo",
-    "sideArt": "bionico",
-    "otto": "otto-curioso",
-    "icon": "⚡",
-    "seal": "Impulso Biónico",
+    "sideArt": "voce",
+    "otto": "otto-pensieroso",
+    "icon": "✧",
+    "seal": "El explorador de señales",
     "kicker": "SALA 06 · CUERPO Y SUPERTECNOLOGÍAS",
-    "intro": "La medicina experimental busca nuevas formas de conectar las señales de nuestro cuerpo con tecnologías avanzadas de asistencia.",
-    "question": "¿Qué hace que una prótesis biónica se sienta más natural que una pierna artificial común?",
-    "mainTitle": "La Prótesis Conectada a los Músculos",
-    "main": "Un nuevo método quirúrgico reorganiza los músculos del miembro residual. Al pensar en caminar, la prótesis detecta los impulsos neuromusculares y ajusta el movimiento en tiempo real.",
-    "challenge": "corpo",
+    "intro": "Nuestro cuerpo envía señales continuamente. Los científicos estudian cómo conectarlas con dispositivos que ayuden a las personas.",
+    "question": "¿Cómo puede una prótesis recibir indicaciones de un movimiento?",
+    "mainTitle": "Sigue la señal",
+    "main": "En el MIT se estudió una rodilla biónica integrada en los tejidos para recuperar una marcha más natural. Son resultados de ensayos clínicos específicos.",
+    "challenge": "segnali",
     "source": {
-      "code": "SC-43",
-      "title": "Rodilla biónica integrada en tejidos (Nature Medicine)",
-      "url": "https://news.mit.edu/2024/bionic-knee-tissue-integration-0710"
+      "code": "SC-50",
+      "title": "MIT News — Una rodilla biónica integrada en tejidos",
+      "url": "https://news.mit.edu/2025/bionic-knee-integrated-into-tissue-can-restore-natural-movement-0710"
     },
     "side": {
-      "title": "Recuperar la Voz con Inteligencia Artificial",
-      "label": "Otra Pieza Expuesta",
-      "desc": "Varios implantes cerebrales combinados con modelos de aprendizaje automático traducen la actividad neuronal en palabras audibles para personas que no pueden hablar.",
+      "title": "Cuando la tecnología ayuda a la voz",
+      "label": "Otra pieza expuesta",
+      "desc": "Equipos de investigación prueban interfaces neuronales para traducir la actividad cerebral en palabras habladas. Son herramientas de laboratorio, no aparatos que lean pensamientos.",
       "source": {
-        "code": "SC-46",
-        "title": "Interfaz cerebro-ordenador para el habla (Nature)",
-        "url": "https://doi.org/10.1038/s41586-023-06443-4"
+        "code": "SC-53",
+        "title": "Investigación sobre neuroprótesis para la comunicación",
+        "url": "https://doi.org/10.1038/s41593-025-01905-6"
       }
     },
-    "questionHint": "Lo importante no es solo el motor, sino la comunicación entre el cuerpo y la máquina."
+    "questionHint": "Una orden motora no es magia: es una cadena conectada de impulsos."
   },
   {
     "id": 7,
     "slug": "spazio",
-    "label": "Espacio: La Próxima Frontera",
-    "title": "La Foto que Ninguna Cámara Tomó",
-    "teaser": "El telescopio virtual gigante y los secretos de los agujeros negros.",
+    "label": "Espacio: la próxima frontera",
+    "title": "La foto que ninguna cámara tomó",
+    "teaser": "¿Cómo se reconstruye la imagen de un agujero negro?",
     "art": "spazio",
     "sideArt": "galassia",
-    "otto": "otto-pensieroso",
-    "icon": "🌌",
-    "seal": "Horizonte Cósmico",
-    "kicker": "SALA 07 · ESPACIO: LA PRÓXIMA FRONTERA",
-    "intro": "Para observar objetos invisibles a millones de años luz de distancia, fue necesario convertir a nuestro planeta entero en un telescopio.",
-    "question": "¿Cómo fotografiaron los científicos un agujero negro sin una cámara espacial gigante?",
-    "mainTitle": "Un Telescopio del Tamaño de la Tierra",
-    "main": "El proyecto Event Horizon Telescope sincronizó radiotelescopios repartidos por todo el globo terráqueo. Combinando sus datos mediante interferometría, revelaron la sombra del agujero negro M87*.",
-    "challenge": "buco",
+    "otto": "otto-mondo",
+    "icon": "✦",
+    "seal": "El explorador cósmico",
+    "kicker": "SALA 07 · ESPACIO: LA PRÓXIMA FRONTIERA",
+    "intro": "En el espacio no se puede mirar como en la Tierra. Los científicos combinan datos captados en lugares muy distantes del planeta.",
+    "question": "¿La primera imagen de M87* se tomó con una sola cámara?",
+    "mainTitle": "Enciende la red de radiotelescopios",
+    "main": "El Event Horizon Telescope unió observaciones de radiotelescopios de todo el mundo y procesó los datos para reconstruir la imagen del agujero negro M87*. Nuestro juego usa cuatro observatorios simbólicos.",
+    "challenge": "telescopi",
     "source": {
-      "code": "SC-55",
-      "title": "Primeros resultados del Event Horizon Telescope (ApJL)",
-      "url": "https://doi.org/10.3847/2041-8213/ab0ec7"
+      "code": "SC-48",
+      "title": "ESO / Colaboración EHT — Primera imagen del agujero negro M87*",
+      "url": "https://www.eso.org/public/images/eso1907a/"
     },
     "side": {
-      "title": "3I/ATLAS: Visitante Interestelar",
-      "label": "Otra Pieza Expuesta",
-      "desc": "Un cometa procedente de otra estrella atravesó nuestro Sistema solar. Su trayectoria abierta hiperbólica confirma que jamás regresará.",
+      "title": "Un cometa que viene de otro sistema",
+      "label": "Otra pieza expuesta",
+      "desc": "El cometa interestelar 3I/ATLAS cruzó el Sistema Solar en una trayectoria abierta hiperbólica. No tiene una órbita cerrada alrededor del Sol y no volverá jamás.",
       "source": {
-        "code": "SC-52",
-        "title": "Observaciones de cometas interestelares (NASA/JPL)",
+        "code": "SC-36",
+        "title": "NASA — 3I/ATLAS: preguntas y respuestas",
         "url": "https://science.nasa.gov/solar-system/comets/3i-atlas/3i-atlas-facts-and-faqs/"
       }
     },
-    "questionHint": "Ningún telescopio en solitario era suficiente: el secreto estuvo en unir los datos de todos."
+    "questionHint": "El resultado nace de sincronizar muchos telescopios, no de una sola foto."
   }
 ];
-
 const main = document.getElementById('main');
 const modal = document.getElementById('modal');
 const headerProgress = document.getElementById('headerProgress');
 const storeKey = 'otto-museo-es-progress-v1';
-let completed = (() => {
-  try {
-    const saved = JSON.parse(localStorage.getItem(storeKey) || '[]');
-    return new Set(Array.isArray(saved) ? saved.filter(n => Number.isInteger(n) && n >= 1 && n <= 7) : []);
-  } catch { return new Set(); }
-})();
-let game = {}; let currentId = 0; let feedback = ''; let feedbackKind = ''; let diplomaName = '';
-const esc = str => String(str).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const sourceHtml = s => `<a class="source-link" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" aria-label="Open source ${esc(s.code)} in a new tab">${esc(s.code)} · Fuente original ↗</a>`;
-
-function persist() {
-  try { localStorage.setItem(storeKey, JSON.stringify([...completed])); } catch {}
-  if (headerProgress) headerProgress.textContent = `${completed.size}/7`;
+let completed = (() => { try {const saved = JSON.parse(localStorage.getItem(storeKey) || '[]'); return new Set(Array.isArray(saved)?saved.filter(n => Number.isInteger(n)&&n>=1&&n<=7):[]);}catch{return new Set();}})();
+let game = {}; let currentId = 0;let feedback = '';let feedbackKind='';let diplomaName = '';
+const esc = str => String(str).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const sourceHtml = s => `<a class="source-link" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" aria-label="${esc('Abrir la fuente  en una pestaña nueva')} ${esc(s.code)}">${esc(s.code)} · Fuente original ↗</a>`;
+function persist(){try{localStorage.setItem(storeKey,JSON.stringify([...completed]));}catch{}headerProgress.textContent=`${completed.size}/7`;}
+function navigateHome(){location.hash='atrio';}
+function roomForHash(){const match=(location.hash||'').match(/^#sala-([1-7])$/);return match?Number(match[1]):0;}
+function img(src,alt='',cl=''){return `<img src="${A(src)}" alt="${esc(alt)}" ${cl?`class="${cl}"`:''} loading="lazy">`;}
+function syncLanguageLinks(){const h=location.hash||'#atrio';document.querySelectorAll('.locale-flag-item').forEach(el=>{const href=el.getAttribute('href');if(href&&href!=='#'&&!href.startsWith('javascript:')){el.setAttribute('href',href.split('#')[0]+h);}});}
+function updateView(scroll=true){ const next = roomForHash(); if(next!==currentId){game={};feedback='';feedbackKind='';currentId=next;} persist();main.innerHTML = next?renderRoom(ROOMS[next-1]):renderAtrium();syncLanguageLinks();if(scroll)window.scrollTo({top:0,behavior:'instant'});}
+function renderAtrium(){
+ const next=ROOMS.find(r=>!completed.has(r.id))||ROOMS[0];
+ return `<section class="hero"><div class="hero-inner"><div class="hero-copy"><div class="eyebrow">EL BONUS INTERACTIVO DEL LIBRO</div><h1 class="display">EL MUSEO DE LOS<br><em>DESCUBRIMIENTOS</em><br>IMPOSIBLES</h1><p class="lead">Siete salas. Siete misterios de la ciencia. Un pequeño pulpo explorador que te espera. Entra, observa, descubre las pistas y reúne los sellos de Otto.</p><div class="hero-buttons"><a class="primary-button" href="#sala-${next.id}">${completed.size?'Continuar la exploración':'Iniciar la exploración'} →</a><button class="quiet-button" data-act="passport">Abrir el pasaporte</button></div><p class="hint">Para mentes curiosas de 7 a 12 años · Gratis con el libro · No requiere cuenta</p></div>${img('otto-mondo','Otto, el pequeño pulpo explorador, abrazando el planeta Tierra','hero-otto')}</div></section>
+ <section class="wrap intro-section" id="sale"><div class="intro-row"><div><div class="eyebrow">TU RECORRIDO</div><h2 class="section-heading">Elige una puerta.</h2></div><p>Puedes visitar las salas en el orden que prefieras. Cada vez que resuelvas un misterio, Otto añadirá un sello a tu pasaporte.</p></div><div class="progress-rail" aria-label="${completed.size} salas visitadas de 7"><div style="width:${completed.size/7*100}%"></div></div><div class="hint">${completed.size} salas completadas de 7  ${completed.size===7?'· ¡Tu diploma está listo!':''}</div></section>
+ <section class="wrap museum-map" aria-label="Museum Galleries">${ROOMS.map(r=>`<a class="room-card" href="#sala-${r.id}" aria-label="Gallery ${r.id}: ${esc(r.label)}"><img src="${A(r.art)}" alt="" loading="lazy">${completed.has(r.id)?'<span class="badge-done">✓ Sello obtenido</span>':''}<div class="card-inner"><span class="room-n">SALA ${String(r.id).padStart(2,'0')} · ${esc(r.icon)}</span><h3>${esc(r.label)}</h3><p>${esc(r.teaser)}</p><span class="open-label">Explorar la sala <span aria-hidden="true">→</span></span></div></a>`).join('')}</section>
+ <section class="wrap value-strip"><div class="value-item">Observa, no adivines al azar.<p>Cada actividad parte de hechos reales. Donde la ciencia aún duda, te lo decimos con total claridad.</p></div><div class="value-item">Cada sala cuenta otra historia.<p>No encontrarás el mismo test siete veces: cada enigma usa una mecánica distinta.</p></div><div class="value-item">Una fuente para cada descubrimiento.<p>Puedes abrir los artículos científicos originales. El código SC coincide con el de tu libro.</p></div></section>`;
 }
-function navigateHome() { location.hash = 'atrio'; }
-function roomForHash() { const match = (location.hash || '').match(/^#sala-([1-7])$/); return match ? Number(match[1]) : 0; }
-function img(src, alt = '', cl = '') { return `<img src="${A(src)}" alt="${esc(alt)}" ${cl ? `class="${cl}"` : ''} loading="lazy">`; }
-
-function syncLanguageLinks() {
-  const h = location.hash || '#atrio';
-  document.querySelectorAll('.locale-flag-item').forEach(el => {
-    const href = el.getAttribute('href');
-    if (href && href !== '#' && !href.startsWith('javascript:')) {
-      el.setAttribute('href', href.split('#')[0] + h);
-    }
-  });
+function renderRoom(r){
+return `<section class="room-banner"><img class="room-backdrop" src="${A(r.art)}" alt="" role="presentation"><div class="room-banner-inner"><div class="crumb"><a href="#atrio">← Vestíbulo del museo</a><span>/</span><span>Sala  de 7${r.id} / 7</span></div><div style="margin-top:27px"><span class="room-stamp">${r.icon} ${esc(r.kicker)}</span></div><h1 class="room-name">${esc(r.title)}</h1><p class="room-intro">${esc(r.intro)}</p></div></section>
+<section class="wrap hall-grid"><article class="exhibit"><span class="label-muted">PIEZA PRINCIPAL</span><h2>${esc(r.mainTitle)}</h2><div class="exhibit-question"><span>LA PREGUNTA</span><strong>${esc(r.question)}</strong></div><p>${esc(r.main)}</p><div class="challenge-zone" id="challengePanel">${renderChallenge(r)}</div><div class="source-row"><b>Documento científico</b>${sourceHtml(r.source)}</div><div class="art-notice">Las ilustraciones del museo son interpretaciones artísticas; los enlaces conducen a las fuentes originales.</div></article><aside class="side-exhibit">${img(r.sideArt,r.side.title)}<div class="side-body"><div class="label-muted">${esc(r.side.label)}</div><h3>${esc(r.side.title)}</h3><p>${esc(r.side.desc)}</p>${sourceHtml(r.side.source)}<div style="margin-top:18px"><button class="quiet-button" data-act="zoom" data-val="${r.id}">Examinar la lámina ↗</button></div><div class="mini-detail"><span>✦</span><div>Dos piezas para explorar en cada sala: el hallazgo principal y un segundo misterio.</div></div><div class="otto-box">${img(r.otto,'Otto el pequeño pulpo explorador')}<p><strong>Otto sugiere:</strong> ${esc(r.questionHint)}</p></div></div></aside></section>
+<div class="wrap"><div class="hall-note">Esta experiencia complementa el libro <em>¡Einstein, esta te la perdiste!</em> y no sustituye la lectura de los estudios originales. Las hipótesis se distinguen claramente de los hechos observados.</div><nav class="next-controls" aria-label="Move between galleries"><a class="quiet-button" href="#${r.id>1?'sala-'+(r.id-1):'atrio'}">${r.id>1?'← Sala anterior':'← Volver al vestíbulo'}</a><button class="quiet-button" data-act="passport">Pasaporte: /7 sellos${completed.size}/7 sellos</button><a class="primary-button" href="#${r.id<7?'sala-'+(r.id+1):'atrio'}">${r.id<7?'Sala siguiente →':'Volver a las salas →'}</a></nav></div>`;
 }
-
-function updateView(scroll = true) {
-  const next = roomForHash();
-  if (next !== currentId) { game = {}; feedback = ''; feedbackKind = ''; currentId = next; }
-  persist();
-  main.innerHTML = next ? renderRoom(ROOMS[next - 1]) : renderAtrium();
-  syncLanguageLinks();
-  if (scroll) window.scrollTo({ top: 0, behavior: 'instant' });
+function progressDots(n,total){return `<div class="step-counter" aria-label="${n} ${total}"><span style="display:none">${n}/${total}</span>${Array.from({length:total},(_,i)=>`<i class="${i<n?'done':''}"></i>`).join('')}</div>`;}
+function feedbackHtml(){return feedback?`<div class="feedback" data-kind="${feedbackKind||'info'}">${esc(feedback)}</div>`:'';}
+function finishBox(r){const next = ROOMS[r.id]||null;return `<div class="success-state"><div class="progress-title">¡SELLO DESBLOQUEADO! ✦</div><h3>${esc(r.seal)}</h3><p>¡Enhorabuena! Resolviste el misterio sin confundir las pistas con la fantasía. Otto actualizó tu pasaporte.</p><div class="hero-buttons"><button class="primary-button" data-act="passport">Ver pasaporte</button>${next?`<a class="quiet-button" href="#sala-${next.id}">Ir a la sala →${next.id} →</a>`:'<a class="quiet-button" href="#atrio">Volver a las siete salas</a>'}</div></div>`;}
+function renderChallenge(r){if(completed.has(r.id))return finishBox(r);
+switch(r.challenge){
+ case 'prove':{
+  const statements=[{"s":"Las orcas arrancan un trozo de alga.","correct":"osservato"},{"s":"Las orcas hacen rodar el trozo de alga entre sus cuerpos.","correct":"osservato"},{"s":"El alga elimina las células muertas de la piel.","correct":"ipotesi"},{"s":"Usar el alga refuerza los lazos sociales del grupo.","correct":"ipotesi"}];
+  const n=game.index||0;const s=statements[n];return `<div class="question-label">TU OFICIO: INVESTIGADOR</div><h3>¿Observado de verdad o aún por demostrar?</h3><p class="subtext">Una frase cada vez. ¿Qué datos proceden directamente de los vídeos y cuáles son posibles explicaciones?</p>${progressDots(n,4)}<p><strong>${esc(s.s)}</strong></p><div class="choice-grid"><button class="choice-button" data-act="judge" data-val="osservato">✓ Observado en los vídeos</button><button class="choice-button" data-act="judge" data-val="ipotesi">? Hipótesis para estudiar</button></div>${feedbackHtml()}`;
+ }
+ case 'terreno':return `<div class="question-label">TU OFICIO: BOTÁNICO</div><h3>¿Qué comparación es más útil?</h3><p class="subtext">Quieres comprobar cómo influye el regolito lunar. ¿Qué pareja de ensayos elegirías, manteniendo iguales agua, luz y tipo de planta?</p><div class="choice-grid cols-1"><button class="choice-button" data-act="soil" data-val="a">A · Planta en regolito lunar / misma planta en suelo de control, en condiciones similares</button><button class="choice-button" data-act="soil" data-val="b">B · Planta en regolito sin agua / planta en tierra con agua</button><button class="choice-button" data-act="soil" data-val="c">C · Un helecho a oscuras / un tomate a la luz del sol</button></div>${feedbackHtml()}`;
+ case 'sequenza':{
+  const steps=[{"id":1,"name":"El pez nada","mark":"🐟"},{"id":2,"name":"La cámara detecta su posición","mark":"◉"},{"id":3,"name":"El ordenador procesa la orden","mark":"⌘"},{"id":4,"name":"Los motores mueven las ruedas","mark":"⚙"}];const shuffled=[steps[3],steps[1],steps[0],steps[2]];let n=game.seq||0;
+  return `<div class="question-label">TU OFICIO: INGENIERO</div><h3>Reconstruye la cadena de mando.</h3><p class="subtext">Toca los cuatro pasos en orden: ¿quién empieza, quién detecta el movimiento, quién lo interpreta y quién mueve el vehículo?</p>${progressDots(n,4)}<div class="tech-trail">${steps.slice(0,n).map(t=>`<div class="tech-node filled">${esc(t.name)}</div>`).join('')}${Array.from({length:4-n},()=>'<div class="tech-node">?</div>').join('')}</div><div class="choice-grid">${shuffled.filter(x=>x.id>n).map(x=>`<button class="choice-button" data-act="step" data-val="${x.id}">${x.mark} ${esc(x.name)}</button>`).join('')}</div>${feedbackHtml()}`;
+ }
+ case 'parentela':return `<div class="question-label">TU OFICIO: PALEONTÓLOGO</div><h3>Elige la rama correcta.</h3><p class="subtext">Observa este pequeño árbol: de los antiguos terópodos surgieron varias ramas. ¿Qué podemos afirmar con certeza?</p><svg viewBox="0 0 600 160" role="img" aria-label="De un antepasado común de los terópodos parten dos ramas: una hacia el T. rex y otra hacia las aves" style="width:100%;max-height:170px"><path d="M35 84H290 M290 84V28H395 M290 84V138H395" stroke="#eac27c" fill="none" stroke-width="5" stroke-linecap="round"/><circle cx="290" cy="84" r="9" fill="#ffe0a0"/><text x="12" y="62" fill="#e5ecef" font-size="15">Antepasados terópodos</text><text x="408" y="34" fill="#e5ecef" font-size="18">🦖 rama T. rex</text><text x="408" y="143" fill="#e5ecef" font-size="18">🐦 rama de las aves</text></svg><div class="choice-grid cols-1"><button class="choice-button" data-act="dino" data-val="0">La gallina desciende directamente del T. rex.</button><button class="choice-button" data-act="dino" data-val="1">Las aves y el T. rex pertenecen a ramas distintas que comparten antepasados comunes.</button><button class="choice-button" data-act="dino" data-val="2">El parecido es casualidad: las aves no son dinosaurios.</button></div>${feedbackHtml()}`;
+ case 'pinza':{
+   const val=game.grip===undefined?15:game.grip;const level=val<35?'soft':val>65?'hard':'good';const label=val<35?'El agarre es demasiado débil.':val>65?'Estás apretando más de la cuenta.':'El agarre es controlado y delicado.';
+   return `<div class="question-label">TU OFICIO: DISEÑADOR ROBÓTICO</div><h3>¿Cuánta fuerza de agarre usarías?</h3><p class="subtext">Tienes que sujetar un objeto frágil. Mueve el control para encontrar un agarre ni muy débil ni muy fuerte.</p><div class="gripper-scene" data-level="${level}"><div class="gripper-prong"></div><div class="gripper-object" role="img" aria-label="Objeto frágil de vidrio">🏺</div><div class="gripper-prong"></div></div><label for="gripSlider" class="hint">Intensidad del agarre (escala del juego)</label><input class="range-control" aria-label="Intensidad del agarre (escala del juego)" id="gripSlider" type="range" min="0" max="100" step="1" value="${val}"><p id="gripFeedback"><strong>${label}</strong></p><button class="primary-button" data-act="grip-check">Comprobar el agarre</button><p class="hint">Esta escala es simplificada para el juego: no representa medidas de un robot real.</p>${feedbackHtml()}`;
+ }
+ case 'segnali':{
+   const seen=game.seen||[];const tiles=[["El músculo se activa","El cuerpo genera señales fisiológicas ligadas al movimiento."],["La interfaz detecta","Los sensores captan los impulsos neuromusculares útiles."],["El procesador interpreta","Las señales se decodifican en órdenes de movimiento."],["La prótesis se mueve","El sistema biónico acompaña de forma natural el movimiento de la persona."]];return `<div class="question-label">TU OFICIO: EXPLORADOR DEL CUERPO</div><h3>Cuatro etapas de una señal.</h3><p class="subtext">Abre cada casilla para descubrir el recorrido del cuerpo a la tecnología. Puedes tocarlas en cualquier orden.</p>${progressDots(seen.length,4)}<div class="sensor-grid">${tiles.map((t,i)=>`<button class="sensor-tile" data-act="sense" data-val="${i}" aria-pressed="${seen.includes(i)}"><span class="ordinal">0${i+1}</span><strong>${esc(t[0])}</strong>${seen.includes(i)?`<small>${esc(t[1])}</small>`:'<small>Toca para explorar</small>'}</button>`).join('')}</div>${feedbackHtml()}`;
+ }
+ case 'telescopi':{
+  const seen=game.tel||[];const desc=["Observatorio A","Observatorio B","Observatorio C","Observatorio D"];return `<div class="question-label">TU OFICIO: ASTROFÍSICO</div><h3>Reúne señales desde distintos lugares.</h3><p class="subtext">Activa las cuatro antenas simbólicas. Cuando todas hayan observado, podrás ver la reconstrucción artística. La red EHT real cuenta con más instrumentos.</p>${progressDots(seen.length,4)}<div class="eht-lab">${desc.map((v,i)=>`<button class="dish-tile" data-act="dish" data-val="${i}" aria-pressed="${seen.includes(i)}"><span aria-hidden="true">${seen.includes(i)?'✦':'◉'}</span><small>${esc(v)}</small>${seen.includes(i)?'<b>Señal recibida</b>':''}</button>`).join('')}</div>${seen.length===4?'<button class="primary-button" data-act="assemble">Procesar las observaciones →</button>':''}<div class="hole-visual ${seen.length===4?'visible':''}" role="img" aria-label="Visualización artística de la región que rodea un agujero negro"></div><p class="hint">Esta figura es una ilustración artística, NO la fotografía oficial. Puedes abrir la imagen auténtica mediante el enlace a ESO de abajo.</p>${feedbackHtml()}`;
+ }
+ default:return '';
+ }
 }
-
-function renderAtrium() {
-  const next = ROOMS.find(r => !completed.has(r.id)) || ROOMS[0];
-  return `
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <div class="eyebrow">COMPAÑERO EXCLUSIVO DEL LIBRO</div>
-          <h1 class="display">EL MUSEO DE LOS<br><em>DESCUBRIMIENTOS</em><br>IMPOSIBLES</h1>
-          <p class="lead">Siete salas. Siete misterios científicos. Un pequeño pulpo curioso esperándote. Entra, observa las pruebas, resuelve los enigmas y colecciona los sellos de Otto.</p>
-          <div class="hero-buttons">
-            <a class="primary-button" href="#sala-${next.id}">${completed.size ? "Continuar la exploración" : "Comenzar la exploración"} →</a>
-            <button class="quiet-button" data-act="passport">Abrir Pasaporte de Explorador</button>
-          </div>
-          <p class="hint">Para exploradores de 7 a 12 años · Gratis con el libro · Sin registro</p>
-        </div>
-        ${img('otto-mondo', 'Otto the explorer octopus embracing Earth', 'hero-otto')}
-      </div>
-    </section>
-
-    <section class="wrap intro-section" id="sale">
-      <div class="intro-row">
-        <div>
-          <div class="eyebrow">TU RECORRIDO</div>
-          <h2 class="section-heading">Elige la puerta de una sala.</h2>
-        </div>
-        <p>Puedes visitar las salas en el orden que prefieras. Cada vez que resuelvas un misterio, Otto estampará un sello oficial en tu pasaporte.</p>
-      </div>
-      <div class="progress-rail" aria-label="${completed.size} galleries visited out of 7">
-        <div style="width:${completed.size / 7 * 100}%"></div>
-      </div>
-      <div class="hint">${completed.size} of 7 salas completadas ${completed.size === 7 ? "· ¡Tu diploma de explorador está listo!" : ''}</div>
-    </section>
-
-    <section class="wrap museum-map" aria-label="The seven museum galleries">
-      ${ROOMS.map(r => `
-        <a class="room-card" href="#sala-${r.id}" aria-label="Gallery ${r.id}: ${esc(r.label)}">
-          <img src="${A(r.art)}" alt="" loading="lazy">
-          ${completed.has(r.id) ? '<span class="badge-done">✦ Sello Conseguido</span>' : ''}
-          <div class="card-inner">
-            <span class="room-n">SALA ${String(r.id).padStart(2, '0')} · ${esc(r.icon)}</span>
-            <h3>${esc(r.label)}</h3>
-            <p>${esc(r.teaser)}</p>
-            <span class="open-label">Explorar sala <span aria-hidden="true">→</span></span>
-          </div>
-        </a>
-      `).join('')}
-    </section>
-
-    <section class="wrap value-strip">
-      <div class="value-item">
-        <b>Observa, no adivines a ciegas.</b>
-        <p>Cada actividad parte de observaciones reales. Cuando la ciencia aún investiga, lo decimos con total claridad.</p>
-      </div>
-      <div class="value-item">
-        <b>Cada sala cuenta una historia única.</b>
-        <p>No encontrarás el mismo cuestionario siete veces: cada misterio te propone un juego interactivo diferente.</p>
-      </div>
-      <div class="value-item">
-        <b>Fuentes reales detrás de cada maravilla.</b>
-        <p>Puedes consultar las publicaciones científicas originales. Los códigos SC coinciden con los de tu libro.</p>
-      </div>
-    </section>
-  `;
+function redrawChallenge(){const r=ROOMS[currentId-1];const panel=document.getElementById('challengePanel');if(panel&&r)panel.innerHTML=renderChallenge(r);persist();}
+function win(){if(!currentId)return;completed.add(currentId);persist();feedback='';feedbackKind='';redrawChallenge();if(completed.size===7)showToast('¡Completaste las siete salas! Abre tu pasaporte para obtener tu diploma.');else showToast('✦ ¡Sello conseguido! Otto está muy contento.');}
+function showToast(message){const t=document.getElementById('toast');t.textContent=message;t.hidden=false;clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>{t.hidden=true},3300);}
+function choiceRight(ok,wrong,right){if(ok){feedback=right;feedbackKind='good';win();}else{feedback=wrong;feedbackKind='wrong';redrawChallenge();}}
+function passportMarkup(){return `<div class="modal-card" role="dialog" aria-modal="true" aria-label="Tu pasaporte de explorador"><div class="modal-header"><h2>Tu pasaporte de explorador</h2><button data-act="close" class="icon-button" aria-label="Close">×</button></div><p>Cada sala resuelta añade un sello. Tu pasaporte se guarda únicamente en tu dispositivo.</p><div class="passport-list">${ROOMS.map(r=>`<span class="passport-seal ${completed.has(r.id)?'stamped':''}" title="Gallery ${r.id}: ${esc(r.seal)}">${completed.has(r.id)?r.icon:r.id}</span>`).join('')}</div><div class="progress-rail"><div style="width:${completed.size/7*100}%"></div></div><p><strong>${completed.size} / 7 salas completadas.</strong> ¡Enhorabuena! Has completado las siete salas.</p>${completed.size===7?`<hr style="border:none;border-top:1px solid rgba(255,215,156,.2);margin:28px 0"><div class="eyebrow">PREMIO FINAL</div><h3 style="font:700 28px Georgia,serif;margin:10px 0">El diploma de explorador</h3><label for="childName">Nombre del explorador o exploradora</label><input id="childName" class="name-input" placeholder="Escribe un nombre para imprimir" maxlength="50" value="${esc(diplomaName)}"><div class="diploma-actions"><button class="primary-button" data-act="print">Imprimir diploma</button></div><div id="diplomaPreview" class="diploma"><div>✧ ✦ ✧</div><h3>EXPLORADOR DE LOS<br>DESCUBRIMIENTOS IMPOSIBLES</h3><p>Se certifica que</p><div class="large" id="diplomaChild">${esc(diplomaName||'________________')}</div><p>ha completado las siete salas del museo,<br>ha observado con curiosidad y ha seguido las evidencias.</p><p>Otto · El Museo de los Descubrimientos Imposibles</p></div>`:`<button class="quiet-button" data-act="close">Volver al museo</button>`}<p class="hint" style="margin-top:18px">Para empezar de nuevo desde el principio: <button data-act="reset-confirm" class="quiet-button" style="padding:7px 12px">Reiniciar los sellos</button></p></div>`;}
+function openZoom(id){const r=ROOMS[id-1];if(!r)return;modal.innerHTML=`<div class="modal-card" role="dialog" aria-modal="true" aria-label="Ampliación: ${esc(r.side.title)}"><div class="modal-header"><h2>${esc(r.side.title)}</h2><button data-act="close" class="icon-button" aria-label="Close">×</button></div><div style="margin:17px 0"><img src="${A(r.sideArt)}" style="display:block;width:100%;max-height:57vh;object-fit:contain;border-radius:16px;background:#092032" alt="Ilustración artística para: ${esc(r.side.title)}"></div><p>${esc(r.side.desc)}</p><p class="art-notice">Ilustración artística, no una fotografía del estudio. Para ver los datos originales, abre la fuente.</p>${sourceHtml(r.side.source)}</div>`;modal.hidden=false;document.body.style.overflow='hidden';modal.querySelector('.icon-button')?.focus();}
+function openPassport(){modal.innerHTML=passportMarkup();modal.hidden=false;document.body.style.overflow='hidden';modal.querySelector('.icon-button')?.focus();}
+function closeModal(){modal.hidden=true;modal.innerHTML='';document.body.style.overflow='';document.getElementById('passportButton')?.focus();}
+function printDiploma(){const name=diplomaName.trim()||'____________________';let p=document.getElementById('printSheet');if(!p){p=document.createElement('div');p.id='printSheet';document.body.appendChild(p);}p.innerHTML=`<section class="print-certificate"><div>✦ ✦ ✦</div><p>EL MUSEO DE LOS DESCUBRIMIENTOS IMPOSIBLES</p><h1>DIPLOMA DE EXPLORADOR</h1><p>Otorgado a</p><p class="named">${esc(name)}</p><p>por haber completado las siete salas,<br>reunido los sellos y aprendido a distinguir<br>las observaciones de las hipótesis.</p><p class="brand-print">✦ Otto, el pequeño pulpo explorador ✦</p><p>De: ¡EINSTEIN, ESTA TE LA PERDISTE!</p></section>`;window.print();}
+function clickHandler(event){const btn=event.target.closest('[data-act]');if(!btn)return;const act=btn.dataset.act;const val=btn.dataset.val;
+ if(act==='passport'){openPassport();return;}
+ if(act==='zoom'){openZoom(Number(val));return;}
+ if(act==='close'){closeModal();return;}
+ if(act==='print'){diplomaName=modal.querySelector('#childName')?.value.trim()||'';printDiploma();return;}
+ if(act==='reset-confirm'){if(window.confirm('¿Deseas borrar los siete sellos guardados en este dispositivo?')){completed.clear();game={};feedback='';persist();closeModal();updateView(false);showToast('¡Pasaporte listo para una nueva exploración!');}return;}
+ if(!currentId||completed.has(currentId))return;
+ feedback='';feedbackKind='';
+ if(act==='judge'){
+  const answers=['osservato','osservato','ipotesi','ipotesi'];const idx=game.index||0;
+  if(val===answers[idx]){game.index=idx+1;if(game.index===4){win();return;} feedback='¡Pista correcta! Pasa a la siguiente frase.';}else{feedback=answers[idx]==='osservato'?'Esta acción se ve directamente en los vídeos: es una observación.':'Es una posible función del alga, aún no demostrada: es una hipótesis.';feedbackKind='wrong';}redrawChallenge();return;
+ }
+ if(act==='soil'){choiceRight(val==='a','Cambias demasiadas variables a la vez: no sabrías a cuál atribuir la diferencia.','¡Gran elección! Comparas plantas iguales manteniendo idénticas todas las demás variables.');return;}
+ if(act==='step'){const expect=(game.seq||0)+1;if(Number(val)===expect){game.seq=expect;if(expect===4){win();return;}feedback='¡Exacto! Ahora elige el siguiente paso.';}else{feedback='Este paso viene después. Empieza por lo que hace el pez.';feedbackKind='wrong';}redrawChallenge();return;}
+ if(act==='dino'){choiceRight(val==='1','Mira bien dónde se divide el árbol. El T. rex no es el antepasado directo de la gallina.','¡Exacto! Las aves son dinosaurios terópodos vivientes y comparten antepasados con ramas extintas.');return;}
+ if(act==='grip-check'){const x=game.grip===undefined?15:game.grip;choiceRight(x>=35&&x<=65,x<35?'El objeto resbala: prueba a aumentar un poco la fuerza.':'¡Demasiado! Un agarre rígido podría romper un objeto delicado.','¡Encontraste el punto de equilibrio! Los robots reales necesitan sensores sensibles, geometrías flexibles y controles avanzados.');return;}
+ if(act==='sense'){const i=Number(val);game.seen=game.seen||[];if(!game.seen.includes(i))game.seen.push(i);if(game.seen.length===4){win();return;}feedback='¡Descubriste otra etapa! Sigue completando el recorrido.';redrawChallenge();return;}
+ if(act==='dish'){const i=Number(val);game.tel=game.tel||[];if(!game.tel.includes(i))game.tel.push(i);feedback=game.tel.length===4?'¡Datos reunidos! Ahora puedes iniciar la reconstrucción.':'Has activado un observatorio simbólico.';redrawChallenge();return;}
+ if(act==='assemble'){if((game.tel||[]).length===4)win();return;}
 }
-
-function renderRoom(r) {
-  return `
-    <section class="room-banner">
-      <img class="room-backdrop" src="${A(r.art)}" alt="" role="presentation">
-      <div class="room-banner-inner">
-        <div class="crumb">
-          <a href="#atrio">← Vestíbulo del museo</a>
-          <span>/</span>
-          <span>Gallery ${r.id} de 7</span>
-        </div>
-        <div style="margin-top:27px">
-          <span class="room-stamp">${r.icon} ${esc(r.kicker)}</span>
-        </div>
-        <h1 class="room-name">${esc(r.title)}</h1>
-        <p class="room-intro">${esc(r.intro)}</p>
-      </div>
-    </section>
-
-    <section class="wrap hall-grid">
-      <article class="exhibit">
-        <span class="label-muted">PIEZA PRINCIPAL</span>
-        <h2>${esc(r.mainTitle)}</h2>
-        <div class="exhibit-question">
-          <span>LA PREGUNTA</span>
-          <strong>${esc(r.question)}</strong>
-        </div>
-        <p>${esc(r.main)}</p>
-        <div class="challenge-zone" id="challengePanel">${renderChallenge(r)}</div>
-        <div class="source-row">
-          <b>Publicación Científica</b>
-          ${sourceHtml(r.source)}
-        </div>
-        <div class="art-notice">Las ilustraciones del museo son reconstrucciones educativas; los enlaces llevan a los artículos científicos originales.</div>
-      </article>
-
-      <aside class="side-exhibit">
-        ${img(r.sideArt, r.side.title)}
-        <div class="side-body">
-          <div class="label-muted">${esc(r.side.label)}</div>
-          <h3>${esc(r.side.title)}</h3>
-          <p>${esc(r.side.desc)}</p>
-          ${sourceHtml(r.side.source)}
-          <div style="margin-top:18px">
-            <button class="quiet-button" data-act="zoom" data-val="${r.id}">Ampliar lámina 🔍</button>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <section class="wrap" style="padding-bottom:60px">
-      <div class="next-controls">
-        <a class="quiet-button" href="#atrio">← Volver al vestíbulo</a>
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
-          ${r.id > 1 ? `<a class="quiet-button" href="#sala-${r.id - 1}">← Sala anterior</a>` : ''}
-          ${r.id < 7 ? `<a class="primary-button" href="#sala-${r.id + 1}">Siguiente sala →</a>` : ''}
-        </div>
-      </div>
-    </section>
-  `;
-}
-
-function renderChallenge(r) {
-  if (completed.has(r.id)) {
-    return `
-      <div class="win-card">
-        <div class="seal-glow">${r.icon}</div>
-        <h3>¡Sello Conseguido!</h3>
-        <p>Has resuelto el enigma de esta sala. Otto ha estampado el sello <strong>${esc(r.seal)}</strong> en tu pasaporte de explorador.</p>
-        <button class="primary-button" data-act="passport">Ver Pasaporte de Explorador ✧</button>
-      </div>
-    `;
-  }
-
-  let body = '';
-  if (r.challenge === 'prove') {
-    const items = [
-      'Orcas grasp kelp with their mouth and roll pieces across their bodies.',
-      'Some orcas pass kelp strands back and forth to one another.',
-      'Rolling in kelp definitely serves to dislodge pesky skin parasites.',
-      'Orcas use kelp as underwater camouflage to sneak up on prey.'
-    ];
-    const idx = game.index || 0;
-    body = `
-      <div class="challenge-box">
-        <span class="badge-mini">Desafío 1 · Hecho vs. hipótesis</span>
-        <p class="challenge-title">Read the statement below. Is it an <strong>observed fact</strong> recorded on camera, or an <strong>unproven hypothesis</strong>?</p>
-        <div class="statement-card">
-          <span class="statement-n">Clue ${idx + 1} of 4</span>
-          <p class="statement-text">"${items[idx]}"</p>
-        </div>
-        <div class="choice-grid">
-          <button class="choice-button" data-act="judge" data-val="osservato">👀 Observed Fact</button>
-          <button class="choice-button" data-act="judge" data-val="ipotesi">💭 Hypothesis</button>
-        </div>
-      </div>
-    `;
-  } else if (r.challenge === 'terreno') {
-    body = `
-      <div class="challenge-box">
-        <span class="badge-mini">Desafío 2 · Comparación justa</span>
-        <p class="challenge-title">To prove whether Moon dust impairs plant growth, what is the best scientific control comparison?</p>
-        <div class="choice-grid vertical">
-          <button class="choice-button" data-act="soil" data-val="a">Grow a cactus on the Moon in freezing dark and compare it to a tomato in a warm Earth greenhouse.</button>
-          <button class="choice-button" data-act="soil" data-val="b">Grow identical seeds under identical light, water, and temperature, changing only the soil: lunar regolith vs. terrestrial volcanic ash.</button>
-        </div>
-      </div>
-    `;
-  } else if (r.challenge === 'sequenza') {
-    const steps = [
-      { id: 1, name: '1. Fish swims toward a target', mark: '🐟' },
-      { id: 2, name: '2. Overhead camera tracks fish position', mark: '📷' },
-      { id: 3, name: '3. Onboard computer computes steering angle', mark: '💻' },
-      { id: 4, name: '4. Electric motors rotate the wheels', mark: '⚙️' }
-    ];
-    const n = game.seq || 0;
-    body = `
-      <div class="challenge-box">
-        <span class="badge-mini">Desafío 3 · La cadena mecánica</span>
-        <p class="challenge-title">Assemble the 4 steps that allow a goldfish to drive a land vehicle:</p>
-        <div class="seq-list">
-          ${steps.map(s => `
-            <button class="seq-button ${s.id <= n ? 'done' : s.id === n + 1 ? 'next' : ''}" data-act="step" data-val="${s.id}">
-              <span>${s.mark}</span>
-              <strong>${esc(s.name)}</strong>
-              ${s.id <= n ? '<span class="check">✓</span>' : ''}
-            </button>
-          `).join('')}
-        </div>
-      </div>
-    `;
-  } else if (r.challenge === 'dino') {
-    body = `
-      <div class="challenge-box">
-        <span class="badge-mini">Desafío 4 · Leer el árbol evolutivo</span>
-        <p class="challenge-title">Which statement correctly explains the relation between modern birds and dinosaurs?</p>
-        <div class="choice-grid vertical">
-          <button class="choice-button" data-act="dino" data-val="1">Birds are surviving living theropods that share a common ancestor with T. rex; T. rex is not the chicken's direct parent.</button>
-          <button class="choice-button" data-act="dino" data-val="2">T. rex layed eggs that gradually hatched smaller chickens until they became birds.</button>
-        </div>
-      </div>
-    `;
-  } else if (r.challenge === 'pinza') {
-    const grip = game.grip === undefined ? 15 : game.grip;
-    body = `
-      <div class="challenge-box">
-        <span class="badge-mini">Desafío 5 · Simulador de robótica blanda</span>
-        <p class="challenge-title">Adjust the slider to find the optimal gripper pressure to hold a fragile egg:</p>
-        <div class="gripper-scene" data-level="${grip < 35 ? 'soft' : grip > 65 ? 'hard' : 'good'}">
-          <input type="range" id="gripSlider" min="0" max="100" value="${grip}" aria-label="Grip pressure">
-          <div class="range-labels"><span>Gentle</span><span>Firm</span></div>
-          <div id="gripFeedback" class="grip-feedback">
-            <strong>${grip < 35 ? 'The grip is too weak (egg will slip).' : grip > 65 ? 'Too tight (egg will crack)!' : 'Balanced and delicate: secure hold!'}</strong>
-          </div>
-          <button class="primary-button" data-act="grip-check" style="margin-top:14px">Test Grip Pressure</button>
-        </div>
-      </div>
-    `;
-  } else if (r.challenge === 'segnali') {
-    const pts = [
-      { id: 1, label: '1. Brain sends nerve impulses to thigh muscles' },
-      { id: 2, label: '2. Sensors detect neuromuscular contraction' },
-      { id: 3, label: '3. Processor interprets intended movement' },
-      { id: 4, label: '4. Bionic knee motor flexes smoothly' }
-    ];
-    game.seen = game.seen || [];
-    body = `
-      <div class="challenge-box">
-        <span class="badge-mini">Desafío 6 · Vías neuronales</span>
-        <p class="challenge-title">Click all 4 checkpoints in the neural signal transmission chain:</p>
-        <div class="sensor-grid">
-          ${pts.map(p => `
-            <button class="sensor-node ${game.seen.includes(p.id) ? 'active' : ''}" data-act="sense" data-val="${p.id}">
-              <span>${game.seen.includes(p.id) ? '⚡' : '○'}</span>
-              <strong>${esc(p.label)}</strong>
-            </button>
-          `).join('')}
-        </div>
-      </div>
-    `;
-  } else if (r.challenge === 'telescopi') {
-    const observatories = [
-      { id: 1, name: 'ALMA / APEX', loc: 'Atacama, Chile' },
-      { id: 2, name: 'IRAM 30m', loc: 'Sierra Nevada, Spain' },
-      { id: 3, name: 'SMA / JCMT', loc: 'Mauna Kea, Hawaii' },
-      { id: 4, name: 'South Pole Telescope', loc: 'Antarctica' }
-    ];
-    game.tel = game.tel || [];
-    body = `
-      <div class="challenge-box">
-        <span class="badge-mini">Desafío 7 · Red Event Horizon</span>
-        <p class="challenge-title">Synchronize the radio observatories across Earth to reconstruct M87*:</p>
-        <div class="eht-lab">
-          ${observatories.map(o => `
-            <button class="tel-dish ${game.tel.includes(o.id) ? 'connected' : ''}" data-act="dish" data-val="${o.id}">
-              <span class="dish-icon">📡</span>
-              <strong>${esc(o.name)}</strong>
-              <small>${esc(o.loc)}</small>
-            </button>
-          `).join('')}
-        </div>
-        ${game.tel.length === 4 ? `
-          <button class="primary-button" data-act="assemble" style="margin-top:16px">Reconstruct Black Hole Image ✦</button>
-        ` : `<p class="hint" style="margin-top:12px">${game.tel.length}/4 observatories synchronized.</p>`}
-      </div>
-    `;
-  }
-
-  return `
-    ${body}
-    ${feedback ? `<div class="toast-feedback ${feedbackKind}">${esc(feedback)}</div>` : ''}
-    <div class="hint-bar">
-      <span>💡 Otto's Clue:</span> ${esc(r.questionHint)}
-    </div>
-  `;
-}
-
-function redrawChallenge() {
-  const panel = document.getElementById('challengePanel');
-  if (panel && currentId) panel.innerHTML = renderChallenge(ROOMS[currentId - 1]);
-}
-
-function win() {
-  completed.add(currentId);
-  persist();
-  showToast('✦ Wonderful! You earned an explorer seal!');
-  redrawChallenge();
-}
-
-function choiceRight(ok, wrongMsg, rightMsg) {
-  if (ok) {
-    win();
-  } else {
-    feedback = wrongMsg;
-    feedbackKind = 'wrong';
-    redrawChallenge();
-  }
-}
-
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  if (!t) return;
-  t.textContent = msg;
-  t.hidden = false;
-  setTimeout(() => { t.hidden = true; }, 3600);
-}
-
-function openPassport() {
-  modal.hidden = false;
-  document.body.style.overflow = 'hidden';
-  modal.innerHTML = `
-    <div class="modal-card">
-      <div class="modal-header">
-        <h2>Explorer Passport ✧</h2>
-        <button class="icon-button" data-act="close" aria-label="Close">✕</button>
-      </div>
-      <p style="color:var(--muted);font-size:14px;margin-top:6px">Collect all 7 seals to receive your official Explorer Diploma from Otto.</p>
-      <div class="passport-list">
-        ${ROOMS.map(r => `
-          <div class="passport-seal ${completed.has(r.id) ? 'stamped' : ''}" title="${completed.has(r.id) ? esc(r.seal) : 'Undiscovered seal'}">
-            ${completed.has(r.id) ? r.icon : '○'}
-          </div>
-        `).join('')}
-      </div>
-      <div class="hint" style="text-align:center">${completed.size} of 7 seals collected.</div>
-      ${completed.size === 7 ? `
-        <div class="diploma">
-          <h3>✦ CERTIFICATE OF EXPLORATION ✦</h3>
-          <p>This certifies that</p>
-          <div class="large" id="diplomaChild">${esc(diplomaName || 'Curious Explorer')}</div>
-          <p>has completed all seven galleries of the Museum of Impossible Discoveries and mastered scientific observation.</p>
-          <label style="display:block;margin-top:16px;font-size:13px;font-weight:700">Type your name for printing:</label>
-          <input type="text" id="childName" class="name-input" placeholder="Your name here..." value="${esc(diplomaName)}" maxlength="30">
-          <div class="diploma-actions">
-            <button class="primary-button" data-act="print">Print Diploma 🖨</button>
-          </div>
-        </div>
-      ` : ''}
-      <div style="margin-top:20px;text-align:right">
-        <button class="quiet-button" data-act="reset-confirm" style="font-size:11px">Reset Passport Progress</button>
-      </div>
-    </div>
-  `;
-}
-
-function openZoom(id) {
-  const r = ROOMS[id - 1];
-  modal.hidden = false;
-  document.body.style.overflow = 'hidden';
-  modal.innerHTML = `
-    <div class="modal-card" style="max-width:900px">
-      <div class="modal-header">
-        <h2>${esc(r.side.title)}</h2>
-        <button class="icon-button" data-act="close" aria-label="Close">✕</button>
-      </div>
-      <img src="${A(r.sideArt)}" alt="${esc(r.side.title)}" style="width:100%;border-radius:14px;margin-top:16px">
-      <p style="color:var(--muted);margin-top:14px">${esc(r.side.desc)}</p>
-    </div>
-  `;
-}
-
-function closeModal() {
-  modal.hidden = true;
-  modal.innerHTML = '';
-  document.body.style.overflow = '';
-}
-
-function printDiploma() {
-  const name = diplomaName.trim() || 'Curious Explorer';
-  let p = document.getElementById('printSheet');
-  if (!p) {
-    p = document.createElement('div');
-    p.id = 'printSheet';
-    document.body.appendChild(p);
-  }
-  p.innerHTML = `
-    <section class="print-certificate">
-      <div>✦ ✦ ✦</div>
-      <p>THE MUSEUM OF IMPOSSIBLE DISCOVERIES</p>
-      <h1>EXPLORER DIPLOMA</h1>
-      <p>Awarded to</p>
-      <p class="named">${esc(name)}</p>
-      <p>for completing all seven galleries, collecting every official seal,<br>and learning to distinguish scientific observations from hypotheses.</p>
-      <p class="brand-print">✦ Otto, The Little Explorer ✦</p>
-      <p>From: EINSTEIN, YOU MISSED THIS!</p>
-    </section>
-  `;
-  window.print();
-}
-
-function clickHandler(e) {
-  const btn = e.target.closest('[data-act]');
-  if (!btn) return;
-  const act = btn.dataset.act;
-  const val = btn.dataset.val;
-
-  if (act === 'passport') { openPassport(); return; }
-  if (act === 'zoom') { openZoom(Number(val)); return; }
-  if (act === 'close') { closeModal(); return; }
-  if (act === 'print') {
-    diplomaName = modal.querySelector('#childName')?.value.trim() || '';
-    printDiploma();
-    return;
-  }
-  if (act === 'reset-confirm') {
-    if (window.confirm('Do you want to reset all seven seals saved on this device?')) {
-      completed.clear(); game = {}; feedback = ''; persist(); closeModal(); updateView(false);
-      showToast('Passport reset. Ready for a fresh exploration!');
-    }
-    return;
-  }
-  if (!currentId || completed.has(currentId)) return;
-
-  feedback = ''; feedbackKind = '';
-  if (act === 'judge') {
-    const answers = ['osservato', 'osservato', 'ipotesi', 'ipotesi'];
-    const idx = game.index || 0;
-    if (val === answers[idx]) {
-      game.index = idx + 1;
-      if (game.index === 4) { win(); return; }
-      feedback = '¡Razonamiento correcto! Ahora comprueba la siguiente pista.';
-    } else {
-      feedback = answers[idx] === 'osservato'
-        ? 'This behavior was visibly recorded on video: it is an observed fact.'
-        : 'This is an unproven potential function: it is a hypothesis.';
-      feedbackKind = 'wrong';
-    }
-    redrawChallenge(); return;
-  }
-  if (act === 'soil') {
-    choiceRight(val === 'b', 'Changing multiple factors at once prevents knowing what caused the difference.', 'Great choice! Keeping all other variables identical is the hallmark of controlled science.');
-    return;
-  }
-  if (act === 'step') {
-    const expect = (game.seq || 0) + 1;
-    if (Number(val) === expect) {
-      game.seq = expect;
-      if (expect === 4) { win(); return; }
-      feedback = '¡Correcto! A continuación, elige el siguiente paso.';
-    } else {
-      feedback = 'That step happens later. Start from what the fish does first.';
-      feedbackKind = 'wrong';
-    }
-    redrawChallenge(); return;
-  }
-  if (act === 'dino') {
-    choiceRight(val === '1', 'Look at where the branch divides. T. rex is not a direct grandparent.', 'Spot on: birds are living theropod dinosaurs that share common ancestors with extinct branches.');
-    return;
-  }
-  if (act === 'grip-check') {
-    const x = game.grip === undefined ? 15 : game.grip;
-    choiceRight(x >= 35 && x <= 65, x < 35 ? 'The grip slips: try slightly more pressure.' : 'Too strong! A rigid clamp could crush a fragile object.', 'You found the sweet spot! Real robots use advanced force sensors to achieve this balance.');
-    return;
-  }
-  if (act === 'sense') {
-    const i = Number(val);
-    game.seen = game.seen || [];
-    if (!game.seen.includes(i)) game.seen.push(i);
-    if (game.seen.length === 4) { win(); return; }
-    feedback = 'Signal checkpoint recorded. Follow the rest of the pathway.';
-    redrawChallenge(); return;
-  }
-  if (act === 'dish') {
-    const i = Number(val);
-    game.tel = game.tel || [];
-    if (!game.tel.includes(i)) game.tel.push(i);
-    feedback = game.tel.length === 4 ? 'All telescopes synchronized! You can now synthesize the image.' : 'Observatory synchronized into the array.';
-    redrawChallenge(); return;
-  }
-  if (act === 'assemble') {
-    if ((game.tel || []).length === 4) win();
-    return;
-  }
-}
-
-main.addEventListener('click', clickHandler);
-modal.addEventListener('click', clickHandler);
-const passportBtn = document.getElementById('passportButton');
-if (passportBtn) passportBtn.addEventListener('click', openPassport);
-modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
-modal.addEventListener('input', e => {
-  if (e.target.id === 'childName') {
-    diplomaName = e.target.value;
-    const el = modal.querySelector('#diplomaChild');
-    if (el) el.textContent = diplomaName || 'Curious Explorer';
-  }
-});
-main.addEventListener('input', e => {
-  if (e.target.id === 'gripSlider') {
-    game.grip = Number(e.target.value);
-    const p = main.querySelector('#gripFeedback');
-    const v = game.grip;
-    if (p) p.innerHTML = `<strong>${v < 35 ? 'The grip is too weak.' : v > 65 ? 'Too tight!' : 'Balanced and delicate hold.'}</strong>`;
-    main.querySelector('.gripper-scene')?.setAttribute('data-level', v < 35 ? 'soft' : v > 65 ? 'hard' : 'good');
-  }
-});
+main.addEventListener('click',clickHandler);
+modal.addEventListener('click',clickHandler);
+document.getElementById('passportButton').addEventListener('click',openPassport);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)closeModal();});
+modal.addEventListener('input',e=>{if(e.target.id==='childName'){diplomaName=e.target.value;const el=modal.querySelector('#diplomaChild');if(el)el.textContent=diplomaName||'________________';}});
+main.addEventListener('input',e=>{if(e.target.id==='gripSlider'){game.grip=Number(e.target.value);const p=main.querySelector('#gripFeedback');const v=game.grip;p.innerHTML=`<strong>${v<35?'El agarre es demasiado débil.':v>65?'Estás apretando más de la cuenta.':'El agarre es controlado y delicado.'}</strong>`;main.querySelector('.gripper-scene')?.setAttribute('data-level',v<35?'soft':v>65?'hard':'good');}});
 document.addEventListener('click', e => {
   const flagLink = e.target.closest('.locale-flag-item');
   if (flagLink && flagLink.getAttribute('href') && flagLink.getAttribute('href') !== '#') {
     const isEn = flagLink.getAttribute('href').includes('/en/');
-    try { localStorage.setItem('otto_lang', isEn ? 'en' : 'it'); } catch(_) {}
+    const isFr = flagLink.getAttribute('href').includes('/fr/');
+    const isEs = flagLink.getAttribute('href').includes('/es/');
+    const chosenLang = isEn ? 'en' : (isFr ? 'fr' : (isEs ? 'es' : 'it'));
+    try { localStorage.setItem('otto_lang', chosenLang); } catch(_) {}
   }
 });
-window.addEventListener('hashchange', () => updateView());
-if (!location.hash) location.hash = 'atrio';
+window.addEventListener('hashchange',()=>updateView());
+if(!location.hash)location.hash='atrio';
 updateView(false);
