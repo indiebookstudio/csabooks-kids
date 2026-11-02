@@ -351,11 +351,11 @@ function switchAnimLang(targetLang){
 <!-- PERSISTENT GLOBAL TOP BAR -->
 <header class="site-nav-bar">
   <div class="site-nav-inner">
-    <a class="brand-link" href="../../../../?lang=fr&pagina=inizio" aria-label="Retour à l'accueil">
+    <a class="brand-link" href="../../../../?lang=fr&pagina=inizio" aria-label="Torna all’inizio">
       <span class="brand-mark-otto"><img src="../assets/otto.webp" alt="Otto" onerror="this.onerror=null;this.src='../../../../media/otto.webp';"></span>
       <span class="brand-lines"><strong>OTTO<span>✦</span></strong><small>DISCOVERY CLUB</small></span>
     </a>
-    <nav class="nav-menu" aria-label="Navigation principale">
+    <nav class="nav-menu" aria-label="Navigazione principale">
       <a class="nav-item" href="../../../../?lang=fr&pagina=inizio">Accueil</a>
       <a class="nav-item active" href="../../../../?lang=fr&pagina=bonus">Les bonus</a>
       <a class="nav-item" href="../index.html">Laboratoire 3D</a>
@@ -385,16 +385,16 @@ function switchAnimLang(targetLang){
 
 
   <!-- Contenitore WebGL / Three.js -->
-  <div id="canvas-container" aria-label="Simulation 3D de l'océan avec baleines à bosse et banc de poissons"></div>
+  <div id="canvas-container" aria-label="Simulazione 3D dell'oceano con megattere e banco di pesci"></div>
 
   <!-- Hotspot interattivo sul banco di pesci (Fase Esplora) -->
-  <button id="fish-hotspot" class="fish-hotspot group focus:outline-none" title="Découvre le banc de poissons">
+  <button id="fish-hotspot" class="fish-hotspot group focus:outline-none" title="Scopri il banco di pesci">
     <div class="fish-hotspot-ring"></div>
     <div class="relative flex items-center gap-2 px-4 py-2 rounded-full bg-amber-400/95 text-slate-950 font-display font-bold text-sm sm:text-base shadow-xl border-2 border-white group-hover:scale-110 transition-transform">
       <svg class="w-5 h-5 text-slate-950 animate-bounce" fill="currentColor" viewBox="0 0 24 24">
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
       </svg>
-      <span>Touche le banc de poissons !</span>
+      <span><span>Touche le banc de poissons !</span>
     </div>
   </button>
 
@@ -418,23 +418,18 @@ function switchAnimLang(targetLang){
             <span class="text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-sky-400/20 text-sky-300 border border-sky-300/30">Découverte 05</span>
             <span class="hidden md:inline-block text-xs text-sky-200/80">La baleine et les bulles</span>
           </div>
-          <h1 class="text-sm sm:text-lg font-bold tracking-wide text-white leading-tight">Le Filet de Bulles Invisible des Baleines à Bosse</h1>
+          <h1>Le Filet de Bulles Invisible des Baleines à Bosse</h1>
         </div>
       </div>
 
       <!-- Controlli Modalità & Prospettiva -->
-      <nav class="flex flex-wrap items-center gap-1.5 sm:gap-2" aria-label="Commandes de la simulation">
+      <nav class="flex flex-wrap items-center gap-1.5 sm:gap-2" aria-label="Controlli della simulazione">
         <!-- Navigazione Hub -->
-        <a href="../index.html" class="glass-pill px-3 py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5 text-amber-200 hover:text-white" title="Retour au laboratoire 3D">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-          <span class="hidden sm:inline">Laboratoire 3D</span>
-        </a>
-        <a href="../../../../?lang=fr&pagina=inizio" class="glass-pill px-3 py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5 text-sky-200 hover:text-white" title="Retour à l'accueil">
-          <span>Home ✦</span>
-        </a>
+        <a href="../index.html" class="glass-pill px-3 py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5 text-amber-200 hover:text-white" title="Retour au laboratoire 3D"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg><span class="hidden sm:inline">Laboratoire 3D</span></a>
+        <a href="../../../../?lang=fr&pagina=inizio" class="glass-pill px-3 py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5 text-sky-200 hover:text-white" title="Retour à Otto+"><span>Home ✦</span></a>
 
         <!-- Pulsante 1: Esplora -->
-        <button id="btn-mode-explore" class="glass-pill active px-3 sm:px-4 py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5" title="Explore l'océan et trouve les poissons">
+        <button id="btn-mode-explore" class="glass-pill active px-3 sm:px-4 py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5" title="Esplora l'oceano e trova i pesci">
           <svg class="w-4 h-4 text-sky-300" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
             <circle cx="11" cy="11" r="8"/><path stroke-linecap="round" d="M21 21l-4.35-4.35"/>
           </svg>
@@ -442,7 +437,7 @@ function switchAnimLang(targetLang){
         </button>
 
         <!-- Pulsante 2: Prova tu (Costruisci la rete) -->
-        <button id="btn-mode-build" class="glass-pill px-3 sm:px-4 py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5" title="Crée un filet de bulles en trois touches">
+        <button id="btn-mode-build" class="glass-pill px-3 sm:px-4 py-2 rounded-xl font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5" title="Crea una rete di bolle con tre tocchi">
           <svg class="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
           </svg>
@@ -452,19 +447,19 @@ function switchAnimLang(targetLang){
         <!-- Divisore visivo -->
         <div class="h-6 w-px bg-sky-300/25 mx-0.5 hidden sm:block"></div>
 
-        <!-- Switch Vista dall'alto / Vue de côté -->
+        <!-- Switch Vista dall'alto / Vista laterale -->
         <div class="glass-panel p-1 rounded-xl flex items-center gap-1">
-          <button id="btn-view-top" class="px-2.5 sm:px-3 py-1.5 rounded-lg font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5 transition-all text-sky-100 hover:bg-sky-500/20" title="Regarde d'en haut la forme du filet et le banc de poissons">
+          <button id="btn-view-top" class="px-2.5 sm:px-3 py-1.5 rounded-lg font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5 transition-all text-sky-100 hover:bg-sky-500/20" title="Guarda dall'alto la forma della rete e il banco di pesci">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="9" stroke-dasharray="3 2"/><circle cx="12" cy="12" r="3"/>
             </svg>
-            <span>Dall’alto</span>
+            <span>Vue du dessus</span>
           </button>
           <button id="btn-view-side" class="px-2.5 sm:px-3 py-1.5 rounded-lg font-display font-semibold text-xs sm:text-sm flex items-center gap-1.5 transition-all bg-sky-500/40 text-white border border-sky-300/50 shadow" title="Guarda di lato le bolle che salgono e la megattera">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 7c3 2 6-2 9 0s6-2 9 0M12 19V9m0 0l-3 3m3-3l3 3"/>
             </svg>
-            <span>Di lato</span>
+            <span>Sous l’eau</span>
           </button>
         </div>
 
@@ -494,7 +489,7 @@ function switchAnimLang(targetLang){
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
           </svg>
-          <span class="hidden sm:inline">Ricomincia</span>
+          <span class="hidden sm:inline">Réinitialiser</span>
         </button>
       </nav>
     </header>
@@ -516,9 +511,9 @@ function switchAnimLang(targetLang){
         
 
         <div id="net-controls" class="hidden" role="group" aria-label="Costruisci la rete con tre tocchi">
-          <button id="btn-net-1" class="net-step" type="button">1 · Commencer la ronde</button>
+          <button id="btn-net-1" class="net-step" type="button">1 · Démarrer la spirale</button>
           <button id="btn-net-2" class="net-step" type="button" disabled>2 · Ajouter des bulles</button>
-          <button id="btn-net-3" class="net-step" type="button" disabled>3 · Fermer le cercle</button>
+          <button id="btn-net-3" class="net-step" type="button" disabled>3 · Fermer le filet</button>
         </div>
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
           <!-- Testo Guida -->
@@ -528,7 +523,7 @@ function switchAnimLang(targetLang){
             </div>
             <div>
               <div id="story-subtitle" tabindex="-1" class="text-xs font-bold uppercase tracking-wider text-sky-300 mb-0.5">
-                Phase 1 • Explore l'océan
+                Fase 1 • Esplora l'oceano
               </div>
               <p id="story-text" class="text-sm sm:text-base md:text-lg font-medium text-white leading-snug">
                 Osserva il mare e <strong class="text-amber-300">tocca il banco di piccoli pesci</strong>!
@@ -573,7 +568,7 @@ function switchAnimLang(targetLang){
       <div class="px-6 py-4 bg-gradient-to-r from-sky-900/80 to-blue-950/80 border-b border-sky-400/25 flex items-center justify-between">
         <div>
           <span class="text-xs font-bold uppercase tracking-widest text-amber-300">Capitolo 1 • Animali fuori dal comune • Scoperta 05</span>
-          <h2 id="book-title" class="text-xl sm:text-2xl font-bold text-white">La Baleine et les Bulles : Comment ça marche vraiment ?</h2>
+          <h2 id="book-title" class="text-xl sm:text-2xl font-bold text-white">La Balena e le Bolle: Come funziona davvero?</h2>
         </div>
         <button id="btn-close-modal" aria-label="Chiudi le curiosità scientifiche" class="glass-pill p-2 rounded-xl text-sky-200 hover:text-white">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
@@ -600,7 +595,7 @@ function switchAnimLang(targetLang){
           </div>
 
           <div class="p-4 rounded-2xl bg-slate-900/60 border border-sky-400/20">
-            <h3 class="font-display font-bold text-base text-sky-300 mb-1">Seule ou en groupe ?</h3>
+            <h3 class="font-display font-bold text-base text-sky-300 mb-1">Da sole o in gruppo?</h3>
             <p class="text-xs sm:text-sm">
               Non tutte le megattere usano sempre questa tecnica. Alcune cacciano da sole costruendo una spirale di bolle, mentre in altre occasioni più megattere collaborano insieme!
             </p>
@@ -1771,7 +1766,7 @@ function switchAnimLang(targetLang){
       }
 
       /* -----------------------------------------------------------------------
-         11. CONTROLLO DELLA TELECAMERA E CAMBIO DI PROSPETTIVA (Dall'alto / Di lato)
+         11. CAMERA AND PERSPECTIVE CONTROLS
          ----------------------------------------------------------------------- */
       const btnViewTop = document.getElementById('btn-view-top');
       const btnViewSide = document.getElementById('btn-view-side');
@@ -1831,7 +1826,7 @@ function switchAnimLang(targetLang){
 
       const netControls = document.getElementById('net-controls');
       const netButtons = [1, 2, 3].map(i => document.getElementById(`btn-net-${i}`));
-      const netLabels = ['1 · Commencer la ronde', '2 · Ajouter des bulles', '3 · Fermer le cercle'];
+      const netLabels = ['1 · Inizia il giro', '2 · Aggiungi bolle', '3 · Chiudi il cerchio'];
       function updateNetStatusUI() {
         const building = SimState.phase === 'BUILD_NET';
         netControls.classList.toggle('hidden', !building);
@@ -1913,7 +1908,7 @@ function switchAnimLang(targetLang){
           setViewPerspective(SimState.viewMode);
 
           stepBadge.textContent = '1';
-          storySubtitle.textContent = 'Pranzo individuato!';
+          storySubtitle.textContent = 'Déjeuner repéré !';
           storyText.innerHTML = '<strong>"Le megattere hanno trovato il loro pranzo! Ma come faranno a catturare tanti pesci insieme?"</strong>';
 
           btnMainAction.classList.remove('hidden');
@@ -1938,7 +1933,7 @@ function switchAnimLang(targetLang){
           updateNetStatusUI();
 
           stepBadge.textContent = '2';
-          storySubtitle.textContent = '2 • Costruisci la rete di bolle';
+          storySubtitle.textContent = '2 • Construis le filet de bulles';
           storyText.innerHTML = 'Tocca i <strong class="text-amber-300">tre pulsanti in ordine</strong>: la megattera crea un cerchio di bolle.';
 
           btnMainActionText.textContent = 'Osserva la rete aperta';
@@ -1953,19 +1948,19 @@ function switchAnimLang(targetLang){
 
           stepBadge.textContent = '3';
           if (SimState.netQuality === 'GOOD') {
-            storySubtitle.textContent = '3 • Una rete d’aria!';
+            storySubtitle.textContent = '3 • Un filet fait d’air !';
             storyText.innerHTML = 'Le bolle disorientano i pesci e li fanno <strong class="text-emerald-300">radunare al centro</strong>.';
           } else {
-            storySubtitle.textContent = '3 • Una rete ancora aperta';
+            storySubtitle.textContent = '3 • Filet encore ouvert';
             storyText.innerHTML = 'La rete ha un <strong class="text-amber-300">varco</strong>: guarda come alcuni pesci escono dall’apertura!';
           }
 
           btnMainAction.classList.remove('hidden');
-          btnMainActionText.textContent = 'Guarda la risalita';
+          btnMainActionText.textContent = 'Regarder la remontée';
           btnMainAction.onclick = () => enterPhase('ASCENT');
 
           btnSecondaryAction.classList.remove('hidden');
-          btnSecondaryActionText.textContent = 'Riprova la rete';
+          btnSecondaryActionText.textContent = 'Réessayer le filet';
           btnSecondaryAction.onclick = () => enterPhase('BUILD_NET');
         }
 
@@ -1980,7 +1975,7 @@ function switchAnimLang(targetLang){
           soundEngine.playLungeSwoosh();
 
           stepBadge.textContent = '4';
-          storySubtitle.textContent = 'Interazione 4 • La risalita della megattera';
+          storySubtitle.textContent = '4 • La risalita della megattera';
           storyText.innerHTML = 'Guarda dalle profondità! La megattera risale attraverso la colonna di bolle <strong class="text-amber-300">spalancando la bocca e gonfiando le pieghe ventrali</strong>!';
 
           btnMainAction.classList.add('hidden');
@@ -1989,11 +1984,11 @@ function switchAnimLang(targetLang){
 
         else if (newPhase === 'CONCLUSION') {
           stepBadge.textContent = '★';
-          storySubtitle.textContent = 'Esperimento completato!';
+          storySubtitle.textContent = 'Expérience terminée !';
           storyText.innerHTML = 'Le bolle radunano i pesci. Poi le megattere <strong class="text-amber-300">risalgono con la bocca aperta</strong> e catturano molte prede insieme!';
 
           btnMainAction.classList.remove('hidden');
-          btnMainActionText.textContent = 'Recommencer !';
+          btnMainActionText.textContent = 'Riprova!';
           btnMainAction.onclick = () => enterPhase('BUILD_NET');
 
           btnSecondaryAction.classList.remove('hidden');

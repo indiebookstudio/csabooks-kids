@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#05252e"><title>Gli uccelli sono dinosauri vivi · Scoperta 38</title><style>@font-face {
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#05252e"><title>Les Oiseaux Sont des Dinosaures Vivants · Découverte 38</title><style>@font-face {
   font-family: 'Fredoka';
   font-style: normal;
   font-weight: 500;
@@ -161,36 +161,36 @@ function switchAnimLang(targetLang){
 <div id="app">
 
 <header id="toolbar">
- <div class="brand glass"><div class="brand-icon"><svg><use href="#i-bird"/></svg></div><div><div class="eyebrow"><span class="chapter">Scoperta 38</span><span class="brand-kicker">Dinosaures et ADN</span></div><h1>Gli uccelli sono dinosauri vivi</h1></div></div>
+ <div class="brand glass"><div class="brand-icon"><svg><use href="#i-bird"/></svg></div><div><div class="eyebrow"><span class="chapter">Découverte 38</span><span class="brand-kicker">Dinosaures et ADN</span></div><h1>Les Oiseaux Sont des Dinosaures Vivants</h1></div></div>
  <nav class="tools" aria-label="Controlli dell’esperienza">
-    <a href="../index.html" class="tool" style="color:#f7d184;font-weight:700" title="Torna al Laboratorio 3D"><svg viewBox="0 0 24 24" style="width:18px;height:18px;vertical-align:middle"><path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Laboratorio 3D</span></a>
-    <a href="../../../../?lang=fr&pagina=inizio" class="tool" style="color:#7dd3fc;font-weight:700" title="Torna alla Home"><span>Home ✦</span></a>
-<button id="btn-auto" class="tool" aria-pressed="false"><svg><use href="#i-play"/></svg><span>Il viaggio</span></button><button id="btn-view" class="tool" aria-pressed="false" aria-label="Osserva dall’altro lato"><svg><use href="#i-view"/></svg><span id="view-name">Altro lato</span></button><button id="btn-pause" class="tool icon-only" aria-pressed="false" aria-label="Metti in pausa"><svg><use id="pause-icon" href="#i-pause"/></svg></button><button id="btn-audio" class="tool icon-only muted" aria-pressed="false" aria-label="Attiva i suoni"><svg><use href="#i-sound"/></svg></button><button id="btn-reset" class="tool icon-only" aria-label="Ricomincia dall’inizio"><svg><use href="#i-reset"/></svg></button></nav>
+    <a href="../index.html" class="tool" style="color:#f7d184;font-weight:700" title="Retour au laboratoire 3D"><svg viewBox="0 0 24 24" style="width:18px;height:18px;vertical-align:middle"><path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Laboratoire 3D</span></a>
+    <a href="../../../../?lang=fr&pagina=inizio" class="tool" style="color:#7dd3fc;font-weight:700" title="Retour à Otto+"><span>Home ✦</span></a>
+<button id="btn-auto" class="tool" aria-pressed="false" title="Explore la découverte pas à pas"><svg><use href="#i-play"/></svg><span>Le parcours</span></button><button id="btn-view" class="tool" aria-pressed="false"><svg><use href="#i-cube"/></svg> Autre vue</button><button id="btn-pause" class="tool icon-only" aria-pressed="false" aria-label="Metti in pausa"><svg><use id="pause-icon" href="#i-pause"/></svg></button><button id="btn-audio" class="tool icon-only muted" aria-pressed="false" aria-label="Attiva i suoni"><svg><use href="#i-sound"/></svg></button><button id="btn-reset" class="tool icon-only" aria-label="Ricomincia dall’inizio"><svg><use href="#i-reset"/></svg></button></nav>
 </header>
 <main id="stage" aria-label="Museo 3D della parentela tra dinosauri e uccelli"><div id="canvas-wrap"></div><div class="vignette" aria-hidden="true"></div>
- <div class="scene-caption"><span></span><span id="scene-caption">UN LEGAME ANTICO · UNA SCOPERTA VIVA</span></div>
- <div id="scene-label" class="scene-label"><span>Un dinosauro nel pollaio</span><em>Guarda oltre le differenze</em></div>
+ <div class="scene-caption"><span></span><span id="scene-caption">UN LIEN ANCIEN · UNE DÉCOUVERTE VIVANTE</span></div>
+ <div id="scene-label" class="scene-label">Un dinosaure dans la basse-cour</div>
  <div id="specimens" class="specimens" aria-label="Animali a confronto"><div><strong>Velociraptor</strong><span>Dinosauro non aviano · estinto</span></div><div><strong>Pollo</strong><span>Dinosauro aviano · vivente</span></div></div>
  <div id="detail-badge" class="detail-badge glass" role="status" hidden></div>
  <div id="tree-labels" aria-label="Albero di parentela semplificato" hidden><span data-node="root">Antenati comuni<br><small>Teropodi</small></span><span data-node="rex">T. rex<br><small>Ramo estinto</small></span><span data-node="raptor">Velociraptor<br><small>Ramo estinto</small></span><span data-node="birds">Uccelli<br><small>Il ramo continua</small></span></div>
  <button id="hotspot" class="hotspot"><span class="hotspot-dot"></span><span>Trova la parentela</span><svg><use href="#i-arrow"/></svg></button>
- <div id="stage-note" class="stage-note">Confronto illustrativo · epoche diverse · proporzioni libere</div><div id="pause-badge" class="pause-badge glass" hidden>In pausa · tocca ▶ per riprendere</div><div id="loading" class="loading"><span class="loading-ring"></span><p>Entriamo nel museo dei dinosauri vivi…</p></div><div id="error" class="error glass" hidden><h2>La scena 3D non è disponibile</h2><p>Apri questo HTML in un browser con WebGL attivo.</p><button class="primary" onclick="location.reload()">Riprova</button></div>
+ <div id="stage-note" class="stage-note">Comparaison pédagogique · époques différentes · proportions libres</div><div id="pause-badge" class="pause-badge glass" hidden>En pause · touche ▶ pour reprendre</div><div id="loading" class="loading"><span class="loading-ring"></span><p>Entriamo nel museo dei dinosauri vivi…</p></div><div id="error" class="error glass" hidden><h2>La scena 3D non è disponibile</h2><p>Apri questo HTML in un browser con WebGL attivo.</p><button class="primary" onclick="location.reload()">Riprova</button></div>
 </main>
-<footer id="footer"><section class="story glass" aria-labelledby="story-title"><div class="story-top"><div class="step-label"><span id="step-number">01</span><span id="step-name">LA SORPRESA</span></div><ol id="steps" class="steps" aria-label="Avanzamento"><li>Incontro</li><li>Indizi</li><li>Fossile</li><li>Rami</li><li>Scoperta</li></ol></div><div class="story-body"><div class="story-copy"><h2 id="story-title" tabindex="-1">C’è un dinosauro nel pollaio.</h2><p id="story-text">Il pollo non assomiglia a un gigante preistorico. Eppure è <strong>un dinosauro vivente</strong>.</p></div><div class="actions"><button id="btn-back" class="secondary" hidden>← Indietro</button><button id="btn-next" class="primary"><span id="next-text">Scopri gli indizi</span><svg><use href="#i-arrow"/></svg></button><button id="btn-info" class="secondary book-button" aria-label="Apri curiosità e fonti scientifiche"><svg><use href="#i-book"/></svg><span>Dal libro</span></button></div></div>
- <div id="clues" class="choices clues" role="group" aria-label="Esplora tre indizi di parentela" hidden><button data-clue="0">1 · Le piume</button><button data-clue="1">2 · La furcula</button><button data-clue="2">3 · Braccia e ali</button></div>
- <div id="fossil-controls" class="choices fossil-controls" role="group" aria-label="Osserva un indizio fossile" hidden><button id="btn-scan">1 · Illumina l’osso</button><button id="btn-feathers" disabled>2 · Collega le piume</button></div>
- <div id="tree-controls" class="choices tree-controls" role="group" aria-label="Ricostruisci l’albero di parentela" hidden><button id="btn-root">1 · Antenati comuni</button><button id="btn-branches" disabled>2 · Rami diversi</button><button id="btn-survivors" disabled>3 · Il ramo degli uccelli</button></div>
- <div id="quiz" class="quiz" role="group" aria-label="Il pollo è..." hidden><button data-answer="avian">Un dinosauro aviano</button><button data-answer="rex">Un discendente del T. rex</button></div><p id="feedback" class="feedback" role="status" aria-live="polite" hidden></p>
+<footer id="footer"><section class="story glass" aria-labelledby="story-title"><div class="story-top"><div class="step-label"><span id="step-number">01</span><span id="step-name">LA SURPRISE</span></div><ol id="steps" class="steps" aria-label="Progression"><li class="current" aria-current="step">Rencontre</li><li>Indices</li><li>Fossile</li><li>Branches</li><li>Découverte</li></ol></div><div class="story-body"><div class="story-copy"><h2 id="story-title" tabindex="-1">Un dinosaure dans la basse-cour.</h2><p id="story-text">La poule ne ressemble pas à un monstre géant. Et pourtant, c’est un authentique <strong>dinosaure vivant</strong>.</p></div><div class="actions"><button id="btn-back" class="secondary" hidden>← Précédent</button><button id="btn-next" class="primary"><span id="next-text">Découvre les indices</span><svg><use href="#i-arrow"/></svg></button><button id="btn-info" class="secondary book-button" aria-label="En savoir plus avec la fiche du livre" title="En savoir plus avec la fiche du livre"><svg><use href="#i-book"/></svg> Du livre</button></div></div>
+ <div id="clues" class="choices clues" role="group" aria-label="Esplora tre indizi di parentela" hidden><button data-clue="0">1 · Les plumes</button><button data-clue="1">2 · La furcula</button><button data-clue="2">3 · Bras et ailes</button></div>
+ <div id="fossil-controls" class="choices fossil-controls" role="group" aria-label="Osserva un indizio fossile" hidden><button id="btn-scan">1 · Éclairer l’os</button><button id="btn-feathers" disabled>2 · Attacher les plumes</button></div>
+ <div id="tree-controls" class="choices tree-controls" role="group" aria-label="Ricostruisci l’albero di parentela" hidden><button id="btn-root">1 · Ancêtres communs</button><button id="btn-branches" disabled>2 · Branches distinctes</button><button id="btn-survivors" disabled>3 · La branche des oiseaux</button></div>
+ <div id="quiz" class="quiz" role="group" aria-label="Il pollo è..." hidden><button data-answer="avian">Un dinosaure aviaire</button><button data-answer="rex">Un descendant direct du T. rex</button></div><p id="feedback" class="feedback" role="status" aria-live="polite" hidden></p>
 </section></footer></div><div id="live" class="sr-only" role="status" aria-live="polite"></div>
-<dialog id="info-dialog" aria-labelledby="info-title"><div class="dialog-head"><div><span class="eyebrow">SCOPERTA 38 · LA SCIENZA DIETRO LA PARENTÉ</span><h2 id="info-title">Un ramo che arriva fino a oggi</h2></div><button id="btn-close" class="tool icon-only" aria-label="Chiudi"><svg><use href="#i-close"/></svg></button></div><div class="dialog-content">
- <div class="fact-highlight"><strong>Uccelli ⊂ dinosauri</strong><span>Gli uccelli appartengono ai dinosauri teropodi</span></div>
- <h3>Non soltanto discendenti</h3><p>Gli uccelli si sono evoluti all’interno di un ramo dei dinosauri teropodi. Appartengono ancora a quel gruppo: sono dinosauri aviani. Gli altri dinosauri, detti non aviani, sono estinti.</p>
- <h3>Molti caratteri, insieme</h3><p>I ricercatori confrontano numerosi caratteri di scheletri e fossili per ricostruire la parentela. Le piume, la furcula e lo schema delle ossa degli arti anteriori sono tre esempi da esplorare. Una singola somiglianza non basta, da sola, a ricostruire tutto l’albero.</p><p>La furcula, spesso chiamata «osso dei desideri», deriva dall’unione delle clavicole. Era presente anche in diversi teropodi non aviani. Braccia e ali condividono ossa omologhe, tra cui omero, radio e ulna.</p>
- <h3>Piume in un animale che non volava</h3><p>Turner, Makovicky e Norell descrissero nel 2007 sei piccoli rilievi sull’ulna di un esemplare di <em>Velociraptor mongoliensis</em>. Sono punti di attacco delle penne, confrontabili con quelli degli uccelli attuali. È un indizio osseo della presenza di penne sull’avambraccio; non un’impronta del piumaggio completo. Velociraptor non era capace di volo attivo.</p>
- <h3>Un albero, non una fila</h3><p>T. rex, Velociraptor e pollo occupano rami diversi, collegati da antenati comuni. Il pollo non discende dal T. rex né dal Velociraptor mostrato qui. Il piccolo albero omette moltissimi gruppi e non rappresenta una scala del tempo. Non tutti gli uccelli antichi superarono l’estinzione di circa 66 milioni di anni fa: sopravvissero alcune linee, da cui derivano gli uccelli di oggi.</p>
+<dialog id="info-dialog" aria-labelledby="info-title"><div class="dialog-head"><div><span class="eyebrow">DÉCOUVERTE 38 · LA SCIENCE DERRIÈRE LA PARENTÉ</span><h2 id="info-title">Une branche qui s’étend jusqu’à aujourd’hui</h2></div><button id="btn-close" class="tool icon-only" aria-label="Fermer"><svg><use href="#i-close"/></svg></button></div><div class="dialog-content">
+ <div class="fact-highlight"><strong>Oiseaux ⊂ dinosaures</strong><span>Les oiseaux font biologiquement partie des dinosaures théropodes</span></div>
+ <h3>Pas seulement des descendants : ils SONT des dinosaures</h3><p>En phylogénie moderne, les oiseaux sont classés parmi les dinosaures théropodes. Ils n’ont pas simplement succédé aux dinosaures : ils en sont la branche survivante.</p>
+ <h3>De multiples preuves anatomiques</h3><p>Plumes, os creux allégés, furcula (os du bréchet), couvaison des œufs : ces traits sont apparus chez des dinosaures terrestres bien avant l’apparition du vol battu.</p><p>La furcula, spesso chiamata «osso dei desideri», deriva dall’unione delle clavicole. Era presente anche in diversi teropodi non aviani. Braccia e ali condividono ossa omologhe, tra cui omero, radio e ulna.</p>
+ <h3>Des plumes bien avant le vol</h3><p>La découverte de fossiles emplumés en Chine et de nœuds de plumes chez le Vélociraptor montre que le plumage servait d’isolant thermique ou de signal visuel avant de permettre le vol.</p>
+ <h3>Un arbre foisonnant, pas une échelle</h3><p>L’évolution ne forme pas une ligne droite. Seuls de petits oiseaux édentés à l’alimentation variée ont survécu au cataclysme de la fin du Crétacé.</p>
  <details><summary>Come leggere la ricostruzione</summary><p>I modelli sono illustrazioni tridimensionali, non scansioni di reperti. I due animali non vissero nella stessa epoca; le loro dimensioni relative sono libere. Colori e parte della distribuzione del piumaggio del dinosauro sono interpretazioni artistiche. Le ossa evidenziate sono schemi ingranditi e semplificati.</p><p>L’osso in mostra è un modello didattico ispirato all’indizio descritto nello studio del 2007. Le penne aggiunte illustrano il rapporto con gli attacchi ossei: non ricostruiscono posizione, forma e numero dell’intero piumaggio dell’animale.</p></details>
- <div class="sources"><h3>Fonti della scoperta</h3><a href="https://www.nhm.ac.uk/discover/how-dinosaurs-evolved-into-birds.html" target="_blank" rel="noopener noreferrer">Natural History Museum · How dinosaurs evolved into birds ↗</a><a href="https://doi.org/10.1126/science.1145076" target="_blank" rel="noopener noreferrer">Turner, Makovicky e Norell · Science, 2007 ↗</a><a href="https://pubmed.ncbi.nlm.nih.gov/17885130/" target="_blank" rel="noopener noreferrer">Scheda dello studio sui punti di attacco delle penne · PubMed ↗</a><a href="https://www.nhm.ac.uk/discover/why-are-birds-the-only-surviving-dinosaurs.html" target="_blank" rel="noopener noreferrer">Natural History Museum · Il ramo sopravvissuto ↗</a></div>
- </div><div class="dialog-foot"><button id="btn-close-bottom" class="primary">Torniamo al museo <svg><use href="#i-arrow"/></svg></button></div></dialog>
+ <div class="sources"><h3>Sources de la découverte</h3><a href="https://www.nhm.ac.uk/discover/how-dinosaurs-evolved-into-birds.html" target="_blank" rel="noopener noreferrer">Natural History Museum · How dinosaurs evolved into birds ↗</a><a href="https://doi.org/10.1126/science.1145076" target="_blank" rel="noopener noreferrer">Turner, Makovicky e Norell · Science, 2007 ↗</a><a href="https://pubmed.ncbi.nlm.nih.gov/17885130/" target="_blank" rel="noopener noreferrer">Scheda dello studio sui punti di attacco delle penne · PubMed ↗</a><a href="https://www.nhm.ac.uk/discover/why-are-birds-the-only-surviving-dinosaurs.html" target="_blank" rel="noopener noreferrer">Natural History Museum · Il ramo sopravvissuto ↗</a></div>
+ </div><div class="dialog-foot"><button id="btn-close-bottom" class="primary">Retour au musée <svg><use href="#i-arrow"/></svg></button></div></dialog>
 <noscript><p class="noscript">Attiva JavaScript per esplorare questa animazione.</p></noscript><script>/**
  * @license
  * Copyright 2010-2021 Three.js Authors
@@ -205,13 +205,48 @@ function switchAnimLang(targetLang){
  let renderer,scene,camera,museum,animals,dino,bird,details,fossil,tree,particles,glowMap,scanLight;
  const look=V(),target=V(),eye=V(),labels=[],branches=[],knobs=[],boneFeathers=[],materials=new Map();
  let seed=8838;const rand=()=>{seed=(1664525*seed+1013904223)>>>0;return seed/4294967296;};
- const pages=[
-  {name:'LA SORPRESA',title:'C’è un dinosauro nel pollaio.',text:'Il pollo non assomiglia a un gigante preistorico. Eppure è <strong>un dinosauro vivente</strong>.',next:'Scopri gli indizi',caption:'UN LEGAME ANTICO · UNA SCOPERTA VIVA',label:'Un dinosauro nel pollaio',sub:'Guarda oltre le differenze',note:'Confronto illustrativo · epoche diverse · proporzioni libere'},
-  {name:'GLI INDIZI',title:'La parentela lascia degli indizi.',text:'Tocca i tre pulsanti e confronta <strong>piume e ossa</strong>. Le somiglianze vanno studiate insieme.',next:'Osserva un fossile',caption:'CONFRONTARE · RICONOSCERE · COLLEGARE',label:'Due animali, molti indizi',sub:'Le somiglianze si leggono insieme',note:'Ossa e dettagli ingranditi · schemi illustrativi'},
-  {name:'IL FOSSILE',title:'Una traccia rimasta sull’osso.',text:'Una piccola ulna di Velociraptor conserva <strong>punti di attacco delle penne</strong>. Illumina l’osso e osservali.',next:'Ricostruisci i rami',caption:'UN INDIZIO NEL FOSSILE',label:'Un osso può raccontare le piume',sub:'Velociraptor mongoliensis · uno studio del 2007',note:'Modello didattico ispirato a un fossile · non un reperto reale'},
-  {name:'L’ALBERO',title:'La storia ha la forma di un albero.',text:'Ricostruisci i collegamenti: <strong>antenati comuni, rami diversi</strong>. Nessun T. rex si trasforma in un pollo.',next:'E oggi?',caption:'LA PARENTÉ È UN ALBERO',label:'Rami diversi. Una storia comune.',sub:'Non una fila di trasformazioni',note:'Albero molto semplificato · non è una scala del tempo'},
-  {name:'LA SCOPERTA',title:'Il pollo è…',text:'Ora guarda il pollo con occhi nuovi. <strong>A quale gruppo appartiene?</strong>',next:'Rivedi l’esperienza',caption:'UNA SCOPERTA CHE CAMMINA TRA NOI',label:'I dinosauri sono ancora qui',sub:'Il ramo degli uccelli arriva fino a oggi',note:'Gli uccelli sono dinosauri aviani; gli altri dinosauri sono estinti'}
- ];
+ const pages = [
+  {
+    "name": "LA SURPRISE",
+    "title": "Un dinosaure dans la basse-cour.",
+    "text": "La poule ne ressemble pas à un monstre géant. Et pourtant, c’est un authentique <strong>dinosaure vivant</strong>.",
+    "next": "Découvre les indices",
+    "caption": "UN LIEN ANCIEN · UNE DÉCOUVERTE VIVANTE",
+    "label": "Un dinosaure dans la basse-cour"
+  },
+  {
+    "name": "LES INDICES",
+    "title": "L’évolution laisse des indices.",
+    "text": "Touche les trois boutons pour comparer <strong>plumes, bréchet et membres</strong> avec les fossiles de théropodes.",
+    "next": "Observer un fossile",
+    "caption": "COMPARER · RECONNAÎTRE · RELIER",
+    "label": "Deux animaux, des preuves anatomiques"
+  },
+  {
+    "name": "LE FOSSILE",
+    "title": "Une empreinte gravée dans l’os.",
+    "text": "Un os d’avant-bras de Vélociraptor porte de véritables <strong>nœuds de plumes</strong>. Bien qu’incapable de voler, il était emplumé.",
+    "next": "Reconstruire les branches",
+    "caption": "UN INDICE DANS LA PIERRE",
+    "label": "L’os raconte l’histoire des plumes"
+  },
+  {
+    "name": "L’ARBRE",
+    "title": "L’histoire a la forme d’un arbre.",
+    "text": "Relie la lignée : <strong>ancêtres communs et branches diversifiées</strong>. Les oiseaux sont la branche survivante des dinosaures.",
+    "next": "Et aujourd’hui ?",
+    "caption": "L’ÉVOLUTION EST UN ARBRE",
+    "label": "Branches diverses, histoire commune"
+  },
+  {
+    "name": "LA DÉCOUVERTE",
+    "title": "La poule est…",
+    "text": "Regarde désormais les oiseaux avec un œil scientifique. <strong>À quel groupe appartiennent-ils ?</strong>",
+    "next": "Revoir l’expérience",
+    "caption": "UNE DÉCOUVERTE PARMI NOUS",
+    "label": "Les dinosaures sont toujours là"
+  }
+];
  const clues=[
   {title:'Le piume esistevano prima del volo.',text:'Velociraptor aveva penne sugli arti anteriori, ma <strong>non volava</strong>. Le piume non servono soltanto a volare.',badge:'PIUME · NON SOLO PER VOLARE'},
   {title:'Un piccolo osso a forma di forcella.',text:'La <strong>furcula</strong> unisce le clavicole. È presente negli uccelli e anche in diversi dinosauri teropodi non aviani.',badge:'FURCULA · LE CLAVICOLE UNITE'},
@@ -448,9 +483,9 @@ function switchAnimLang(targetLang){
   $('quiz').querySelectorAll('button').forEach(b=>b.disabled=S.paused||S.answered);
  }
  function announce(text){$('live').textContent=text;}
- function setAuto(v){S.auto=v;$('btn-auto').setAttribute('aria-pressed',String(v));$('btn-auto').querySelector('span').textContent=v?'In viaggio':'Il viaggio';}
+ function setAuto(v){S.auto=v;$('btn-auto').setAttribute('aria-pressed',String(v));$('btn-auto').querySelector('span').textContent=v?'En parcours':'Le parcours';}
  function setPaused(v){S.paused=v;$('btn-pause').setAttribute('aria-pressed',String(v));$('btn-pause').setAttribute('aria-label',v?'Riprendi':'Metti in pausa');$('pause-icon').setAttribute('href',v?'#i-play':'#i-pause');$('pause-badge').hidden=!v;audio.sync();refresh();}
- function setView(v){S.alternate=v;$('btn-view').setAttribute('aria-pressed',String(v));$('btn-view').setAttribute('aria-label',v?'Torna alla prima vista':'Osserva dall’altro lato');$('view-name').textContent=v?'Prima vista':'Altro lato';}
+ function setView(v){S.alternate=v;$('btn-view').setAttribute('aria-pressed',String(v));$('btn-view').setAttribute('aria-label',v?'Torna alla prima vista':'Osserva dall’altro lato');$('view-name').textContent=v?'Vue de face':'Autre vue';}
  function setPhase(index,{focus=true}={}){S.phase=clamp(index,0,4);S.age=0;S.autoClock=0;const d=pages[S.phase];$('stage').dataset.phase=S.phase;$('scene-caption').textContent=d.caption;$('scene-label').querySelector('span').textContent=d.label;$('scene-label').querySelector('em').textContent=d.sub;$('scene-label').hidden=S.phase===1&&S.clue>=0||S.phase===3;$('stage-note').textContent=d.note;
   $('step-number').textContent=String(S.phase+1).padStart(2,'0');$('step-name').textContent=d.name;$('story-title').textContent=d.title;$('story-text').innerHTML=d.text;$('next-text').textContent=d.next;$('btn-back').hidden=S.phase===0;$('hotspot').hidden=S.phase!==0;$('specimens').hidden=S.phase>1;$('detail-badge').hidden=true;$('tree-labels').hidden=S.phase!==3;$('feedback').hidden=true;
   [...$('steps').children].forEach((e,i)=>{e.className=i===S.phase?'current':i<S.phase?'done':'';if(i===S.phase)e.setAttribute('aria-current','step');else e.removeAttribute('aria-current');});
