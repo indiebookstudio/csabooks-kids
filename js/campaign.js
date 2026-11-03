@@ -11,7 +11,9 @@
   let isPausedByUser = false;
   let isHoveredOrFocused = false;
   let touchStartX = 0;
+  let touchStartY = 0;
   let touchEndX = 0;
+  let touchEndY = 0;
   let initialized = false;
 
   function getConfig() {
@@ -288,8 +290,8 @@
                 <h2 class="csa-christmas-title">${escapeHtml(slide.title)}</h2>
                 <p class="csa-christmas-body">${escapeHtml(slide.body)}</p>
 
-                <!-- Desktop: Copertine e Azioni sotto il testo a sinistra -->
-                <div class="csa-christmas-desktop-dock">
+                <!-- Copertine e Azioni: posizionate sopra l'immagine sia su desktop che su smartphone -->
+                <div class="csa-christmas-dock csa-christmas-desktop-dock">
                   <div class="csa-christmas-covers-row" aria-label="Copertine disponibili">
                     ${coversHtml}
                   </div>
@@ -298,16 +300,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <!-- Mobile: Fascia dedicata separata sotto la scena per preservare i personaggi -->
-          <div class="csa-christmas-mobile-dock">
-            <div class="csa-christmas-covers-row" aria-label="Copertine disponibili">
-              ${coversHtml}
-            </div>
-            <div class="csa-christmas-actions">
-              ${actionsHtml}
             </div>
           </div>
         </div>
@@ -450,19 +442,23 @@
       }
     };
 
-    // Touch swipe (senza bloccare lo scroll verticale)
+    // Touch swipe con prioritizzazione dello scroll verticale nativo dello smartphone
     carousel.ontouchstart = (e) => {
       if (e.touches && e.touches.length === 1) {
         touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
       }
     };
 
     carousel.ontouchend = (e) => {
       if (e.changedTouches && e.changedTouches.length === 1) {
         touchEndX = e.changedTouches[0].clientX;
-        const diff = touchStartX - touchEndX;
-        if (Math.abs(diff) > 40) {
-          if (diff > 0) {
+        touchEndY = e.changedTouches[0].clientY;
+        const diffX = touchStartX - touchEndX;
+        const diffY = touchStartY - touchEndY;
+        // Non intercettare lo scroll verticale nativo: attiva swipe solo se chiaramente orizzontale
+        if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY) * 1.4) {
+          if (diffX > 0) {
             goToSlide(currentSlideIndex + 1);
           } else {
             goToSlide(currentSlideIndex - 1);

@@ -57,6 +57,11 @@
 }
 
 /* Base Resets & Global Typography */
+html {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
 body {
   font-family: var(--csa-font-body);
   background-color: var(--csa-bg);
@@ -65,6 +70,8 @@ body {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, .csa-heading {
@@ -182,25 +189,30 @@ h1, h2, h3, h4, .csa-heading {
   outline: 2px solid var(--csa-primary);
 }
 
-/* Mobile Drawer */
+/* Mobile Drawer - Confinato con visibility e transform per evitare qualsiasi scorrimento orizzontale su smartphone */
 .csa-mobile-drawer {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
+  transform: translateX(100%);
   width: 320px;
   max-width: 85vw;
   height: 100vh;
   background: var(--csa-surface);
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
   z-index: 1000;
-  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
   display: flex;
   flex-direction: column;
   padding: 24px;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .csa-mobile-drawer.open {
-  right: 0;
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .csa-drawer-header {
