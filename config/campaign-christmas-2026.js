@@ -5,7 +5,7 @@
  * 
  * - Gestione stato attivo/disattivo della campagna (enabled: true/false)
  * - Data di conclusione configurabile (endDate: "YYYY-MM-DD")
- * - Regole rigorose di selezione slide per le 9 lingue (IT: 4 slide, altre: 2 slide)
+ * - Regole rigorose di selezione slide per le 9 lingue (IT: 5 slide, altre: 2 slide)
  * - Singolo pulsante "Scopri" integrato perfettamente nel layout senza overflow
  */
 
@@ -114,6 +114,27 @@
   },
   "slidesData": {
     "it": [
+      {
+            "id": "sos-natale",
+            "type": "single",
+            "eyebrow": "NOVITÀ DI NATALE",
+            "badge": "DAI 2 ANNI",
+            "title": "SOS Natale!",
+            "body": "Babbo Natale è incastrato nel camino! Leo la gru e Bruno il camion corrono in aiuto. Un albo illustrato da leggere insieme ai piccoli fan delle macchine da cantiere.",
+            "backgrounds": {
+                  "desktop": "assets/campaigns/christmas-2026/backgrounds/sos-natale-desktop.webp",
+                  "mobile": "assets/campaigns/christmas-2026/backgrounds/sos-natale-mobile.webp"
+            },
+            "covers": [],
+            "actions": [
+                  {
+                        "type": "link",
+                        "text": "Scopri il libro",
+                        "href": "catalogo.html#book-csa-10-leo-bruno-natale",
+                        "primary": true
+                  }
+            ]
+      },
       {
         "id": "01-raccolte",
         "type": "raccolte",

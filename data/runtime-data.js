@@ -135,6 +135,76 @@
   ],
   "books": [
     {
+      "id": "csa-10-leo-bruno-natale",
+      "category": "cantiere",
+      "author": "Marco Salucci",
+      "age": "2–5",
+      "featured": false,
+      "format": "paperback",
+      "title": {
+        "it": "Leo la gru & Bruno il camion in SOS Natale!",
+        "en": "Leo the Crane & Bruno the Truck in Christmas SOS!",
+        "fr": "Léo la grue et Bruno le camion dans SOS Noël !",
+        "de": "Kran Leo & LKW Bruno in SOS Weihnachten!",
+        "es": "Leo la grúa y Bruno el camión en ¡SOS Navidad!",
+        "nl": "Leo de kraan en Bruno de vrachtwagen in SOS Kerst!",
+        "pl": "Dźwig Leo i ciężarówka Bruno w SOS Boże Narodzenie!",
+        "se": "Kranen Leo och lastbilen Bruno i SOS Jul!",
+        "jp": "クレーンのレオとトラックのブルーノ SOSクリスマス！"
+      },
+      "subtitle": {
+        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
+        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
+        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
+        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
+        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
+        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
+        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
+        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
+      },
+      "pitch": {
+        "it": "È la notte della Vigilia e Babbo Natale è rimasto incastrato in un camino! Per fortuna ci sono Leo la gru e Bruno il camion: tra corde che si spezzano e renne che ridacchiano, salvare il Natale sarà un'avventura insolita, tutta da ridere!",
+        "en": "On Christmas Eve, Santa Claus gets stuck in a chimney! Luckily, Leo the Crane and Bruno the Truck are here to help save Christmas in a funny, unforgettable adventure!",
+        "fr": "Le soir du réveillon, le Père Noël se retrouve coincé dans une cheminée ! Heureusement, Léo la grue et Bruno le camion sont là pour sauver Noël !",
+        "es": "¡En Nochebuena, Papá Noel se queda atascado en una chimenea! ¡Por suerte Leo la grúa y Bruno el camión acuden al rescate!",
+        "de": "Am Heiligabend bleibt der Weihnachtsmann im Schornstein stecken! Zum Glück sind Kran Leo und LKW Bruno zur Stelle!",
+        "nl": "Op kerstavond komt de Kerstman vast te zitten in een schoorsteen! Gelukkig zijn Leo de kraan en Bruno de vrachtwagen er om Kerstmis te redden!",
+        "pl": "W wigilijny wieczór Święty Mikołaj utknął w kominie! Na szczęście dźwig Leo i ciężarówka Bruno ruszają na ratunek!",
+        "se": "På julafton fastnar tomten i en skorsten! Som tur är rycker kranen Leo och lastbilen Bruno ut för att rädda julen!",
+        "jp": "クリスマスイブ、サンタクロースが煙突に挟まっちゃった！クレーンのレオとトラックのブルーノがクリスマスの救出大作戦に出発！"
+      },
+      "benefits": {
+        "it": [
+          "Divertente avventura natalizia con Leo la gru, Bruno il camion e Babbo Natale",
+          "Testi in rima e atmosfera festosa ideali per la lettura serale sotto le feste",
+          "Insegna l'amicizia, la generosità, il problem solving e lo spirito natalizio"
+        ],
+        "en": [
+          "Delightful Christmas adventure with Leo the Crane, Bruno the Truck, and Santa Claus",
+          "Engaging rhyming story with a joyful holiday atmosphere, perfect for bedtime",
+          "Teaches friendship, helping others, problem solving, and holiday spirit"
+        ],
+        "fr": [
+          "Une aventure de Noël pleine d'humour avec Léo, Bruno et le Père Noël",
+          "Rimes joyeuses et ambiance festive pour les fêtes de fin d'année",
+          "Célèbre l'amitié, l'entraide et la magie de Noël"
+        ]
+      },
+      "editions": {
+        "it": {
+          "languageName": "Italiano",
+          "title": "Leo la gru & Bruno il camion in SOS Natale!",
+          "available": true,
+          "asin": "B0HQ72DLC7",
+          "amazon": {
+            "it": "https://www.amazon.it/dp/B0HQ72DLC7",
+            "com": "https://www.amazon.com/dp/B0HQ72DLC7"
+          }
+        }
+      }
+    },
+    {
       "id": "einstein",
       "category": "scienza",
       "author": "Clara Musicco",
@@ -1399,76 +1469,6 @@
           "amazon": {
             "it": "https://www.amazon.it/dp/B0HJRRRDMX",
             "com": "https://www.amazon.com/dp/B0HJRRRDMX"
-          }
-        }
-      }
-    },
-    {
-      "id": "csa-10-leo-bruno-natale",
-      "category": "cantiere",
-      "author": "Marco Salucci",
-      "age": "2–5",
-      "featured": false,
-      "format": "paperback",
-      "title": {
-        "it": "Leo la gru & Bruno il camion in SOS Natale!",
-        "en": "Leo the Crane & Bruno the Truck in Christmas SOS!",
-        "fr": "Léo la grue et Bruno le camion dans SOS Noël !",
-        "de": "Kran Leo & LKW Bruno in SOS Weihnachten!",
-        "es": "Leo la grúa y Bruno el camión en ¡SOS Navidad!",
-        "nl": "Leo de kraan en Bruno de vrachtwagen in SOS Kerst!",
-        "pl": "Dźwig Leo i ciężarówka Bruno w SOS Boże Narodzenie!",
-        "se": "Kranen Leo och lastbilen Bruno i SOS Jul!",
-        "jp": "クレーンのレオとトラックのブルーノ SOSクリスマス！"
-      },
-      "subtitle": {
-        "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
-        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
-        "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
-        "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
-        "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
-        "nl": "Bouwplaats Avonturen - Geïllustreerd boek voor kinderen van 2 tot 5 jaar",
-        "pl": "Przygody na Placu Budowy - Ilustrowana książka dla dzieci w wieku 2-5 lat",
-        "se": "Byggarbetsplatsens Äventyr - Illustrerad bok för barn 2-5 år",
-        "jp": "工事現場の冒険 - 2〜5歳向けイラスト絵本"
-      },
-      "pitch": {
-        "it": "È la notte della Vigilia e Babbo Natale è rimasto incastrato in un camino! Per fortuna ci sono Leo la gru e Bruno il camion: tra corde che si spezzano e renne che ridacchiano, salvare il Natale sarà un'avventura insolita, tutta da ridere!",
-        "en": "On Christmas Eve, Santa Claus gets stuck in a chimney! Luckily, Leo the Crane and Bruno the Truck are here to help save Christmas in a funny, unforgettable adventure!",
-        "fr": "Le soir du réveillon, le Père Noël se retrouve coincé dans une cheminée ! Heureusement, Léo la grue et Bruno le camion sont là pour sauver Noël !",
-        "es": "¡En Nochebuena, Papá Noel se queda atascado en una chimenea! ¡Por suerte Leo la grúa y Bruno el camión acuden al rescate!",
-        "de": "Am Heiligabend bleibt der Weihnachtsmann im Schornstein stecken! Zum Glück sind Kran Leo und LKW Bruno zur Stelle!",
-        "nl": "Op kerstavond komt de Kerstman vast te zitten in een schoorsteen! Gelukkig zijn Leo de kraan en Bruno de vrachtwagen er om Kerstmis te redden!",
-        "pl": "W wigilijny wieczór Święty Mikołaj utknął w kominie! Na szczęście dźwig Leo i ciężarówka Bruno ruszają na ratunek!",
-        "se": "På julafton fastnar tomten i en skorsten! Som tur är rycker kranen Leo och lastbilen Bruno ut för att rädda julen!",
-        "jp": "クリスマスイブ、サンタクロースが煙突に挟まっちゃった！クレーンのレオとトラックのブルーノがクリスマスの救出大作戦に出発！"
-      },
-      "benefits": {
-        "it": [
-          "Divertente avventura natalizia con Leo la gru, Bruno il camion e Babbo Natale",
-          "Testi in rima e atmosfera festosa ideali per la lettura serale sotto le feste",
-          "Insegna l'amicizia, la generosità, il problem solving e lo spirito natalizio"
-        ],
-        "en": [
-          "Delightful Christmas adventure with Leo the Crane, Bruno the Truck, and Santa Claus",
-          "Engaging rhyming story with a joyful holiday atmosphere, perfect for bedtime",
-          "Teaches friendship, helping others, problem solving, and holiday spirit"
-        ],
-        "fr": [
-          "Une aventure de Noël pleine d'humour avec Léo, Bruno et le Père Noël",
-          "Rimes joyeuses et ambiance festive pour les fêtes de fin d'année",
-          "Célèbre l'amitié, l'entraide et la magie de Noël"
-        ]
-      },
-      "editions": {
-        "it": {
-          "languageName": "Italiano",
-          "title": "Leo la gru & Bruno il camion in SOS Natale!",
-          "available": true,
-          "asin": "B0HQ72DLC7",
-          "amazon": {
-            "it": "https://www.amazon.it/dp/B0HQ72DLC7",
-            "com": "https://www.amazon.com/dp/B0HQ72DLC7"
           }
         }
       }

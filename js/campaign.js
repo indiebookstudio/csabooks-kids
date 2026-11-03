@@ -43,7 +43,8 @@
       'csa-vol1': 'https://www.amazon.it/dp/B0HN4QMLV1',
       'csa-vol2': 'https://www.amazon.it/dp/B0HPB2L59F',
       'einstein': lang === 'en' ? 'https://www.amazon.com/dp/B0HPG9WFSR' : (lang === 'fr' ? 'https://www.amazon.fr/dp/B0HQ1F1HX8' : 'https://www.amazon.it/dp/B0HP6YD1CM'),
-      'fano': 'https://www.amazon.it/dp/B0HD2X6HVJ'
+      'fano': 'https://www.amazon.it/dp/B0HD2X6HVJ',
+      'csa-10-leo-bruno-natale': 'https://www.amazon.it/dp/B0HQ72DLC7'
     };
     return fallbackMap[bookId] || '#';
   }

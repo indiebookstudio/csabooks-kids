@@ -62,24 +62,31 @@ assert(typeof config.isCampaignActive === 'function' && config.isCampaignActive(
 // 3. Regole linguistiche vincolanti
 console.log('\n--- 3. Regole di Selezione Slide per Tutte le 9 Lingue ---');
 
-// ITALIANO: 4 slide
+// ITALIANO: 5 slide (sos-natale come prima slide)
 const itSlides = config.getSlidesForLanguage('it');
-assert(itSlides.length === 4, `Italiano: 4 slide previste (trovate: ${itSlides.length})`);
-assert(itSlides[0].id === '01-raccolte', 'IT Slide 1: 01-raccolte');
-assert(itSlides[0].covers.length === 2, 'IT Slide 1: 2 copertine (Raccolta Vol 1 e Vol 2)');
-assert(itSlides[0].actions.length === 1 && itSlides[0].actions[0].text === 'Scopri', 'IT Slide 1: Singolo pulsante "Scopri" presente');
+assert(itSlides.length === 5, `Italiano: 5 slide previste (trovate: ${itSlides.length})`);
+assert(itSlides[0].id === 'sos-natale', 'IT Slide 1: sos-natale');
+assert(itSlides[0].title === 'SOS Natale!', 'IT Slide 1: Titolo "SOS Natale!"');
+assert(itSlides[0].eyebrow === 'NOVITÀ DI NATALE', 'IT Slide 1: Eyebrow "NOVITÀ DI NATALE"');
+assert(itSlides[0].badge === 'DAI 2 ANNI', 'IT Slide 1: Badge "DAI 2 ANNI"');
+assert(itSlides[0].actions.length === 1 && itSlides[0].actions[0].text === 'Scopri il libro', 'IT Slide 1: Pulsante "Scopri il libro" presente');
+assert(itSlides[0].actions[0].href === 'catalogo.html#book-csa-10-leo-bruno-natale', 'IT Slide 1: Link corretto a catalogo.html#book-csa-10-leo-bruno-natale');
 
-assert(itSlides[1].id === '02-einstein', 'IT Slide 2: 02-einstein');
-assert(itSlides[1].covers.length === 1 && itSlides[1].covers[0].src.includes('einstein-it.png'), 'IT Slide 2: Copertina Einstein IT');
+assert(itSlides[1].id === '01-raccolte', 'IT Slide 2: 01-raccolte');
+assert(itSlides[1].covers.length === 2, 'IT Slide 2: 2 copertine (Raccolta Vol 1 e Vol 2)');
 assert(itSlides[1].actions.length === 1 && itSlides[1].actions[0].text === 'Scopri', 'IT Slide 2: Singolo pulsante "Scopri" presente');
 
-assert(itSlides[2].id === '03-collana', 'IT Slide 3: 03-collana');
-assert(itSlides[2].covers.length === 3, `IT Slide 3: prime 3 copertine ordinate (trovate: ${itSlides[2].covers.length})`);
-assert(itSlides[2].totalCount === 9, 'IT Slide 3: Conteggio totale dichiarato 9 episodi');
-assert(itSlides[2].body.includes('9'), 'IT Slide 3: Testo cita 9 episodi');
+assert(itSlides[2].id === '02-einstein', 'IT Slide 3: 02-einstein');
+assert(itSlides[2].covers.length === 1 && itSlides[2].covers[0].src.includes('einstein-it.png'), 'IT Slide 3: Copertina Einstein IT');
+assert(itSlides[2].actions.length === 1 && itSlides[2].actions[0].text === 'Scopri', 'IT Slide 3: Singolo pulsante "Scopri" presente');
 
-assert(itSlides[3].id === '04-fano', 'IT Slide 4: 04-fano');
-assert(itSlides[3].covers.length === 1 && itSlides[3].covers[0].src.includes('fano-it.png'), 'IT Slide 4: Copertina Fano IT');
+assert(itSlides[3].id === '03-collana', 'IT Slide 4: 03-collana');
+assert(itSlides[3].covers.length === 3, `IT Slide 4: prime 3 copertine ordinate (trovate: ${itSlides[3].covers.length})`);
+assert(itSlides[3].totalCount === 9, 'IT Slide 4: Conteggio totale dichiarato 9 episodi');
+assert(itSlides[3].body.includes('9'), 'IT Slide 4: Testo cita 9 episodi');
+
+assert(itSlides[4].id === '04-fano', 'IT Slide 5: 04-fano');
+assert(itSlides[4].covers.length === 1 && itSlides[4].covers[0].src.includes('fano-it.png'), 'IT Slide 5: Copertina Fano IT');
 
 // INGLESE: 2 slide
 const enSlides = config.getSlidesForLanguage('en');
@@ -120,13 +127,12 @@ nonEnLangs.forEach(lang => {
 
 // 4. Verifica Esclusioni Vincolanti
 console.log('\n--- 4. Verifica Esclusioni e Vincoli Prodotti ---');
-// Episodio 10 natalizio non deve esistere nelle slide
-const allSlidesAllLangs = Object.keys(config.slidesData).flatMap(k => config.slidesData[k]);
-const hasEp10 = allSlidesAllLangs.some(s => 
-  (s.covers && s.covers.some(c => c.src.includes('10'))) ||
-  (s.title && s.title.includes('10'))
+// sos-natale deve essere presente esclusivamente in lingua italiana
+const nonItLangsWithSos = nonEnLangs.concat(['en', 'fr']).filter(lang => 
+  config.getSlidesForLanguage(lang).some(s => s.id === 'sos-natale')
 );
-assert(!hasEp10, 'Nessun episodio 10 promosso nella campagna');
+assert(nonItLangsWithSos.length === 0, 'sos-natale presente esclusivamente in lingua italiana');
+const allSlidesAllLangs = Object.keys(config.slidesData).flatMap(k => config.slidesData[k]);
 
 // Collana scolastica (Matematica 2) non deve comparire nell'hero
 const hasScuola = allSlidesAllLangs.some(s =>

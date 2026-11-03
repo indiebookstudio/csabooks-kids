@@ -833,7 +833,7 @@
         : t('featured.buyAmazon');
 
       return `
-        <article class="csa-book-card csa-featured-card" data-book-id="${book.id}">
+        <article class="csa-book-card csa-featured-card" id="book-${book.id}" data-book-id="${book.id}">
           <div class="csa-card-media" onclick="window.openBookModal('${book.id}')">
             <img 
               src="${coverUrl}" 
@@ -949,7 +949,7 @@
         : t('featured.buyAmazon');
 
       return `
-        <article class="csa-book-card" data-book-id="${book.id}">
+        <article class="csa-book-card" id="book-${book.id}" data-book-id="${book.id}">
           <div class="csa-card-media" onclick="window.openBookModal('${book.id}')">
             <img 
               src="${coverUrl}" 
@@ -1095,7 +1095,7 @@
           : t('featured.buyAmazon');
 
         return `
-          <article class="csa-book-card" data-book-id="${book.id}">
+          <article class="csa-book-card" id="book-${book.id}" data-book-id="${book.id}">
             <div class="csa-card-media" onclick="window.openBookModal('${book.id}')">
               <img 
                 src="${coverUrl}" 

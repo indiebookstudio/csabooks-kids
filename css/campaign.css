@@ -660,3 +660,154 @@
     transition: none !important;
   }
 }
+
+/* === SLIDE DEDICATA: SOS NATALE === */
+/* ==========================================================================
+   SLIDE DEDICATA: SOS NATALE ([data-slide-id="sos-natale"])
+   Visual principale basato sull'illustrazione d'autore:
+   - Fredoka per il titolo, Plus Jakarta Sans per testi, badge e pulsante
+   - Desktop: testo a sinistra (safe zone dark navy), illustrazione a destra
+   - Telefono/Tablet: testo e pulsante nella fascia blu superiore,
+     inquadratura calibrata per preservare Leo, Bruno, camino e stivali visibili
+   - Copertine escluse per dare risalto completo all'artwork
+   ========================================================================== */
+
+[data-slide-id="sos-natale"] .csa-christmas-title {
+  font-family: var(--csa-font-heading, 'Fredoka', cursive, sans-serif);
+  font-weight: 700;
+}
+
+[data-slide-id="sos-natale"] .csa-christmas-eyebrow,
+[data-slide-id="sos-natale"] .csa-christmas-badge,
+[data-slide-id="sos-natale"] .csa-christmas-body,
+[data-slide-id="sos-natale"] .csa-btn-christmas-amazon {
+  font-family: var(--csa-font-body, 'Plus Jakarta Sans', system-ui, sans-serif);
+}
+
+[data-slide-id="sos-natale"] .csa-btn-christmas-amazon {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+[data-slide-id="sos-natale"] .csa-christmas-covers-row,
+.csa-christmas-covers-row:empty {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@media (min-width: 901px) {
+  [data-slide-id="sos-natale"] .csa-christmas-content {
+    padding: 24px 70px;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-text-col {
+    max-width: 440px;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-bg-img {
+    object-fit: cover;
+    object-position: right center;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-scrim {
+    background: linear-gradient(
+      90deg,
+      rgba(8, 14, 22, 0.92) 0%,
+      rgba(8, 14, 22, 0.80) 36%,
+      rgba(8, 14, 22, 0.20) 48%,
+      transparent 60%
+    );
+  }
+}
+
+/* Tablet (es. 768px): inquadratura che mantiene visibili gli stivali di Babbo Natale */
+@media (min-width: 641px) and (max-width: 900px) {
+  [data-slide-id="sos-natale"] .csa-christmas-content {
+    padding: 24px 50px 48px 50px;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-text-col {
+    max-width: 440px;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-bg-img {
+    object-fit: cover;
+    object-position: center 68% !important;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 14, 22, 0.82) 0%,
+      rgba(8, 14, 22, 0.55) 28%,
+      rgba(8, 14, 22, 0.08) 42%,
+      transparent 52%
+    );
+  }
+}
+
+/* Smartphone (es. 360px - 640px): titolo, descrizione e pulsante nella fascia blu superiore */
+@media (max-width: 640px) {
+  [data-slide-id="sos-natale"] .csa-christmas-content {
+    padding: 16px 16px 42px 16px;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-title {
+    font-size: 1.35rem;
+    line-height: 1.15;
+    margin-bottom: 4px;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-body {
+    font-size: 0.82rem;
+    line-height: 1.32;
+    margin-bottom: 8px;
+    max-width: 320px;
+  }
+
+  [data-slide-id="sos-natale"] .csa-btn-christmas-amazon {
+    font-size: 0.84rem;
+    padding: 7px 20px;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-bg-img {
+    object-fit: cover;
+    object-position: center 18% !important;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 14, 22, 0.78) 0%,
+      rgba(8, 14, 22, 0.46) 26%,
+      rgba(8, 14, 22, 0.06) 38%,
+      transparent 48%
+    );
+  }
+}
+
+@media (max-width: 380px) {
+  [data-slide-id="sos-natale"] .csa-christmas-content {
+    padding: 14px 14px 40px 14px;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-title {
+    font-size: 1.25rem;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-body {
+    font-size: 0.79rem;
+    line-height: 1.30;
+    max-width: 290px;
+  }
+
+  [data-slide-id="sos-natale"] .csa-btn-christmas-amazon {
+    font-size: 0.82rem;
+    padding: 7px 18px;
+  }
+
+  [data-slide-id="sos-natale"] .csa-christmas-bg-img {
+    object-position: center 16% !important;
+  }
+}
