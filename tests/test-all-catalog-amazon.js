@@ -37,7 +37,8 @@ const expectedAsins = {
   'csa-06-nina-conigli': { it: 'B0H717X9ZL', en: 'B0H723KGZ5' },
   'csa-07-rino-ladri': { it: 'B0H75DDGLQ', en: 'B0H75N8JT9' },
   'csa-08-leo-cinciallegra': { it: 'B0H7JK9R46', en: 'B0H7LPQ8KX' },
-  'csa-09-leo-rudy-savana': { it: 'B0HJRRRDMX' }
+  'csa-09-leo-rudy-savana': { it: 'B0HJRRRDMX' },
+  'csa-10-leo-bruno-natale': { it: 'B0HQ72DLC7' }
 };
 
 let verifiedButtonsCount = 0;
@@ -100,7 +101,7 @@ languages.forEach(lang => {
 
   // Check catalog items rendered
   const articles = catalogInner.match(/<article\b[^>]*>/g) || [];
-  assert(articles.length === 13, `[${lang.toUpperCase()}] Catalogo mostra esattamente 13 libri pubblicati (trovati: ${articles.length})`);
+  assert(articles.length === 14, `[${lang.toUpperCase()}] Catalogo mostra esattamente 14 libri pubblicati (trovati: ${articles.length})`);
 
   // Verify all 13 books have Amazon URL and correct Paperback ASIN
   booksData.books.forEach(b => {

@@ -58,6 +58,12 @@ assert(getEffectiveBookLang('pl') === 'en', "PL maps to 'en'");
 assert(getEffectiveBookLang('se') === 'en', "SE maps to 'en'");
 assert(getEffectiveBookLang('jp') === 'en', "JP maps to 'en'");
 
+console.log('\n--- 2. Verifica Missione Savana e SOS Natale (csa-09 & csa-10) ---');
+const csa10 = booksData.books.find(b => b.id === 'csa-10-leo-bruno-natale');
+assert(Boolean(csa10), "Libro csa-10 trovato in catalogo");
+assert(isBookAvailableInLang(csa10, 'it') === true, "SOS Natale DISPONIBILE in IT");
+assert(isBookAvailableInLang(csa10, 'en') === false, "SOS Natale NON disponibile in EN");
+assert(isBookAvailableInLang(csa10, 'fr') === false, "SOS Natale NON disponibile in FR");
 console.log('\n--- 2. Verifica Missione Savana (csa-09-leo-rudy-savana) ---');
 const savana = booksData.books.find(b => b.id === 'csa-09-leo-rudy-savana');
 assert(Boolean(savana), "Libro csa-09 trovato in catalogo");
