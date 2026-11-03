@@ -1,6 +1,6 @@
 'use strict';
 /* Museo delle Scoperte Impossibili — standalone, offline-capable, no analytics. */
-const A = name => `assets/${name}.webp`;
+const A = name => `assets/${name}.webp?v=20261103`;
 const ROOMS = [
   {
     "id": 1,
@@ -32,7 +32,9 @@ const ROOMS = [
         "code": "SC-05",
         "title": "Research on humpback whale bubble nets",
         "url": "https://doi.org/10.1098/rsos.240328"
-      }
+      },
+      "figureAlt": "Orcas interacting with kelp in the Salish Sea",
+      "figureTitle": "The Whale That Hunts with Bubbles"
     },
     "questionHint": "Look closely at the kelp, but pay special attention to what the animals do with it."
   },
@@ -66,7 +68,11 @@ const ROOMS = [
         "code": "SC-13",
         "title": "Genomic study of Tmesipteris (iScience)",
         "url": "https://doi.org/10.1016/j.isci.2024.109889"
-      }
+      },
+      "figureTitle": "The Fern with the Giant DNA",
+      "figureAlt": "Schematic visual comparison between the human genome and the DNA of Tmesipteris oblanceolata",
+      "figureCaptionHtml": "<div class=\"figure-box\"><h4 class=\"figure-box-title\">Genome Comparison (1C values)</h4><div class=\"data-compare\"><div class=\"data-row\"><span class=\"data-label\">Human being:</span><strong class=\"data-val\">approx. 3.10 billion base pairs</strong></div><div class=\"data-row\"><span class=\"data-label\"><em>Tmesipteris oblanceolata</em>:</span><strong class=\"data-val\">approx. 160.45 billion base pairs</strong></div></div><p class=\"data-note\">This comparison refers to the haploid genome (1C value). Having over 50 times more DNA does not imply greater intelligence, biological complexity, or evolutionary superiority: genome size does not measure an organism’s complexity.</p><p class=\"data-disclaimer\"><em>Methodological note:</em> this illustration is purely schematic and educational; visual proportions are not to actual molecular scale.</p></div>",
+      "artNotice": "Schematic illustration for educational purposes, not a scientific photograph. For official data, see study SC-13."
     },
     "questionHint": "In any fair comparison, always change just one factor at a time."
   },
@@ -100,6 +106,15 @@ const ROOMS = [
         "code": "SC-16",
         "title": "Research on ball rolling in bumblebees",
         "url": "https://doi.org/10.1016/j.anbehav.2022.08.013"
+      },
+      "figureTitle": "The Fish and the Vehicle",
+      "figureAlt": "Diagram of the robotic technology chain of the fish-operated vehicle",
+      "figureCaptionHtml": "<div class=\"figure-box\"><h4 class=\"figure-box-title\">How the vehicle works (command chain)</h4><ol class=\"step-list\"><li><strong>1. The fish swims:</strong> the goldfish moves freely inside the transparent water tank.</li><li><strong>2. A camera detects position:</strong> an overhead camera tracks the fish’s position and orientation in real time.</li><li><strong>3. A computer converts data into commands:</strong> an onboard computer translates movement vectors into steering instructions.</li><li><strong>4. The motorized system drives the wheels:</strong> electric motors turn the wheels, propelling the vehicle in the intended direction.</li></ol><p class=\"data-note\"><strong>Scientific clarification:</strong> the fish does not directly steer the wheels with a steering wheel; its movement is mediated and translated by the robotic interface engineered by researchers.</p></div>",
+      "artNotice": "Illustrative diagram of the robotic system. For the original paper and video, see study SC-15.",
+      "figureSource": {
+        "code": "SC-15",
+        "title": "Fish-operated vehicle: behavioural study",
+        "url": "https://doi.org/10.1016/j.bbr.2021.113711"
       }
     },
     "questionHint": "Which step turns an observed movement into wheel motion?"
@@ -134,7 +149,9 @@ const ROOMS = [
         "code": "SC-39",
         "title": "Natural History Museum — Could scientists bring dinosaurs back?",
         "url": "https://www.nhm.ac.uk/discover/could-scientists-bring-dinosaurs-back.html"
-      }
+      },
+      "figureAlt": "Evolutionary link between theropod dinosaurs and modern birds",
+      "figureTitle": "Why a Fossil Isn’t Enough to Clone a Dinosaur"
     },
     "questionHint": "In an evolutionary tree, what matters is the fork where branches split."
   },
@@ -168,7 +185,11 @@ const ROOMS = [
         "code": "SC-25",
         "title": "Research on mycelium-controlled biohybrid robots",
         "url": "https://doi.org/10.1126/scirobotics.adk8019"
-      }
+      },
+      "figureTitle": "Mycelium and the Robot",
+      "figureAlt": "Diagram of the biohybrid robot powered by fungal mycelium electrical signals",
+      "figureCaptionHtml": "<div class=\"figure-box\"><h4 class=\"figure-box-title\">From mycelium to movement (biohybrid chain)</h4><ol class=\"step-list\"><li><strong>1. Mycelium exhibits electrical activity:</strong> the fungal underground network generates measurable bioelectrical spikes.</li><li><strong>2. Electrodes detect signals:</strong> tiny sensors record changes in biological voltage.</li><li><strong>3. An electronic circuit interprets them:</strong> dedicated hardware converts biological pulses into digital control signals.</li><li><strong>4. The system drives the robot:</strong> actuators respond by moving the robot’s legs or wheels.</li></ol><p class=\"data-note\"><strong>Scientific clarification:</strong> this does not mean the fungus possesses conscious intentions or drives autonomously like a human; the robot moves in response to biological signals processed by an artificial circuit.</p></div>",
+      "artNotice": "Graphic interpretation of the biohybrid prototype. For the original study, see SC-25."
     },
     "questionHint": "The strongest squeeze doesn’t always win."
   },
@@ -202,7 +223,9 @@ const ROOMS = [
         "code": "SC-53",
         "title": "Research on neuroprosthetic communication",
         "url": "https://doi.org/10.1038/s41593-025-01905-6"
-      }
+      },
+      "figureAlt": "Technological vocal assistance and signal transmission interface",
+      "figureTitle": "When Technology Restores Voice"
     },
     "questionHint": "A motor command isn’t magic: it’s a connected chain of electrical signals."
   },
@@ -236,6 +259,15 @@ const ROOMS = [
         "code": "SC-36",
         "title": "NASA — 3I/ATLAS: facts and FAQs",
         "url": "https://science.nasa.gov/solar-system/comets/3i-atlas/3i-atlas-facts-and-faqs/"
+      },
+      "figureTitle": "The Reconstruction of M87*",
+      "figureAlt": "Artistic diagram of the Event Horizon Telescope network and the reconstruction of M87*",
+      "figureCaptionHtml": "<div class=\"figure-box\"><h4 class=\"figure-box-title\">From Earth to M87*: Imaging the Invisible</h4><ol class=\"step-list\"><li><strong>1. Multiple radio telescopes collect observations:</strong> synchronized instruments worldwide observe the same celestial region simultaneously.</li><li><strong>2. Data is synchronized and combined:</strong> atomic clocks and supercomputers align recordings through interferometry (VLBI).</li><li><strong>3. Computational processing reconstructs the image:</strong> algorithms process the measurements to reconstruct the image of the region around black hole M87*.</li></ol><p class=\"data-note\"><strong>Methodological note:</strong> the illustration provided is an artistic educational diagram to explain the method, NOT the official scientific photograph from the Event Horizon Telescope (EHT).</p></div>",
+      "artNotice": "Artistic educational diagram: this is not the official EHT photograph. The genuine scientific image is available via source SC-48.",
+      "figureSource": {
+        "code": "SC-48",
+        "title": "ESO / EHT Collaboration — first image of black hole M87*",
+        "url": "https://www.eso.org/public/images/eso1907a/"
       }
     },
     "questionHint": "The result comes from synchronizing many instruments, not from a single snapshot."
@@ -264,7 +296,7 @@ function renderAtrium(){
 }
 function renderRoom(r){
 return `<section class="room-banner"><img class="room-backdrop" src="${A(r.art)}" alt="" role="presentation"><div class="room-banner-inner"><div class="crumb"><a href="#atrio">← Museum Lobby</a><span>/</span><span>Gallery ${r.id} of 7</span></div><div style="margin-top:27px"><span class="room-stamp">${r.icon} ${esc(r.kicker)}</span></div><h1 class="room-name">${esc(r.title)}</h1><p class="room-intro">${esc(r.intro)}</p></div></section>
-<section class="wrap hall-grid"><article class="exhibit"><span class="label-muted">MAIN EXHIBIT</span><h2>${esc(r.mainTitle)}</h2><div class="exhibit-question"><span>THE QUESTION</span><strong>${esc(r.question)}</strong></div><p>${esc(r.main)}</p><div class="challenge-zone" id="challengePanel">${renderChallenge(r)}</div><div class="source-row"><b>Scientific publication</b>${sourceHtml(r.source)}</div><div class="art-notice">Museum illustrations are artistic interpretations; links direct you to authentic scientific publications.</div></article><aside class="side-exhibit">${img(r.sideArt,r.side.title)}<div class="side-body"><div class="label-muted">${esc(r.side.label)}</div><h3>${esc(r.side.title)}</h3><p>${esc(r.side.desc)}</p>${sourceHtml(r.side.source)}<div style="margin-top:18px"><button class="quiet-button" data-act="zoom" data-val="${r.id}">Examine plate ↗</button></div><div class="mini-detail"><span>✦</span><div>Two exhibits in each gallery: the main breakthrough and a second mystery.</div></div><div class="otto-box">${img(r.otto,'Otto the explorer octopus')}<p><strong>Otto suggests:</strong> ${esc(r.questionHint)}</p></div></div></aside></section>
+<section class="wrap hall-grid"><article class="exhibit"><span class="label-muted">MAIN EXHIBIT</span><h2>${esc(r.mainTitle)}</h2><div class="exhibit-question"><span>THE QUESTION</span><strong>${esc(r.question)}</strong></div><p>${esc(r.main)}</p><div class="challenge-zone" id="challengePanel">${renderChallenge(r)}</div><div class="source-row"><b>Scientific publication</b>${sourceHtml(r.source)}</div><div class="art-notice">Museum illustrations are artistic interpretations; links direct you to authentic scientific publications.</div></article><aside class="side-exhibit"><div class="side-figure-wrap">${img(r.sideArt, r.side.figureAlt || r.side.figureTitle || r.side.title)}${r.side.figureCaptionHtml ? `<div class="figure-explanation">${r.side.figureCaptionHtml}</div>` : ""}</div><div class="side-body"><div class="label-muted">${esc(r.side.label)}</div><h3>${esc(r.side.title)}</h3><p>${esc(r.side.desc)}</p>${sourceHtml(r.side.source)}<div style="margin-top:18px"><button class="quiet-button" data-act="zoom" data-val="${r.id}">Examine plate ↗</button></div><div class="mini-detail"><span>✦</span><div>Two exhibits in each gallery: the main breakthrough and a second mystery.</div></div><div class="otto-box">${img(r.otto,'Otto the explorer octopus')}<p><strong>Otto suggests:</strong> ${esc(r.questionHint)}</p></div></div></aside></section>
 <div class="wrap"><div class="hall-note">This companion complements the book <em>Einstein, You Missed This One!</em> and does not replace reading the original studies. Unproven functions are clearly treated as hypotheses.</div><nav class="next-controls" aria-label="Move between galleries"><a class="quiet-button" href="#${r.id>1?'sala-'+(r.id-1):'atrio'}">${r.id>1?'← Previous gallery':'← Back to lobby'}</a><button class="quiet-button" data-act="passport">Passport: ${completed.size}/7 seals</button><a class="primary-button" href="#${r.id<7?'sala-'+(r.id+1):'atrio'}">${r.id<7?'Next gallery →':'Back to galleries →'}</a></nav></div>`;
 }
 function progressDots(n,total){return `<div class="step-counter" aria-label="${n} ${total}"><span style="display:none">${n}/${total}</span>${Array.from({length:total},(_,i)=>`<i class="${i<n?'done':''}"></i>`).join('')}</div>`;}
@@ -300,7 +332,7 @@ function win(){if(!currentId)return;completed.add(currentId);persist();feedback=
 function showToast(message){const t=document.getElementById('toast');t.textContent=message;t.hidden=false;clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>{t.hidden=true},3300);}
 function choiceRight(ok,wrong,right){if(ok){feedback=right;feedbackKind='good';win();}else{feedback=wrong;feedbackKind='wrong';redrawChallenge();}}
 function passportMarkup(){return `<div class="modal-card" role="dialog" aria-modal="true" aria-label="Your Explorer Passport"><div class="modal-header"><h2>Your Explorer Passport</h2><button data-act="close" class="icon-button" aria-label="Close">×</button></div><p>Every solved gallery earns a seal. Your passport is saved locally on your device only.</p><div class="passport-list">${ROOMS.map(r=>`<span class="passport-seal ${completed.has(r.id)?'stamped':''}" title="Gallery ${r.id}: ${esc(r.seal)}">${completed.has(r.id)?r.icon:r.id}</span>`).join('')}</div><div class="progress-rail"><div style="width:${completed.size/7*100}%"></div></div><p><strong>${completed.size} / 7 galleries completed.</strong>${completed.size===7?' Congratulations! You completed all seven galleries.':''}</p>${completed.size===7?`<hr style="border:none;border-top:1px solid rgba(255,215,156,.2);margin:28px 0"><div class="eyebrow">FINAL REWARD</div><h3 style="font:700 28px Georgia,serif;margin:10px 0">The Explorer Diploma</h3><label for="childName">Explorer’s full name</label><input id="childName" class="name-input" placeholder="Type a name to print" maxlength="50" value="${esc(diplomaName)}"><div class="diploma-actions"><button class="primary-button" data-act="print">Print diploma</button></div><div id="diplomaPreview" class="diploma"><div>✧ ✦ ✧</div><h3>EXPLORER OF<br>IMPOSSIBLE DISCOVERIES</h3><p>This certifies that</p><div class="large" id="diplomaChild">${esc(diplomaName||'________________')}</div><p>has completed all seven galleries of the museum,<br>observed with curiosity, and followed scientific evidence.</p><p>Otto · The Museum of Impossible Discoveries</p></div>`:`<button class="quiet-button" data-act="close">Back to museum</button>`}<p class="hint" style="margin-top:18px">To start fresh from the beginning: <button data-act="reset-confirm" class="quiet-button" style="padding:7px 12px">Reset seals</button></p></div>`;}
-function openZoom(id){const r=ROOMS[id-1];if(!r)return;modal.innerHTML=`<div class="modal-card" role="dialog" aria-modal="true" aria-label="Enlargement: ${esc(r.side.title)}"><div class="modal-header"><h2>${esc(r.side.title)}</h2><button data-act="close" class="icon-button" aria-label="Close">×</button></div><div style="margin:17px 0"><img src="${A(r.sideArt)}" style="display:block;width:100%;max-height:57vh;object-fit:contain;border-radius:16px;background:#092032" alt="Illustrative artwork for: ${esc(r.side.title)}"></div><p>${esc(r.side.desc)}</p><p class="art-notice">Illustrative artwork, not a photo from the research paper. To view original evidence, open the source.</p>${sourceHtml(r.side.source)}</div>`;modal.hidden=false;document.body.style.overflow='hidden';modal.querySelector('.icon-button')?.focus();}
+function openZoom(id){const r=ROOMS[id-1];if(!r)return;const zoomTitle=r.side.figureTitle||r.side.title;const zoomAlt=r.side.figureAlt||zoomTitle;modal.innerHTML=`<div class="modal-card" role="dialog" aria-modal="true" aria-label="Enlargement: ${esc(zoomTitle)}"><div class="modal-header"><h2>${esc(zoomTitle)}</h2><button data-act="close" class="icon-button" aria-label="Close">×</button></div><div style="margin:17px 0"><img src="${A(r.sideArt)}" style="display:block;width:100%;max-height:57vh;object-fit:contain;border-radius:16px;background:#092032" alt="${esc(zoomAlt)}"></div>${r.side.figureCaptionHtml ? `<div class="figure-modal-caption">${r.side.figureCaptionHtml}</div>` : `<p>${esc(r.side.desc)}</p>`}<p class="art-notice">${esc(r.side.artNotice||"Figura illustrativa, non fotografia dello studio. Per vedere il materiale originale apri la fonte.")}</p>${sourceHtml(r.side.figureSource||r.side.source)}</div>`;modal.hidden=false;document.body.style.overflow="hidden";modal.querySelector(".icon-button")?.focus();}
 function openPassport(){modal.innerHTML=passportMarkup();modal.hidden=false;document.body.style.overflow='hidden';modal.querySelector('.icon-button')?.focus();}
 function closeModal(){modal.hidden=true;modal.innerHTML='';document.body.style.overflow='';document.getElementById('passportButton')?.focus();}
 function printDiploma(){const name=diplomaName.trim()||'____________________';let p=document.getElementById('printSheet');if(!p){p=document.createElement('div');p.id='printSheet';document.body.appendChild(p);}p.innerHTML=`<section class="print-certificate"><div>✦ ✦ ✦</div><p>THE MUSEUM OF IMPOSSIBLE DISCOVERIES</p><h1>EXPLORER DIPLOMA</h1><p>Awarded to</p><p class="named">${esc(name)}</p><p>for completing all seven galleries,<br>collecting all seals, and learning to distinguish<br>scientific observations from hypotheses.</p><p class="brand-print">✦ Otto, the Little Explorer ✦</p><p>From: EINSTEIN, YOU MISSED THIS ONE!</p></section>`;window.print();}

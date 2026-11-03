@@ -8,7 +8,7 @@
     "generate-manifest": "node scripts/generate-books-manifest.js",
     "compile-runtime": "node scripts/compile-runtime.js",
     "build": "node scripts/generate-banners.js && node scripts/sync-einstein-route.js && node scripts/generate-books-manifest.js && node scripts/compile-runtime.js",
-    "test": "node tests/test-qr-routes.js && node tests/test-endpoint.js && node scripts/test-access-flow.js && node scripts/verify-all-tests.js && node tests/test-translations.js && node tests/test-books-media.js && node tests/test-multilingual-catalog-rules.js && node tests/test-all-catalog-amazon.js",
+    "test": "node tests/test-qr-routes.js && node tests/test-endpoint.js && node scripts/test-access-flow.js && node scripts/verify-all-tests.js && node tests/test-translations.js && node tests/test-books-media.js && node tests/test-multilingual-catalog-rules.js && node tests/test-all-catalog-amazon.js && node tests/test-einstein-assets-qa.js && node tests/test-einstein-bonus-audit.js",
     "test:e2e": "node tests/test-browser-e2e.js"
   },
   "keywords": [

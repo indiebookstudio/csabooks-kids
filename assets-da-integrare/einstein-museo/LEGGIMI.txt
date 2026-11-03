@@ -1,0 +1,15 @@
+ASSET MUSEO EINSTEIN — VERSIONE SENZA TESTI
+
+4 nuove illustrazioni prive di titoli, spiegazioni, numeri ed etichette in lingua italiana.
+
+Asset e collocazioni da rimpiazzare nella directory del Museo in ciascuna lingua:
+- felce-dna.webp  (sala 2 — Tmesipteris / confronto visivo DNA umano)
+- pesce.webp      (sala 3 — veicolo guidato dal comportamento del pesce)
+- micelio.webp    (sala 5 — segnali del micelio ed elettronica del robot)
+- galassia.webp   (sala 7 — radiotelescopi, elaborazione dati e buco nero)
+
+I file webp sono ottimizzati per il sito. Includiamo anche i PNG master.
+Prima di sostituire, salvare gli originali. Verificare i riferimenti reali e le immagini nelle 4 versioni IT EN FR ES.
+Tutte le spiegazioni, i titoli, i numeri e le note sul carattere non in scala delle figure devono essere HTML esterno localizzato.
+Le illustrazioni sono interpretazioni artistiche, non raffigurazioni di dati scientifici misurati.
+Non cambiare gli URL permanenti del microsito né la logica dei giochi.

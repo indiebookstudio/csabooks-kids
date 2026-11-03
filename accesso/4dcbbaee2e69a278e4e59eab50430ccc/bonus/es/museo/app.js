@@ -1,6 +1,6 @@
 'use strict';
 /* Museo delle Scoperte Impossibili — standalone, offline-capable, no analytics. */
-const A = name => `assets/${name}.webp`;
+const A = name => `assets/${name}.webp?v=20261103`;
 const ROOMS = [
   {
     "id": 1,
@@ -32,7 +32,9 @@ const ROOMS = [
         "code": "SC-05",
         "title": "Investigación sobre las redes de burbujas de las ballenas",
         "url": "https://doi.org/10.1098/rsos.240328"
-      }
+      },
+      "figureAlt": "Orcas interactuando con un fragmento de alga en el mar de Salish",
+      "figureTitle": "La ballena que pesca con burbujas"
     },
     "questionHint": "Mira el alga, pero sobre todo observa qué hacen los animales con ella."
   },
@@ -66,7 +68,11 @@ const ROOMS = [
         "code": "SC-13",
         "title": "Estudio del genoma de Tmesipteris (iScience)",
         "url": "https://doi.org/10.1016/j.isci.2024.109889"
-      }
+      },
+      "figureTitle": "El helecho con el ADN gigantesco",
+      "figureAlt": "Comparación visual esquemática entre el genoma humano y el ADN de Tmesipteris oblanceolata",
+      "figureCaptionHtml": "<div class=\"figure-box\"><h4 class=\"figure-box-title\">Comparación del genoma (valores 1C)</h4><div class=\"data-compare\"><div class=\"data-row\"><span class=\"data-label\">Ser humano:</span><strong class=\"data-val\">aprox. 3,10 mil millones de pares de bases</strong></div><div class=\"data-row\"><span class=\"data-label\"><em>Tmesipteris oblanceolata</em>:</span><strong class=\"data-val\">aprox. 160,45 mil millones de pares de bases</strong></div></div><p class=\"data-note\">La comparación se refiere al genoma haploide (valor 1C). Tener más de 50 veces más ADN no implica mayor inteligencia, complejidad biológica ni superioridad evolutiva: el tamaño del genoma no mide la complejidad de un organismo vivo.</p><p class=\"data-disclaimer\"><em>Nota metodológica:</em> la ilustración tiene una finalidad meramente esquemática y divulgativa; las proporciones visuales no están a escala molecular real.</p></div>",
+      "artNotice": "Ilustración esquemática con fines educativos, no fotografía científica. Para los datos oficiales, consulta el estudio SC-13."
     },
     "questionHint": "En una comparación científica, intenta cambiar un solo elemento cada vez."
   },
@@ -100,6 +106,15 @@ const ROOMS = [
         "code": "SC-16",
         "title": "Investigación sobre el juego en abejorros",
         "url": "https://doi.org/10.1016/j.anbehav.2022.08.013"
+      },
+      "figureTitle": "El pez y el vehículo",
+      "figureAlt": "Esquema de la cadena tecnológica del vehículo accionado por el pez dorado",
+      "figureCaptionHtml": "<div class=\"figure-box\"><h4 class=\"figure-box-title\">Cómo funciona el vehículo (cadena de control)</h4><ol class=\"step-list\"><li><strong>1. El pez nada:</strong> el pez dorado se desplaza libremente dentro del tanque de agua transparente.</li><li><strong>2. Una cámara detecta la posición:</strong> una cámara cenital graba el tanque y rastrea continuamente la posición y orientación del pez.</li><li><strong>3. Una computadora convierte los datos en órdenes:</strong> un ordenador de a bordo traduce el movimiento en órdenes de dirección y velocidad.</li><li><strong>4. El sistema motorizado mueve las ruedas:</strong> los motores accionan las ruedas haciendo avanzar el vehículo en la dirección señalada.</li></ol><p class=\"data-note\"><strong>Aclaración científica:</strong> el pez no maneja un volante ni conduce de forma deliberada; el desplazamiento depende del sistema tecnológico diseñado por los investigadores para transformar el nado en traslación terrestre.</p></div>",
+      "artNotice": "Esquema ilustrativo del sistema robótico. Para el vídeo y el artículo original, consulta el estudio SC-15.",
+      "figureSource": {
+        "code": "SC-15",
+        "title": "Fish-operated vehicle: estudio del comportamiento",
+        "url": "https://doi.org/10.1016/j.bbr.2021.113711"
       }
     },
     "questionHint": "¿Qué paso convierte un movimiento observado en movimiento de las ruedas?"
@@ -134,7 +149,9 @@ const ROOMS = [
         "code": "SC-39",
         "title": "Natural History Museum — ¿Podrían los científicos revivir a los dinosaurios?",
         "url": "https://www.nhm.ac.uk/discover/could-scientists-bring-dinosaurs-back.html"
-      }
+      },
+      "figureAlt": "Vínculo evolutivo entre dinosaurios terópodos y aves modernas",
+      "figureTitle": "¿Por qué un fósil no basta para clonar un dinosaurio?"
     },
     "questionHint": "En un árbol evolutivo cuenta el punto donde se bifurcan las ramas."
   },
@@ -168,7 +185,11 @@ const ROOMS = [
         "code": "SC-25",
         "title": "Investigación sobre robots controlados por micelio",
         "url": "https://doi.org/10.1126/scirobotics.adk8019"
-      }
+      },
+      "figureTitle": "El micelio y el robot",
+      "figureAlt": "Esquema del robot biohíbrido accionado por las señales eléctricas del micelio fúngico",
+      "figureCaptionHtml": "<div class=\"figure-box\"><h4 class=\"figure-box-title\">Del micelio al movimiento (cadena biohíbrida)</h4><ol class=\"step-list\"><li><strong>1. El micelio presenta actividad eléctrica:</strong> la red subterránea del hongo genera impulsos bioeléctricos medibles.</li><li><strong>2. Los electrodos captan las señales:</strong> diminutos sensores registran las variaciones de potencial biológico.</li><li><strong>3. Un circuito electrónico las interpreta:</strong> una placa especializada traduce los impulsos biológicos en órdenes digitales.</li><li><strong>4. El sistema controla el robot:</strong> los actuadores mecánicos mueven las patas o ruedas del robot biohíbrido.</li></ol><p class=\"data-note\"><strong>Aclaración científica:</strong> esto no significa que el hongo posea intenciones conscientes ni conduzca de manera autónoma como un ser humano; el robot reacciona ante señales biológicas procesadas por un circuito artificial.</p></div>",
+      "artNotice": "Interpretación gráfica del sistema biohíbrido. Para el artículo científico original, consulta SC-25."
     },
     "questionHint": "Apretar con más fuerza no siempre es la mejor solución."
   },
@@ -202,7 +223,9 @@ const ROOMS = [
         "code": "SC-53",
         "title": "Investigación sobre neuroprótesis para la comunicación",
         "url": "https://doi.org/10.1038/s41593-025-01905-6"
-      }
+      },
+      "figureAlt": "Interfaz tecnológica de asistencia vocal y transmisión de señales",
+      "figureTitle": "Cuando la tecnología ayuda a la voz"
     },
     "questionHint": "Una orden motora no es magia: es una cadena conectada de impulsos."
   },
@@ -236,6 +259,15 @@ const ROOMS = [
         "code": "SC-36",
         "title": "NASA — 3I/ATLAS: preguntas y respuestas",
         "url": "https://science.nasa.gov/solar-system/comets/3i-atlas/3i-atlas-facts-and-faqs/"
+      },
+      "figureTitle": "La reconstrucción de M87*",
+      "figureAlt": "Esquema artístico de la red Event Horizon Telescope y de la reconstrucción de la imagen de M87*",
+      "figureCaptionHtml": "<div class=\"figure-box\"><h4 class=\"figure-box-title\">De la Tierra a M87*: capturar lo invisible</h4><ol class=\"step-list\"><li><strong>1. Varios radiotelescopios recogen observaciones:</strong> instrumentos sincronizados en distintos puntos de la Tierra observan simultáneamente la misma región cósmica.</li><li><strong>2. Los datos se sincronizan y combinan:</strong> relojes atómicos y supercomputadoras alinean las grabaciones mediante interferometría (VLBI).</li><li><strong>3. El procesamiento reconstruye la imagen:</strong> potentes algoritmos procesan las medidas permitiendo reconstruir la imagen de la región del agujero negro M87*.</li></ol><p class=\"data-note\"><strong>Nota metodológica:</strong> la imagen mostrada es un esquema artístico y educativo para comprender el método, NO la fotografía científica original del Event Horizon Telescope (EHT).</p></div>",
+      "artNotice": "Esquema artístico educativo: no es la fotografía oficial de la EHT. La imagen científica original puede consultarse en la fuente SC-48.",
+      "figureSource": {
+        "code": "SC-48",
+        "title": "ESO / EHT Collaboration — primera imagen del agujero negro M87*",
+        "url": "https://www.eso.org/public/images/eso1907a/"
       }
     },
     "questionHint": "El resultado nace de sincronizar muchos telescopios, no de una sola foto."
@@ -264,7 +296,7 @@ function renderAtrium(){
 }
 function renderRoom(r){
 return `<section class="room-banner"><img class="room-backdrop" src="${A(r.art)}" alt="" role="presentation"><div class="room-banner-inner"><div class="crumb"><a href="#atrio">← Vestíbulo del museo</a><span>/</span><span>Sala ${r.id} de 7</span></div><div style="margin-top:27px"><span class="room-stamp">${r.icon} ${esc(r.kicker)}</span></div><h1 class="room-name">${esc(r.title)}</h1><p class="room-intro">${esc(r.intro)}</p></div></section>
-<section class="wrap hall-grid"><article class="exhibit"><span class="label-muted">PIEZA PRINCIPAL</span><h2>${esc(r.mainTitle)}</h2><div class="exhibit-question"><span>LA PREGUNTA</span><strong>${esc(r.question)}</strong></div><p>${esc(r.main)}</p><div class="challenge-zone" id="challengePanel">${renderChallenge(r)}</div><div class="source-row"><b>Documento científico</b>${sourceHtml(r.source)}</div><div class="art-notice">Las ilustraciones del museo son interpretaciones artísticas; los enlaces conducen a las fuentes originales.</div></article><aside class="side-exhibit">${img(r.sideArt,r.side.title)}<div class="side-body"><div class="label-muted">${esc(r.side.label)}</div><h3>${esc(r.side.title)}</h3><p>${esc(r.side.desc)}</p>${sourceHtml(r.side.source)}<div style="margin-top:18px"><button class="quiet-button" data-act="zoom" data-val="${r.id}">Examinar la lámina ↗</button></div><div class="mini-detail"><span>✦</span><div>Dos piezas para explorar en cada sala: el hallazgo principal y un segundo misterio.</div></div><div class="otto-box">${img(r.otto,'Otto el pequeño pulpo explorador')}<p><strong>Otto sugiere:</strong> ${esc(r.questionHint)}</p></div></div></aside></section>
+<section class="wrap hall-grid"><article class="exhibit"><span class="label-muted">PIEZA PRINCIPAL</span><h2>${esc(r.mainTitle)}</h2><div class="exhibit-question"><span>LA PREGUNTA</span><strong>${esc(r.question)}</strong></div><p>${esc(r.main)}</p><div class="challenge-zone" id="challengePanel">${renderChallenge(r)}</div><div class="source-row"><b>Documento científico</b>${sourceHtml(r.source)}</div><div class="art-notice">Las ilustraciones del museo son interpretaciones artísticas; los enlaces conducen a las fuentes originales.</div></article><aside class="side-exhibit"><div class="side-figure-wrap">${img(r.sideArt, r.side.figureAlt || r.side.figureTitle || r.side.title)}${r.side.figureCaptionHtml ? `<div class="figure-explanation">${r.side.figureCaptionHtml}</div>` : ""}</div><div class="side-body"><div class="label-muted">${esc(r.side.label)}</div><h3>${esc(r.side.title)}</h3><p>${esc(r.side.desc)}</p>${sourceHtml(r.side.source)}<div style="margin-top:18px"><button class="quiet-button" data-act="zoom" data-val="${r.id}">Examinar la lámina ↗</button></div><div class="mini-detail"><span>✦</span><div>Dos piezas para explorar en cada sala: el hallazgo principal y un segundo misterio.</div></div><div class="otto-box">${img(r.otto,'Otto el pequeño pulpo explorador')}<p><strong>Otto sugiere:</strong> ${esc(r.questionHint)}</p></div></div></aside></section>
 <div class="wrap"><div class="hall-note">Esta experiencia complementa el libro <em>¡Einstein, esta te la perdiste!</em> y no sustituye la lectura de los estudios originales. Las hipótesis se distinguen claramente de los hechos observados.</div><nav class="next-controls" aria-label="Navegar entre las salas"><a class="quiet-button" href="#${r.id>1?'sala-'+(r.id-1):'atrio'}">${r.id>1?'← Sala anterior':'← Volver al vestíbulo'}</a><button class="quiet-button" data-act="passport">Pasaporte: ${completed.size}/7 sellos</button><a class="primary-button" href="#${r.id<7?'sala-'+(r.id+1):'atrio'}">${r.id<7?'Sala siguiente →':'Volver a las salas →'}</a></nav></div>`;
 }
 function progressDots(n,total){return `<div class="step-counter" aria-label="${n} ${total}"><span style="display:none">${n}/${total}</span>${Array.from({length:total},(_,i)=>`<i class="${i<n?'done':''}"></i>`).join('')}</div>`;}
@@ -300,7 +332,7 @@ function win(){if(!currentId)return;completed.add(currentId);persist();feedback=
 function showToast(message){const t=document.getElementById('toast');t.textContent=message;t.hidden=false;clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>{t.hidden=true},3300);}
 function choiceRight(ok,wrong,right){if(ok){feedback=right;feedbackKind='good';win();}else{feedback=wrong;feedbackKind='wrong';redrawChallenge();}}
 function passportMarkup(){return `<div class="modal-card" role="dialog" aria-modal="true" aria-label="Tu pasaporte de explorador"><div class="modal-header"><h2>Tu pasaporte de explorador</h2><button data-act="close" class="icon-button" aria-label="Cerrar">×</button></div><p>Cada sala resuelta añade un sello. Tu pasaporte se guarda únicamente en tu dispositivo.</p><div class="passport-list">${ROOMS.map(r=>`<span class="passport-seal ${completed.has(r.id)?'stamped':''}" title="Sala ${r.id}: ${esc(r.seal)}">${completed.has(r.id)?r.icon:r.id}</span>`).join('')}</div><div class="progress-rail"><div style="width:${completed.size/7*100}%"></div></div><p><strong>${completed.size} / 7 salas completadas.</strong>${completed.size===7?' ¡Enhorabuena! Has completado las siete salas.':''}</p>${completed.size===7?`<hr style="border:none;border-top:1px solid rgba(255,215,156,.2);margin:28px 0"><div class="eyebrow">PREMIO FINAL</div><h3 style="font:700 28px Georgia,serif;margin:10px 0">El diploma de explorador</h3><label for="childName">Nombre del explorador o exploradora</label><input id="childName" class="name-input" placeholder="Escribe un nombre para imprimir" maxlength="50" value="${esc(diplomaName)}"><div class="diploma-actions"><button class="primary-button" data-act="print">Imprimir diploma</button></div><div id="diplomaPreview" class="diploma"><div>✧ ✦ ✧</div><h3>EXPLORADOR DE LOS<br>DESCUBRIMIENTOS IMPOSIBLES</h3><p>Se certifica que</p><div class="large" id="diplomaChild">${esc(diplomaName||'________________')}</div><p>ha completado las siete salas del museo,<br>ha observado con curiosidad y ha seguido las evidencias.</p><p>Otto · El Museo de los Descubrimientos Imposibles</p></div>`:`<button class="quiet-button" data-act="close">Volver al museo</button>`}<p class="hint" style="margin-top:18px">Para empezar de nuevo desde el principio: <button data-act="reset-confirm" class="quiet-button" style="padding:7px 12px">Reiniciar los sellos</button></p></div>`;}
-function openZoom(id){const r=ROOMS[id-1];if(!r)return;modal.innerHTML=`<div class="modal-card" role="dialog" aria-modal="true" aria-label="Ampliación: ${esc(r.side.title)}"><div class="modal-header"><h2>${esc(r.side.title)}</h2><button data-act="close" class="icon-button" aria-label="Close">×</button></div><div style="margin:17px 0"><img src="${A(r.sideArt)}" style="display:block;width:100%;max-height:57vh;object-fit:contain;border-radius:16px;background:#092032" alt="Ilustración artística para: ${esc(r.side.title)}"></div><p>${esc(r.side.desc)}</p><p class="art-notice">Ilustración artística, no una fotografía del estudio. Para ver los datos originales, abre la fuente.</p>${sourceHtml(r.side.source)}</div>`;modal.hidden=false;document.body.style.overflow='hidden';modal.querySelector('.icon-button')?.focus();}
+function openZoom(id){const r=ROOMS[id-1];if(!r)return;const zoomTitle=r.side.figureTitle||r.side.title;const zoomAlt=r.side.figureAlt||zoomTitle;modal.innerHTML=`<div class="modal-card" role="dialog" aria-modal="true" aria-label="Ampliación: ${esc(zoomTitle)}"><div class="modal-header"><h2>${esc(zoomTitle)}</h2><button data-act="close" class="icon-button" aria-label="Cerrar">×</button></div><div style="margin:17px 0"><img src="${A(r.sideArt)}" style="display:block;width:100%;max-height:57vh;object-fit:contain;border-radius:16px;background:#092032" alt="${esc(zoomAlt)}"></div>${r.side.figureCaptionHtml ? `<div class="figure-modal-caption">${r.side.figureCaptionHtml}</div>` : `<p>${esc(r.side.desc)}</p>`}<p class="art-notice">${esc(r.side.artNotice||"Figura illustrativa, non fotografia dello studio. Per vedere il materiale originale apri la fonte.")}</p>${sourceHtml(r.side.figureSource||r.side.source)}</div>`;modal.hidden=false;document.body.style.overflow="hidden";modal.querySelector(".icon-button")?.focus();}
 function openPassport(){modal.innerHTML=passportMarkup();modal.hidden=false;document.body.style.overflow='hidden';modal.querySelector('.icon-button')?.focus();}
 function closeModal(){modal.hidden=true;modal.innerHTML='';document.body.style.overflow='';document.getElementById('passportButton')?.focus();}
 function printDiploma(){const name=diplomaName.trim()||'____________________';let p=document.getElementById('printSheet');if(!p){p=document.createElement('div');p.id='printSheet';document.body.appendChild(p);}p.innerHTML=`<section class="print-certificate"><div>✦ ✦ ✦</div><p>EL MUSEO DE LOS DESCUBRIMIENTOS IMPOSIBLES</p><h1>DIPLOMA DE EXPLORADOR</h1><p>Otorgado a</p><p class="named">${esc(name)}</p><p>por haber completado las siete salas,<br>reunido los sellos y aprendido a distinguir<br>las observaciones de las hipótesis.</p><p class="brand-print">✦ Otto, el pequeño pulpo explorador ✦</p><p>De: ¡EINSTEIN, ESTA TE LA PERDISTE!</p></section>`;window.print();}
