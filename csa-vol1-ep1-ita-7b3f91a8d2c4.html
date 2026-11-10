@@ -184,7 +184,7 @@
   <!-- ======================================================================
        MAIN CONTENT: STORIA 1 - AUDIO & VIDEO
        ====================================================================== -->
-  <main id="episode-page-main" class="episode-main">
+  <main id="episode-page-main" class="episode-main" data-volume="1" data-episode="1">
     <div class="container">
       <div class="episode-hero-grid">
         
@@ -314,7 +314,7 @@
           <!-- Consiglio di lettura per Genitori e Bambini -->
           <div class="episode-note-card">
             <span class="episode-note-icon" aria-hidden="true">💡</span>
-            <div>
+            <div id="episode-note-text">
               Sfoglia il libro insieme al tuo bambino durante l'ascolto o la visione!
             </div>
           </div>
@@ -403,64 +403,70 @@
 
   <!-- Scripts Funzionali e Multilingua -->
   <script src="js/books.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/script.js?v=20261110-v1"></script>
 
   <!-- Script Interattivo Audio/Video Player -->
   <script>
     (function() {
-      const btnAudio = document.getElementById('btn-play-audio');
-      const btnVideo = document.getElementById('btn-play-video');
-      const audioBox = document.getElementById('audio-player-box');
-      const videoBox = document.getElementById('video-player-box');
-      const audioEl = document.getElementById('story-audio');
-      const videoEl = document.getElementById('story-video');
-      const statusText = document.getElementById('player-status-text');
+      var btnAudio = document.getElementById('btn-play-audio');
+      var btnVideo = document.getElementById('btn-play-video');
+      var audioBox = document.getElementById('audio-player-box');
+      var videoBox = document.getElementById('video-player-box');
+      var audioEl = document.getElementById('story-audio');
+      var videoEl = document.getElementById('story-video');
+      var statusText = document.getElementById('player-status-text');
 
       if (!btnAudio || !btnVideo || !audioEl || !videoEl) return;
 
+      function getStatus(key) {
+        if (typeof window.getEpisodeStatusText === 'function') {
+          return window.getEpisodeStatusText(key);
+        }
+        var isIt = (document.documentElement.lang === 'it');
+        var defaults = {
+          audio: 'Audio',
+          video: 'Video',
+          audioPlaying: isIt ? 'Riproduzione audio in corso...' : 'Playing audio...',
+          videoPlaying: isIt ? 'Riproduzione video in corso...' : 'Playing video...',
+          audioPaused: isIt ? 'Audio in pausa' : 'Audio paused',
+          videoPaused: isIt ? 'Video in pausa' : 'Video paused',
+          audioEnded: isIt ? 'Ascolto completato' : 'Playback completed',
+          videoEnded: isIt ? 'Visione completata' : 'Watch completed'
+        };
+        return defaults[key] || '';
+      }
+
       function activateAudio(shouldPlay) {
-        // Mette in pausa il video
         videoEl.pause();
-        
-        // Mostra il player audio, nasconde il video
         audioBox.style.display = 'flex';
         videoBox.style.display = 'none';
 
-        // Aggiorna stato bottoni
         btnAudio.classList.add('active');
         btnAudio.setAttribute('aria-pressed', 'true');
         btnVideo.classList.remove('active');
         btnVideo.setAttribute('aria-pressed', 'false');
 
-        statusText.textContent = shouldPlay ? 'Riproduzione audio in corso...' : 'Audio';
+        statusText.textContent = shouldPlay ? getStatus('audioPlaying') : getStatus('audio');
 
         if (shouldPlay) {
-          audioEl.play().catch(function() {
-            // Autoplay potrebbe richiedere interazione
-          });
+          audioEl.play().catch(function() {});
         }
       }
 
       function activateVideo(shouldPlay) {
-        // Mette in pausa l'audio
         audioEl.pause();
-
-        // Mostra il player video, nasconde l'audio
         audioBox.style.display = 'none';
         videoBox.style.display = 'flex';
 
-        // Aggiorna stato bottoni
         btnVideo.classList.add('active');
         btnVideo.setAttribute('aria-pressed', 'true');
         btnAudio.classList.remove('active');
         btnAudio.setAttribute('aria-pressed', 'false');
 
-        statusText.textContent = shouldPlay ? 'Riproduzione video in corso...' : 'Video';
+        statusText.textContent = shouldPlay ? getStatus('videoPlaying') : getStatus('video');
 
         if (shouldPlay) {
-          videoEl.play().catch(function() {
-            // Autoplay potrebbe richiedere interazione
-          });
+          videoEl.play().catch(function() {});
         }
       }
 
@@ -472,39 +478,38 @@
         activateVideo(true);
       });
 
-      // Gestione mutua esclusione automatica se l'utente usa direttamente i controlli nativi
       audioEl.addEventListener('play', function() {
         videoEl.pause();
         btnAudio.classList.add('active');
         btnVideo.classList.remove('active');
-        statusText.textContent = 'Riproduzione audio in corso...';
+        statusText.textContent = getStatus('audioPlaying');
       });
 
       videoEl.addEventListener('play', function() {
         audioEl.pause();
         btnVideo.classList.add('active');
         btnAudio.classList.remove('active');
-        statusText.textContent = 'Riproduzione video in corso...';
+        statusText.textContent = getStatus('videoPlaying');
       });
 
       audioEl.addEventListener('pause', function() {
         if (!audioEl.ended && videoEl.paused) {
-          statusText.textContent = 'Audio in pausa';
+          statusText.textContent = getStatus('audioPaused');
         }
       });
 
       videoEl.addEventListener('pause', function() {
         if (!videoEl.ended && audioEl.paused) {
-          statusText.textContent = 'Video in pausa';
+          statusText.textContent = getStatus('videoPaused');
         }
       });
 
       audioEl.addEventListener('ended', function() {
-        statusText.textContent = 'Ascolto completato';
+        statusText.textContent = getStatus('audioEnded');
       });
 
       videoEl.addEventListener('ended', function() {
-        statusText.textContent = 'Visione completata';
+        statusText.textContent = getStatus('videoEnded');
       });
     })();
   </script>

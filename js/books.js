@@ -158,6 +158,51 @@ function getSpotifySeriesUrl(lang) {
 // DATABASE LIBRI COLLANA (17 edizioni con anteprime complete sfogliabili)
 // ==========================================================================
 const BOOKS = [
+{
+  "id": "raccolta-vol1-en",
+  "volume": 1,
+  "collection": "bundle",
+  "format": "rectangular",
+  "isRectangular": true,
+  "isNew": true,
+  "title": "Construction Site Adventures — Collection Vol. 1",
+  "subtitle": "Special large format edition (8.5 x 11 in / 21.5 x 28 cm)",
+  "author": "Marco Salucci",
+  "language": "English",
+  "languageCode": "en",
+  "age": "Ages 2–5",
+  "badge": "Collection Vol. 1",
+  "cover": "assets/construction-site-adventures/Bundle.Volume.1/EN/Front.Cover.png",
+  "storiesIncluded": [
+    "Benny the Excavator and the Shape-Shifting Hill",
+    "Rudy the Bulldozer and the Vanishing Beach",
+    "Leo the Crane and the Mountain Gems",
+    "Bruno the Truck and the Duck Pond"
+  ],
+  "preview": [
+    "assets/construction-site-adventures/Bundle.Volume.1/EN/Front.Cover.png",
+    "assets/construction-site-adventures/Bundle.Volume.1/EN/2.png",
+    "assets/construction-site-adventures/Bundle.Volume.1/EN/3.png",
+    "assets/construction-site-adventures/Bundle.Volume.1/EN/4.png",
+    "assets/construction-site-adventures/Bundle.Volume.1/EN/6.png",
+    "assets/construction-site-adventures/Bundle.Volume.1/EN/7.png",
+    "assets/construction-site-adventures/Bundle.Volume.1/EN/8.png",
+    "assets/construction-site-adventures/Bundle.Volume.1/EN/9.png",
+    "assets/construction-site-adventures/Bundle.Volume.1/EN/10.png",
+    "assets/construction-site-adventures/Bundle.Volume.1/EN/11.png",
+    "assets/construction-site-adventures/Bundle.Volume.1/EN/12.png",
+    "assets/construction-site-adventures/Bundle.Volume.1/EN/Back.Cover.png"
+  ],
+  "asin": "B0HN4QMLV1",
+  "amazon": {
+    "com": "B0HN4QMLV1",
+    "uk": "B0HN4QMLV1",
+    "it": "B0HN4QMLV1",
+    "de": "B0HN4QMLV1",
+    "fr": "B0HN4QMLV1",
+    "es": "B0HN4QMLV1"
+  }
+},
   {
     "id": "raccolta-vol1-it",
     "volume": 1,

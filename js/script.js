@@ -2715,6 +2715,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStorytimeEvents();
   initStorytimeSlider();
   initBonusFormEvents();
+  initGeoCountryDetection();
 });
 
 function initStorytimeEvents() {
@@ -2812,6 +2813,7 @@ function initBonusFormEvents() {
       : (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
         ? ['/api/send-bonus', 'https://csabooks-kids.vercel.app/api/send-bonus']
         : [
+            '/api/send-bonus',
             'https://csabooks-kids.vercel.app/api/send-bonus',
             'https://csabooks-kids-saluccimarco-3318s-projects.vercel.app/api/send-bonus'
           ];
@@ -2913,7 +2915,25 @@ function detectInitialLanguage() {
     }
   } catch (e) {}
 
+  // Heuristic based on timezone and browser languages:
+  // If timezone is outside Europe/Rome and primary language is not Italian, default to foreign language or 'en'
+  const tz = (Intl && Intl.DateTimeFormat) ? (Intl.DateTimeFormat().resolvedOptions().timeZone || '') : '';
+  const isRomeTimezone = tz.startsWith('Europe/Rome');
+
   const browserLangs = navigator.languages || [navigator.language || ''];
+  const primaryLang = (browserLangs[0] || '').toLowerCase().trim();
+
+  if (!isRomeTimezone && !primaryLang.startsWith('it')) {
+    if (primaryLang.startsWith('de')) return 'de';
+    if (primaryLang.startsWith('fr')) return 'fr';
+    if (primaryLang.startsWith('es')) return 'es';
+    if (primaryLang.startsWith('nl')) return 'nl';
+    if (primaryLang.startsWith('pl')) return 'pl';
+    if (primaryLang.startsWith('sv') || primaryLang.startsWith('se')) return 'sv';
+    if (primaryLang.startsWith('ja') || primaryLang.startsWith('jp')) return 'ja';
+    return 'en';
+  }
+
   for (const raw of browserLangs) {
     if (typeof raw !== 'string') continue;
     const lower = raw.toLowerCase().trim();
@@ -2929,7 +2949,49 @@ function detectInitialLanguage() {
     if (lower.startsWith('en')) return 'en';
   }
 
-  return 'en';
+  return isRomeTimezone ? 'it' : 'en';
+}
+
+function initGeoCountryDetection() {
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('lang')) return;
+    if (localStorage.getItem('csabooks_lang')) return;
+
+    const cachedCountry = sessionStorage.getItem('csabooks_geo_country');
+    if (cachedCountry) {
+      applyGeoCountry(cachedCountry);
+      return;
+    }
+
+    fetch('/api/geo')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (!data || !data.country) return;
+        var country = data.country.toUpperCase();
+        try { sessionStorage.setItem('csabooks_geo_country', country); } catch (e) {}
+        applyGeoCountry(country);
+      })
+      .catch(function() {});
+  } catch(e) {}
+}
+
+function applyGeoCountry(country) {
+  if (localStorage.getItem('csabooks_lang')) return;
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has('lang')) return;
+
+  if (country === 'IT') {
+    if (currentLanguage !== 'it') {
+      window.setLanguage('it');
+    }
+  } else {
+    var map = { DE: 'de', AT: 'de', FR: 'fr', ES: 'es', NL: 'nl', PL: 'pl', SE: 'sv', JP: 'ja' };
+    var target = map[country] || 'en';
+    if (currentLanguage !== target) {
+      window.setLanguage(target);
+    }
+  }
 }
 
 function detectUserMarket() {
@@ -3044,6 +3106,7 @@ window.setBookLanguageFilter = function(filterCode) {
 
 function applyLanguage(lang) {
   const strings = I18N[lang] || I18N.it;
+  try { document.documentElement.lang = lang; } catch(e) {}
 
   // Aggiorna bottoni lingua interfaccia (sia barra desktop che dropdown mobile)
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -3484,8 +3547,19 @@ function applyLanguage(lang) {
     setText('bonus-feat3-desc', strings.bonusFeat3Desc);
 
     const bonusCoverImg = document.getElementById('bonus-cover-img');
-    if (bonusCoverImg && bonusCoverAltText) {
-      bonusCoverImg.alt = bonusCoverAltText;
+    if (bonusCoverImg) {
+      if (lang === 'it') {
+        bonusCoverImg.src = isVol2 
+          ? 'assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png'
+          : 'assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png';
+      } else {
+        bonusCoverImg.src = isVol2 
+          ? 'assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png'
+          : 'assets/construction-site-adventures/Bundle.Volume.1/EN/Front.Cover.png';
+      }
+      if (bonusCoverAltText) {
+        bonusCoverImg.alt = bonusCoverAltText;
+      }
     }
 
     if (bonusMetaTitleText) {
@@ -3495,6 +3569,28 @@ function applyLanguage(lang) {
     if (metaDesc && bonusMetaDescText) {
       metaDesc.setAttribute('content', bonusMetaDescText);
     }
+  }
+
+  // Pagina Episodio Singolo (Audio & Video)
+  const episodeMainEl = document.getElementById('episode-page-main');
+  if (episodeMainEl) {
+    updateEpisodePage(lang);
+  }
+
+  // Cantiere page: Raccolta Volume 1 card cover & languages badge
+  const cantiereVol1Img = document.getElementById('csa-cantiere-vol1-card-img');
+  if (cantiereVol1Img) {
+    if (lang === 'it') {
+      cantiereVol1Img.src = 'books/csa-vol1/it/cover.png';
+      cantiereVol1Img.alt = 'Raccolta Vol. 1 - Le Avventure del Cantiere';
+    } else {
+      cantiereVol1Img.src = 'books/csa-vol1/en/cover.png';
+      cantiereVol1Img.alt = 'Collection Vol. 1 - Construction Site Adventures';
+    }
+  }
+  const cantiereVol1Langs = document.getElementById('csa-cantiere-vol1-langs');
+  if (cantiereVol1Langs) {
+    cantiereVol1Langs.textContent = (lang === 'it') ? 'IT • EN' : 'EN • IT';
   }
 
   renderBookCatalog(lang);
@@ -4183,23 +4279,26 @@ function renderCollectionsCatalog(lang) {
   const footerLink = document.getElementById('footer-link-raccolte');
   const grid = document.getElementById('collections-catalog-grid');
 
-  const isItalian = (lang === 'it');
+  const targetLangCode = (lang === 'it') ? 'it' : 'en';
+  var bundleBooks = (typeof BOOKS !== 'undefined' && Array.isArray(BOOKS))
+    ? BOOKS.filter(b => b.collection === 'bundle' && b.languageCode === targetLangCode)
+    : [];
+  if (bundleBooks.length === 0 && Array.isArray(BOOKS)) {
+    bundleBooks = BOOKS.filter(b => b.collection === 'bundle' && b.languageCode === 'en');
+  }
 
+  const hasBundles = bundleBooks.length > 0;
   if (section) {
-    section.style.display = isItalian ? '' : 'none';
+    section.style.display = hasBundles ? '' : 'none';
   }
   if (navLink) {
-    navLink.style.display = isItalian ? '' : 'none';
+    navLink.style.display = hasBundles ? '' : 'none';
   }
   if (footerLink) {
-    footerLink.style.display = isItalian ? '' : 'none';
+    footerLink.style.display = hasBundles ? '' : 'none';
   }
 
-  if (!isItalian || !grid) return;
-
-  const bundleBooks = (typeof BOOKS !== 'undefined' && Array.isArray(BOOKS))
-    ? BOOKS.filter(b => b.collection === 'bundle' && b.languageCode === 'it')
-    : [];
+  if (!hasBundles || !grid) return;
 
   if (bundleBooks.length === 0) {
     grid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; padding: 2rem;">Nessuna raccolta disponibile al momento.</p>`;
@@ -4216,7 +4315,7 @@ function renderCollectionsCatalog(lang) {
     if (Array.isArray(book.storiesIncluded) && book.storiesIncluded.length > 0) {
       storiesHtml = `
         <div class="collection-stories-block">
-          <span class="collection-stories-header">4 storie complete nel volume:</span>
+          <span class="collection-stories-header">${(lang === 'it') ? '4 storie complete nel volume:' : '4 complete stories in this volume:'}</span>
           <ol class="collection-stories-list">
             ${book.storiesIncluded.map((st, idx) => `
               <li class="collection-story-item">
@@ -6086,4 +6185,139 @@ function initFanoCoverCarousel() {
       }
     }
   }, { passive: true });
+}
+
+
+function getActiveEpisodeNumber() {
+  const mainEl = document.getElementById('episode-page-main');
+  if (mainEl && mainEl.dataset.episode) {
+    return parseInt(mainEl.dataset.episode, 10) || 1;
+  }
+  const path = (typeof window !== 'undefined' && window.location && window.location.pathname) ? window.location.pathname.toLowerCase() : '';
+  if (path.includes('ep1')) return 1;
+  if (path.includes('ep2')) return 2;
+  if (path.includes('ep3')) return 3;
+  if (path.includes('ep4')) return 4;
+  return 1;
+}
+
+function updateEpisodePage(lang) {
+  const strings = I18N[lang] || I18N.it;
+  const epNum = getActiveEpisodeNumber();
+  const isIt = (lang === 'it');
+  const langFolder = isIt ? 'IT' : 'EN';
+  const padEp = String(epNum).padStart(2, '0');
+
+  const epInfo = (typeof EPISODES_DATA !== 'undefined' && EPISODES_DATA[epNum]) ? EPISODES_DATA[epNum] : null;
+  const langEp = epInfo ? (epInfo[lang] || epInfo.en || epInfo.it) : null;
+  const storyTitle = langEp ? langEp.title : (document.getElementById('episode-title')?.textContent || '');
+
+  // 1. Copertina Libro Raccolta
+  const bookCoverImg = document.getElementById('episode-book-cover-img');
+  if (bookCoverImg) {
+    bookCoverImg.src = 'assets/construction-site-adventures/Bundle.Volume.1/' + langFolder + '/Front.Cover.png';
+    bookCoverImg.alt = isIt 
+      ? 'Copertina del libro Raccolta Volume 1 - Le Avventure del Cantiere'
+      : 'Book cover of Collection Volume 1 - Construction Site Adventures';
+  }
+
+  // 2. Copertina Episodio / Storia
+  const storyCoverImg = document.getElementById('episode-story-cover-img');
+  if (storyCoverImg) {
+    storyCoverImg.src = 'assets/construction-site-adventures/Bundle.Volume.1/' + langFolder + '/Bonus/' + padEp + '.Cover.png';
+    storyCoverImg.alt = isIt 
+      ? ('Copertina della storia: ' + storyTitle)
+      : ('Cover of the story: ' + storyTitle);
+  }
+
+  // 3. Audio & Video Player Media Source
+  const audioEl = document.getElementById('story-audio');
+  if (audioEl) {
+    const targetAudioSrc = 'assets/construction-site-adventures/Bundle.Volume.1/' + langFolder + '/Bonus/' + padEp + '.Audio.wav';
+    const curAudioSrc = audioEl.getAttribute('src') || '';
+    if (!curAudioSrc.includes(targetAudioSrc)) {
+      const wasPlaying = !audioEl.paused && audioEl.currentTime > 0;
+      audioEl.src = targetAudioSrc;
+      if (wasPlaying) {
+        audioEl.play().catch(function() {});
+      }
+    }
+  }
+
+  const videoEl = document.getElementById('story-video');
+  if (videoEl) {
+    const targetVideoSrc = 'assets/construction-site-adventures/Bundle.Volume.1/' + langFolder + '/Bonus/' + padEp + '.Video.mp4';
+    const targetPosterSrc = 'assets/construction-site-adventures/Bundle.Volume.1/' + langFolder + '/Bonus/' + padEp + '.Cover.png';
+    videoEl.poster = targetPosterSrc;
+    const curVideoSrc = videoEl.getAttribute('src') || '';
+    if (!curVideoSrc.includes(targetVideoSrc)) {
+      const wasPlaying = !videoEl.paused && videoEl.currentTime > 0;
+      videoEl.src = targetVideoSrc;
+      if (wasPlaying) {
+        videoEl.play().catch(function() {});
+      }
+    }
+  }
+
+  // 4. Testi Testata e Contenuto
+  setText('episode-book-tag', strings.episodeBookTag || (isIt ? 'Libro Raccolta' : 'Story Collection'));
+  setText('episode-story-tag', (strings.episodeStoryTag || (isIt ? 'Storia' : 'Story')) + ' ' + epNum);
+  
+  const badgeTemplate = strings.episodeBadgeText || (isIt ? 'Raccolta Vol. 1 • Storia {n} di 4' : 'Collection Vol. 1 • Story {n} of 4');
+  setText('episode-badge-text', badgeTemplate.replace('{n}', epNum));
+
+  if (langEp && langEp.title) {
+    setText('episode-title', langEp.title);
+  }
+  setText('episode-lead', strings.episodeLead || (isIt ? 'Ascolta la storia narrata o guarda il video illustrato.' : 'Listen to the narrated story or watch the illustrated video.'));
+
+  // 5. Bottoni Scelta Media
+  const btnAudioTitle = document.querySelector('#btn-play-audio .btn-media-title');
+  if (btnAudioTitle) {
+    btnAudioTitle.textContent = strings.episodeBtnAudio || (isIt ? "Ascolta l'Audio" : 'Listen to Audio');
+  }
+  const btnVideoTitle = document.querySelector('#btn-play-video .btn-media-title');
+  if (btnVideoTitle) {
+    btnVideoTitle.textContent = strings.episodeBtnVideo || (isIt ? 'Guarda il Video' : 'Watch Video');
+  }
+
+  // 6. Consiglio di lettura / Box note
+  setText('episode-note-text', strings.episodeNoteText || (isIt ? 'Sfoglia il libro insieme al tuo bambino durante l\'ascolto o la visione!' : 'Flip through the book together with your child while listening or watching!'));
+
+  // 7. Status Badge
+  const statusEl = document.getElementById('player-status-text');
+  if (statusEl) {
+    const videoBox = document.getElementById('video-player-box');
+    const isVideoMode = videoBox && videoBox.style.display !== 'none';
+    if (isVideoMode) {
+      if (videoEl && !videoEl.paused && !videoEl.ended) {
+        statusEl.textContent = strings.episodeStatusVideoPlaying || 'Riproduzione video in corso...';
+      } else if (videoEl && videoEl.paused && videoEl.currentTime > 0) {
+        statusEl.textContent = strings.episodeStatusVideoPaused || 'Video in pausa';
+      } else if (videoEl && videoEl.ended) {
+        statusEl.textContent = strings.episodeStatusVideoEnded || 'Visione completata';
+      } else {
+        statusEl.textContent = strings.episodeStatusVideo || 'Video';
+      }
+    } else {
+      if (audioEl && !audioEl.paused && !audioEl.ended) {
+        statusEl.textContent = strings.episodeStatusAudioPlaying || 'Riproduzione audio in corso...';
+      } else if (audioEl && audioEl.paused && audioEl.currentTime > 0) {
+        statusEl.textContent = strings.episodeStatusAudioPaused || 'Audio in pausa';
+      } else if (audioEl && audioEl.ended) {
+        statusEl.textContent = strings.episodeStatusAudioEnded || 'Ascolto completato';
+      } else {
+        statusEl.textContent = strings.episodeStatusAudio || 'Audio';
+      }
+    }
+  }
+
+  // 8. Meta Tags & Document Title
+  if (langEp && langEp.title) {
+    document.title = langEp.title + ' | Audio & Video - CSA Books 4 Kids';
+  }
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && langEp && langEp.metaDesc) {
+    metaDesc.setAttribute('content', langEp.metaDesc);
+  }
 }

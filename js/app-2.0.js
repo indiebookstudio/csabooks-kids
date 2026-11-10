@@ -1072,8 +1072,16 @@
       heroCta.textContent = t('cantierePage.ctaRaccolte');
     }
     if (heroImg1 && heroImg2) {
-      heroImg1.src = 'books/csa-vol1/it/cover.png';
+      heroImg1.src = getBookCover('csa-vol1', currentLang);
       heroImg2.src = 'books/csa-vol2/it/cover.png';
+    }
+    const vol1CardImg = document.getElementById('csa-cantiere-vol1-card-img');
+    if (vol1CardImg) {
+      vol1CardImg.src = getBookCover('csa-vol1', currentLang);
+    }
+    const vol1Langs = document.getElementById('csa-cantiere-vol1-langs');
+    if (vol1Langs && b1) {
+      vol1Langs.innerHTML = renderCardLanguageBadges(b1, currentLang);
     }
 
     const grid = document.getElementById('cantiere-episodes-grid');

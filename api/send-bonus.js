@@ -16,6 +16,7 @@
  * - Server-side email and input validation
  * - Direct PDF attachment via CDN URL
  * - Automatic CC to csabooks.kids@gmail.com
+ * - Full multilingual support (IT, EN, DE, FR, ES) with localized covers and copy
  */
 
 export const config = {
@@ -26,25 +27,31 @@ const CONFIG = {
   brandName: "CSA Books 4 Kids",
   senderEmail: "csabooks.kids@gmail.com",
   adminCcEmail: "csabooks.kids@gmail.com",
-  siteUrl: "https://csabookskids.com/",
-  bonusPdfUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/Bonus.CSA.Vol.1.pdf",
-  bonusCoverUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png"
+  siteUrl: "https://csabookskids.com/"
 };
 
-const VOLUMES = {
-  1: {
-    pdfUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/Bonus.CSA.Vol.1.pdf",
-    coverUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png",
-    attachmentName: "Bonus-CSA-Volume1-Disegni-da-Colorare.pdf",
-    volNum: 1
-  },
-  2: {
-    pdfUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Bonus/Bonus.CSA.Vol.2.pdf",
-    coverUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png",
-    attachmentName: "Bonus-CSA-Volume2-Disegni-da-Colorare.pdf",
-    volNum: 2
+function getVolumeAssets(volNum, lang) {
+  const isEn = lang === 'en' || (lang !== 'it' && volNum === 1);
+  if (volNum === 2) {
+    return {
+      pdfUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Bonus/Bonus.CSA.Vol.2.pdf",
+      coverUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png",
+      attachmentName: isEn ? "Bonus-CSA-Volume2-Coloring-Pages.pdf" : "Bonus-CSA-Volume2-Disegni-da-Colorare.pdf",
+      volNum: 2
+    };
   }
-};
+  // Volume 1
+  return {
+    pdfUrl: isEn
+      ? "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/EN/Bonus/Bonus.CSA.Vol.1.pdf"
+      : "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/Bonus.CSA.Vol.1.pdf",
+    coverUrl: isEn
+      ? "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/EN/Front.Cover.png"
+      : "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png",
+    attachmentName: isEn ? "Bonus-CSA-Volume1-Coloring-Pages.pdf" : "Bonus-CSA-Volume1-Disegni-da-Colorare.pdf",
+    volNum: 1
+  };
+}
 
 // Rate limiter: Map<ip, Array<timestamp>>
 const rateLimitMap = new Map();
@@ -86,7 +93,11 @@ const EMAIL_I18N = {
     ctaDesc: "Scopri tutti i libri illustrati, gli audiolibri e i video speciali pensati per condividere momenti indimenticabili tra genitori e figli sul nostro sito ufficiale!",
     ctaBtn: "SCOPRI TUTTI I NOSTRI LIBRI",
     copyright: "Tutti i diritti riservati.",
-    disclaimer: "Ricevi questa email perché hai richiesto il bonus disegni da colorare su csabookskids.com."
+    disclaimer: "Ricevi questa email perché hai richiesto il bonus disegni da colorare su csabookskids.com.",
+    headerTagline: "Storie per bambini nate in famiglia &bull; Libri illustrati",
+    question: "Hai domande o vuoi inviarci i disegni colorati dai tuoi bimbi?",
+    defaultRecipientName: "Piccolo Artista",
+    coverAlt: "Le Avventure del Cantiere - Raccolta Vol. "
   },
   en: {
     langHtml: "en",
@@ -98,7 +109,11 @@ const EMAIL_I18N = {
     ctaDesc: "Explore all our illustrated books, read-aloud audios, and video stories created to spark imagination and bring parents and children together on our official website!",
     ctaBtn: "DISCOVER ALL OUR BOOKS",
     copyright: "All rights reserved.",
-    disclaimer: "You are receiving this email because you requested the printable coloring bonus on csabookskids.com."
+    disclaimer: "You are receiving this email because you requested the printable coloring bonus on csabookskids.com.",
+    headerTagline: "Children's stories born in the family &bull; Illustrated books",
+    question: "Have questions or want to share your children's colored drawings?",
+    defaultRecipientName: "Young Artist",
+    coverAlt: "Construction Site Adventures - Collection Vol. "
   },
   de: {
     langHtml: "de",
@@ -110,7 +125,11 @@ const EMAIL_I18N = {
     ctaDesc: "Entdecke alle unsere illustrierten Kinderbücher und Geschichten auf unserer offiziellen Website!",
     ctaBtn: "ALLE BÜCHER ENTDECKEN",
     copyright: "Alle Rechte vorbehalten.",
-    disclaimer: "Du erhältst diese E-Mail, weil du die Malvorlagen auf csabookskids.com angefordert hast."
+    disclaimer: "Du erhältst diese E-Mail, weil du die Malvorlagen auf csabookskids.com angefordert hast.",
+    headerTagline: "Kindergeschichten, in der Familie entstanden &bull; Bilderbücher",
+    question: "Hast du Fragen oder möchtest du uns die ausgemalten Bilder deiner Kinder schicken?",
+    defaultRecipientName: "Kleiner Künstler",
+    coverAlt: "Baustellen-Abenteuer - Sammelband Vol. "
   },
   fr: {
     langHtml: "fr",
@@ -122,7 +141,11 @@ const EMAIL_I18N = {
     ctaDesc: "Découvrez tous nos livres illustrés et histoires conçus pour partager des moments privilégiés en famille sur notre site officiel !",
     ctaBtn: "DÉCOUVRIR TOUS NOS LIVRES",
     copyright: "Tous droits réservés.",
-    disclaimer: "Vous recevez cet e-mail suite à votre demande de coloriages sur csabookskids.com."
+    disclaimer: "Vous recevez cet e-mail suite à votre demande de coloriages sur csabookskids.com.",
+    headerTagline: "Histoires pour enfants, nées en famille &bull; Livres illustrés",
+    question: "Vous avez des questions ou souhaitez nous envoyer les dessins coloriés de vos enfants ?",
+    defaultRecipientName: "Petit Artiste",
+    coverAlt: "Les Aventures du Chantier - Recueil Vol. "
   },
   es: {
     langHtml: "es",
@@ -134,7 +157,11 @@ const EMAIL_I18N = {
     ctaDesc: "¡Descubre todos nuestros libros ilustrados e historias pensados para compartir momentos especiales en familia en nuestro sitio oficial!",
     ctaBtn: "DESCUBRE TODOS NUESTROS LIBROS",
     copyright: "Todos los derechos reservados.",
-    disclaimer: "Recibes este correo porque solicitaste los dibujos para colorear en csabookskids.com."
+    disclaimer: "Recibes este correo porque solicitaste los dibujos para colorear en csabookskids.com.",
+    headerTagline: "Cuentos infantiles, nacidos en familia &bull; Libros ilustrados",
+    question: "¿Tienes preguntas o quieres enviarnos los dibujos coloreados de tus peques?",
+    defaultRecipientName: "Pequeño Artista",
+    coverAlt: "Las Aventuras de la Obra - Colección Vol. "
   }
 };
 
@@ -155,7 +182,7 @@ function buildEmailHtml({ firstName, lastName, lang, volume = 1 }) {
   const safeFirst = escapeHtml(firstName || '');
   const safeLast = escapeHtml(lastName || '');
   const volNum = (volume === 2 || volume === '2') ? 2 : 1;
-  const volConfig = VOLUMES[volNum] || VOLUMES[1];
+  const volAssets = getVolumeAssets(volNum, emailLangKey);
   const subjectText = volNum === 2 ? et.subject.replace(/Vol\.\s*1/g, 'Vol. 2') : et.subject;
   const introText = volNum === 2 ? et.intro.replace(/Vol\.\s*1/g, 'Vol. 2') : et.intro;
 
@@ -176,7 +203,7 @@ function buildEmailHtml({ firstName, lastName, lang, volume = 1 }) {
           CSA Books <span style="color: #F05A28;">4 Kids</span>
         </h1>
         <p style="color: #FBBF24; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin: 0;">
-          Storie per bambini nate in famiglia &bull; Libri illustrati
+          ${et.headerTagline}
         </p>
       </td>
     </tr>
@@ -196,7 +223,7 @@ function buildEmailHtml({ firstName, lastName, lang, volume = 1 }) {
           <tr>
             <td align="center" style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(21, 29, 42, 0.18); border: 3px solid #FFFFFF;">
               <a href="${CONFIG.siteUrl}" target="_blank" style="display: block; text-decoration: none;">
-                <img src="${volConfig.coverUrl}" alt="Le Avventure del Cantiere - Raccolta Vol. ${volNum}" width="200" style="width: 100%; max-width: 200px; height: auto; display: block; border: 0;" />
+                <img src="${volAssets.coverUrl}" alt="${et.coverAlt}${volNum}" width="200" style="width: 100%; max-width: 200px; height: auto; display: block; border: 0;" />
               </a>
             </td>
           </tr>
@@ -228,7 +255,7 @@ function buildEmailHtml({ firstName, lastName, lang, volume = 1 }) {
 
         <div style="margin-top: 28px; padding-top: 22px; border-top: 1px solid #F3EFE9;">
           <p style="font-size: 13px; color: #6B7280; margin: 0 0 6px 0;">
-            Hai domande o vuoi inviarci i disegni colorati dai tuoi bimbi?
+            ${et.question}
           </p>
           <a href="mailto:${CONFIG.senderEmail}" style="color: #F05A28; font-weight: 700; text-decoration: none; font-size: 14px;">
             ${CONFIG.senderEmail}
@@ -284,7 +311,7 @@ export default async function handler(req) {
     return jsonResponse({
       status: 'ok',
       service: 'CSA Books 4 Kids - Bonus Dispatcher',
-      version: '1.0.0'
+      version: '1.1.0'
     }, 200);
   }
 
@@ -334,7 +361,7 @@ export default async function handler(req) {
     const email = String(rawEmail || '').trim().toLowerCase();
     const lang = String(rawLang || 'it').trim().toLowerCase();
     const volNum = (rawVolume === 2 || rawVolume === '2') ? 2 : 1;
-    const volConfig = VOLUMES[volNum] || VOLUMES[1];
+    const volAssets = getVolumeAssets(volNum, lang);
 
     if (!firstName || firstName.length > 80) {
       return jsonResponse({ success: false, error: "First name is required." }, 400);
@@ -365,7 +392,7 @@ export default async function handler(req) {
     const emailSubject = volNum === 2 ? et.subject.replace(/Vol\.\s*1/g, 'Vol. 2') : et.subject;
 
     // 10. Build Brevo API Payload
-    const recipientName = `${firstName} ${lastName}`.trim() || "Piccolo Artista";
+    const recipientName = `${firstName} ${lastName}`.trim() || et.defaultRecipientName || "Young Artist";
     const brevoPayload = {
       sender: {
         name: CONFIG.brandName,
@@ -378,8 +405,8 @@ export default async function handler(req) {
       htmlContent: emailHtml,
       attachment: [
         {
-          name: volConfig.attachmentName,
-          url: volConfig.pdfUrl
+          name: volAssets.attachmentName,
+          url: volAssets.pdfUrl
         }
       ]
     };
