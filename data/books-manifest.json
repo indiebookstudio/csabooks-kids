@@ -443,9 +443,31 @@
     },
     "es": {
       "cover": "books/einstein/es/cover.png",
-      "back": null,
-      "interiors": [],
-      "pageCount": 1
+      "back": "books/einstein/es/back.png",
+      "interiors": [
+        "books/einstein/es/interiors/2.png",
+        "books/einstein/es/interiors/5.png",
+        "books/einstein/es/interiors/6.png",
+        "books/einstein/es/interiors/7.png",
+        "books/einstein/es/interiors/8.png",
+        "books/einstein/es/interiors/9.png",
+        "books/einstein/es/interiors/10.png",
+        "books/einstein/es/interiors/11.png",
+        "books/einstein/es/interiors/12.png",
+        "books/einstein/es/interiors/14.png",
+        "books/einstein/es/interiors/21.png",
+        "books/einstein/es/interiors/22.png",
+        "books/einstein/es/interiors/23.png",
+        "books/einstein/es/interiors/24.png",
+        "books/einstein/es/interiors/32.png",
+        "books/einstein/es/interiors/33.png",
+        "books/einstein/es/interiors/34.png",
+        "books/einstein/es/interiors/46.png",
+        "books/einstein/es/interiors/60.png",
+        "books/einstein/es/interiors/84.png",
+        "books/einstein/es/interiors/106.png"
+      ],
+      "pageCount": 23
     },
     "fr": {
       "cover": "books/einstein/fr/cover.png",

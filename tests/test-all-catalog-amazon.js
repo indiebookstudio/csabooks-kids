@@ -25,7 +25,7 @@ function assert(condition, message) {
 // 1. Check all books in books.json have valid paperback ASINs
 console.log('\n--- 1. Verifica Integrità ASIN Paperback in books.json ---');
 const expectedAsins = {
-  'einstein': { it: 'B0HP6YD1CM', en: 'B0HPG9WFSR', fr: 'B0HQ1F1HX8' },
+  'einstein': { it: 'B0HP6YD1CM', en: 'B0HPG9WFSR', fr: 'B0HQ1F1HX8', es: 'B0HQZJB7V4' },
   'csa-vol1': { it: 'B0HN4QMLV1' },
   'csa-vol2': { it: 'B0HPB2L59F' }, // Correct Paperback!
   'fano': { it: 'B0HD2X6HVJ' },

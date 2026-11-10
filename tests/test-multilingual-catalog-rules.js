@@ -93,6 +93,8 @@ const manifestData = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data
 assert(manifestData.einstein && manifestData.einstein.it && manifestData.einstein.it.interiors.length === 26, `Einstein IT ha 26 pagine interne (${manifestData.einstein?.it?.interiors?.length})`);
 assert(manifestData.einstein && manifestData.einstein.en && manifestData.einstein.en.interiors.length === 25, `Einstein EN ha 25 pagine interne (${manifestData.einstein?.en?.interiors?.length})`);
 assert(manifestData.einstein && manifestData.einstein.fr && manifestData.einstein.fr.interiors.length === 25, `Einstein FR ha 25 pagine interne (${manifestData.einstein?.fr?.interiors?.length})`);
+assert(manifestData.einstein && manifestData.einstein.es && manifestData.einstein.es.interiors.length === 21, `Einstein ES ha 21 pagine interne (${manifestData.einstein?.es?.interiors?.length})`);
+assert(isBookAvailableInLang(booksData.books.find(b => b.id === 'einstein'), 'es') === true, "Einstein DISPONIBILE in ES");
 
 
 console.log('\n--- 4. Verifica Disponibilità NL, PL, SE, JP (Trattati come EN) ---');

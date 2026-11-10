@@ -144,6 +144,8 @@ languages.forEach(lang => {
     assert(html.includes('B0HP6YD1CM'), `[IT] Einstein punta al paperback italiano B0HP6YD1CM`);
   } else if (lang === 'fr') {
     assert(html.includes('B0HQ1F1HX8'), `[FR] Einstein punta al paperback francese B0HQ1F1HX8`);
+  } else if (lang === 'es') {
+    assert(html.includes('B0HQZJB7V4'), `[ES] Einstein punta al paperback spagnolo B0HQZJB7V4`);
   } else {
     assert(html.includes('B0HPG9WFSR'), `[${lang.toUpperCase()}] Einstein punta al paperback inglese B0HPG9WFSR`);
   }

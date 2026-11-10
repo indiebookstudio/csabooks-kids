@@ -260,6 +260,12 @@
           "De grandes illustrations en couleurs pour rendre les découvertes accessibles et captivantes",
           "Des sources scientifiques vérifiables, quiz, glossaire et activités d'observation",
           "Otto la pieuvre comme compagnon d'exploration avec des surprises à découvrir"
+        ],
+        "es": [
+          "55 aventuras en la ciencia actual entre animales increíbles, dinosaurios, ADN, robots, inventos y misterios del espacio",
+          "Grandes ilustraciones a color que acompañan las explicaciones y hacen los descubrimientos accesibles y fascinantes",
+          "Detrás de escena de la ciencia: pruebas reales, método científico y fuentes verificables",
+          "Pequeños desafíos, actividades de observación, preguntas y la simpática mascota Otto el pulpo"
         ]
       },
       "editions": {
@@ -299,9 +305,15 @@
         "es": {
           "languageName": "Español",
           "title": "¡Einstein, esta te la perdiste!",
-          "available": false,
-          "note": "In arrivo — Edizione spagnola pianificata",
-          "amazon": {}
+          "available": true,
+          "asin": "B0HQZJB7V4",
+          "amazon": {
+            "es": "https://www.amazon.es/dp/B0HQZJB7V4",
+            "com": "https://www.amazon.com/dp/B0HQZJB7V4",
+            "us": "https://www.amazon.com/dp/B0HQZJB7V4",
+            "mx": "https://www.amazon.com.mx/dp/B0HQZJB7V4",
+            "it": "https://www.amazon.it/dp/B0HQZJB7V4"
+          }
         }
       }
     },

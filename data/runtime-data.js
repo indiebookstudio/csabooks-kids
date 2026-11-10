@@ -262,6 +262,12 @@
           "De grandes illustrations en couleurs pour rendre les découvertes accessibles et captivantes",
           "Des sources scientifiques vérifiables, quiz, glossaire et activités d'observation",
           "Otto la pieuvre comme compagnon d'exploration avec des surprises à découvrir"
+        ],
+        "es": [
+          "55 aventuras en la ciencia actual entre animales increíbles, dinosaurios, ADN, robots, inventos y misterios del espacio",
+          "Grandes ilustraciones a color que acompañan las explicaciones y hacen los descubrimientos accesibles y fascinantes",
+          "Detrás de escena de la ciencia: pruebas reales, método científico y fuentes verificables",
+          "Pequeños desafíos, actividades de observación, preguntas y la simpática mascota Otto el pulpo"
         ]
       },
       "editions": {
@@ -301,9 +307,15 @@
         "es": {
           "languageName": "Español",
           "title": "¡Einstein, esta te la perdiste!",
-          "available": false,
-          "note": "In arrivo — Edizione spagnola pianificata",
-          "amazon": {}
+          "available": true,
+          "asin": "B0HQZJB7V4",
+          "amazon": {
+            "es": "https://www.amazon.es/dp/B0HQZJB7V4",
+            "com": "https://www.amazon.com/dp/B0HQZJB7V4",
+            "us": "https://www.amazon.com/dp/B0HQZJB7V4",
+            "mx": "https://www.amazon.com.mx/dp/B0HQZJB7V4",
+            "it": "https://www.amazon.it/dp/B0HQZJB7V4"
+          }
         }
       }
     },
@@ -1936,9 +1948,31 @@
     },
     "es": {
       "cover": "books/einstein/es/cover.png",
-      "back": null,
-      "interiors": [],
-      "pageCount": 1
+      "back": "books/einstein/es/back.png",
+      "interiors": [
+        "books/einstein/es/interiors/2.png",
+        "books/einstein/es/interiors/5.png",
+        "books/einstein/es/interiors/6.png",
+        "books/einstein/es/interiors/7.png",
+        "books/einstein/es/interiors/8.png",
+        "books/einstein/es/interiors/9.png",
+        "books/einstein/es/interiors/10.png",
+        "books/einstein/es/interiors/11.png",
+        "books/einstein/es/interiors/12.png",
+        "books/einstein/es/interiors/14.png",
+        "books/einstein/es/interiors/21.png",
+        "books/einstein/es/interiors/22.png",
+        "books/einstein/es/interiors/23.png",
+        "books/einstein/es/interiors/24.png",
+        "books/einstein/es/interiors/32.png",
+        "books/einstein/es/interiors/33.png",
+        "books/einstein/es/interiors/34.png",
+        "books/einstein/es/interiors/46.png",
+        "books/einstein/es/interiors/60.png",
+        "books/einstein/es/interiors/84.png",
+        "books/einstein/es/interiors/106.png"
+      ],
+      "pageCount": 23
     },
     "fr": {
       "cover": "books/einstein/fr/cover.png",
