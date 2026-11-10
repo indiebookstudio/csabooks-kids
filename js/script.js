@@ -6188,6 +6188,175 @@ function initFanoCoverCarousel() {
 }
 
 
+const EPISODES_DATA = {
+  1: {
+    it: {
+      title: "Benny l'escavatore e la collina che cambiava forma",
+      metaDesc: "Ascolta l'audio o guarda il video della storia Benny l'escavatore e la collina che cambiava forma per i lettori di CSA Books 4 Kids."
+    },
+    en: {
+      title: "Benny the Excavator and the Shape-Shifting Hill",
+      metaDesc: "Listen to the audio or watch the video of the story Benny the Excavator and the Shape-Shifting Hill for readers of CSA Books 4 Kids."
+    },
+    fr: {
+      title: "Benny l'excavateur et la colline qui changeait de forme",
+      metaDesc: "Écoutez l'audio ou regardez la vidéo de l'histoire Benny l'excavateur et la colline qui changeait de forme pour les lecteurs de CSA Books 4 Kids."
+    },
+    de: {
+      title: "Bagger Benny und der Zauberhügel",
+      metaDesc: "Hören Sie das Audio oder sehen Sie sich das Video der Geschichte Bagger Benny und der Zauberhügel für Leser von CSA Books 4 Kids an."
+    },
+    es: {
+      title: "Benny la excavadora y la colina que cambiaba de forma",
+      metaDesc: "Escucha el audio o mira el video del cuento Benny la excavadora y la colina que cambiaba de forma para los lectores de CSA Books 4 Kids."
+    },
+    nl: {
+      title: "Benny de graafmachine en de heuvel",
+      metaDesc: "Luister naar de audio of bekijk de video van het verhaal Benny de graafmachine en de heuvel voor lezers van CSA Books 4 Kids."
+    },
+    pl: {
+      title: "Koparka Benny i wzgórze",
+      metaDesc: "Posłuchaj nagrania lub obejrzyj wideo z opowieścią Koparka Benny i wzgórze dla czytelników CSA Books 4 Kids."
+    },
+    se: {
+      title: "Grävskopan Benny och kullen",
+      metaDesc: "Lyssna på ljudet eller titta på videon till sagan Grävskopan Benny och kullen för läsare av CSA Books 4 Kids."
+    },
+    jp: {
+      title: "ショベルカーのベニーとふしぎな丘",
+      metaDesc: "CSA Books 4 Kidsの読者のために『ショベルカーのベニーとふしぎな丘』の朗読音声や動画をお楽しみください。"
+    }
+  },
+  2: {
+    it: {
+      title: "Rudy la ruspa e la spiaggia che scompariva",
+      metaDesc: "Ascolta l'audio o guarda il video della storia Rudy la ruspa e la spiaggia che scompariva per i lettori di CSA Books 4 Kids."
+    },
+    en: {
+      title: "Rudy the Bulldozer and the Vanishing Beach",
+      metaDesc: "Listen to the audio or watch the video of the story Rudy the Bulldozer and the Vanishing Beach for readers of CSA Books 4 Kids."
+    },
+    fr: {
+      title: "Rudy le bulldozer et la plage qui disparaissait",
+      metaDesc: "Écoutez l'audio ou regardez la vidéo de l'histoire Rudy le bulldozer et la plage qui disparaissait pour les lecteurs de CSA Books 4 Kids."
+    },
+    de: {
+      title: "Planierraupe Rudy und der verschwundene Strand",
+      metaDesc: "Hören Sie das Audio oder sehen Sie sich das Video der Geschichte Planierraupe Rudy und der verschwundene Strand für Leser von CSA Books 4 Kids an."
+    },
+    es: {
+      title: "Rudy la excavadora y la playa que desaparecía",
+      metaDesc: "Escucha el audio o mira el video del cuento Rudy la excavadora y la playa que desaparecía para los lectores de CSA Books 4 Kids."
+    },
+    nl: {
+      title: "Rudy de bulldozer en het verdwijnende strand",
+      metaDesc: "Luister naar de audio of bekijk de video van het verhaal Rudy de bulldozer en het verdwijnende strand voor lezers van CSA Books 4 Kids."
+    },
+    pl: {
+      title: "Spychacz Rudy i znikająca plaża",
+      metaDesc: "Posłuchaj nagrania lub obejrzyj wideo z opowieścią Spychacz Rudy i znikająca plaża dla czytelników CSA Books 4 Kids."
+    },
+    se: {
+      title: "Schaktmaskinen Rudy och stranden",
+      metaDesc: "Lyssna på ljudet eller titta på videon till sagan Schaktmaskinen Rudy och stranden för läsare av CSA Books 4 Kids."
+    },
+    jp: {
+      title: "ブルドーザーのルディと消えた砂浜",
+      metaDesc: "CSA Books 4 Kidsの読者のために『ブルドーザーのルディと消えた砂浜』の朗読音声や動画をお楽しみください。"
+    }
+  },
+  3: {
+    it: {
+      title: "Leo la gru e le gemme della montagna",
+      metaDesc: "Ascolta l'audio o guarda il video della storia Leo la gru e le gemme della montagna per i lettori di CSA Books 4 Kids."
+    },
+    en: {
+      title: "Leo the Crane and the Mountain Gems",
+      metaDesc: "Listen to the audio or watch the video of the story Leo the Crane and the Mountain Gems for readers of CSA Books 4 Kids."
+    },
+    fr: {
+      title: "Leo la grue et les gemmes de la montagne",
+      metaDesc: "Écoutez l'audio ou regardez la vidéo de l'histoire Leo la grue et les gemmes de la montagne pour les lecteurs de CSA Books 4 Kids."
+    },
+    de: {
+      title: "Kran Leo und die Bergedelsteine",
+      metaDesc: "Hören Sie das Audio oder sehen Sie sich das Video der Geschichte Kran Leo und die Bergedelsteine für Leser von CSA Books 4 Kids an."
+    },
+    es: {
+      title: "Leo la grúa y las gemas de la montaña",
+      metaDesc: "Escucha el audio o mira el video del cuento Leo la grúa y las gemas de la montaña para los lectores de CSA Books 4 Kids."
+    },
+    nl: {
+      title: "Leo de kraanwagen en de berg",
+      metaDesc: "Luister naar de audio of bekijk de video van het verhaal Leo de kraanwagen en de berg voor lezers van CSA Books 4 Kids."
+    },
+    pl: {
+      title: "Dźwig Leo i skarby góry",
+      metaDesc: "Posłuchaj nagrania lub obejrzyj wideo z opowieścią Dźwig Leo i skarby góry dla czytelników CSA Books 4 Kids."
+    },
+    se: {
+      title: "Kranbilen Leo och bergskristallerna",
+      metaDesc: "Lyssna på ljudet eller titta på videon till sagan Kranbilen Leo och bergskristallerna för läsare av CSA Books 4 Kids."
+    },
+    jp: {
+      title: "クレーン車のレオと山のほうせき",
+      metaDesc: "CSA Books 4 Kidsの読者のために『クレーン車のレオと山のほうせき』の朗読音声や動画をお楽しみください。"
+    }
+  },
+  4: {
+    it: {
+      title: "Bruno il camion e il laghetto delle papere",
+      metaDesc: "Ascolta l'audio o guarda il video della storia Bruno il camion e il laghetto delle papere per i lettori di CSA Books 4 Kids."
+    },
+    en: {
+      title: "Bruno the Dump Truck and the Duck Pond",
+      metaDesc: "Listen to the audio or watch the video of the story Bruno the Dump Truck and the Duck Pond for readers of CSA Books 4 Kids."
+    },
+    fr: {
+      title: "Bruno le camion et la mare aux canards",
+      metaDesc: "Écoutez l'audio ou regardez la vidéo de l'histoire Bruno le camion et la mare aux canards pour les lecteurs de CSA Books 4 Kids."
+    },
+    de: {
+      title: "Laster Bruno und der Ententeich",
+      metaDesc: "Hören Sie das Audio oder sehen Sie sich das Video der Geschichte Laster Bruno und der Ententeich für Leser von CSA Books 4 Kids an."
+    },
+    es: {
+      title: "Bruno el camión y el estanque de los patos",
+      metaDesc: "Escucha el audio o mira el video del cuento Bruno el camión y el estanque de los patos para los lectores de CSA Books 4 Kids."
+    },
+    nl: {
+      title: "Bruno de vrachtwagen en de eendenvijver",
+      metaDesc: "Luister naar de audio of bekijk de video van het verhaal Bruno de vrachtwagen en de eendenvijver voor lezers van CSA Books 4 Kids."
+    },
+    pl: {
+      title: "Ciężarówka Bruno i kaczuszki",
+      metaDesc: "Posłuchaj nagrania lub obejrzyj wideo z opowieścią Ciężarówka Bruno i kaczuszki dla czytelników CSA Books 4 Kids."
+    },
+    se: {
+      title: "Lastbilen Bruno och ankdammen",
+      metaDesc: "Lyssna på ljudet eller titta på videon till sagan Lastbilen Bruno och ankdammen för läsare av CSA Books 4 Kids."
+    },
+    jp: {
+      title: "ダンプカーのブルーノとカモのいけ",
+      metaDesc: "CSA Books 4 Kidsの読者のために『ダンプカーのブルーノとカモのいけ』の朗読音声や動画をお楽しみください。"
+    }
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.EPISODES_DATA = EPISODES_DATA;
+}
+
+function getActiveEpisodeVolume() {
+  const mainEl = document.getElementById('episode-page-main');
+  if (mainEl && mainEl.dataset.volume) {
+    return parseInt(mainEl.dataset.volume, 10) || 1;
+  }
+  const path = (typeof window !== 'undefined' && window.location && window.location.pathname) ? window.location.pathname.toLowerCase() : '';
+  if (path.includes('vol2')) return 2;
+  return 1;
+}
+
 function getActiveEpisodeNumber() {
   const mainEl = document.getElementById('episode-page-main');
   if (mainEl && mainEl.dataset.episode) {
@@ -6202,6 +6371,11 @@ function getActiveEpisodeNumber() {
 }
 
 function updateEpisodePage(lang) {
+  lang = (lang || 'it').toLowerCase();
+  const epVol = getActiveEpisodeVolume();
+  if (epVol === 2) {
+    return;
+  }
   const strings = I18N[lang] || I18N.it;
   const epNum = getActiveEpisodeNumber();
   const isIt = (lang === 'it');
