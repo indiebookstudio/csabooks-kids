@@ -26,7 +26,7 @@ function assert(condition, message) {
 console.log('\n--- 1. Verifica Integrità ASIN Paperback in books.json ---');
 const expectedAsins = {
   'einstein': { it: 'B0HP6YD1CM', en: 'B0HPG9WFSR', fr: 'B0HQ1F1HX8', es: 'B0HQZJB7V4' },
-  'csa-vol1': { it: 'B0HN4QMLV1' },
+  'csa-vol1': { it: 'B0HN4QMLV1', en: 'B0HR9DZ64D' },
   'csa-vol2': { it: 'B0HPB2L59F' }, // Correct Paperback!
   'fano': { it: 'B0HD2X6HVJ' },
   'csa-01-benny-collina': { it: 'B0H6MN4LW7', en: 'B0H6SBPNM5', fr: 'B0HJM5R74L' },
@@ -110,6 +110,14 @@ languages.forEach(lang => {
     assert(Boolean(url), `[${lang.toUpperCase()}] Link Amazon generato per ${b.id}: ${url}`);
     assert(url.includes('/dp/'), `[${lang.toUpperCase()}] Link Amazon contiene /dp/`);
     assert(!url.includes('B0HN9G1V81'), `[${lang.toUpperCase()}] Link Amazon per ${b.id} NON è il Kindle errato B0HN9G1V81`);
+
+    if (b.id === 'csa-vol1') {
+      if (lang === 'it') {
+        assert(url.includes('B0HN4QMLV1'), `[${lang.toUpperCase()}] CSA Vol 1 punta al Paperback IT B0HN4QMLV1: ${url}`);
+      } else {
+        assert(url.includes('B0HR9DZ64D'), `[${lang.toUpperCase()}] CSA Vol 1 punta al Paperback EN B0HR9DZ64D: ${url}`);
+      }
+    }
 
     if (b.id === 'csa-vol2') {
       assert(url.includes('B0HPB2L59F'), `[${lang.toUpperCase()}] CSA Vol 2 punta ESCLUSIVAMENTE al Paperback B0HPB2L59F: ${url}`);

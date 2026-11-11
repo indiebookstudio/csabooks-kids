@@ -3592,6 +3592,10 @@ function applyLanguage(lang) {
   if (cantiereVol1Langs) {
     cantiereVol1Langs.textContent = (lang === 'it') ? 'IT • EN' : 'EN • IT';
   }
+  const cantiereVol1Buy = document.getElementById('csa-cantiere-vol1-buy');
+  if (cantiereVol1Buy) {
+    cantiereVol1Buy.href = (lang === 'it') ? 'https://www.amazon.it/dp/B0HN4QMLV1' : 'https://www.amazon.com/dp/B0HR9DZ64D';
+  }
 
   renderBookCatalog(lang);
   renderCollectionsCatalog(lang);

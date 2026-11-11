@@ -193,14 +193,16 @@ const BOOKS = [
     "assets/construction-site-adventures/Bundle.Volume.1/EN/12.png",
     "assets/construction-site-adventures/Bundle.Volume.1/EN/Back.Cover.png"
   ],
-  "asin": "B0HN4QMLV1",
+  "asin": "B0HR9DZ64D",
   "amazon": {
-    "com": "B0HN4QMLV1",
-    "uk": "B0HN4QMLV1",
-    "it": "B0HN4QMLV1",
-    "de": "B0HN4QMLV1",
-    "fr": "B0HN4QMLV1",
-    "es": "B0HN4QMLV1"
+    "com": "B0HR9DZ64D",
+    "uk": "B0HR9DZ64D",
+    "it": "B0HR9DZ64D",
+    "de": "B0HR9DZ64D",
+    "fr": "B0HR9DZ64D",
+    "es": "B0HR9DZ64D",
+    "ca": "B0HR9DZ64D",
+    "au": "B0HR9DZ64D"
   }
 },
   {

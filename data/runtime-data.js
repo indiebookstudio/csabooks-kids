@@ -438,16 +438,16 @@
           "languageName": "English",
           "title": "Construction Site Adventures — Collection Vol. 1",
           "available": true,
-          "asin": "B0HN4QMLV1",
+          "asin": "B0HR9DZ64D",
           "amazon": {
-            "com": "https://www.amazon.com/dp/B0HN4QMLV1",
-            "uk": "https://www.amazon.co.uk/dp/B0HN4QMLV1",
-            "it": "https://www.amazon.it/dp/B0HN4QMLV1",
-            "de": "https://www.amazon.de/dp/B0HN4QMLV1",
-            "fr": "https://www.amazon.fr/dp/B0HN4QMLV1",
-            "es": "https://www.amazon.es/dp/B0HN4QMLV1",
-            "ca": "https://www.amazon.ca/dp/B0HN4QMLV1",
-            "au": "https://www.amazon.com.au/dp/B0HN4QMLV1"
+            "com": "https://www.amazon.com/dp/B0HR9DZ64D",
+            "uk": "https://www.amazon.co.uk/dp/B0HR9DZ64D",
+            "it": "https://www.amazon.it/dp/B0HR9DZ64D",
+            "de": "https://www.amazon.de/dp/B0HR9DZ64D",
+            "fr": "https://www.amazon.fr/dp/B0HR9DZ64D",
+            "es": "https://www.amazon.es/dp/B0HR9DZ64D",
+            "ca": "https://www.amazon.ca/dp/B0HR9DZ64D",
+            "au": "https://www.amazon.com.au/dp/B0HR9DZ64D"
           }
         }
       }
