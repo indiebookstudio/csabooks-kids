@@ -144,6 +144,14 @@
       localStorage.setItem('csa_lang', norm);
     } catch(e) {}
     applyLanguage(norm, true);
+
+    // Chiudi dropdown lingua mobile dopo la selezione
+    const dropdown = document.getElementById("lang-mobile-dropdown");
+    const select = document.getElementById("lang-mobile-select");
+    const trigger = document.getElementById("lang-mobile-trigger");
+    if (dropdown) dropdown.classList.remove("show");
+    if (select) select.classList.remove("open");
+    if (trigger) trigger.setAttribute("aria-expanded", "false");
   }
   window.setLanguage = setLanguage;
   // Mobile Language Dropdown Toggle
@@ -171,6 +179,16 @@
     }
   });
 
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+      const select = document.getElementById("lang-mobile-select");
+      const dropdown = document.getElementById("lang-mobile-dropdown");
+      if (dropdown) dropdown.classList.remove("show");
+      if (select) select.classList.remove("open");
+      const trigger = document.getElementById("lang-mobile-trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", "false");
+    }
+  });
 
   // Retrieve translation key
   function t(keyPath, lang = currentLang) {
