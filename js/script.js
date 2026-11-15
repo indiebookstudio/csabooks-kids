@@ -2675,7 +2675,7 @@ document.addEventListener('DOMContentLoaded', () => {
     userDetectedMarket = getDefaultMarketForLanguage(currentLanguage) || detectUserMarket();
   }
 
-  if (Array.isArray(BOOKS)) {
+  if (typeof BOOKS !== 'undefined' && Array.isArray(BOOKS)) {
     BOOKS.forEach(b => {
       selectedMarketState[b.id] = userDetectedMarket;
     });
@@ -3074,7 +3074,7 @@ window.setLanguage = function(langCode) {
   } catch (e) {}
 
   // Aggiorna lo store preselezionato per tutti i libri
-  if (Array.isArray(BOOKS)) {
+  if (typeof BOOKS !== 'undefined' && Array.isArray(BOOKS)) {
     BOOKS.forEach(b => {
       selectedMarketState[b.id] = marketForLang;
     });
@@ -3564,7 +3564,6 @@ function applyLanguage(lang) {
         bonusCoverImg.src = isVol2 
           ? 'assets/construction-site-adventures/Bundle.Volume.2/EN/Front.Cover.png'
           : 'assets/construction-site-adventures/Bundle.Volume.1/EN/Front.Cover.png';
-      }
       }
       if (bonusCoverAltText) {
         bonusCoverImg.alt = bonusCoverAltText;
@@ -4316,7 +4315,7 @@ function renderCollectionsCatalog(lang) {
   var bundleBooks = (typeof BOOKS !== 'undefined' && Array.isArray(BOOKS))
     ? BOOKS.filter(b => b.collection === 'bundle' && b.languageCode === targetLangCode)
     : [];
-  if (bundleBooks.length === 0 && Array.isArray(BOOKS)) {
+  if (bundleBooks.length === 0 && typeof BOOKS !== 'undefined' && Array.isArray(BOOKS)) {
     bundleBooks = BOOKS.filter(b => b.collection === 'bundle' && b.languageCode === 'en');
   }
 
