@@ -247,6 +247,51 @@ const BOOKS = [
     }
   },
   {
+    "id": "raccolta-vol2-en",
+    "volume": 2,
+    "collection": "bundle",
+    "format": "rectangular",
+    "isRectangular": true,
+    "isNew": true,
+    "title": "Construction Site Adventures — Collection Vol. 2",
+    "subtitle": "Special large format edition (8.5 x 11 in / 21.5 x 28 cm)",
+    "author": "Marco Salucci",
+    "language": "English",
+    "languageCode": "en",
+    "age": "Ages 2–5",
+    "badge": "Collection Vol. 2",
+    "cover": "assets/construction-site-adventures/Bundle.Volume.2/EN/Front.Cover.png",
+    "storiesIncluded": [
+      "Benny the Excavator and the Coins of Ancient Rome",
+      "Nina the Cement Truck and the Bunny Bridge",
+      "Rino the Roller and the Construction Site Thieves",
+      "Leo the Crane and the Little Bird's Nest"
+    ],
+    "preview": [
+      "assets/construction-site-adventures/Bundle.Volume.2/EN/Front.Cover.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/EN/2.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/EN/3.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/EN/4.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/EN/6.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/EN/7.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/EN/8.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/EN/9.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/EN/10.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/EN/11.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/EN/12.png",
+      "assets/construction-site-adventures/Bundle.Volume.2/EN/Back.Cover.png"
+    ],
+    "asin": "B0HPB2L59F",
+    "amazon": {
+      "com": "B0HPB2L59F",
+      "uk": "B0HPB2L59F",
+      "it": "B0HPB2L59F",
+      "de": "B0HPB2L59F",
+      "fr": "B0HPB2L59F",
+      "es": "B0HPB2L59F"
+    }
+  },
+  {
     "id": "raccolta-vol2-it",
     "volume": 2,
     "collection": "bundle",

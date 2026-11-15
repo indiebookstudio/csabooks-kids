@@ -100,16 +100,18 @@ assert(isBookAvailableInLang(booksData.books.find(b => b.id === 'einstein'), 'es
 console.log('\n--- 4. Verifica Disponibilità NL, PL, SE, JP (Trattati come EN) ---');
 ['nl', 'pl', 'se', 'jp'].forEach(lang => {
   const booksInLang = booksData.books.filter(b => isBookAvailableInLang(b, lang));
-  assert(booksInLang.length === 10, `In [${lang.toUpperCase()}] ci sono 10 libri disponibili in inglese (incluso Raccolta Vol 1 EN)`);
+  assert(booksInLang.length === 11, `In [${lang.toUpperCase()}] ci sono 11 libri disponibili in inglese (incluso Raccolta Vol 1 e Vol 2 EN)`);
   assert(!booksInLang.some(b => b.id === 'csa-09-leo-rudy-savana'), `In [${lang.toUpperCase()}] Savana non compare`);
   assert(booksInLang.some(b => b.id === 'csa-vol1'), `In [${lang.toUpperCase()}] Raccolta Vol 1 (EN) compare`);
-  assert(!booksInLang.some(b => b.id === 'csa-vol2'), `In [${lang.toUpperCase()}] Raccolta Vol 2 (IT) non compare`);
+  assert(booksInLang.some(b => b.id === 'csa-vol2'), `In [${lang.toUpperCase()}] Raccolta Vol 2 (EN) compare`);
 
   // Verify book cover resolves to English cover
   const bennyCover = getBookCover('csa-01-benny-collina', lang);
   assert(bennyCover.includes('/en/cover.png'), `In [${lang.toUpperCase()}] la copertina di Benny punta a /en/cover.png`);
   const vol1Cover = getBookCover('csa-vol1', lang);
   assert(vol1Cover.includes('/en/cover.png'), `In [${lang.toUpperCase()}] la copertina di Raccolta Vol 1 punta a /en/cover.png`);
+  const vol2Cover = getBookCover('csa-vol2', lang);
+  assert(vol2Cover.includes('/en/cover.png'), `In [${lang.toUpperCase()}] la copertina di Raccolta Vol 2 punta a /en/cover.png`);
 });
 
 console.log('\n--- 5. Verifica Sottotitoli cantierePage.episodesSubtitle ---');

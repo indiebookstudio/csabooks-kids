@@ -5,11 +5,10 @@ console.log('🧪 VERIFICA INTERNAZIONALIZZAZIONE TITOLI EPISODI CSA...');
 
 const script = fs.readFileSync('js/script.js', 'utf8');
 
-// Check that EPISODES_DATA is present
+// 1. Check Volume 1 EPISODES_DATA
 assert(script.includes('const EPISODES_DATA = {'), 'EPISODES_DATA must be defined in js/script.js');
 assert(script.includes('window.EPISODES_DATA = EPISODES_DATA;'), 'EPISODES_DATA must be exported to window');
 
-// Extract EPISODES_DATA object using regex or eval
 const match = script.match(/const EPISODES_DATA = (\{[\s\S]*?\n\};)/);
 assert(match, 'Must find EPISODES_DATA definition in script');
 
@@ -40,7 +39,44 @@ for (const [epNum, titles] of Object.entries(expected)) {
   assert.strictEqual(ep.it.title, titles.it, `Episode ${epNum} IT title mismatch`);
   assert.strictEqual(ep.en.title, titles.en, `Episode ${epNum} EN title mismatch`);
   assert(ep.en.metaDesc.includes(titles.en), `Episode ${epNum} EN metaDesc should include title`);
-  console.log(`  ✓ Episodio ${epNum}: IT="${ep.it.title}" | EN="${ep.en.title}"`);
+  console.log(`  ✓ Vol 1 Episodio ${epNum}: IT="${ep.it.title}" | EN="${ep.en.title}"`);
+}
+
+// 2. Check Volume 2 EPISODES_DATA_VOL2
+assert(script.includes('const EPISODES_DATA_VOL2 = {'), 'EPISODES_DATA_VOL2 must be defined in js/script.js');
+assert(script.includes('window.EPISODES_DATA_VOL2 = EPISODES_DATA_VOL2;'), 'EPISODES_DATA_VOL2 must be exported to window');
+
+const matchVol2 = script.match(/const EPISODES_DATA_VOL2 = (\{[\s\S]*?\n\};)/);
+assert(matchVol2, 'Must find EPISODES_DATA_VOL2 definition in script');
+
+const episodesDataVol2 = eval('(' + matchVol2[1].replace(/;$/, '') + ')');
+
+const expectedVol2 = {
+  1: {
+    it: "Benny l'escavatore e le monete dell'antica Roma",
+    en: "Benny the Excavator and the Coins of Ancient Rome"
+  },
+  2: {
+    it: "Nina la betoniera e il ponte dei coniglietti",
+    en: "Nina the Cement Truck and the Bunny Bridge"
+  },
+  3: {
+    it: "Rino il rullo e i ladri del cantiere",
+    en: "Rino the Roller and the Construction Site Thieves"
+  },
+  4: {
+    it: "Leo la gru e il nido della cinciallegra",
+    en: "Leo the Crane and the Little Bird's Nest"
+  }
+};
+
+for (const [epNum, titles] of Object.entries(expectedVol2)) {
+  const ep = episodesDataVol2[epNum];
+  assert(ep, `Volume 2 Episode ${epNum} must exist in EPISODES_DATA_VOL2`);
+  assert.strictEqual(ep.it.title, titles.it, `Volume 2 Episode ${epNum} IT title mismatch`);
+  assert.strictEqual(ep.en.title, titles.en, `Volume 2 Episode ${epNum} EN title mismatch`);
+  assert(ep.en.metaDesc.includes(titles.en), `Volume 2 Episode ${epNum} EN metaDesc should include title`);
+  console.log(`  ✓ Vol 2 Episodio ${epNum}: IT="${ep.it.title}" | EN="${ep.en.title}"`);
 }
 
 console.log('🎉 TUTTI I TEST CSA EPISODI I18N COMPLETATI CON SUCCESSO!');

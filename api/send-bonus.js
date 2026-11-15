@@ -31,11 +31,15 @@ const CONFIG = {
 };
 
 function getVolumeAssets(volNum, lang) {
-  const isEn = lang === 'en' || (lang !== 'it' && volNum === 1);
+  const isEn = lang === 'en' || lang !== 'it';
   if (volNum === 2) {
     return {
-      pdfUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Bonus/Bonus.CSA.Vol.2.pdf",
-      coverUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png",
+      pdfUrl: isEn
+        ? "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/EN/Bonus/Bonus.CSA.Vol.2.pdf"
+        : "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Bonus/Bonus.CSA.Vol.2.pdf",
+      coverUrl: isEn
+        ? "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/EN/Front.Cover.png"
+        : "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png",
       attachmentName: isEn ? "Bonus-CSA-Volume2-Coloring-Pages.pdf" : "Bonus-CSA-Volume2-Disegni-da-Colorare.pdf",
       volNum: 2
     };
@@ -184,7 +188,22 @@ function buildEmailHtml({ firstName, lastName, lang, volume = 1 }) {
   const volNum = (volume === 2 || volume === '2') ? 2 : 1;
   const volAssets = getVolumeAssets(volNum, emailLangKey);
   const subjectText = volNum === 2 ? et.subject.replace(/Vol\.\s*1/g, 'Vol. 2') : et.subject;
-  const introText = volNum === 2 ? et.intro.replace(/Vol\.\s*1/g, 'Vol. 2') : et.intro;
+  let introText = et.intro;
+  if (volNum === 2) {
+    if (emailLangKey === 'en') {
+      introText = "Thank you for choosing our second story collection <strong>Construction Site Adventures — Collection Vol. 2</strong>!<br><strong>Attached to this email</strong> you will find the official PDF with <strong>coloring pages</strong> featuring Nina, Benny, Rino, Leo, and all the friendly construction vehicles, ready to print and color.";
+    } else if (emailLangKey === 'it') {
+      introText = "Grazie per aver scelto la nostra seconda raccolta di storie <strong>Le Avventure del Cantiere — Raccolta Vol. 2</strong>!<br>In <strong>allegato a questa email</strong> trovi il file PDF ufficiale con i <strong>disegni da colorare</strong> di Nina, Benny, Rino, Leo e tutti i simpatici veicoli del cantiere, pronti da stampare e colorare.";
+    } else if (emailLangKey === 'de') {
+      introText = "Vielen Dank, dass du dich für unseren zweiten Sammelband <strong>Baustellen-Abenteuer — Sammelband Vol. 2</strong> entschieden hast!<br>Im <strong>Anhang dieser E-Mail</strong> findest du das offizielle PDF mit den <strong>Ausmalbildern</strong> von Nina, Benny, Rino, Leo und allen Baustellen-Freunden zum Ausdrucken und Ausmalen.";
+    } else if (emailLangKey === 'fr') {
+      introText = "Merci d'avoir choisi notre deuxième recueil <strong>Les Aventures du Chantier — Recueil Vol. 2</strong> !<br>Vous trouverez en <strong>pièce jointe de cet e-mail</strong> le fichier PDF officiel avec les <strong>coloriages</strong> de Nina, Benny, Rino, Léo et tous les héros du chantier, prêts à imprimer et à colorier.";
+    } else if (emailLangKey === 'es') {
+      introText = "¡Muchas gracias por elegir nuestra segunda colección de historias <strong>Las Aventuras de la Obra — Colección Vol. 2</strong>!<br><strong>Adjunto a este correo</strong> encontrarás el archivo PDF oficial con los <strong>dibujos para colorear</strong> de Nina, Benny, Rino, Leo y todos los simpáticos vehículos de la obra, listos para imprimir y colorear.";
+    } else {
+      introText = et.intro.replace(/Vol\.\s*1/g, 'Vol. 2');
+    }
+  }
 
   return `
 <!DOCTYPE html>

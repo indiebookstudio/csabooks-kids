@@ -27,7 +27,7 @@ console.log('\n--- 1. Verifica Integrità ASIN Paperback in books.json ---');
 const expectedAsins = {
   'einstein': { it: 'B0HP6YD1CM', en: 'B0HPG9WFSR', fr: 'B0HQ1F1HX8', es: 'B0HQZJB7V4' },
   'csa-vol1': { it: 'B0HN4QMLV1', en: 'B0HR9DZ64D' },
-  'csa-vol2': { it: 'B0HPB2L59F' }, // Correct Paperback!
+  'csa-vol2': { it: 'B0HPB2L59F', en: 'B0HPB2L59F' }, // Correct Paperback!
   'fano': { it: 'B0HD2X6HVJ' },
   'csa-01-benny-collina': { it: 'B0H6MN4LW7', en: 'B0H6SBPNM5', fr: 'B0HJM5R74L' },
   'csa-02-rudy-spiaggia': { it: 'B0H6Q5TX7M', en: 'B0H6XV8LN6', fr: 'B0HJX2H3MF' },

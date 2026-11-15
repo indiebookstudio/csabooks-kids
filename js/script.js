@@ -3484,6 +3484,14 @@ function applyLanguage(lang) {
       if (bonusFeat2DescText) {
         if (lang === 'it') {
           bonusFeat2DescText = "Nina la betoniera, Benny l'escavatore, Rino il rullo, Leo la gru e tutti gli amici ti aspettano per prendere vita con i tuoi colori.";
+        } else if (lang === 'en') {
+          bonusFeat2DescText = "Nina the cement mixer, Benny the excavator, Rino the roller, Leo the crane, and all their friends are waiting to come to life with your colors.";
+        } else if (lang === 'fr') {
+          bonusFeat2DescText = "Nina la bétonnière, Benny l'excavateur, Rino le rouleau compresseur, Léo la grue et tous les amis vous attendent pour prendre vie avec vos couleurs.";
+        } else if (lang === 'de') {
+          bonusFeat2DescText = "Betonmischerin Nina, Bagger Benny, Walze Rino, Kran Leo und alle Freunde warten darauf, mit deinen Farben lebendig zu werden.";
+        } else if (lang === 'es') {
+          bonusFeat2DescText = "Nina la hormigonera, Benny la excavadora, Rino el rodillo, Leo la grúa y todos los amigos te esperan para cobrar vida con tus colores.";
         }
       }
       if (bonusMetaTitleText) {
@@ -3554,8 +3562,9 @@ function applyLanguage(lang) {
           : 'assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png';
       } else {
         bonusCoverImg.src = isVol2 
-          ? 'assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png'
+          ? 'assets/construction-site-adventures/Bundle.Volume.2/EN/Front.Cover.png'
           : 'assets/construction-site-adventures/Bundle.Volume.1/EN/Front.Cover.png';
+      }
       }
       if (bonusCoverAltText) {
         bonusCoverImg.alt = bonusCoverAltText;
@@ -3577,7 +3586,7 @@ function applyLanguage(lang) {
     updateEpisodePage(lang);
   }
 
-  // Cantiere page: Raccolta Volume 1 card cover & languages badge
+  // Cantiere page: Raccolta Volume 1 & Volume 2 cards cover & languages badge
   const cantiereVol1Img = document.getElementById('csa-cantiere-vol1-card-img');
   if (cantiereVol1Img) {
     if (lang === 'it') {
@@ -3595,6 +3604,26 @@ function applyLanguage(lang) {
   const cantiereVol1Buy = document.getElementById('csa-cantiere-vol1-buy');
   if (cantiereVol1Buy) {
     cantiereVol1Buy.href = (lang === 'it') ? 'https://www.amazon.it/dp/B0HN4QMLV1' : 'https://www.amazon.com/dp/B0HR9DZ64D';
+  }
+
+  const cantiereHeroImg2 = document.getElementById('csa-cantiere-hero-img2');
+  if (cantiereHeroImg2) {
+    cantiereHeroImg2.src = (lang === 'it') ? 'books/csa-vol2/it/cover.png' : 'books/csa-vol2/en/cover.png';
+    cantiereHeroImg2.alt = (lang === 'it') ? 'Raccolta Volume 2' : 'Collection Volume 2';
+  }
+  const cantiereVol2Img = document.getElementById('csa-cantiere-vol2-card-img');
+  if (cantiereVol2Img) {
+    if (lang === 'it') {
+      cantiereVol2Img.src = 'books/csa-vol2/it/cover.png';
+      cantiereVol2Img.alt = 'Raccolta Vol. 2 - Le Avventure del Cantiere';
+    } else {
+      cantiereVol2Img.src = 'books/csa-vol2/en/cover.png';
+      cantiereVol2Img.alt = 'Collection Vol. 2 - Construction Site Adventures';
+    }
+  }
+  const cantiereVol2Langs = document.getElementById('csa-cantiere-vol2-langs');
+  if (cantiereVol2Langs) {
+    cantiereVol2Langs.textContent = (lang === 'it') ? 'IT • EN' : 'EN • IT';
   }
 
   renderBookCatalog(lang);
@@ -6351,6 +6380,165 @@ if (typeof window !== 'undefined') {
   window.EPISODES_DATA = EPISODES_DATA;
 }
 
+const EPISODES_DATA_VOL2 = {
+  1: {
+    it: {
+      title: "Benny l'escavatore e le monete dell'antica Roma",
+      metaDesc: "Ascolta l'audio o guarda il video della storia Benny l'escavatore e le monete dell'antica Roma per i lettori di CSA Books 4 Kids."
+    },
+    en: {
+      title: "Benny the Excavator and the Coins of Ancient Rome",
+      metaDesc: "Listen to the audio or watch the video of the story Benny the Excavator and the Coins of Ancient Rome for readers of CSA Books 4 Kids."
+    },
+    fr: {
+      title: "Benny l'excavateur et les pièces de l'antiquité romaine",
+      metaDesc: "Écoutez l'audio ou regardez la vidéo de l'histoire Benny l'excavateur et les pièces de l'antiquité romaine pour les lecteurs de CSA Books 4 Kids."
+    },
+    de: {
+      title: "Bagger Benny und die antiken römischen Münzen",
+      metaDesc: "Hören Sie das Audio oder sehen Sie sich das Video der Geschichte Bagger Benny und die antiken römischen Münzen für Leser von CSA Books 4 Kids an."
+    },
+    es: {
+      title: "Benny la excavadora y las monedas de la antigua Roma",
+      metaDesc: "Escucha el audio o mira el video del cuento Benny la excavadora y las monedas de la antigua Roma para los lectores de CSA Books 4 Kids."
+    },
+    nl: {
+      title: "Benny de graafmachine en de munten van het oude Rome",
+      metaDesc: "Luister naar de audio of bekijk de video van het verhaal Benny de graafmachine en de munten van het oude Rome voor lezers van CSA Books 4 Kids."
+    },
+    pl: {
+      title: "Koparka Benny i monety starożytnego Rzymu",
+      metaDesc: "Posłuchaj nagrania lub obejrzyj wideo z opowieścią Koparka Benny i monety starożytnego Rzymu dla czytelników CSA Books 4 Kids."
+    },
+    se: {
+      title: "Grävskopan Benny och det antika Roms mynt",
+      metaDesc: "Lyssna på ljudet eller titta på videon till sagan Grävskopan Benny och det antika Roms mynt för läsare av CSA Books 4 Kids."
+    },
+    jp: {
+      title: "ショベルカーのベニーと古代ローマのコイン",
+      metaDesc: "CSA Books 4 Kidsの読者のために『ショベルカーのベニーと古代ローマのコイン』の朗読音声や動画をお楽しみください。"
+    }
+  },
+  2: {
+    it: {
+      title: "Nina la betoniera e il ponte dei coniglietti",
+      metaDesc: "Ascolta l'audio o guarda il video della storia Nina la betoniera e il ponte dei coniglietti per i lettori di CSA Books 4 Kids."
+    },
+    en: {
+      title: "Nina the Cement Truck and the Bunny Bridge",
+      metaDesc: "Listen to the audio or watch the video of the story Nina the Cement Truck and the Bunny Bridge for readers of CSA Books 4 Kids."
+    },
+    fr: {
+      title: "Nina la bétonnière et le pont des petits lapins",
+      metaDesc: "Écoutez l'audio ou regardez la vidéo de l'histoire Nina la bétonnière et le pont des petits lapins pour les lecteurs de CSA Books 4 Kids."
+    },
+    de: {
+      title: "Betonmischerin Nina und die Hasenbrücke",
+      metaDesc: "Hören Sie das Audio oder sehen Sie sich das Video der Geschichte Betonmischerin Nina und die Hasenbrücke für Leser von CSA Books 4 Kids an."
+    },
+    es: {
+      title: "Nina la hormigonera y el puente de los conejitos",
+      metaDesc: "Escucha el audio o mira el video del cuento Nina la hormigonera y el puente de los conejitos para los lectores de CSA Books 4 Kids."
+    },
+    nl: {
+      title: "Nina de betonmolen en de konijnenbrug",
+      metaDesc: "Luister naar de audio of bekijk de video van het verhaal Nina de betonmolen en de konijnenbrug voor lezers van CSA Books 4 Kids."
+    },
+    pl: {
+      title: "Betoniarka Nina i most króliczków",
+      metaDesc: "Posłuchaj nagrania lub obejrzyj wideo z opowieścią Betoniarka Nina i most króliczków dla czytelników CSA Books 4 Kids."
+    },
+    se: {
+      title: "Betongblandaren Nina och kaninbron",
+      metaDesc: "Lyssna på ljudet eller titta på videon till sagan Betongblandaren Nina och kaninbron för läsare av CSA Books 4 Kids."
+    },
+    jp: {
+      title: "ミキサー車のニーナとうさぎの橋",
+      metaDesc: "CSA Books 4 Kidsの読者のために『ミキサー車のニーナとうさぎの橋』の朗読音声や動画をお楽しみください。"
+    }
+  },
+  3: {
+    it: {
+      title: "Rino il rullo e i ladri del cantiere",
+      metaDesc: "Ascolta l'audio o guarda il video della storia Rino il rullo e i ladri del cantiere per i lettori di CSA Books 4 Kids."
+    },
+    en: {
+      title: "Rino the Roller and the Construction Site Thieves",
+      metaDesc: "Listen to the audio or watch the video of the story Rino the Roller and the Construction Site Thieves for readers of CSA Books 4 Kids."
+    },
+    fr: {
+      title: "Rino le rouleau compresseur et les voleurs du chantier",
+      metaDesc: "Écoutez l'audio ou regardez la vidéo de l'histoire Rino le rouleau compresseur et les voleurs du chantier pour les lecteurs de CSA Books 4 Kids."
+    },
+    de: {
+      title: "Walze Rino und die Baustellendiebe",
+      metaDesc: "Hören Sie das Audio oder sehen Sie sich das Video der Geschichte Walze Rino und die Baustellendiebe für Leser von CSA Books 4 Kids an."
+    },
+    es: {
+      title: "Rino el rodillo y los ladrones de la obra",
+      metaDesc: "Escucha el audio o mira el video del cuento Rino el rodillo y los ladrones de la obra para los lectores de CSA Books 4 Kids."
+    },
+    nl: {
+      title: "Rino de wals en de dieven op de bouwplaats",
+      metaDesc: "Luister naar de audio of bekijk de video van het verhaal Rino de wals en de dieven op de bouwplaats voor lezers van CSA Books 4 Kids."
+    },
+    pl: {
+      title: "Walec Rino i złodzieje na placu budowy",
+      metaDesc: "Posłuchaj nagrania lub obejrzyj wideo z opowieścią Walec Rino i złodzieje na placu budowy dla czytelników CSA Books 4 Kids."
+    },
+    se: {
+      title: "Välten Rino och tjuvarna på byggarbetsplatsen",
+      metaDesc: "Lyssna på ljudet eller titta på videon till sagan Välten Rino och tjuvarna på byggarbetsplatsen för läsare av CSA Books 4 Kids."
+    },
+    jp: {
+      title: "ロードローラーのリノと工事現場のどろぼう",
+      metaDesc: "CSA Books 4 Kidsの読者のために『ロードローラーのリノと工事現場のどろぼう』の朗読音声や動画をお楽しみください。"
+    }
+  },
+  4: {
+    it: {
+      title: "Leo la gru e il nido della cinciallegra",
+      metaDesc: "Ascolta l'audio o guarda il video della storia Leo la gru e il nido della cinciallegra per i lettori di CSA Books 4 Kids."
+    },
+    en: {
+      title: "Leo the Crane and the Little Bird's Nest",
+      metaDesc: "Listen to the audio or watch the video of the story Leo the Crane and the Little Bird's Nest for readers of CSA Books 4 Kids."
+    },
+    fr: {
+      title: "Leo la grue et le nid de la mésange",
+      metaDesc: "Écoutez l'audio ou regardez la vidéo de l'histoire Leo la grue et le nid de la mésange pour les lecteurs de CSA Books 4 Kids."
+    },
+    de: {
+      title: "Kran Leo und das Meisennest",
+      metaDesc: "Hören Sie das Audio oder sehen Sie sich das Video der Geschichte Kran Leo und das Meisennest für Leser von CSA Books 4 Kids an."
+    },
+    es: {
+      title: "Leo la grúa y el nido del carbonero",
+      metaDesc: "Escucha el audio o mira el video del cuento Leo la grúa y el nido del carbonero para los lectores de CSA Books 4 Kids."
+    },
+    nl: {
+      title: "Leo de kraan en het nest van de koolmees",
+      metaDesc: "Luister naar de audio of bekijk de video van het verhaal Leo de kraan en het nest van de koolmees voor lezers van CSA Books 4 Kids."
+    },
+    pl: {
+      title: "Dźwig Leo i gniazdo sikorki",
+      metaDesc: "Posłuchaj nagrania lub obejrzyj wideo z opowieścią Dźwig Leo i gniazdo sikorki dla czytelników CSA Books 4 Kids."
+    },
+    se: {
+      title: "Kranen Leo och talgoxens bo",
+      metaDesc: "Lyssna på ljudet eller titta på videon till sagan Kranen Leo och talgoxens bo för läsare av CSA Books 4 Kids."
+    },
+    jp: {
+      title: "クレーン車のレオとシジュウカラの巣",
+      metaDesc: "CSA Books 4 Kidsの読者のために『クレーン車のレオとシジュウカラの巣』の朗読音声や動画をお楽しみください。"
+    }
+  }
+};
+
+if (typeof window !== 'undefined') {
+  window.EPISODES_DATA_VOL2 = EPISODES_DATA_VOL2;
+}
+
 function getActiveEpisodeVolume() {
   const mainEl = document.getElementById('episode-page-main');
   if (mainEl && mainEl.dataset.volume) {
@@ -6377,32 +6565,33 @@ function getActiveEpisodeNumber() {
 function updateEpisodePage(lang) {
   lang = (lang || 'it').toLowerCase();
   const epVol = getActiveEpisodeVolume();
-  if (epVol === 2) {
-    return;
-  }
   const strings = I18N[lang] || I18N.it;
   const epNum = getActiveEpisodeNumber();
   const isIt = (lang === 'it');
   const langFolder = isIt ? 'IT' : 'EN';
   const padEp = String(epNum).padStart(2, '0');
+  const bundleFolder = 'Bundle.Volume.' + epVol;
 
-  const epInfo = (typeof EPISODES_DATA !== 'undefined' && EPISODES_DATA[epNum]) ? EPISODES_DATA[epNum] : null;
+  const epInfo = (epVol === 2)
+    ? ((typeof EPISODES_DATA_VOL2 !== 'undefined' && EPISODES_DATA_VOL2[epNum]) ? EPISODES_DATA_VOL2[epNum] : null)
+    : ((typeof EPISODES_DATA !== 'undefined' && EPISODES_DATA[epNum]) ? EPISODES_DATA[epNum] : null);
+
   const langEp = epInfo ? (epInfo[lang] || epInfo.en || epInfo.it) : null;
   const storyTitle = langEp ? langEp.title : (document.getElementById('episode-title')?.textContent || '');
 
   // 1. Copertina Libro Raccolta
   const bookCoverImg = document.getElementById('episode-book-cover-img');
   if (bookCoverImg) {
-    bookCoverImg.src = 'assets/construction-site-adventures/Bundle.Volume.1/' + langFolder + '/Front.Cover.png';
+    bookCoverImg.src = 'assets/construction-site-adventures/' + bundleFolder + '/' + langFolder + '/Front.Cover.png';
     bookCoverImg.alt = isIt 
-      ? 'Copertina del libro Raccolta Volume 1 - Le Avventure del Cantiere'
-      : 'Book cover of Collection Volume 1 - Construction Site Adventures';
+      ? ('Copertina del libro Raccolta Volume ' + epVol + ' - Le Avventure del Cantiere')
+      : ('Book cover of Collection Volume ' + epVol + ' - Construction Site Adventures');
   }
 
   // 2. Copertina Episodio / Storia
   const storyCoverImg = document.getElementById('episode-story-cover-img');
   if (storyCoverImg) {
-    storyCoverImg.src = 'assets/construction-site-adventures/Bundle.Volume.1/' + langFolder + '/Bonus/' + padEp + '.Cover.png';
+    storyCoverImg.src = 'assets/construction-site-adventures/' + bundleFolder + '/' + langFolder + '/Bonus/' + padEp + '.Cover.png';
     storyCoverImg.alt = isIt 
       ? ('Copertina della storia: ' + storyTitle)
       : ('Cover of the story: ' + storyTitle);
@@ -6411,7 +6600,7 @@ function updateEpisodePage(lang) {
   // 3. Audio & Video Player Media Source
   const audioEl = document.getElementById('story-audio');
   if (audioEl) {
-    const targetAudioSrc = 'assets/construction-site-adventures/Bundle.Volume.1/' + langFolder + '/Bonus/' + padEp + '.Audio.wav';
+    const targetAudioSrc = 'assets/construction-site-adventures/' + bundleFolder + '/' + langFolder + '/Bonus/' + padEp + '.Audio.wav';
     const curAudioSrc = audioEl.getAttribute('src') || '';
     if (!curAudioSrc.includes(targetAudioSrc)) {
       const wasPlaying = !audioEl.paused && audioEl.currentTime > 0;
@@ -6424,8 +6613,8 @@ function updateEpisodePage(lang) {
 
   const videoEl = document.getElementById('story-video');
   if (videoEl) {
-    const targetVideoSrc = 'assets/construction-site-adventures/Bundle.Volume.1/' + langFolder + '/Bonus/' + padEp + '.Video.mp4';
-    const targetPosterSrc = 'assets/construction-site-adventures/Bundle.Volume.1/' + langFolder + '/Bonus/' + padEp + '.Cover.png';
+    const targetVideoSrc = 'assets/construction-site-adventures/' + bundleFolder + '/' + langFolder + '/Bonus/' + padEp + '.Video.mp4';
+    const targetPosterSrc = 'assets/construction-site-adventures/' + bundleFolder + '/' + langFolder + '/Bonus/' + padEp + '.Cover.png';
     videoEl.poster = targetPosterSrc;
     const curVideoSrc = videoEl.getAttribute('src') || '';
     if (!curVideoSrc.includes(targetVideoSrc)) {
@@ -6441,7 +6630,9 @@ function updateEpisodePage(lang) {
   setText('episode-book-tag', strings.episodeBookTag || (isIt ? 'Libro Raccolta' : 'Story Collection'));
   setText('episode-story-tag', (strings.episodeStoryTag || (isIt ? 'Storia' : 'Story')) + ' ' + epNum);
   
-  const badgeTemplate = strings.episodeBadgeText || (isIt ? 'Raccolta Vol. 1 • Storia {n} di 4' : 'Collection Vol. 1 • Story {n} of 4');
+  const badgeTemplate = isIt 
+    ? ('Raccolta Vol. ' + epVol + ' • Storia {n} di 4')
+    : ('Collection Vol. ' + epVol + ' • Story {n} of 4');
   setText('episode-badge-text', badgeTemplate.replace('{n}', epNum));
 
   if (langEp && langEp.title) {

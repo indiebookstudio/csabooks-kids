@@ -564,6 +564,22 @@
             "se": "https://www.amazon.se/dp/B0HPB2L59F",
             "jp": "https://www.amazon.co.jp/dp/B0HPB2L59F"
           }
+        },
+        "en": {
+          "languageName": "English",
+          "title": "Construction Site Adventures — Collection Vol. 2",
+          "available": true,
+          "asin": "B0HPB2L59F",
+          "amazon": {
+            "com": "https://www.amazon.com/dp/B0HPB2L59F",
+            "uk": "https://www.amazon.co.uk/dp/B0HPB2L59F",
+            "it": "https://www.amazon.it/dp/B0HPB2L59F",
+            "de": "https://www.amazon.de/dp/B0HPB2L59F",
+            "fr": "https://www.amazon.fr/dp/B0HPB2L59F",
+            "es": "https://www.amazon.es/dp/B0HPB2L59F",
+            "ca": "https://www.amazon.ca/dp/B0HPB2L59F",
+            "au": "https://www.amazon.com.au/dp/B0HPB2L59F"
+          }
         }
       }
     },

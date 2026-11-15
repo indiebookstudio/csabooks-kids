@@ -566,6 +566,22 @@
             "se": "https://www.amazon.se/dp/B0HPB2L59F",
             "jp": "https://www.amazon.co.jp/dp/B0HPB2L59F"
           }
+        },
+        "en": {
+          "languageName": "English",
+          "title": "Construction Site Adventures — Collection Vol. 2",
+          "available": true,
+          "asin": "B0HPB2L59F",
+          "amazon": {
+            "com": "https://www.amazon.com/dp/B0HPB2L59F",
+            "uk": "https://www.amazon.co.uk/dp/B0HPB2L59F",
+            "it": "https://www.amazon.it/dp/B0HPB2L59F",
+            "de": "https://www.amazon.de/dp/B0HPB2L59F",
+            "fr": "https://www.amazon.fr/dp/B0HPB2L59F",
+            "es": "https://www.amazon.es/dp/B0HPB2L59F",
+            "ca": "https://www.amazon.ca/dp/B0HPB2L59F",
+            "au": "https://www.amazon.com.au/dp/B0HPB2L59F"
+          }
         }
       }
     },
@@ -1895,6 +1911,23 @@
     }
   },
   "csa-vol2": {
+    "en": {
+      "cover": "books/csa-vol2/en/cover.png",
+      "back": "books/csa-vol2/en/back.png",
+      "interiors": [
+        "books/csa-vol2/en/interiors/01.png",
+        "books/csa-vol2/en/interiors/02.png",
+        "books/csa-vol2/en/interiors/03.png",
+        "books/csa-vol2/en/interiors/04.png",
+        "books/csa-vol2/en/interiors/05.png",
+        "books/csa-vol2/en/interiors/06.png",
+        "books/csa-vol2/en/interiors/07.png",
+        "books/csa-vol2/en/interiors/08.png",
+        "books/csa-vol2/en/interiors/09.png",
+        "books/csa-vol2/en/interiors/10.png"
+      ],
+      "pageCount": 12
+    },
     "it": {
       "cover": "books/csa-vol2/it/cover.png",
       "back": "books/csa-vol2/it/back.png",
