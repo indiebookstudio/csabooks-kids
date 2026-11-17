@@ -290,7 +290,7 @@
             "com": "https://www.amazon.com/dp/B0HPG9WFSR",
             "uk": "https://www.amazon.co.uk/dp/B0HPG9WFSR",
             "ca": "https://www.amazon.ca/dp/B0HPG9WFSR",
-            "it": "https://www.amazon.it/dp/B0HPG9WFSR"
+            "ie": "https://www.amazon.ie/dp/B0HPG9WFSR"
           }
         },
         "fr": {
@@ -300,8 +300,7 @@
           "asin": "B0HQ1F1HX8",
           "amazon": {
             "fr": "https://www.amazon.fr/dp/B0HQ1F1HX8",
-            "com": "https://www.amazon.com/dp/B0HQ1F1HX8",
-            "it": "https://www.amazon.it/dp/B0HQ1F1HX8"
+            "com": "https://www.amazon.com/dp/B0HQ1F1HX8"
           }
         },
         "es": {
@@ -313,8 +312,7 @@
             "es": "https://www.amazon.es/dp/B0HQZJB7V4",
             "com": "https://www.amazon.com/dp/B0HQZJB7V4",
             "us": "https://www.amazon.com/dp/B0HQZJB7V4",
-            "mx": "https://www.amazon.com.mx/dp/B0HQZJB7V4",
-            "it": "https://www.amazon.it/dp/B0HQZJB7V4"
+            "mx": "https://www.amazon.com.mx/dp/B0HQZJB7V4"
           }
         }
       }
@@ -431,7 +429,8 @@
             "nl": "https://www.amazon.nl/dp/B0HN4QMLV1",
             "pl": "https://www.amazon.pl/dp/B0HN4QMLV1",
             "se": "https://www.amazon.se/dp/B0HN4QMLV1",
-            "jp": "https://www.amazon.co.jp/dp/B0HN4QMLV1"
+            "jp": "https://www.amazon.co.jp/dp/B0HN4QMLV1",
+            "ie": "https://www.amazon.ie/dp/B0HN4QMLV1"
           }
         },
         "en": {
@@ -447,7 +446,8 @@
             "fr": "https://www.amazon.fr/dp/B0HR9DZ64D",
             "es": "https://www.amazon.es/dp/B0HR9DZ64D",
             "ca": "https://www.amazon.ca/dp/B0HR9DZ64D",
-            "au": "https://www.amazon.com.au/dp/B0HR9DZ64D"
+            "au": "https://www.amazon.com.au/dp/B0HR9DZ64D",
+            "ie": "https://www.amazon.ie/dp/B0HR9DZ64D"
           }
         }
       }
@@ -553,34 +553,36 @@
           "languageName": "Italiano",
           "title": "Le Avventure del Cantiere — Raccolta Vol. 2",
           "available": true,
-          "asin": "B0HPB2L59F",
+          "asin": "B0HRYHGF5K",
           "amazon": {
-            "it": "https://www.amazon.it/dp/B0HPB2L59F",
-            "com": "https://www.amazon.com/dp/B0HPB2L59F",
-            "de": "https://www.amazon.de/dp/B0HPB2L59F",
-            "fr": "https://www.amazon.fr/dp/B0HPB2L59F",
-            "es": "https://www.amazon.es/dp/B0HPB2L59F",
-            "uk": "https://www.amazon.co.uk/dp/B0HPB2L59F",
-            "nl": "https://www.amazon.nl/dp/B0HPB2L59F",
-            "pl": "https://www.amazon.pl/dp/B0HPB2L59F",
-            "se": "https://www.amazon.se/dp/B0HPB2L59F",
-            "jp": "https://www.amazon.co.jp/dp/B0HPB2L59F"
+            "it": "https://www.amazon.it/dp/B0HRYHGF5K",
+            "com": "https://www.amazon.com/dp/B0HRYHGF5K",
+            "de": "https://www.amazon.de/dp/B0HRYHGF5K",
+            "fr": "https://www.amazon.fr/dp/B0HRYHGF5K",
+            "es": "https://www.amazon.es/dp/B0HRYHGF5K",
+            "uk": "https://www.amazon.co.uk/dp/B0HRYHGF5K",
+            "nl": "https://www.amazon.nl/dp/B0HRYHGF5K",
+            "pl": "https://www.amazon.pl/dp/B0HRYHGF5K",
+            "se": "https://www.amazon.se/dp/B0HRYHGF5K",
+            "jp": "https://www.amazon.co.jp/dp/B0HRYHGF5K",
+            "ie": "https://www.amazon.ie/dp/B0HRYHGF5K"
           }
         },
         "en": {
           "languageName": "English",
           "title": "Construction Site Adventures — Collection Vol. 2",
           "available": true,
-          "asin": "B0HPB2L59F",
+          "asin": "B0HRYHGF5K",
           "amazon": {
-            "com": "https://www.amazon.com/dp/B0HPB2L59F",
-            "uk": "https://www.amazon.co.uk/dp/B0HPB2L59F",
-            "it": "https://www.amazon.it/dp/B0HPB2L59F",
-            "de": "https://www.amazon.de/dp/B0HPB2L59F",
-            "fr": "https://www.amazon.fr/dp/B0HPB2L59F",
-            "es": "https://www.amazon.es/dp/B0HPB2L59F",
-            "ca": "https://www.amazon.ca/dp/B0HPB2L59F",
-            "au": "https://www.amazon.com.au/dp/B0HPB2L59F"
+            "com": "https://www.amazon.com/dp/B0HRYHGF5K",
+            "uk": "https://www.amazon.co.uk/dp/B0HRYHGF5K",
+            "it": "https://www.amazon.it/dp/B0HRYHGF5K",
+            "de": "https://www.amazon.de/dp/B0HRYHGF5K",
+            "fr": "https://www.amazon.fr/dp/B0HRYHGF5K",
+            "es": "https://www.amazon.es/dp/B0HRYHGF5K",
+            "ca": "https://www.amazon.ca/dp/B0HRYHGF5K",
+            "au": "https://www.amazon.com.au/dp/B0HRYHGF5K",
+            "ie": "https://www.amazon.ie/dp/B0HRYHGF5K"
           }
         }
       }
@@ -873,7 +875,7 @@
           "amazon": {
             "com": "https://www.amazon.com/dp/B0H6SBPNM5",
             "uk": "https://www.amazon.co.uk/dp/B0H6SBPNM5",
-            "it": "https://www.amazon.it/dp/B0H6SBPNM5"
+            "ie": "https://www.amazon.ie/dp/B0H6SBPNM5"
           }
         },
         "fr": {
@@ -883,11 +885,7 @@
           "asin": "B0HJM5R74L",
           "amazon": {
             "fr": "https://www.amazon.fr/dp/B0HJM5R74L",
-            "it": "https://www.amazon.it/dp/B0HJM5R74L",
-            "com": "https://www.amazon.com/dp/B0HJM5R74L",
-            "de": "https://www.amazon.de/dp/B0HJM5R74L",
-            "es": "https://www.amazon.es/dp/B0HJM5R74L",
-            "uk": "https://www.amazon.co.uk/dp/B0HJM5R74L"
+            "com": "https://www.amazon.com/dp/B0HJM5R74L"
           }
         }
       }
@@ -958,7 +956,7 @@
           "amazon": {
             "com": "https://www.amazon.com/dp/B0H6XV8LN6",
             "uk": "https://www.amazon.co.uk/dp/B0H6XV8LN6",
-            "it": "https://www.amazon.it/dp/B0H6XV8LN6"
+            "ie": "https://www.amazon.ie/dp/B0H6XV8LN6"
           }
         },
         "fr": {
@@ -968,11 +966,7 @@
           "asin": "B0HJX2H3MF",
           "amazon": {
             "fr": "https://www.amazon.fr/dp/B0HJX2H3MF",
-            "it": "https://www.amazon.it/dp/B0HJX2H3MF",
-            "com": "https://www.amazon.com/dp/B0HJX2H3MF",
-            "de": "https://www.amazon.de/dp/B0HJX2H3MF",
-            "es": "https://www.amazon.es/dp/B0HJX2H3MF",
-            "uk": "https://www.amazon.co.uk/dp/B0HJX2H3MF"
+            "com": "https://www.amazon.com/dp/B0HJX2H3MF"
           }
         }
       }
@@ -1043,7 +1037,7 @@
           "amazon": {
             "com": "https://www.amazon.com/dp/B0H6ZDZ2N8",
             "uk": "https://www.amazon.co.uk/dp/B0H6ZDZ2N8",
-            "it": "https://www.amazon.it/dp/B0H6ZDZ2N8"
+            "ie": "https://www.amazon.ie/dp/B0H6ZDZ2N8"
           }
         },
         "fr": {
@@ -1053,11 +1047,7 @@
           "asin": "B0HJWY3YZ4",
           "amazon": {
             "fr": "https://www.amazon.fr/dp/B0HJWY3YZ4",
-            "it": "https://www.amazon.it/dp/B0HJWY3YZ4",
-            "com": "https://www.amazon.com/dp/B0HJWY3YZ4",
-            "de": "https://www.amazon.de/dp/B0HJWY3YZ4",
-            "es": "https://www.amazon.es/dp/B0HJWY3YZ4",
-            "uk": "https://www.amazon.co.uk/dp/B0HJWY3YZ4"
+            "com": "https://www.amazon.com/dp/B0HJWY3YZ4"
           }
         }
       }
@@ -1128,7 +1118,7 @@
           "amazon": {
             "com": "https://www.amazon.com/dp/B0H6SDVJDZ",
             "uk": "https://www.amazon.co.uk/dp/B0H6SDVJDZ",
-            "it": "https://www.amazon.it/dp/B0H6SDVJDZ"
+            "ie": "https://www.amazon.ie/dp/B0H6SDVJDZ"
           }
         },
         "fr": {
@@ -1205,7 +1195,7 @@
           "amazon": {
             "com": "https://www.amazon.com/dp/B0H6XMYR8Q",
             "uk": "https://www.amazon.co.uk/dp/B0H6XMYR8Q",
-            "it": "https://www.amazon.it/dp/B0H6XMYR8Q"
+            "ie": "https://www.amazon.ie/dp/B0H6XMYR8Q"
           }
         },
         "fr": {
@@ -1282,7 +1272,7 @@
           "amazon": {
             "com": "https://www.amazon.com/dp/B0H723KGZ5",
             "uk": "https://www.amazon.co.uk/dp/B0H723KGZ5",
-            "it": "https://www.amazon.it/dp/B0H723KGZ5"
+            "ie": "https://www.amazon.ie/dp/B0H723KGZ5"
           }
         },
         "fr": {
@@ -1359,7 +1349,7 @@
           "amazon": {
             "com": "https://www.amazon.com/dp/B0H75N8JT9",
             "uk": "https://www.amazon.co.uk/dp/B0H75N8JT9",
-            "it": "https://www.amazon.it/dp/B0H75N8JT9"
+            "ie": "https://www.amazon.ie/dp/B0H75N8JT9"
           }
         },
         "fr": {
@@ -1436,7 +1426,7 @@
           "amazon": {
             "com": "https://www.amazon.com/dp/B0H7LPQ8KX",
             "uk": "https://www.amazon.co.uk/dp/B0H7LPQ8KX",
-            "it": "https://www.amazon.it/dp/B0H7LPQ8KX"
+            "ie": "https://www.amazon.ie/dp/B0H7LPQ8KX"
           }
         },
         "fr": {

@@ -34,73 +34,65 @@
     pl: 'pl',
     se: 'se',
     be: 'com.be',
-    ie: 'co.uk',
+    ie: 'ie',
     jp: 'co.jp'
   };
 
-  // Client-side detection of user location / Amazon marketplace
-  function detectUserMarketplace() {
-    try {
-      const saved = localStorage.getItem('csa_marketplace');
-      if (saved && MARKET_DOMAINS[saved.toLowerCase()]) return saved.toLowerCase();
-    } catch(e) {}
-
-    let tz = '';
-    try {
-      tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
-    } catch (e) {}
-
-    const navLangs = (navigator.languages && navigator.languages.length) ? Array.from(navigator.languages) : [navigator.language || ''];
-    const langsLower = navLangs.map(l => (l || '').toLowerCase());
-
-    // Timezone check
-    if (tz.includes('London')) return 'uk';
-    if (tz.includes('Dublin')) return 'ie';
-    if (tz.includes('Australia') || tz.includes('Sydney') || tz.includes('Melbourne') || tz.includes('Brisbane') || tz.includes('Perth') || tz.includes('Adelaide')) return 'au';
-    if (tz.includes('Canada') || tz.includes('Toronto') || tz.includes('Vancouver') || tz.includes('Montreal') || tz.includes('Edmonton') || tz.includes('Winnipeg') || tz.includes('Halifax') || tz.includes('St_Johns')) return 'ca';
-    if (tz.includes('America') || tz.includes('New_York') || tz.includes('Chicago') || tz.includes('Los_Angeles') || tz.includes('Denver') || tz.includes('Phoenix')) return 'us';
-    if (tz.includes('Rome')) return 'it';
-    if (tz.includes('Paris')) return 'fr';
-    if (tz.includes('Berlin') || tz.includes('Vienna') || tz.includes('Zurich')) return 'de';
-    if (tz.includes('Madrid')) return 'es';
-    if (tz.includes('Amsterdam')) return 'nl';
-    if (tz.includes('Warsaw')) return 'pl';
-    if (tz.includes('Stockholm')) return 'se';
-    if (tz.includes('Brussels')) return 'be';
-    if (tz.includes('Tokyo')) return 'jp';
-
-    // Language/Locale code check
-    if (langsLower.some(l => /-gb\b/.test(l))) return 'uk';
-    if (langsLower.some(l => /-ie\b/.test(l))) return 'ie';
-    if (langsLower.some(l => /-ca\b/.test(l))) return 'ca';
-    if (langsLower.some(l => /-au\b/.test(l))) return 'au';
-    if (langsLower.some(l => /-be\b/.test(l))) return 'be';
-    if (langsLower.some(l => /-us\b/.test(l))) return 'us';
-    if (langsLower.some(l => /^it\b/.test(l))) return 'it';
-    if (langsLower.some(l => /^fr\b/.test(l))) return 'fr';
-    if (langsLower.some(l => /^de\b/.test(l))) return 'de';
-    if (langsLower.some(l => /^es\b/.test(l))) return 'es';
-    if (langsLower.some(l => /^nl\b/.test(l))) return 'nl';
-    if (langsLower.some(l => /^pl\b/.test(l))) return 'pl';
-    if (langsLower.some(l => /^sv\b/.test(l))) return 'se';
-    if (langsLower.some(l => /^ja\b/.test(l))) return 'jp';
-
-    // Fallback based on selected interface language
-    const langFallbacks = { it: 'it', en: 'us', de: 'de', fr: 'fr', es: 'es', nl: 'nl', pl: 'pl', se: 'se', jp: 'jp' };
-    return langFallbacks[currentLang] || 'us';
-  }
-  window.detectUserMarketplace = detectUserMarketplace;
   const LANG_MARKET_MAP = {
     it: 'it',
-    en: 'com',
-    de: 'de',
     fr: 'fr',
+    de: 'de',
     es: 'es',
     nl: 'nl',
     pl: 'pl',
     se: 'se',
-    jp: 'jp'
+    jp: 'jp',
+    en: 'com'
   };
+
+  // Client-side detection of Amazon marketplace based on active navigation language and location
+  function detectUserMarketplace(contextLang = currentLang) {
+    const lang = normalizeLang(contextLang || currentLang || DEFAULT_LANG);
+
+    // If navigation is in a language with its own primary Amazon store,
+    // the marketplace of navigation MUST correspond to that country/store!
+    if (lang === 'it') return 'it';
+    if (lang === 'fr') {
+      try {
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+        if (tz.includes('Montreal') || tz.includes('Canada')) return 'ca';
+        if (tz.includes('Brussels')) return 'be';
+      } catch(e) {}
+      return 'fr';
+    }
+    if (lang === 'de') return 'de';
+    if (lang === 'es') {
+      try {
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+        if (tz.includes('Mexico') || tz.includes('America/Mexico_City')) return 'mx';
+      } catch(e) {}
+      return 'es';
+    }
+    if (lang === 'nl') return 'nl';
+    if (lang === 'pl') return 'pl';
+    if (lang === 'se') return 'se';
+    if (lang === 'jp') return 'jp';
+
+    // English / international: check if visitor is from UK, Canada, Australia or US
+    try {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+      const navLangs = (navigator.languages && navigator.languages.length) ? Array.from(navigator.languages) : [navigator.language || ''];
+      const langsLower = navLangs.map(l => (l || '').toLowerCase());
+
+      if (tz.includes('London') || langsLower.some(l => /-gb\b/.test(l))) return 'uk';
+      if (tz.includes('Dublin') || langsLower.some(l => /-ie\b/.test(l))) return 'ie';
+      if (tz.includes('Australia') || tz.includes('Sydney') || tz.includes('Melbourne') || langsLower.some(l => /-au\b/.test(l))) return 'au';
+      if (tz.includes('Canada') || tz.includes('Toronto') || tz.includes('Vancouver') || langsLower.some(l => /-ca\b/.test(l))) return 'ca';
+    } catch(e) {}
+
+    return 'com';
+  }
+  window.detectUserMarketplace = detectUserMarketplace;
 
   // State
   let currentLang = DEFAULT_LANG;
@@ -142,6 +134,8 @@
     try {
       localStorage.setItem('csa_language', norm);
       localStorage.setItem('csa_lang', norm);
+      const m = LANG_MARKET_MAP[norm] || 'com';
+      localStorage.setItem('csa_marketplace', m);
     } catch(e) {}
     applyLanguage(norm, true);
 
@@ -289,39 +283,65 @@
   // Central Amazon Link Helper (Auto Geo-Targeted to User Country / Marketplace)
   function getAmazonPaperbackUrl(book, lang = currentLang) {
     if (!book || !book.editions) return null;
-    
-    // Choose appropriate edition
-    let edKey = lang;
+    const reqLang = normalizeLang(lang || currentLang || DEFAULT_LANG);
+
+    // 1. Choose appropriate edition for the requested language
+    let edKey = reqLang;
     if (!book.editions[edKey] || !book.editions[edKey].available) {
-      if (['nl', 'pl', 'se', 'jp'].includes(lang)) {
+      if (['nl', 'pl', 'se', 'jp', 'de'].includes(reqLang) && book.editions.en?.available) {
         edKey = 'en';
-      }
-      if (!book.editions[edKey] || !book.editions[edKey].available) {
-        if (book.editions.en && book.editions.en.available) {
-          edKey = 'en';
-        } else if (book.editions.it && book.editions.it.available) {
-          edKey = 'it';
-        } else {
-          const availKeys = Object.keys(book.editions).filter(k => book.editions[k]?.available);
-          if (availKeys.length === 0) return null;
-          edKey = availKeys[0];
-        }
+      } else if (book.editions.en && book.editions.en.available) {
+        edKey = 'en';
+      } else if (book.editions.it && book.editions.it.available) {
+        edKey = 'it';
+      } else {
+        const availKeys = Object.keys(book.editions).filter(k => book.editions[k]?.available);
+        if (availKeys.length === 0) return null;
+        edKey = availKeys[0];
       }
     }
 
     const edition = book.editions[edKey];
     if (!edition || !edition.available) return null;
 
-    const market = detectUserMarketplace();
-    const domain = MARKET_DOMAINS[market] || 'com';
+    // 2. Marketplace del paese di navigazione
+    // Se la lingua richiesta corrisponde a un'edizione specifica (es. nella modale o nella vista libro),
+    // usiamo la lingua di destinazione per identificare il marketplace target.
+    const navMarket = detectUserMarketplace(reqLang);
+    const editionMarket = LANG_MARKET_MAP[edKey] || 'com';
 
-    // 1. Direct match in edition.amazon dict
-    if (edition.amazon && edition.amazon[market]) {
-      const val = edition.amazon[market];
-      return val.startsWith('http') ? val : `https://www.amazon.${domain}/dp/${val}`;
+    // Determina il marketplace preferito:
+    // Se l'edizione è specifica per una lingua (es. fr, es, it, de):
+    // Deve puntare al marketplace proprio di quella lingua/edizione (es. fr -> amazon.fr, it -> amazon.it, es -> amazon.es)
+    // a meno che la navigazione non sia già in un marketplace supportato direttamente nei link dell'edizione.
+    let targetMarket = navMarket;
+    if (['fr', 'es', 'it', 'de'].includes(edKey)) {
+      if (reqLang === edKey || currentLang === edKey) {
+        targetMarket = editionMarket;
+      } else if (edition.amazon && !edition.amazon[navMarket]) {
+        targetMarket = editionMarket;
+      }
     }
 
-    // 2. Extract ASIN
+    // 3. Match diretto in edition.amazon
+    if (edition.amazon) {
+      if (edition.amazon[targetMarket]) {
+        const val = edition.amazon[targetMarket];
+        const domain = MARKET_DOMAINS[targetMarket] || 'com';
+        return val.startsWith('http') ? val : `https://www.amazon.${domain}/dp/${val}`;
+      }
+      if (edition.amazon[editionMarket]) {
+        const val = edition.amazon[editionMarket];
+        const domain = MARKET_DOMAINS[editionMarket] || 'com';
+        return val.startsWith('http') ? val : `https://www.amazon.${domain}/dp/${val}`;
+      }
+      if (edition.amazon.com) {
+        const val = edition.amazon.com;
+        return val.startsWith('http') ? val : `https://www.amazon.com/dp/${val}`;
+      }
+    }
+
+    // 4. Se abbiamo l'ASIN, genera il link sullo store corretto
     let asin = edition.asin || null;
     if (!asin && edition.amazon) {
       for (const k of Object.keys(edition.amazon)) {
@@ -335,10 +355,12 @@
     }
 
     if (asin) {
+      const finalMarket = (edition.amazon && edition.amazon[targetMarket]) ? targetMarket : editionMarket;
+      const domain = MARKET_DOMAINS[finalMarket] || 'com';
       return `https://www.amazon.${domain}/dp/${asin}`;
     }
 
-    // 3. Fallback to first existing URL
+    // 5. Fallback a primo link valido
     if (edition.amazon) {
       const firstKey = Object.keys(edition.amazon)[0];
       const val = edition.amazon[firstKey];

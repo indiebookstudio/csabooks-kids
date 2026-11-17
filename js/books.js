@@ -281,14 +281,14 @@ const BOOKS = [
       "assets/construction-site-adventures/Bundle.Volume.2/EN/12.png",
       "assets/construction-site-adventures/Bundle.Volume.2/EN/Back.Cover.png"
     ],
-    "asin": "B0HPB2L59F",
+    "asin": "B0HRYHGF5K",
     "amazon": {
-      "com": "B0HPB2L59F",
-      "uk": "B0HPB2L59F",
-      "it": "B0HPB2L59F",
-      "de": "B0HPB2L59F",
-      "fr": "B0HPB2L59F",
-      "es": "B0HPB2L59F"
+      "com": "B0HRYHGF5K",
+      "uk": "B0HRYHGF5K",
+      "it": "B0HRYHGF5K",
+      "de": "B0HRYHGF5K",
+      "fr": "B0HRYHGF5K",
+      "es": "B0HRYHGF5K"
     }
   },
   {
@@ -326,10 +326,10 @@ const BOOKS = [
       "assets/construction-site-adventures/Bundle.Volume.2/IT/12.png",
       "assets/construction-site-adventures/Bundle.Volume.2/IT/Back.Cover.png"
     ],
-    "asin": "B0HPB2L59F",
+    "asin": "B0HRYHGF5K",
     "amazon": {
-      "it": "B0HPB2L59F",
-      "com": "B0HPB2L59F"
+      "it": "B0HRYHGF5K",
+      "com": "B0HRYHGF5K"
     }
   },
   {
