@@ -72,8 +72,8 @@ languages.forEach(lang => {
   // Verifica che non sia presente il vecchio ASIN Kindle B0HN9G1V81
   assert(!html.includes('B0HN9G1V81'), `[${lang.toUpperCase()}] Zero riferimenti al vecchio ASIN Kindle B0HN9G1V81`);
 
-  // Verifica che per csa-vol2 sia presente il corretto ASIN Paperback B0HPB2L59F
-  assert(html.includes('B0HPB2L59F'), `[${lang.toUpperCase()}] Presente il corretto ASIN Paperback B0HPB2L59F per CSA Vol 2`);
+  // Verifica che per csa-vol2 sia presente il corretto ASIN Paperback B0HRYHGF5K
+  assert(html.includes('B0HRYHGF5K'), `[${lang.toUpperCase()}] Presente il corretto ASIN Paperback B0HRYHGF5K per CSA Vol 2`);
 
   // Verifica presenza badge linguistici
   assert(html.includes('csa-card-languages'), `[${lang.toUpperCase()}] Badge delle lingue disponibili presenti nelle card`);
@@ -98,7 +98,7 @@ languages.forEach(lang => {
   assert(html.includes('csa-cantiere-vol1-buy') && html.includes('csa-cantiere-vol2-buy'), `[${lang.toUpperCase()}] Pulsanti acquisto Vol 1 e Vol 2 presenti`);
 
   // Verifica che Vol 2 punti al paperback corretto
-  assert(html.includes('B0HPB2L59F'), `[${lang.toUpperCase()}] Pulsante acquisto Vol 2 punta al Paperback B0HPB2L59F`);
+  assert(html.includes('B0HRYHGF5K'), `[${lang.toUpperCase()}] Pulsante acquisto Vol 2 punta al Paperback B0HRYHGF5K`);
   assert(!html.includes('B0HN9G1V81'), `[${lang.toUpperCase()}] Vol 2 NON punta al Kindle B0HN9G1V81`);
 
   // Conta gli episodi nella griglia

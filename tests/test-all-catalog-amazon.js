@@ -27,7 +27,7 @@ console.log('\n--- 1. Verifica Integrità ASIN Paperback in books.json ---');
 const expectedAsins = {
   'einstein': { it: 'B0HP6YD1CM', en: 'B0HPG9WFSR', fr: 'B0HQ1F1HX8', es: 'B0HQZJB7V4' },
   'csa-vol1': { it: 'B0HN4QMLV1', en: 'B0HR9DZ64D' },
-  'csa-vol2': { it: 'B0HPB2L59F', en: 'B0HPB2L59F' }, // Correct Paperback!
+  'csa-vol2': { it: 'B0HRYHGF5K', en: 'B0HRYHGF5K' }, // Correct Paperback!
   'fano': { it: 'B0HD2X6HVJ' },
   'csa-01-benny-collina': { it: 'B0H6MN4LW7', en: 'B0H6SBPNM5', fr: 'B0HJM5R74L' },
   'csa-02-rudy-spiaggia': { it: 'B0H6Q5TX7M', en: 'B0H6XV8LN6', fr: 'B0HJX2H3MF' },
@@ -120,7 +120,7 @@ languages.forEach(lang => {
     }
 
     if (b.id === 'csa-vol2') {
-      assert(url.includes('B0HPB2L59F'), `[${lang.toUpperCase()}] CSA Vol 2 punta ESCLUSIVAMENTE al Paperback B0HPB2L59F: ${url}`);
+      assert(url.includes('B0HRYHGF5K'), `[${lang.toUpperCase()}] CSA Vol 2 punta ESCLUSIVAMENTE al Paperback B0HRYHGF5K: ${url}`);
     }
 
     verifiedButtonsCount++;
@@ -136,7 +136,7 @@ htmlFiles.forEach(f => {
   const content = fs.readFileSync(path.join(__dirname, '..', f), 'utf8');
   assert(!content.includes('B0HN9G1V81'), `${f} NON contiene il vecchio ASIN Kindle B0HN9G1V81`);
   if (content.includes('csa-cantiere-vol2-buy')) {
-    assert(content.includes('B0HPB2L59F'), `${f} contiene il corretto ASIN Paperback B0HPB2L59F per csa-cantiere-vol2-buy`);
+    assert(content.includes('B0HRYHGF5K'), `${f} contiene il corretto ASIN Paperback B0HRYHGF5K per csa-cantiere-vol2-buy`);
     verifiedButtonsCount++;
   }
 });
