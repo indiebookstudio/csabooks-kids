@@ -143,7 +143,7 @@
       "format": "paperback",
       "title": {
         "it": "Leo la gru & Bruno il camion in SOS Natale!",
-        "en": "Leo the Crane & Bruno the Truck in Christmas SOS!",
+        "en": "Leo the Crane & Bruno the Dump Truck in Save Santa!",
         "fr": "Léo la grue et Bruno le camion dans SOS Noël !",
         "de": "Kran Leo & LKW Bruno in SOS Weihnachten!",
         "es": "Leo la grúa y Bruno el camión en ¡SOS Navidad!",
@@ -154,7 +154,7 @@
       },
       "subtitle": {
         "it": "Le Avventure del Cantiere - Libro illustrato per bambini 2-5 anni",
-        "en": "Construction Site Adventures - Illustrated Book for Children Ages 2-5",
+        "en": "Construction Site Adventures - Illustrated Book for Kids Ages 2-5",
         "fr": "Les Aventures du Chantier - Livre illustré pour enfants de 2 à 5 ans",
         "de": "Baustellen-Abenteuer - Illustriertes Buch für Kinder von 2 bis 5 Jahren",
         "es": "Las Aventuras de la Construcción - Libro ilustrado para niños de 2 a 5 años",
@@ -165,7 +165,7 @@
       },
       "pitch": {
         "it": "È la notte della Vigilia e Babbo Natale è rimasto incastrato in un camino! Per fortuna ci sono Leo la gru e Bruno il camion: tra corde che si spezzano e renne che ridacchiano, salvare il Natale sarà un'avventura insolita, tutta da ridere!",
-        "en": "On Christmas Eve, Santa Claus gets stuck in a chimney! Luckily, Leo the Crane and Bruno the Truck are here to help save Christmas in a funny, unforgettable adventure!",
+        "en": "Santa is stuck upside down in a chimney. His reindeer can’t stop giggling, and there are still presents to deliver. Here come Leo the Crane and Bruno the Dump Truck! They’ve got a hook, a rope and a plan. Then comes a big SNAP! Can they come up with a new plan in time to save Christmas?",
         "fr": "Le soir du réveillon, le Père Noël se retrouve coincé dans une cheminée ! Heureusement, Léo la grue et Bruno le camion sont là pour sauver Noël !",
         "es": "¡En Nochebuena, Papá Noel se queda atascado en una chimenea! ¡Por suerte Leo la grúa y Bruno el camión acuden al rescate!",
         "de": "Am Heiligabend bleibt der Weihnachtsmann im Schornstein stecken! Zum Glück sind Kran Leo und LKW Bruno zur Stelle!",
@@ -181,7 +181,7 @@
           "Insegna l'amicizia, la generosità, il problem solving e lo spirito natalizio"
         ],
         "en": [
-          "Delightful Christmas adventure with Leo the Crane, Bruno the Truck, and Santa Claus",
+          "Delightful Christmas adventure with Leo the Crane, Bruno the Dump Truck, and Santa Claus",
           "Engaging rhyming story with a joyful holiday atmosphere, perfect for bedtime",
           "Teaches friendship, helping others, problem solving, and holiday spirit"
         ],
@@ -200,6 +200,23 @@
           "amazon": {
             "it": "https://www.amazon.it/dp/B0HQ72DLC7",
             "com": "https://www.amazon.com/dp/B0HQ72DLC7"
+          }
+        },
+        "en": {
+          "languageName": "English",
+          "title": "Leo the Crane & Bruno the Dump Truck in Save Santa!",
+          "available": true,
+          "asin": "B0HS4ZDWBV",
+          "amazon": {
+            "com": "https://www.amazon.com/dp/B0HS4ZDWBV",
+            "uk": "https://www.amazon.co.uk/dp/B0HS4ZDWBV",
+            "it": "https://www.amazon.it/dp/B0HS4ZDWBV",
+            "de": "https://www.amazon.de/dp/B0HS4ZDWBV",
+            "fr": "https://www.amazon.fr/dp/B0HS4ZDWBV",
+            "es": "https://www.amazon.es/dp/B0HS4ZDWBV",
+            "ca": "https://www.amazon.ca/dp/B0HS4ZDWBV",
+            "au": "https://www.amazon.com.au/dp/B0HS4ZDWBV",
+            "ie": "https://www.amazon.ie/dp/B0HS4ZDWBV"
           }
         }
       }
@@ -1839,6 +1856,30 @@
     }
   },
   "csa-10-leo-bruno-natale": {
+    "en": {
+      "cover": "books/csa-10-leo-bruno-natale/en/cover.png",
+      "back": "books/csa-10-leo-bruno-natale/en/back.png",
+      "interiors": [
+        "books/csa-10-leo-bruno-natale/en/interiors/2.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/3.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/4.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/5.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/6.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/7.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/8.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/9.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/10.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/11.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/12.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/13.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/14.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/15.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/16.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/17.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/18.png"
+      ],
+      "pageCount": 19
+    },
     "it": {
       "cover": "books/csa-10-leo-bruno-natale/it/cover.png",
       "back": "books/csa-10-leo-bruno-natale/it/back.png",

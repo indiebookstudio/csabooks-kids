@@ -62,7 +62,7 @@ console.log('\n--- 2. Verifica Missione Savana e SOS Natale (csa-09 & csa-10) --
 const csa10 = booksData.books.find(b => b.id === 'csa-10-leo-bruno-natale');
 assert(Boolean(csa10), "Libro csa-10 trovato in catalogo");
 assert(isBookAvailableInLang(csa10, 'it') === true, "SOS Natale DISPONIBILE in IT");
-assert(isBookAvailableInLang(csa10, 'en') === false, "SOS Natale NON disponibile in EN");
+assert(isBookAvailableInLang(csa10, 'en') === true, "SOS Natale DISPONIBILE in EN");
 assert(isBookAvailableInLang(csa10, 'fr') === false, "SOS Natale NON disponibile in FR");
 console.log('\n--- 2. Verifica Missione Savana (csa-09-leo-rudy-savana) ---');
 const savana = booksData.books.find(b => b.id === 'csa-09-leo-rudy-savana');
@@ -100,10 +100,11 @@ assert(isBookAvailableInLang(booksData.books.find(b => b.id === 'einstein'), 'es
 console.log('\n--- 4. Verifica Disponibilità NL, PL, SE, JP (Trattati come EN) ---');
 ['nl', 'pl', 'se', 'jp'].forEach(lang => {
   const booksInLang = booksData.books.filter(b => isBookAvailableInLang(b, lang));
-  assert(booksInLang.length === 11, `In [${lang.toUpperCase()}] ci sono 11 libri disponibili in inglese (incluso Raccolta Vol 1 e Vol 2 EN)`);
+  assert(booksInLang.length === 12, `In [${lang.toUpperCase()}] ci sono 12 libri disponibili in inglese (incluso Raccolta Vol 1, Vol 2 e SOS Natale EN)`);
   assert(!booksInLang.some(b => b.id === 'csa-09-leo-rudy-savana'), `In [${lang.toUpperCase()}] Savana non compare`);
   assert(booksInLang.some(b => b.id === 'csa-vol1'), `In [${lang.toUpperCase()}] Raccolta Vol 1 (EN) compare`);
   assert(booksInLang.some(b => b.id === 'csa-vol2'), `In [${lang.toUpperCase()}] Raccolta Vol 2 (EN) compare`);
+  assert(booksInLang.some(b => b.id === 'csa-10-leo-bruno-natale'), `In [${lang.toUpperCase()}] SOS Natale (EN) compare`);
 
   // Verify book cover resolves to English cover
   const bennyCover = getBookCover('csa-01-benny-collina', lang);
@@ -112,6 +113,8 @@ console.log('\n--- 4. Verifica Disponibilità NL, PL, SE, JP (Trattati come EN) 
   assert(vol1Cover.includes('/en/cover.png'), `In [${lang.toUpperCase()}] la copertina di Raccolta Vol 1 punta a /en/cover.png`);
   const vol2Cover = getBookCover('csa-vol2', lang);
   assert(vol2Cover.includes('/en/cover.png'), `In [${lang.toUpperCase()}] la copertina di Raccolta Vol 2 punta a /en/cover.png`);
+  const csa10Cover = getBookCover('csa-10-leo-bruno-natale', lang);
+  assert(csa10Cover.includes('/en/cover.png'), `In [${lang.toUpperCase()}] la copertina di SOS Natale punta a /en/cover.png`);
 });
 
 console.log('\n--- 5. Verifica Sottotitoli cantierePage.episodesSubtitle ---');

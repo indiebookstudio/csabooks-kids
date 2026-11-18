@@ -41,7 +41,7 @@ expectedBgs.forEach(bg => {
 });
 
 const coverCount = fs.readdirSync(coversDir).length;
-assert(coverCount === 26, `Copertine originali presenti: ${coverCount}/26`);
+assert(coverCount >= 26, `Copertine originali presenti: ${coverCount} (minimo 26)`);
 
 // 2. Caricamento configurazione campagna
 console.log('\n--- 2. Caricamento e Validazione Configurazione Campagna ---');
@@ -88,15 +88,28 @@ assert(itSlides[3].body.includes('9'), 'IT Slide 4: Testo cita 9 episodi');
 assert(itSlides[4].id === '04-fano', 'IT Slide 5: 04-fano');
 assert(itSlides[4].covers.length === 1 && itSlides[4].covers[0].src.includes('fano-it.png'), 'IT Slide 5: Copertina Fano IT');
 
-// INGLESE: 2 slide
+// INGLESE: 4 slide (sos-natale, 01-raccolte, 02-einstein, 03-collana)
 const enSlides = config.getSlidesForLanguage('en');
-assert(enSlides.length === 2, `Inglese: 2 slide previste (trovate: ${enSlides.length})`);
-assert(enSlides[0].id === '02-einstein', 'EN Slide 1: 02-einstein');
-assert(enSlides[0].covers[0].src.includes('einstein-en.jpg'), 'EN Slide 1: Copertina Einstein EN');
-assert(enSlides[1].id === '03-collana', 'EN Slide 2: 03-collana');
-assert(enSlides[1].covers.length === 3, `EN Slide 2: prime 3 copertine ordinate (trovate: ${enSlides[1].covers.length})`);
-assert(enSlides[1].totalCount === 8, 'EN Slide 2: Conteggio totale dichiarato 8 episodi');
-assert(enSlides[1].body.includes('8'), 'EN Slide 2: Testo cita 8 storie');
+assert(enSlides.length === 4, `Inglese: 4 slide previste (trovate: ${enSlides.length})`);
+assert(enSlides[0].id === 'sos-natale', 'EN Slide 1: sos-natale');
+assert(enSlides[0].title === 'Save Santa!', 'EN Slide 1: Titolo "Save Santa!"');
+assert(enSlides[0].eyebrow === 'CHRISTMAS NEW RELEASE', 'EN Slide 1: Eyebrow "CHRISTMAS NEW RELEASE"');
+assert(enSlides[0].badge === 'AGES 2-5', 'EN Slide 1: Badge "AGES 2-5"');
+assert(enSlides[0].actions.length === 1 && enSlides[0].actions[0].text === 'Discover the book', 'EN Slide 1: Pulsante "Discover the book" presente');
+assert(enSlides[0].actions[0].href === 'catalogo.html?lang=en#book-csa-10-leo-bruno-natale', 'EN Slide 1: Link corretto a catalogo.html?lang=en#book-csa-10-leo-bruno-natale');
+
+assert(enSlides[1].id === '01-raccolte', 'EN Slide 2: 01-raccolte');
+assert(enSlides[1].covers.length === 2, 'EN Slide 2: 2 copertine (Raccolta Vol 1 e Vol 2 EN)');
+assert(enSlides[1].covers[0].src.includes('csa-volume-1-en.png'), 'EN Slide 2: Copertina Raccolta Vol 1 EN');
+assert(enSlides[1].covers[1].src.includes('csa-volume-2-en.png'), 'EN Slide 2: Copertina Raccolta Vol 2 EN');
+assert(enSlides[1].actions.length === 1 && enSlides[1].actions[0].text === 'Discover', 'EN Slide 2: Singolo pulsante "Discover" presente');
+
+assert(enSlides[2].id === '02-einstein', 'EN Slide 3: 02-einstein');
+assert(enSlides[2].covers[0].src.includes('einstein-en.jpg'), 'EN Slide 3: Copertina Einstein EN');
+assert(enSlides[3].id === '03-collana', 'EN Slide 4: 03-collana');
+assert(enSlides[3].covers.length === 3, `EN Slide 4: prime 3 copertine ordinate (trovate: ${enSlides[3].covers.length})`);
+assert(enSlides[3].totalCount === 8, 'EN Slide 4: Conteggio totale dichiarato 8 episodi');
+assert(enSlides[3].body.includes('8'), 'EN Slide 4: Testo cita 8 storie');
 
 // FRANCESE: 2 slide
 const frSlides = config.getSlidesForLanguage('fr');
@@ -127,11 +140,11 @@ nonEnLangs.forEach(lang => {
 
 // 4. Verifica Esclusioni Vincolanti
 console.log('\n--- 4. Verifica Esclusioni e Vincoli Prodotti ---');
-// sos-natale deve essere presente esclusivamente in lingua italiana
-const nonItLangsWithSos = nonEnLangs.concat(['en', 'fr']).filter(lang => 
+// sos-natale deve essere presente esclusivamente in lingua italiana e inglese
+const otherLangsWithSos = nonEnLangs.concat(['fr']).filter(lang => 
   config.getSlidesForLanguage(lang).some(s => s.id === 'sos-natale')
 );
-assert(nonItLangsWithSos.length === 0, 'sos-natale presente esclusivamente in lingua italiana');
+assert(otherLangsWithSos.length === 0, 'sos-natale presente esclusivamente in lingua italiana e inglese');
 const allSlidesAllLangs = Object.keys(config.slidesData).flatMap(k => config.slidesData[k]);
 
 // Collana scolastica (Matematica 2) non deve comparire nell'hero

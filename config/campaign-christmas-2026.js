@@ -5,7 +5,7 @@
  * 
  * - Gestione stato attivo/disattivo della campagna (enabled: true/false)
  * - Data di conclusione configurabile (endDate: "YYYY-MM-DD")
- * - Regole rigorose di selezione slide per le 9 lingue (IT: 5 slide, altre: 2 slide)
+ * - Regole rigorose di selezione slide per le 9 lingue (IT: 5 slide, EN: 4 slide, FR: 2 slide, altre: 2 slide)
  * - Singolo pulsante "Scopri" integrato perfettamente nel layout senza overflow
  */
 
@@ -261,6 +261,59 @@
       }
     ],
     "en": [
+      {
+        "id": "sos-natale",
+        "type": "single",
+        "eyebrow": "CHRISTMAS NEW RELEASE",
+        "badge": "AGES 2-5",
+        "title": "Save Santa!",
+        "body": "Santa is stuck in the chimney! Leo the crane and Bruno the dump truck race to the rescue. A delightful rhyming picture book to read aloud with young construction fans.",
+        "backgrounds": {
+          "desktop": "assets/campaigns/christmas-2026/backgrounds/sos-natale-desktop.webp",
+          "mobile": "assets/campaigns/christmas-2026/backgrounds/sos-natale-mobile.webp"
+        },
+        "covers": [],
+        "actions": [
+          {
+            "type": "link",
+            "text": "Discover the book",
+            "href": "catalogo.html?lang=en#book-csa-10-leo-bruno-natale",
+            "primary": true
+          }
+        ]
+      },
+      {
+        "id": "01-raccolte",
+        "type": "raccolte",
+        "eyebrow": "Christmas 2026",
+        "badge": "Special Edition",
+        "title": "Two volumes. A Christmas full of adventures.",
+        "body": "Gift the complete Construction Site Adventures collections: choose Volume 1, Volume 2, or both.",
+        "backgrounds": {
+          "desktop": "assets/campaigns/christmas-2026/backgrounds/01-raccolte-desktop.png",
+          "mobile": "assets/campaigns/christmas-2026/backgrounds/01-raccolte-mobile.png"
+        },
+        "covers": [
+          {
+            "src": "assets/campaigns/christmas-2026/covers/csa-volume-1-en.png",
+            "alt": "Collection Volume 1",
+            "label": "Vol. 1"
+          },
+          {
+            "src": "assets/campaigns/christmas-2026/covers/csa-volume-2-en.png",
+            "alt": "Collection Volume 2",
+            "label": "Vol. 2"
+          }
+        ],
+        "actions": [
+          {
+            "type": "link",
+            "text": "Discover",
+            "href": "cantiere.html?lang=en#cantiere-raccolte",
+            "primary": true
+          }
+        ]
+      },
       {
         "id": "02-einstein",
         "type": "single",

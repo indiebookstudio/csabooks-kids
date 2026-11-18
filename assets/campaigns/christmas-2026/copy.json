@@ -30,6 +30,22 @@
     }
   },
   "en": {
+    "sos-natale": {
+      "eyebrow": "CHRISTMAS NEW RELEASE",
+      "title": "Save Santa!",
+      "body": "Santa is stuck in the chimney! Leo the crane and Bruno the dump truck race to the rescue. A delightful rhyming picture book to read aloud with young construction fans.",
+      "cta": "Discover the book"
+    },
+    "01-raccolte": {
+      "eyebrow": "Christmas 2026",
+      "title": "Two volumes. A Christmas full of adventures.",
+      "body": "Gift the complete Construction Site Adventures collections: choose Volume 1, Volume 2, or both.",
+      "cta": "Discover the collections",
+      "secondary": [
+        "Volume 1 on Amazon",
+        "Volume 2 on Amazon"
+      ]
+    },
     "02-einstein": {
       "eyebrow": "Christmas 2026",
       "title": "Give the wonder of discovery.",

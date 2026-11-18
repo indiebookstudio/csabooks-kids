@@ -54,6 +54,25 @@
     ],
     "en": [
       {
+        "id": "sos-natale",
+        "covers": [],
+        "backgrounds": {
+          "desktop": "backgrounds/sos-natale-desktop.webp",
+          "mobile": "backgrounds/sos-natale-mobile.webp"
+        }
+      },
+      {
+        "id": "01-raccolte",
+        "covers": [
+          "covers/csa-volume-1-en.png",
+          "covers/csa-volume-2-en.png"
+        ],
+        "backgrounds": {
+          "desktop": "backgrounds/01-raccolte-desktop.png",
+          "mobile": "backgrounds/01-raccolte-mobile.png"
+        }
+      },
+      {
         "id": "02-einstein",
         "covers": [
           "covers/einstein-en.jpg"

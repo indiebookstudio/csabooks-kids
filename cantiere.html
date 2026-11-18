@@ -273,6 +273,7 @@
 
     <!-- Sezione Raccolte Ufficiali Vol. 1 e Vol. 2 -->
     <section class="csa-section" id="raccolte">
+      <span id="cantiere-raccolte" style="position: absolute; margin-top: -80px;"></span>
       <div class="csa-container">
         <div class="csa-section-header">
           <h2 class="csa-section-title" data-i18n="cantierePage.raccolteTitle">Quattro storie complete in ogni volume</h2>
@@ -294,7 +295,17 @@
             <div class="csa-card-content">
               <span class="csa-card-author">Marco Salucci</span>
               <h3 class="csa-card-title" data-i18n="cantierePage.vol1Title">Le Avventure del Cantiere — Raccolta Vol. 1</h3>
-              <div class="csa-card-languages" id="csa-cantiere-vol1-langs"><span class="csa-lang-pill active">🇮🇹 <span data-i18n="catalog.italianEditionBadge">Edizione Italiana</span></span></div>
+              <div class="csa-card-languages" id="csa-cantiere-vol1-langs">
+                <span class="csa-lang-label" data-i18n="catalog.availableEditions">Disponibile in:</span>
+                <span class="csa-lang-pill active">
+                  <img src="https://flagcdn.com/24x18/it.png" srcset="https://flagcdn.com/48x36/it.png 2x" width="15" height="11" alt="IT" class="csa-pill-flag">
+                  <span>IT</span>
+                </span>
+                <span class="csa-lang-pill">
+                  <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="15" height="11" alt="EN" class="csa-pill-flag">
+                  <span>EN</span>
+                </span>
+              </div>
               <p class="csa-card-pitch" data-i18n="cantierePage.vol1Pitch">
                 Comprende 4 storie: Benny l'escavatore, Rudy la ruspa, Leo la gru e Bruno il camion. QR code con video-lettura e disegni da colorare.
               </p>
@@ -310,7 +321,7 @@
           <!-- Card Vol 2 -->
           <article class="csa-book-card">
             <div class="csa-card-media" onclick="window.openBookModal('csa-vol2')">
-              <img src="books/csa-vol2/it/cover.png" alt="Raccolta Vol. 2" class="csa-card-cover-img" />
+              <img id="csa-cantiere-vol2-card-img" src="books/csa-vol2/it/cover.png" alt="Raccolta Vol. 2" class="csa-card-cover-img" />
               <button type="button" class="csa-card-preview-btn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
                 <span data-i18n="featured.readSample">Sfoglia anteprima</span>
@@ -319,7 +330,17 @@
             <div class="csa-card-content">
               <span class="csa-card-author">Marco Salucci</span>
               <h3 class="csa-card-title" data-i18n="cantierePage.vol2Title">Le Avventure del Cantiere — Raccolta Vol. 2</h3>
-              <div class="csa-card-languages" id="csa-cantiere-vol1-langs"><span class="csa-lang-pill active">🇮🇹 <span data-i18n="catalog.italianEditionBadge">Edizione Italiana</span></span></div>
+              <div class="csa-card-languages" id="csa-cantiere-vol2-langs">
+                <span class="csa-lang-label" data-i18n="catalog.availableEditions">Disponibile in:</span>
+                <span class="csa-lang-pill active">
+                  <img src="https://flagcdn.com/24x18/it.png" srcset="https://flagcdn.com/48x36/it.png 2x" width="15" height="11" alt="IT" class="csa-pill-flag">
+                  <span>IT</span>
+                </span>
+                <span class="csa-lang-pill">
+                  <img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="15" height="11" alt="EN" class="csa-pill-flag">
+                  <span>EN</span>
+                </span>
+              </div>
               <p class="csa-card-pitch" data-i18n="cantierePage.vol2Pitch">
                 Comprende 4 storie: Benny e le monete romane, Nina la betoniera, Rino il rullo e Leo e la cinciallegra. QR code con bonus esclusivi.
               </p>

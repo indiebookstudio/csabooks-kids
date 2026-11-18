@@ -38,7 +38,7 @@ const expectedAsins = {
   'csa-07-rino-ladri': { it: 'B0H75DDGLQ', en: 'B0H75N8JT9' },
   'csa-08-leo-cinciallegra': { it: 'B0H7JK9R46', en: 'B0H7LPQ8KX' },
   'csa-09-leo-rudy-savana': { it: 'B0HJRRRDMX' },
-  'csa-10-leo-bruno-natale': { it: 'B0HQ72DLC7' }
+  'csa-10-leo-bruno-natale': { it: 'B0HQ72DLC7', en: 'B0HS4ZDWBV' }
 };
 
 let verifiedButtonsCount = 0;
@@ -121,6 +121,14 @@ languages.forEach(lang => {
 
     if (b.id === 'csa-vol2') {
       assert(url.includes('B0HRYHGF5K'), `[${lang.toUpperCase()}] CSA Vol 2 punta ESCLUSIVAMENTE al Paperback B0HRYHGF5K: ${url}`);
+    }
+
+    if (b.id === 'csa-10-leo-bruno-natale') {
+      if (lang === 'it') {
+        assert(url.includes('B0HQ72DLC7'), `[${lang.toUpperCase()}] SOS Natale punta al Paperback IT B0HQ72DLC7: ${url}`);
+      } else {
+        assert(url.includes('B0HS4ZDWBV'), `[${lang.toUpperCase()}] SOS Natale punta al Paperback EN B0HS4ZDWBV: ${url}`);
+      }
     }
 
     verifiedButtonsCount++;

@@ -329,6 +329,30 @@ window.BOOKS_MANIFEST = {
     }
   },
   "csa-10-leo-bruno-natale": {
+    "en": {
+      "cover": "books/csa-10-leo-bruno-natale/en/cover.png",
+      "back": "books/csa-10-leo-bruno-natale/en/back.png",
+      "interiors": [
+        "books/csa-10-leo-bruno-natale/en/interiors/2.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/3.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/4.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/5.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/6.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/7.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/8.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/9.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/10.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/11.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/12.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/13.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/14.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/15.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/16.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/17.png",
+        "books/csa-10-leo-bruno-natale/en/interiors/18.png"
+      ],
+      "pageCount": 19
+    },
     "it": {
       "cover": "books/csa-10-leo-bruno-natale/it/cover.png",
       "back": "books/csa-10-leo-bruno-natale/it/back.png",

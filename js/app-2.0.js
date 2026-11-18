@@ -377,24 +377,18 @@
     const avail = Object.keys(book.editions).filter(k => book.editions[k] && book.editions[k].available);
     if (avail.length === 0) return '';
 
-    const flagMap = { it: '🇮🇹', en: '🇬🇧', fr: '🇫🇷', de: '🇩🇪', es: '🇪🇸', nl: '🇳🇱', pl: '🇵🇱', se: '🇸🇪', jp: '🇯🇵' };
+    const flagCodeMap = { it: 'it', en: 'gb', fr: 'fr', de: 'de', es: 'es', nl: 'nl', pl: 'pl', se: 'se', jp: 'jp' };
     const nameMap = { it: 'IT', en: 'EN', fr: 'FR', de: 'DE', es: 'ES', nl: 'NL', pl: 'PL', se: 'SE', jp: 'JP' };
-
-    if (avail.length === 1 && avail[0] === 'it') {
-      const label = t('catalog.italianEditionBadge') || 'Edizione Italiana';
-      return `
-        <div class="csa-card-languages" title="${t('catalog.italianEditionOnly') || 'Edizione in lingua italiana'}">
-          <span class="csa-lang-pill active">🇮🇹 ${label}</span>
-        </div>
-      `;
-    }
 
     const labelText = t('catalog.availableEditions') || 'Disponibile in:';
     const pillsHtml = avail.map(k => {
       const isCur = (k === targetLang) || (k === 'en' && ['nl', 'pl', 'se', 'jp', 'de', 'es'].includes(targetLang) && !avail.includes(targetLang));
+      const flagCode = flagCodeMap[k] || k;
+      const codeLabel = nameMap[k] || k.toUpperCase();
       return `
         <span class="csa-lang-pill ${isCur ? 'active' : ''}">
-          ${flagMap[k] || ''} ${nameMap[k] || k.toUpperCase()}
+          <img src="https://flagcdn.com/24x18/${flagCode}.png" srcset="https://flagcdn.com/48x36/${flagCode}.png 2x" width="15" height="11" alt="${codeLabel}" class="csa-pill-flag">
+          <span>${codeLabel}</span>
         </span>
       `;
     }).join('');
@@ -589,6 +583,7 @@
     const hasEditions = availableEditions.length > 1;
 
     let editionsHtml = '';
+    const flagCodeMap = { it: 'it', en: 'gb', fr: 'fr', de: 'de', es: 'es', nl: 'nl', pl: 'pl', se: 'se', jp: 'jp' };
     if (hasEditions) {
       editionsHtml = `
         <div class="csa-modal-edition-selector">
@@ -597,9 +592,11 @@
             ${availableEditions.map(k => {
               const ed = book.editions[k];
               const isSelected = (k === editionKey);
+              const flagCode = flagCodeMap[k] || k;
               return `
                 <button type="button" class="csa-edition-pill ${isSelected ? 'active' : ''}" onclick="window.switchModalEdition('${k}')">
-                  ${ed.languageName || k.toUpperCase()}
+                  <img src="https://flagcdn.com/24x18/${flagCode}.png" srcset="https://flagcdn.com/48x36/${flagCode}.png 2x" width="16" height="12" alt="" class="csa-pill-flag">
+                  <span>${ed.languageName || k.toUpperCase()}</span>
                 </button>
               `;
             }).join('')}
@@ -609,11 +606,14 @@
     } else if (availableEditions.length === 1) {
       const ed = book.editions[availableEditions[0]];
       const edName = ed.languageName || (availableEditions[0] === 'it' ? 'Italiano' : availableEditions[0].toUpperCase());
+      const singleLang = availableEditions[0];
+      const flagCode = flagCodeMap[singleLang] || singleLang;
       editionsHtml = `
         <div class="csa-modal-edition-selector single-edition">
           <span class="csa-modal-edition-label">${t('modal.editionSelect')}</span>
           <span class="csa-edition-badge single">
-            ${availableEditions[0] === 'it' ? '🇮🇹 ' : ''}${edName} (${t('modal.paperback')})
+            <img src="https://flagcdn.com/24x18/${flagCode}.png" srcset="https://flagcdn.com/48x36/${flagCode}.png 2x" width="16" height="12" alt="" class="csa-pill-flag">
+            <span>${edName} (${t('modal.paperback')})</span>
           </span>
         </div>
       `;
@@ -1113,15 +1113,23 @@
     }
     if (heroImg1 && heroImg2) {
       heroImg1.src = getBookCover('csa-vol1', currentLang);
-      heroImg2.src = 'books/csa-vol2/it/cover.png';
+      heroImg2.src = getBookCover('csa-vol2', currentLang);
     }
     const vol1CardImg = document.getElementById('csa-cantiere-vol1-card-img');
     if (vol1CardImg) {
       vol1CardImg.src = getBookCover('csa-vol1', currentLang);
     }
+    const vol2CardImg = document.getElementById('csa-cantiere-vol2-card-img');
+    if (vol2CardImg) {
+      vol2CardImg.src = getBookCover('csa-vol2', currentLang);
+    }
     const vol1Langs = document.getElementById('csa-cantiere-vol1-langs');
     if (vol1Langs && b1) {
       vol1Langs.innerHTML = renderCardLanguageBadges(b1, currentLang);
+    }
+    const vol2Langs = document.getElementById('csa-cantiere-vol2-langs');
+    if (vol2Langs && b2) {
+      vol2Langs.innerHTML = renderCardLanguageBadges(b2, currentLang);
     }
 
     const grid = document.getElementById('cantiere-episodes-grid');
