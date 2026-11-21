@@ -466,6 +466,18 @@
             "au": "https://www.amazon.com.au/dp/B0HR9DZ64D",
             "ie": "https://www.amazon.ie/dp/B0HR9DZ64D"
           }
+        },
+        "fr": {
+          "languageName": "Français",
+          "title": "Les Aventures du Chantier — Recueil Vol. 1",
+          "available": true,
+          "asin": "B0HSC66326",
+          "amazon": {
+            "fr": "https://www.amazon.fr/dp/B0HSC66326",
+            "com": "https://www.amazon.com/dp/B0HSC66326",
+            "ca": "https://www.amazon.ca/dp/B0HSC66326",
+            "be": "https://www.amazon.com.be/dp/B0HSC66326"
+          }
         }
       }
     },
@@ -1920,6 +1932,23 @@
         "books/csa-vol1/en/interiors/08.png",
         "books/csa-vol1/en/interiors/09.png",
         "books/csa-vol1/en/interiors/10.png"
+      ],
+      "pageCount": 12
+    },
+    "fr": {
+      "cover": "books/csa-vol1/fr/cover.png",
+      "back": "books/csa-vol1/fr/back.png",
+      "interiors": [
+        "books/csa-vol1/fr/interiors/01.png",
+        "books/csa-vol1/fr/interiors/02.png",
+        "books/csa-vol1/fr/interiors/03.png",
+        "books/csa-vol1/fr/interiors/04.png",
+        "books/csa-vol1/fr/interiors/05.png",
+        "books/csa-vol1/fr/interiors/06.png",
+        "books/csa-vol1/fr/interiors/07.png",
+        "books/csa-vol1/fr/interiors/08.png",
+        "books/csa-vol1/fr/interiors/09.png",
+        "books/csa-vol1/fr/interiors/10.png"
       ],
       "pageCount": 12
     },

@@ -17,19 +17,23 @@ const episodesData = eval('(' + match[1].replace(/;$/, '') + ')');
 const expected = {
   1: {
     it: "Benny l'escavatore e la collina che cambiava forma",
-    en: "Benny the Excavator and the Shape-Shifting Hill"
+    en: "Benny the Excavator and the Shape-Shifting Hill",
+    fr: "Benny l'excavateur et la colline qui changeait de forme"
   },
   2: {
     it: "Rudy la ruspa e la spiaggia che scompariva",
-    en: "Rudy the Bulldozer and the Vanishing Beach"
+    en: "Rudy the Bulldozer and the Vanishing Beach",
+    fr: "Rudy le bulldozer et la plage qui disparaissait"
   },
   3: {
     it: "Leo la gru e le gemme della montagna",
-    en: "Leo the Crane and the Mountain Gems"
+    en: "Leo the Crane and the Mountain Gems",
+    fr: "Leo la grue et les gemmes de la montagne"
   },
   4: {
     it: "Bruno il camion e il laghetto delle papere",
-    en: "Bruno the Dump Truck and the Duck Pond"
+    en: "Bruno the Dump Truck and the Duck Pond",
+    fr: "Bruno le camion et la mare aux canards"
   }
 };
 
@@ -38,8 +42,10 @@ for (const [epNum, titles] of Object.entries(expected)) {
   assert(ep, `Episode ${epNum} must exist in EPISODES_DATA`);
   assert.strictEqual(ep.it.title, titles.it, `Episode ${epNum} IT title mismatch`);
   assert.strictEqual(ep.en.title, titles.en, `Episode ${epNum} EN title mismatch`);
+  assert.strictEqual(ep.fr.title, titles.fr, `Episode ${epNum} FR title mismatch`);
   assert(ep.en.metaDesc.includes(titles.en), `Episode ${epNum} EN metaDesc should include title`);
-  console.log(`  ✓ Vol 1 Episodio ${epNum}: IT="${ep.it.title}" | EN="${ep.en.title}"`);
+  assert(ep.fr.metaDesc.includes(titles.fr), `Episode ${epNum} FR metaDesc should include title`);
+  console.log(`  ✓ Vol 1 Episodio ${epNum}: IT="${ep.it.title}" | EN="${ep.en.title}" | FR="${ep.fr.title}"`);
 }
 
 // 2. Check Volume 2 EPISODES_DATA_VOL2

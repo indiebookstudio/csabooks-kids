@@ -1,13 +1,39 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('=== CSA VOLUME 1 ENGLISH & MULTILINGUAL AUDIT ===\n');
+console.log('=== CSA VOLUME 1 MULTILINGUAL AUDIT (IT, EN, FR) ===\n');
 
 // 1. Verify Assets on Disk
 console.log('--- 1. Asset Files Verification ---');
 const expectedFiles = [
-  'assets/construction-site-adventures/Bundle.Volume.1/EN/Front.Cover.png',
-  'assets/construction-site-adventures/Bundle.Volume.1/EN/Back.Cover.png',
+  // Books canonical assets
+  'books/csa-vol1/it/cover.png',
+  'books/csa-vol1/it/back.png',
+  'books/csa-vol1/it/interiors/01.png',
+  'books/csa-vol1/it/interiors/10.png',
+  'books/csa-vol1/en/cover.png',
+  'books/csa-vol1/en/back.png',
+  'books/csa-vol1/en/interiors/01.png',
+  'books/csa-vol1/en/interiors/10.png',
+  'books/csa-vol1/fr/cover.png',
+  'books/csa-vol1/fr/back.png',
+  'books/csa-vol1/fr/interiors/01.png',
+  'books/csa-vol1/fr/interiors/10.png',
+  // IT Bonuses
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/Bonus.CSA.Vol.1.pdf',
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/01.Cover.png',
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/01.Audio.wav',
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/01.Video.mp4',
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/02.Cover.png',
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/02.Audio.wav',
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/02.Video.mp4',
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/03.Cover.png',
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/03.Audio.wav',
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/03.Video.mp4',
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/04.Cover.png',
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/04.Audio.wav',
+  'assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/04.Video.mp4',
+  // EN Bonuses
   'assets/construction-site-adventures/Bundle.Volume.1/EN/Bonus/Bonus.CSA.Vol.1.pdf',
   'assets/construction-site-adventures/Bundle.Volume.1/EN/Bonus/01.Cover.png',
   'assets/construction-site-adventures/Bundle.Volume.1/EN/Bonus/01.Audio.wav',
@@ -21,10 +47,20 @@ const expectedFiles = [
   'assets/construction-site-adventures/Bundle.Volume.1/EN/Bonus/04.Cover.png',
   'assets/construction-site-adventures/Bundle.Volume.1/EN/Bonus/04.Audio.wav',
   'assets/construction-site-adventures/Bundle.Volume.1/EN/Bonus/04.Video.mp4',
-  'books/csa-vol1/en/cover.png',
-  'books/csa-vol1/en/back.png',
-  'books/csa-vol1/en/interiors/01.png',
-  'books/csa-vol1/en/interiors/10.png'
+  // FR Bonuses
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/Bonus.CSA.Vol.1.pdf',
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/01.Cover.png',
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/01.Audio.wav',
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/01.Video.mp4',
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/02.Cover.png',
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/02.Audio.wav',
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/02.Video.mp4',
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/03.Cover.png',
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/03.Audio.wav',
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/03.Video.mp4',
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/04.Cover.png',
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/04.Audio.wav',
+  'assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/04.Video.mp4'
 ];
 
 let assetsOk = true;
@@ -36,7 +72,7 @@ expectedFiles.forEach(f => {
   }
 });
 if (assetsOk) {
-  console.log('✅ All 19 key asset files exist on disk.\n');
+  console.log(`✅ All ${expectedFiles.length} key asset files exist on disk.\n`);
 }
 
 // 2. Verify HTML files structure
@@ -143,6 +179,7 @@ console.log('\n--- 5. Bonus Dispatcher Localization Verification ---');
 const sendBonusCode = fs.readFileSync('api/send-bonus.js', 'utf8');
 const checks = [
   { name: 'Multilingual EMAIL_I18N object', check: sendBonusCode.includes('const EMAIL_I18N = {') },
+  // EN
   { name: 'EN subject localized', check: sendBonusCode.includes('Your Coloring Pages from Construction Site Adventures') },
   { name: 'EN intro localized', check: sendBonusCode.includes('Thank you for choosing our story collection') },
   { name: 'EN badge localized', check: sendBonusCode.includes('PDF file attached to this email (Ready to print)') },
@@ -150,7 +187,16 @@ const checks = [
   { name: 'EN headerTagline localized', check: sendBonusCode.includes("Children's stories born in the family") },
   { name: 'EN question localized', check: sendBonusCode.includes("Have questions or want to share your children's colored drawings?") },
   { name: 'EN default recipient name', check: sendBonusCode.includes('Young Artist') },
-  { name: 'EN volume asset mapping', check: sendBonusCode.includes('Bundle.Volume.1/EN/Front.Cover.png') && sendBonusCode.includes('Bonus-CSA-Volume1-Coloring-Pages.pdf') }
+  { name: 'EN volume asset mapping', check: sendBonusCode.includes('Bundle.Volume.1/EN/Bonus/Bonus.CSA.Vol.1.pdf') && sendBonusCode.includes('Bonus-CSA-Volume1-Coloring-Pages.pdf') },
+  // FR
+  { name: 'FR subject localized', check: sendBonusCode.includes('Vos coloriages des Aventures du Chantier') },
+  { name: 'FR intro localized', check: sendBonusCode.includes('Merci d\'avoir choisi notre recueil') },
+  { name: 'FR badge localized', check: sendBonusCode.includes('Fichier PDF en pièce jointe (Prêt à imprimer)') },
+  { name: 'FR ctaTitle localized', check: sendBonusCode.includes('Vous aimez les aventures du chantier ?') },
+  { name: 'FR headerTagline localized', check: sendBonusCode.includes("Histoires pour enfants, nées en famille") },
+  { name: 'FR question localized', check: sendBonusCode.includes("Vous avez des questions ou souhaitez nous envoyer les dessins coloriés") },
+  { name: 'FR default recipient name', check: sendBonusCode.includes('Petit Artiste') },
+  { name: 'FR volume asset mapping', check: sendBonusCode.includes('Bundle.Volume.1/FR/Bonus/Bonus.CSA.Vol.1.pdf') && sendBonusCode.includes('Bonus-CSA-Volume1-Coloriages.pdf') }
 ];
 
 let bonusOk = true;

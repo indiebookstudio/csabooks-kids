@@ -20,7 +20,7 @@ const REQUIRED_QR_ROUTES = [
     slug: 'csa-vol1-bonus-8f2e91b7d4a6',
     dirFallback: path.join('csa-vol1-bonus-8f2e91b7d4a6', 'index.html'),
     assetFiles: [
-      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Front.Cover.png'),
+      path.join('books', 'csa-vol1', 'it', 'cover.png'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', 'Bonus.CSA.Vol.1.pdf')
     ]
   },
@@ -30,7 +30,7 @@ const REQUIRED_QR_ROUTES = [
     slug: 'csa-vol1-ep1-ita-7b3f91a8d2c4',
     dirFallback: path.join('csa-vol1-ep1-ita-7b3f91a8d2c4', 'index.html'),
     assetFiles: [
-      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Front.Cover.png'),
+      path.join('books', 'csa-vol1', 'it', 'cover.png'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '01.Cover.png'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '01.Audio.wav'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '01.Video.mp4')
@@ -42,7 +42,7 @@ const REQUIRED_QR_ROUTES = [
     slug: 'csa-vol1-ep2-ita-4d9e16a2c8f1',
     dirFallback: path.join('csa-vol1-ep2-ita-4d9e16a2c8f1', 'index.html'),
     assetFiles: [
-      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Front.Cover.png'),
+      path.join('books', 'csa-vol1', 'it', 'cover.png'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '02.Cover.png'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '02.Audio.wav'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '02.Video.mp4')
@@ -54,7 +54,7 @@ const REQUIRED_QR_ROUTES = [
     slug: 'csa-vol1-ep3-ita-9a5c83e1f7d2',
     dirFallback: path.join('csa-vol1-ep3-ita-9a5c83e1f7d2', 'index.html'),
     assetFiles: [
-      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Front.Cover.png'),
+      path.join('books', 'csa-vol1', 'it', 'cover.png'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '03.Cover.png'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '03.Audio.wav'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '03.Video.mp4')
@@ -66,7 +66,7 @@ const REQUIRED_QR_ROUTES = [
     slug: 'csa-vol1-ep4-ita-6e2b94f0a3c5',
     dirFallback: path.join('csa-vol1-ep4-ita-6e2b94f0a3c5', 'index.html'),
     assetFiles: [
-      path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Front.Cover.png'),
+      path.join('books', 'csa-vol1', 'it', 'cover.png'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '04.Cover.png'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '04.Audio.wav'),
       path.join('assets', 'construction-site-adventures', 'Bundle.Volume.1', 'IT', 'Bonus', '04.Video.mp4')

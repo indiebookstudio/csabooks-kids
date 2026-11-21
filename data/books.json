@@ -464,6 +464,18 @@
             "au": "https://www.amazon.com.au/dp/B0HR9DZ64D",
             "ie": "https://www.amazon.ie/dp/B0HR9DZ64D"
           }
+        },
+        "fr": {
+          "languageName": "Français",
+          "title": "Les Aventures du Chantier — Recueil Vol. 1",
+          "available": true,
+          "asin": "B0HSC66326",
+          "amazon": {
+            "fr": "https://www.amazon.fr/dp/B0HSC66326",
+            "com": "https://www.amazon.com/dp/B0HSC66326",
+            "ca": "https://www.amazon.ca/dp/B0HSC66326",
+            "be": "https://www.amazon.com.be/dp/B0HSC66326"
+          }
         }
       }
     },

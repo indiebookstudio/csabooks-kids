@@ -3556,14 +3556,18 @@ function applyLanguage(lang) {
 
     const bonusCoverImg = document.getElementById('bonus-cover-img');
     if (bonusCoverImg) {
-      if (lang === 'it') {
-        bonusCoverImg.src = isVol2 
+      if (isVol2) {
+        bonusCoverImg.src = (lang === 'it')
           ? 'assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png'
-          : 'assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png';
+          : 'assets/construction-site-adventures/Bundle.Volume.2/EN/Front.Cover.png';
       } else {
-        bonusCoverImg.src = isVol2 
-          ? 'assets/construction-site-adventures/Bundle.Volume.2/EN/Front.Cover.png'
-          : 'assets/construction-site-adventures/Bundle.Volume.1/EN/Front.Cover.png';
+        if (lang === 'it') {
+          bonusCoverImg.src = 'books/csa-vol1/it/cover.png';
+        } else if (lang === 'fr') {
+          bonusCoverImg.src = 'books/csa-vol1/fr/cover.png';
+        } else {
+          bonusCoverImg.src = 'books/csa-vol1/en/cover.png';
+        }
       }
       if (bonusCoverAltText) {
         bonusCoverImg.alt = bonusCoverAltText;
@@ -3586,11 +3590,28 @@ function applyLanguage(lang) {
   }
 
   // Cantiere page: Raccolta Volume 1 & Volume 2 cards cover & languages badge
+  const cantiereHeroImg1 = document.getElementById('csa-cantiere-hero-img1');
+  if (cantiereHeroImg1) {
+    if (lang === 'it') {
+      cantiereHeroImg1.src = 'books/csa-vol1/it/cover.png';
+      cantiereHeroImg1.alt = 'Raccolta Volume 1 - Le Avventure del Cantiere';
+    } else if (lang === 'fr') {
+      cantiereHeroImg1.src = 'books/csa-vol1/fr/cover.png';
+      cantiereHeroImg1.alt = 'Recueil Volume 1 - Les Aventures du Chantier';
+    } else {
+      cantiereHeroImg1.src = 'books/csa-vol1/en/cover.png';
+      cantiereHeroImg1.alt = 'Collection Volume 1 - Construction Site Adventures';
+    }
+  }
+
   const cantiereVol1Img = document.getElementById('csa-cantiere-vol1-card-img');
   if (cantiereVol1Img) {
     if (lang === 'it') {
       cantiereVol1Img.src = 'books/csa-vol1/it/cover.png';
       cantiereVol1Img.alt = 'Raccolta Vol. 1 - Le Avventure del Cantiere';
+    } else if (lang === 'fr') {
+      cantiereVol1Img.src = 'books/csa-vol1/fr/cover.png';
+      cantiereVol1Img.alt = 'Recueil Vol. 1 - Les Aventures du Chantier';
     } else {
       cantiereVol1Img.src = 'books/csa-vol1/en/cover.png';
       cantiereVol1Img.alt = 'Collection Vol. 1 - Construction Site Adventures';
@@ -3598,11 +3619,11 @@ function applyLanguage(lang) {
   }
   const cantiereVol1Langs = document.getElementById('csa-cantiere-vol1-langs');
   if (cantiereVol1Langs) {
-    cantiereVol1Langs.textContent = (lang === 'it') ? 'IT • EN' : 'EN • IT';
+    cantiereVol1Langs.textContent = (lang === 'it') ? 'IT • EN • FR' : ((lang === 'fr') ? 'FR • EN • IT' : 'EN • FR • IT');
   }
   const cantiereVol1Buy = document.getElementById('csa-cantiere-vol1-buy');
   if (cantiereVol1Buy) {
-    cantiereVol1Buy.href = (lang === 'it') ? 'https://www.amazon.it/dp/B0HN4QMLV1' : 'https://www.amazon.com/dp/B0HR9DZ64D';
+    cantiereVol1Buy.href = (lang === 'it') ? 'https://www.amazon.it/dp/B0HN4QMLV1' : ((lang === 'fr') ? 'https://www.amazon.fr/dp/B0HSC66326' : 'https://www.amazon.com/dp/B0HR9DZ64D');
   }
 
   const cantiereHeroImg2 = document.getElementById('csa-cantiere-hero-img2');
@@ -4311,12 +4332,21 @@ function renderCollectionsCatalog(lang) {
   const footerLink = document.getElementById('footer-link-raccolte');
   const grid = document.getElementById('collections-catalog-grid');
 
-  const targetLangCode = (lang === 'it') ? 'it' : 'en';
-  var bundleBooks = (typeof BOOKS !== 'undefined' && Array.isArray(BOOKS))
-    ? BOOKS.filter(b => b.collection === 'bundle' && b.languageCode === targetLangCode)
-    : [];
-  if (bundleBooks.length === 0 && typeof BOOKS !== 'undefined' && Array.isArray(BOOKS)) {
-    bundleBooks = BOOKS.filter(b => b.collection === 'bundle' && b.languageCode === 'en');
+  var bundleBooks = [];
+  if (typeof BOOKS !== 'undefined' && Array.isArray(BOOKS)) {
+    const volumes = [1, 2];
+    volumes.forEach(vol => {
+      let b = BOOKS.find(item => item.collection === 'bundle' && item.volume === vol && item.languageCode === lang);
+      if (!b) {
+        b = BOOKS.find(item => item.collection === 'bundle' && item.volume === vol && item.languageCode === (lang === 'it' ? 'it' : 'en'));
+      }
+      if (!b) {
+        b = BOOKS.find(item => item.collection === 'bundle' && item.volume === vol && item.languageCode === 'en');
+      }
+      if (b && !bundleBooks.some(existing => existing.id === b.id)) {
+        bundleBooks.push(b);
+      }
+    });
   }
 
   const hasBundles = bundleBooks.length > 0;
@@ -4347,7 +4377,7 @@ function renderCollectionsCatalog(lang) {
     if (Array.isArray(book.storiesIncluded) && book.storiesIncluded.length > 0) {
       storiesHtml = `
         <div class="collection-stories-block">
-          <span class="collection-stories-header">${(lang === 'it') ? '4 storie complete nel volume:' : '4 complete stories in this volume:'}</span>
+          <span class="collection-stories-header">${(lang === 'it') ? '4 storie complete nel volume:' : ((lang === 'fr') ? '4 histoires complètes dans ce volume :' : '4 complete stories in this volume:')}</span>
           <ol class="collection-stories-list">
             ${book.storiesIncluded.map((st, idx) => `
               <li class="collection-story-item">
@@ -6567,7 +6597,8 @@ function updateEpisodePage(lang) {
   const strings = I18N[lang] || I18N.it;
   const epNum = getActiveEpisodeNumber();
   const isIt = (lang === 'it');
-  const langFolder = isIt ? 'IT' : 'EN';
+  const isFr = (lang === 'fr');
+  const langFolder = (epVol === 1 && isFr) ? 'FR' : (isIt ? 'IT' : 'EN');
   const padEp = String(epNum).padStart(2, '0');
   const bundleFolder = 'Bundle.Volume.' + epVol;
 
@@ -6581,10 +6612,18 @@ function updateEpisodePage(lang) {
   // 1. Copertina Libro Raccolta
   const bookCoverImg = document.getElementById('episode-book-cover-img');
   if (bookCoverImg) {
-    bookCoverImg.src = 'assets/construction-site-adventures/' + bundleFolder + '/' + langFolder + '/Front.Cover.png';
+    if (epVol === 1) {
+      bookCoverImg.src = isIt 
+        ? 'books/csa-vol1/it/cover.png' 
+        : (isFr ? 'books/csa-vol1/fr/cover.png' : 'books/csa-vol1/en/cover.png');
+    } else {
+      bookCoverImg.src = isIt 
+        ? 'books/csa-vol2/it/cover.png' 
+        : 'books/csa-vol2/en/cover.png';
+    }
     bookCoverImg.alt = isIt 
       ? ('Copertina del libro Raccolta Volume ' + epVol + ' - Le Avventure del Cantiere')
-      : ('Book cover of Collection Volume ' + epVol + ' - Construction Site Adventures');
+      : (isFr ? ('Couverture du livre Recueil Volume ' + epVol + ' - Les Aventures du Chantier') : ('Book cover of Collection Volume ' + epVol + ' - Construction Site Adventures'));
   }
 
   // 2. Copertina Episodio / Storia
@@ -6593,7 +6632,7 @@ function updateEpisodePage(lang) {
     storyCoverImg.src = 'assets/construction-site-adventures/' + bundleFolder + '/' + langFolder + '/Bonus/' + padEp + '.Cover.png';
     storyCoverImg.alt = isIt 
       ? ('Copertina della storia: ' + storyTitle)
-      : ('Cover of the story: ' + storyTitle);
+      : (isFr ? ('Couverture de l\'histoire : ' + storyTitle) : ('Cover of the story: ' + storyTitle));
   }
 
   // 3. Audio & Video Player Media Source
@@ -6626,31 +6665,31 @@ function updateEpisodePage(lang) {
   }
 
   // 4. Testi Testata e Contenuto
-  setText('episode-book-tag', strings.episodeBookTag || (isIt ? 'Libro Raccolta' : 'Story Collection'));
-  setText('episode-story-tag', (strings.episodeStoryTag || (isIt ? 'Storia' : 'Story')) + ' ' + epNum);
+  setText('episode-book-tag', strings.episodeBookTag || (isIt ? 'Libro Raccolta' : (isFr ? 'Livre Recueil' : 'Story Collection')));
+  setText('episode-story-tag', (strings.episodeStoryTag || (isIt ? 'Storia' : (isFr ? 'Histoire' : 'Story'))) + ' ' + epNum);
   
   const badgeTemplate = isIt 
     ? ('Raccolta Vol. ' + epVol + ' • Storia {n} di 4')
-    : ('Collection Vol. ' + epVol + ' • Story {n} of 4');
+    : (isFr ? ('Recueil Vol. ' + epVol + ' • Histoire {n} sur 4') : ('Collection Vol. ' + epVol + ' • Story {n} of 4'));
   setText('episode-badge-text', badgeTemplate.replace('{n}', epNum));
 
   if (langEp && langEp.title) {
     setText('episode-title', langEp.title);
   }
-  setText('episode-lead', strings.episodeLead || (isIt ? 'Ascolta la storia narrata o guarda il video illustrato.' : 'Listen to the narrated story or watch the illustrated video.'));
+  setText('episode-lead', strings.episodeLead || (isIt ? 'Ascolta la storia narrata o guarda il video illustrato.' : (isFr ? 'Écoutez l\'histoire racontée ou regardez la vidéo illustrée.' : 'Listen to the narrated story or watch the illustrated video.')));
 
   // 5. Bottoni Scelta Media
   const btnAudioTitle = document.querySelector('#btn-play-audio .btn-media-title');
   if (btnAudioTitle) {
-    btnAudioTitle.textContent = strings.episodeBtnAudio || (isIt ? "Ascolta l'Audio" : 'Listen to Audio');
+    btnAudioTitle.textContent = strings.episodeBtnAudio || (isIt ? "Ascolta l'Audio" : (isFr ? "Écouter l'Audio" : 'Listen to Audio'));
   }
   const btnVideoTitle = document.querySelector('#btn-play-video .btn-media-title');
   if (btnVideoTitle) {
-    btnVideoTitle.textContent = strings.episodeBtnVideo || (isIt ? 'Guarda il Video' : 'Watch Video');
+    btnVideoTitle.textContent = strings.episodeBtnVideo || (isIt ? 'Guarda il Video' : (isFr ? 'Regarder la Vidéo' : 'Watch Video'));
   }
 
   // 6. Consiglio di lettura / Box note
-  setText('episode-note-text', strings.episodeNoteText || (isIt ? 'Sfoglia il libro insieme al tuo bambino durante l\'ascolto o la visione!' : 'Flip through the book together with your child while listening or watching!'));
+  setText('episode-note-text', strings.episodeNoteText || (isIt ? 'Sfoglia il libro insieme al tuo bambino durante l\'ascolto o la visione!' : (isFr ? 'Feuilletez le livre avec votre enfant pendant l\'écoute ou le visionnage !' : 'Flip through the book together with your child while listening or watching!')));
 
   // 7. Status Badge
   const statusEl = document.getElementById('player-status-text');
@@ -6659,23 +6698,23 @@ function updateEpisodePage(lang) {
     const isVideoMode = videoBox && videoBox.style.display !== 'none';
     if (isVideoMode) {
       if (videoEl && !videoEl.paused && !videoEl.ended) {
-        statusEl.textContent = strings.episodeStatusVideoPlaying || 'Riproduzione video in corso...';
+        statusEl.textContent = strings.episodeStatusVideoPlaying || (isFr ? 'Lecture de la vidéo en cours...' : (isIt ? 'Riproduzione video in corso...' : 'Video playback in progress...'));
       } else if (videoEl && videoEl.paused && videoEl.currentTime > 0) {
-        statusEl.textContent = strings.episodeStatusVideoPaused || 'Video in pausa';
+        statusEl.textContent = strings.episodeStatusVideoPaused || (isFr ? 'Vidéo en pause' : (isIt ? 'Video in pausa' : 'Video paused'));
       } else if (videoEl && videoEl.ended) {
-        statusEl.textContent = strings.episodeStatusVideoEnded || 'Visione completata';
+        statusEl.textContent = strings.episodeStatusVideoEnded || (isFr ? 'Visionnage terminé' : (isIt ? 'Visione completata' : 'Video finished'));
       } else {
-        statusEl.textContent = strings.episodeStatusVideo || 'Video';
+        statusEl.textContent = strings.episodeStatusVideo || (isFr ? 'Vidéo' : (isIt ? 'Video' : 'Video'));
       }
     } else {
       if (audioEl && !audioEl.paused && !audioEl.ended) {
-        statusEl.textContent = strings.episodeStatusAudioPlaying || 'Riproduzione audio in corso...';
+        statusEl.textContent = strings.episodeStatusAudioPlaying || (isFr ? 'Lecture audio en cours...' : (isIt ? 'Riproduzione audio in corso...' : 'Playing audio...'));
       } else if (audioEl && audioEl.paused && audioEl.currentTime > 0) {
-        statusEl.textContent = strings.episodeStatusAudioPaused || 'Audio in pausa';
+        statusEl.textContent = strings.episodeStatusAudioPaused || (isFr ? 'Audio en pause' : (isIt ? 'Audio in pause' : 'Audio paused'));
       } else if (audioEl && audioEl.ended) {
-        statusEl.textContent = strings.episodeStatusAudioEnded || 'Ascolto completato';
+        statusEl.textContent = strings.episodeStatusAudioEnded || (isFr ? 'Écoute terminée' : (isIt ? 'Ascolto completato' : 'Audio finished'));
       } else {
-        statusEl.textContent = strings.episodeStatusAudio || 'Audio';
+        statusEl.textContent = strings.episodeStatusAudio || (isFr ? 'Audio' : (isIt ? 'Audio' : 'Audio'));
       }
     }
   }

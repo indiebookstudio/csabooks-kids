@@ -153,6 +153,49 @@ async function runTests() {
     }
   }
 
+  console.log('\n--- 6b. Testing French Volume 1 Brevo Payload Construction ---');
+  {
+    process.env.BREVO_API_KEY = 'test-brevo-api-key';
+    let interceptedBody = null;
+
+    const originalFetch = globalThis.fetch;
+    globalThis.fetch = async (url, options) => {
+      interceptedBody = JSON.parse(options.body);
+      return new Response(JSON.stringify({ messageId: '<test-msg-fr1@brevo.com>' }), {
+        status: 201,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    };
+
+    try {
+      const req = new Request('http://localhost/api/send-bonus', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: 'Jean',
+          lastName: 'Dupont',
+          email: 'jean.dupont@exemple.fr',
+          volume: 1,
+          lang: 'fr'
+        })
+      });
+
+      const res = await handler(req);
+      assert(res.status === 200, 'Status should be 200 OK');
+      const data = await res.json();
+      assert(data.success === true, 'Response success should be true');
+
+      assert(interceptedBody.subject.includes('Vos coloriages des Aventures du Chantier'), 'Subject must be in French');
+      assert(interceptedBody.attachment[0].url === 'https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/Bonus.CSA.Vol.1.pdf', 'Attachment URL must point to French PDF');
+      assert(interceptedBody.attachment[0].name === 'Bonus-CSA-Volume1-Coloriages.pdf', 'Attachment name must be in French');
+      assert(interceptedBody.htmlContent.includes('Les Aventures du Chantier'), 'HTML must contain French series name');
+      assert(interceptedBody.htmlContent.includes('Jean Dupont'), 'HTML must contain recipient name');
+      assert(interceptedBody.htmlContent.includes('Rudy'), 'HTML must mention Rudy in French intro');
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
+  }
+
   console.log('\n--- 7. Testing Volume 2 Brevo Payload Construction ---');
   {
     process.env.BREVO_API_KEY = 'test-brevo-api-key';

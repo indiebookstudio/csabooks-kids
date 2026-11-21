@@ -40,7 +40,7 @@
     }
     // Fallback ad ASIN noti verificati
     const fallbackMap = {
-      'csa-vol1': lang === 'en' ? 'https://www.amazon.com/dp/B0HR9DZ64D' : 'https://www.amazon.it/dp/B0HN4QMLV1',
+      'csa-vol1': lang === 'en' ? 'https://www.amazon.com/dp/B0HR9DZ64D' : (lang === 'fr' ? 'https://www.amazon.fr/dp/B0HSC66326' : 'https://www.amazon.it/dp/B0HN4QMLV1'),
       'csa-vol2': (() => {
         const d = (lang === 'en') ? 'com' : (lang === 'fr' ? 'fr' : (lang === 'de' ? 'de' : (lang === 'es' ? 'es' : (lang === 'nl' ? 'nl' : (lang === 'pl' ? 'pl' : (lang === 'se' ? 'se' : (lang === 'jp' ? 'co.jp' : 'it')))))));
         return 'https://www.amazon.' + d + '/dp/B0HRYHGF5K';

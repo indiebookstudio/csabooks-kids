@@ -396,6 +396,23 @@ window.BOOKS_MANIFEST = {
       ],
       "pageCount": 12
     },
+    "fr": {
+      "cover": "books/csa-vol1/fr/cover.png",
+      "back": "books/csa-vol1/fr/back.png",
+      "interiors": [
+        "books/csa-vol1/fr/interiors/01.png",
+        "books/csa-vol1/fr/interiors/02.png",
+        "books/csa-vol1/fr/interiors/03.png",
+        "books/csa-vol1/fr/interiors/04.png",
+        "books/csa-vol1/fr/interiors/05.png",
+        "books/csa-vol1/fr/interiors/06.png",
+        "books/csa-vol1/fr/interiors/07.png",
+        "books/csa-vol1/fr/interiors/08.png",
+        "books/csa-vol1/fr/interiors/09.png",
+        "books/csa-vol1/fr/interiors/10.png"
+      ],
+      "pageCount": 12
+    },
     "it": {
       "cover": "books/csa-vol1/it/cover.png",
       "back": "books/csa-vol1/it/back.png",

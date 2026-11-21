@@ -172,7 +172,7 @@ const BOOKS = [
   "languageCode": "en",
   "age": "Ages 2–5",
   "badge": "Collection Vol. 1",
-  "cover": "assets/construction-site-adventures/Bundle.Volume.1/EN/Front.Cover.png",
+  "cover": "books/csa-vol1/en/cover.png",
   "storiesIncluded": [
     "Benny the Excavator and the Shape-Shifting Hill",
     "Rudy the Bulldozer and the Vanishing Beach",
@@ -180,18 +180,18 @@ const BOOKS = [
     "Bruno the Truck and the Duck Pond"
   ],
   "preview": [
-    "assets/construction-site-adventures/Bundle.Volume.1/EN/Front.Cover.png",
-    "assets/construction-site-adventures/Bundle.Volume.1/EN/2.png",
-    "assets/construction-site-adventures/Bundle.Volume.1/EN/3.png",
-    "assets/construction-site-adventures/Bundle.Volume.1/EN/4.png",
-    "assets/construction-site-adventures/Bundle.Volume.1/EN/6.png",
-    "assets/construction-site-adventures/Bundle.Volume.1/EN/7.png",
-    "assets/construction-site-adventures/Bundle.Volume.1/EN/8.png",
-    "assets/construction-site-adventures/Bundle.Volume.1/EN/9.png",
-    "assets/construction-site-adventures/Bundle.Volume.1/EN/10.png",
-    "assets/construction-site-adventures/Bundle.Volume.1/EN/11.png",
-    "assets/construction-site-adventures/Bundle.Volume.1/EN/12.png",
-    "assets/construction-site-adventures/Bundle.Volume.1/EN/Back.Cover.png"
+    "books/csa-vol1/en/cover.png",
+    "books/csa-vol1/en/interiors/01.png",
+    "books/csa-vol1/en/interiors/02.png",
+    "books/csa-vol1/en/interiors/03.png",
+    "books/csa-vol1/en/interiors/04.png",
+    "books/csa-vol1/en/interiors/05.png",
+    "books/csa-vol1/en/interiors/06.png",
+    "books/csa-vol1/en/interiors/07.png",
+    "books/csa-vol1/en/interiors/08.png",
+    "books/csa-vol1/en/interiors/09.png",
+    "books/csa-vol1/en/interiors/10.png",
+    "books/csa-vol1/en/back.png"
   ],
   "asin": "B0HR9DZ64D",
   "amazon": {
@@ -206,6 +206,47 @@ const BOOKS = [
   }
 },
   {
+    "id": "raccolta-vol1-fr",
+    "volume": 1,
+    "collection": "bundle",
+    "format": "rectangular",
+    "isRectangular": true,
+    "isNew": true,
+    "title": "Les Aventures du Chantier — Recueil Vol. 1",
+    "subtitle": "Édition spéciale grand format (21,5 × 28 cm)",
+    "author": "Marco Salucci",
+    "language": "Français",
+    "languageCode": "fr",
+    "age": "2–5 ans",
+    "badge": "Recueil Vol. 1",
+    "cover": "books/csa-vol1/fr/cover.png",
+    "storiesIncluded": [
+      "Benny l'excavateur et la colline qui changeait de forme",
+      "Rudy le bulldozer et la plage qui disparaissait",
+      "Leo la grue et les gemmes de la montagne",
+      "Bruno le camion et la mare aux canards"
+    ],
+    "preview": [
+      "books/csa-vol1/fr/cover.png",
+      "books/csa-vol1/fr/interiors/01.png",
+      "books/csa-vol1/fr/interiors/02.png",
+      "books/csa-vol1/fr/interiors/03.png",
+      "books/csa-vol1/fr/interiors/04.png",
+      "books/csa-vol1/fr/interiors/05.png",
+      "books/csa-vol1/fr/interiors/06.png",
+      "books/csa-vol1/fr/interiors/07.png",
+      "books/csa-vol1/fr/interiors/08.png",
+      "books/csa-vol1/fr/interiors/09.png",
+      "books/csa-vol1/fr/interiors/10.png",
+      "books/csa-vol1/fr/back.png"
+    ],
+    "asin": "B0HSC66326",
+    "amazon": {
+      "fr": "B0HSC66326",
+      "com": "B0HSC66326"
+    }
+  },
+  {
     "id": "raccolta-vol1-it",
     "volume": 1,
     "collection": "bundle",
@@ -219,7 +260,7 @@ const BOOKS = [
     "languageCode": "it",
     "age": "2–5 anni",
     "badge": "Raccolta Vol. 1",
-    "cover": "assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png",
+    "cover": "books/csa-vol1/it/cover.png",
     "storiesIncluded": [
       "Benny l'escavatore e la collina che cambiava forma",
       "Rudy la ruspa e la spiaggia che scompariva",
@@ -227,18 +268,18 @@ const BOOKS = [
       "Bruno il camion e lo stagno delle papere"
     ],
     "preview": [
-      "assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png",
-      "assets/construction-site-adventures/Bundle.Volume.1/IT/2.png",
-      "assets/construction-site-adventures/Bundle.Volume.1/IT/3.png",
-      "assets/construction-site-adventures/Bundle.Volume.1/IT/4.png",
-      "assets/construction-site-adventures/Bundle.Volume.1/IT/6.png",
-      "assets/construction-site-adventures/Bundle.Volume.1/IT/7.png",
-      "assets/construction-site-adventures/Bundle.Volume.1/IT/8.png",
-      "assets/construction-site-adventures/Bundle.Volume.1/IT/9.png",
-      "assets/construction-site-adventures/Bundle.Volume.1/IT/10.png",
-      "assets/construction-site-adventures/Bundle.Volume.1/IT/11.png",
-      "assets/construction-site-adventures/Bundle.Volume.1/IT/12.png",
-      "assets/construction-site-adventures/Bundle.Volume.1/IT/Back.Cover.png"
+      "books/csa-vol1/it/cover.png",
+      "books/csa-vol1/it/interiors/01.png",
+      "books/csa-vol1/it/interiors/02.png",
+      "books/csa-vol1/it/interiors/03.png",
+      "books/csa-vol1/it/interiors/04.png",
+      "books/csa-vol1/it/interiors/05.png",
+      "books/csa-vol1/it/interiors/06.png",
+      "books/csa-vol1/it/interiors/07.png",
+      "books/csa-vol1/it/interiors/08.png",
+      "books/csa-vol1/it/interiors/09.png",
+      "books/csa-vol1/it/interiors/10.png",
+      "books/csa-vol1/it/back.png"
     ],
     "asin": "B0HN4QMLV1",
     "amazon": {

@@ -31,30 +31,43 @@ const CONFIG = {
 };
 
 function getVolumeAssets(volNum, lang) {
-  const isEn = lang === 'en' || lang !== 'it';
+  const normLang = (lang || 'it').toLowerCase();
   if (volNum === 2) {
+    const isEn = normLang === 'en' || normLang !== 'it';
     return {
       pdfUrl: isEn
         ? "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/EN/Bonus/Bonus.CSA.Vol.2.pdf"
         : "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Bonus/Bonus.CSA.Vol.2.pdf",
       coverUrl: isEn
-        ? "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/EN/Front.Cover.png"
-        : "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.2/IT/Front.Cover.png",
+        ? "https://csabookskids.com/books/csa-vol2/en/cover.png"
+        : "https://csabookskids.com/books/csa-vol2/it/cover.png",
       attachmentName: isEn ? "Bonus-CSA-Volume2-Coloring-Pages.pdf" : "Bonus-CSA-Volume2-Disegni-da-Colorare.pdf",
       volNum: 2
     };
   }
   // Volume 1
-  return {
-    pdfUrl: isEn
-      ? "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/EN/Bonus/Bonus.CSA.Vol.1.pdf"
-      : "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/Bonus.CSA.Vol.1.pdf",
-    coverUrl: isEn
-      ? "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/EN/Front.Cover.png"
-      : "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/IT/Front.Cover.png",
-    attachmentName: isEn ? "Bonus-CSA-Volume1-Coloring-Pages.pdf" : "Bonus-CSA-Volume1-Disegni-da-Colorare.pdf",
-    volNum: 1
-  };
+  if (normLang === 'fr') {
+    return {
+      pdfUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/FR/Bonus/Bonus.CSA.Vol.1.pdf",
+      coverUrl: "https://csabookskids.com/books/csa-vol1/fr/cover.png",
+      attachmentName: "Bonus-CSA-Volume1-Coloriages.pdf",
+      volNum: 1
+    };
+  } else if (normLang === 'it') {
+    return {
+      pdfUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/IT/Bonus/Bonus.CSA.Vol.1.pdf",
+      coverUrl: "https://csabookskids.com/books/csa-vol1/it/cover.png",
+      attachmentName: "Bonus-CSA-Volume1-Disegni-da-Colorare.pdf",
+      volNum: 1
+    };
+  } else {
+    return {
+      pdfUrl: "https://csabookskids.com/assets/construction-site-adventures/Bundle.Volume.1/EN/Bonus/Bonus.CSA.Vol.1.pdf",
+      coverUrl: "https://csabookskids.com/books/csa-vol1/en/cover.png",
+      attachmentName: "Bonus-CSA-Volume1-Coloring-Pages.pdf",
+      volNum: 1
+    };
+  }
 }
 
 // Rate limiter: Map<ip, Array<timestamp>>
@@ -139,7 +152,7 @@ const EMAIL_I18N = {
     langHtml: "fr",
     subject: "Vos coloriages des Aventures du Chantier — Recueil Vol. 1 ! 🎨🚜",
     greeting: (f, l) => `Bonjour ${f} ${l} !`.trim(),
-    intro: "Merci d'avoir choisi notre recueil <strong>Les Aventures du Chantier — Recueil Vol. 1</strong> !<br>Vous trouverez en <strong>pièce jointe de cet e-mail</strong> le fichier PDF officiel avec les <strong>coloriages</strong> de Benny, Léo, Bruno et tous les héros du chantier, prêts à imprimer et à colorier.",
+    intro: "Merci d'avoir choisi notre recueil <strong>Les Aventures du Chantier — Recueil Vol. 1</strong> !<br>Vous trouverez en <strong>pièce jointe de cet e-mail</strong> le fichier PDF officiel avec les <strong>coloriages</strong> de Benny, Rudy, Léo, Bruno et tous les héros du chantier, prêts à imprimer et à colorier.",
     badge: "📎 Fichier PDF en pièce jointe (Prêt à imprimer)",
     ctaTitle: "Vous aimez les aventures du chantier ?",
     ctaDesc: "Découvrez tous nos livres illustrés et histoires conçus pour partager des moments privilégiés en famille sur notre site officiel !",

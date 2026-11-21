@@ -77,16 +77,20 @@ assert(isBookAvailableInLang(savana, 'pl') === false, "Savana NON disponibile in
 assert(isBookAvailableInLang(savana, 'se') === false, "Savana NON disponibile in SE");
 assert(isBookAvailableInLang(savana, 'jp') === false, "Savana NON disponibile in JP");
 
-console.log('\n--- 3. Verifica Edizioni Francesi (3 Libri Cantiere + Einstein) ---');
+console.log('\n--- 3. Verifica Edizioni Francesi (3 Libri Cantiere + Raccolta Vol 1 + Einstein) ---');
 const frBooks = booksData.books.filter(b => isBookAvailableInLang(b, 'fr'));
 console.log(`Libri disponibili in FR (${frBooks.length}):`, frBooks.map(b => b.id).join(', '));
-assert(frBooks.length === 4, "In francese ci sono ESATTAMENTE 4 libri disponibili (3 Cantiere + Einstein)");
+assert(frBooks.length === 5, "In francese ci sono ESATTAMENTE 5 libri disponibili (3 Cantiere + Raccolta Vol 1 + Einstein)");
 assert(frBooks.some(b => b.id === 'csa-01-benny-collina'), "Benny disponibile in FR");
 assert(frBooks.some(b => b.id === 'csa-02-rudy-spiaggia'), "Rudy disponibile in FR");
 assert(frBooks.some(b => b.id === 'csa-03-leo-montagna'), "Leo disponibile in FR");
+assert(frBooks.some(b => b.id === 'csa-vol1'), "Raccolta Vol 1 DISPONIBILE in FR");
 assert(!frBooks.some(b => b.id === 'csa-04-bruno-papere'), "Bruno NON disponibile in FR");
 assert(!frBooks.some(b => b.id === 'csa-09-leo-rudy-savana'), "Savana NON disponibile in FR");
 assert(frBooks.some(b => b.id === 'einstein'), "Einstein DISPONIBILE in FR");
+
+const vol1CoverFr = getBookCover('csa-vol1', 'fr');
+assert(vol1CoverFr.includes('books/csa-vol1/fr/cover.png'), "In FR la copertina di Raccolta Vol 1 punta a books/csa-vol1/fr/cover.png");
 
 console.log('\n--- 3b. Verifica Anteprime/Interiors Einstein (IT, EN, FR) ---');
 const manifestData = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'books-manifest.json'), 'utf8'));
